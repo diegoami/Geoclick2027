@@ -7,7 +7,24 @@
 			"West"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name describes northern Singapore.",
+				"Sembawang preserves naval-base heritage.",
+				"The Causeway transformed cross-strait travel."
+			],
+			"it": [
+				"Il nome descrive il nord di Singapore.",
+				"Sembawang conserva il patrimonio della base navale.",
+				"La Causeway trasformò i collegamenti attraverso lo stretto."
+			],
+			"de": [
+				"Der Name beschreibt Singapurs Norden.",
+				"Sembawang bewahrt Marinebasiserbe.",
+				"Der Causeway veränderte den Verkehr über die Meerenge."
+			]
+		}
 	},
 	"north-east": {
 		"kind": "region",
@@ -17,7 +34,24 @@
 			"North"
 		],
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its name describes northeastern Singapore.",
+				"Seletar preserves an early airfield.",
+				"Punggol recalls riverside kampong history."
+			],
+			"it": [
+				"Il nome descrive il nordest di Singapore.",
+				"Seletar conserva un antico aeroporto.",
+				"Punggol ricorda la storia dei kampong fluviali."
+			],
+			"de": [
+				"Der Name beschreibt Singapurs Nordosten.",
+				"Seletar bewahrt einen frühen Flugplatz.",
+				"Punggol erinnert an die Geschichte der Flusskampongs."
+			]
+		}
 	},
 	"east": {
 		"kind": "region",
@@ -26,7 +60,24 @@
 			"North East"
 		],
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name describes eastern Singapore.",
+				"Changi Airport opened in 1981.",
+				"Pasir Ris preserves coastal mangroves."
+			],
+			"it": [
+				"Il nome descrive l’est di Singapore.",
+				"L’aeroporto di Changi aprì nel 1981.",
+				"Pasir Ris conserva mangrovie costiere."
+			],
+			"de": [
+				"Der Name beschreibt Singapurs Osten.",
+				"Der Flughafen Changi wurde 1981 eröffnet.",
+				"Pasir Ris bewahrt Küstenmangroven."
+			]
+		}
 	},
 	"west": {
 		"kind": "region",
@@ -39,7 +90,24 @@
 			"name": "Bukit Timah",
 			"elevation": 176
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name describes western Singapore.",
+				"Jurong’s industrialisation transformed its landscape.",
+				"Reservoirs became important in its water-catchment areas."
+			],
+			"it": [
+				"Il nome descrive l’ovest di Singapore.",
+				"L’industrializzazione di Jurong ne trasformò il paesaggio.",
+				"I bacini divennero importanti nelle aree di raccolta idrica."
+			],
+			"de": [
+				"Der Name beschreibt Singapurs Westen.",
+				"Jurongs Industrialisierung veränderte seine Landschaft.",
+				"Stauseen wurden in seinen Wassereinzugsgebieten wichtig."
+			]
+		}
 	},
 	"central": {
 		"kind": "region",
@@ -50,6 +118,23 @@
 			"West"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name describes Singapore’s central region.",
+				"The Singapore River preserves trading-port heritage.",
+				"The Botanic Gardens are a World Heritage Site."
+			],
+			"it": [
+				"Il nome descrive la regione centrale di Singapore.",
+				"Il fiume Singapore conserva il patrimonio del porto commerciale.",
+				"I giardini botanici sono patrimonio mondiale."
+			],
+			"de": [
+				"Der Name beschreibt Singapurs Zentralregion.",
+				"Der Singapore River bewahrt Handelshafenerbe.",
+				"Der Botanische Garten gehört zum Welterbe."
+			]
+		}
 	}
 }

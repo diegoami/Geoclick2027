@@ -1,6 +1,6 @@
 # Geoclick — Roadmap
 
-- **v1.0.0 in preparation (2026-10-26):** the full approved 22-country expansion is active; 44 maps generated for all 22 countries (217 total maps); authored EN/IT/DE facts complete for 14 countries (403/735 targets); remaining facts and verification in progress. [PLAN_V1.0.md](docs/PLAN_V1.0.md), [proposal #241](https://github.com/diegoami/Geoclick2027/issues/241), draft [PR #243](https://github.com/diegoami/Geoclick2027/pull/243). The first-six-country review was an intermediate checkpoint; no 1.0 tag/publication yet.
+- **v1.0.0 in preparation (2026-10-26):** the full approved 22-country expansion is active; 44 maps generated for all 22 countries (217 total maps); authored EN/IT/DE facts complete for all 22 countries (735/735 targets); final verification and fresh PR review in progress. [PLAN_V1.0.md](docs/PLAN_V1.0.md), [proposal #241](https://github.com/diegoami/Geoclick2027/issues/241), draft [PR #243](https://github.com/diegoami/Geoclick2027/pull/243). The first-six-country review was an intermediate checkpoint; no 1.0 tag/publication yet.
 
 Self-contained iterations toward the desktop POC described in
 [ARCHITECTURE.md](ARCHITECTURE.md). Each iteration should leave the repo in

@@ -80,29 +80,15 @@ describe('v1.0 country expansion data', () => {
 			else expect(regionNames).toContain(association);
 		}
 	});
-	const maps = [
-		...cases.flatMap((c) => [c.region, c.towns]),
-		'iceland-regions',
-		'iceland-towns-1k',
-		'costa-rica-provinces',
-		'costa-rica-towns-1k',
-		'nepal-provinces',
-		'nepal-towns-10k',
-		'united-arab-emirates-emirates',
-		'united-arab-emirates-towns-1k',
-		'uzbekistan-regions',
-		'uzbekistan-towns-10k',
-		'latvia-regions',
-		'latvia-towns-5k',
-		'sri-lanka-provinces',
-		'sri-lanka-towns-10k',
-		'uganda-regions',
-		'uganda-towns-10k',
-		'slovenia-regions',
-		'slovenia-towns-5k',
-		'ghana-regions',
-		'ghana-towns-10k'
-	];
+	it.each([
+		['ethiopia-towns-10k', ['Adama', 'Woliso', 'Hawassa'], ['Nazret', 'Giyon', 'Awasa']],
+		['iraq-towns-10k', ['Erbil', 'Az Zubayr'], ['Irbil', 'Az Aubayr']]
+	])('%s uses current town names instead of legacy source labels', (id, current, legacy) => {
+		const names = read<MapData>('maps/' + id + '/map.json').targets.map((t) => t.name);
+		for (const name of current) expect(names).toContain(name);
+		for (const name of legacy) expect(names).not.toContain(name);
+	});
+	const maps = V1_COUNTRIES.flatMap(v1MapIds);
 	it.each(maps)('%s has three authored facts per target and language', (id) => {
 		const map = read<MapData>('maps/' + id + '/map.json');
 		const resolve = authoredResolver(map.country);

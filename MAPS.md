@@ -1835,3 +1835,9 @@ The twelve snapshot profiles include native labels for Latvia and Slovenia.
 The world picker retains Singapore despite the continent quiz's area threshold;
 it is selectable without adding a tiny target to the continent quiz. Rebuild
 its tiles and metadata together using build-picker.ts after this change.
+
+The complete expansion has authored EN/IT/DE hooks for all 735 targets. After
+editing them, run refresh-facts-hooks.ts and the strict audit above; the data
+regression suite enforces all 44 maps. Shared townNameFixups.ts normalizes
+Ethiopia's Nazret/Giyon/Awasa to Adama/Woliso/Hawassa and Iraq's Irbil/Az Aubayr
+to Erbil/Az Zubayr in both playable towns and derived regional facts.

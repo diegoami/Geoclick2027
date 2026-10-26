@@ -8,7 +8,24 @@
 			"Yishun"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name recalls the sembawang tree.",
+				"The former British naval base shaped its history.",
+				"Beaulieu House preserves colonial-era architecture."
+			],
+			"it": [
+				"Il nome ricorda l’albero sembawang.",
+				"L’ex base navale britannica ne plasmò la storia.",
+				"Beaulieu House conserva l’architettura coloniale."
+			],
+			"de": [
+				"Der Name erinnert an den Sembawang-Baum.",
+				"Die frühere britische Marinebasis prägte seine Geschichte.",
+				"Beaulieu House bewahrt Kolonialarchitektur."
+			]
+		}
 	},
 	"simpang": {
 		"kind": "region",
@@ -17,7 +34,24 @@
 			"Yishun"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Simpang means junction in Malay.",
+				"The area preserves mangrove habitats.",
+				"Sungei Simpang carries the same place name."
+			],
+			"it": [
+				"Simpang significa incrocio in malese.",
+				"La zona conserva habitat di mangrovie.",
+				"Il Sungei Simpang porta lo stesso toponimo."
+			],
+			"de": [
+				"Simpang bedeutet auf Malaiisch Kreuzung.",
+				"Die Gegend bewahrt Mangrovenlebensräume.",
+				"Der Sungei Simpang trägt denselben Ortsnamen."
+			]
+		}
 	},
 	"woodlands": {
 		"kind": "region",
@@ -27,7 +61,24 @@
 			"Sungei Kadut"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name recalled the wooded appearance of the coast.",
+				"The Causeway opened in 1924.",
+				"Admiralty Park preserves river-edge greenery."
+			],
+			"it": [
+				"Il nome ricordava l’aspetto boscoso della costa.",
+				"La Causeway aprì nel 1924.",
+				"Admiralty Park conserva il verde lungo il fiume."
+			],
+			"de": [
+				"Der Name erinnerte an die bewaldete Küste.",
+				"Der Causeway wurde 1924 eröffnet.",
+				"Der Admiralty-Park bewahrt Grün entlang des Flusses."
+			]
+		}
 	},
 	"lim-chu-kang": {
 		"kind": "region",
@@ -36,7 +87,24 @@
 			"Western Water Catchment"
 		],
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its name recalls the Lim family’s river settlement.",
+				"Farming shaped its rural landscape.",
+				"Neo Tiew’s former estate recalls rural resettlement."
+			],
+			"it": [
+				"Il nome ricorda l’insediamento fluviale della famiglia Lim.",
+				"L’agricoltura ne plasmò il paesaggio rurale.",
+				"L’antico complesso di Neo Tiew ricorda il reinsediamento rurale."
+			],
+			"de": [
+				"Der Name erinnert an die Flusssiedlung der Familie Lim.",
+				"Landwirtschaft prägte die ländliche Landschaft.",
+				"Neo Tiews frühere Siedlung erinnert an ländliche Umsiedlungen."
+			]
+		}
 	},
 	"mandai": {
 		"kind": "region",
@@ -48,7 +116,24 @@
 			"Yishun"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Mandai appears on nineteenth-century maps.",
+				"Rubber growing shaped its rural past.",
+				"Mandai Road connects northern settlements with the reservoir area."
+			],
+			"it": [
+				"Mandai compare nelle mappe dell’Ottocento.",
+				"La coltivazione della gomma ne plasmò il passato rurale.",
+				"Mandai Road collega gli insediamenti settentrionali all’area dei bacini."
+			],
+			"de": [
+				"Mandai erscheint auf Karten des 19. Jahrhunderts.",
+				"Kautschukanbau prägte seine ländliche Vergangenheit.",
+				"Die Mandai Road verbindet nördliche Siedlungen mit dem Stauseegebiet."
+			]
+		}
 	},
 	"yishun": {
 		"kind": "region",
@@ -62,7 +147,24 @@
 			"Simpang"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Yishun is the Mandarin reading of Nee Soon, honouring Lim Nee Soon.",
+				"Rubber and pineapple plantations preceded the housing town.",
+				"Yishun Pond is an urban wetland landmark."
+			],
+			"it": [
+				"Yishun è la lettura mandarina di Nee Soon e onora Lim Nee Soon.",
+				"Piantagioni di gomma e ananas precedettero la città residenziale.",
+				"Yishun Pond è un simbolo delle zone umide urbane."
+			],
+			"de": [
+				"Yishun ist die Mandarin-Lesung von Nee Soon und ehrt Lim Nee Soon.",
+				"Kautschuk- und Ananasplantagen gingen der Wohnstadt voraus.",
+				"Der Yishun-Teich ist ein städtisches Feuchtgebiets-Wahrzeichen."
+			]
+		}
 	},
 	"sungei-kadut": {
 		"kind": "region",
@@ -76,7 +178,24 @@
 			"Woodlands"
 		],
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Sungei means river in Malay.",
+				"Timber industries shaped the area’s development.",
+				"Kranji War Memorial commemorates the Second World War."
+			],
+			"it": [
+				"Sungei significa fiume in malese.",
+				"Le industrie del legname plasmarono lo sviluppo della zona.",
+				"Il Kranji War Memorial commemora la Seconda guerra mondiale."
+			],
+			"de": [
+				"Sungei bedeutet auf Malaiisch Fluss.",
+				"Holzindustrien prägten die Entwicklung des Gebiets.",
+				"Das Kranji-Kriegsdenkmal erinnert an den Zweiten Weltkrieg."
+			]
+		}
 	},
 	"seletar": {
 		"kind": "region",
@@ -86,7 +205,24 @@
 			"Yishun"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name recalls the Orang Seletar community.",
+				"The airfield became an early aviation centre.",
+				"Black-and-white bungalows preserve its military-era heritage."
+			],
+			"it": [
+				"Il nome ricorda la comunità orang seletar.",
+				"L’aeroporto divenne un antico centro aeronautico.",
+				"I bungalow bianchi e neri conservano il patrimonio dell’epoca militare."
+			],
+			"de": [
+				"Der Name erinnert an die Orang-Seletar-Gemeinschaft.",
+				"Der Flugplatz wurde zu einem frühen Luftfahrtzentrum.",
+				"Schwarz-weiße Bungalows bewahren das Erbe der Militärzeit."
+			]
+		}
 	},
 	"punggol": {
 		"kind": "region",
@@ -96,12 +232,46 @@
 			"Sengkang"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name is linked to a Malay term for knocking down fruit.",
+				"Fishing and farming shaped its kampong past.",
+				"The Punggol Waterway links two reservoirs."
+			],
+			"it": [
+				"Il nome è legato a un termine malese per far cadere la frutta.",
+				"Pesca e agricoltura ne plasmarono il passato di kampong.",
+				"Il Punggol Waterway collega due bacini."
+			],
+			"de": [
+				"Der Name wird mit einem malaiischen Ausdruck für das Herunterschlagen von Früchten verbunden.",
+				"Fischfang und Landwirtschaft prägten die Kampong-Vergangenheit.",
+				"Der Punggol Waterway verbindet zwei Stauseen."
+			]
+		}
 	},
 	"north-eastern-islands": {
 		"kind": "region",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its name describes islands northeast of the main island.",
+				"Pulau Ubin preserves quarry and kampong landscapes.",
+				"Pulau Tekong has long been used for military training."
+			],
+			"it": [
+				"Il nome descrive le isole a nordest dell’isola principale.",
+				"Pulau Ubin conserva paesaggi di cave e kampong.",
+				"Pulau Tekong è usata da lungo tempo per l’addestramento militare."
+			],
+			"de": [
+				"Der Name beschreibt Inseln nordöstlich der Hauptinsel.",
+				"Pulau Ubin bewahrt Steinbruch- und Kampong-Landschaften.",
+				"Pulau Tekong wird seit Langem für militärische Ausbildung genutzt."
+			]
+		}
 	},
 	"sengkang": {
 		"kind": "region",
@@ -115,7 +285,24 @@
 			"Yishun"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its Chinese name means prosperous harbour.",
+				"Fishing villages preceded the housing estates.",
+				"The riverside park preserves wetland greenery."
+			],
+			"it": [
+				"Il nome cinese significa porto prospero.",
+				"Villaggi di pescatori precedettero i complessi residenziali.",
+				"Il parco fluviale conserva il verde delle zone umide."
+			],
+			"de": [
+				"Der chinesische Name bedeutet blühender Hafen.",
+				"Fischerdörfer gingen den Wohnsiedlungen voraus.",
+				"Der Uferpark bewahrt Feuchtgebietsgrün."
+			]
+		}
 	},
 	"choa-chu-kang": {
 		"kind": "region",
@@ -127,7 +314,24 @@
 			"Western Water Catchment"
 		],
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its name recalls the Choa family’s river settlement.",
+				"Gambier and pepper farming shaped its rural past.",
+				"Yew Tee means oil pond in Hokkien."
+			],
+			"it": [
+				"Il nome ricorda l’insediamento fluviale della famiglia Choa.",
+				"La coltivazione di gambier e pepe ne plasmò il passato rurale.",
+				"Yew Tee significa stagno d’olio in hokkien."
+			],
+			"de": [
+				"Der Name erinnert an die Flusssiedlung der Familie Choa.",
+				"Gambir- und Pfefferanbau prägten seine ländliche Vergangenheit.",
+				"Yew Tee bedeutet auf Hokkien Ölteich."
+			]
+		}
 	},
 	"western-water-catchment": {
 		"kind": "region",
@@ -141,7 +345,24 @@
 			"Tuas"
 		],
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its name describes its reservoir catchments.",
+				"Tengeh, Poyan and Murai are among its reservoirs.",
+				"Its landscape includes military training grounds."
+			],
+			"it": [
+				"Il nome descrive i bacini di raccolta idrica.",
+				"Tengeh, Poyan e Murai sono tra i suoi bacini.",
+				"Il paesaggio comprende aree di addestramento militare."
+			],
+			"de": [
+				"Der Name beschreibt seine Stausee-Einzugsgebiete.",
+				"Tengeh, Poyan und Murai gehören zu seinen Stauseen.",
+				"Die Landschaft umfasst militärische Übungsgebiete."
+			]
+		}
 	},
 	"pasir-ris": {
 		"kind": "region",
@@ -151,7 +372,24 @@
 			"Tampines"
 		],
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Pasir means sand in Malay; Ris has several proposed explanations.",
+				"Its park preserves coastal mangroves.",
+				"Fishing kampongs preceded resorts and housing estates."
+			],
+			"it": [
+				"Pasir significa sabbia in malese; Ris ha diverse spiegazioni proposte.",
+				"Il parco conserva mangrovie costiere.",
+				"I kampong di pescatori precedettero località di villeggiatura e complessi residenziali."
+			],
+			"de": [
+				"Pasir bedeutet auf Malaiisch Sand; für Ris gibt es mehrere Erklärungen.",
+				"Der Park bewahrt Küstenmangroven.",
+				"Fischerkampongs gingen Ferienanlagen und Wohnsiedlungen voraus."
+			]
+		}
 	},
 	"ang-mo-kio": {
 		"kind": "region",
@@ -163,7 +401,24 @@
 			"Yishun"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its Hokkien name is usually interpreted as red-haired man’s bridge.",
+				"Kampong farming preceded the planned housing town.",
+				"Town Garden West preserves a wooded hill."
+			],
+			"it": [
+				"Il nome hokkien è solitamente interpretato come ponte dell’uomo dai capelli rossi.",
+				"L’agricoltura dei kampong precedette la città residenziale pianificata.",
+				"Town Garden West conserva una collina boscosa."
+			],
+			"de": [
+				"Der Hokkien-Name wird meist als Brücke des rothaarigen Mannes gedeutet.",
+				"Kampong-Landwirtschaft ging der geplanten Wohnstadt voraus.",
+				"Town Garden West bewahrt einen bewaldeten Hügel."
+			]
+		}
 	},
 	"central-water-catchment": {
 		"kind": "region",
@@ -177,7 +432,24 @@
 			"Yishun"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name reflects its water-supply function.",
+				"The Central Catchment Nature Reserve protects native rainforest.",
+				"MacRitchie is one of its historic reservoirs."
+			],
+			"it": [
+				"Il nome riflette la funzione di approvvigionamento idrico.",
+				"La Central Catchment Nature Reserve protegge la foresta pluviale originaria.",
+				"MacRitchie è uno dei bacini storici."
+			],
+			"de": [
+				"Der Name spiegelt seine Wasserversorgungsfunktion wider.",
+				"Das Central-Catchment-Naturreservat schützt ursprünglichen Regenwald.",
+				"MacRitchie gehört zu seinen historischen Stauseen."
+			]
+		}
 	},
 	"bukit-panjang": {
 		"kind": "region",
@@ -192,7 +464,24 @@
 			"name": "Bukit Timah",
 			"elevation": 176
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Malay name means long hill.",
+				"Zhenghua Park links housing estates with forest-edge greenery.",
+				"Singapore’s first light-rail line opened here in 1999."
+			],
+			"it": [
+				"Il nome malese significa collina lunga.",
+				"Zhenghua Park collega i complessi residenziali al verde ai margini della foresta.",
+				"Qui aprì nel 1999 la prima linea di metropolitana leggera di Singapore."
+			],
+			"de": [
+				"Der malaiische Name bedeutet langer Hügel.",
+				"Der Zhenghua-Park verbindet Wohnsiedlungen mit Grün am Waldrand.",
+				"Hier eröffnete 1999 Singapurs erste Stadtbahnlinie."
+			]
+		}
 	},
 	"serangoon": {
 		"kind": "region",
@@ -204,7 +493,24 @@
 			"Toa Payoh"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name is often linked to the old Malay bird name ranggong.",
+				"Serangoon Gardens preserves a postwar estate identity.",
+				"Chomp Chomp is a longstanding hawker-food centre."
+			],
+			"it": [
+				"Il nome è spesso collegato all’antico nome malese di uccello ranggong.",
+				"Serangoon Gardens conserva l’identità di un quartiere del dopoguerra.",
+				"Chomp Chomp è uno storico centro di cucina hawker."
+			],
+			"de": [
+				"Der Name wird oft mit dem alten malaiischen Vogelnamen Ranggong verbunden.",
+				"Serangoon Gardens bewahrt den Charakter einer Nachkriegssiedlung.",
+				"Chomp Chomp ist ein traditionsreiches Hawker-Essenszentrum."
+			]
+		}
 	},
 	"tengah": {
 		"kind": "region",
@@ -216,7 +522,24 @@
 			"Western Water Catchment"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Tengah means middle in Malay.",
+				"Farming and brickworks shaped its rural past.",
+				"Its new-town plan emphasises green corridors."
+			],
+			"it": [
+				"Tengah significa centro in malese.",
+				"Agricoltura e fornaci ne plasmarono il passato rurale.",
+				"Il piano della nuova città dà rilievo ai corridoi verdi."
+			],
+			"de": [
+				"Tengah bedeutet auf Malaiisch Mitte.",
+				"Landwirtschaft und Ziegeleien prägten seine ländliche Vergangenheit.",
+				"Der neue Stadtplan betont grüne Korridore."
+			]
+		}
 	},
 	"hougang": {
 		"kind": "region",
@@ -227,7 +550,24 @@
 			"Toa Payoh"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its traditional name means river end.",
+				"Teochew communities shaped its old settlements.",
+				"The Church of the Nativity is a heritage landmark."
+			],
+			"it": [
+				"Il nome tradizionale significa estremità del fiume.",
+				"Le comunità teochew ne plasmarono gli antichi insediamenti.",
+				"La Chiesa della Natività è un simbolo del patrimonio storico."
+			],
+			"de": [
+				"Der traditionelle Name bedeutet Flussende.",
+				"Teochew-Gemeinschaften prägten die alten Siedlungen.",
+				"Die Geburtskirche ist ein historisches Wahrzeichen."
+			]
+		}
 	},
 	"paya-lebar": {
 		"kind": "region",
@@ -238,7 +578,24 @@
 			"Tampines"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Malay name means broad swamp.",
+				"The civil airport opened in 1955.",
+				"The former airport was later converted into an airbase."
+			],
+			"it": [
+				"Il nome malese significa palude ampia.",
+				"L’aeroporto civile aprì nel 1955.",
+				"L’ex aeroporto fu poi trasformato in base aerea."
+			],
+			"de": [
+				"Der malaiische Name bedeutet breiter Sumpf.",
+				"Der Zivilflughafen wurde 1955 eröffnet.",
+				"Der frühere Flughafen wurde später zum Luftwaffenstützpunkt."
+			]
+		}
 	},
 	"bukit-batok": {
 		"kind": "region",
@@ -251,7 +608,24 @@
 			"Tengah"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Bukit means hill; Batok has several traditional explanations.",
+				"Former quarries shaped its landscape.",
+				"The Old Ford Factory recalls Singapore’s 1942 surrender."
+			],
+			"it": [
+				"Bukit significa collina; Batok ha diverse spiegazioni tradizionali.",
+				"Le antiche cave ne plasmarono il paesaggio.",
+				"L’Old Ford Factory ricorda la resa di Singapore del 1942."
+			],
+			"de": [
+				"Bukit bedeutet Hügel; für Batok gibt es mehrere traditionelle Erklärungen.",
+				"Frühere Steinbrüche prägten die Landschaft.",
+				"Die Old Ford Factory erinnert an Singapurs Kapitulation von 1942."
+			]
+		}
 	},
 	"bishan": {
 		"kind": "region",
@@ -262,7 +636,24 @@
 			"Toa Payoh"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Chinese name means jade hill, recalling Pek San Teng cemetery.",
+				"The park naturalised part of the Kallang River.",
+				"Kong Meng San monastery is a Buddhist landmark."
+			],
+			"it": [
+				"Il nome cinese significa collina di giada e ricorda il cimitero Pek San Teng.",
+				"Il parco rinaturalizzò parte del fiume Kallang.",
+				"Il monastero Kong Meng San è un simbolo buddhista."
+			],
+			"de": [
+				"Der chinesische Name bedeutet Jadehügel und erinnert an den Friedhof Pek San Teng.",
+				"Der Park renaturierte einen Teil des Kallang-Flusses.",
+				"Das Kloster Kong Meng San ist ein buddhistisches Wahrzeichen."
+			]
+		}
 	},
 	"changi": {
 		"kind": "region",
@@ -271,7 +662,24 @@
 			"Tampines"
 		],
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name is traditionally linked to a local tree.",
+				"Changi Chapel and Museum preserves Second World War history.",
+				"The international airport opened in 1981."
+			],
+			"it": [
+				"Il nome è tradizionalmente collegato a un albero locale.",
+				"Changi Chapel and Museum conserva la storia della Seconda guerra mondiale.",
+				"L’aeroporto internazionale aprì nel 1981."
+			],
+			"de": [
+				"Der Name wird traditionell mit einem örtlichen Baum verbunden.",
+				"Changi Chapel and Museum bewahrt Geschichte des Zweiten Weltkriegs.",
+				"Der internationale Flughafen wurde 1981 eröffnet."
+			]
+		}
 	},
 	"tampines": {
 		"kind": "region",
@@ -282,7 +690,24 @@
 			"Paya Lebar"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"It is named after the tempinis tree.",
+				"Sand quarries shaped its earlier landscape.",
+				"Its Round Market became a neighbourhood landmark."
+			],
+			"it": [
+				"Prende il nome dall’albero tempinis.",
+				"Le cave di sabbia ne plasmarono il paesaggio precedente.",
+				"Il Round Market divenne un simbolo del quartiere."
+			],
+			"de": [
+				"Der Name geht auf den Tempinis-Baum zurück.",
+				"Sandgruben prägten die frühere Landschaft.",
+				"Der Round Market wurde zum Wahrzeichen des Viertels."
+			]
+		}
 	},
 	"jurong-west": {
 		"kind": "region",
@@ -294,12 +719,46 @@
 			"Western Water Catchment"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name describes western Jurong.",
+				"Industrialisation transformed its former rural landscape.",
+				"Boon Lay Place preserves an older housing-estate centre."
+			],
+			"it": [
+				"Il nome descrive il Jurong occidentale.",
+				"L’industrializzazione trasformò il precedente paesaggio rurale.",
+				"Boon Lay Place conserva il centro di un antico complesso residenziale."
+			],
+			"de": [
+				"Der Name beschreibt das westliche Jurong.",
+				"Industrialisierung veränderte die frühere ländliche Landschaft.",
+				"Boon Lay Place bewahrt das Zentrum einer älteren Wohnsiedlung."
+			]
+		}
 	},
 	"changi-bay": {
 		"kind": "region",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"It takes its name from the wider Changi area.",
+				"Reclamation extended its coastline.",
+				"Changi Bay Point became a park-connector landmark."
+			],
+			"it": [
+				"Prende il nome dalla più ampia area di Changi.",
+				"La bonifica estese la costa.",
+				"Changi Bay Point divenne un simbolo della rete dei parchi."
+			],
+			"de": [
+				"Der Name stammt vom weiteren Changi-Gebiet.",
+				"Landgewinnung verlängerte seine Küste.",
+				"Changi Bay Point wurde zu einem Wahrzeichen des Parkverbindungsnetzes."
+			]
+		}
 	},
 	"toa-payoh": {
 		"kind": "region",
@@ -312,7 +771,24 @@
 			"Serangoon"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Hokkien name means big swamp.",
+				"It became an early planned public-housing town.",
+				"The Dragon Playground became a heritage symbol."
+			],
+			"it": [
+				"Il nome hokkien significa grande palude.",
+				"Divenne una delle prime città pianificate di edilizia pubblica.",
+				"Il Dragon Playground divenne un simbolo del patrimonio locale."
+			],
+			"de": [
+				"Der Hokkien-Name bedeutet großer Sumpf.",
+				"Das Gebiet wurde zu einer frühen geplanten öffentlichen Wohnstadt.",
+				"Der Dragon Playground wurde zum Kulturerbesymbol."
+			]
+		}
 	},
 	"bukit-timah": {
 		"kind": "region",
@@ -325,7 +801,24 @@
 			"Tanglin"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Malay name is usually translated as tin hill.",
+				"Bukit Timah Road was a historic transport corridor.",
+				"The former railway station preserves rail heritage."
+			],
+			"it": [
+				"Il nome malese è solitamente tradotto come collina dello stagno.",
+				"Bukit Timah Road era uno storico corridoio di trasporto.",
+				"L’antica stazione conserva il patrimonio ferroviario."
+			],
+			"de": [
+				"Der malaiische Name wird meist als Zinnhügel übersetzt.",
+				"Die Bukit Timah Road war ein historischer Verkehrsweg.",
+				"Der frühere Bahnhof bewahrt Eisenbahnerbe."
+			]
+		}
 	},
 	"novena": {
 		"kind": "region",
@@ -337,7 +830,24 @@
 			"Toa Payoh"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It takes its name from Novena Church and its devotions.",
+				"Tan Tock Seng Hospital anchors a medical precinct.",
+				"Balestier preserves historic shophouses."
+			],
+			"it": [
+				"Prende il nome dalla Chiesa di Novena e dalle sue devozioni.",
+				"L’ospedale Tan Tock Seng è centrale in un quartiere medico.",
+				"Balestier conserva storiche case-bottega."
+			],
+			"de": [
+				"Der Name geht auf die Novena-Kirche und ihre Andachten zurück.",
+				"Das Tan-Tock-Seng-Krankenhaus prägt ein Medizinviertel.",
+				"Balestier bewahrt historische Geschäftshäuser."
+			]
+		}
 	},
 	"bedok": {
 		"kind": "region",
@@ -348,7 +858,24 @@
 			"Tampines"
 		],
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name appears on seventeenth-century maps.",
+				"Fishing villages once lined the old coast.",
+				"Its reservoir was created in a former sand quarry."
+			],
+			"it": [
+				"Il nome compare nelle mappe del Seicento.",
+				"Villaggi di pescatori costeggiavano l’antica riva.",
+				"Il bacino fu creato in un’ex cava di sabbia."
+			],
+			"de": [
+				"Der Name erscheint auf Karten des 17. Jahrhunderts.",
+				"Fischerdörfer säumten einst die alte Küste.",
+				"Der Stausee entstand in einer früheren Sandgrube."
+			]
+		}
 	},
 	"jurong-east": {
 		"kind": "region",
@@ -361,7 +888,24 @@
 			"Tengah"
 		],
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name describes eastern Jurong.",
+				"The Science Centre became an educational landmark.",
+				"Jurong Town Hall became a national monument."
+			],
+			"it": [
+				"Il nome descrive il Jurong orientale.",
+				"Il Science Centre divenne un simbolo educativo.",
+				"Il municipio di Jurong divenne monumento nazionale."
+			],
+			"de": [
+				"Der Name beschreibt das östliche Jurong.",
+				"Das Science Centre wurde zu einem Bildungswahrzeichen.",
+				"Die Jurong Town Hall wurde zum Nationaldenkmal."
+			]
+		}
 	},
 	"geylang": {
 		"kind": "region",
@@ -372,7 +916,24 @@
 			"Toa Payoh"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name has several proposed Malay explanations.",
+				"Geylang Serai preserves Malay trading heritage.",
+				"Sri Sivan Temple reflects its Hindu heritage."
+			],
+			"it": [
+				"Il nome ha diverse spiegazioni malesi proposte.",
+				"Geylang Serai conserva il patrimonio commerciale malese.",
+				"Il Tempio Sri Sivan riflette il patrimonio induista."
+			],
+			"de": [
+				"Für den Namen gibt es mehrere malaiische Erklärungen.",
+				"Geylang Serai bewahrt malaiisches Handelserbe.",
+				"Der Sri-Sivan-Tempel spiegelt hinduistisches Erbe wider."
+			]
+		}
 	},
 	"clementi": {
 		"kind": "region",
@@ -383,7 +944,24 @@
 			"Queenstown"
 		],
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name comes from Clementi Road.",
+				"It grew as a planned housing town during the 1970s.",
+				"The old railway bridge crosses Sungei Ulu Pandan."
+			],
+			"it": [
+				"Il nome deriva da Clementi Road.",
+				"Crebbe come città residenziale pianificata negli anni Settanta.",
+				"L’antico ponte ferroviario attraversa il Sungei Ulu Pandan."
+			],
+			"de": [
+				"Der Name stammt von der Clementi Road.",
+				"In den 1970er Jahren wuchs hier eine geplante Wohnstadt.",
+				"Die alte Eisenbahnbrücke überquert den Sungei Ulu Pandan."
+			]
+		}
 	},
 	"boon-lay": {
 		"kind": "region",
@@ -393,7 +971,24 @@
 			"Pioneer"
 		],
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name honours entrepreneur Chew Boon Lay.",
+				"Jurong Shipyard became an industrial landmark.",
+				"Manufacturing and logistics shaped the planning area."
+			],
+			"it": [
+				"Il nome onora l’imprenditore Chew Boon Lay.",
+				"Jurong Shipyard divenne un simbolo industriale.",
+				"Produzione e logistica plasmarono l’area di pianificazione."
+			],
+			"de": [
+				"Der Name ehrt den Unternehmer Chew Boon Lay.",
+				"Jurong Shipyard wurde zu einem industriellen Wahrzeichen.",
+				"Produktion und Logistik prägten das Planungsgebiet."
+			]
+		}
 	},
 	"kallang": {
 		"kind": "region",
@@ -408,7 +1003,24 @@
 			"Toa Payoh"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name is associated with the Orang Kallang river community.",
+				"Singapore’s early civil airport opened here in 1937.",
+				"The National Stadium became a sporting landmark."
+			],
+			"it": [
+				"Il nome è legato alla comunità fluviale orang kallang.",
+				"Un antico aeroporto civile di Singapore aprì qui nel 1937.",
+				"Lo Stadio nazionale divenne un simbolo sportivo."
+			],
+			"de": [
+				"Der Name ist mit der Flussgemeinschaft der Orang Kallang verbunden.",
+				"Singapurs früher Zivilflughafen eröffnete hier 1937.",
+				"Das Nationalstadion wurde zu einem Sportwahrzeichen."
+			]
+		}
 	},
 	"pioneer": {
 		"kind": "region",
@@ -419,7 +1031,24 @@
 			"Western Water Catchment"
 		],
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"It takes its name from Pioneer Road.",
+				"Industrial estates transformed the former rural coast.",
+				"Logistics and manufacturing shape its landscape."
+			],
+			"it": [
+				"Prende il nome da Pioneer Road.",
+				"I complessi industriali trasformarono l’antica costa rurale.",
+				"Logistica e produzione ne plasmano il paesaggio."
+			],
+			"de": [
+				"Der Name stammt von der Pioneer Road.",
+				"Industriegebiete verwandelten die frühere ländliche Küste.",
+				"Logistik und Produktion prägen die Landschaft."
+			]
+		}
 	},
 	"newton": {
 		"kind": "region",
@@ -432,7 +1061,24 @@
 			"Tanglin"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name honours municipal engineer Howard Newton.",
+				"Newton Food Centre preserves hawker-food traditions.",
+				"Parts of Emerald Hill preserve Peranakan shophouses."
+			],
+			"it": [
+				"Il nome onora l’ingegnere municipale Howard Newton.",
+				"Newton Food Centre conserva le tradizioni della cucina hawker.",
+				"Parti di Emerald Hill conservano case-bottega peranakan."
+			],
+			"de": [
+				"Der Name ehrt den Stadtingenieur Howard Newton.",
+				"Das Newton Food Centre bewahrt Hawker-Essenstraditionen.",
+				"Teile von Emerald Hill bewahren Peranakan-Geschäftshäuser."
+			]
+		}
 	},
 	"tanglin": {
 		"kind": "region",
@@ -447,7 +1093,24 @@
 			"Singapore River"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name recalls William Napier’s Tang Leng estate.",
+				"The Botanic Gardens preserve a historic tropical garden.",
+				"Dempsey’s former barracks were adapted for civilian use."
+			],
+			"it": [
+				"Il nome ricorda la tenuta Tang Leng di William Napier.",
+				"I giardini botanici conservano uno storico giardino tropicale.",
+				"Le ex caserme di Dempsey furono adattate a usi civili."
+			],
+			"de": [
+				"Der Name erinnert an William Napiers Anwesen Tang Leng.",
+				"Der Botanische Garten bewahrt eine historische Tropengartenanlage.",
+				"Dempseys frühere Kasernen wurden für zivile Zwecke umgenutzt."
+			]
+		}
 	},
 	"rochor": {
 		"kind": "region",
@@ -458,7 +1121,24 @@
 			"Newton"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It takes its name from the Rochor River.",
+				"Little India preserves South Asian trading heritage.",
+				"Sri Veeramakaliamman Temple is a Hindu landmark."
+			],
+			"it": [
+				"Prende il nome dal fiume Rochor.",
+				"Little India conserva il patrimonio commerciale dell’Asia meridionale.",
+				"Il Tempio Sri Veeramakaliamman è un simbolo induista."
+			],
+			"de": [
+				"Der Name geht auf den Rochor-Fluss zurück.",
+				"Little India bewahrt südasiatisches Handelserbe.",
+				"Der Sri-Veeramakaliamman-Tempel ist ein hinduistisches Wahrzeichen."
+			]
+		}
 	},
 	"orchard": {
 		"kind": "region",
@@ -468,7 +1148,24 @@
 			"Tanglin"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name recalls former fruit orchards.",
+				"Orchard Road developed into a shopping boulevard.",
+				"Tangs became a landmark department store."
+			],
+			"it": [
+				"Il nome ricorda gli antichi frutteti.",
+				"Orchard Road si sviluppò come viale commerciale.",
+				"Tangs divenne un grande magazzino simbolico."
+			],
+			"de": [
+				"Der Name erinnert an frühere Obstgärten.",
+				"Die Orchard Road entwickelte sich zu einem Einkaufsboulevard.",
+				"Tangs wurde zu einem markanten Kaufhaus."
+			]
+		}
 	},
 	"marine-parade": {
 		"kind": "region",
@@ -479,7 +1176,24 @@
 			"Marina East"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name recalls a seaside promenade.",
+				"Reclamation created much of the housing town’s land.",
+				"East Coast Park became a major coastal green space."
+			],
+			"it": [
+				"Il nome ricorda una passeggiata sul mare.",
+				"La bonifica creò gran parte del terreno della città residenziale.",
+				"East Coast Park divenne un importante spazio verde costiero."
+			],
+			"de": [
+				"Der Name erinnert an eine Meerespromenade.",
+				"Landgewinnung schuf große Teile des Wohnstadtgebiets.",
+				"Der East Coast Park wurde zu einem bedeutenden Küstengrünraum."
+			]
+		}
 	},
 	"river-valley": {
 		"kind": "region",
@@ -489,7 +1203,24 @@
 			"Tanglin"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name refers to the Singapore River’s valley.",
+				"Great World was once a popular amusement park.",
+				"The former park site was redeveloped for retail and housing."
+			],
+			"it": [
+				"Il nome si riferisce alla valle del fiume Singapore.",
+				"Great World era un tempo un popolare parco divertimenti.",
+				"Il sito del parco fu riqualificato per commercio e abitazioni."
+			],
+			"de": [
+				"Der Name bezieht sich auf das Tal des Singapore River.",
+				"Great World war einst ein beliebter Vergnügungspark.",
+				"Das frühere Parkgelände wurde für Handel und Wohnungen umgestaltet."
+			]
+		}
 	},
 	"museum": {
 		"kind": "region",
@@ -499,7 +1230,24 @@
 			"Rochor"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It is named for its concentration of museums.",
+				"The National Museum preserves Singapore’s history.",
+				"Fort Canning recalls royal and military periods."
+			],
+			"it": [
+				"Prende il nome dalla concentrazione di musei.",
+				"Il Museo nazionale conserva la storia di Singapore.",
+				"Fort Canning ricorda epoche reali e militari."
+			],
+			"de": [
+				"Der Name verweist auf die Konzentration von Museen.",
+				"Das Nationalmuseum bewahrt Singapurs Geschichte.",
+				"Fort Canning erinnert an königliche und militärische Epochen."
+			]
+		}
 	},
 	"singapore-river": {
 		"kind": "region",
@@ -511,7 +1259,24 @@
 			"Tanglin"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Singapore’s name derives from Sanskrit for lion city.",
+				"Cargo boats once linked its quays with ocean shipping.",
+				"Many warehouses were adapted for new uses."
+			],
+			"it": [
+				"Il nome Singapore deriva dal sanscrito per città del leone.",
+				"Le barche da carico collegavano le banchine alla navigazione oceanica.",
+				"Molti magazzini furono adattati a nuovi usi."
+			],
+			"de": [
+				"Singapurs Name stammt aus dem Sanskrit für Löwenstadt.",
+				"Lastboote verbanden die Kais einst mit der Seeschifffahrt.",
+				"Viele Lagerhäuser wurden für neue Zwecke umgenutzt."
+			]
+		}
 	},
 	"marina-east": {
 		"kind": "region",
@@ -522,7 +1287,24 @@
 			"Marine Parade"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name describes the eastern Marina Bay district.",
+				"Reclamation created its waterfront land.",
+				"The Marina Barrage links its shore with Marina South."
+			],
+			"it": [
+				"Il nome descrive il quartiere orientale di Marina Bay.",
+				"La bonifica creò il terreno del lungomare.",
+				"La Marina Barrage collega la riva a Marina South."
+			],
+			"de": [
+				"Der Name beschreibt das östliche Marina-Bay-Gebiet.",
+				"Landgewinnung schuf sein Uferland.",
+				"Die Marina Barrage verbindet das Ufer mit Marina South."
+			]
+		}
 	},
 	"queenstown": {
 		"kind": "region",
@@ -534,7 +1316,24 @@
 			"Tanglin"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It was named in honour of Queen Elizabeth II.",
+				"It became an early satellite housing town.",
+				"Princess House recalls early public-housing administration."
+			],
+			"it": [
+				"Fu chiamata in onore della regina Elisabetta II.",
+				"Divenne una delle prime città satelliti residenziali.",
+				"Princess House ricorda la prima amministrazione dell’edilizia pubblica."
+			],
+			"de": [
+				"Der Name ehrt Königin Elizabeth II.",
+				"Das Gebiet wurde zu einer frühen Wohnsatellitenstadt.",
+				"Princess House erinnert an die frühe öffentliche Wohnungsverwaltung."
+			]
+		}
 	},
 	"downtown-core": {
 		"kind": "region",
@@ -549,7 +1348,24 @@
 			"Straits View"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name describes the central business district.",
+				"Raffles Place honours Stamford Raffles.",
+				"The Fullerton building served as the General Post Office."
+			],
+			"it": [
+				"Il nome descrive il distretto commerciale centrale.",
+				"Raffles Place onora Stamford Raffles.",
+				"L’edificio Fullerton ospitò l’ufficio postale centrale."
+			],
+			"de": [
+				"Der Name beschreibt das zentrale Geschäftsviertel.",
+				"Raffles Place ehrt Stamford Raffles.",
+				"Das Fullerton-Gebäude diente als Hauptpostamt."
+			]
+		}
 	},
 	"tuas": {
 		"kind": "region",
@@ -558,7 +1374,24 @@
 			"Western Water Catchment"
 		],
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name is linked to an old fishing method.",
+				"Shipyards and factories transformed the former coast.",
+				"Tuas Port officially opened in 2022."
+			],
+			"it": [
+				"Il nome è legato a un antico metodo di pesca.",
+				"Cantieri navali e fabbriche trasformarono l’antica costa.",
+				"Il porto di Tuas aprì ufficialmente nel 2022."
+			],
+			"de": [
+				"Der Name wird mit einer alten Fangmethode verbunden.",
+				"Werften und Fabriken verwandelten die frühere Küste.",
+				"Der Tuas-Hafen wurde 2022 offiziell eröffnet."
+			]
+		}
 	},
 	"outram": {
 		"kind": "region",
@@ -568,7 +1401,24 @@
 			"Singapore River"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It was named after General James Outram.",
+				"Chinatown preserves clan-association and temple heritage.",
+				"Pearl’s Hill became a city park."
+			],
+			"it": [
+				"Fu chiamata in onore del generale James Outram.",
+				"Chinatown conserva il patrimonio delle associazioni di clan e dei templi.",
+				"Pearl’s Hill divenne un parco cittadino."
+			],
+			"de": [
+				"Der Name ehrt General James Outram.",
+				"Chinatown bewahrt das Erbe von Clanvereinigungen und Tempeln.",
+				"Pearl’s Hill wurde zum Stadtpark."
+			]
+		}
 	},
 	"marina-south": {
 		"kind": "region",
@@ -578,7 +1428,24 @@
 			"Straits View"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name describes the southern Marina Bay district.",
+				"Gardens by the Bay occupies reclaimed land.",
+				"The Supertrees combine planted structures with garden design."
+			],
+			"it": [
+				"Il nome descrive il quartiere meridionale di Marina Bay.",
+				"Gardens by the Bay occupa terreno bonificato.",
+				"I Supertrees combinano strutture vegetali e progettazione dei giardini."
+			],
+			"de": [
+				"Der Name beschreibt das südliche Marina-Bay-Gebiet.",
+				"Gardens by the Bay liegt auf gewonnenem Land.",
+				"Die Supertrees verbinden bepflanzte Bauwerke mit Gartengestaltung."
+			]
+		}
 	},
 	"bukit-merah": {
 		"kind": "region",
@@ -590,7 +1457,24 @@
 			"Tanglin"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Malay name means red hill.",
+				"Tiong Bahru preserves prewar public-housing architecture.",
+				"Henderson Waves links hill parks."
+			],
+			"it": [
+				"Il nome malese significa collina rossa.",
+				"Tiong Bahru conserva l’architettura residenziale pubblica prebellica.",
+				"Henderson Waves collega parchi collinari."
+			],
+			"de": [
+				"Der malaiische Name bedeutet roter Hügel.",
+				"Tiong Bahru bewahrt öffentliche Wohnarchitektur der Vorkriegszeit.",
+				"Henderson Waves verbindet Hügelparks."
+			]
+		}
 	},
 	"straits-view": {
 		"kind": "region",
@@ -600,16 +1484,67 @@
 			"Marina South"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name refers to views of the Singapore Strait.",
+				"Reclamation created much of its land.",
+				"The Marina Bay Cruise Centre is located here."
+			],
+			"it": [
+				"Il nome si riferisce alla vista sullo Stretto di Singapore.",
+				"La bonifica creò gran parte del terreno.",
+				"Qui si trova il Marina Bay Cruise Centre."
+			],
+			"de": [
+				"Der Name verweist auf Ausblicke zur Straße von Singapur.",
+				"Landgewinnung schuf große Teile des Gebiets.",
+				"Hier befindet sich das Marina Bay Cruise Centre."
+			]
+		}
 	},
 	"southern-islands": {
 		"kind": "region",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name describes islands south of the main island.",
+				"Sentosa was formerly called Pulau Blakang Mati.",
+				"St John’s Island served as a quarantine station."
+			],
+			"it": [
+				"Il nome descrive le isole a sud dell’isola principale.",
+				"Sentosa si chiamava in precedenza Pulau Blakang Mati.",
+				"L’isola St John servì da stazione di quarantena."
+			],
+			"de": [
+				"Der Name beschreibt Inseln südlich der Hauptinsel.",
+				"Sentosa hieß früher Pulau Blakang Mati.",
+				"St John’s Island diente als Quarantänestation."
+			]
+		}
 	},
 	"western-islands": {
 		"kind": "region",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name describes islands west of the main harbour area.",
+				"Jurong Island was formed by joining smaller islands.",
+				"Pulau Bukom has a long oil-refining history."
+			],
+			"it": [
+				"Il nome descrive le isole a ovest dell’area portuale principale.",
+				"Jurong Island fu formata unendo isole più piccole.",
+				"Pulau Bukom vanta una lunga storia di raffinazione petrolifera."
+			],
+			"de": [
+				"Der Name beschreibt Inseln westlich des Haupthafengebiets.",
+				"Jurong Island entstand durch die Verbindung kleinerer Inseln.",
+				"Pulau Bukom besitzt eine lange Erdölraffineriegeschichte."
+			]
+		}
 	}
 }

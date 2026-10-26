@@ -5,7 +5,24 @@
 		"populationRank": 12,
 		"region": "Tigray",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name is also written Adi Grat.",
+				"The town grew as a highland trading centre.",
+				"Its Catholic cathedral is a local landmark."
+			],
+			"it": [
+				"Il nome è scritto anche Adi Grat.",
+				"La città crebbe come centro commerciale d’altopiano.",
+				"La cattedrale cattolica è un simbolo locale."
+			],
+			"de": [
+				"Der Name wird auch Adi Grat geschrieben.",
+				"Die Stadt wuchs als Handelszentrum im Hochland.",
+				"Ihre katholische Kathedrale ist ein örtliches Wahrzeichen."
+			]
+		}
 	},
 	"mekele": {
 		"kind": "city",
@@ -13,7 +30,24 @@
 		"populationRank": 13,
 		"region": "Tigray",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name is also written Mekelle.",
+				"Yohannes IV built a royal palace here.",
+				"Abraha’s castle dates from the early twentieth century."
+			],
+			"it": [
+				"Il nome è scritto anche Mekelle.",
+				"Giovanni IV vi costruì un palazzo reale.",
+				"Il castello di Abraha risale all’inizio del Novecento."
+			],
+			"de": [
+				"Der Name wird auch Mekelle geschrieben.",
+				"Yohannes IV. ließ hier einen Königspalast errichten.",
+				"Abrahas Burg stammt aus dem frühen 20. Jahrhundert."
+			]
+		}
 	},
 	"gondar": {
 		"kind": "city",
@@ -21,7 +55,24 @@
 		"populationRank": 7,
 		"region": "Amhara",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its name is also written Gonder.",
+				"Fasil Ghebbi preserves a royal castle complex.",
+				"Debre Berhan Selassie is famed for its painted angel ceiling."
+			],
+			"it": [
+				"Il nome è scritto anche Gonder.",
+				"Fasil Ghebbi conserva un complesso di castelli reali.",
+				"Debre Berhan Selassie è celebre per il soffitto dipinto con angeli."
+			],
+			"de": [
+				"Der Name wird auch Gonder geschrieben.",
+				"Fasil Ghebbi bewahrt einen königlichen Burgkomplex.",
+				"Debre Berhan Selassie ist für seine bemalte Engeldecke bekannt."
+			]
+		}
 	},
 	"bahir-dar": {
 		"kind": "city",
@@ -29,7 +80,24 @@
 		"populationRank": 4,
 		"region": "Amhara",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its Amharic name means lakeshore.",
+				"Lake Tana’s monasteries preserve religious art.",
+				"Nearby Blue Nile Falls are also called Tis Abay."
+			],
+			"it": [
+				"Il nome amarico significa riva del lago.",
+				"I monasteri del lago Tana conservano arte religiosa.",
+				"Le vicine cascate del Nilo Azzurro sono chiamate anche Tis Abay."
+			],
+			"de": [
+				"Der amharische Name bedeutet Seeufer.",
+				"Die Klöster am Tanasee bewahren religiöse Kunst.",
+				"Die nahen Wasserfälle des Blauen Nils heißen auch Tis Abay."
+			]
+		}
 	},
 	"dese": {
 		"kind": "city",
@@ -37,7 +105,24 @@
 		"populationRank": 5,
 		"region": "Amhara",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name means my joy in Amharic.",
+				"Ras Mikael made the town a royal centre.",
+				"His palace recalls the history of Wollo."
+			],
+			"it": [
+				"Il nome significa mia gioia in amarico.",
+				"Ras Mikael fece della città un centro reale.",
+				"Il suo palazzo ricorda la storia del Wollo."
+			],
+			"de": [
+				"Der Name bedeutet auf Amharisch meine Freude.",
+				"Ras Mikael machte die Stadt zu einem Königszentrum.",
+				"Sein Palast erinnert an die Geschichte Wollos."
+			]
+		}
 	},
 	"debre-markos": {
 		"kind": "city",
@@ -45,14 +130,48 @@
 		"populationRank": 18,
 		"region": "Amhara",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name means Mount of Saint Mark.",
+				"It was a royal centre of Gojjam.",
+				"The palace was remodelled with European influences in 1926."
+			],
+			"it": [
+				"Il nome significa Monte di San Marco.",
+				"Fu un centro reale del Gojjam.",
+				"Il palazzo fu ristrutturato con influenze europee nel 1926."
+			],
+			"de": [
+				"Der Name bedeutet Berg des heiligen Markus.",
+				"Die Stadt war ein Königszentrum von Gojjam.",
+				"Der Palast wurde 1926 unter europäischen Einflüssen umgestaltet."
+			]
+		}
 	},
 	"dire-dawa": {
 		"kind": "city",
 		"population": 252279,
 		"populationRank": 3,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name is also romanized Dirē Dawa.",
+				"The city grew around the Djibouti railway.",
+				"Kezira preserves railway-era architecture."
+			],
+			"it": [
+				"Il nome è romanizzato anche Dirē Dawa.",
+				"La città crebbe attorno alla ferrovia per Gibuti.",
+				"Kezira conserva l’architettura dell’epoca ferroviaria."
+			],
+			"de": [
+				"Der Name wird auch Dirē Dawa romanisiert.",
+				"Die Stadt wuchs um die Eisenbahn nach Dschibuti.",
+				"Kezira bewahrt Architektur aus der Eisenbahnzeit."
+			]
+		}
 	},
 	"harar": {
 		"kind": "city",
@@ -60,7 +179,24 @@
 		"populationRank": 6,
 		"region": "Harari",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its walled historic town is called Jugol.",
+				"It became an important centre of Islamic scholarship.",
+				"Traditional houses display woven baskets and raised seating platforms."
+			],
+			"it": [
+				"La città storica fortificata si chiama Jugol.",
+				"Divenne un importante centro di studi islamici.",
+				"Le case tradizionali presentano cesti intrecciati e piattaforme rialzate per sedersi."
+			],
+			"de": [
+				"Die ummauerte Altstadt heißt Jugol.",
+				"Sie wurde zu einem bedeutenden Zentrum islamischer Gelehrsamkeit.",
+				"Traditionelle Häuser zeigen geflochtene Körbe und erhöhte Sitzplattformen."
+			]
+		}
 	},
 	"nekemte": {
 		"kind": "city",
@@ -68,7 +204,24 @@
 		"populationRank": 17,
 		"region": "Oromia",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name is also written Naqamtee.",
+				"Kumsa Moroda’s palace preserves local royal heritage.",
+				"The Wollega Museum presents regional cultures."
+			],
+			"it": [
+				"Il nome è scritto anche Naqamtee.",
+				"Il palazzo di Kumsa Moroda conserva il patrimonio reale locale.",
+				"Il Museo del Wollega presenta le culture regionali."
+			],
+			"de": [
+				"Der Name wird auch Naqamtee geschrieben.",
+				"Kumsa Morodas Palast bewahrt örtliches Königserbe.",
+				"Das Wollega-Museum zeigt regionale Kulturen."
+			]
+		}
 	},
 	"addis-ababa": {
 		"kind": "city",
@@ -96,21 +249,55 @@
 			]
 		}
 	},
-	"nazret": {
+	"adama": {
 		"kind": "city",
 		"population": 476892,
 		"populationRank": 2,
 		"region": "Oromia",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its former name was Nazret.",
+				"It grew as a railway and road junction.",
+				"Its science and technology university began as a technical college."
+			],
+			"it": [
+				"Il nome precedente era Nazret.",
+				"Crebbe come nodo ferroviario e stradale.",
+				"L’università di scienze e tecnologia nacque come collegio tecnico."
+			],
+			"de": [
+				"Der frühere Name lautete Nazret.",
+				"Die Stadt wuchs als Bahn- und Straßenknotenpunkt.",
+				"Ihre Universität für Wissenschaft und Technologie begann als technisches College."
+			]
+		}
 	},
-	"giyon": {
+	"woliso": {
 		"kind": "city",
 		"population": 114534,
 		"populationRank": 10,
 		"region": "Oromia",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its former name was Ghion, also written Giyon.",
+				"Hot springs shaped its resort history.",
+				"Enset farming is important in the surrounding highlands."
+			],
+			"it": [
+				"Il nome precedente era Ghion, scritto anche Giyon.",
+				"Le sorgenti calde ne plasmarono la storia termale.",
+				"La coltivazione dell’ensete è importante negli altopiani circostanti."
+			],
+			"de": [
+				"Der frühere Name lautete Ghion, auch Giyon geschrieben.",
+				"Heiße Quellen prägten seine Kurortgeschichte.",
+				"Enset-Anbau ist im umliegenden Hochland wichtig."
+			]
+		}
 	},
 	"asela": {
 		"kind": "city",
@@ -118,7 +305,24 @@
 		"populationRank": 15,
 		"region": "Oromia",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name is also written Asella.",
+				"It is a centre of Arsi Oromo culture.",
+				"The area is associated with Ethiopia’s distance-running tradition."
+			],
+			"it": [
+				"Il nome è scritto anche Asella.",
+				"È un centro della cultura oromo degli Arsi.",
+				"La zona è legata alla tradizione etiope della corsa di fondo."
+			],
+			"de": [
+				"Der Name wird auch Asella geschrieben.",
+				"Die Stadt ist ein Zentrum der Arsi-Oromo-Kultur.",
+				"Die Gegend ist mit Äthiopiens Langstreckenlauftradition verbunden."
+			]
+		}
 	},
 	"jima": {
 		"kind": "city",
@@ -126,7 +330,24 @@
 		"populationRank": 9,
 		"region": "Oromia",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Also written Jimma, its name recalls a former kingdom.",
+				"Abba Jifar’s palace preserves royal history.",
+				"Coffee trading helped shape the town."
+			],
+			"it": [
+				"Il nome, scritto anche Jimma, ricorda un antico regno.",
+				"Il palazzo di Abba Jifar conserva la storia reale.",
+				"Il commercio del caffè contribuì a plasmare la città."
+			],
+			"de": [
+				"Der auch Jimma geschriebene Name erinnert an ein früheres Königreich.",
+				"Abba Jifars Palast bewahrt Königsgeschichte.",
+				"Kaffeehandel prägte die Stadt."
+			]
+		}
 	},
 	"hosaina": {
 		"kind": "city",
@@ -134,7 +355,24 @@
 		"populationRank": 14,
 		"region": "Central Ethiopia",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name is also written Hosaena.",
+				"Hadiya traditions shape local cultural life.",
+				"Wachemo University is based here."
+			],
+			"it": [
+				"Il nome è scritto anche Hosaena.",
+				"Le tradizioni hadiya plasmano la vita culturale locale.",
+				"Qui ha sede l’Università Wachemo."
+			],
+			"de": [
+				"Der Name wird auch Hosaena geschrieben.",
+				"Hadiya-Traditionen prägen das örtliche Kulturleben.",
+				"Hier befindet sich die Wachemo-Universität."
+			]
+		}
 	},
 	"shashemene": {
 		"kind": "city",
@@ -142,15 +380,49 @@
 		"populationRank": 11,
 		"region": "Oromia",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name is also written Shashamane.",
+				"A 1948 land grant encouraged African diaspora settlement.",
+				"The town became a centre of Rastafari culture."
+			],
+			"it": [
+				"Il nome è scritto anche Shashamane.",
+				"Una concessione di terra del 1948 incoraggiò l’insediamento della diaspora africana.",
+				"La città divenne un centro della cultura rastafari."
+			],
+			"de": [
+				"Der Name wird auch Shashamane geschrieben.",
+				"Eine Landzuteilung von 1948 förderte die Ansiedlung der afrikanischen Diaspora.",
+				"Die Stadt wurde zu einem Zentrum der Rastafari-Kultur."
+			]
+		}
 	},
-	"awasa": {
+	"hawassa": {
 		"kind": "city",
 		"population": 133097,
 		"populationRank": 8,
 		"region": "Sidama",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its Sidama name refers to a wide body of water.",
+				"Fishing is part of the lakeside economy.",
+				"Fichee-Chambalaalla celebrates the Sidama New Year."
+			],
+			"it": [
+				"Il nome sidama si riferisce a un ampio specchio d’acqua.",
+				"La pesca fa parte dell’economia lacustre.",
+				"Il Fichee-Chambalaalla celebra il capodanno sidama."
+			],
+			"de": [
+				"Der Sidama-Name bezieht sich auf eine große Wasserfläche.",
+				"Fischfang gehört zur Wirtschaft am See.",
+				"Fichee-Chambalaalla feiert das Neujahr der Sidama."
+			]
+		}
 	},
 	"sodo": {
 		"kind": "city",
@@ -158,7 +430,24 @@
 		"populationRank": 20,
 		"region": "South Ethiopia",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"It is also known as Wolaita Sodo.",
+				"Gifata is a Wolaita New Year celebration.",
+				"The town is home to Wolaita Sodo University."
+			],
+			"it": [
+				"È nota anche come Wolaita Sodo.",
+				"Il Gifata è una celebrazione del capodanno wolaita.",
+				"La città ospita l’Università Wolaita Sodo."
+			],
+			"de": [
+				"Der Ort ist auch als Wolaita Sodo bekannt.",
+				"Gifata ist ein Neujahrsfest der Wolaita.",
+				"Die Stadt beherbergt die Wolaita-Sodo-Universität."
+			]
+		}
 	},
 	"arba-minch": {
 		"kind": "city",
@@ -166,7 +455,24 @@
 		"populationRank": 19,
 		"region": "South Ethiopia",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its Amharic name means forty springs.",
+				"Nechisar protects grassland between two Rift Valley lakes.",
+				"Nearby Dorze communities preserve weaving traditions."
+			],
+			"it": [
+				"Il nome amarico significa quaranta sorgenti.",
+				"Nechisar protegge praterie tra due laghi della Rift Valley.",
+				"Le vicine comunità dorze conservano tradizioni di tessitura."
+			],
+			"de": [
+				"Der amharische Name bedeutet vierzig Quellen.",
+				"Nechisar schützt Grasland zwischen zwei Seen des Rift Valley.",
+				"Nahe Dorze-Gemeinschaften bewahren Webtraditionen."
+			]
+		}
 	},
 	"gode": {
 		"kind": "city",
@@ -174,6 +480,23 @@
 		"populationRank": 16,
 		"region": "Somali",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its Somali name is also written Godey.",
+				"The Shabelle supports irrigated farming.",
+				"Livestock markets link surrounding pastoral communities."
+			],
+			"it": [
+				"Il nome somalo è scritto anche Godey.",
+				"Lo Shabelle sostiene l’agricoltura irrigua.",
+				"I mercati del bestiame collegano le comunità pastorali circostanti."
+			],
+			"de": [
+				"Der somalische Name wird auch Godey geschrieben.",
+				"Der Shabelle ermöglicht Bewässerungslandwirtschaft.",
+				"Viehmärkte verbinden die umliegenden Hirtengemeinschaften."
+			]
+		}
 	}
 }

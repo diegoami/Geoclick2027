@@ -12,7 +12,24 @@
 			"nameIt": "Adigrat",
 			"population": 104021
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name is linked to the Tigrayan people and their historic homeland.",
+				"Aksum preserves monumental stone stelae.",
+				"Gheralta is known for rock-hewn churches."
+			],
+			"it": [
+				"Il nome è legato al popolo tigrino e alla sua patria storica.",
+				"Aksum conserva monumentali stele in pietra.",
+				"Gheralta è nota per le chiese scavate nella roccia."
+			],
+			"de": [
+				"Der Name ist mit den Tigrayern und ihrer historischen Heimat verbunden.",
+				"Aksum bewahrt monumentale Steinstelen.",
+				"Gheralta ist für Felsenkirchen bekannt."
+			]
+		}
 	},
 	"afar": {
 		"kind": "region",
@@ -23,7 +40,24 @@
 			"Tigray"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It is named after the Afar people.",
+				"Hadar yielded the fossil skeleton known as Lucy.",
+				"Salt caravans are part of Danakil history."
+			],
+			"it": [
+				"Prende il nome dal popolo afar.",
+				"Hadar restituì lo scheletro fossile noto come Lucy.",
+				"Le carovane del sale fanno parte della storia della Dancalia."
+			],
+			"de": [
+				"Die Region ist nach den Afar benannt.",
+				"Hadar lieferte das als Lucy bekannte fossile Skelett.",
+				"Salzkarawanen gehören zur Geschichte der Danakil-Senke."
+			]
+		}
 	},
 	"amhara": {
 		"kind": "region",
@@ -44,7 +78,24 @@
 			"name": "Ras Dejen",
 			"elevation": 4533
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It is named after the Amhara people.",
+				"Lalibela preserves rock-hewn churches.",
+				"Gondar’s royal enclosure recalls Ethiopia’s imperial history."
+			],
+			"it": [
+				"Prende il nome dal popolo amhara.",
+				"Lalibela conserva chiese scavate nella roccia.",
+				"Il recinto reale di Gondar ricorda la storia imperiale etiope."
+			],
+			"de": [
+				"Die Region ist nach den Amhara benannt.",
+				"Lalibela bewahrt Felsenkirchen.",
+				"Gondars Königsbezirk erinnert an Äthiopiens Kaisergeschichte."
+			]
+		}
 	},
 	"benishangul-gumuz": {
 		"kind": "region",
@@ -59,7 +110,24 @@
 			"nameIt": "Asosa",
 			"population": 30512
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The name combines historic Benishangul and the Gumuz people.",
+				"Berta music includes bamboo trumpet ensembles.",
+				"The Grand Ethiopian Renaissance Dam was built on the Blue Nile."
+			],
+			"it": [
+				"Il nome combina lo storico Benishangul e il popolo gumuz.",
+				"La musica berta comprende complessi di trombe di bambù.",
+				"La Grande Diga della Rinascita Etiope fu costruita sul Nilo Azzurro."
+			],
+			"de": [
+				"Der Name verbindet das historische Benishangul mit den Gumuz.",
+				"Zur Berta-Musik gehören Bambustrompeten-Ensembles.",
+				"Der Große Äthiopische Renaissance-Staudamm wurde am Blauen Nil gebaut."
+			]
+		}
 	},
 	"dire-dawa": {
 		"kind": "region",
@@ -74,7 +142,24 @@
 			"nameIt": "Dire Daua",
 			"population": 252279
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name is also romanized Dirē Dawa.",
+				"The city grew around the Djibouti railway.",
+				"Kezira preserves railway-era architecture."
+			],
+			"it": [
+				"Il nome è romanizzato anche Dirē Dawa.",
+				"La città crebbe attorno alla ferrovia per Gibuti.",
+				"Kezira conserva l’architettura dell’epoca ferroviaria."
+			],
+			"de": [
+				"Der Name wird auch Dirē Dawa romanisiert.",
+				"Die Stadt wuchs um die Eisenbahn nach Dschibuti.",
+				"Kezira bewahrt Architektur aus der Eisenbahnzeit."
+			]
+		}
 	},
 	"harari": {
 		"kind": "region",
@@ -88,7 +173,24 @@
 			"nameIt": "Harar",
 			"population": 174994
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It is named after the Harari people.",
+				"Harar’s walled historic town is called Jugol.",
+				"Traditional houses display distinctive baskets and raised seating platforms."
+			],
+			"it": [
+				"Prende il nome dal popolo harari.",
+				"La città storica fortificata di Harar si chiama Jugol.",
+				"Le case tradizionali presentano caratteristici cesti e piattaforme rialzate per sedersi."
+			],
+			"de": [
+				"Die Region ist nach den Harari benannt.",
+				"Harars ummauerte Altstadt heißt Jugol.",
+				"Traditionelle Häuser zeigen charakteristische Körbe und erhöhte Sitzplattformen."
+			]
+		}
 	},
 	"addis-ababa": {
 		"kind": "region",
@@ -102,7 +204,24 @@
 			"nameIt": "Addis Abeba",
 			"population": 3100000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Amharic name means new flower.",
+				"The African Union has its headquarters here.",
+				"The National Museum preserves Ethiopia’s ancient heritage."
+			],
+			"it": [
+				"Il nome amarico significa nuovo fiore.",
+				"Qui ha sede l’Unione africana.",
+				"Il Museo nazionale conserva l’antico patrimonio etiope."
+			],
+			"de": [
+				"Der amharische Name bedeutet neue Blume.",
+				"Hier hat die Afrikanische Union ihren Sitz.",
+				"Das Nationalmuseum bewahrt Äthiopiens altes Kulturerbe."
+			]
+		}
 	},
 	"central-ethiopia": {
 		"kind": "region",
@@ -118,7 +237,24 @@
 			"nameIt": "Hosaena",
 			"population": 89300
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name refers to Ethiopia’s central area.",
+				"Tiya preserves carved megalithic stelae.",
+				"Enset cultivation is important in local farming traditions."
+			],
+			"it": [
+				"Il nome si riferisce all’area centrale dell’Etiopia.",
+				"Tiya conserva stele megalitiche scolpite.",
+				"La coltivazione dell’ensete è importante nelle tradizioni agricole locali."
+			],
+			"de": [
+				"Der Name bezieht sich auf Äthiopiens Zentralgebiet.",
+				"Tiya bewahrt verzierte megalithische Stelen.",
+				"Enset-Anbau spielt in örtlichen Landwirtschaftstraditionen eine wichtige Rolle."
+			]
+		}
 	},
 	"gambella": {
 		"kind": "region",
@@ -127,7 +263,24 @@
 			"Southwest Ethiopia"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The region shares its name with Gambella town.",
+				"Anuak and Nuer traditions shape its cultural life.",
+				"Gambella National Park protects wetlands and savanna."
+			],
+			"it": [
+				"La regione condivide il nome con la città di Gambella.",
+				"Le tradizioni anuak e nuer ne plasmano la vita culturale.",
+				"Il Parco nazionale di Gambella protegge zone umide e savana."
+			],
+			"de": [
+				"Die Region teilt ihren Namen mit Gambella.",
+				"Anuak- und Nuer-Traditionen prägen ihr Kulturleben.",
+				"Der Gambella-Nationalpark schützt Feuchtgebiete und Savanne."
+			]
+		}
 	},
 	"somali": {
 		"kind": "region",
@@ -143,7 +296,24 @@
 			"nameIt": "Gode",
 			"population": 75000
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name refers to the Somali people.",
+				"Oral poetry is an important cultural tradition.",
+				"Camel husbandry is part of the region’s pastoral heritage."
+			],
+			"it": [
+				"Il nome si riferisce al popolo somalo.",
+				"La poesia orale è un’importante tradizione culturale.",
+				"L’allevamento dei cammelli fa parte del patrimonio pastorale regionale."
+			],
+			"de": [
+				"Der Name bezieht sich auf die Somali.",
+				"Mündliche Dichtung ist eine bedeutende Kulturtradition.",
+				"Kamelhaltung gehört zum pastoralen Erbe der Region."
+			]
+		}
 	},
 	"oromia": {
 		"kind": "region",
@@ -163,7 +333,7 @@
 		],
 		"coastal": false,
 		"largestCity": {
-			"name": "Nazret",
+			"name": "Adama",
 			"nameDe": "Adama",
 			"nameIt": "Adama",
 			"population": 476892
@@ -172,7 +342,24 @@
 			"name": "Mount Batu",
 			"elevation": 4307
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"It is named after the Oromo people.",
+				"Gada is a traditional system of community governance.",
+				"Bale’s highland habitats shelter Ethiopian wolves."
+			],
+			"it": [
+				"Prende il nome dal popolo oromo.",
+				"Il Gada è un sistema tradizionale di governo comunitario.",
+				"Gli habitat d’altopiano del Bale ospitano lupi etiopi."
+			],
+			"de": [
+				"Die Region ist nach den Oromo benannt.",
+				"Gada ist ein traditionelles System gemeinschaftlicher Verwaltung.",
+				"Bales Hochlandlebensräume beherbergen Äthiopische Wölfe."
+			]
+		}
 	},
 	"sidama": {
 		"kind": "region",
@@ -182,12 +369,29 @@
 		],
 		"coastal": false,
 		"largestCity": {
-			"name": "Awasa",
+			"name": "Hawassa",
 			"nameDe": "Awassa",
 			"nameIt": "Auasa",
 			"population": 133097
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"It is named after the Sidama people.",
+				"Coffee growing is central to local agricultural traditions.",
+				"Fichee-Chambalaalla is a Sidama New Year celebration."
+			],
+			"it": [
+				"Prende il nome dal popolo sidama.",
+				"La coltivazione del caffè è centrale nelle tradizioni agricole locali.",
+				"Il Fichee-Chambalaalla è una celebrazione del capodanno sidama."
+			],
+			"de": [
+				"Die Region ist nach den Sidama benannt.",
+				"Kaffeeanbau prägt örtliche Landwirtschaftstraditionen.",
+				"Fichee-Chambalaalla ist ein Neujahrsfest der Sidama."
+			]
+		}
 	},
 	"southwest-ethiopia": {
 		"kind": "region",
@@ -198,7 +402,24 @@
 			"South Ethiopia"
 		],
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name describes Ethiopia’s southwest.",
+				"It became a regional state in 2021.",
+				"Kaffa’s forests preserve wild coffee populations."
+			],
+			"it": [
+				"Il nome descrive il sudovest dell’Etiopia.",
+				"Divenne uno stato regionale nel 2021.",
+				"Le foreste di Kaffa conservano popolazioni di caffè selvatico."
+			],
+			"de": [
+				"Der Name beschreibt Äthiopiens Südwesten.",
+				"Das Gebiet wurde 2021 ein Regionalstaat.",
+				"Kaffas Wälder bewahren wilde Kaffeebestände."
+			]
+		}
 	},
 	"south-ethiopia": {
 		"kind": "region",
@@ -219,6 +440,23 @@
 			"name": "Argun",
 			"elevation": 3418
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name describes southern Ethiopia.",
+				"Konso communities preserve stone agricultural terraces.",
+				"Gedeo agroforestry combines coffee, enset and shade trees."
+			],
+			"it": [
+				"Il nome descrive l’Etiopia meridionale.",
+				"Le comunità konso conservano terrazze agricole in pietra.",
+				"L’agroforestazione gedeo combina caffè, ensete e alberi ombreggianti."
+			],
+			"de": [
+				"Der Name beschreibt Südäthiopien.",
+				"Konso-Gemeinschaften bewahren steinerne Landwirtschaftsterrassen.",
+				"Gedeo-Agroforstwirtschaft verbindet Kaffee, Enset und Schattenbäume."
+			]
+		}
 	}
 }

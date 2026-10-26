@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Ethiopia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"addis-ababa": {
 		"city": {
@@ -20,6 +21,765 @@
 				"„Neue Blume“, der Name, den Kaiserin Taytu ihr 1886 gab.",
 				"Die Afrikanische Union hat hier ihren Sitz.",
 				"Auf etwa 2.350 m Höhe ist Addis Abeba eine der höchstgelegenen Hauptstädte der Welt."
+			]
+		},
+		"region": {
+			"en": [
+				"Its Amharic name means new flower.",
+				"The African Union has its headquarters here.",
+				"The National Museum preserves Ethiopia’s ancient heritage."
+			],
+			"it": [
+				"Il nome amarico significa nuovo fiore.",
+				"Qui ha sede l’Unione africana.",
+				"Il Museo nazionale conserva l’antico patrimonio etiope."
+			],
+			"de": [
+				"Der amharische Name bedeutet neue Blume.",
+				"Hier hat die Afrikanische Union ihren Sitz.",
+				"Das Nationalmuseum bewahrt Äthiopiens altes Kulturerbe."
+			]
+		}
+	},
+	"_sources": {
+		"tigray:region": [
+			"https://en.wikipedia.org/wiki/Tigray_Region",
+			"https://en.wikipedia.org/wiki/Aksum",
+			"https://whc.unesco.org/en/statesparties/et/"
+		],
+		"afar:region": [
+			"https://en.wikipedia.org/wiki/Afar_Region",
+			"https://en.wikipedia.org/wiki/Hadar,_Ethiopia"
+		],
+		"amhara:region": [
+			"https://en.wikipedia.org/wiki/Amhara_Region",
+			"https://en.wikipedia.org/wiki/Lalibela",
+			"https://en.wikipedia.org/wiki/Fasil_Ghebbi"
+		],
+		"benishangul-gumuz:region": [
+			"https://en.wikipedia.org/wiki/Benishangul-Gumuz_Region",
+			"https://en.wikipedia.org/wiki/Berta_people",
+			"https://en.wikipedia.org/wiki/Grand_Ethiopian_Renaissance_Dam"
+		],
+		"dire-dawa:region": [
+			"https://en.wikipedia.org/wiki/Dire_Dawa",
+			"https://assets.publishing.service.gov.uk/media/6717aa8a194d62fb6854056c/Ethiopia_factfile.pdf"
+		],
+		"dire-dawa:city": [
+			"https://en.wikipedia.org/wiki/Dire_Dawa",
+			"https://assets.publishing.service.gov.uk/media/6717aa8a194d62fb6854056c/Ethiopia_factfile.pdf"
+		],
+		"harari:region": [
+			"https://en.wikipedia.org/wiki/Harari_Region",
+			"https://en.wikipedia.org/wiki/Harar"
+		],
+		"addis-ababa:region": [
+			"https://en.wikipedia.org/wiki/Addis_Ababa",
+			"https://en.wikipedia.org/wiki/National_Museum_of_Ethiopia"
+		],
+		"central-ethiopia:region": [
+			"https://en.wikipedia.org/wiki/Central_Ethiopia_Regional_State",
+			"https://en.wikipedia.org/wiki/Tiya_(archaeological_site)"
+		],
+		"gambella:region": [
+			"https://en.wikipedia.org/wiki/Gambela_Region",
+			"https://en.wikipedia.org/wiki/Gambela_National_Park"
+		],
+		"somali:region": [
+			"https://en.wikipedia.org/wiki/Somali_Region",
+			"https://en.wikipedia.org/wiki/Somali_poetry"
+		],
+		"oromia:region": [
+			"https://en.wikipedia.org/wiki/Oromia",
+			"https://ich.unesco.org/en/RL/gadaa-system-an-indigenous-democratic-socio-political-system-of-the-oromo-people-01164",
+			"https://en.wikipedia.org/wiki/Bale_Mountains_National_Park"
+		],
+		"sidama:region": [
+			"https://en.wikipedia.org/wiki/Sidama_Region",
+			"https://ich.unesco.org/doc/src/32697-EN.pdf"
+		],
+		"southwest-ethiopia:region": [
+			"https://assets.publishing.service.gov.uk/media/6717aa8a194d62fb6854056c/Ethiopia_factfile.pdf",
+			"https://www.technoserve.org/wp-content/uploads/2021/05/Ethiopias-Forest-Coffee-An-Illustrated-Guide-.pdf"
+		],
+		"south-ethiopia:region": [
+			"https://en.wikipedia.org/wiki/South_Ethiopia_Regional_State",
+			"https://en.wikipedia.org/wiki/Konso_Cultural_Landscape",
+			"https://whc.unesco.org/en/list/1641"
+		],
+		"adigrat:city": [
+			"https://en.wikipedia.org/wiki/Adigrat"
+		],
+		"mekele:city": [
+			"https://en.wikipedia.org/wiki/Mekelle",
+			"https://en.wikipedia.org/wiki/Yohannes_IV_Palace"
+		],
+		"gondar:city": [
+			"https://en.wikipedia.org/wiki/Gondar",
+			"https://en.wikipedia.org/wiki/Fasil_Ghebbi",
+			"https://en.wikipedia.org/wiki/Debre_Berhan_Selassie_Church"
+		],
+		"bahir-dar:city": [
+			"https://en.wikipedia.org/wiki/Bahir_Dar",
+			"https://en.wikipedia.org/wiki/Blue_Nile_Falls"
+		],
+		"dese:city": [
+			"https://en.wikipedia.org/wiki/Dessie"
+		],
+		"debre-markos:city": [
+			"https://en.wikipedia.org/wiki/Debre_Markos"
+		],
+		"harar:city": [
+			"https://en.wikipedia.org/wiki/Harar",
+			"https://whc.unesco.org/en/statesparties/et/"
+		],
+		"nekemte:city": [
+			"https://en.wikipedia.org/wiki/Nekemte"
+		],
+		"adama:city": [
+			"https://en.wikipedia.org/wiki/Adama",
+			"https://en.wikipedia.org/wiki/Adama_Science_and_Technology_University"
+		],
+		"woliso:city": [
+			"https://en.wikipedia.org/wiki/Waliso",
+			"https://alnap.cdn.ngo/media/documents/wfp077056.pdf"
+		],
+		"asela:city": [
+			"https://en.wikipedia.org/wiki/Asella"
+		],
+		"jima:city": [
+			"https://en.wikipedia.org/wiki/Jimma",
+			"https://en.wikipedia.org/wiki/Abba_Jifar_Palace"
+		],
+		"hosaina:city": [
+			"https://en.wikipedia.org/wiki/Hosaena",
+			"https://en.wikipedia.org/wiki/Wachemo_University"
+		],
+		"shashemene:city": [
+			"https://en.wikipedia.org/wiki/Shashamane"
+		],
+		"hawassa:city": [
+			"https://en.wikipedia.org/wiki/Hawassa",
+			"https://ich.unesco.org/doc/src/32697-EN.pdf"
+		],
+		"sodo:city": [
+			"https://en.wikipedia.org/wiki/Sodo",
+			"https://en.wikipedia.org/wiki/Gifata",
+			"https://en.wikipedia.org/wiki/Wolaita_Sodo_University"
+		],
+		"arba-minch:city": [
+			"https://en.wikipedia.org/wiki/Arba_Minch",
+			"https://en.wikipedia.org/wiki/Nechisar_National_Park",
+			"https://en.wikipedia.org/wiki/Dorze_people"
+		],
+		"gode:city": [
+			"https://en.wikipedia.org/wiki/Gode",
+			"https://en.wikipedia.org/wiki/Shabelle_River"
+		]
+	},
+	"tigray": {
+		"region": {
+			"en": [
+				"Its name is linked to the Tigrayan people and their historic homeland.",
+				"Aksum preserves monumental stone stelae.",
+				"Gheralta is known for rock-hewn churches."
+			],
+			"it": [
+				"Il nome è legato al popolo tigrino e alla sua patria storica.",
+				"Aksum conserva monumentali stele in pietra.",
+				"Gheralta è nota per le chiese scavate nella roccia."
+			],
+			"de": [
+				"Der Name ist mit den Tigrayern und ihrer historischen Heimat verbunden.",
+				"Aksum bewahrt monumentale Steinstelen.",
+				"Gheralta ist für Felsenkirchen bekannt."
+			]
+		}
+	},
+	"afar": {
+		"region": {
+			"en": [
+				"It is named after the Afar people.",
+				"Hadar yielded the fossil skeleton known as Lucy.",
+				"Salt caravans are part of Danakil history."
+			],
+			"it": [
+				"Prende il nome dal popolo afar.",
+				"Hadar restituì lo scheletro fossile noto come Lucy.",
+				"Le carovane del sale fanno parte della storia della Dancalia."
+			],
+			"de": [
+				"Die Region ist nach den Afar benannt.",
+				"Hadar lieferte das als Lucy bekannte fossile Skelett.",
+				"Salzkarawanen gehören zur Geschichte der Danakil-Senke."
+			]
+		}
+	},
+	"amhara": {
+		"region": {
+			"en": [
+				"It is named after the Amhara people.",
+				"Lalibela preserves rock-hewn churches.",
+				"Gondar’s royal enclosure recalls Ethiopia’s imperial history."
+			],
+			"it": [
+				"Prende il nome dal popolo amhara.",
+				"Lalibela conserva chiese scavate nella roccia.",
+				"Il recinto reale di Gondar ricorda la storia imperiale etiope."
+			],
+			"de": [
+				"Die Region ist nach den Amhara benannt.",
+				"Lalibela bewahrt Felsenkirchen.",
+				"Gondars Königsbezirk erinnert an Äthiopiens Kaisergeschichte."
+			]
+		}
+	},
+	"benishangul-gumuz": {
+		"region": {
+			"en": [
+				"The name combines historic Benishangul and the Gumuz people.",
+				"Berta music includes bamboo trumpet ensembles.",
+				"The Grand Ethiopian Renaissance Dam was built on the Blue Nile."
+			],
+			"it": [
+				"Il nome combina lo storico Benishangul e il popolo gumuz.",
+				"La musica berta comprende complessi di trombe di bambù.",
+				"La Grande Diga della Rinascita Etiope fu costruita sul Nilo Azzurro."
+			],
+			"de": [
+				"Der Name verbindet das historische Benishangul mit den Gumuz.",
+				"Zur Berta-Musik gehören Bambustrompeten-Ensembles.",
+				"Der Große Äthiopische Renaissance-Staudamm wurde am Blauen Nil gebaut."
+			]
+		}
+	},
+	"dire-dawa": {
+		"region": {
+			"en": [
+				"Its name is also romanized Dirē Dawa.",
+				"The city grew around the Djibouti railway.",
+				"Kezira preserves railway-era architecture."
+			],
+			"it": [
+				"Il nome è romanizzato anche Dirē Dawa.",
+				"La città crebbe attorno alla ferrovia per Gibuti.",
+				"Kezira conserva l’architettura dell’epoca ferroviaria."
+			],
+			"de": [
+				"Der Name wird auch Dirē Dawa romanisiert.",
+				"Die Stadt wuchs um die Eisenbahn nach Dschibuti.",
+				"Kezira bewahrt Architektur aus der Eisenbahnzeit."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name is also romanized Dirē Dawa.",
+				"The city grew around the Djibouti railway.",
+				"Kezira preserves railway-era architecture."
+			],
+			"it": [
+				"Il nome è romanizzato anche Dirē Dawa.",
+				"La città crebbe attorno alla ferrovia per Gibuti.",
+				"Kezira conserva l’architettura dell’epoca ferroviaria."
+			],
+			"de": [
+				"Der Name wird auch Dirē Dawa romanisiert.",
+				"Die Stadt wuchs um die Eisenbahn nach Dschibuti.",
+				"Kezira bewahrt Architektur aus der Eisenbahnzeit."
+			]
+		}
+	},
+	"harari": {
+		"region": {
+			"en": [
+				"It is named after the Harari people.",
+				"Harar’s walled historic town is called Jugol.",
+				"Traditional houses display distinctive baskets and raised seating platforms."
+			],
+			"it": [
+				"Prende il nome dal popolo harari.",
+				"La città storica fortificata di Harar si chiama Jugol.",
+				"Le case tradizionali presentano caratteristici cesti e piattaforme rialzate per sedersi."
+			],
+			"de": [
+				"Die Region ist nach den Harari benannt.",
+				"Harars ummauerte Altstadt heißt Jugol.",
+				"Traditionelle Häuser zeigen charakteristische Körbe und erhöhte Sitzplattformen."
+			]
+		}
+	},
+	"central-ethiopia": {
+		"region": {
+			"en": [
+				"Its name refers to Ethiopia’s central area.",
+				"Tiya preserves carved megalithic stelae.",
+				"Enset cultivation is important in local farming traditions."
+			],
+			"it": [
+				"Il nome si riferisce all’area centrale dell’Etiopia.",
+				"Tiya conserva stele megalitiche scolpite.",
+				"La coltivazione dell’ensete è importante nelle tradizioni agricole locali."
+			],
+			"de": [
+				"Der Name bezieht sich auf Äthiopiens Zentralgebiet.",
+				"Tiya bewahrt verzierte megalithische Stelen.",
+				"Enset-Anbau spielt in örtlichen Landwirtschaftstraditionen eine wichtige Rolle."
+			]
+		}
+	},
+	"gambella": {
+		"region": {
+			"en": [
+				"The region shares its name with Gambella town.",
+				"Anuak and Nuer traditions shape its cultural life.",
+				"Gambella National Park protects wetlands and savanna."
+			],
+			"it": [
+				"La regione condivide il nome con la città di Gambella.",
+				"Le tradizioni anuak e nuer ne plasmano la vita culturale.",
+				"Il Parco nazionale di Gambella protegge zone umide e savana."
+			],
+			"de": [
+				"Die Region teilt ihren Namen mit Gambella.",
+				"Anuak- und Nuer-Traditionen prägen ihr Kulturleben.",
+				"Der Gambella-Nationalpark schützt Feuchtgebiete und Savanne."
+			]
+		}
+	},
+	"somali": {
+		"region": {
+			"en": [
+				"Its name refers to the Somali people.",
+				"Oral poetry is an important cultural tradition.",
+				"Camel husbandry is part of the region’s pastoral heritage."
+			],
+			"it": [
+				"Il nome si riferisce al popolo somalo.",
+				"La poesia orale è un’importante tradizione culturale.",
+				"L’allevamento dei cammelli fa parte del patrimonio pastorale regionale."
+			],
+			"de": [
+				"Der Name bezieht sich auf die Somali.",
+				"Mündliche Dichtung ist eine bedeutende Kulturtradition.",
+				"Kamelhaltung gehört zum pastoralen Erbe der Region."
+			]
+		}
+	},
+	"oromia": {
+		"region": {
+			"en": [
+				"It is named after the Oromo people.",
+				"Gada is a traditional system of community governance.",
+				"Bale’s highland habitats shelter Ethiopian wolves."
+			],
+			"it": [
+				"Prende il nome dal popolo oromo.",
+				"Il Gada è un sistema tradizionale di governo comunitario.",
+				"Gli habitat d’altopiano del Bale ospitano lupi etiopi."
+			],
+			"de": [
+				"Die Region ist nach den Oromo benannt.",
+				"Gada ist ein traditionelles System gemeinschaftlicher Verwaltung.",
+				"Bales Hochlandlebensräume beherbergen Äthiopische Wölfe."
+			]
+		}
+	},
+	"sidama": {
+		"region": {
+			"en": [
+				"It is named after the Sidama people.",
+				"Coffee growing is central to local agricultural traditions.",
+				"Fichee-Chambalaalla is a Sidama New Year celebration."
+			],
+			"it": [
+				"Prende il nome dal popolo sidama.",
+				"La coltivazione del caffè è centrale nelle tradizioni agricole locali.",
+				"Il Fichee-Chambalaalla è una celebrazione del capodanno sidama."
+			],
+			"de": [
+				"Die Region ist nach den Sidama benannt.",
+				"Kaffeeanbau prägt örtliche Landwirtschaftstraditionen.",
+				"Fichee-Chambalaalla ist ein Neujahrsfest der Sidama."
+			]
+		}
+	},
+	"southwest-ethiopia": {
+		"region": {
+			"en": [
+				"Its name describes Ethiopia’s southwest.",
+				"It became a regional state in 2021.",
+				"Kaffa’s forests preserve wild coffee populations."
+			],
+			"it": [
+				"Il nome descrive il sudovest dell’Etiopia.",
+				"Divenne uno stato regionale nel 2021.",
+				"Le foreste di Kaffa conservano popolazioni di caffè selvatico."
+			],
+			"de": [
+				"Der Name beschreibt Äthiopiens Südwesten.",
+				"Das Gebiet wurde 2021 ein Regionalstaat.",
+				"Kaffas Wälder bewahren wilde Kaffeebestände."
+			]
+		}
+	},
+	"south-ethiopia": {
+		"region": {
+			"en": [
+				"Its name describes southern Ethiopia.",
+				"Konso communities preserve stone agricultural terraces.",
+				"Gedeo agroforestry combines coffee, enset and shade trees."
+			],
+			"it": [
+				"Il nome descrive l’Etiopia meridionale.",
+				"Le comunità konso conservano terrazze agricole in pietra.",
+				"L’agroforestazione gedeo combina caffè, ensete e alberi ombreggianti."
+			],
+			"de": [
+				"Der Name beschreibt Südäthiopien.",
+				"Konso-Gemeinschaften bewahren steinerne Landwirtschaftsterrassen.",
+				"Gedeo-Agroforstwirtschaft verbindet Kaffee, Enset und Schattenbäume."
+			]
+		}
+	},
+	"adigrat": {
+		"city": {
+			"en": [
+				"Its name is also written Adi Grat.",
+				"The town grew as a highland trading centre.",
+				"Its Catholic cathedral is a local landmark."
+			],
+			"it": [
+				"Il nome è scritto anche Adi Grat.",
+				"La città crebbe come centro commerciale d’altopiano.",
+				"La cattedrale cattolica è un simbolo locale."
+			],
+			"de": [
+				"Der Name wird auch Adi Grat geschrieben.",
+				"Die Stadt wuchs als Handelszentrum im Hochland.",
+				"Ihre katholische Kathedrale ist ein örtliches Wahrzeichen."
+			]
+		}
+	},
+	"mekele": {
+		"city": {
+			"en": [
+				"Its name is also written Mekelle.",
+				"Yohannes IV built a royal palace here.",
+				"Abraha’s castle dates from the early twentieth century."
+			],
+			"it": [
+				"Il nome è scritto anche Mekelle.",
+				"Giovanni IV vi costruì un palazzo reale.",
+				"Il castello di Abraha risale all’inizio del Novecento."
+			],
+			"de": [
+				"Der Name wird auch Mekelle geschrieben.",
+				"Yohannes IV. ließ hier einen Königspalast errichten.",
+				"Abrahas Burg stammt aus dem frühen 20. Jahrhundert."
+			]
+		}
+	},
+	"gondar": {
+		"city": {
+			"en": [
+				"Its name is also written Gonder.",
+				"Fasil Ghebbi preserves a royal castle complex.",
+				"Debre Berhan Selassie is famed for its painted angel ceiling."
+			],
+			"it": [
+				"Il nome è scritto anche Gonder.",
+				"Fasil Ghebbi conserva un complesso di castelli reali.",
+				"Debre Berhan Selassie è celebre per il soffitto dipinto con angeli."
+			],
+			"de": [
+				"Der Name wird auch Gonder geschrieben.",
+				"Fasil Ghebbi bewahrt einen königlichen Burgkomplex.",
+				"Debre Berhan Selassie ist für seine bemalte Engeldecke bekannt."
+			]
+		}
+	},
+	"bahir-dar": {
+		"city": {
+			"en": [
+				"Its Amharic name means lakeshore.",
+				"Lake Tana’s monasteries preserve religious art.",
+				"Nearby Blue Nile Falls are also called Tis Abay."
+			],
+			"it": [
+				"Il nome amarico significa riva del lago.",
+				"I monasteri del lago Tana conservano arte religiosa.",
+				"Le vicine cascate del Nilo Azzurro sono chiamate anche Tis Abay."
+			],
+			"de": [
+				"Der amharische Name bedeutet Seeufer.",
+				"Die Klöster am Tanasee bewahren religiöse Kunst.",
+				"Die nahen Wasserfälle des Blauen Nils heißen auch Tis Abay."
+			]
+		}
+	},
+	"dese": {
+		"city": {
+			"en": [
+				"Its name means my joy in Amharic.",
+				"Ras Mikael made the town a royal centre.",
+				"His palace recalls the history of Wollo."
+			],
+			"it": [
+				"Il nome significa mia gioia in amarico.",
+				"Ras Mikael fece della città un centro reale.",
+				"Il suo palazzo ricorda la storia del Wollo."
+			],
+			"de": [
+				"Der Name bedeutet auf Amharisch meine Freude.",
+				"Ras Mikael machte die Stadt zu einem Königszentrum.",
+				"Sein Palast erinnert an die Geschichte Wollos."
+			]
+		}
+	},
+	"debre-markos": {
+		"city": {
+			"en": [
+				"Its name means Mount of Saint Mark.",
+				"It was a royal centre of Gojjam.",
+				"The palace was remodelled with European influences in 1926."
+			],
+			"it": [
+				"Il nome significa Monte di San Marco.",
+				"Fu un centro reale del Gojjam.",
+				"Il palazzo fu ristrutturato con influenze europee nel 1926."
+			],
+			"de": [
+				"Der Name bedeutet Berg des heiligen Markus.",
+				"Die Stadt war ein Königszentrum von Gojjam.",
+				"Der Palast wurde 1926 unter europäischen Einflüssen umgestaltet."
+			]
+		}
+	},
+	"harar": {
+		"city": {
+			"en": [
+				"Its walled historic town is called Jugol.",
+				"It became an important centre of Islamic scholarship.",
+				"Traditional houses display woven baskets and raised seating platforms."
+			],
+			"it": [
+				"La città storica fortificata si chiama Jugol.",
+				"Divenne un importante centro di studi islamici.",
+				"Le case tradizionali presentano cesti intrecciati e piattaforme rialzate per sedersi."
+			],
+			"de": [
+				"Die ummauerte Altstadt heißt Jugol.",
+				"Sie wurde zu einem bedeutenden Zentrum islamischer Gelehrsamkeit.",
+				"Traditionelle Häuser zeigen geflochtene Körbe und erhöhte Sitzplattformen."
+			]
+		}
+	},
+	"nekemte": {
+		"city": {
+			"en": [
+				"Its name is also written Naqamtee.",
+				"Kumsa Moroda’s palace preserves local royal heritage.",
+				"The Wollega Museum presents regional cultures."
+			],
+			"it": [
+				"Il nome è scritto anche Naqamtee.",
+				"Il palazzo di Kumsa Moroda conserva il patrimonio reale locale.",
+				"Il Museo del Wollega presenta le culture regionali."
+			],
+			"de": [
+				"Der Name wird auch Naqamtee geschrieben.",
+				"Kumsa Morodas Palast bewahrt örtliches Königserbe.",
+				"Das Wollega-Museum zeigt regionale Kulturen."
+			]
+		}
+	},
+	"adama": {
+		"city": {
+			"en": [
+				"Its former name was Nazret.",
+				"It grew as a railway and road junction.",
+				"Its science and technology university began as a technical college."
+			],
+			"it": [
+				"Il nome precedente era Nazret.",
+				"Crebbe come nodo ferroviario e stradale.",
+				"L’università di scienze e tecnologia nacque come collegio tecnico."
+			],
+			"de": [
+				"Der frühere Name lautete Nazret.",
+				"Die Stadt wuchs als Bahn- und Straßenknotenpunkt.",
+				"Ihre Universität für Wissenschaft und Technologie begann als technisches College."
+			]
+		}
+	},
+	"woliso": {
+		"city": {
+			"en": [
+				"Its former name was Ghion, also written Giyon.",
+				"Hot springs shaped its resort history.",
+				"Enset farming is important in the surrounding highlands."
+			],
+			"it": [
+				"Il nome precedente era Ghion, scritto anche Giyon.",
+				"Le sorgenti calde ne plasmarono la storia termale.",
+				"La coltivazione dell’ensete è importante negli altopiani circostanti."
+			],
+			"de": [
+				"Der frühere Name lautete Ghion, auch Giyon geschrieben.",
+				"Heiße Quellen prägten seine Kurortgeschichte.",
+				"Enset-Anbau ist im umliegenden Hochland wichtig."
+			]
+		}
+	},
+	"asela": {
+		"city": {
+			"en": [
+				"Its name is also written Asella.",
+				"It is a centre of Arsi Oromo culture.",
+				"The area is associated with Ethiopia’s distance-running tradition."
+			],
+			"it": [
+				"Il nome è scritto anche Asella.",
+				"È un centro della cultura oromo degli Arsi.",
+				"La zona è legata alla tradizione etiope della corsa di fondo."
+			],
+			"de": [
+				"Der Name wird auch Asella geschrieben.",
+				"Die Stadt ist ein Zentrum der Arsi-Oromo-Kultur.",
+				"Die Gegend ist mit Äthiopiens Langstreckenlauftradition verbunden."
+			]
+		}
+	},
+	"jima": {
+		"city": {
+			"en": [
+				"Also written Jimma, its name recalls a former kingdom.",
+				"Abba Jifar’s palace preserves royal history.",
+				"Coffee trading helped shape the town."
+			],
+			"it": [
+				"Il nome, scritto anche Jimma, ricorda un antico regno.",
+				"Il palazzo di Abba Jifar conserva la storia reale.",
+				"Il commercio del caffè contribuì a plasmare la città."
+			],
+			"de": [
+				"Der auch Jimma geschriebene Name erinnert an ein früheres Königreich.",
+				"Abba Jifars Palast bewahrt Königsgeschichte.",
+				"Kaffeehandel prägte die Stadt."
+			]
+		}
+	},
+	"hosaina": {
+		"city": {
+			"en": [
+				"Its name is also written Hosaena.",
+				"Hadiya traditions shape local cultural life.",
+				"Wachemo University is based here."
+			],
+			"it": [
+				"Il nome è scritto anche Hosaena.",
+				"Le tradizioni hadiya plasmano la vita culturale locale.",
+				"Qui ha sede l’Università Wachemo."
+			],
+			"de": [
+				"Der Name wird auch Hosaena geschrieben.",
+				"Hadiya-Traditionen prägen das örtliche Kulturleben.",
+				"Hier befindet sich die Wachemo-Universität."
+			]
+		}
+	},
+	"shashemene": {
+		"city": {
+			"en": [
+				"Its name is also written Shashamane.",
+				"A 1948 land grant encouraged African diaspora settlement.",
+				"The town became a centre of Rastafari culture."
+			],
+			"it": [
+				"Il nome è scritto anche Shashamane.",
+				"Una concessione di terra del 1948 incoraggiò l’insediamento della diaspora africana.",
+				"La città divenne un centro della cultura rastafari."
+			],
+			"de": [
+				"Der Name wird auch Shashamane geschrieben.",
+				"Eine Landzuteilung von 1948 förderte die Ansiedlung der afrikanischen Diaspora.",
+				"Die Stadt wurde zu einem Zentrum der Rastafari-Kultur."
+			]
+		}
+	},
+	"hawassa": {
+		"city": {
+			"en": [
+				"Its Sidama name refers to a wide body of water.",
+				"Fishing is part of the lakeside economy.",
+				"Fichee-Chambalaalla celebrates the Sidama New Year."
+			],
+			"it": [
+				"Il nome sidama si riferisce a un ampio specchio d’acqua.",
+				"La pesca fa parte dell’economia lacustre.",
+				"Il Fichee-Chambalaalla celebra il capodanno sidama."
+			],
+			"de": [
+				"Der Sidama-Name bezieht sich auf eine große Wasserfläche.",
+				"Fischfang gehört zur Wirtschaft am See.",
+				"Fichee-Chambalaalla feiert das Neujahr der Sidama."
+			]
+		}
+	},
+	"sodo": {
+		"city": {
+			"en": [
+				"It is also known as Wolaita Sodo.",
+				"Gifata is a Wolaita New Year celebration.",
+				"The town is home to Wolaita Sodo University."
+			],
+			"it": [
+				"È nota anche come Wolaita Sodo.",
+				"Il Gifata è una celebrazione del capodanno wolaita.",
+				"La città ospita l’Università Wolaita Sodo."
+			],
+			"de": [
+				"Der Ort ist auch als Wolaita Sodo bekannt.",
+				"Gifata ist ein Neujahrsfest der Wolaita.",
+				"Die Stadt beherbergt die Wolaita-Sodo-Universität."
+			]
+		}
+	},
+	"arba-minch": {
+		"city": {
+			"en": [
+				"Its Amharic name means forty springs.",
+				"Nechisar protects grassland between two Rift Valley lakes.",
+				"Nearby Dorze communities preserve weaving traditions."
+			],
+			"it": [
+				"Il nome amarico significa quaranta sorgenti.",
+				"Nechisar protegge praterie tra due laghi della Rift Valley.",
+				"Le vicine comunità dorze conservano tradizioni di tessitura."
+			],
+			"de": [
+				"Der amharische Name bedeutet vierzig Quellen.",
+				"Nechisar schützt Grasland zwischen zwei Seen des Rift Valley.",
+				"Nahe Dorze-Gemeinschaften bewahren Webtraditionen."
+			]
+		}
+	},
+	"gode": {
+		"city": {
+			"en": [
+				"Its Somali name is also written Godey.",
+				"The Shabelle supports irrigated farming.",
+				"Livestock markets link surrounding pastoral communities."
+			],
+			"it": [
+				"Il nome somalo è scritto anche Godey.",
+				"Lo Shabelle sostiene l’agricoltura irrigua.",
+				"I mercati del bestiame collegano le comunità pastorali circostanti."
+			],
+			"de": [
+				"Der somalische Name wird auch Godey geschrieben.",
+				"Der Shabelle ermöglicht Bewässerungslandwirtschaft.",
+				"Viehmärkte verbinden die umliegenden Hirtengemeinschaften."
 			]
 		}
 	}

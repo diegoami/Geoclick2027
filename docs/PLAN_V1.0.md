@@ -177,7 +177,7 @@ reviews, awards, unsupported platforms or simulated gameplay screenshots.
 
 Checkpoint saved at the owner's request; resumed on 2026-10-26. Branch: maps/v1.0-country-expansion.
 Worktree: C:/Users/diego/projects/Geoclick2027-work/maps-v1.0-country-expansion.
-The first batch is in [PR #243](https://github.com/diegoami/Geoclick2027/pull/243); the overall expansion remains unfinished.
+The complete expansion is in [PR #243](https://github.com/diegoami/Geoclick2027/pull/243); final checks and fresh PR review precede owner testing.
 
 All 22 approved countries now have their two map packages: 44 new maps and
 735 targets, giving 217 maps across 79 country groups plus six continents.
@@ -186,12 +186,10 @@ joined in the catalogue. Singapore has five regions and 55 planning areas,
 rather than a misleading towns map. All 44 new choices were verified in the
 rendered browser catalogue at 1280 × 800 on localhost:5187.
 
-Authored facts are still in progress: 403/735 new targets have three sentences
-in each of English, Italian and German. The first six countries, Nepal, UAE,
-Uzbekistan, Latvia, Sri Lanka, Uganda, Slovenia and Ghana are complete; eight countries remain. The reproducible
-coverage check is data/scripts/audit-v1-country-facts.ts (--strict fails until
-all remaining targets are complete). Generated hooks are refreshed from the
-authored data/facts files, including shared continent targets.
+Authored facts are complete: all 735 expansion targets have three sentences
+in each of English, Italian and German, across all 22 countries. The strict
+coverage audit is data/scripts/audit-v1-country-facts.ts --strict. Generated
+hooks are refreshed from data/facts, including shared continent targets.
 
 Current Angola (21), Iraq (19), Ethiopia (14) and Tanzania (31) source polygons
 pass validity and pairwise area-overlap checks. Singapore is explicitly retained
@@ -199,9 +197,8 @@ in the world picker despite the continent quiz's minimum-area filter;
 Congo-Kinshasa links to the existing Democratic Republic of the Congo polygon.
 The catalogue regressions caught and now guard these missing-row cases.
 
-Next: finish all remaining authored facts, document and verify the complete
-pipeline, run local gates on the final content, and obtain a fresh external-family
-PR review before owner testing. The old first-batch review is historical.
+Next: obtain a fresh external-family PR review of the completed content before
+owner testing. The old first-batch review is historical.
 
 Windows is canonical. A preserved Linux build mirror with its own dependencies,
 raw sources and tile tools is at
@@ -406,8 +403,8 @@ was triggered or checked (deploys remain stopped).
 Browser checks at 1280 × 800 confirmed all 44 choices in the rendered start
 screen menus and successful canvases for Nepal, Angola, DR Congo and
 Singapore planning areas, without page errors or failed local asset requests.
-Facts remain 403/735 complete; the strict content audit still intentionally
-fails. PR #243 remains draft and needs a fresh external-family review after
+At this intermediate checkpoint facts were 403/735 complete; final coverage
+is recorded below. PR #243 remains draft and needs a fresh external-family review after
 content completion, followed by owner testing/merge approval. Its old reviews
 do not cover this expanded code. No 1.0 bump, tag or publication has happened.
 
@@ -420,14 +417,8 @@ Existing Colombo, Kampala and Ljubljana sets were preserved. Maribor’s two
 sentences were retained in substance and expanded with its historic name.
 Per-target checking references are stored in the authored country files.
 Generated hooks were refreshed for their six maps and the shared Central
-European cities map. The coverage regressions now include all 28 maps of
-the fourteen completed countries; 1382 focused data/fact/translation tests pass.
-
-Remaining authoring: Taiwan, DR Congo, Ethiopia, Tanzania, Singapore,
-Israel, Iraq and Angola (332 targets lacking complete EN/IT/DE sets).
-The full-scope strict audit remains a release-readiness check, not a passed
-gate. Fresh external-family review and owner testing follow content completion.
-
+European cities map. At that checkpoint, coverage regressions included the 28 maps of the fourteen
+completed countries and 1382 focused data/fact/translation tests passed.
 
 Ghana's sixteen regions and nineteen remaining towns now have 35 complete
 EN/IT/DE fact sets (315 sentences); Accra's existing set is preserved.
@@ -439,3 +430,31 @@ fact explicitly names Mampong-Akuapem. Formation dates of the six 2019
 regions were checked against the Ministry's implementation report.
 Generated hooks are refreshed for both Ghana maps. No tag, release,
 deployment, installer test or itch.io access is part of this content batch.
+
+
+### Completion of all remaining facts
+
+Taiwan, DR Congo, Ethiopia, Tanzania, Singapore, Israel, Iraq and Angola now
+have all 332 missing trilingual sets: 2988 authored sentences. The complete
+expansion passes the strict 735/735-target audit. Per-target references are
+stored beside the authored content; existing capital facts are preserved.
+
+The shared name fixups and regenerated Ethiopian maps use Adama, Woliso and
+Hawassa. Iraqi maps use Erbil and Az Zubayr, correcting the source typo
+Az Aubayr. Generated-data regressions guard these names. The trilingual
+coverage regression now covers all 44 expansion maps.
+
+Singapore landmarks were checked against the prepared 2019 planning polygons,
+including the zoo in Central Water Catchment, the National Museum in Museum,
+and Singapore General Hospital in Bukit Merah. Angola facts follow the current
+21-province geography: Quiçama belongs to Icolo e Bengo and Cameia to Moxico
+Leste. Facts avoid treating disputed boundaries or uncertain etymologies as
+settled claims.
+
+Generated hooks are refreshed. Local verification: all four gates pass
+(type checks, 2822 app tests with zero failures, lint and production web build).
+The browser shows all 44 new choices and representative canvases at 1280 × 800
+without page errors or failed asset responses. Fresh external-family review
+precedes owner testing. Deployments remain stopped; no live deployment test
+was performed. No tag, publication, installer/device test or itch.io access
+is part of this content completion.

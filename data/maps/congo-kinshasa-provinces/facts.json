@@ -13,7 +13,24 @@
 			"nameIt": "Gbadolite",
 			"population": 50493
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The French name means northern Ubangi.",
+				"The Ubangi forms where the Uélé and Mbomou meet.",
+				"Gbadolite became known for Mobutu’s presidential palaces."
+			],
+			"it": [
+				"Il nome francese significa Ubangi settentrionale.",
+				"L’Ubangi nasce dall’unione dell’Uélé e del Mbomou.",
+				"Gbadolite divenne nota per i palazzi presidenziali di Mobutu."
+			],
+			"de": [
+				"Der französische Name bedeutet nördlicher Ubangi.",
+				"Der Ubangi entsteht aus Uele und Mbomou.",
+				"Gbadolite wurde für Mobutus Präsidentenpaläste bekannt."
+			]
+		}
 	},
 	"bas-uele": {
 		"kind": "region",
@@ -30,7 +47,24 @@
 			"nameIt": "Aketi",
 			"population": 58601
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Bas-Uélé means lower Uélé.",
+				"Azande communities preserve distinctive artistic traditions.",
+				"Aketi developed as a river-and-rail transfer point."
+			],
+			"it": [
+				"Bas-Uélé significa basso Uélé.",
+				"Le comunità azande conservano particolari tradizioni artistiche.",
+				"Aketi si sviluppò come nodo tra fiume e ferrovia."
+			],
+			"de": [
+				"Bas-Uélé bedeutet unterer Uele.",
+				"Azande-Gemeinschaften bewahren eigene Kunsttraditionen.",
+				"Aketi entwickelte sich zum Umschlagplatz zwischen Fluss und Bahn."
+			]
+		}
 	},
 	"haut-uele": {
 		"kind": "region",
@@ -46,7 +80,24 @@
 			"nameIt": "Isiro",
 			"population": 157196
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Haut-Uélé means upper Uélé.",
+				"Garamba National Park protects savanna wildlife.",
+				"Isiro was formerly called Paulis."
+			],
+			"it": [
+				"Haut-Uélé significa alto Uélé.",
+				"Il Parco nazionale di Garamba protegge la fauna della savana.",
+				"Isiro si chiamava in precedenza Paulis."
+			],
+			"de": [
+				"Haut-Uélé bedeutet oberer Uele.",
+				"Der Garamba-Nationalpark schützt Savannentiere.",
+				"Isiro hieß früher Paulis."
+			]
+		}
 	},
 	"sud-ubangi": {
 		"kind": "region",
@@ -62,7 +113,24 @@
 			"nameIt": "Gemena",
 			"population": 198056
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The French name means southern Ubangi.",
+				"Ngbaka communities are part of its cultural heritage.",
+				"River trade shaped settlements such as Libenge."
+			],
+			"it": [
+				"Il nome francese significa Ubangi meridionale.",
+				"Le comunità ngbaka fanno parte del patrimonio culturale.",
+				"Il commercio fluviale plasmò insediamenti come Libenge."
+			],
+			"de": [
+				"Der französische Name bedeutet südlicher Ubangi.",
+				"Ngbaka-Gemeinschaften gehören zu seinem kulturellen Erbe.",
+				"Flusshandel prägte Siedlungen wie Libenge."
+			]
+		}
 	},
 	"ituri": {
 		"kind": "region",
@@ -78,7 +146,24 @@
 			"nameIt": "Bunia",
 			"population": 96764
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The province takes its name from the Ituri River.",
+				"The Okapi Wildlife Reserve protects rainforest habitats.",
+				"Mbuti and Efe communities have longstanding forest traditions."
+			],
+			"it": [
+				"La provincia prende il nome dal fiume Ituri.",
+				"La Riserva faunistica degli okapi protegge habitat di foresta pluviale.",
+				"Le comunità mbuti ed efe conservano antiche tradizioni forestali."
+			],
+			"de": [
+				"Die Provinz ist nach dem Ituri-Fluss benannt.",
+				"Das Okapi-Wildschutzgebiet schützt Regenwaldlebensräume.",
+				"Mbuti- und Efe-Gemeinschaften besitzen lange Waldtraditionen."
+			]
+		}
 	},
 	"mongala": {
 		"kind": "region",
@@ -97,7 +182,24 @@
 			"nameIt": "Bumba",
 			"population": 160539
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It is named after the Mongala River.",
+				"Bumba developed as a river port and railway terminus.",
+				"Yaligimba grew around oil-palm plantations."
+			],
+			"it": [
+				"Prende il nome dal fiume Mongala.",
+				"Bumba si sviluppò come porto fluviale e capolinea ferroviario.",
+				"Yaligimba crebbe attorno alle piantagioni di palma da olio."
+			],
+			"de": [
+				"Der Name geht auf den Mongala-Fluss zurück.",
+				"Bumba entwickelte sich als Flusshafen und Bahnendpunkt.",
+				"Yaligimba wuchs um Ölpalmenplantagen."
+			]
+		}
 	},
 	"tshopo": {
 		"kind": "region",
@@ -118,7 +220,24 @@
 			"nameIt": "Kisangani",
 			"population": 578470
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"It is named after the Tshopo River.",
+				"Kisangani was formerly called Stanleyville.",
+				"Yangambi has a long history of forest research."
+			],
+			"it": [
+				"Prende il nome dal fiume Tshopo.",
+				"Kisangani si chiamava in precedenza Stanleyville.",
+				"Yangambi vanta una lunga storia di ricerca forestale."
+			],
+			"de": [
+				"Der Name geht auf den Tshopo-Fluss zurück.",
+				"Kisangani hieß früher Stanleyville.",
+				"Yangambi blickt auf eine lange Geschichte der Waldforschung zurück."
+			]
+		}
 	},
 	"equateur": {
 		"kind": "region",
@@ -135,7 +254,24 @@
 			"nameIt": "Mbandaka",
 			"population": 274996
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Équateur is French for equator.",
+				"Mbandaka was formerly Coquilhatville.",
+				"Lake Tumba supports traditional fishing communities."
+			],
+			"it": [
+				"Équateur significa equatore in francese.",
+				"Mbandaka si chiamava in precedenza Coquilhatville.",
+				"Il lago Tumba sostiene comunità di pescatori tradizionali."
+			],
+			"de": [
+				"Équateur ist französisch für Äquator.",
+				"Mbandaka hieß früher Coquilhatville.",
+				"Der Tumba-See ernährt traditionelle Fischergemeinschaften."
+			]
+		}
 	},
 	"tshuapa": {
 		"kind": "region",
@@ -154,7 +290,24 @@
 			"nameIt": "Boende",
 			"population": 32091
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It is named after the Tshuapa River.",
+				"Salonga’s forests shelter bonobos.",
+				"Boende developed as a river port."
+			],
+			"it": [
+				"Prende il nome dal fiume Tshuapa.",
+				"Le foreste di Salonga ospitano bonobo.",
+				"Boende si sviluppò come porto fluviale."
+			],
+			"de": [
+				"Der Name geht auf den Tshuapa-Fluss zurück.",
+				"Salongas Wälder beherbergen Bonobos.",
+				"Boende entwickelte sich als Flusshafen."
+			]
+		}
 	},
 	"nord-kivu": {
 		"kind": "region",
@@ -175,7 +328,24 @@
 			"name": "Volcan Karisimbi",
 			"elevation": 4519
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Nord-Kivu means North Kivu in French.",
+				"Virunga preserves volcanic and forest landscapes.",
+				"Nyiragongo is an active volcano."
+			],
+			"it": [
+				"Nord-Kivu significa Kivu settentrionale in francese.",
+				"Virunga conserva paesaggi vulcanici e forestali.",
+				"Il Nyiragongo è un vulcano attivo."
+			],
+			"de": [
+				"Nord-Kivu bedeutet auf Französisch Nord-Kivu.",
+				"Virunga bewahrt Vulkan- und Waldlandschaften.",
+				"Der Nyiragongo ist ein aktiver Vulkan."
+			]
+		}
 	},
 	"maniema": {
 		"kind": "region",
@@ -194,7 +364,24 @@
 			"nameIt": "Kindu",
 			"population": 262914
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Historical sources also use the spelling Manyema.",
+				"Kindu developed through river trade.",
+				"Lomami National Park protects part of its forest landscape."
+			],
+			"it": [
+				"Le fonti storiche usano anche la grafia Manyema.",
+				"Kindu si sviluppò grazie al commercio fluviale.",
+				"Il Parco nazionale di Lomami protegge parte del paesaggio forestale."
+			],
+			"de": [
+				"Historische Quellen verwenden auch die Schreibweise Manyema.",
+				"Kindu entwickelte sich durch Flusshandel.",
+				"Der Lomami-Nationalpark schützt Teile seiner Waldlandschaft."
+			]
+		}
 	},
 	"mai-ndombe": {
 		"kind": "region",
@@ -212,7 +399,24 @@
 			"nameIt": "Inongo",
 			"population": 40113
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Mai-Ndombe means black water.",
+				"Its lake was formerly called Lake Leopold II.",
+				"Fishing has long shaped lakeside communities."
+			],
+			"it": [
+				"Mai-Ndombe significa acqua nera.",
+				"Il lago si chiamava in precedenza Lago Leopoldo II.",
+				"La pesca caratterizza da lungo tempo le comunità lacustri."
+			],
+			"de": [
+				"Mai-Ndombe bedeutet schwarzes Wasser.",
+				"Der See hieß früher Leopold-II.-See.",
+				"Fischfang prägt seit Langem die Gemeinden am See."
+			]
+		}
 	},
 	"sud-kivu": {
 		"kind": "region",
@@ -232,7 +436,24 @@
 			"name": "Mont Mohi",
 			"elevation": 3480
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Sud-Kivu means South Kivu in French.",
+				"Kahuzi-Biega shelters eastern lowland gorillas.",
+				"The Ruzizi River links Lake Kivu with Lake Tanganyika."
+			],
+			"it": [
+				"Sud-Kivu significa Kivu meridionale in francese.",
+				"Kahuzi-Biega ospita gorilla di pianura orientali.",
+				"Il fiume Ruzizi collega il lago Kivu al lago Tanganica."
+			],
+			"de": [
+				"Sud-Kivu bedeutet auf Französisch Süd-Kivu.",
+				"Kahuzi-Biega beherbergt Östliche Flachlandgorillas.",
+				"Der Ruzizi verbindet den Kivusee mit dem Tanganjikasee."
+			]
+		}
 	},
 	"sankuru": {
 		"kind": "region",
@@ -252,7 +473,24 @@
 			"nameIt": "Lodja",
 			"population": 68244
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It takes its name from the Sankuru River.",
+				"Lodja developed as a trading centre.",
+				"Patrice Lumumba was born at Onalua."
+			],
+			"it": [
+				"Prende il nome dal fiume Sankuru.",
+				"Lodja si sviluppò come centro commerciale.",
+				"Patrice Lumumba nacque a Onalua."
+			],
+			"de": [
+				"Der Name geht auf den Sankuru-Fluss zurück.",
+				"Lodja entwickelte sich als Handelszentrum.",
+				"Patrice Lumumba wurde in Onalua geboren."
+			]
+		}
 	},
 	"kinshasa": {
 		"kind": "region",
@@ -269,7 +507,24 @@
 			"nameIt": "Kinshasa",
 			"population": 7843000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its former colonial name was Léopoldville.",
+				"Congolese rumba is central to its musical heritage.",
+				"It hosted the Rumble in the Jungle boxing match in 1974."
+			],
+			"it": [
+				"Il nome coloniale precedente era Léopoldville.",
+				"La rumba congolese è centrale nel patrimonio musicale.",
+				"Ospitò l’incontro di pugilato Rumble in the Jungle nel 1974."
+			],
+			"de": [
+				"Der frühere Kolonialname lautete Léopoldville.",
+				"Kongolesische Rumba prägt ihr musikalisches Erbe.",
+				"Hier fand 1974 der Boxkampf Rumble in the Jungle statt."
+			]
+		}
 	},
 	"kwilu": {
 		"kind": "region",
@@ -286,7 +541,24 @@
 			"nameIt": "Kikwit",
 			"population": 637736
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"It takes its name from the Kwilu River.",
+				"Kikwit grew through river trade.",
+				"Pende sculpture includes expressive carved masks."
+			],
+			"it": [
+				"Prende il nome dal fiume Kwilu.",
+				"Kikwit crebbe grazie al commercio fluviale.",
+				"La scultura pende comprende maschere intagliate espressive."
+			],
+			"de": [
+				"Der Name geht auf den Kwilu-Fluss zurück.",
+				"Kikwit wuchs durch Flusshandel.",
+				"Zur Pende-Bildhauerei gehören ausdrucksstarke geschnitzte Masken."
+			]
+		}
 	},
 	"kasai": {
 		"kind": "region",
@@ -305,7 +577,24 @@
 			"nameIt": "Tshikapa",
 			"population": 267462
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It takes its name from the Kasaï River.",
+				"Tshikapa developed through diamond mining.",
+				"Mushenge is a historic royal centre of the Kuba."
+			],
+			"it": [
+				"Prende il nome dal fiume Kasaï.",
+				"Tshikapa si sviluppò grazie all’estrazione dei diamanti.",
+				"Mushenge è uno storico centro reale dei kuba."
+			],
+			"de": [
+				"Der Name geht auf den Kasai-Fluss zurück.",
+				"Tshikapa entwickelte sich durch Diamantenabbau.",
+				"Mushenge ist ein historisches Königszentrum der Kuba."
+			]
+		}
 	},
 	"kongo-central": {
 		"kind": "region",
@@ -320,7 +609,24 @@
 			"nameIt": "Matadi",
 			"population": 245862
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name recalls the historic Kongo kingdom.",
+				"Boma served as a colonial capital.",
+				"The Inga rapids shaped hydroelectric development."
+			],
+			"it": [
+				"Il nome ricorda lo storico regno del Kongo.",
+				"Boma fu una capitale coloniale.",
+				"Le rapide di Inga favorirono lo sviluppo idroelettrico."
+			],
+			"de": [
+				"Der Name erinnert an das historische Königreich Kongo.",
+				"Boma war eine Kolonialhauptstadt.",
+				"Die Inga-Stromschnellen prägten die Wasserkraftentwicklung."
+			]
+		}
 	},
 	"kasai-central": {
 		"kind": "region",
@@ -338,7 +644,24 @@
 			"nameIt": "Kananga",
 			"population": 765000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The French name means Central Kasaï.",
+				"Kananga was formerly Luluabourg.",
+				"Lulua carving traditions include figures and masks."
+			],
+			"it": [
+				"Il nome francese significa Kasaï centrale.",
+				"Kananga si chiamava in precedenza Luluabourg.",
+				"Le tradizioni scultoree lulua comprendono figure e maschere."
+			],
+			"de": [
+				"Der französische Name bedeutet Zentral-Kasai.",
+				"Kananga hieß früher Luluabourg.",
+				"Lulua-Schnitztraditionen umfassen Figuren und Masken."
+			]
+		}
 	},
 	"kasai-oriental": {
 		"kind": "region",
@@ -354,7 +677,24 @@
 			"nameIt": "Mbuji-Mayi",
 			"population": 1295000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The French name means Eastern Kasaï.",
+				"Mbuji-Mayi was formerly Bakwanga.",
+				"Tshiluba is a major local language."
+			],
+			"it": [
+				"Il nome francese significa Kasaï orientale.",
+				"Mbuji-Mayi si chiamava in precedenza Bakwanga.",
+				"Lo tshiluba è un’importante lingua locale."
+			],
+			"de": [
+				"Der französische Name bedeutet Ost-Kasai.",
+				"Mbuji-Mayi hieß früher Bakwanga.",
+				"Tshiluba ist eine wichtige örtliche Sprache."
+			]
+		}
 	},
 	"kwango": {
 		"kind": "region",
@@ -371,7 +711,24 @@
 			"nameIt": "Kahemba",
 			"population": 50000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"It takes its name from the Kwango River.",
+				"Yaka traditions include carved initiation masks.",
+				"Suku communities also preserve distinctive sculptural arts."
+			],
+			"it": [
+				"Prende il nome dal fiume Kwango.",
+				"Le tradizioni yaka comprendono maschere d’iniziazione intagliate.",
+				"Anche le comunità suku conservano particolari arti scultoree."
+			],
+			"de": [
+				"Der Name geht auf den Kwango-Fluss zurück.",
+				"Zu Yaka-Traditionen gehören geschnitzte Initiationsmasken.",
+				"Auch Suku-Gemeinschaften bewahren eigene Bildhauerkünste."
+			]
+		}
 	},
 	"lomami": {
 		"kind": "region",
@@ -391,7 +748,24 @@
 			"nameIt": "Mwene-Ditu",
 			"population": 189177
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It takes its name from the Lomami River.",
+				"Songye sculpture includes protective figures.",
+				"Mwene-Ditu developed through railway trade."
+			],
+			"it": [
+				"Prende il nome dal fiume Lomami.",
+				"La scultura songye comprende figure protettive.",
+				"Mwene-Ditu si sviluppò grazie al commercio ferroviario."
+			],
+			"de": [
+				"Der Name geht auf den Lomami-Fluss zurück.",
+				"Songye-Bildhauerei umfasst Schutzfiguren.",
+				"Mwene-Ditu entwickelte sich durch den Eisenbahnhandel."
+			]
+		}
 	},
 	"tanganyika": {
 		"kind": "region",
@@ -413,7 +787,24 @@
 			"name": "Kabobo",
 			"elevation": 2725
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"It is named after Lake Tanganyika.",
+				"Kalemie was formerly Albertville.",
+				"Lake trade linked settlements along its shores."
+			],
+			"it": [
+				"Prende il nome dal lago Tanganica.",
+				"Kalemie si chiamava in precedenza Albertville.",
+				"Il commercio lacustre collegava gli insediamenti sulle rive."
+			],
+			"de": [
+				"Der Name geht auf den Tanganjikasee zurück.",
+				"Kalemie hieß früher Albertville.",
+				"Seehandel verband die Siedlungen an seinen Ufern."
+			]
+		}
 	},
 	"haut-lomami": {
 		"kind": "region",
@@ -430,7 +821,24 @@
 			"nameIt": "Kamina",
 			"population": 128803
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Haut-Lomami means upper Lomami.",
+				"Kamina developed as a railway junction.",
+				"Upemba National Park preserves wetlands and savanna."
+			],
+			"it": [
+				"Haut-Lomami significa alto Lomami.",
+				"Kamina si sviluppò come nodo ferroviario.",
+				"Il Parco nazionale di Upemba conserva zone umide e savana."
+			],
+			"de": [
+				"Haut-Lomami bedeutet oberer Lomami.",
+				"Kamina entwickelte sich als Bahnknotenpunkt.",
+				"Der Upemba-Nationalpark bewahrt Feuchtgebiete und Savanne."
+			]
+		}
 	},
 	"lualaba": {
 		"kind": "region",
@@ -447,7 +855,24 @@
 			"nameIt": "Kolwezi",
 			"population": 418000
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"It is named after the upper Congo River’s Lualaba section.",
+				"Kolwezi developed through copper and cobalt mining.",
+				"Musumba is a historic royal centre of the Lunda."
+			],
+			"it": [
+				"Prende il nome dal tratto Lualaba dell’alto fiume Congo.",
+				"Kolwezi si sviluppò grazie all’estrazione di rame e cobalto.",
+				"Musumba è uno storico centro reale dei lunda."
+			],
+			"de": [
+				"Der Name geht auf den Lualaba-Abschnitt des oberen Kongo zurück.",
+				"Kolwezi entwickelte sich durch Kupfer- und Kobaltbergbau.",
+				"Musumba ist ein historisches Königszentrum der Lunda."
+			]
+		}
 	},
 	"haut-katanga": {
 		"kind": "region",
@@ -463,6 +888,23 @@
 			"nameIt": "Lubumbashi",
 			"population": 1352000
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Haut-Katanga means upper Katanga.",
+				"Lubumbashi was formerly Élisabethville.",
+				"Kundelungu National Park protects plateau landscapes."
+			],
+			"it": [
+				"Haut-Katanga significa alto Katanga.",
+				"Lubumbashi si chiamava in precedenza Élisabethville.",
+				"Il Parco nazionale di Kundelungu protegge paesaggi d’altopiano."
+			],
+			"de": [
+				"Haut-Katanga bedeutet oberes Katanga.",
+				"Lubumbashi hieß früher Élisabethville.",
+				"Der Kundelungu-Nationalpark schützt Hochflächenlandschaften."
+			]
+		}
 	}
 }

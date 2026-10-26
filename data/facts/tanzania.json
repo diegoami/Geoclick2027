@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Tanzania (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"dodoma": {
 		"city": {
@@ -20,6 +21,1141 @@
 				"1973 zur Hauptstadt gewählt, doch die Regierung zog nur langsam, über Jahrzehnte, aus Daressalam um.",
 				"Sie liegt nahe der Mitte des Landes, gewählt, damit die Hauptstadt jeder Region nahe wäre.",
 				"Tansanias Wein wird auf dem Land um sie herum angebaut."
+			]
+		},
+		"region": {
+			"en": [
+				"Its name is linked to a Gogo expression meaning it has sunk.",
+				"Kondoa preserves ancient rock paintings.",
+				"Vine growing is part of its farming heritage."
+			],
+			"it": [
+				"Il nome è legato a un’espressione gogo che significa è sprofondato.",
+				"Kondoa conserva antiche pitture rupestri.",
+				"La viticoltura fa parte del patrimonio agricolo."
+			],
+			"de": [
+				"Der Name wird mit einem Gogo-Ausdruck für es ist versunken verbunden.",
+				"Kondoa bewahrt alte Felsmalereien.",
+				"Weinbau gehört zum landwirtschaftlichen Erbe."
+			]
+		}
+	},
+	"_sources": {
+		"mara:region": [
+			"https://en.wikipedia.org/wiki/Mara_Region",
+			"https://en.wikipedia.org/wiki/Butiama",
+			"https://en.wikipedia.org/wiki/Serengeti_National_Park"
+		],
+		"kagera:region": [
+			"https://en.wikipedia.org/wiki/Kagera_Region",
+			"https://en.wikipedia.org/wiki/Haya_people"
+		],
+		"mwanza:region": [
+			"https://en.wikipedia.org/wiki/Mwanza",
+			"https://en.wikipedia.org/wiki/Bujora"
+		],
+		"mwanza:city": [
+			"https://en.wikipedia.org/wiki/Mwanza",
+			"https://en.wikipedia.org/wiki/Bujora"
+		],
+		"arusha:region": [
+			"https://en.wikipedia.org/wiki/Arusha",
+			"https://en.wikipedia.org/wiki/Arusha_Declaration"
+		],
+		"arusha:city": [
+			"https://en.wikipedia.org/wiki/Arusha",
+			"https://en.wikipedia.org/wiki/Arusha_Declaration"
+		],
+		"simiyu:region": [
+			"https://en.wikipedia.org/wiki/Simiyu_Region"
+		],
+		"geita:region": [
+			"https://en.wikipedia.org/wiki/Geita_Region",
+			"https://en.wikipedia.org/wiki/Rubondo_Island_National_Park"
+		],
+		"kilimanjaro:region": [
+			"https://en.wikipedia.org/wiki/Kilimanjaro_Region",
+			"https://en.wikipedia.org/wiki/Chagga_people"
+		],
+		"shinyanga:region": [
+			"https://en.wikipedia.org/wiki/Shinyanga_Region",
+			"https://en.wikipedia.org/wiki/Ngitili"
+		],
+		"shinyanga:city": [
+			"https://en.wikipedia.org/wiki/Shinyanga_Region",
+			"https://en.wikipedia.org/wiki/Ngitili"
+		],
+		"manyara:region": [
+			"https://en.wikipedia.org/wiki/Manyara_Region",
+			"https://en.wikipedia.org/wiki/Tarangire_National_Park",
+			"https://en.wikipedia.org/wiki/Mbulu"
+		],
+		"kigoma:region": [
+			"https://en.wikipedia.org/wiki/Kigoma",
+			"https://en.wikipedia.org/wiki/Ujiji",
+			"https://en.wikipedia.org/wiki/Gombe_Stream_National_Park"
+		],
+		"kigoma:city": [
+			"https://en.wikipedia.org/wiki/Kigoma",
+			"https://en.wikipedia.org/wiki/Ujiji",
+			"https://en.wikipedia.org/wiki/Gombe_Stream_National_Park"
+		],
+		"kaskazini-pemba:region": [
+			"https://en.wikipedia.org/wiki/Pemba_North_Region",
+			"https://en.wikipedia.org/wiki/Ngezi_Forest_Reserve"
+		],
+		"tanga:region": [
+			"https://en.wikipedia.org/wiki/Tanga,_Tanzania",
+			"https://en.wikipedia.org/wiki/Amboni_Caves",
+			"https://en.wikipedia.org/wiki/Usambara_Railway"
+		],
+		"tanga:city": [
+			"https://en.wikipedia.org/wiki/Tanga,_Tanzania",
+			"https://en.wikipedia.org/wiki/Amboni_Caves",
+			"https://en.wikipedia.org/wiki/Usambara_Railway"
+		],
+		"kusini-pemba:region": [
+			"https://en.wikipedia.org/wiki/Pemba_South_Region",
+			"https://en.wikipedia.org/wiki/Pujini_Ruins",
+			"https://en.wikipedia.org/wiki/Misali_Island"
+		],
+		"tabora:region": [
+			"https://en.wikipedia.org/wiki/Tabora"
+		],
+		"tabora:city": [
+			"https://en.wikipedia.org/wiki/Tabora"
+		],
+		"singida:region": [
+			"https://en.wikipedia.org/wiki/Singida_Region"
+		],
+		"dodoma:region": [
+			"https://en.wikipedia.org/wiki/Dodoma",
+			"https://whc.unesco.org/archive/advisory_body_evaluation/1183rev.pdf"
+		],
+		"kaskazini-unguja:region": [
+			"https://en.wikipedia.org/wiki/Unguja_North_Region",
+			"https://en.wikipedia.org/wiki/Nungwi"
+		],
+		"mjini-magharibi:region": [
+			"https://en.wikipedia.org/wiki/Mjini_Magharibi_Region",
+			"https://whc.unesco.org/en/list/173",
+			"https://en.wikipedia.org/wiki/Taarab"
+		],
+		"kusini-unguja:region": [
+			"https://en.wikipedia.org/wiki/Unguja_South_Region",
+			"https://en.wikipedia.org/wiki/Jozani_Chwaka_Bay_National_Park",
+			"https://en.wikipedia.org/wiki/Kizimkazi_Mosque"
+		],
+		"katavi:region": [
+			"https://en.wikipedia.org/wiki/Katavi_National_Park",
+			"https://www.tanzaniaparks.go.tz/katavi",
+			"https://en.wikipedia.org/wiki/Mpanda"
+		],
+		"dar-es-salaam:region": [
+			"https://en.wikipedia.org/wiki/Dar_es_Salaam",
+			"https://en.wikipedia.org/wiki/National_Museum_of_Tanzania"
+		],
+		"dar-es-salaam:city": [
+			"https://en.wikipedia.org/wiki/Dar_es_Salaam",
+			"https://en.wikipedia.org/wiki/National_Museum_of_Tanzania"
+		],
+		"pwani:region": [
+			"https://en.wikipedia.org/wiki/Pwani_Region",
+			"https://en.wikipedia.org/wiki/Bagamoyo",
+			"https://en.wikipedia.org/wiki/Mafia_Island_Marine_Park"
+		],
+		"morogoro:region": [
+			"https://en.wikipedia.org/wiki/Morogoro",
+			"https://en.wikipedia.org/wiki/Sokoine_University_of_Agriculture"
+		],
+		"morogoro:city": [
+			"https://en.wikipedia.org/wiki/Morogoro",
+			"https://en.wikipedia.org/wiki/Sokoine_University_of_Agriculture"
+		],
+		"iringa:region": [
+			"https://en.wikipedia.org/wiki/Iringa",
+			"https://en.wikipedia.org/wiki/Kalenga",
+			"https://en.wikipedia.org/wiki/Ruaha_National_Park"
+		],
+		"iringa:city": [
+			"https://en.wikipedia.org/wiki/Iringa",
+			"https://en.wikipedia.org/wiki/Kalenga",
+			"https://en.wikipedia.org/wiki/Ruaha_National_Park"
+		],
+		"rukwa:region": [
+			"https://en.wikipedia.org/wiki/Rukwa_Region",
+			"https://en.wikipedia.org/wiki/Fipa_people"
+		],
+		"songwe:region": [
+			"https://en.wikipedia.org/wiki/Songwe_Region",
+			"https://en.wikipedia.org/wiki/Mbozi_meteorite"
+		],
+		"mbeya:region": [
+			"https://en.wikipedia.org/wiki/Mbeya",
+			"https://en.wikipedia.org/wiki/Lake_Ngozi"
+		],
+		"mbeya:city": [
+			"https://en.wikipedia.org/wiki/Mbeya",
+			"https://en.wikipedia.org/wiki/Lake_Ngozi"
+		],
+		"lindi:region": [
+			"https://en.wikipedia.org/wiki/Lindi_Region",
+			"https://en.wikipedia.org/wiki/Kilwa_Kisiwani",
+			"https://en.wikipedia.org/wiki/Songo_Mnara"
+		],
+		"njombe:region": [
+			"https://en.wikipedia.org/wiki/Njombe_Region"
+		],
+		"ruvuma:region": [
+			"https://en.wikipedia.org/wiki/Ruvuma_Region",
+			"https://en.wikipedia.org/wiki/Songea"
+		],
+		"mtwara:region": [
+			"https://en.wikipedia.org/wiki/Mtwara",
+			"https://en.wikipedia.org/wiki/Mikindani"
+		],
+		"mtwara:city": [
+			"https://en.wikipedia.org/wiki/Mtwara",
+			"https://en.wikipedia.org/wiki/Mikindani"
+		],
+		"bukoba:city": [
+			"https://en.wikipedia.org/wiki/Bukoba",
+			"https://en.wikipedia.org/wiki/Bukoba_Rural_District"
+		],
+		"musoma:city": [
+			"https://en.wikipedia.org/wiki/Musoma",
+			"https://en.wikipedia.org/wiki/Butiama"
+		],
+		"moshi:city": [
+			"https://en.wikipedia.org/wiki/Moshi,_Tanzania"
+		],
+		"zanzibar:city": [
+			"https://en.wikipedia.org/wiki/Zanzibar",
+			"https://whc.unesco.org/en/list/173"
+		],
+		"kilosa:city": [
+			"https://en.wikipedia.org/wiki/Kilosa",
+			"https://en.wikipedia.org/wiki/Kilosa_District"
+		],
+		"sumbawanga:city": [
+			"https://en.wikipedia.org/wiki/Sumbawanga",
+			"https://en.wikipedia.org/wiki/Fipa_people"
+		],
+		"tukuyu:city": [
+			"https://en.wikipedia.org/wiki/Tukuyu"
+		],
+		"songea:city": [
+			"https://en.wikipedia.org/wiki/Songea",
+			"https://en.wikipedia.org/wiki/Maji_Maji_Rebellion"
+		]
+	},
+	"mara": {
+		"region": {
+			"en": [
+				"The region is named after the Mara River.",
+				"Parts of Serengeti preserve migrating wildlife.",
+				"Butiama preserves the heritage of Julius Nyerere."
+			],
+			"it": [
+				"La regione prende il nome dal fiume Mara.",
+				"Parti del Serengeti conservano la fauna migratoria.",
+				"Butiama conserva il patrimonio di Julius Nyerere."
+			],
+			"de": [
+				"Die Region ist nach dem Mara-Fluss benannt.",
+				"Teile der Serengeti schützen wandernde Wildtiere.",
+				"Butiama bewahrt das Erbe Julius Nyereres."
+			]
+		}
+	},
+	"kagera": {
+		"region": {
+			"en": [
+				"It is named after the Kagera River.",
+				"Haya communities preserve banana-farming traditions.",
+				"The area has a long ironworking history."
+			],
+			"it": [
+				"Prende il nome dal fiume Kagera.",
+				"Le comunità haya conservano tradizioni di coltivazione delle banane.",
+				"La zona vanta una lunga storia di lavorazione del ferro."
+			],
+			"de": [
+				"Der Name geht auf den Kagera-Fluss zurück.",
+				"Haya-Gemeinschaften bewahren Traditionen des Bananenanbaus.",
+				"Die Gegend besitzt eine lange Eisenverarbeitungsgeschichte."
+			]
+		}
+	},
+	"mwanza": {
+		"region": {
+			"en": [
+				"Mwanza is nicknamed Rock City.",
+				"Bismarck Rock is a balancing granite landmark.",
+				"Bujora’s museum preserves Sukuma cultural heritage."
+			],
+			"it": [
+				"Mwanza è soprannominata città delle rocce.",
+				"Bismarck Rock è un simbolo di granito in equilibrio.",
+				"Il museo di Bujora conserva il patrimonio culturale sukuma."
+			],
+			"de": [
+				"Mwanza trägt den Beinamen Felsenstadt.",
+				"Der balancierende Granitfels Bismarck Rock ist ein Wahrzeichen.",
+				"Bujoras Museum bewahrt Sukuma-Kulturerbe."
+			]
+		},
+		"city": {
+			"en": [
+				"Mwanza is nicknamed Rock City.",
+				"Bismarck Rock is a balancing granite landmark.",
+				"Bujora’s museum preserves Sukuma cultural heritage."
+			],
+			"it": [
+				"Mwanza è soprannominata città delle rocce.",
+				"Bismarck Rock è un simbolo di granito in equilibrio.",
+				"Il museo di Bujora conserva il patrimonio culturale sukuma."
+			],
+			"de": [
+				"Mwanza trägt den Beinamen Felsenstadt.",
+				"Der balancierende Granitfels Bismarck Rock ist ein Wahrzeichen.",
+				"Bujoras Museum bewahrt Sukuma-Kulturerbe."
+			]
+		}
+	},
+	"arusha": {
+		"region": {
+			"en": [
+				"Its name recalls the local Arusha people.",
+				"The 1967 Arusha Declaration shaped Tanzanian socialism.",
+				"The old German boma became a museum."
+			],
+			"it": [
+				"Il nome ricorda il popolo arusha locale.",
+				"La Dichiarazione di Arusha del 1967 plasmò il socialismo tanzaniano.",
+				"L’antico boma tedesco divenne un museo."
+			],
+			"de": [
+				"Der Name erinnert an die örtlichen Arusha.",
+				"Die Erklärung von Arusha von 1967 prägte Tansanias Sozialismus.",
+				"Die alte deutsche Boma wurde zum Museum."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name recalls the local Arusha people.",
+				"The 1967 Arusha Declaration shaped Tanzanian socialism.",
+				"The old German boma became a museum."
+			],
+			"it": [
+				"Il nome ricorda il popolo arusha locale.",
+				"La Dichiarazione di Arusha del 1967 plasmò il socialismo tanzaniano.",
+				"L’antico boma tedesco divenne un museo."
+			],
+			"de": [
+				"Der Name erinnert an die örtlichen Arusha.",
+				"Die Erklärung von Arusha von 1967 prägte Tansanias Sozialismus.",
+				"Die alte deutsche Boma wurde zum Museum."
+			]
+		}
+	},
+	"simiyu": {
+		"region": {
+			"en": [
+				"It is named after the Simiyu River.",
+				"Sukuma music and dance are important cultural traditions.",
+				"Lake Victoria communities preserve fishing traditions."
+			],
+			"it": [
+				"Prende il nome dal fiume Simiyu.",
+				"Musica e danza sukuma sono importanti tradizioni culturali.",
+				"Le comunità del lago Vittoria conservano tradizioni di pesca."
+			],
+			"de": [
+				"Der Name geht auf den Simiyu-Fluss zurück.",
+				"Sukuma-Musik und -Tanz sind bedeutende Kulturtraditionen.",
+				"Gemeinden am Victoriasee bewahren Fischertraditionen."
+			]
+		}
+	},
+	"geita": {
+		"region": {
+			"en": [
+				"It is named after Geita town.",
+				"Gold mining shaped the region’s modern history.",
+				"Rubondo Island protects forest and lake habitats."
+			],
+			"it": [
+				"Prende il nome dalla città di Geita.",
+				"L’estrazione dell’oro plasmò la storia moderna della regione.",
+				"L’isola Rubondo protegge habitat forestali e lacustri."
+			],
+			"de": [
+				"Die Region ist nach Geita benannt.",
+				"Goldbergbau prägte ihre moderne Geschichte.",
+				"Die Insel Rubondo schützt Wald- und Seelebensräume."
+			]
+		}
+	},
+	"kilimanjaro": {
+		"region": {
+			"en": [
+				"The region is named for Mount Kilimanjaro.",
+				"Chagga communities developed traditional irrigation furrows.",
+				"Coffee growing shapes the mountain’s settled slopes."
+			],
+			"it": [
+				"La regione prende il nome dal Kilimangiaro.",
+				"Le comunità chagga svilupparono canali irrigui tradizionali.",
+				"La coltivazione del caffè caratterizza i versanti abitati del monte."
+			],
+			"de": [
+				"Die Region ist nach dem Kilimandscharo benannt.",
+				"Chagga-Gemeinschaften entwickelten traditionelle Bewässerungsgräben.",
+				"Kaffeeanbau prägt die besiedelten Berghänge."
+			]
+		}
+	},
+	"shinyanga": {
+		"region": {
+			"en": [
+				"The town and region share the name Shinyanga.",
+				"Sukuma pastoral traditions shape local life.",
+				"Ngitili reserves conserve grazing for the dry season."
+			],
+			"it": [
+				"La città e la regione condividono il nome Shinyanga.",
+				"Le tradizioni pastorali sukuma plasmano la vita locale.",
+				"Le riserve ngitili conservano pascoli per la stagione secca."
+			],
+			"de": [
+				"Stadt und Region teilen den Namen Shinyanga.",
+				"Sukuma-Weidetraditionen prägen das örtliche Leben.",
+				"Ngitili-Reservate bewahren Weideland für die Trockenzeit."
+			]
+		},
+		"city": {
+			"en": [
+				"The town and region share the name Shinyanga.",
+				"Sukuma pastoral traditions shape local life.",
+				"Ngitili reserves conserve grazing for the dry season."
+			],
+			"it": [
+				"La città e la regione condividono il nome Shinyanga.",
+				"Le tradizioni pastorali sukuma plasmano la vita locale.",
+				"Le riserve ngitili conservano pascoli per la stagione secca."
+			],
+			"de": [
+				"Stadt und Region teilen den Namen Shinyanga.",
+				"Sukuma-Weidetraditionen prägen das örtliche Leben.",
+				"Ngitili-Reservate bewahren Weideland für die Trockenzeit."
+			]
+		}
+	},
+	"manyara": {
+		"region": {
+			"en": [
+				"It is named after Lake Manyara.",
+				"Tarangire is known for baobabs and elephants.",
+				"Mbulu is a historic centre of Iraqw culture."
+			],
+			"it": [
+				"Prende il nome dal lago Manyara.",
+				"Tarangire è noto per baobab ed elefanti.",
+				"Mbulu è uno storico centro della cultura iraqw."
+			],
+			"de": [
+				"Der Name geht auf den Manyarasee zurück.",
+				"Tarangire ist für Baobabs und Elefanten bekannt.",
+				"Mbulu ist ein historisches Zentrum der Iraqw-Kultur."
+			]
+		}
+	},
+	"kigoma": {
+		"region": {
+			"en": [
+				"The name is shared by Kigoma town and region.",
+				"Nearby Ujiji recalls the Livingstone–Stanley meeting.",
+				"Gombe became known for Jane Goodall’s chimpanzee research."
+			],
+			"it": [
+				"Il nome è condiviso dalla città e dalla regione di Kigoma.",
+				"La vicina Ujiji ricorda l’incontro tra Livingstone e Stanley.",
+				"Gombe divenne noto per le ricerche di Jane Goodall sugli scimpanzé."
+			],
+			"de": [
+				"Stadt und Region Kigoma teilen denselben Namen.",
+				"Das nahe Ujiji erinnert an das Treffen von Livingstone und Stanley.",
+				"Gombe wurde durch Jane Goodalls Schimpansenforschung bekannt."
+			]
+		},
+		"city": {
+			"en": [
+				"The name is shared by Kigoma town and region.",
+				"Nearby Ujiji recalls the Livingstone–Stanley meeting.",
+				"Gombe became known for Jane Goodall’s chimpanzee research."
+			],
+			"it": [
+				"Il nome è condiviso dalla città e dalla regione di Kigoma.",
+				"La vicina Ujiji ricorda l’incontro tra Livingstone e Stanley.",
+				"Gombe divenne noto per le ricerche di Jane Goodall sugli scimpanzé."
+			],
+			"de": [
+				"Stadt und Region Kigoma teilen denselben Namen.",
+				"Das nahe Ujiji erinnert an das Treffen von Livingstone und Stanley.",
+				"Gombe wurde durch Jane Goodalls Schimpansenforschung bekannt."
+			]
+		}
+	},
+	"kaskazini-pemba": {
+		"region": {
+			"en": [
+				"The Swahili name means North Pemba.",
+				"Ngezi preserves a remnant of native forest.",
+				"Clove farming is part of the island’s heritage."
+			],
+			"it": [
+				"Il nome swahili significa Pemba settentrionale.",
+				"Ngezi conserva un lembo di foresta originaria.",
+				"La coltivazione dei chiodi di garofano fa parte del patrimonio dell’isola."
+			],
+			"de": [
+				"Der Swahili-Name bedeutet Nord-Pemba.",
+				"Ngezi bewahrt einen Rest ursprünglichen Waldes.",
+				"Gewürznelkenanbau gehört zum Erbe der Insel."
+			]
+		}
+	},
+	"tanga": {
+		"region": {
+			"en": [
+				"Tanga is Swahili for sail.",
+				"Amboni preserves limestone caves.",
+				"The Usambara Railway linked the port with the interior."
+			],
+			"it": [
+				"Tanga significa vela in swahili.",
+				"Amboni conserva grotte calcaree.",
+				"La ferrovia dell’Usambara collegava il porto all’interno."
+			],
+			"de": [
+				"Tanga bedeutet auf Swahili Segel.",
+				"Amboni bewahrt Kalksteinhöhlen.",
+				"Die Usambara-Bahn verband den Hafen mit dem Binnenland."
+			]
+		},
+		"city": {
+			"en": [
+				"Tanga is Swahili for sail.",
+				"Amboni preserves limestone caves.",
+				"The Usambara Railway linked the port with the interior."
+			],
+			"it": [
+				"Tanga significa vela in swahili.",
+				"Amboni conserva grotte calcaree.",
+				"La ferrovia dell’Usambara collegava il porto all’interno."
+			],
+			"de": [
+				"Tanga bedeutet auf Swahili Segel.",
+				"Amboni bewahrt Kalksteinhöhlen.",
+				"Die Usambara-Bahn verband den Hafen mit dem Binnenland."
+			]
+		}
+	},
+	"kusini-pemba": {
+		"region": {
+			"en": [
+				"The Swahili name means South Pemba.",
+				"Pujini preserves medieval ruins.",
+				"Misali Island is associated with coral conservation."
+			],
+			"it": [
+				"Il nome swahili significa Pemba meridionale.",
+				"Pujini conserva rovine medievali.",
+				"L’isola Misali è legata alla conservazione dei coralli."
+			],
+			"de": [
+				"Der Swahili-Name bedeutet Süd-Pemba.",
+				"Pujini bewahrt mittelalterliche Ruinen.",
+				"Die Insel Misali ist mit Korallenschutz verbunden."
+			]
+		}
+	},
+	"tabora": {
+		"region": {
+			"en": [
+				"Tabora’s earlier name was Kazeh.",
+				"Caravan trade shaped its nineteenth-century growth.",
+				"Kwihara preserves the Livingstone Tembe memorial."
+			],
+			"it": [
+				"Il nome precedente di Tabora era Kazeh.",
+				"Il commercio carovaniero ne plasmò la crescita ottocentesca.",
+				"Kwihara conserva il memoriale Livingstone Tembe."
+			],
+			"de": [
+				"Taboras früherer Name lautete Kazeh.",
+				"Karawanenhandel prägte das Wachstum im 19. Jahrhundert.",
+				"Kwihara bewahrt die Livingstone-Tembe-Gedenkstätte."
+			]
+		},
+		"city": {
+			"en": [
+				"Tabora’s earlier name was Kazeh.",
+				"Caravan trade shaped its nineteenth-century growth.",
+				"Kwihara preserves the Livingstone Tembe memorial."
+			],
+			"it": [
+				"Il nome precedente di Tabora era Kazeh.",
+				"Il commercio carovaniero ne plasmò la crescita ottocentesca.",
+				"Kwihara conserva il memoriale Livingstone Tembe."
+			],
+			"de": [
+				"Taboras früherer Name lautete Kazeh.",
+				"Karawanenhandel prägte das Wachstum im 19. Jahrhundert.",
+				"Kwihara bewahrt die Livingstone-Tembe-Gedenkstätte."
+			]
+		}
+	},
+	"singida": {
+		"region": {
+			"en": [
+				"The region is named after Singida town.",
+				"Nyaturu and Nyiramba traditions shape local culture.",
+				"Sunflower farming is an important livelihood."
+			],
+			"it": [
+				"La regione prende il nome dalla città di Singida.",
+				"Le tradizioni nyaturu e nyiramba plasmano la cultura locale.",
+				"La coltivazione dei girasoli è un’importante fonte di reddito."
+			],
+			"de": [
+				"Die Region ist nach Singida benannt.",
+				"Nyaturu- und Nyiramba-Traditionen prägen die örtliche Kultur.",
+				"Sonnenblumenanbau ist eine wichtige Erwerbsgrundlage."
+			]
+		}
+	},
+	"kaskazini-unguja": {
+		"region": {
+			"en": [
+				"The Swahili name means North Unguja.",
+				"Nungwi preserves dhow-building traditions.",
+				"Its lighthouse marks the island’s northern cape."
+			],
+			"it": [
+				"Il nome swahili significa Unguja settentrionale.",
+				"Nungwi conserva tradizioni di costruzione dei dhow.",
+				"Il faro segna il capo settentrionale dell’isola."
+			],
+			"de": [
+				"Der Swahili-Name bedeutet Nord-Unguja.",
+				"Nungwi bewahrt Traditionen des Dhau-Baus.",
+				"Der Leuchtturm markiert das nördliche Kap der Insel."
+			]
+		}
+	},
+	"mjini-magharibi": {
+		"region": {
+			"en": [
+				"Mjini means urban and magharibi means west.",
+				"Stone Town preserves a historic Swahili trading city.",
+				"Taarab is a distinctive local musical tradition."
+			],
+			"it": [
+				"Mjini significa urbano e magharibi ovest.",
+				"Stone Town conserva una storica città commerciale swahili.",
+				"Il taarab è una particolare tradizione musicale locale."
+			],
+			"de": [
+				"Mjini bedeutet städtisch und magharibi Westen.",
+				"Stone Town bewahrt eine historische Swahili-Handelsstadt.",
+				"Taarab ist eine charakteristische örtliche Musiktradition."
+			]
+		}
+	},
+	"kusini-unguja": {
+		"region": {
+			"en": [
+				"The Swahili name means South Unguja.",
+				"Jozani forest shelters Zanzibar red colobus monkeys.",
+				"Kizimkazi preserves an old coral-stone mosque."
+			],
+			"it": [
+				"Il nome swahili significa Unguja meridionale.",
+				"La foresta di Jozani ospita colobi rossi di Zanzibar.",
+				"Kizimkazi conserva un’antica moschea in pietra corallina."
+			],
+			"de": [
+				"Der Swahili-Name bedeutet Süd-Unguja.",
+				"Der Jozani-Wald beherbergt Sansibar-Stummelaffen.",
+				"Kizimkazi bewahrt eine alte Moschee aus Korallenstein."
+			]
+		}
+	},
+	"katavi": {
+		"region": {
+			"en": [
+				"Its name is linked to the local legend of Katabi.",
+				"Its national park preserves seasonal wetlands.",
+				"Mpanda developed as a railway town."
+			],
+			"it": [
+				"Il nome è legato alla leggenda locale di Katabi.",
+				"Il parco nazionale conserva zone umide stagionali.",
+				"Mpanda si sviluppò come città ferroviaria."
+			],
+			"de": [
+				"Der Name ist mit der örtlichen Katabi-Legende verbunden.",
+				"Der Nationalpark bewahrt jahreszeitliche Feuchtgebiete.",
+				"Mpanda entwickelte sich als Eisenbahnstadt."
+			]
+		}
+	},
+	"dar-es-salaam": {
+		"region": {
+			"en": [
+				"Its Arabic name means abode of peace.",
+				"Sultan Majid developed the town in the nineteenth century.",
+				"The National Museum presents Tanzania’s history and archaeology."
+			],
+			"it": [
+				"Il nome arabo significa dimora della pace.",
+				"Il sultano Majid sviluppò la città nell’Ottocento.",
+				"Il Museo nazionale presenta la storia e l’archeologia della Tanzania."
+			],
+			"de": [
+				"Der arabische Name bedeutet Wohnstatt des Friedens.",
+				"Sultan Majid entwickelte die Stadt im 19. Jahrhundert.",
+				"Das Nationalmuseum zeigt Tansanias Geschichte und Archäologie."
+			]
+		},
+		"city": {
+			"en": [
+				"Its Arabic name means abode of peace.",
+				"Sultan Majid developed the town in the nineteenth century.",
+				"The National Museum presents Tanzania’s history and archaeology."
+			],
+			"it": [
+				"Il nome arabo significa dimora della pace.",
+				"Il sultano Majid sviluppò la città nell’Ottocento.",
+				"Il Museo nazionale presenta la storia e l’archeologia della Tanzania."
+			],
+			"de": [
+				"Der arabische Name bedeutet Wohnstatt des Friedens.",
+				"Sultan Majid entwickelte die Stadt im 19. Jahrhundert.",
+				"Das Nationalmuseum zeigt Tansanias Geschichte und Archäologie."
+			]
+		}
+	},
+	"pwani": {
+		"region": {
+			"en": [
+				"Pwani is Swahili for coast.",
+				"Bagamoyo recalls the history of caravan trade.",
+				"Mafia Island protects marine habitats."
+			],
+			"it": [
+				"Pwani significa costa in swahili.",
+				"Bagamoyo ricorda la storia del commercio carovaniero.",
+				"L’isola Mafia protegge habitat marini."
+			],
+			"de": [
+				"Pwani bedeutet auf Swahili Küste.",
+				"Bagamoyo erinnert an die Geschichte des Karawanenhandels.",
+				"Die Insel Mafia schützt Meereslebensräume."
+			]
+		}
+	},
+	"morogoro": {
+		"region": {
+			"en": [
+				"The city gives its name to Morogoro Region.",
+				"Luguru traditions shape the Uluguru Mountains’ cultural landscape.",
+				"Sokoine University developed from agricultural education."
+			],
+			"it": [
+				"La città dà il nome alla Regione di Morogoro.",
+				"Le tradizioni luguru plasmano il paesaggio culturale degli Uluguru.",
+				"L’Università Sokoine si sviluppò dall’istruzione agraria."
+			],
+			"de": [
+				"Die Stadt gibt der Region Morogoro ihren Namen.",
+				"Luguru-Traditionen prägen die Kulturlandschaft der Uluguru-Berge.",
+				"Die Sokoine-Universität entwickelte sich aus der landwirtschaftlichen Ausbildung."
+			]
+		},
+		"city": {
+			"en": [
+				"The city gives its name to Morogoro Region.",
+				"Luguru traditions shape the Uluguru Mountains’ cultural landscape.",
+				"Sokoine University developed from agricultural education."
+			],
+			"it": [
+				"La città dà il nome alla Regione di Morogoro.",
+				"Le tradizioni luguru plasmano il paesaggio culturale degli Uluguru.",
+				"L’Università Sokoine si sviluppò dall’istruzione agraria."
+			],
+			"de": [
+				"Die Stadt gibt der Region Morogoro ihren Namen.",
+				"Luguru-Traditionen prägen die Kulturlandschaft der Uluguru-Berge.",
+				"Die Sokoine-Universität entwickelte sich aus der landwirtschaftlichen Ausbildung."
+			]
+		}
+	},
+	"iringa": {
+		"region": {
+			"en": [
+				"Its name comes from a Hehe word meaning fort.",
+				"Kalenga preserves the history of Chief Mkwawa.",
+				"Ruaha National Park protects river and savanna habitats."
+			],
+			"it": [
+				"Il nome deriva da una parola hehe che significa forte.",
+				"Kalenga conserva la storia del capo Mkwawa.",
+				"Il Parco nazionale di Ruaha protegge habitat fluviali e di savana."
+			],
+			"de": [
+				"Der Name stammt von einem Hehe-Wort für Fort.",
+				"Kalenga bewahrt die Geschichte von Häuptling Mkwawa.",
+				"Der Ruaha-Nationalpark schützt Fluss- und Savannenlebensräume."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name comes from a Hehe word meaning fort.",
+				"Kalenga preserves the history of Chief Mkwawa.",
+				"Ruaha National Park protects river and savanna habitats."
+			],
+			"it": [
+				"Il nome deriva da una parola hehe che significa forte.",
+				"Kalenga conserva la storia del capo Mkwawa.",
+				"Il Parco nazionale di Ruaha protegge habitat fluviali e di savana."
+			],
+			"de": [
+				"Der Name stammt von einem Hehe-Wort für Fort.",
+				"Kalenga bewahrt die Geschichte von Häuptling Mkwawa.",
+				"Der Ruaha-Nationalpark schützt Fluss- und Savannenlebensräume."
+			]
+		}
+	},
+	"rukwa": {
+		"region": {
+			"en": [
+				"The region is named after Lake Rukwa.",
+				"Fipa communities preserve an ironworking heritage.",
+				"Ufipa’s highlands support grain farming."
+			],
+			"it": [
+				"La regione prende il nome dal lago Rukwa.",
+				"Le comunità fipa conservano un patrimonio di lavorazione del ferro.",
+				"Gli altopiani dell’Ufipa sostengono la cerealicoltura."
+			],
+			"de": [
+				"Die Region ist nach dem Rukwa-See benannt.",
+				"Fipa-Gemeinschaften bewahren ein Eisenverarbeitungserbe.",
+				"Das Ufipa-Hochland ermöglicht Getreideanbau."
+			]
+		}
+	},
+	"songwe": {
+		"region": {
+			"en": [
+				"It is named after the Songwe River.",
+				"The region was created from Mbeya in 2016.",
+				"Mbozi preserves a large iron meteorite."
+			],
+			"it": [
+				"Prende il nome dal fiume Songwe.",
+				"La regione fu creata da Mbeya nel 2016.",
+				"Mbozi conserva un grande meteorite ferroso."
+			],
+			"de": [
+				"Der Name geht auf den Songwe-Fluss zurück.",
+				"Die Region entstand 2016 aus Mbeya.",
+				"Mbozi bewahrt einen großen Eisenmeteoriten."
+			]
+		}
+	},
+	"mbeya": {
+		"region": {
+			"en": [
+				"The city and region share the name Mbeya.",
+				"The town grew during a 1920s gold rush.",
+				"Lake Ngozi occupies a volcanic crater."
+			],
+			"it": [
+				"La città e la regione condividono il nome Mbeya.",
+				"La città crebbe durante una corsa all’oro negli anni Venti.",
+				"Il lago Ngozi occupa un cratere vulcanico."
+			],
+			"de": [
+				"Stadt und Region teilen den Namen Mbeya.",
+				"Die Stadt wuchs während eines Goldrauschs in den 1920er Jahren.",
+				"Der Ngozi-See liegt in einem Vulkankrater."
+			]
+		},
+		"city": {
+			"en": [
+				"The city and region share the name Mbeya.",
+				"The town grew during a 1920s gold rush.",
+				"Lake Ngozi occupies a volcanic crater."
+			],
+			"it": [
+				"La città e la regione condividono il nome Mbeya.",
+				"La città crebbe durante una corsa all’oro negli anni Venti.",
+				"Il lago Ngozi occupa un cratere vulcanico."
+			],
+			"de": [
+				"Stadt und Region teilen den Namen Mbeya.",
+				"Die Stadt wuchs während eines Goldrauschs in den 1920er Jahren.",
+				"Der Ngozi-See liegt in einem Vulkankrater."
+			]
+		}
+	},
+	"lindi": {
+		"region": {
+			"en": [
+				"The region is named after Lindi town.",
+				"Kilwa Kisiwani preserves a medieval Swahili trading city.",
+				"Songo Mnara preserves another historic stone settlement."
+			],
+			"it": [
+				"La regione prende il nome dalla città di Lindi.",
+				"Kilwa Kisiwani conserva una città commerciale swahili medievale.",
+				"Songo Mnara conserva un altro storico insediamento in pietra."
+			],
+			"de": [
+				"Die Region ist nach Lindi benannt.",
+				"Kilwa Kisiwani bewahrt eine mittelalterliche Swahili-Handelsstadt.",
+				"Songo Mnara bewahrt eine weitere historische Steinsiedlung."
+			]
+		}
+	},
+	"njombe": {
+		"region": {
+			"en": [
+				"The region takes its name from Njombe town.",
+				"Bena traditions are important to its cultural heritage.",
+				"Tea growing shapes the cool highlands."
+			],
+			"it": [
+				"La regione prende il nome dalla città di Njombe.",
+				"Le tradizioni bena sono importanti nel patrimonio culturale.",
+				"La coltivazione del tè caratterizza i freschi altopiani."
+			],
+			"de": [
+				"Die Region ist nach Njombe benannt.",
+				"Bena-Traditionen prägen ihr kulturelles Erbe.",
+				"Teeanbau prägt das kühle Hochland."
+			]
+		}
+	},
+	"ruvuma": {
+		"region": {
+			"en": [
+				"The region is named after the Ruvuma River.",
+				"Ngoni settlement shaped its nineteenth-century history.",
+				"Songea’s Maji Maji memorial preserves resistance history."
+			],
+			"it": [
+				"La regione prende il nome dal fiume Ruvuma.",
+				"L’insediamento degli ngoni ne plasmò la storia ottocentesca.",
+				"Il memoriale Maji Maji di Songea conserva la storia della resistenza."
+			],
+			"de": [
+				"Die Region ist nach dem Ruvuma-Fluss benannt.",
+				"Die Ansiedlung der Ngoni prägte ihre Geschichte im 19. Jahrhundert.",
+				"Songeas Maji-Maji-Gedenkstätte bewahrt Widerstandsgeschichte."
+			]
+		}
+	},
+	"mtwara": {
+		"region": {
+			"en": [
+				"The port town and region share the name Mtwara.",
+				"The groundnut scheme shaped the modern port’s development.",
+				"Nearby Mikindani preserves Swahili trading architecture."
+			],
+			"it": [
+				"La città portuale e la regione condividono il nome Mtwara.",
+				"Il progetto delle arachidi plasmò lo sviluppo del porto moderno.",
+				"La vicina Mikindani conserva l’architettura commerciale swahili."
+			],
+			"de": [
+				"Hafenstadt und Region teilen den Namen Mtwara.",
+				"Das Erdnussprojekt prägte die Entwicklung des modernen Hafens.",
+				"Das nahe Mikindani bewahrt Swahili-Handelsarchitektur."
+			]
+		},
+		"city": {
+			"en": [
+				"The port town and region share the name Mtwara.",
+				"The groundnut scheme shaped the modern port’s development.",
+				"Nearby Mikindani preserves Swahili trading architecture."
+			],
+			"it": [
+				"La città portuale e la regione condividono il nome Mtwara.",
+				"Il progetto delle arachidi plasmò lo sviluppo del porto moderno.",
+				"La vicina Mikindani conserva l’architettura commerciale swahili."
+			],
+			"de": [
+				"Hafenstadt und Region teilen den Namen Mtwara.",
+				"Das Erdnussprojekt prägte die Entwicklung des modernen Hafens.",
+				"Das nahe Mikindani bewahrt Swahili-Handelsarchitektur."
+			]
+		}
+	},
+	"bukoba": {
+		"city": {
+			"en": [
+				"The city shares its name with Bukoba Rural District.",
+				"Its harbour connected Lake Victoria trading routes.",
+				"It is a cultural centre for the Haya."
+			],
+			"it": [
+				"La città condivide il nome con il distretto rurale di Bukoba.",
+				"Il porto collegava le rotte commerciali del lago Vittoria.",
+				"È un centro culturale degli haya."
+			],
+			"de": [
+				"Die Stadt teilt ihren Namen mit dem ländlichen Distrikt Bukoba.",
+				"Ihr Hafen verband Handelswege auf dem Victoriasee.",
+				"Sie ist ein Kulturzentrum der Haya."
+			]
+		}
+	},
+	"musoma": {
+		"city": {
+			"en": [
+				"Its name refers to a peninsula projecting into the lake.",
+				"It developed as a Lake Victoria port.",
+				"Nearby Butiama preserves Julius Nyerere’s heritage."
+			],
+			"it": [
+				"Il nome si riferisce a una penisola protesa nel lago.",
+				"Si sviluppò come porto sul lago Vittoria.",
+				"La vicina Butiama conserva il patrimonio di Julius Nyerere."
+			],
+			"de": [
+				"Der Name bezieht sich auf eine in den See ragende Halbinsel.",
+				"Die Stadt entwickelte sich als Hafen am Victoriasee.",
+				"Das nahe Butiama bewahrt Julius Nyereres Erbe."
+			]
+		}
+	},
+	"moshi": {
+		"city": {
+			"en": [
+				"Moshi is Swahili for smoke.",
+				"Coffee trading helped shape the town.",
+				"Chagga traditions are important in the surrounding foothills."
+			],
+			"it": [
+				"Moshi significa fumo in swahili.",
+				"Il commercio del caffè contribuì a plasmare la città.",
+				"Le tradizioni chagga sono importanti nelle pendici circostanti."
+			],
+			"de": [
+				"Moshi bedeutet auf Swahili Rauch.",
+				"Kaffeehandel prägte die Stadt.",
+				"Chagga-Traditionen prägen die umliegenden Vorberge."
+			]
+		}
+	},
+	"zanzibar": {
+		"city": {
+			"en": [
+				"The name derives from a Persian expression for the Zanj coast.",
+				"Stone Town preserves a historic Swahili port city.",
+				"Carved wooden doors reflect its mixed architectural heritage."
+			],
+			"it": [
+				"Il nome deriva da un’espressione persiana per la costa degli zanj.",
+				"Stone Town conserva una storica città portuale swahili.",
+				"Le porte di legno intagliato riflettono il patrimonio architettonico misto."
+			],
+			"de": [
+				"Der Name stammt aus einem persischen Ausdruck für die Zanj-Küste.",
+				"Stone Town bewahrt eine historische Swahili-Hafenstadt.",
+				"Geschnitzte Holztüren spiegeln ihr gemischtes Architekturerbe wider."
+			]
+		}
+	},
+	"kilosa": {
+		"city": {
+			"en": [
+				"Older maps used the spelling Kilossa.",
+				"The Central Railway shaped its growth.",
+				"Sisal estates were part of its colonial economy."
+			],
+			"it": [
+				"Le vecchie mappe usavano la grafia Kilossa.",
+				"La ferrovia centrale ne plasmò la crescita.",
+				"Le piantagioni di sisal facevano parte dell’economia coloniale."
+			],
+			"de": [
+				"Ältere Karten verwendeten die Schreibweise Kilossa.",
+				"Die Zentralbahn prägte das Wachstum.",
+				"Sisalplantagen gehörten zur Kolonialwirtschaft."
+			]
+		}
+	},
+	"sumbawanga": {
+		"city": {
+			"en": [
+				"Its name is often translated as throw away your witchcraft.",
+				"Fipa communities preserve an ironworking tradition.",
+				"It developed as a highland market town."
+			],
+			"it": [
+				"Il nome è spesso tradotto come getta via la tua stregoneria.",
+				"Le comunità fipa conservano una tradizione di lavorazione del ferro.",
+				"Si sviluppò come città mercato d’altopiano."
+			],
+			"de": [
+				"Der Name wird oft als wirf deine Zauberei weg übersetzt.",
+				"Fipa-Gemeinschaften bewahren eine Eisenverarbeitungstradition.",
+				"Die Stadt entwickelte sich als Hochlandmarkt."
+			]
+		}
+	},
+	"tukuyu": {
+		"city": {
+			"en": [
+				"Its former German name was Neu Langenburg.",
+				"Nyakyusa traditions shape local cultural life.",
+				"Tea growing is important in the surrounding highlands."
+			],
+			"it": [
+				"Il nome tedesco precedente era Neu Langenburg.",
+				"Le tradizioni nyakyusa plasmano la vita culturale locale.",
+				"La coltivazione del tè è importante negli altopiani circostanti."
+			],
+			"de": [
+				"Der frühere deutsche Name lautete Neu Langenburg.",
+				"Nyakyusa-Traditionen prägen das örtliche Kulturleben.",
+				"Teeanbau ist im umliegenden Hochland wichtig."
+			]
+		}
+	},
+	"songea": {
+		"city": {
+			"en": [
+				"It is named after the Ngoni leader Songea Mbano.",
+				"Its museum commemorates the Maji Maji resistance.",
+				"Ngoni music and dance shape local traditions."
+			],
+			"it": [
+				"Prende il nome dal capo ngoni Songea Mbano.",
+				"Il museo commemora la resistenza Maji Maji.",
+				"Musica e danza ngoni plasmano le tradizioni locali."
+			],
+			"de": [
+				"Die Stadt ist nach dem Ngoni-Anführer Songea Mbano benannt.",
+				"Ihr Museum erinnert an den Maji-Maji-Widerstand.",
+				"Ngoni-Musik und -Tanz prägen örtliche Traditionen."
 			]
 		}
 	}

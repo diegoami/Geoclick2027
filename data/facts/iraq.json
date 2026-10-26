@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Iraq (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"baghdad": {
 		"city": {
@@ -20,6 +21,873 @@
 				"762 vom Kalifen al-Mansur als runde Stadt gegründet.",
 				"Ihr Haus der Weisheit war im goldenen Zeitalter des Islam ein großes Zentrum der Gelehrsamkeit.",
 				"Der Tigris fließt durch ihr Zentrum."
+			]
+		},
+		"region": {
+			"en": [
+				"Its Persian name is commonly read as gift of God.",
+				"The Abbasid Round City was founded in 762.",
+				"The Mustansiriya school preserves medieval scholarly heritage."
+			],
+			"it": [
+				"Il nome persiano è comunemente interpretato come dono di Dio.",
+				"La Città Rotonda abbaside fu fondata nel 762.",
+				"La scuola Mustansiriya conserva il patrimonio accademico medievale."
+			],
+			"de": [
+				"Der persische Name wird meist als Geschenk Gottes gedeutet.",
+				"Die abbasidische Rundstadt wurde 762 gegründet.",
+				"Die Mustansiriya-Schule erinnert an mittelalterliche Gelehrsamkeit."
+			]
+		}
+	},
+	"_sources": {
+		"duhok:region": [
+			"https://en.wikipedia.org/wiki/Duhok",
+			"https://en.wikipedia.org/wiki/Duhok_Dam"
+		],
+		"duhok:city": [
+			"https://en.wikipedia.org/wiki/Duhok",
+			"https://en.wikipedia.org/wiki/Duhok_Dam"
+		],
+		"erbil:region": [
+			"https://en.wikipedia.org/wiki/Erbil",
+			"https://en.wikipedia.org/wiki/Citadel_of_Erbil"
+		],
+		"erbil:city": [
+			"https://en.wikipedia.org/wiki/Erbil",
+			"https://en.wikipedia.org/wiki/Citadel_of_Erbil"
+		],
+		"nineveh:region": [
+			"https://en.wikipedia.org/wiki/Nineveh_Governorate",
+			"https://en.wikipedia.org/wiki/Nineveh",
+			"https://en.wikipedia.org/wiki/Hatra"
+		],
+		"sulaymaniyah:region": [
+			"https://en.wikipedia.org/wiki/Sulaymaniyah",
+			"https://www.iranicaonline.org/articles/baban-2/"
+		],
+		"as-sulaymaniyah:city": [
+			"https://en.wikipedia.org/wiki/Sulaymaniyah",
+			"https://www.iranicaonline.org/articles/baban-2/"
+		],
+		"kirkuk:region": [
+			"https://en.wikipedia.org/wiki/Kirkuk",
+			"https://en.wikipedia.org/wiki/Baba_Gurgur"
+		],
+		"kirkuk:city": [
+			"https://en.wikipedia.org/wiki/Kirkuk",
+			"https://en.wikipedia.org/wiki/Baba_Gurgur"
+		],
+		"halabja:region": [
+			"https://en.wikipedia.org/wiki/Halabja_Governorate",
+			"https://presidency.gov.krd/en/president-nechirvan-barzani-congratulates-the-people-of-halabja/"
+		],
+		"saladin:region": [
+			"https://en.wikipedia.org/wiki/Saladin_Governorate",
+			"https://en.wikipedia.org/wiki/Samarra",
+			"https://en.wikipedia.org/wiki/Assur"
+		],
+		"diyala:region": [
+			"https://en.wikipedia.org/wiki/Diyala_Governorate",
+			"https://en.wikipedia.org/wiki/Baqubah",
+			"https://en.wikipedia.org/wiki/Khanaqin"
+		],
+		"baghdad:region": [
+			"https://en.wikipedia.org/wiki/Baghdad",
+			"https://en.wikipedia.org/wiki/Mustansiriya_Madrasah"
+		],
+		"anbar:region": [
+			"https://www.iranicaonline.org/articles/anbar-ancient-and-medieval-town-on-the-left-bank-of-the-euphrates/",
+			"https://en.wikipedia.org/wiki/H%C4%ABt"
+		],
+		"wasit:region": [
+			"https://en.wikipedia.org/wiki/Wasit_Governorate",
+			"https://en.wikipedia.org/wiki/Wasit",
+			"https://en.wikipedia.org/wiki/Kut"
+		],
+		"babil:region": [
+			"https://en.wikipedia.org/wiki/Babylon_Governorate",
+			"https://en.wikipedia.org/wiki/Babylon",
+			"https://en.wikipedia.org/wiki/Hillah"
+		],
+		"karbala:region": [
+			"https://en.wikipedia.org/wiki/Karbala",
+			"https://en.wikipedia.org/wiki/Imam_Husayn_Shrine"
+		],
+		"karbala:city": [
+			"https://en.wikipedia.org/wiki/Karbala",
+			"https://en.wikipedia.org/wiki/Imam_Husayn_Shrine"
+		],
+		"maysan:region": [
+			"https://en.wikipedia.org/wiki/Maysan_Governorate",
+			"https://en.wikipedia.org/wiki/Mesene",
+			"https://en.wikipedia.org/wiki/Mesopotamian_Marshes"
+		],
+		"qadisiyyah:region": [
+			"https://en.wikipedia.org/wiki/Al-Qadisiyyah_Governorate",
+			"https://en.wikipedia.org/wiki/Nippur"
+		],
+		"dhi-qar:region": [
+			"https://en.wikipedia.org/wiki/Dhi_Qar_Governorate",
+			"https://en.wikipedia.org/wiki/Ur",
+			"https://en.wikipedia.org/wiki/Nasiriyah"
+		],
+		"najaf:region": [
+			"https://en.wikipedia.org/wiki/Najaf",
+			"https://en.wikipedia.org/wiki/Imam_Ali_Shrine",
+			"https://en.wikipedia.org/wiki/Wadi-us-Salaam"
+		],
+		"najaf:city": [
+			"https://en.wikipedia.org/wiki/Najaf",
+			"https://en.wikipedia.org/wiki/Imam_Ali_Shrine",
+			"https://en.wikipedia.org/wiki/Wadi-us-Salaam"
+		],
+		"muthanna:region": [
+			"https://en.wikipedia.org/wiki/Muthanna_Governorate",
+			"https://en.wikipedia.org/wiki/Uruk",
+			"https://en.wikipedia.org/wiki/Samawah"
+		],
+		"basra:region": [
+			"https://en.wikipedia.org/wiki/Basra",
+			"https://en.wiktionary.org/wiki/Basra"
+		],
+		"basra:city": [
+			"https://en.wikipedia.org/wiki/Basra",
+			"https://en.wiktionary.org/wiki/Basra"
+		],
+		"mosul:city": [
+			"https://en.wikipedia.org/wiki/Mosul",
+			"https://www.unesco.org/en/revive-mosul/al-nouri-mosque"
+		],
+		"baqubah:city": [
+			"https://en.wikipedia.org/wiki/Baqubah"
+		],
+		"ar-ramadi:city": [
+			"https://en.wikipedia.org/wiki/Ramadi"
+		],
+		"al-fallujah:city": [
+			"https://en.wikipedia.org/wiki/Fallujah"
+		],
+		"al-kut:city": [
+			"https://en.wikipedia.org/wiki/Kut",
+			"https://en.wikipedia.org/wiki/Kut_Barrage"
+		],
+		"al-hillah:city": [
+			"https://en.wikipedia.org/wiki/Hillah"
+		],
+		"ad-diwaniyah:city": [
+			"https://en.wikipedia.org/wiki/Al_Diwaniyah",
+			"https://en.wikipedia.org/wiki/Nippur"
+		],
+		"al-amarah:city": [
+			"https://en.wikipedia.org/wiki/Amarah",
+			"https://en.wikipedia.org/wiki/Mesopotamian_Marshes"
+		],
+		"ash-shatrah:city": [
+			"https://en.wikipedia.org/wiki/Al-Shatrah",
+			"https://en.wikipedia.org/wiki/Girsu"
+		],
+		"as-samawah:city": [
+			"https://en.wikipedia.org/wiki/Samawah",
+			"https://en.wikipedia.org/wiki/Uruk"
+		],
+		"an-nasiriyah:city": [
+			"https://en.wikipedia.org/wiki/Nasiriyah",
+			"https://en.wikipedia.org/wiki/Ur"
+		],
+		"az-zubayr:city": [
+			"https://en.wikipedia.org/wiki/Az_Zubayr"
+		]
+	},
+	"duhok": {
+		"region": {
+			"en": [
+				"Its name is also romanized Dahuk.",
+				"The old bazaar preserves trading traditions.",
+				"Duhok Dam created a mountain reservoir."
+			],
+			"it": [
+				"Il nome è romanizzato anche Dahuk.",
+				"L’antico bazar conserva tradizioni commerciali.",
+				"La diga di Duhok creò un bacino montano."
+			],
+			"de": [
+				"Der Name wird auch Dahuk romanisiert.",
+				"Der alte Basar bewahrt Handelstraditionen.",
+				"Der Duhok-Staudamm schuf einen Bergstausee."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name is also romanized Dahuk.",
+				"The old bazaar preserves trading traditions.",
+				"Duhok Dam created a mountain reservoir."
+			],
+			"it": [
+				"Il nome è romanizzato anche Dahuk.",
+				"L’antico bazar conserva tradizioni commerciali.",
+				"La diga di Duhok creò un bacino montano."
+			],
+			"de": [
+				"Der Name wird auch Dahuk romanisiert.",
+				"Der alte Basar bewahrt Handelstraditionen.",
+				"Der Duhok-Staudamm schuf einen Bergstausee."
+			]
+		}
+	},
+	"erbil": {
+		"region": {
+			"en": [
+				"Its ancient names include Arbailu and Arbela.",
+				"The citadel preserves a historic hilltop settlement.",
+				"The Qaysari bazaar recalls its trading heritage."
+			],
+			"it": [
+				"Tra i nomi antichi vi sono Arbailu e Arbela.",
+				"La cittadella conserva uno storico insediamento collinare.",
+				"Il bazar Qaysari ricorda il patrimonio commerciale."
+			],
+			"de": [
+				"Zu den alten Namen gehören Arbailu und Arbela.",
+				"Die Zitadelle bewahrt eine historische Hügelsiedlung.",
+				"Der Qaysari-Basar erinnert an das Handelserbe."
+			]
+		},
+		"city": {
+			"en": [
+				"Its ancient names include Arbailu and Arbela.",
+				"The citadel preserves a historic hilltop settlement.",
+				"The Qaysari bazaar recalls its trading heritage."
+			],
+			"it": [
+				"Tra i nomi antichi vi sono Arbailu e Arbela.",
+				"La cittadella conserva uno storico insediamento collinare.",
+				"Il bazar Qaysari ricorda il patrimonio commerciale."
+			],
+			"de": [
+				"Zu den alten Namen gehören Arbailu und Arbela.",
+				"Die Zitadelle bewahrt eine historische Hügelsiedlung.",
+				"Der Qaysari-Basar erinnert an das Handelserbe."
+			]
+		}
+	},
+	"nineveh": {
+		"region": {
+			"en": [
+				"It is named after ancient Nineveh.",
+				"Nineveh preserves the remains of an Assyrian capital.",
+				"Hatra preserves monumental ancient architecture."
+			],
+			"it": [
+				"Prende il nome dall’antica Ninive.",
+				"Ninive conserva i resti di una capitale assira.",
+				"Hatra conserva monumentale architettura antica."
+			],
+			"de": [
+				"Die Region ist nach dem alten Ninive benannt.",
+				"Ninive bewahrt Reste einer assyrischen Hauptstadt.",
+				"Hatra bewahrt monumentale antike Architektur."
+			]
+		}
+	},
+	"sulaymaniyah": {
+		"region": {
+			"en": [
+				"Its Kurdish name is also romanized Slemani.",
+				"The city developed as a Baban dynastic centre.",
+				"It became a centre of Kurdish literature."
+			],
+			"it": [
+				"Il nome curdo è romanizzato anche Slemani.",
+				"La città si sviluppò come centro dinastico dei Baban.",
+				"Divenne un centro della letteratura curda."
+			],
+			"de": [
+				"Der kurdische Name wird auch Slemani romanisiert.",
+				"Die Stadt entwickelte sich als dynastisches Zentrum der Baban.",
+				"Sie wurde zu einem Zentrum kurdischer Literatur."
+			]
+		}
+	},
+	"as-sulaymaniyah": {
+		"city": {
+			"en": [
+				"Its Kurdish name is also romanized Slemani.",
+				"The city developed as a Baban dynastic centre.",
+				"It became a centre of Kurdish literature."
+			],
+			"it": [
+				"Il nome curdo è romanizzato anche Slemani.",
+				"La città si sviluppò come centro dinastico dei Baban.",
+				"Divenne un centro della letteratura curda."
+			],
+			"de": [
+				"Der kurdische Name wird auch Slemani romanisiert.",
+				"Die Stadt entwickelte sich als dynastisches Zentrum der Baban.",
+				"Sie wurde zu einem Zentrum kurdischer Literatur."
+			]
+		}
+	},
+	"kirkuk": {
+		"region": {
+			"en": [
+				"Its ancient predecessor was called Arrapha.",
+				"The citadel recalls a long settlement history.",
+				"Baba Gurgur’s gas flames became a regional landmark."
+			],
+			"it": [
+				"L’antico predecessore si chiamava Arrapha.",
+				"La cittadella ricorda una lunga storia d’insediamento.",
+				"Le fiamme di gas di Baba Gurgur divennero un simbolo regionale."
+			],
+			"de": [
+				"Der antike Vorgänger hieß Arrapha.",
+				"Die Zitadelle erinnert an eine lange Siedlungsgeschichte.",
+				"Baba Gurgurs Gasflammen wurden zu einem regionalen Wahrzeichen."
+			]
+		},
+		"city": {
+			"en": [
+				"Its ancient predecessor was called Arrapha.",
+				"The citadel recalls a long settlement history.",
+				"Baba Gurgur’s gas flames became a regional landmark."
+			],
+			"it": [
+				"L’antico predecessore si chiamava Arrapha.",
+				"La cittadella ricorda una lunga storia d’insediamento.",
+				"Le fiamme di gas di Baba Gurgur divennero un simbolo regionale."
+			],
+			"de": [
+				"Der antike Vorgänger hieß Arrapha.",
+				"Die Zitadelle erinnert an eine lange Siedlungsgeschichte.",
+				"Baba Gurgurs Gasflammen wurden zu einem regionalen Wahrzeichen."
+			]
+		}
+	},
+	"halabja": {
+		"region": {
+			"en": [
+				"It takes its name from Halabja city.",
+				"Federal recognition as a governorate came in 2025.",
+				"Its memorial remembers the chemical attack of 1988."
+			],
+			"it": [
+				"Prende il nome dalla città di Halabja.",
+				"Il riconoscimento federale come governatorato arrivò nel 2025.",
+				"Il memoriale ricorda l’attacco chimico del 1988."
+			],
+			"de": [
+				"Die Region ist nach Halabja benannt.",
+				"Die föderale Anerkennung als Gouvernement erfolgte 2025.",
+				"Das Denkmal erinnert an den Chemiewaffenangriff von 1988."
+			]
+		}
+	},
+	"saladin": {
+		"region": {
+			"en": [
+				"It is named after Saladin, born in Tikrit.",
+				"Samarra preserves an Abbasid capital’s remains.",
+				"Ashur preserves an ancient Assyrian religious centre."
+			],
+			"it": [
+				"Prende il nome da Saladino, nato a Tikrit.",
+				"Samarra conserva i resti di una capitale abbaside.",
+				"Assur conserva un antico centro religioso assiro."
+			],
+			"de": [
+				"Die Region ist nach dem in Tikrit geborenen Saladin benannt.",
+				"Samarra bewahrt Reste einer abbasidischen Hauptstadt.",
+				"Assur bewahrt ein altes assyrisches Religionszentrum."
+			]
+		}
+	},
+	"diyala": {
+		"region": {
+			"en": [
+				"It takes its name from the Diyala River.",
+				"Baqubah is known for orange orchards.",
+				"Khanaqin preserves Kurdish cultural traditions."
+			],
+			"it": [
+				"Prende il nome dal fiume Diyala.",
+				"Baqubah è nota per gli aranceti.",
+				"Khanaqin conserva tradizioni culturali curde."
+			],
+			"de": [
+				"Der Name geht auf den Diyala-Fluss zurück.",
+				"Baqubah ist für Orangenhaine bekannt.",
+				"Khanaqin bewahrt kurdische Kulturtraditionen."
+			]
+		}
+	},
+	"anbar": {
+		"region": {
+			"en": [
+				"Its Persian name means granaries or storehouses.",
+				"Euphrates trade shaped its settlements.",
+				"Hit’s bitumen springs were known in antiquity."
+			],
+			"it": [
+				"Il nome persiano significa granai o magazzini.",
+				"Il commercio sull’Eufrate ne plasmò gli insediamenti.",
+				"Le sorgenti di bitume di Hit erano note nell’antichità."
+			],
+			"de": [
+				"Der persische Name bedeutet Kornspeicher oder Lagerhäuser.",
+				"Euphrathandel prägte seine Siedlungen.",
+				"Hits Bitumenquellen waren schon in der Antike bekannt."
+			]
+		}
+	},
+	"wasit": {
+		"region": {
+			"en": [
+				"Wasit means middle, recalling the early Islamic city.",
+				"Its ruins preserve early Islamic architecture.",
+				"Kut developed as a Tigris trading town."
+			],
+			"it": [
+				"Wasit significa centro e ricorda la città del primo Islam.",
+				"Le rovine conservano l’architettura del primo Islam.",
+				"Kut si sviluppò come città commerciale sul Tigri."
+			],
+			"de": [
+				"Wasit bedeutet Mitte und erinnert an die frühislamische Stadt.",
+				"Ihre Ruinen bewahren frühislamische Architektur.",
+				"Kut entwickelte sich als Handelsstadt am Tigris."
+			]
+		}
+	},
+	"babil": {
+		"region": {
+			"en": [
+				"Babil is the Arabic form of Babylon.",
+				"Babylon preserves monumental palace and gate remains.",
+				"Hillah grew through Euphrates trade."
+			],
+			"it": [
+				"Babil è la forma araba di Babilonia.",
+				"Babilonia conserva monumentali resti di palazzi e porte.",
+				"Hillah crebbe grazie al commercio sull’Eufrate."
+			],
+			"de": [
+				"Babil ist die arabische Form von Babylon.",
+				"Babylon bewahrt monumentale Palast- und Torreste.",
+				"Hillah wuchs durch Euphrathandel."
+			]
+		}
+	},
+	"karbala": {
+		"region": {
+			"en": [
+				"The origin of its name has several proposed interpretations.",
+				"Imam Husayn’s shrine is a major pilgrimage site.",
+				"The battle of 680 gave the city lasting religious importance."
+			],
+			"it": [
+				"L’origine del nome ha diverse interpretazioni proposte.",
+				"Il santuario dell’Imam Husayn è un importante luogo di pellegrinaggio.",
+				"La battaglia del 680 diede alla città una duratura importanza religiosa."
+			],
+			"de": [
+				"Für den Ursprung des Namens gibt es mehrere Deutungen.",
+				"Der Schrein Imam Husayns ist ein bedeutendes Pilgerziel.",
+				"Die Schlacht von 680 verlieh der Stadt dauerhafte religiöse Bedeutung."
+			]
+		},
+		"city": {
+			"en": [
+				"The origin of its name has several proposed interpretations.",
+				"Imam Husayn’s shrine is a major pilgrimage site.",
+				"The battle of 680 gave the city lasting religious importance."
+			],
+			"it": [
+				"L’origine del nome ha diverse interpretazioni proposte.",
+				"Il santuario dell’Imam Husayn è un importante luogo di pellegrinaggio.",
+				"La battaglia del 680 diede alla città una duratura importanza religiosa."
+			],
+			"de": [
+				"Für den Ursprung des Namens gibt es mehrere Deutungen.",
+				"Der Schrein Imam Husayns ist ein bedeutendes Pilgerziel.",
+				"Die Schlacht von 680 verlieh der Stadt dauerhafte religiöse Bedeutung."
+			]
+		}
+	},
+	"maysan": {
+		"region": {
+			"en": [
+				"Its name recalls ancient Mesene or Mishan.",
+				"Amarah developed as a Tigris town.",
+				"Marsh communities preserve reed-building traditions."
+			],
+			"it": [
+				"Il nome ricorda l’antica Mesene o Mishan.",
+				"Amarah si sviluppò come città sul Tigri.",
+				"Le comunità delle paludi conservano tradizioni costruttive in canna."
+			],
+			"de": [
+				"Der Name erinnert an das alte Mesene oder Mischan.",
+				"Amarah entwickelte sich als Stadt am Tigris.",
+				"Marschgemeinschaften bewahren Schilfbautraditionen."
+			]
+		}
+	},
+	"qadisiyyah": {
+		"region": {
+			"en": [
+				"Its name recalls the Battle of al-Qadisiyyah.",
+				"Nippur preserves an ancient Sumerian religious centre.",
+				"Diwaniyah is an older administrative name for the area."
+			],
+			"it": [
+				"Il nome ricorda la battaglia di al-Qadisiyyah.",
+				"Nippur conserva un antico centro religioso sumero.",
+				"Diwaniyah è un antico nome amministrativo della zona."
+			],
+			"de": [
+				"Der Name erinnert an die Schlacht von al-Qadisiyya.",
+				"Nippur bewahrt ein altes sumerisches Religionszentrum.",
+				"Diwaniyah ist ein älterer Verwaltungsname des Gebiets."
+			]
+		}
+	},
+	"dhi-qar": {
+		"region": {
+			"en": [
+				"Its name commemorates the Battle of Dhi Qar.",
+				"Ur preserves a monumental ziggurat.",
+				"Nasiriyah developed during the Ottoman period."
+			],
+			"it": [
+				"Il nome commemora la battaglia di Dhi Qar.",
+				"Ur conserva una ziggurat monumentale.",
+				"Nasiriyah si sviluppò durante il periodo ottomano."
+			],
+			"de": [
+				"Der Name erinnert an die Schlacht von Dhi Qar.",
+				"Ur bewahrt eine monumentale Zikkurat.",
+				"Nasiriyah entwickelte sich in der osmanischen Zeit."
+			]
+		}
+	},
+	"najaf": {
+		"region": {
+			"en": [
+				"Its Arabic name is linked to elevated ground.",
+				"Imam Ali’s shrine is a major pilgrimage site.",
+				"Wadi al-Salam is a historic cemetery."
+			],
+			"it": [
+				"Il nome arabo è legato al terreno elevato.",
+				"Il santuario dell’Imam Ali è un importante luogo di pellegrinaggio.",
+				"Wadi al-Salam è un cimitero storico."
+			],
+			"de": [
+				"Der arabische Name wird mit erhöhtem Gelände verbunden.",
+				"Der Schrein Imam Alis ist ein bedeutendes Pilgerziel.",
+				"Wadi al-Salam ist ein historischer Friedhof."
+			]
+		},
+		"city": {
+			"en": [
+				"Its Arabic name is linked to elevated ground.",
+				"Imam Ali’s shrine is a major pilgrimage site.",
+				"Wadi al-Salam is a historic cemetery."
+			],
+			"it": [
+				"Il nome arabo è legato al terreno elevato.",
+				"Il santuario dell’Imam Ali è un importante luogo di pellegrinaggio.",
+				"Wadi al-Salam è un cimitero storico."
+			],
+			"de": [
+				"Der arabische Name wird mit erhöhtem Gelände verbunden.",
+				"Der Schrein Imam Alis ist ein bedeutendes Pilgerziel.",
+				"Wadi al-Salam ist ein historischer Friedhof."
+			]
+		}
+	},
+	"muthanna": {
+		"region": {
+			"en": [
+				"It is named after the early commander al-Muthanna ibn Haritha.",
+				"Uruk preserves one of Mesopotamia’s early cities.",
+				"Samawah developed as a Euphrates trading centre."
+			],
+			"it": [
+				"Prende il nome dall’antico comandante al-Muthanna ibn Haritha.",
+				"Uruk conserva una delle prime città mesopotamiche.",
+				"Samawah si sviluppò come centro commerciale sull’Eufrate."
+			],
+			"de": [
+				"Die Region ist nach dem frühen Heerführer al-Muthanna ibn Haritha benannt.",
+				"Uruk bewahrt eine der frühen Städte Mesopotamiens.",
+				"Samawah entwickelte sich als Handelszentrum am Euphrat."
+			]
+		}
+	},
+	"basra": {
+		"region": {
+			"en": [
+				"Older English sources used the spelling Bussorah.",
+				"It began as an early Islamic garrison town.",
+				"Canals and date gardens shaped its historic landscape."
+			],
+			"it": [
+				"Le antiche fonti inglesi usavano la grafia Bussorah.",
+				"Nacque come città di guarnigione del primo Islam.",
+				"Canali e palmeti da dattero ne plasmarono il paesaggio storico."
+			],
+			"de": [
+				"Ältere englische Quellen verwendeten die Schreibweise Bussorah.",
+				"Die Stadt entstand als frühislamischer Garnisonsort.",
+				"Kanäle und Dattelgärten prägten ihre historische Landschaft."
+			]
+		},
+		"city": {
+			"en": [
+				"Older English sources used the spelling Bussorah.",
+				"It began as an early Islamic garrison town.",
+				"Canals and date gardens shaped its historic landscape."
+			],
+			"it": [
+				"Le antiche fonti inglesi usavano la grafia Bussorah.",
+				"Nacque come città di guarnigione del primo Islam.",
+				"Canali e palmeti da dattero ne plasmarono il paesaggio storico."
+			],
+			"de": [
+				"Ältere englische Quellen verwendeten die Schreibweise Bussorah.",
+				"Die Stadt entstand als frühislamischer Garnisonsort.",
+				"Kanäle und Dattelgärten prägten ihre historische Landschaft."
+			]
+		}
+	},
+	"mosul": {
+		"city": {
+			"en": [
+				"Its Arabic name means a linking place.",
+				"The al-Nuri mosque became a symbol of the old city.",
+				"Ancient Nineveh lies across the Tigris."
+			],
+			"it": [
+				"Il nome arabo significa luogo di collegamento.",
+				"La moschea al-Nuri divenne un simbolo della città vecchia.",
+				"L’antica Ninive si trova oltre il Tigri."
+			],
+			"de": [
+				"Der arabische Name bedeutet Verbindungsort.",
+				"Die al-Nuri-Moschee wurde zum Symbol der Altstadt.",
+				"Das alte Ninive liegt jenseits des Tigris."
+			]
+		}
+	},
+	"baqubah": {
+		"city": {
+			"en": [
+				"Its name is also written Baquba.",
+				"Orange orchards shaped its regional identity.",
+				"The Diyala River supports farming and trade."
+			],
+			"it": [
+				"Il nome è scritto anche Baquba.",
+				"Gli aranceti ne plasmarono l’identità regionale.",
+				"Il fiume Diyala sostiene agricoltura e commercio."
+			],
+			"de": [
+				"Der Name wird auch Baquba geschrieben.",
+				"Orangenhaine prägten seine regionale Identität.",
+				"Der Diyala-Fluss ermöglicht Landwirtschaft und Handel."
+			]
+		}
+	},
+	"ar-ramadi": {
+		"city": {
+			"en": [
+				"Its name is related to the Arabic word for ash.",
+				"The town grew as an Ottoman administrative centre.",
+				"Its Euphrates crossings linked desert roads."
+			],
+			"it": [
+				"Il nome è legato alla parola araba per cenere.",
+				"La città crebbe come centro amministrativo ottomano.",
+				"Gli attraversamenti dell’Eufrate collegavano le strade del deserto."
+			],
+			"de": [
+				"Der Name ist mit dem arabischen Wort für Asche verwandt.",
+				"Die Stadt wuchs als osmanisches Verwaltungszentrum.",
+				"Ihre Euphratübergänge verbanden Wüstenstraßen."
+			]
+		}
+	},
+	"al-fallujah": {
+		"city": {
+			"en": [
+				"Its name is also written Falluja.",
+				"It developed along Euphrates trading routes.",
+				"It is traditionally nicknamed the City of Mosques."
+			],
+			"it": [
+				"Il nome è scritto anche Falluja.",
+				"Si sviluppò lungo le rotte commerciali dell’Eufrate.",
+				"È tradizionalmente soprannominata città delle moschee."
+			],
+			"de": [
+				"Der Name wird auch Falluja geschrieben.",
+				"Die Stadt entwickelte sich an Euphrathandelswegen.",
+				"Sie trägt traditionell den Beinamen Stadt der Moscheen."
+			]
+		}
+	},
+	"al-kut": {
+		"city": {
+			"en": [
+				"Kut is a regional term for a fortified settlement.",
+				"The Kut Barrage controls water for irrigation.",
+				"It was the site of a First World War siege."
+			],
+			"it": [
+				"Kut è un termine regionale per un insediamento fortificato.",
+				"La diga di Kut regola l’acqua per l’irrigazione.",
+				"Fu teatro di un assedio della Prima guerra mondiale."
+			],
+			"de": [
+				"Kut ist ein regionaler Begriff für eine befestigte Siedlung.",
+				"Das Kut-Wehr regelt Bewässerungswasser.",
+				"Die Stadt war Schauplatz einer Belagerung im Ersten Weltkrieg."
+			]
+		}
+	},
+	"al-hillah": {
+		"city": {
+			"en": [
+				"Its Arabic name means settlement or camp.",
+				"The town grew as a Euphrates commercial centre.",
+				"Babylon’s ruins lie nearby."
+			],
+			"it": [
+				"Il nome arabo significa insediamento o accampamento.",
+				"La città crebbe come centro commerciale sull’Eufrate.",
+				"Le rovine di Babilonia si trovano nelle vicinanze."
+			],
+			"de": [
+				"Der arabische Name bedeutet Siedlung oder Lager.",
+				"Die Stadt wuchs als Handelszentrum am Euphrat.",
+				"Babylons Ruinen liegen in der Nähe."
+			]
+		}
+	},
+	"ad-diwaniyah": {
+		"city": {
+			"en": [
+				"Its name is linked to diwan, a place of council.",
+				"Rice farming shaped the surrounding economy.",
+				"Nearby Nippur preserves Sumerian archaeology."
+			],
+			"it": [
+				"Il nome è legato a diwan, un luogo di consiglio.",
+				"La risicoltura plasmò l’economia circostante.",
+				"La vicina Nippur conserva l’archeologia sumera."
+			],
+			"de": [
+				"Der Name wird mit Diwan, einem Beratungsort, verbunden.",
+				"Reisanbau prägte die umliegende Wirtschaft.",
+				"Das nahe Nippur bewahrt sumerische Archäologie."
+			]
+		}
+	},
+	"al-amarah": {
+		"city": {
+			"en": [
+				"Its name is linked to the Arabic word for building.",
+				"It developed during the Ottoman period.",
+				"The surrounding marshes preserve reed-building traditions."
+			],
+			"it": [
+				"Il nome è legato alla parola araba per costruzione.",
+				"Si sviluppò durante il periodo ottomano.",
+				"Le paludi circostanti conservano tradizioni costruttive in canna."
+			],
+			"de": [
+				"Der Name ist mit dem arabischen Wort für Bauen verbunden.",
+				"Die Stadt entwickelte sich in der osmanischen Zeit.",
+				"Die umliegenden Marschen bewahren Schilfbautraditionen."
+			]
+		}
+	},
+	"ash-shatrah": {
+		"city": {
+			"en": [
+				"Its name is also written Al-Shatra.",
+				"It developed as a river market.",
+				"Nearby Tello preserves the ancient Sumerian city of Girsu."
+			],
+			"it": [
+				"Il nome è scritto anche Al-Shatra.",
+				"Si sviluppò come mercato fluviale.",
+				"La vicina Tello conserva l’antica città sumera di Girsu."
+			],
+			"de": [
+				"Der Name wird auch Al-Shatra geschrieben.",
+				"Die Stadt entwickelte sich als Flussmarkt.",
+				"Das nahe Tello bewahrt die alte sumerische Stadt Girsu."
+			]
+		}
+	},
+	"as-samawah": {
+		"city": {
+			"en": [
+				"Its name is also written Samawa.",
+				"The town grew through Euphrates trade.",
+				"Nearby Uruk preserves early urban archaeology."
+			],
+			"it": [
+				"Il nome è scritto anche Samawa.",
+				"La città crebbe grazie al commercio sull’Eufrate.",
+				"La vicina Uruk conserva l’archeologia delle prime città."
+			],
+			"de": [
+				"Der Name wird auch Samawa geschrieben.",
+				"Die Stadt wuchs durch Euphrathandel.",
+				"Das nahe Uruk bewahrt Archäologie früher Städte."
+			]
+		}
+	},
+	"an-nasiriyah": {
+		"city": {
+			"en": [
+				"It was named after Nasir Pasha al-Saadun.",
+				"The town was founded in 1869.",
+				"Nearby Ur preserves a monumental ziggurat."
+			],
+			"it": [
+				"Fu chiamata in onore di Nasir Pasha al-Saadun.",
+				"La città fu fondata nel 1869.",
+				"La vicina Ur conserva una ziggurat monumentale."
+			],
+			"de": [
+				"Der Name ehrt Nasir Pascha al-Saadun.",
+				"Die Stadt wurde 1869 gegründet.",
+				"Das nahe Ur bewahrt eine monumentale Zikkurat."
+			]
+		}
+	},
+	"az-zubayr": {
+		"city": {
+			"en": [
+				"It is named after al-Zubayr ibn al-Awwam.",
+				"Najdi merchants shaped its cultural life.",
+				"Old mosques and markets reflect its trading history."
+			],
+			"it": [
+				"Prende il nome da al-Zubayr ibn al-Awwam.",
+				"I mercanti del Najd ne plasmarono la vita culturale.",
+				"Antiche moschee e mercati riflettono la storia commerciale."
+			],
+			"de": [
+				"Die Stadt ist nach al-Zubayr ibn al-Awwam benannt.",
+				"Nadschdische Kaufleute prägten ihr Kulturleben.",
+				"Alte Moscheen und Märkte spiegeln ihre Handelsgeschichte wider."
 			]
 		}
 	}

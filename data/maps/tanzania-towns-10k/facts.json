@@ -5,21 +5,72 @@
 		"populationRank": 17,
 		"region": "Kagera",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The city shares its name with Bukoba Rural District.",
+				"Its harbour connected Lake Victoria trading routes.",
+				"It is a cultural centre for the Haya."
+			],
+			"it": [
+				"La città condivide il nome con il distretto rurale di Bukoba.",
+				"Il porto collegava le rotte commerciali del lago Vittoria.",
+				"È un centro culturale degli haya."
+			],
+			"de": [
+				"Die Stadt teilt ihren Namen mit dem ländlichen Distrikt Bukoba.",
+				"Ihr Hafen verband Handelswege auf dem Victoriasee.",
+				"Sie ist ein Kulturzentrum der Haya."
+			]
+		}
 	},
 	"musoma": {
 		"kind": "city",
 		"population": 133156,
 		"populationRank": 12,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name refers to a peninsula projecting into the lake.",
+				"It developed as a Lake Victoria port.",
+				"Nearby Butiama preserves Julius Nyerere’s heritage."
+			],
+			"it": [
+				"Il nome si riferisce a una penisola protesa nel lago.",
+				"Si sviluppò come porto sul lago Vittoria.",
+				"La vicina Butiama conserva il patrimonio di Julius Nyerere."
+			],
+			"de": [
+				"Der Name bezieht sich auf eine in den See ragende Halbinsel.",
+				"Die Stadt entwickelte sich als Hafen am Victoriasee.",
+				"Das nahe Butiama bewahrt Julius Nyereres Erbe."
+			]
+		}
 	},
 	"mwanza": {
 		"kind": "city",
 		"population": 493944,
 		"populationRank": 3,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Mwanza is nicknamed Rock City.",
+				"Bismarck Rock is a balancing granite landmark.",
+				"Bujora’s museum preserves Sukuma cultural heritage."
+			],
+			"it": [
+				"Mwanza è soprannominata città delle rocce.",
+				"Bismarck Rock è un simbolo di granito in equilibrio.",
+				"Il museo di Bujora conserva il patrimonio culturale sukuma."
+			],
+			"de": [
+				"Mwanza trägt den Beinamen Felsenstadt.",
+				"Der balancierende Granitfels Bismarck Rock ist ein Wahrzeichen.",
+				"Bujoras Museum bewahrt Sukuma-Kulturerbe."
+			]
+		}
 	},
 	"moshi": {
 		"kind": "city",
@@ -27,42 +78,144 @@
 		"populationRank": 2,
 		"region": "Kilimanjaro",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Moshi is Swahili for smoke.",
+				"Coffee trading helped shape the town.",
+				"Chagga traditions are important in the surrounding foothills."
+			],
+			"it": [
+				"Moshi significa fumo in swahili.",
+				"Il commercio del caffè contribuì a plasmare la città.",
+				"Le tradizioni chagga sono importanti nelle pendici circostanti."
+			],
+			"de": [
+				"Moshi bedeutet auf Swahili Rauch.",
+				"Kaffeehandel prägte die Stadt.",
+				"Chagga-Traditionen prägen die umliegenden Vorberge."
+			]
+		}
 	},
 	"arusha": {
 		"kind": "city",
 		"population": 341136,
 		"populationRank": 5,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its name recalls the local Arusha people.",
+				"The 1967 Arusha Declaration shaped Tanzanian socialism.",
+				"The old German boma became a museum."
+			],
+			"it": [
+				"Il nome ricorda il popolo arusha locale.",
+				"La Dichiarazione di Arusha del 1967 plasmò il socialismo tanzaniano.",
+				"L’antico boma tedesco divenne un museo."
+			],
+			"de": [
+				"Der Name erinnert an die örtlichen Arusha.",
+				"Die Erklärung von Arusha von 1967 prägte Tansanias Sozialismus.",
+				"Die alte deutsche Boma wurde zum Museum."
+			]
+		}
 	},
 	"shinyanga": {
 		"kind": "city",
 		"population": 107362,
 		"populationRank": 16,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The town and region share the name Shinyanga.",
+				"Sukuma pastoral traditions shape local life.",
+				"Ngitili reserves conserve grazing for the dry season."
+			],
+			"it": [
+				"La città e la regione condividono il nome Shinyanga.",
+				"Le tradizioni pastorali sukuma plasmano la vita locale.",
+				"Le riserve ngitili conservano pascoli per la stagione secca."
+			],
+			"de": [
+				"Stadt und Region teilen den Namen Shinyanga.",
+				"Sukuma-Weidetraditionen prägen das örtliche Leben.",
+				"Ngitili-Reservate bewahren Weideland für die Trockenzeit."
+			]
+		}
 	},
 	"kigoma": {
 		"kind": "city",
 		"population": 164268,
 		"populationRank": 10,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The name is shared by Kigoma town and region.",
+				"Nearby Ujiji recalls the Livingstone–Stanley meeting.",
+				"Gombe became known for Jane Goodall’s chimpanzee research."
+			],
+			"it": [
+				"Il nome è condiviso dalla città e dalla regione di Kigoma.",
+				"La vicina Ujiji ricorda l’incontro tra Livingstone e Stanley.",
+				"Gombe divenne noto per le ricerche di Jane Goodall sugli scimpanzé."
+			],
+			"de": [
+				"Stadt und Region Kigoma teilen denselben Namen.",
+				"Das nahe Ujiji erinnert an das Treffen von Livingstone und Stanley.",
+				"Gombe wurde durch Jane Goodalls Schimpansenforschung bekannt."
+			]
+		}
 	},
 	"tabora": {
 		"kind": "city",
 		"population": 146495,
 		"populationRank": 11,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Tabora’s earlier name was Kazeh.",
+				"Caravan trade shaped its nineteenth-century growth.",
+				"Kwihara preserves the Livingstone Tembe memorial."
+			],
+			"it": [
+				"Il nome precedente di Tabora era Kazeh.",
+				"Il commercio carovaniero ne plasmò la crescita ottocentesca.",
+				"Kwihara conserva il memoriale Livingstone Tembe."
+			],
+			"de": [
+				"Taboras früherer Name lautete Kazeh.",
+				"Karawanenhandel prägte das Wachstum im 19. Jahrhundert.",
+				"Kwihara bewahrt die Livingstone-Tembe-Gedenkstätte."
+			]
+		}
 	},
 	"tanga": {
 		"kind": "city",
 		"population": 224876,
 		"populationRank": 8,
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Tanga is Swahili for sail.",
+				"Amboni preserves limestone caves.",
+				"The Usambara Railway linked the port with the interior."
+			],
+			"it": [
+				"Tanga significa vela in swahili.",
+				"Amboni conserva grotte calcaree.",
+				"La ferrovia dell’Usambara collegava il porto all’interno."
+			],
+			"de": [
+				"Tanga bedeutet auf Swahili Segel.",
+				"Amboni bewahrt Kalksteinhöhlen.",
+				"Die Usambara-Bahn verband den Hafen mit dem Binnenland."
+			]
+		}
 	},
 	"zanzibar": {
 		"kind": "city",
@@ -70,7 +223,24 @@
 		"populationRank": 4,
 		"region": "Mjini Magharibi",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The name derives from a Persian expression for the Zanj coast.",
+				"Stone Town preserves a historic Swahili port city.",
+				"Carved wooden doors reflect its mixed architectural heritage."
+			],
+			"it": [
+				"Il nome deriva da un’espressione persiana per la costa degli zanj.",
+				"Stone Town conserva una storica città portuale swahili.",
+				"Le porte di legno intagliato riflettono il patrimonio architettonico misto."
+			],
+			"de": [
+				"Der Name stammt aus einem persischen Ausdruck für die Zanj-Küste.",
+				"Stone Town bewahrt eine historische Swahili-Hafenstadt.",
+				"Geschnitzte Holztüren spiegeln ihr gemischtes Architekturerbe wider."
+			]
+		}
 	},
 	"dodoma": {
 		"kind": "city",
@@ -103,14 +273,48 @@
 		"population1950": 67000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its Arabic name means abode of peace.",
+				"Sultan Majid developed the town in the nineteenth century.",
+				"The National Museum presents Tanzania’s history and archaeology."
+			],
+			"it": [
+				"Il nome arabo significa dimora della pace.",
+				"Il sultano Majid sviluppò la città nell’Ottocento.",
+				"Il Museo nazionale presenta la storia e l’archeologia della Tanzania."
+			],
+			"de": [
+				"Der arabische Name bedeutet Wohnstatt des Friedens.",
+				"Sultan Majid entwickelte die Stadt im 19. Jahrhundert.",
+				"Das Nationalmuseum zeigt Tansanias Geschichte und Archäologie."
+			]
+		}
 	},
 	"morogoro": {
 		"kind": "city",
 		"population": 250902,
 		"populationRank": 7,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The city gives its name to Morogoro Region.",
+				"Luguru traditions shape the Uluguru Mountains’ cultural landscape.",
+				"Sokoine University developed from agricultural education."
+			],
+			"it": [
+				"La città dà il nome alla Regione di Morogoro.",
+				"Le tradizioni luguru plasmano il paesaggio culturale degli Uluguru.",
+				"L’Università Sokoine si sviluppò dall’istruzione agraria."
+			],
+			"de": [
+				"Die Stadt gibt der Region Morogoro ihren Namen.",
+				"Luguru-Traditionen prägen die Kulturlandschaft der Uluguru-Berge.",
+				"Die Sokoine-Universität entwickelte sich aus der landwirtschaftlichen Ausbildung."
+			]
+		}
 	},
 	"kilosa": {
 		"kind": "city",
@@ -118,14 +322,48 @@
 		"populationRank": 19,
 		"region": "Morogoro",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Older maps used the spelling Kilossa.",
+				"The Central Railway shaped its growth.",
+				"Sisal estates were part of its colonial economy."
+			],
+			"it": [
+				"Le vecchie mappe usavano la grafia Kilossa.",
+				"La ferrovia centrale ne plasmò la crescita.",
+				"Le piantagioni di sisal facevano parte dell’economia coloniale."
+			],
+			"de": [
+				"Ältere Karten verwendeten die Schreibweise Kilossa.",
+				"Die Zentralbahn prägte das Wachstum.",
+				"Sisalplantagen gehörten zur Kolonialwirtschaft."
+			]
+		}
 	},
 	"iringa": {
 		"kind": "city",
 		"population": 111820,
 		"populationRank": 15,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name comes from a Hehe word meaning fort.",
+				"Kalenga preserves the history of Chief Mkwawa.",
+				"Ruaha National Park protects river and savanna habitats."
+			],
+			"it": [
+				"Il nome deriva da una parola hehe che significa forte.",
+				"Kalenga conserva la storia del capo Mkwawa.",
+				"Il Parco nazionale di Ruaha protegge habitat fluviali e di savana."
+			],
+			"de": [
+				"Der Name stammt von einem Hehe-Wort für Fort.",
+				"Kalenga bewahrt die Geschichte von Häuptling Mkwawa.",
+				"Der Ruaha-Nationalpark schützt Fluss- und Savannenlebensräume."
+			]
+		}
 	},
 	"sumbawanga": {
 		"kind": "city",
@@ -133,14 +371,48 @@
 		"populationRank": 20,
 		"region": "Rukwa",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name is often translated as throw away your witchcraft.",
+				"Fipa communities preserve an ironworking tradition.",
+				"It developed as a highland market town."
+			],
+			"it": [
+				"Il nome è spesso tradotto come getta via la tua stregoneria.",
+				"Le comunità fipa conservano una tradizione di lavorazione del ferro.",
+				"Si sviluppò come città mercato d’altopiano."
+			],
+			"de": [
+				"Der Name wird oft als wirf deine Zauberei weg übersetzt.",
+				"Fipa-Gemeinschaften bewahren eine Eisenverarbeitungstradition.",
+				"Die Stadt entwickelte sich als Hochlandmarkt."
+			]
+		}
 	},
 	"mbeya": {
 		"kind": "city",
 		"population": 291649,
 		"populationRank": 6,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The city and region share the name Mbeya.",
+				"The town grew during a 1920s gold rush.",
+				"Lake Ngozi occupies a volcanic crater."
+			],
+			"it": [
+				"La città e la regione condividono il nome Mbeya.",
+				"La città crebbe durante una corsa all’oro negli anni Venti.",
+				"Il lago Ngozi occupa un cratere vulcanico."
+			],
+			"de": [
+				"Stadt und Region teilen den Namen Mbeya.",
+				"Die Stadt wuchs während eines Goldrauschs in den 1920er Jahren.",
+				"Der Ngozi-See liegt in einem Vulkankrater."
+			]
+		}
 	},
 	"tukuyu": {
 		"kind": "city",
@@ -148,14 +420,48 @@
 		"populationRank": 13,
 		"region": "Mbeya",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its former German name was Neu Langenburg.",
+				"Nyakyusa traditions shape local cultural life.",
+				"Tea growing is important in the surrounding highlands."
+			],
+			"it": [
+				"Il nome tedesco precedente era Neu Langenburg.",
+				"Le tradizioni nyakyusa plasmano la vita culturale locale.",
+				"La coltivazione del tè è importante negli altopiani circostanti."
+			],
+			"de": [
+				"Der frühere deutsche Name lautete Neu Langenburg.",
+				"Nyakyusa-Traditionen prägen das örtliche Kulturleben.",
+				"Teeanbau ist im umliegenden Hochland wichtig."
+			]
+		}
 	},
 	"mtwara": {
 		"kind": "city",
 		"population": 96602,
 		"populationRank": 18,
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The port town and region share the name Mtwara.",
+				"The groundnut scheme shaped the modern port’s development.",
+				"Nearby Mikindani preserves Swahili trading architecture."
+			],
+			"it": [
+				"La città portuale e la regione condividono il nome Mtwara.",
+				"Il progetto delle arachidi plasmò lo sviluppo del porto moderno.",
+				"La vicina Mikindani conserva l’architettura commerciale swahili."
+			],
+			"de": [
+				"Hafenstadt und Region teilen den Namen Mtwara.",
+				"Das Erdnussprojekt prägte die Entwicklung des modernen Hafens.",
+				"Das nahe Mikindani bewahrt Swahili-Handelsarchitektur."
+			]
+		}
 	},
 	"songea": {
 		"kind": "city",
@@ -163,6 +469,23 @@
 		"populationRank": 14,
 		"region": "Ruvuma",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"It is named after the Ngoni leader Songea Mbano.",
+				"Its museum commemorates the Maji Maji resistance.",
+				"Ngoni music and dance shape local traditions."
+			],
+			"it": [
+				"Prende il nome dal capo ngoni Songea Mbano.",
+				"Il museo commemora la resistenza Maji Maji.",
+				"Musica e danza ngoni plasmano le tradizioni locali."
+			],
+			"de": [
+				"Die Stadt ist nach dem Ngoni-Anführer Songea Mbano benannt.",
+				"Ihr Museum erinnert an den Maji-Maji-Widerstand.",
+				"Ngoni-Musik und -Tanz prägen örtliche Traditionen."
+			]
+		}
 	}
 }
