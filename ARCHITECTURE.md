@@ -544,3 +544,19 @@ contested areas remain land context. `audit-v1-country-facts.ts` checks the
 and tour mode all confirmed working against the live Netlify URL (not
 just a successful build). See ROADMAP.md's Iteration 3.5 for the full
 story, Cloudflare included.
+
+### Localized manual and full authored-coverage audit (v1.0 preparation)
+
+`docs/USER_MANUAL.md` is English; `docs/USER_MANUAL.de.md` and
+`docs/USER_MANUAL.it.md` are the localized editions. `app/scripts/build-manual.mjs`
+bundles all three HTML fragments and shares the existing English screenshot
+files once. Each translation discloses the image language. `/manual` follows
+`getLanguage()` and aborts superseded fetches so an older response cannot
+replace the current language. Build/content tests enforce anchors, current
+version/counts, all 22 topics, the fourteen tutorial steps and actual UI labels.
+
+`data/scripts/audit-authored-facts.ts` derives its scope from the catalogue
+index and the existing authored resolver. It deduplicates by normalized fact
+filename, target ID and city/region kind; country targets resolve through
+world.json. --maps narrows a working batch; --strict applies the requested
+sentence floor. The separate v1 expansion audit still protects its 735 targets.

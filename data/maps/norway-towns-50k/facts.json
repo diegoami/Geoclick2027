@@ -8,16 +8,94 @@
 		"position": "north-east",
 		"hooks": {
 			"en": [
-				"Called the Paris of the North, and the starting point of many Arctic expeditions.",
-				"In 1928 Roald Amundsen flew from here on his last flight, and never came back."
+				"The city takes its name from the island Tromsøya.",
+				"Its cultural reputation earned it the nickname Paris of the North.",
+				"Roald Amundsen departed from here on his fatal rescue flight in 1928."
 			],
 			"it": [
-				"Chiamata la Parigi del Nord, e punto di partenza di molte spedizioni artiche.",
-				"Nel 1928 Roald Amundsen partì da qui per il suo ultimo volo, e non tornò più."
+				"La città prende il nome dall’isola di Tromsøya.",
+				"La sua fama culturale le valse il soprannome di Parigi del Nord.",
+				"Roald Amundsen partì da qui per il fatale volo di soccorso del 1928."
 			],
 			"de": [
-				"Als Paris des Nordens bezeichnet und Ausgangspunkt vieler Arktisexpeditionen.",
-				"1928 startete Roald Amundsen von hier zu seinem letzten Flug und kehrte nie zurück."
+				"Die Stadt ist nach der Insel Tromsøya benannt.",
+				"Ihr kultureller Ruf brachte ihr den Beinamen Paris des Nordens ein.",
+				"Roald Amundsen startete hier 1928 zu seinem tödlich endenden Rettungsflug."
+			]
+		}
+	},
+	"narvik": {
+		"kind": "city",
+		"population": 20000,
+		"populationRank": 19,
+		"region": "Nordland",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The port was once called Victoriahavn.",
+				"The Ofoten railway connects its harbour with Sweden’s iron-ore fields.",
+				"Its strategic port was fought over during the battles of 1940."
+			],
+			"it": [
+				"Il porto si chiamava un tempo Victoriahavn.",
+				"La ferrovia dell’Ofoten collega il porto ai giacimenti di ferro svedesi.",
+				"Il porto strategico fu conteso nelle battaglie del 1940."
+			],
+			"de": [
+				"Der Hafen hieß einst Victoriahavn.",
+				"Die Ofotbahn verbindet den Hafen mit Schwedens Eisenerzgebieten.",
+				"Um den strategischen Hafen wurde in den Kämpfen von 1940 gerungen."
+			]
+		}
+	},
+	"bod": {
+		"kind": "city",
+		"population": 34073,
+		"populationRank": 14,
+		"region": "Nordland",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its old form Boðin contains a name element meaning meadow.",
+				"The town received trading-town privileges in 1816.",
+				"German bombing devastated it in 1940."
+			],
+			"it": [
+				"L’antica forma Boðin contiene un elemento del nome che significa prato.",
+				"La città ricevette privilegi commerciali urbani nel 1816.",
+				"I bombardamenti tedeschi la devastarono nel 1940."
+			],
+			"de": [
+				"Die alte Form Boðin enthält ein Namenselement für Wiese.",
+				"Der Ort erhielt 1816 die Rechte einer Handelsstadt.",
+				"Deutsche Bombenangriffe verwüsteten ihn 1940."
+			]
+		}
+	},
+	"mo-i-rana": {
+		"kind": "city",
+		"population": 20409,
+		"populationRank": 18,
+		"region": "Nordland",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Mo is an old word for a sandy plain.",
+				"The Norsk Jernverk steelworks drove its postwar industrial growth.",
+				"Antony Gormley’s sculpture Havmannen stands in the Ranfjord."
+			],
+			"it": [
+				"Mo è un’antica parola che indica una pianura sabbiosa.",
+				"L’acciaieria Norsk Jernverk ne trainò la crescita industriale del dopoguerra.",
+				"La scultura Havmannen di Antony Gormley si trova nel Ranfjord."
+			],
+			"de": [
+				"Mo ist ein altes Wort für eine sandige Ebene.",
+				"Das Stahlwerk Norsk Jernverk trieb das industrielle Wachstum nach dem Krieg an.",
+				"Antony Gormleys Skulptur Havmannen steht im Ranfjord."
 			]
 		}
 	},
@@ -25,21 +103,124 @@
 		"kind": "city",
 		"population": 147139,
 		"populationRank": 4,
-		"region": "Sør-Trøndelag",
+		"region": "Trøndelag",
 		"coastal": true,
 		"position": "centre",
 		"hooks": {
 			"en": [
-				"As Nidaros it was Norway’s capital in Viking times.",
-				"Its cathedral stands over the grave of Saint Olav, and is the northernmost medieval cathedral in the world."
+				"Its medieval name Nidaros means mouth of the Nid river.",
+				"It was a royal centre and capital in medieval Norway.",
+				"Nidaros Cathedral grew around the shrine of Saint Olaf."
 			],
 			"it": [
-				"Come Nidaros fu la capitale della Norvegia ai tempi dei vichinghi.",
-				"La sua cattedrale sorge sulla tomba di sant’Olav, ed è la cattedrale medievale più a nord del mondo."
+				"Il nome medievale Nidaros significa foce del fiume Nid.",
+				"Fu un centro reale e una capitale della Norvegia medievale.",
+				"La cattedrale di Nidaros si sviluppò intorno al santuario di sant’Olav."
 			],
 			"de": [
-				"Als Nidaros war sie in der Wikingerzeit die Hauptstadt Norwegens.",
-				"Ihre Kathedrale steht über dem Grab des heiligen Olav und ist die nördlichste mittelalterliche Kathedrale der Welt."
+				"Der mittelalterliche Name Nidaros bedeutet Mündung des Flusses Nid.",
+				"Die Stadt war ein königliches Zentrum und eine Hauptstadt des mittelalterlichen Norwegens.",
+				"Der Nidarosdom entstand um das Heiligtum des heiligen Olav."
+			]
+		}
+	},
+	"alesund": {
+		"kind": "city",
+		"population": 47772,
+		"populationRank": 9,
+		"region": "Møre og Romsdal",
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Older spellings include Aalesund.",
+				"A devastating fire destroyed much of the town in 1904.",
+				"Its reconstruction created a celebrated concentration of Art Nouveau architecture."
+			],
+			"it": [
+				"Tra le grafie precedenti compare Aalesund.",
+				"Un devastante incendio distrusse gran parte della città nel 1904.",
+				"La ricostruzione creò una celebre concentrazione di architettura liberty."
+			],
+			"de": [
+				"Zu den älteren Schreibweisen gehört Aalesund.",
+				"Ein verheerender Brand zerstörte 1904 große Teile der Stadt.",
+				"Der Wiederaufbau schuf ein bekanntes Ensemble von Jugendstilarchitektur."
+			]
+		}
+	},
+	"lillehammer": {
+		"kind": "city",
+		"population": 19542,
+		"populationRank": 20,
+		"region": "Innlandet",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name distinguishes the little Hamar from the larger Storhamar.",
+				"It hosted the 1994 Winter Olympics.",
+				"Maihaugen preserves historic buildings in an open-air museum."
+			],
+			"it": [
+				"Il nome distingue il piccolo Hamar dal più grande Storhamar.",
+				"Ospitò i Giochi olimpici invernali del 1994.",
+				"Maihaugen conserva edifici storici in un museo all’aperto."
+			],
+			"de": [
+				"Der Name unterscheidet das kleine Hamar vom größeren Storhamar.",
+				"Die Stadt richtete 1994 die Olympischen Winterspiele aus.",
+				"Maihaugen bewahrt historische Gebäude in einem Freilichtmuseum."
+			]
+		}
+	},
+	"hamar": {
+		"kind": "city",
+		"population": 29479,
+		"populationRank": 16,
+		"region": "Innlandet",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name comes from the old word hamarr, meaning a rocky crag.",
+				"Medieval cathedral ruins are protected beneath a modern glass structure at Domkirkeodden.",
+				"The Vikingskipet arena was built for Olympic speed skating in 1994."
+			],
+			"it": [
+				"Il nome deriva dall’antica parola hamarr, che indica una rupe.",
+				"A Domkirkeodden una moderna struttura in vetro protegge le rovine della cattedrale medievale.",
+				"L’arena Vikingskipet fu costruita per il pattinaggio di velocità olimpico del 1994."
+			],
+			"de": [
+				"Der Name stammt vom alten Wort hamarr für einen Felsvorsprung.",
+				"In Domkirkeodden schützt ein moderner Glasbau die Ruinen des mittelalterlichen Doms.",
+				"Die Arena Vikingskipet wurde für den olympischen Eisschnelllauf von 1994 gebaut."
+			]
+		}
+	},
+	"gj-vik": {
+		"kind": "city",
+		"population": 22719,
+		"populationRank": 17,
+		"region": "Innlandet",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name developed from the farm name Djupvik.",
+				"Glassmaking began here in 1807.",
+				"The paddle steamer Skibladner has its home port here."
+			],
+			"it": [
+				"Il nome si sviluppò dal nome della fattoria Djupvik.",
+				"La produzione del vetro iniziò qui nel 1807.",
+				"Il battello a ruote Skibladner ha qui il suo porto di base."
+			],
+			"de": [
+				"Der Name entwickelte sich aus dem Hofnamen Djupvik.",
+				"Die Glasherstellung begann hier 1807.",
+				"Der Raddampfer Skibladner hat hier seinen Heimathafen."
 			]
 		}
 	},
@@ -47,7 +228,7 @@
 		"kind": "city",
 		"population": 213585,
 		"populationRank": 2,
-		"region": "Hordaland",
+		"region": "Vestland",
 		"coastal": true,
 		"position": "south-west",
 		"hooks": {
@@ -103,13 +284,94 @@
 		"position": "south",
 		"hooks": {
 			"en": [
-				"Its road tunnel, the Spiral, climbs in six loops inside a hill to a lookout above the town."
+				"Its name preserves Drafn, an old name for the local waterway.",
+				"Bragernes and Strømsø united as one town in 1811.",
+				"The Spiralen road tunnel climbs through a hill in six turns."
 			],
 			"it": [
-				"La sua galleria stradale, la Spirale, sale in sei giri dentro una collina fino a un belvedere sopra la città."
+				"Il nome conserva Drafn, un’antica denominazione del corso d’acqua locale.",
+				"Bragernes e Strømsø si unirono in un’unica città nel 1811.",
+				"Il tunnel stradale Spiralen sale all’interno di una collina con sei giri."
 			],
 			"de": [
-				"Ihr Straßentunnel Spiralen führt in sechs Kehren durch einen Hügel zu einem Aussichtspunkt über der Stadt hinauf."
+				"Der Name bewahrt Drafn, eine alte Bezeichnung des örtlichen Gewässers.",
+				"Bragernes und Strømsø wurden 1811 zu einer Stadt vereinigt.",
+				"Der Straßentunnel Spiralen steigt in sechs Windungen durch einen Berg."
+			]
+		}
+	},
+	"moss": {
+		"kind": "city",
+		"population": 36901,
+		"populationRank": 13,
+		"region": "Østfold",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Medieval records used the spelling Mos.",
+				"Negotiations here produced the Convention of Moss in 1814.",
+				"An ironworks founded in 1704 shaped its industrial growth."
+			],
+			"it": [
+				"I documenti medievali usavano la grafia Mos.",
+				"Le trattative svolte qui produssero la convenzione di Moss nel 1814.",
+				"Una ferriera fondata nel 1704 ne plasmò la crescita industriale."
+			],
+			"de": [
+				"Mittelalterliche Urkunden verwendeten die Schreibweise Mos.",
+				"Hier geführte Verhandlungen führten 1814 zur Konvention von Moss.",
+				"Ein 1704 gegründetes Eisenwerk prägte das industrielle Wachstum."
+			]
+		}
+	},
+	"haugesund": {
+		"kind": "city",
+		"population": 40321,
+		"populationRank": 11,
+		"region": "Rogaland",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name combines words for a mound and a strait.",
+				"Nineteenth-century herring fisheries drove its growth.",
+				"The Haraldshaugen national monument was unveiled in 1872."
+			],
+			"it": [
+				"Il nome combina parole che indicano un rilievo e uno stretto.",
+				"La pesca delle aringhe ne trainò la crescita nell’Ottocento.",
+				"Il monumento nazionale di Haraldshaugen fu inaugurato nel 1872."
+			],
+			"de": [
+				"Der Name verbindet Wörter für einen Hügel und eine Meerenge.",
+				"Die Heringsfischerei trieb im neunzehnten Jahrhundert das Wachstum an.",
+				"Das Nationaldenkmal Haraldshaugen wurde 1872 eingeweiht."
+			]
+		}
+	},
+	"t-nsberg": {
+		"kind": "city",
+		"population": 38914,
+		"populationRank": 12,
+		"region": "Vestfold",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its Norse name Túnsberg combines an enclosure and a hill.",
+				"Slottsfjellet preserves the ruins of a medieval fortress.",
+				"The reconstructed Viking ship Saga Oseberg was launched here in 2012."
+			],
+			"it": [
+				"Il nome norreno Túnsberg combina un recinto e una collina.",
+				"Slottsfjellet conserva le rovine di una fortezza medievale.",
+				"La nave vichinga ricostruita Saga Oseberg fu varata qui nel 2012."
+			],
+			"de": [
+				"Der altnordische Name Túnsberg verbindet eine Einfriedung mit einem Berg.",
+				"Slottsfjellet bewahrt die Ruinen einer mittelalterlichen Festung.",
+				"Das nachgebaute Wikingerschiff Saga Oseberg wurde hier 2012 vom Stapel gelassen."
 			]
 		}
 	},
@@ -122,13 +384,19 @@
 		"position": "south-west",
 		"hooks": {
 			"en": [
-				"Henrik Ibsen was born here in 1828."
+				"Its medieval name Skiða was also a river name.",
+				"Henrik Ibsen was born here in 1828.",
+				"The nearby Fossum ironworks began in 1539."
 			],
 			"it": [
-				"Qui nacque Henrik Ibsen, nel 1828."
+				"Il nome medievale Skiða era anche il nome di un fiume.",
+				"Henrik Ibsen nacque qui nel 1828.",
+				"La vicina ferriera di Fossum ebbe inizio nel 1539."
 			],
 			"de": [
-				"Henrik Ibsen wurde 1828 hier geboren."
+				"Der mittelalterliche Name Skiða war auch ein Flussname.",
+				"Henrik Ibsen wurde hier 1828 geboren.",
+				"Das nahe Eisenwerk Fossum wurde 1539 gegründet."
 			]
 		}
 	},
@@ -141,16 +409,69 @@
 		"position": "south-west",
 		"hooks": {
 			"en": [
-				"Norway’s oil capital since the 1970s.",
-				"Preikestolen, a flat rock 600 m above a fjord, is close by."
+				"Its old name Stafangr contains angr, an old word for a bay.",
+				"Offshore oil development transformed the city in the 1970s.",
+				"Gamle Stavanger preserves rows of old wooden houses."
 			],
 			"it": [
-				"La capitale norvegese del petrolio dagli anni Settanta.",
-				"Qui vicino si trova Preikestolen, una roccia piatta a 600 m sopra un fiordo."
+				"L’antico nome Stafangr contiene angr, un’antica parola che indica una baia.",
+				"Lo sviluppo del petrolio offshore trasformò la città negli anni Settanta.",
+				"Gamle Stavanger conserva file di antiche case in legno."
 			],
 			"de": [
-				"Norwegens Ölhauptstadt seit den 1970er-Jahren.",
-				"Der Preikestolen, ein flacher Felsen 600 m über einem Fjord, liegt ganz in der Nähe."
+				"Der alte Name Stafangr enthält angr, ein altes Wort für eine Bucht.",
+				"Die Erschließung von Offshore-Erdöl veränderte die Stadt in den 1970er-Jahren.",
+				"Gamle Stavanger bewahrt Reihen alter Holzhäuser."
+			]
+		}
+	},
+	"sandnes": {
+		"kind": "city",
+		"population": 46911,
+		"populationRank": 10,
+		"region": "Rogaland",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name combines the Norse words for sand and headland.",
+				"Pottery and brickmaking shaped its industrial history.",
+				"Its coat of arms shows a clay cuckoo whistle."
+			],
+			"it": [
+				"Il nome unisce parole norrene che indicano sabbia e promontorio.",
+				"Ceramiche e mattoni ne plasmarono la storia industriale.",
+				"Lo stemma raffigura un fischietto di terracotta a forma di cuculo."
+			],
+			"de": [
+				"Der Name verbindet altnordische Wörter für Sand und Landzunge.",
+				"Töpferei und Ziegelherstellung prägten die Industriegeschichte.",
+				"Das Stadtwappen zeigt eine tönerne Kuckuckspfeife."
+			]
+		}
+	},
+	"arendal": {
+		"kind": "city",
+		"population": 30916,
+		"populationRank": 15,
+		"region": "Agder",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its final name element means valley; the first element is uncertain.",
+				"Tyholmen preserves historic wooden merchant houses.",
+				"Its Trinity Church was completed in 1888."
+			],
+			"it": [
+				"L’ultimo elemento del nome significa valle; il primo è incerto.",
+				"Tyholmen conserva storiche case mercantili in legno.",
+				"La chiesa della Trinità fu completata nel 1888."
+			],
+			"de": [
+				"Der letzte Namensbestandteil bedeutet Tal; der erste ist ungeklärt.",
+				"Tyholmen bewahrt historische Kaufmannshäuser aus Holz.",
+				"Die Dreifaltigkeitskirche wurde 1888 fertiggestellt."
 			]
 		}
 	},
@@ -158,18 +479,24 @@
 		"kind": "city",
 		"population": 63814,
 		"populationRank": 7,
-		"region": "Vest-Agder",
+		"region": "Agder",
 		"coastal": true,
 		"position": "south-west",
 		"hooks": {
 			"en": [
-				"Founded in 1641 by the Danish king Christian IV and named for him."
+				"Christian IV founded it in 1641 and gave it his name.",
+				"The centre’s grid plan is known as Kvadraturen.",
+				"Posebyen preserves a historic neighbourhood of wooden houses."
 			],
 			"it": [
-				"Fondata nel 1641 dal re danese Cristiano IV, che le diede il suo nome."
+				"Cristiano IV la fondò nel 1641 e le diede il proprio nome.",
+				"La pianta a griglia del centro è nota come Kvadraturen.",
+				"Posebyen conserva uno storico quartiere di case in legno."
 			],
 			"de": [
-				"1641 vom dänischen König Christian IV. gegründet und nach ihm benannt."
+				"Christian IV. gründete die Stadt 1641 und gab ihr seinen Namen.",
+				"Der schachbrettartige Stadtgrundriss ist als Kvadraturen bekannt.",
+				"Posebyen bewahrt ein historisches Viertel mit Holzhäusern."
 			]
 		}
 	}

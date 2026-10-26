@@ -1,7 +1,7 @@
 // The two fixes from tablet play, 2026-09-24, around the map's own chrome:
 // the button under the zoom control that hides the map bar, and the credit
 // line lifted above whatever covers the bottom of the map.
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { flushSync } from 'svelte';
 import { render } from 'vitest-browser-svelte';
 import { HideButtonsControl } from './hideButtonsControl.svelte';
@@ -13,6 +13,11 @@ import { setLanguage } from './i18n.svelte';
 const nextFrame = () => new Promise((r) => requestAnimationFrame(() => r(undefined)));
 
 describe('the hide-the-buttons control', () => {
+	beforeEach(() => {
+		// Other browser files can persist their chosen language on this origin.
+		setLanguage('en');
+		setMapNavHidden(false);
+	});
 	afterEach(() => {
 		setMapNavHidden(false);
 		setLanguage('en');

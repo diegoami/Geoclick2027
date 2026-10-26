@@ -8,7 +8,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { REPO_ROOT, ADMIN1_SHP, parseArgs } from './mapBuildUtils.js';
 import { pointInPolygon, type AnyGeometry } from './factGeometry.js';
-import { newestTownRows, type TownBinding } from './townSnapshot.js';
+import { newestTownRows, townCoordinate, type TownBinding } from './townSnapshot.js';
 
 interface Country {
 	id: string;
@@ -20,8 +20,37 @@ interface Country {
 	boundarySource?: string;
 	minimumYear?: number;
 	clipToBoundary?: boolean;
+	// A sourced representative centre when a detailed island is absent at map scale.
+	coordinateOverrides?: Record<string, [number, number]>;
+	excludedItems?: Record<string, string>;
 }
 const countries: Country[] = [
+	{
+		id: 'denmark',
+		name: 'Denmark',
+		iso: 'DNK',
+		language: 'en',
+		population: 1000,
+		minimumYear: 2011,
+		boundarySource: 'data/boundaries/denmark-regions-natural-earth.geojson',
+		clipToBoundary: true,
+		// Natural Earth Copenhagen centre, preserving the existing map's position.
+		coordinateOverrides: { Q1748: [12.5615399, 55.68051] }
+	},
+	{
+		id: 'serbia',
+		name: 'Serbia',
+		iso: 'SRB',
+		language: 'en',
+		population: 1000,
+		minimumYear: 2011,
+		boundarySource: 'data/boundaries/serbia-districts-gb.geojson',
+		clipToBoundary: true,
+		excludedItems: {
+			Q2074197: 'Overlapping City of Belgrade administrative area, not a separate town',
+			Q189419: 'Zemun is a Belgrade borough, not a separate city target'
+		}
+	},
 	{
 		id: 'hungary',
 		name: 'Hungary',
@@ -140,7 +169,14 @@ for (const country of selected) {
 		// Keep country-first traversal; the planner otherwise expands global paths.
 		'  hint:Query hint:optimizer "None" .',
 		'  ?country wdt:P298 "' + country.iso + '"; wdt:P36 ?capitalCity .',
-		'  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .',
+		'  ?item wdt:P17 ?country .',
+		// Admit candidate ITEMS using any recorded count, then retrieve ALL their
+		// observations below. A newer low count still defeats an older high one.
+		// This avoids expanding every Norwegian settlement's class hierarchy.
+		'  FILTER EXISTS { ?item p:P1082/ps:P1082 ?candidatePopulation . FILTER(?candidatePopulation >= ' +
+			country.population +
+			') }',
+		'  ?item wdt:P31 ?kind; p:P625 ?coordinateStatement .',
 		'  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .',
 		'  FILTER(?coordinateRank != wikibase:DeprecatedRank)',
 		'  ?coordinateValue wikibase:geoPrecision ?precision .',
@@ -184,6 +220,9 @@ for (const country of selected) {
 	});
 	if (!response.ok) throw new Error(country.name + ': Wikidata HTTP ' + response.status);
 	const raw = (await response.json()) as { results: { bindings: TownBinding[] } };
+	const rawDir = path.join(REPO_ROOT, 'data/source/v1-town-bindings');
+	mkdirSync(rawDir, { recursive: true });
+	writeFileSync(path.join(rawDir, country.id + '.json'), JSON.stringify(raw));
 	if (raw.results.bindings.length === 10000)
 		throw new Error('Query limit reached; refusing partial snapshot');
 	const capitalIds = new Set(
@@ -200,18 +239,17 @@ for (const country of selected) {
 	const boundaryNames = new Set(boundary?.features.map((f) => String(f.properties.name)) ?? []);
 	const excluded: { item: string | undefined; name: string; reason: string }[] = [];
 	const fetchedAt = new Date().toISOString();
+	const pointOverride = (row: TownBinding) =>
+		country.coordinateOverrides?.[row.item?.value?.split('/').pop() ?? ''];
 	const newest = newestTownRows(raw.results.bindings, fetchedAt, (row) => {
 		if (!boundary) return true;
-		const match = /^Point\((-?[\d.]+) (-?[\d.]+)\)$/.exec(row.coord?.value ?? '');
-		return (
-			!!match &&
-			!!canonicalRegionAtPoint(
-				[Number(match[1]), Number(match[2])],
-				boundary.features,
-				country.name,
-				boundaryNames,
-				Number(row.precision?.value ?? 0)
-			)
+		const { coordinates, precision } = townCoordinate(row, pointOverride(row));
+		return !!canonicalRegionAtPoint(
+			coordinates,
+			boundary.features,
+			country.name,
+			boundaryNames,
+			precision
 		);
 	});
 	// Do not let population-row ordering choose between conflicting regions.
@@ -269,16 +307,15 @@ for (const country of selected) {
 	const features = newest
 		.filter((row) => Number(row.population?.value) >= country.population)
 		.map((row) => {
-			const coordinate = /^Point\((-?[\d.]+) (-?[\d.]+)\)$/.exec(row.coord?.value ?? '');
 			const name = row.name?.value ?? row.en?.value ?? row.defaultName?.value;
-			if (!coordinate || !name) throw new Error('Missing coordinates/name for ' + row.item?.value);
-			const coordinates = [Number(coordinate[1]), Number(coordinate[2])];
-			if (
-				!coordinates.every(Number.isFinite) ||
-				Math.abs(coordinates[0]) > 180 ||
-				Math.abs(coordinates[1]) > 90
-			)
-				throw new Error('Invalid coordinates for ' + name);
+			if (!name) throw new Error('Missing name for ' + row.item?.value);
+			const exclusion = country.excludedItems?.[row.item?.value?.split('/').pop() ?? ''];
+			if (exclusion) {
+				excluded.push({ item: row.item?.value, name, reason: exclusion });
+				return undefined;
+			}
+			const override = pointOverride(row);
+			const { coordinates, precision } = townCoordinate(row, override);
 			let regionName = row.regionName?.value;
 			if (!regionName && country.id === 'hungary' && row.capital?.value === 'true')
 				regionName = name; // Budapest itself is the county-equivalent capital.
@@ -288,7 +325,7 @@ for (const country of selected) {
 					boundary.features,
 					country.name,
 					boundaryNames,
-					Number(row.precision?.value ?? 0)
+					precision
 				);
 			if (!regionName && countyRows.length) {
 				const matches = countyRows.filter((f) =>
@@ -325,7 +362,10 @@ for (const country of selected) {
 					NAME_DE: row.de?.value ?? name,
 					ADM0NAME: country.name,
 					ADM1NAME: regionName,
-					coordinatePrecision: Number(row.precision?.value ?? 0),
+					coordinatePrecision: precision,
+					...(override
+						? { coordinateSource: 'Natural Earth (public domain), representative city centre' }
+						: {}),
 					ADM0CAP: capitalIds.has(row.item?.value) ? 1 : 0,
 					POP_MAX: Number(row.population?.value),
 					POP1950: 0,
@@ -354,6 +394,13 @@ for (const country of selected) {
 						: 'Wikidata (CC0)',
 				fetchedAt,
 				query,
+				...(country.coordinateOverrides
+					? {
+							coordinateOverrides: country.coordinateOverrides,
+							coordinateOverrideSource:
+								'Natural Earth (public domain); same representative centres as the existing maps'
+						}
+					: {}),
 				...(excluded.length ? { excluded } : {}),
 				features
 			},

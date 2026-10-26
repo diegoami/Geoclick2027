@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { newestTownRows, type TownBinding } from '../../../data/scripts/townSnapshot';
+import {
+	newestTownRows,
+	townCoordinate,
+	type TownBinding
+} from '../../../data/scripts/townSnapshot';
 const row = (population: string, date?: string, name = 'Town'): TownBinding => ({
 	item: { value: 'Q1' },
 	population: { value: population },
@@ -54,4 +58,22 @@ it('chooses a supported city coordinate without preferring an older population o
 	expect(newestTownRows([outside, inside], '2026-10-26', supports)).toEqual([inside]);
 	const old = { ...inside, date: { value: '2011-01-01T00:00:00Z' } };
 	expect(newestTownRows([outside, old], '2026-10-26', supports)).toEqual([outside]);
+});
+
+it('does not apply the original accuracy to a replacement representative centre', () => {
+	const row = {
+		item: { value: 'Q1748' },
+		coord: { value: 'Point(12.568888888 55.676111111)' },
+		precision: { value: '0.000277778' }
+	};
+	expect(townCoordinate(row)).toEqual({
+		coordinates: [12.568888888, 55.676111111],
+		precision: 0.000277778
+	});
+	expect(townCoordinate(row, [12.5615399, 55.68051])).toEqual({
+		coordinates: [12.5615399, 55.68051],
+		precision: 0
+	});
+	expect(row.precision.value).toBe('0.000277778');
+	expect(() => townCoordinate(row, [0, 91])).toThrow('outside Earth bounds');
 });

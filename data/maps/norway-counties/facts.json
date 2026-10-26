@@ -1,36 +1,84 @@
 {
-	"troms-og-finnmark": {
+	"finnmark": {
 		"kind": "region",
 		"borders": [
-			"Nordland"
+			"Troms"
 		],
 		"coastal": true,
+		"largestCity": {
+			"name": "Alta",
+			"nameDe": "Alta",
+			"nameIt": "Alta",
+			"population": 12077
+		},
 		"position": "north-east",
 		"hooks": {
 			"en": [
-				"Two counties, Troms and Finnmark, joined in 2020 and separated again in 2024; Finnmark means \"the Sámi march\".",
-				"The North Cape, on the island of Magerøya, is often called Europe’s northernmost point (nearby Knivskjellodden reaches a little farther north).",
-				"In winter the northern lights are seen here on many clear nights."
+				"Its name originally referred to the Sámi people.",
+				"Alta’s prehistoric rock carvings became a UNESCO World Heritage Site in 1985.",
+				"The star-shaped Vardøhus fortress dates from the eighteenth century."
 			],
 			"it": [
-				"Due contee, Troms e Finnmark, unite nel 2020 e di nuovo separate nel 2024; Finnmark significa \"la marca dei Sami\".",
-				"Capo Nord, sull’isola di Magerøya, è spesso detto il punto più settentrionale d’Europa (il vicino Knivskjellodden arriva un po’ più a nord).",
-				"In inverno l’aurora boreale si vede qui in molte notti serene."
+				"Il nome si riferiva in origine al popolo sami.",
+				"Le incisioni rupestri preistoriche di Alta divennero patrimonio mondiale UNESCO nel 1985.",
+				"La fortezza stellata di Vardøhus risale al Settecento."
 			],
 			"de": [
-				"Zwei Provinzen, Troms und Finnmark, wurden 2020 vereint und 2024 wieder getrennt; Finnmark bedeutet „Mark der Samen“.",
-				"Das Nordkap auf der Insel Magerøya gilt oft als nördlichster Punkt Europas (das nahe Knivskjellodden reicht etwas weiter nach Norden).",
-				"Im Winter sind hier in vielen klaren Nächten Polarlichter zu sehen."
+				"Der Name bezog sich ursprünglich auf die Sámi.",
+				"Altas prähistorische Felsritzungen wurden 1985 UNESCO-Welterbe.",
+				"Die sternförmige Festung Vardøhus stammt aus dem achtzehnten Jahrhundert."
+			]
+		}
+	},
+	"troms": {
+		"kind": "region",
+		"borders": [
+			"Finnmark",
+			"Nordland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tromsø",
+			"nameDe": "Tromsø",
+			"nameIt": "Tromsø",
+			"population": 52436
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The county was formerly known as Tromsø amt.",
+				"Trondenes Church near Harstad preserves medieval stone architecture.",
+				"The Sámi cultural festival Riddu Riđđu began in 1991."
+			],
+			"it": [
+				"La contea era precedentemente chiamata Tromsø amt.",
+				"La chiesa di Trondenes, presso Harstad, conserva un’architettura medievale in pietra.",
+				"Il festival culturale sami Riddu Riđđu nacque nel 1991."
+			],
+			"de": [
+				"Die frühere Amtsbezeichnung lautete Tromsø amt.",
+				"Die Kirche von Trondenes bei Harstad bewahrt mittelalterliche Steinarchitektur.",
+				"Das samische Kulturfestival Riddu Riđđu begann 1991."
 			]
 		}
 	},
 	"nordland": {
 		"kind": "region",
 		"borders": [
-			"Troms og Finnmark",
+			"Troms",
 			"Trøndelag"
 		],
 		"coastal": true,
+		"largestCity": {
+			"name": "Bodø",
+			"nameDe": "Bodø",
+			"nameIt": "Bodø",
+			"population": 34073
+		},
+		"peak": {
+			"name": "Oksskolten",
+			"elevation": 1916
+		},
 		"position": "north",
 		"hooks": {
 			"en": [
@@ -58,6 +106,12 @@
 			"Nordland"
 		],
 		"coastal": true,
+		"largestCity": {
+			"name": "Trondheim",
+			"nameDe": "Trondheim",
+			"nameIt": "Trondheim",
+			"population": 147139
+		},
 		"position": "west",
 		"hooks": {
 			"en": [
@@ -85,6 +139,12 @@
 			"Vestland"
 		],
 		"coastal": true,
+		"largestCity": {
+			"name": "Ålesund",
+			"nameDe": "Ålesund",
+			"nameIt": "Ålesund",
+			"population": 47772
+		},
 		"position": "west",
 		"hooks": {
 			"en": [
@@ -107,12 +167,23 @@
 	"innlandet": {
 		"kind": "region",
 		"borders": [
+			"Akershus",
+			"Buskerud",
 			"Møre og Romsdal",
 			"Trøndelag",
-			"Vestland",
-			"Viken"
+			"Vestland"
 		],
 		"coastal": false,
+		"largestCity": {
+			"name": "Hamar",
+			"nameDe": "Gemeinde Hamar",
+			"nameIt": "comune di Hamar",
+			"population": 29479
+		},
+		"peak": {
+			"name": "Galdhpiggen",
+			"elevation": 2469
+		},
 		"position": "south-west",
 		"hooks": {
 			"en": [
@@ -135,13 +206,19 @@
 	"vestland": {
 		"kind": "region",
 		"borders": [
+			"Buskerud",
 			"Innlandet",
 			"Møre og Romsdal",
 			"Rogaland",
-			"Vestfold og Telemark",
-			"Viken"
+			"Telemark"
 		],
 		"coastal": true,
+		"largestCity": {
+			"name": "Bergen",
+			"nameDe": "Bergen",
+			"nameIt": "Bergen",
+			"population": 213585
+		},
 		"position": "south-west",
 		"hooks": {
 			"en": [
@@ -161,40 +238,83 @@
 			]
 		}
 	},
-	"viken": {
+	"buskerud": {
 		"kind": "region",
 		"borders": [
+			"Akershus",
 			"Innlandet",
 			"Oslo",
-			"Vestfold og Telemark",
+			"Telemark",
+			"Vestfold",
 			"Vestland"
 		],
-		"coastal": false,
+		"coastal": true,
+		"largestCity": {
+			"name": "Drammen",
+			"nameDe": "Drammen",
+			"nameIt": "Drammen",
+			"population": 90722
+		},
 		"position": "south-west",
 		"hooks": {
 			"en": [
-				"Viken means \"the bay\" or \"the inlet\", the shore of the Oslofjord; one theory ties it to the word Viking.",
-				"It was formed in 2020 from Akershus, Buskerud and Østfold, and split into them again in 2024.",
-				"It surrounds Oslo, which is a county of its own."
+				"Its name comes from a farm formerly called Biskopsrud, meaning bishop’s clearing.",
+				"Silver mining shaped Kongsberg from the seventeenth century.",
+				"Blaafarveværket preserves the history of cobalt production."
 			],
 			"it": [
-				"Viken significa \"la baia\" o \"l’insenatura\", la riva dell’Oslofjord; una teoria lo collega alla parola Vichingo.",
-				"Fu creata nel 2020 da Akershus, Buskerud e Østfold e divisa di nuovo in esse nel 2024.",
-				"Circonda Oslo, che è una contea a sé."
+				"Il nome deriva da una fattoria già chiamata Biskopsrud, cioè radura del vescovo.",
+				"L’estrazione dell’argento plasmò Kongsberg dal Seicento.",
+				"Blaafarveværket conserva la storia della produzione di cobalto."
 			],
 			"de": [
-				"Viken bedeutet „die Bucht“, das Ufer des Oslofjords; eine Theorie bringt es mit dem Wort Wikinger in Verbindung.",
-				"Es wurde 2020 aus Akershus, Buskerud und Østfold gebildet und 2024 wieder in sie geteilt.",
-				"Es umschließt Oslo, das eine eigene Provinz ist."
+				"Der Name stammt von einem früher Biskopsrud genannten Hof, der Rodung des Bischofs.",
+				"Silberbergbau prägte Kongsberg seit dem siebzehnten Jahrhundert.",
+				"Blaafarveværket bewahrt die Geschichte der Kobaltproduktion."
+			]
+		}
+	},
+	"akershus": {
+		"kind": "region",
+		"borders": [
+			"Buskerud",
+			"Innlandet",
+			"Oslo",
+			"Østfold"
+		],
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"It is named after Akershus fortress in neighbouring Oslo.",
+				"Norway’s constitution was drawn up at Eidsvoll in 1814.",
+				"Raknehaugen is a monumental Iron Age burial mound."
+			],
+			"it": [
+				"Prende il nome dalla fortezza di Akershus nella vicina Oslo.",
+				"La costituzione norvegese fu redatta a Eidsvoll nel 1814.",
+				"Raknehaugen è un monumentale tumulo funerario dell’età del ferro."
+			],
+			"de": [
+				"Die Provinz ist nach der Festung Akershus im benachbarten Oslo benannt.",
+				"Norwegens Verfassung wurde 1814 in Eidsvoll ausgearbeitet.",
+				"Raknehaugen ist ein monumentaler Grabhügel aus der Eisenzeit."
 			]
 		}
 	},
 	"oslo": {
 		"kind": "region",
 		"borders": [
-			"Viken"
+			"Akershus",
+			"Buskerud"
 		],
 		"coastal": true,
+		"largestCity": {
+			"name": "Oslo",
+			"nameDe": "Oslo",
+			"nameIt": "Oslo",
+			"population": 835000
+		},
 		"position": "south-west",
 		"hooks": {
 			"en": [
@@ -214,31 +334,101 @@
 			]
 		}
 	},
-	"vestfold-og-telemark": {
+	"telemark": {
 		"kind": "region",
 		"borders": [
 			"Agder",
+			"Buskerud",
 			"Rogaland",
-			"Vestland",
-			"Viken"
+			"Vestfold",
+			"Vestland"
 		],
-		"coastal": false,
+		"coastal": true,
+		"largestCity": {
+			"name": "Skien",
+			"nameDe": "Skien",
+			"nameIt": "Skien",
+			"population": 73330
+		},
 		"position": "south-west",
 		"hooks": {
 			"en": [
-				"Two counties, Vestfold and Telemark, joined in 2020 and separated again in 2024.",
-				"The telemark turn, a skiing technique with the heel free, is named for Telemark, where it was developed.",
-				"The Gokstad ship, a Viking ship from about the year 900, was found in a burial mound near Sandefjord in 1880."
+				"The county was called Bratsberg until 1919.",
+				"Rjukan and Notodden preserve UNESCO-listed industrial heritage.",
+				"Heddal’s great wooden stave church dates from the thirteenth century."
 			],
 			"it": [
-				"Due contee, Vestfold e Telemark, unite nel 2020 e separate di nuovo nel 2024.",
-				"Il telemark, una tecnica di sci a tallone libero, prende il nome dal Telemark, dove fu sviluppata.",
-				"La nave di Gokstad, una nave vichinga del 900 circa, fu trovata nel 1880 in un tumulo funerario vicino a Sandefjord."
+				"La contea si chiamava Bratsberg fino al 1919.",
+				"Rjukan e Notodden conservano un patrimonio industriale riconosciuto dall’UNESCO.",
+				"La grande stavkirke in legno di Heddal risale al Duecento."
 			],
 			"de": [
-				"Zwei Provinzen, Vestfold und Telemark, wurden 2020 vereint und 2024 wieder getrennt.",
-				"Der Telemark-Schwung, eine Skitechnik mit freier Ferse, ist nach Telemark benannt, wo er entwickelt wurde.",
-				"Das Gokstad-Schiff, ein Wikingerschiff aus der Zeit um 900, wurde 1880 in einem Grabhügel bei Sandefjord gefunden."
+				"Die Provinz hieß bis 1919 Bratsberg.",
+				"Rjukan und Notodden bewahren UNESCO-geschütztes Industrieerbe.",
+				"Heddals große hölzerne Stabkirche stammt aus dem dreizehnten Jahrhundert."
+			]
+		}
+	},
+	"stfold": {
+		"kind": "region",
+		"borders": [
+			"Akershus"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Moss",
+			"nameDe": "Moss",
+			"nameIt": "Moss",
+			"population": 36901
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name means eastern Fold, using an old name for the Oslofjord.",
+				"Fredriksten fortress overlooks Halden.",
+				"Bronze Age rock carvings survive around Fredrikstad and Sarpsborg."
+			],
+			"it": [
+				"Il nome significa Fold orientale, usando un antico nome dell’Oslofjord.",
+				"La fortezza di Fredriksten domina Halden.",
+				"Incisioni rupestri dell’età del bronzo sopravvivono presso Fredrikstad e Sarpsborg."
+			],
+			"de": [
+				"Der Name bedeutet östliches Fold, nach einer alten Bezeichnung des Oslofjords.",
+				"Die Festung Fredriksten überragt Halden.",
+				"Bei Fredrikstad und Sarpsborg sind bronzezeitliche Felsritzungen erhalten."
+			]
+		}
+	},
+	"vestfold": {
+		"kind": "region",
+		"borders": [
+			"Buskerud",
+			"Telemark"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tønsberg",
+			"nameDe": "Tønsberg",
+			"nameIt": "Tønsberg",
+			"population": 38914
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name means western Fold, using an old name for the Oslofjord.",
+				"Borre preserves a major Viking Age burial-ground complex.",
+				"The Oseberg ship was excavated near Tønsberg in 1904."
+			],
+			"it": [
+				"Il nome significa Fold occidentale, usando un antico nome dell’Oslofjord.",
+				"Borre conserva un importante complesso funerario dell’epoca vichinga.",
+				"La nave di Oseberg fu scavata presso Tønsberg nel 1904."
+			],
+			"de": [
+				"Der Name bedeutet westliches Fold, nach einer alten Bezeichnung des Oslofjords.",
+				"Borre bewahrt eine bedeutende Grabhügelanlage aus der Wikingerzeit.",
+				"Das Oseberg-Schiff wurde 1904 bei Tønsberg ausgegraben."
 			]
 		}
 	},
@@ -246,10 +436,16 @@
 		"kind": "region",
 		"borders": [
 			"Agder",
-			"Vestfold og Telemark",
+			"Telemark",
 			"Vestland"
 		],
 		"coastal": true,
+		"largestCity": {
+			"name": "Stavanger",
+			"nameDe": "Stavanger",
+			"nameIt": "Stavanger",
+			"population": 173132
+		},
 		"position": "south-west",
 		"hooks": {
 			"en": [
@@ -273,9 +469,15 @@
 		"kind": "region",
 		"borders": [
 			"Rogaland",
-			"Vestfold og Telemark"
+			"Telemark"
 		],
-		"coastal": false,
+		"coastal": true,
+		"largestCity": {
+			"name": "Kristiansand",
+			"nameDe": "Kristiansand",
+			"nameIt": "Kristiansand",
+			"population": 63814
+		},
 		"position": "south-west",
 		"hooks": {
 			"en": [

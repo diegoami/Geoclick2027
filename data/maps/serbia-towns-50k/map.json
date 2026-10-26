@@ -2,7 +2,9 @@
 	"id": "serbia-towns-50k",
 	"name": "Serbia — Towns",
 	"country": "Serbia",
-	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; © OpenStreetMap contributors, ODbL (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/serbia.geojson",
+	"regionsMap": "serbia-districts",
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{
@@ -12,16 +14,34 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				19.6800284,
-				46.0700161
+				19.6653273,
+				46.1002058
 			],
 			"bbox": [
-				19.6800284,
-				46.0700161,
-				19.6800284,
-				46.0700161
+				19.6653273,
+				46.1002058,
+				19.6653273,
+				46.1002058
 			],
-			"colorIndex": 1
+			"colorIndex": 2
+		},
+		{
+			"id": "kikinda",
+			"name": "Kikinda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.459166666,
+				45.824444444
+			],
+			"bbox": [
+				20.459166666,
+				45.824444444,
+				20.459166666,
+				45.824444444
+			],
+			"colorIndex": 3
 		},
 		{
 			"id": "zrenjanin",
@@ -30,14 +50,14 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				20.3994677,
-				45.3786371
+				20.386111111,
+				45.377777777
 			],
 			"bbox": [
-				20.3994677,
-				45.3786371,
-				20.3994677,
-				45.3786371
+				20.386111111,
+				45.377777777,
+				20.386111111,
+				45.377777777
 			],
 			"colorIndex": 0
 		},
@@ -48,14 +68,50 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				19.8499406,
-				45.2503762
+				19.831666666,
+				45.264444444
 			],
 			"bbox": [
-				19.8499406,
-				45.2503762,
-				19.8499406,
-				45.2503762
+				19.831666666,
+				45.264444444,
+				19.831666666,
+				45.264444444
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "vrsac",
+			"name": "Vršac",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.298611111,
+				45.120555555
+			],
+			"bbox": [
+				21.298611111,
+				45.120555555,
+				21.298611111,
+				45.120555555
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "pancevo",
+			"name": "Pančevo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.651944444,
+				44.873888888
+			],
+			"bbox": [
+				20.651944444,
+				44.873888888,
+				20.651944444,
+				44.873888888
 			],
 			"colorIndex": 2
 		},
@@ -66,16 +122,52 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				20.4660448,
-				44.8205913
+				20.456944444,
+				44.817777777
 			],
 			"bbox": [
-				20.4660448,
-				44.8205913,
-				20.4660448,
-				44.8205913
+				20.456944444,
+				44.817777777,
+				20.456944444,
+				44.817777777
 			],
 			"colorIndex": 3
+		},
+		{
+			"id": "valjevo",
+			"name": "Valjevo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.886627,
+				44.270753
+			],
+			"bbox": [
+				19.886627,
+				44.270753,
+				19.886627,
+				44.270753
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bor",
+			"name": "Bor",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.103611111,
+				44.130277777
+			],
+			"bbox": [
+				22.103611111,
+				44.130277777,
+				22.103611111,
+				44.130277777
+			],
+			"colorIndex": 1
 		},
 		{
 			"id": "kragujevac",
@@ -84,14 +176,32 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				20.9200044,
-				44.0199603
+				20.917222222,
+				44.010111111
 			],
 			"bbox": [
-				20.9200044,
-				44.0199603,
-				20.9200044,
-				44.0199603
+				20.917222222,
+				44.010111111,
+				20.917222222,
+				44.010111111
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "jagodina",
+			"name": "Jagodina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.256388888,
+				43.975
+			],
+			"bbox": [
+				21.256388888,
+				43.975,
+				21.256388888,
+				43.975
 			],
 			"colorIndex": 0
 		},
@@ -102,16 +212,88 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				20.330118,
-				43.8897357
+				20.349722222,
+				43.891388888
 			],
 			"bbox": [
-				20.330118,
-				43.8897357,
-				20.330118,
-				43.8897357
+				20.349722222,
+				43.891388888,
+				20.349722222,
+				43.891388888
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "uzice",
+			"name": "Užice",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.85,
+				43.85
+			],
+			"bbox": [
+				19.85,
+				43.85,
+				19.85,
+				43.85
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kraljevo",
+			"name": "Kraljevo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.686975,
+				43.72342
+			],
+			"bbox": [
+				20.686975,
+				43.72342,
+				20.686975,
+				43.72342
 			],
 			"colorIndex": 4
+		},
+		{
+			"id": "krusevac",
+			"name": "Kruševac",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.326666666,
+				43.583333333
+			],
+			"bbox": [
+				21.326666666,
+				43.583333333,
+				21.326666666,
+				43.583333333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "prijepolje",
+			"name": "Prijepolje",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.651388888,
+				43.543888888
+			],
+			"bbox": [
+				19.651388888,
+				43.543888888,
+				19.651388888,
+				43.543888888
+			],
+			"colorIndex": 0
 		},
 		{
 			"id": "nis",
@@ -120,25 +302,92 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				21.8999963,
-				43.3304159
+				21.896111111,
+				43.319166666
 			],
 			"bbox": [
-				21.8999963,
-				43.3304159,
-				21.8999963,
-				43.3304159
+				21.896111111,
+				43.319166666,
+				21.896111111,
+				43.319166666
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "novi-pazar",
+			"name": "Novi Pazar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.516666666,
+				43.15
+			],
+			"bbox": [
+				20.516666666,
+				43.15,
+				20.516666666,
+				43.15
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "leskovac",
+			"name": "Leskovac",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.94611,
+				42.99806
+			],
+			"bbox": [
+				21.94611,
+				42.99806,
+				21.94611,
+				42.99806
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vranje",
+			"name": "Vranje",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.897222222,
+				42.554166666
+			],
+			"bbox": [
+				21.897222222,
+				42.554166666,
+				21.897222222,
+				42.554166666
 			],
 			"colorIndex": 5
 		}
 	],
 	"tourOrder": [
 		"subotica",
+		"kikinda",
 		"zrenjanin",
 		"novi-sad",
+		"vrsac",
+		"pancevo",
 		"belgrade",
+		"valjevo",
+		"bor",
 		"kragujevac",
+		"jagodina",
 		"cacak",
-		"nis"
+		"uzice",
+		"kraljevo",
+		"krusevac",
+		"prijepolje",
+		"nis",
+		"novi-pazar",
+		"leskovac",
+		"vranje"
 	]
 }

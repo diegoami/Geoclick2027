@@ -2618,3 +2618,14 @@ map bar because it was opened carries a large red X that forgets it
 No X on the open map, and none while the "Show detailed maps" tick shows every
 detailed map (unticking is how those go).
 
+
+
+### Preserve existing town-map IDs when expanding their selection (2026-10-26)
+
+The Denmark, Norway and Serbia backlog maps keep their *-towns-50k IDs while
+moving to a curated twenty-town selection with a 10k eligibility threshold
+and retained existing targets. Renaming maps merely to match the old suffix
+would break links and isolate saved progress. The suffix is an internal legacy
+identifier; the displayed title is Towns, and MAPS.md documents the real recipe.
+New or split Norwegian counties receive their actual current identities; no
+knowledge is invented for them by transferring a retired county's streaks.

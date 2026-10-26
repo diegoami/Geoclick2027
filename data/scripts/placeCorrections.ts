@@ -45,6 +45,10 @@ const corrections: Record<string, Record<string, Correction>> = {
 				'https://unhabitat.org/sites/default/files/download-manager-files/City%20Prosperity%20Index%20Ethiopian%20City%20%E2%80%93%20Mekelle.pdf'
 		}
 	},
+	Norway: {
+		// Bærum is a municipality, not a separately named city.
+		Bærum: { exclude: true, source: 'https://snl.no/B%C3%A6rum' }
+	},
 	Taiwan: Object.fromEntries(
 		['Zhongli', 'Bade', 'Pingzhen', 'Yangmei'].map((name) => [
 			name,

@@ -5,7 +5,8 @@ installing or running it. Every screen is shown with a screenshot, and every
 button, label and message is explained: what it looks like, what it does, and
 what the player sees in return. Geoclick is made by Diego Amicabile.
 
-It describes **Geoclick v0.20.0** (15 October 2026).
+It describes the current development build, **Geoclick v0.20.0**, while
+version 1.0.0 is being prepared.
 
 The screenshots come from the web version, on a laptop-sized window and on a
 phone-sized screen, and are made by a script (`npm run manual-shots`) that is
@@ -685,6 +686,10 @@ closing the app also ends it.
 The whole interface is available in **English**, **German** and **Italian**.
 Switch with the **EN ⌄** menu, on the start screen or on any map screen; the
 change is immediate and remembered on the device.
+
+The built-in manual follows the selected language too. Its shared screenshots
+show the English interface; the German and Italian text uses the translated
+button labels. All three manuals are included in the installed apps.
 
 What changes and what doesn't:
 

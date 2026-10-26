@@ -2,7 +2,10 @@
 	"id": "denmark-regions",
 	"name": "Denmark — Regions",
 	"country": "Denmark",
-	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"attribution": "Natural Earth (public domain); Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/denmark-regions-natural-earth.geojson",
+	"placesSource": "data/places/denmark.geojson",
+	"boundaryFacts": true,
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{

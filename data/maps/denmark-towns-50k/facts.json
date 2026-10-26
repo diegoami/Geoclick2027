@@ -1,88 +1,458 @@
 {
 	"aalborg": {
 		"kind": "city",
-		"population": 122219,
+		"population": 121878,
 		"populationRank": 4,
 		"region": "Nordjylland",
 		"coastal": true,
 		"position": "north",
 		"hooks": {
 			"en": [
-				"Across its fjord, the burial ground of Lindholm Høje has some 700 Viking graves.",
-				"Its name is on the best-known Danish akvavit, distilled here since 1846."
+				"Eleventh-century coins recorded the name Alabu.",
+				"Lindholm Høje preserves Iron Age and Viking burial grounds.",
+				"Akvavit distilling became an important local industry in the nineteenth century."
 			],
 			"it": [
-				"Oltre il fiordo, la necropoli di Lindholm Høje conta circa 700 tombe vichinghe.",
-				"Il suo nome è sull’akvavit danese più noto, distillato qui dal 1846."
+				"Monete dell’XI secolo riportavano il nome Alabu.",
+				"Lindholm Høje conserva necropoli dell’età del ferro e dell’epoca vichinga.",
+				"La distillazione dell’akvavit divenne un’importante industria locale nell’Ottocento."
 			],
 			"de": [
-				"Auf der anderen Seite ihres Fjords hat das Gräberfeld Lindholm Høje rund 700 Wikingergräber.",
-				"Ihr Name steht auf dem bekanntesten dänischen Aquavit, der hier seit 1846 destilliert wird."
+				"Münzen des elften Jahrhunderts trugen den Namen Alabu.",
+				"Lindholm Høje bewahrt Gräberfelder aus Eisen- und Wikingerzeit.",
+				"Die Akvavitbrennerei wurde im neunzehnten Jahrhundert ein wichtiger örtlicher Wirtschaftszweig."
+			]
+		}
+	},
+	"randers": {
+		"kind": "city",
+		"population": 64674,
+		"populationRank": 7,
+		"region": "Midtjylland",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its older name Randaros combines a hillside and a river mouth.",
+				"Randers Rainforest recreates tropical habitats beneath glass domes.",
+				"St Martin’s Church preserves late-medieval brick architecture."
+			],
+			"it": [
+				"L’antico nome Randaros combina un pendio e la foce di un fiume.",
+				"Randers Regnskov ricrea ambienti tropicali sotto cupole di vetro.",
+				"La chiesa di San Martino conserva un’architettura tardomedievale in mattoni."
+			],
+			"de": [
+				"Der ältere Name Randaros verbindet einen Hang mit einer Flussmündung.",
+				"Randers Regnskov bildet tropische Lebensräume unter Glaskuppeln nach.",
+				"Die Martinskirche bewahrt spätmittelalterliche Backsteinarchitektur."
+			]
+		}
+	},
+	"viborg": {
+		"kind": "city",
+		"population": 41079,
+		"populationRank": 16,
+		"region": "Midtjylland",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its name combines words for a sacred place and a fortress.",
+				"Medieval Danish kings were proclaimed at its assembly.",
+				"Joakim Skovgaard decorated its cathedral with extensive frescoes."
+			],
+			"it": [
+				"Il nome combina parole che indicano un luogo sacro e una fortezza.",
+				"I re danesi medievali venivano proclamati nella sua assemblea.",
+				"Joakim Skovgaard decorò la cattedrale con ampi affreschi."
+			],
+			"de": [
+				"Der Name verbindet Wörter für einen heiligen Ort und eine Festung.",
+				"Mittelalterliche dänische Könige wurden auf seiner Versammlung ausgerufen.",
+				"Joakim Skovgaard schmückte den Dom mit umfangreichen Fresken."
+			]
+		}
+	},
+	"holstebro": {
+		"kind": "city",
+		"population": 37220,
+		"populationRank": 19,
+		"region": "Midtjylland",
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name ends in bro, the Danish word for bridge.",
+				"Giacometti’s Woman on a Cart became a local symbol.",
+				"Odin Teatret moved here from Oslo in 1966."
+			],
+			"it": [
+				"Il nome termina con bro, la parola danese per ponte.",
+				"La Donna sul carro di Giacometti divenne un simbolo locale.",
+				"L’Odin Teatret si trasferì qui da Oslo nel 1966."
+			],
+			"de": [
+				"Der Name endet auf bro, das dänische Wort für Brücke.",
+				"Giacomettis Frau auf dem Wagen wurde zu einem örtlichen Wahrzeichen.",
+				"Das Odin Teatret zog 1966 von Oslo hierher."
+			]
+		}
+	},
+	"silkeborg": {
+		"kind": "city",
+		"population": 50866,
+		"populationRank": 13,
+		"region": "Midtjylland",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name recalls the medieval Silkeborg castle.",
+				"Museum Silkeborg holds the preserved Iron Age body known as Tollund Man.",
+				"Paper manufacturing drove the town’s nineteenth-century growth."
+			],
+			"it": [
+				"Il nome ricorda il castello medievale di Silkeborg.",
+				"Il Museo di Silkeborg conserva il corpo dell’età del ferro noto come Uomo di Tollund.",
+				"La produzione della carta trainò la crescita della città nell’Ottocento."
+			],
+			"de": [
+				"Der Name erinnert an die mittelalterliche Burg Silkeborg.",
+				"Das Museum Silkeborg bewahrt die eisenzeitliche Moorleiche des Tollund-Mannes.",
+				"Die Papierherstellung trieb das Wachstum der Stadt im neunzehnten Jahrhundert an."
 			]
 		}
 	},
 	"aarhus": {
 		"kind": "city",
-		"population": 237551,
+		"population": 290598,
 		"populationRank": 2,
 		"region": "Midtjylland",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its older name Aros means river mouth.",
+				"Den Gamle By preserves historic Danish urban buildings in an open-air museum.",
+				"ARoS gained its circular rainbow panorama in 2011."
+			],
+			"it": [
+				"L’antico nome Aros significa foce del fiume.",
+				"Den Gamle By conserva edifici urbani danesi storici in un museo all’aperto.",
+				"ARoS si arricchì del suo panorama circolare arcobaleno nel 2011."
+			],
+			"de": [
+				"Der ältere Name Aros bedeutet Flussmündung.",
+				"Den Gamle By bewahrt historische dänische Stadtgebäude in einem Freilichtmuseum.",
+				"ARoS erhielt 2011 sein kreisförmiges Regenbogenpanorama."
+			]
+		}
+	},
+	"herning": {
+		"kind": "city",
+		"population": 51312,
+		"populationRank": 12,
+		"region": "Midtjylland",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its older name Hørningh referred to a projecting hill.",
+				"Textile manufacturing drove its industrial growth.",
+				"Ingvar Cronhammar’s Elia is a monumental steel sculpture."
+			],
+			"it": [
+				"L’antico nome Hørningh indicava una collina sporgente.",
+				"La produzione tessile ne trainò la crescita industriale.",
+				"Elia di Ingvar Cronhammar è una monumentale scultura in acciaio."
+			],
+			"de": [
+				"Der ältere Name Hørningh bezog sich auf einen vorspringenden Hügel.",
+				"Die Textilherstellung trieb das industrielle Wachstum an.",
+				"Ingvar Cronhammars Elia ist eine monumentale Stahlskulptur."
+			]
+		}
+	},
+	"helsing-r": {
+		"kind": "city",
+		"population": 47364,
+		"populationRank": 14,
+		"region": "Hovedstaden",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its traditional English name is Elsinore.",
+				"Kronborg Castle became the famous setting associated with Hamlet.",
+				"Ships paid the Sound Dues here until 1857."
+			],
+			"it": [
+				"Il nome inglese tradizionale è Elsinore.",
+				"Il castello di Kronborg divenne la celebre ambientazione associata ad Amleto.",
+				"Le navi pagavano qui il pedaggio dello stretto fino al 1857."
+			],
+			"de": [
+				"Der traditionelle englische Name lautet Elsinore.",
+				"Schloss Kronborg wurde zum berühmten, mit Hamlet verbundenen Schauplatz.",
+				"Schiffe zahlten hier bis 1857 den Sundzoll."
+			]
+		}
+	},
+	"hiller-d": {
+		"kind": "city",
+		"population": 36043,
+		"populationRank": 20,
+		"region": "Hovedstaden",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name’s rød element means a woodland clearing.",
+				"Frederiksborg Castle was a major Danish royal residence.",
+				"The castle’s Museum of National History opened in 1878."
+			],
+			"it": [
+				"L’elemento rød del nome significa una radura nel bosco.",
+				"Il castello di Frederiksborg fu un’importante residenza reale danese.",
+				"Il Museo di storia nazionale del castello aprì nel 1878."
+			],
+			"de": [
+				"Der Namensbestandteil rød bedeutet eine Waldrodung.",
+				"Schloss Frederiksborg war eine bedeutende dänische Königsresidenz.",
+				"Das Nationalhistorische Museum im Schloss eröffnete 1878."
+			]
+		}
+	},
+	"horsens": {
+		"kind": "city",
+		"population": 64418,
+		"populationRank": 8,
+		"region": "Midtjylland",
+		"coastal": true,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name combines old words for horses and a headland.",
+				"The former state prison became the cultural venue FÆNGSLET.",
+				"The explorer Vitus Bering was born here in 1681."
+			],
+			"it": [
+				"Il nome combina antiche parole che indicano cavalli e un promontorio.",
+				"L’ex carcere statale divenne lo spazio culturale FÆNGSLET.",
+				"L’esploratore Vitus Bering nacque qui nel 1681."
+			],
+			"de": [
+				"Der Name verbindet alte Wörter für Pferde und eine Landzunge.",
+				"Das ehemalige Staatsgefängnis wurde zum Kulturort FÆNGSLET.",
+				"Der Entdecker Vitus Bering wurde hier 1681 geboren."
+			]
+		}
 	},
 	"vejle": {
 		"kind": "city",
-		"population": 51177,
+		"population": 62011,
+		"populationRank": 10,
+		"region": "Syddanmark",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name means a ford or shallow crossing.",
+				"The nearby tenth-century Jelling stones are often called Denmark’s birth certificate.",
+				"Bølgen’s wave-shaped apartment blocks became a waterfront landmark."
+			],
+			"it": [
+				"Il nome significa un guado o un attraversamento poco profondo.",
+				"Le vicine pietre di Jelling del X secolo sono spesso chiamate il certificato di nascita della Danimarca.",
+				"I condomini ondulati di Bølgen divennero un simbolo del lungomare."
+			],
+			"de": [
+				"Der Name bedeutet Furt oder seichte Querung.",
+				"Die nahen Jellingsteine aus dem zehnten Jahrhundert werden oft als Dänemarks Geburtsurkunde bezeichnet.",
+				"Bølgens wellenförmige Wohnhäuser wurden zum Wahrzeichen am Wasser."
+			]
+		}
+	},
+	"copenhagen": {
+		"kind": "city",
+		"population": 667099,
+		"populationRank": 1,
+		"region": "Hovedstaden",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its Danish name København means merchants’ harbour.",
+				"The Little Mermaid statue was unveiled in 1913.",
+				"Tivoli Gardens opened in 1843."
+			],
+			"it": [
+				"Il nome danese København significa porto dei mercanti.",
+				"La statua della Sirenetta fu inaugurata nel 1913.",
+				"I Giardini di Tivoli aprirono nel 1843."
+			],
+			"de": [
+				"Der dänische Name København bedeutet Hafen der Kaufleute.",
+				"Die Statue der Kleinen Meerjungfrau wurde 1913 eingeweiht.",
+				"Der Tivoli eröffnete 1843."
+			]
+		}
+	},
+	"frederiksberg": {
+		"kind": "city",
+		"population": 105840,
+		"populationRank": 5,
+		"region": "Hovedstaden",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its name honours Frederick IV, who had its hilltop palace built.",
+				"Copenhagen Zoo opened here in 1859.",
+				"Former underground reservoirs became the Cisternerne art venue."
+			],
+			"it": [
+				"Il nome onora Federico IV, che fece costruire il palazzo sulla collina.",
+				"Lo zoo di Copenaghen aprì qui nel 1859.",
+				"Gli antichi serbatoi sotterranei divennero lo spazio artistico Cisternerne."
+			],
+			"de": [
+				"Der Name ehrt Friedrich IV., der das Schloss auf dem Hügel erbauen ließ.",
+				"Der Kopenhagener Zoo eröffnete hier 1859.",
+				"Ehemalige unterirdische Wasserbehälter wurden zum Kunstort Cisternerne."
+			]
+		}
+	},
+	"taastrup": {
+		"kind": "city",
+		"population": 37231,
+		"populationRank": 18,
+		"region": "Hovedstaden",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The trup in its name comes from torp, an outlying settlement.",
+				"The railway reached Taastrup in 1847.",
+				"Its historic water tower was built in 1908."
+			],
+			"it": [
+				"L’elemento trup del nome deriva da torp, un insediamento periferico.",
+				"La ferrovia raggiunse Taastrup nel 1847.",
+				"La storica torre dell’acqua fu costruita nel 1908."
+			],
+			"de": [
+				"Der Namensbestandteil trup stammt von torp, einer Außensiedlung.",
+				"Die Eisenbahn erreichte Taastrup 1847.",
+				"Der historische Wasserturm wurde 1908 gebaut."
+			]
+		}
+	},
+	"roskilde": {
+		"kind": "city",
+		"population": 53354,
+		"populationRank": 11,
+		"region": "Sjælland",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its name is traditionally read as Roar’s spring.",
+				"Many Danish monarchs are buried in its cathedral.",
+				"The Viking Ship Museum preserves the five Skuldelev ships."
+			],
+			"it": [
+				"Il nome è tradizionalmente interpretato come sorgente di Roar.",
+				"Molti sovrani danesi sono sepolti nella cattedrale.",
+				"Il Museo delle navi vichinghe conserva le cinque navi di Skuldelev."
+			],
+			"de": [
+				"Der Name wird traditionell als Roars Quelle gedeutet.",
+				"Viele dänische Herrscher sind im Dom begraben.",
+				"Das Wikingerschiffsmuseum bewahrt die fünf Skuldelev-Schiffe."
+			]
+		}
+	},
+	"kolding": {
+		"kind": "city",
+		"population": 63645,
+		"populationRank": 9,
+		"region": "Syddanmark",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name appears in thirteenth-century royal records.",
+				"Koldinghus was restored after a destructive fire in 1808.",
+				"Trapholt is known for art and Danish furniture design."
+			],
+			"it": [
+				"Il nome compare in documenti reali del Duecento.",
+				"Koldinghus fu restaurato dopo un distruttivo incendio del 1808.",
+				"Trapholt è noto per l’arte e il design danese del mobile."
+			],
+			"de": [
+				"Der Name erscheint in königlichen Urkunden des dreizehnten Jahrhunderts.",
+				"Koldinghus wurde nach einem verheerenden Brand von 1808 restauriert.",
+				"Trapholt ist für Kunst und dänisches Möbeldesign bekannt."
+			]
+		}
+	},
+	"esbjerg": {
+		"kind": "city",
+		"population": 71554,
 		"populationRank": 6,
 		"region": "Syddanmark",
 		"coastal": true,
 		"position": "south-west",
 		"hooks": {
 			"en": [
-				"The Jelling stones, carved runestones of the 10th century often called Denmark’s birth certificate, stand close by."
+				"The new port town adopted the name of the older Esbjerg farm.",
+				"Its export port was established under a law of 1868.",
+				"Offshore oil and wind industries later reshaped its harbour."
 			],
 			"it": [
-				"Qui vicino si trovano le pietre di Jelling, pietre runiche del X secolo spesso chiamate il certificato di nascita della Danimarca."
+				"La nuova città portuale adottò il nome dell’antica fattoria di Esbjerg.",
+				"Il porto commerciale fu istituito con una legge del 1868.",
+				"Le industrie offshore del petrolio e dell’eolico trasformarono in seguito il porto."
 			],
 			"de": [
-				"Die Jellingsteine, im 10. Jahrhundert gemeißelte Runensteine, die oft Dänemarks Geburtsurkunde genannt werden, stehen in der Nähe."
+				"Die neue Hafenstadt übernahm den Namen des älteren Hofes Esbjerg.",
+				"Der Exporthafen wurde durch ein Gesetz von 1868 gegründet.",
+				"Später veränderten Offshore-Öl- und Windindustrie den Hafen."
 			]
 		}
 	},
-	"copenhagen": {
+	"k-ge": {
 		"kind": "city",
-		"population": 1085000,
-		"populationRank": 1,
-		"population1950": 1216000,
-		"region": "Hovedstaden",
-		"capitalOf": "country",
+		"population": 38588,
+		"populationRank": 17,
+		"region": "Sjælland",
 		"coastal": true,
-		"position": "south-east"
-	},
-	"esbjerg": {
-		"kind": "city",
-		"population": 72205,
-		"populationRank": 5,
-		"region": "Syddanmark",
-		"coastal": true,
-		"position": "south-west",
+		"position": "south-east",
 		"hooks": {
 			"en": [
-				"Founded as a port in 1868, after Denmark had lost its southern harbours to Prussia.",
-				"The base of Denmark’s North Sea oil and offshore wind industries."
+				"Its name probably refers to the mound of Køge Ås.",
+				"Its earliest surviving town privileges date from 1288.",
+				"Kirkestræde preserves a half-timbered house dated 1527."
 			],
 			"it": [
-				"Fondata come porto nel 1868, dopo che la Danimarca aveva perso i porti del sud a favore della Prussia.",
-				"La base delle industrie danesi del petrolio del Mare del Nord e dell’eolico in mare."
+				"Il nome si riferisce probabilmente al rilievo di Køge Ås.",
+				"I più antichi privilegi urbani conservati risalgono al 1288.",
+				"Kirkestræde conserva una casa a graticcio datata 1527."
 			],
 			"de": [
-				"Als Hafen 1868 gegründet, nachdem Dänemark seine südlichen Häfen an Preußen verloren hatte.",
-				"Die Basis von Dänemarks Nordsee-Öl- und Offshore-Windindustrie."
+				"Der Name bezieht sich vermutlich auf den Hügelzug Køge Ås.",
+				"Die ältesten erhaltenen Stadtrechte stammen von 1288.",
+				"In der Kirkestræde steht ein Fachwerkhaus mit der Jahreszahl 1527."
 			]
 		}
 	},
 	"odense": {
 		"kind": "city",
-		"population": 158222,
+		"population": 185480,
 		"populationRank": 3,
 		"region": "Syddanmark",
 		"coastal": true,
@@ -102,6 +472,31 @@
 				"„Odins Heiligtum“.",
 				"Hans Christian Andersen wurde hier 1805 geboren.",
 				"Der Komponist Carl Nielsen wuchs in einem nahen Dorf auf."
+			]
+		}
+	},
+	"n-stved": {
+		"kind": "city",
+		"population": 44996,
+		"populationRank": 15,
+		"region": "Sjælland",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its name combines words for a headland and a clearing.",
+				"Herlufsholm School was founded in a former monastery in 1565.",
+				"Nearby Gavnø Castle preserves a historic art collection."
+			],
+			"it": [
+				"Il nome combina parole che indicano un promontorio e una radura.",
+				"La scuola di Herlufsholm fu fondata in un ex monastero nel 1565.",
+				"Il vicino castello di Gavnø conserva una storica collezione d’arte."
+			],
+			"de": [
+				"Der Name verbindet Wörter für eine Landzunge und eine Rodung.",
+				"Die Schule Herlufsholm wurde 1565 in einem früheren Kloster gegründet.",
+				"Das nahe Schloss Gavnø bewahrt eine historische Kunstsammlung."
 			]
 		}
 	}

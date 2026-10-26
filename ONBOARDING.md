@@ -762,3 +762,18 @@ this one, and is read on demand rather than up front.
 - If something in this doc turns out to be wrong, fix it — that's the
   point of it being "running" documentation rather than a one-time
   writeup.
+
+### Manual languages and the 1.0 fact-completion work
+
+Edit docs/USER_MANUAL.md (English), docs/USER_MANUAL.de.md or
+docs/USER_MANUAL.it.md, then run `node app/scripts/build-manual.mjs`.
+The page uses the selected app language. The translations share the existing
+English screenshots and disclose that choice; add no hand-copied HTML to the
+route. Localized content, anchor and language-race tests cover this path.
+
+For fact work, run `node --import tsx data/scripts/audit-authored-facts.ts
+--json=rendered/catalogue-facts-audit.json` to identify actual playable gaps.
+Use --maps=id,id for a working batch and --strict to verify it. The full
+strict audit is required before 1.0; the 735-target expansion audit alone does
+not cover the older detailed maps. Edit data/facts inputs and refresh hooks,
+never generated map facts by hand. Proposal #244 records the owner's scope.

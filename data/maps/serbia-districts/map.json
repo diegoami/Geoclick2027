@@ -2,8 +2,10 @@
 	"id": "serbia-districts",
 	"name": "Serbia — Districts",
 	"country": "Serbia",
-	"attribution": "© OpenStreetMap contributors, ODbL (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
-	"boundarySource": "data/source/geoboundaries/SRB-ADM1.geojson",
+	"attribution": "© OpenStreetMap contributors, ODbL (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/serbia-districts-gb.geojson",
+	"placesSource": "data/places/serbia.geojson",
+	"boundaryFacts": true,
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{

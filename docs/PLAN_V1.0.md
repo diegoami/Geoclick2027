@@ -9,12 +9,12 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | Batch | Status | Deliverable |
 | --- | --- | --- |
 | Distribution | Complete; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) merged | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
-| Boundary and target audit | In progress; first six countries audited | Licensed, reproducible sources and suitable map types for 22 countries |
-| Maps | Full 22-country expansion active; 44 maps generated for all 22 countries (217 total); facts and verification in progress | Administrative maps and towns/urban maps; generated through the existing pipeline |
-| Facts | First six countries complete; facts for the remaining sixteen still in progress | Facts for added targets in English, German, and Italian; existing target gaps audited |
-| Content completion | Pending | Deferred thin towns maps and German/Italian manual checked against agreed scope |
+| Boundary and target audit | All 22 new countries complete; Norway updated to 15 current counties | Licensed, reproducible sources and suitable map types for 22 countries |
+| Maps | All 44 expansion maps and six legacy-country packages complete (217 total) | Administrative maps and towns/urban maps; generated through the existing pipeline |
+| Facts | Current whole-catalogue checkpoint: 3922/6196 complete; 1956 missing and 318 short sets block 1.0 ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)) | Facts for added targets in English, German, and Italian; existing target gaps audited |
+| Content completion | DE/IT manuals and all three town rebuilds complete; 107/107 playable country slots pass | Deferred thin towns maps and German/Italian manual checked against agreed scope |
 | itch.io | Draft covers/copy/previews exported; final packages/screenshots pending; owner handles upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
-| Release preparation | Pending | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
+| Release preparation | Waits for complete whole-catalogue facts; version remains 0.20.0 | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
 | Milestone and publication | Pending | Owner-approved merge, milestone review, installers tried, exact tag and publication |
 | Retirement | Pending | Delete old release repository only after migration verification and merged replacement links |
 
@@ -525,3 +525,59 @@ canonical town-region associations. Deployments remain stopped; no live test
 was performed. Merge requires the owner's explicit approval. Version bump,
 installer/device checks, release milestone review, final tagged screenshots
 and publication remain release tasks; itch.io is uploaded by the owner.
+
+### Remaining content scope expanded by the owner (2026-10-26)
+
+The owner explicitly selected completion of **all older playable facts before
+1.0**, recorded in [proposal #244](https://github.com/diegoami/Geoclick2027/issues/244).
+The reproducible baseline audit is:
+
+    node --import tsx data/scripts/audit-authored-facts.ts --json=rendered/catalogue-facts-audit.json
+
+At bfb7896 the catalogue has 6153 distinct authored file/ID/kind slots: 1960
+have no authored facts and 332 have fewer than three sentences in at least one
+language. Shared occurrences are counted once; city and region kinds remain
+separate. Missing content is concentrated in Germany, Poland and the Netherlands.
+The existing 735/735 expansion result does not imply whole-catalogue completion.
+The release now requires the all-catalogue command with --strict to pass.
+
+The implementing worktree for this continuation is
+C:/Users/diego/projects/Geoclick2027-work/release-v1-content-completion,
+on release/v1-content-completion, stacked on PR #243 while it awaits explicit
+owner merge approval. The main checkout and that reviewed worktree are untouched.
+Both localized manuals cover all 22 topics and are bundled alongside English;
+19 focused build/content/language-race tests pass. Images are shared English
+screenshots, disclosed in each translation. The manual follows the app language.
+
+Denmark and Serbia need dated town snapshots because Natural Earth has only
+12 and 7 towns respectively. Norway has enough existing populated-place records
+for a twenty-town selection; its optional Wikidata query repeatedly timed out,
+so the recipe uses the existing source. Norway's eleven old county shapes are
+being replaced by the fifteen current counties, using pinned Kartverket API
+geometry clipped to Natural Earth's terrestrial outline. The Danish capital's
+Wikidata point lies on a small coastal feature omitted by the map-scale outline;
+its existing Natural Earth representative centre is retained explicitly, with
+provenance, rather than broadening the geographic containment tolerance.
+All three legacy town-map IDs remain stable to retain progress for unchanged
+places. The country expansion, version bump and publication remain separate
+steps; do not tag 1.0 until the enlarged fact scope is complete.
+
+The three backlog country passes are complete: Denmark 27/27, Norway 35/35,
+Serbia 45/45 playable file/ID/kind slots, including continent-map aliases.
+Their six principal maps pass 105/105; the extra two aliases are Danish.
+The rebuild added 46 previously absent slots and retired three old county
+slots, so the catalogue-wide denominator is now 6196. Current coverage:
+3922 complete, 1956 without authored facts, 318 short sets. All older gaps
+remain mandatory before 1.0; no partial batch is a release-readiness claim.
+All six rebuilt packages have valid names and retained target IDs. Fifteen
+Norwegian polygons pass GDAL/GEOS validity, nonempty-area and non-overlap checks.
+A real CLI fixture confirms a missing source-name field fails before map.json
+is published. Local gates pass: 2846 app tests, zero failures, type checks,
+lint and production web build. Deployment tests are not run (deploys stopped).
+
+Actual local browser checks also pass on the isolated http://localhost:5188
+preview: all three manual languages, Unicode section-link navigation, no page
+errors, and rendered Norwegian county geometry at 1280 × 800. All fifteen
+county polygons were visually inspected as well as machine-validated. The
+reviewed expansion preview at 5187 remains available separately. This content
+branch is still a work in progress under #244, not ready for 1.0 publication.

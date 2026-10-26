@@ -1252,15 +1252,29 @@
 	{
 		"id": "denmark-towns-50k",
 		"country": "Denmark",
-		"targetCount": 6,
+		"targetCount": 20,
 		"targetType": "city",
 		"targetIds": [
 			"aalborg",
+			"randers",
+			"viborg",
+			"holstebro",
+			"silkeborg",
 			"aarhus",
+			"herning",
+			"helsing-r",
+			"hiller-d",
+			"horsens",
 			"vejle",
 			"copenhagen",
+			"frederiksberg",
+			"taastrup",
+			"roskilde",
+			"kolding",
 			"esbjerg",
-			"odense"
+			"k-ge",
+			"odense",
+			"n-stved"
 		]
 	},
 	{
@@ -6175,18 +6189,22 @@
 	{
 		"id": "norway-counties",
 		"country": "Norway",
-		"targetCount": 11,
+		"targetCount": 15,
 		"targetType": "county",
 		"targetIds": [
-			"troms-og-finnmark",
+			"finnmark",
+			"troms",
 			"nordland",
 			"tr-ndelag",
 			"m-re-og-romsdal",
 			"innlandet",
 			"vestland",
-			"viken",
+			"buskerud",
+			"akershus",
 			"oslo",
-			"vestfold-og-telemark",
+			"telemark",
+			"stfold",
+			"vestfold",
 			"rogaland",
 			"agder"
 		]
@@ -6194,16 +6212,28 @@
 	{
 		"id": "norway-towns-50k",
 		"country": "Norway",
-		"targetCount": 8,
+		"targetCount": 20,
 		"targetType": "city",
 		"targetIds": [
 			"troms",
+			"narvik",
+			"bod",
+			"mo-i-rana",
 			"trondheim",
+			"alesund",
+			"lillehammer",
+			"hamar",
+			"gj-vik",
 			"bergen",
 			"oslo",
 			"drammen",
+			"moss",
+			"haugesund",
+			"t-nsberg",
 			"skien",
 			"stavanger",
+			"sandnes",
+			"arendal",
 			"kristiansand"
 		]
 	},
@@ -7367,16 +7397,29 @@
 	{
 		"id": "serbia-towns-50k",
 		"country": "Serbia",
-		"targetCount": 7,
+		"targetCount": 20,
 		"targetType": "city",
 		"targetIds": [
 			"subotica",
+			"kikinda",
 			"zrenjanin",
 			"novi-sad",
+			"vrsac",
+			"pancevo",
 			"belgrade",
+			"valjevo",
+			"bor",
 			"kragujevac",
+			"jagodina",
 			"cacak",
-			"nis"
+			"uzice",
+			"kraljevo",
+			"krusevac",
+			"prijepolje",
+			"nis",
+			"novi-pazar",
+			"leskovac",
+			"vranje"
 		]
 	},
 	{

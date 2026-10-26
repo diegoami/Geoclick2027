@@ -2,7 +2,9 @@
 	"id": "denmark-towns-50k",
 	"name": "Denmark — Towns",
 	"country": "Denmark",
-	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; Natural Earth (public domain); Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/denmark.geojson",
+	"regionsMap": "denmark-regions",
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{
@@ -12,16 +14,88 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				9.9165934,
-				57.0337138
+				9.916666666,
+				57.05
 			],
 			"bbox": [
-				9.9165934,
-				57.0337138,
-				9.9165934,
-				57.0337138
+				9.916666666,
+				57.05,
+				9.916666666,
+				57.05
 			],
-			"colorIndex": 5
+			"colorIndex": 0
+		},
+		{
+			"id": "randers",
+			"name": "Randers",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.039166666,
+				56.456944444
+			],
+			"bbox": [
+				10.039166666,
+				56.456944444,
+				10.039166666,
+				56.456944444
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "viborg",
+			"name": "Viborg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.4,
+				56.45
+			],
+			"bbox": [
+				9.4,
+				56.45,
+				9.4,
+				56.45
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "holstebro",
+			"name": "Holstebro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.6175,
+				56.358055555
+			],
+			"bbox": [
+				8.6175,
+				56.358055555,
+				8.6175,
+				56.358055555
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "silkeborg",
+			"name": "Silkeborg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.55,
+				56.166666666
+			],
+			"bbox": [
+				9.55,
+				56.166666666,
+				9.55,
+				56.166666666
+			],
+			"colorIndex": 2
 		},
 		{
 			"id": "aarhus",
@@ -30,16 +104,88 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				10.210684,
-				56.157204
+				10.209722222,
+				56.156388888
 			],
 			"bbox": [
-				10.210684,
-				56.157204,
-				10.210684,
-				56.157204
+				10.209722222,
+				56.156388888,
+				10.209722222,
+				56.156388888
 			],
-			"colorIndex": 3
+			"colorIndex": 5
+		},
+		{
+			"id": "herning",
+			"name": "Herning",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.976666666,
+				56.136111111
+			],
+			"bbox": [
+				8.976666666,
+				56.136111111,
+				8.976666666,
+				56.136111111
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "helsing-r",
+			"name": "Helsingør",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.6106,
+				56.036
+			],
+			"bbox": [
+				12.6106,
+				56.036,
+				12.6106,
+				56.036
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "hiller-d",
+			"name": "Hillerød",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.3,
+				55.933333333
+			],
+			"bbox": [
+				12.3,
+				55.933333333,
+				12.3,
+				55.933333333
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "horsens",
+			"name": "Horsens",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.851944444,
+				55.861944444
+			],
+			"bbox": [
+				9.851944444,
+				55.861944444,
+				9.851944444,
+				55.861944444
+			],
+			"colorIndex": 1
 		},
 		{
 			"id": "vejle",
@@ -48,16 +194,16 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				9.5349965,
-				55.709001
+				9.533333333,
+				55.708333333
 			],
 			"bbox": [
-				9.5349965,
-				55.709001,
-				9.5349965,
-				55.709001
+				9.533333333,
+				55.708333333,
+				9.533333333,
+				55.708333333
 			],
-			"colorIndex": 0
+			"colorIndex": 4
 		},
 		{
 			"id": "copenhagen",
@@ -75,7 +221,79 @@
 				12.5615399,
 				55.68051
 			],
-			"colorIndex": 4
+			"colorIndex": 3
+		},
+		{
+			"id": "frederiksberg",
+			"name": "Frederiksberg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.5327,
+				55.6779
+			],
+			"bbox": [
+				12.5327,
+				55.6779,
+				12.5327,
+				55.6779
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "taastrup",
+			"name": "Taastrup",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.3,
+				55.65
+			],
+			"bbox": [
+				12.3,
+				55.65,
+				12.3,
+				55.65
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "roskilde",
+			"name": "Roskilde",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.080833333,
+				55.641666666
+			],
+			"bbox": [
+				12.080833333,
+				55.641666666,
+				12.080833333,
+				55.641666666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kolding",
+			"name": "Kolding",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.472222222,
+				55.490833333
+			],
+			"bbox": [
+				9.472222222,
+				55.490833333,
+				9.472222222,
+				55.490833333
+			],
+			"colorIndex": 0
 		},
 		{
 			"id": "esbjerg",
@@ -84,16 +302,34 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				8.4500162,
-				55.4670394
+				8.451388888,
+				55.470833333
 			],
 			"bbox": [
-				8.4500162,
-				55.4670394,
-				8.4500162,
-				55.4670394
+				8.451388888,
+				55.470833333,
+				8.451388888,
+				55.470833333
 			],
-			"colorIndex": 2
+			"colorIndex": 1
+		},
+		{
+			"id": "k-ge",
+			"name": "Køge",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.183333333,
+				55.45
+			],
+			"bbox": [
+				12.183333333,
+				55.45,
+				12.183333333,
+				55.45
+			],
+			"colorIndex": 3
 		},
 		{
 			"id": "odense",
@@ -102,24 +338,56 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				10.3833349,
-				55.4003768
+				10.383333333,
+				55.4
 			],
 			"bbox": [
-				10.3833349,
-				55.4003768,
-				10.3833349,
-				55.4003768
+				10.383333333,
+				55.4,
+				10.383333333,
+				55.4
 			],
-			"colorIndex": 1
+			"colorIndex": 5
+		},
+		{
+			"id": "n-stved",
+			"name": "Næstved",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.76666667,
+				55.23333333
+			],
+			"bbox": [
+				11.76666667,
+				55.23333333,
+				11.76666667,
+				55.23333333
+			],
+			"colorIndex": 2
 		}
 	],
 	"tourOrder": [
 		"aalborg",
+		"randers",
+		"viborg",
+		"holstebro",
+		"silkeborg",
 		"aarhus",
+		"herning",
+		"helsing-r",
+		"hiller-d",
+		"horsens",
 		"vejle",
 		"copenhagen",
+		"frederiksberg",
+		"taastrup",
+		"roskilde",
+		"kolding",
 		"esbjerg",
-		"odense"
+		"k-ge",
+		"odense",
+		"n-stved"
 	]
 }

@@ -1,0 +1,812 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "geoBoundaries 9469f09; OpenStreetMap",
+		"url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/SRB/ADM1/geoBoundaries-SRB-ADM1_simplified.geojson",
+		"licence": "ODbL 1.0",
+		"licenceUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+		"sha256": "886d17adb5d9491d9b464b02a2b3f02ff1a7f2ef71a702840019ab3739f4f562",
+		"attribution": "© OpenStreetMap contributors, ODbL (via geoBoundaries)"
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T18:37:30.237Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"SRB\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country .\n  FILTER EXISTS { ?item p:P1082/ps:P1082 ?candidatePopulation . FILTER(?candidatePopulation >= 1000) }\n  ?item wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2011-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"excluded": [
+		{
+			"item": "http://www.wikidata.org/entity/Q112657",
+			"name": "Peja",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q1574188",
+			"name": "Elez Han",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q178168",
+			"name": "Mitrovica",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q189419",
+			"name": "Zemun",
+			"reason": "Zemun is a Belgrade borough, not a separate city target"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q2074197",
+			"name": "City of Belgrade",
+			"reason": "Overlapping City of Belgrade administrative area, not a separate town"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q248378",
+			"name": "Kaçanik",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q392505",
+			"name": "Štrpce",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q786124",
+			"name": "Kosovo Polje",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q994730",
+			"name": "Lipjan",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q994737",
+			"name": "Shtime",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		}
+	],
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.635,
+					45.808888888
+				]
+			},
+			"properties": {
+				"NAME": "Bačka Topola",
+				"NAME_EN": "Bačka Topola",
+				"NAME_IT": "Bačka Topola",
+				"NAME_DE": "Bačka Topola",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "North Bačka",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11930,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q597513"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.588333333,
+					45.356388888
+				]
+			},
+			"properties": {
+				"NAME": "Bački Petrovac",
+				"NAME_EN": "Bački Petrovac",
+				"NAME_IT": "Bački Petrovac",
+				"NAME_DE": "Bački Petrovac",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "South Bačka",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7452,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q248251"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.559722222,
+					43.973055555
+				]
+			},
+			"properties": {
+				"NAME": "Bajina Bašta",
+				"NAME_EN": "Bajina Bašta",
+				"NAME_IT": "Bajina Bašta",
+				"NAME_DE": "Bajina Bašta",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Zlatibor",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26022,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q804149"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.456944444,
+					44.817777777
+				]
+			},
+			"properties": {
+				"NAME": "Belgrade",
+				"NAME_EN": "Belgrade",
+				"NAME_IT": "Belgrado",
+				"NAME_DE": "Belgrad",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Belgrade",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 1197714,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3711"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.103611111,
+					44.130277777
+				]
+			},
+			"properties": {
+				"NAME": "Bor",
+				"NAME_EN": "Bor",
+				"NAME_IT": "Bor",
+				"NAME_DE": "Bor",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Bor",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 34159,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q462461"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.349722222,
+					43.891388888
+				]
+			},
+			"properties": {
+				"NAME": "Čačak",
+				"NAME_EN": "Čačak",
+				"NAME_IT": "Čačak",
+				"NAME_DE": "Čačak",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Moravica",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 71883,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q208038"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.6,
+					45.071111111
+				]
+			},
+			"properties": {
+				"NAME": "Debeljača",
+				"NAME_EN": "Debeljača",
+				"NAME_IT": "Debeljača",
+				"NAME_DE": "Debeljača",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "South Banat",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3727,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q543032"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.151666666,
+					44.466388888
+				]
+			},
+			"properties": {
+				"NAME": "Donji Milanovac",
+				"NAME_EN": "Donji Milanovac",
+				"NAME_IT": "Donji Milanovac",
+				"NAME_DE": "Donji Milanovac",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Bor",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2410,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1002286"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.079166666,
+					45.049166666
+				]
+			},
+			"properties": {
+				"NAME": "Inđija",
+				"NAME_EN": "Inđija",
+				"NAME_IT": "Inđija",
+				"NAME_DE": "Inđija",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Syrmia",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24450,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q309341"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.256388888,
+					43.975
+				]
+			},
+			"properties": {
+				"NAME": "Jagodina",
+				"NAME_EN": "Jagodina",
+				"NAME_IT": "Jagodina",
+				"NAME_DE": "Jagodina",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Pomoravlje",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 34892,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q390358"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.05,
+					46.066666666
+				]
+			},
+			"properties": {
+				"NAME": "Kanjiža",
+				"NAME_EN": "Kanjiža",
+				"NAME_IT": "Kanjiža",
+				"NAME_DE": "Kanjiža",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "North Banat",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 9871,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q856309"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.459166666,
+					45.824444444
+				]
+			},
+			"properties": {
+				"NAME": "Kikinda",
+				"NAME_EN": "Kikinda",
+				"NAME_IT": "Kikinda",
+				"NAME_DE": "Kikinda",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "North Banat",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 38065,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q309355"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.917222222,
+					44.010111111
+				]
+			},
+			"properties": {
+				"NAME": "Kragujevac",
+				"NAME_EN": "Kragujevac",
+				"NAME_IT": "Kragujevac",
+				"NAME_DE": "Kragujevac",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Šumadija",
+				"coordinatePrecision": 0.000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 150623,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167394"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.686975,
+					43.72342
+				]
+			},
+			"properties": {
+				"NAME": "Kraljevo",
+				"NAME_EN": "Kraljevo",
+				"NAME_IT": "Kraljevo",
+				"NAME_DE": "Kraljevo",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Raška",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 66688,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q206317"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.326666666,
+					43.583333333
+				]
+			},
+			"properties": {
+				"NAME": "Kruševac",
+				"NAME_EN": "Kruševac",
+				"NAME_IT": "Kruševac",
+				"NAME_DE": "Kruševac",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Rasina",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 58745,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q201442"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.1,
+					44.183333333
+				]
+			},
+			"properties": {
+				"NAME": "Lapovo",
+				"NAME_EN": "Lapovo",
+				"NAME_IT": "Lapovo",
+				"NAME_DE": "Lapovo",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Šumadija",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 7143,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q2269545"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.94611,
+					42.99806
+				]
+			},
+			"properties": {
+				"NAME": "Leskovac",
+				"NAME_EN": "Leskovac",
+				"NAME_IT": "Leskovac",
+				"NAME_DE": "Leskovac",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Jablanica",
+				"coordinatePrecision": 0.12282523760862,
+				"ADM0CAP": 0,
+				"POP_MAX": 60288,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q192606"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.225833333,
+					44.533333333
+				]
+			},
+			"properties": {
+				"NAME": "Loznica",
+				"NAME_EN": "Loznica",
+				"NAME_IT": "Loznica",
+				"NAME_DE": "Loznica",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Mačva",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19515,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q648489"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.896111111,
+					43.319166666
+				]
+			},
+			"properties": {
+				"NAME": "Niš",
+				"NAME_EN": "Niš",
+				"NAME_IT": "Niš",
+				"NAME_DE": "Niš",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Nišava",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 183164,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q129259"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.216666666,
+					44.949972222
+				]
+			},
+			"properties": {
+				"NAME": "Nova Pazova",
+				"NAME_EN": "Nova Pazova",
+				"NAME_IT": "Nova Pazova",
+				"NAME_DE": "Nova Pazova",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Syrmia",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17105,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q917500"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.516666666,
+					43.15
+				]
+			},
+			"properties": {
+				"NAME": "Novi Pazar",
+				"NAME_EN": "Novi Pazar",
+				"NAME_IT": "Novi Pazar",
+				"NAME_DE": "Novi Pazar",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Raška",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 66527,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q202453"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.831666666,
+					45.264444444
+				]
+			},
+			"properties": {
+				"NAME": "Novi Sad",
+				"NAME_EN": "Novi Sad",
+				"NAME_IT": "Novi Sad",
+				"NAME_DE": "Novi Sad",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "South Bačka",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 260438,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q55630"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.651944444,
+					44.873888888
+				]
+			},
+			"properties": {
+				"NAME": "Pančevo",
+				"NAME_EN": "Pančevo",
+				"NAME_IT": "Pančevo",
+				"NAME_DE": "Pančevo",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "South Banat",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 73401,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q205432"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.651388888,
+					43.543888888
+				]
+			},
+			"properties": {
+				"NAME": "Prijepolje",
+				"NAME_EN": "Prijepolje",
+				"NAME_IT": "Prijepolje",
+				"NAME_DE": "Prijepolje",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Zlatibor",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 37059,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q797036"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20,
+					43.266666666
+				]
+			},
+			"properties": {
+				"NAME": "Sjenica",
+				"NAME_EN": "Sjenica",
+				"NAME_IT": "Sjenica",
+				"NAME_DE": "Sjenica",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Zlatibor",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 14060,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q994217"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.6653273,
+					46.1002058
+				]
+			},
+			"properties": {
+				"NAME": "Subotica",
+				"NAME_EN": "Subotica",
+				"NAME_IT": "Subotica",
+				"NAME_DE": "Subotica",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "North Bačka",
+				"coordinatePrecision": 0.01,
+				"ADM0CAP": 0,
+				"POP_MAX": 105681,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q170287"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.85,
+					43.85
+				]
+			},
+			"properties": {
+				"NAME": "Užice",
+				"NAME_EN": "Užice",
+				"NAME_IT": "Užice",
+				"NAME_DE": "Užice",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Zlatibor",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 59747,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q59473"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.886627,
+					44.270753
+				]
+			},
+			"properties": {
+				"NAME": "Valjevo",
+				"NAME_EN": "Valjevo",
+				"NAME_IT": "Valjevo",
+				"NAME_DE": "Valjevo",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Kolubara",
+				"coordinatePrecision": 2.7777777777778e-8,
+				"ADM0CAP": 0,
+				"POP_MAX": 90312,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q208015"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.897222222,
+					42.554166666
+				]
+			},
+			"properties": {
+				"NAME": "Vranje",
+				"NAME_EN": "Vranje",
+				"NAME_IT": "Vranje",
+				"NAME_DE": "Vranje",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Pčinja",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 55214,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q211645"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.298611111,
+					45.120555555
+				]
+			},
+			"properties": {
+				"NAME": "Vršac",
+				"NAME_EN": "Vršac",
+				"NAME_IT": "Vršac",
+				"NAME_DE": "Vršac",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "South Banat",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 31946,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q209329"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.386111111,
+					45.377777777
+				]
+			},
+			"properties": {
+				"NAME": "Zrenjanin",
+				"NAME_EN": "Zrenjanin",
+				"NAME_IT": "Zrenjanin",
+				"NAME_DE": "Zrenjanin",
+				"ADM0NAME": "Serbia",
+				"ADM1NAME": "Central Banat",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 67129,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q201125"
+			}
+		}
+	]
+}

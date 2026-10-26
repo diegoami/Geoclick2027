@@ -1178,17 +1178,15 @@ npx tsx data/scripts/build-points-map.ts --country=Venezuela --min-population=10
 # Natural Earth lists too few towns over 100 000 in these (4-7), so 50 000:
 npx tsx data/scripts/build-points-map.ts --country=Kenya --min-population=50000 --exclude="Kendu Bay,Sotik" --out=data/maps/kenya-towns-50k --name="Kenya — Towns"
 npx tsx data/scripts/build-points-map.ts --country="New Zealand" --min-population=50000 --exclude="North Shore,Waitakere,Manukau" --out=data/maps/new-zealand-towns-50k --name="New Zealand — Towns"
-npx tsx data/scripts/build-points-map.ts --country=Norway --min-population=50000 --exclude="Bærum" --out=data/maps/norway-towns-50k --name="Norway — Towns"
-npx tsx data/scripts/build-points-map.ts --country=Denmark --min-population=50000 --out=data/maps/denmark-towns-50k --name="Denmark — Towns"
-npx tsx data/scripts/build-points-map.ts --country=Serbia --min-population=50000 --out=data/maps/serbia-towns-50k --name="Serbia — Towns"
+# Norway/Denmark/Serbia: use the v1.0 backlog recipe below (stable existing IDs).
 ```
 
-Targets: kenya-counties 47, kazakhstan-regions 16, norway-counties 11,
+Targets: kenya-counties 47, kazakhstan-regions 16, norway-counties 15,
 serbia-districts 25, philippines-regions 17, philippines-provinces 87,
 new-zealand-regions 16, venezuela-states 24, denmark-regions 5; towns 31
 (Philippines), 20 (Kazakhstan), 31 (Venezuela), 16 (Kenya), 15 (New Zealand),
-8 (Norway), 6 (Denmark), 7 (Serbia). Not done: German/Italian facts for these
-(v0.18), and towns from Wikidata where Natural Earth is thin.
+20 (Norway), 20 (Denmark), 20 (Serbia), after the v1.0 backlog rebuild.
+All playable Danish, Norwegian and Serbian targets now have complete EN/IT/DE facts.
 
 ### Malaysia and Bangladesh (built 2026-10-04, v0.18, #190, PR #206)
 
@@ -1850,3 +1848,45 @@ map attribution. JSON place snapshots retain coordinatePrecision throughout
 fact generation; regional largest-city selection uses the same bounded resolver
 as town associations. expectedLargest checks guard Cape Coast, Kalemie, Musoma,
 Kigoma and Mekele. Taiwan excludes four Taoyuan boroughs by the owner's decision.
+
+### v1.0 older towns and current Norwegian counties (#236, #244)
+
+Run in the same Linux toolchain as the country expansion:
+
+    node --import tsx data/scripts/fetch-backlog-boundaries.ts
+    node --import tsx data/scripts/fetch-v1-towns.ts --country=denmark
+    node --import tsx data/scripts/fetch-v1-towns.ts --country=serbia
+    node --import tsx data/scripts/build-backlog-towns.ts
+
+The existing denmark-towns-50k, norway-towns-50k and serbia-towns-50k IDs are
+retained to preserve progress and links. Their old 50k suffix is a legacy ID,
+not the new selection rule: select twenty leading eligible towns above 10k,
+with a twenty-place adaptive floor and explicit retention of existing targets.
+The resulting maps each have twenty towns. Denmark/Serbia use dated Wikidata
+snapshots; Norway has enough Natural Earth places and excludes Bærum, which is
+a municipality. The source filter also excludes overlapping City of Belgrade
+and Zemun borough. Exclusion reasons travel with the Serbian snapshot.
+
+Norway's 15 counties use the official Kartverket API geometry effective from
+2024, snapshot 2026-10-26, CC BY 4.0. The importer pins a canonical feature
+digest, clips away territorial waters with Natural Earth's terrestrial outline,
+and simplifies shared topology. The result is a learning-map reconstruction,
+not a cadastral survey. All fifteen polygons are valid, nonempty and nonoverlapping.
+Denmark reuses Natural Earth's five regions with the Sjælland typo normalized;
+Serbia reuses exactly the existing geoBoundaries 9469f09 ODbL 25-district payload,
+with its SHA256 pinned. External sources explicitly use --source-name-field=name;
+the builder now rejects a missing/blank name field before publishing metadata.
+
+Copenhagen uses the same Natural Earth representative centre as the old map.
+Its Wikidata point lies on a small coastal feature absent at this map scale;
+the provenance is recorded without broadening geographic-association tolerance.
+Retired Norwegian county texts remain under _historicalCounties in norway.json.
+
+Whole-catalogue authored coverage, respecting aliases and city/region kinds:
+
+    node --import tsx data/scripts/audit-authored-facts.ts --json=rendered/catalogue-facts-audit.json
+    node --import tsx data/scripts/audit-authored-facts.ts --strict
+
+The full strict audit is a 1.0 requirement under proposal #244. It is not yet
+passed: after these rebuilds, 3922/6196 distinct slots meet the three-language
+three-sentence floor; 1956 have no authored facts and 318 have short sets.

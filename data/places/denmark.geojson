@@ -1,0 +1,1796 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "Natural Earth",
+		"licence": "Public domain",
+		"url": "https://www.naturalearthdata.com",
+		"attribution": "Natural Earth (public domain)"
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T18:31:55.641Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"DNK\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country .\n  FILTER EXISTS { ?item p:P1082/ps:P1082 ?candidatePopulation . FILTER(?candidatePopulation >= 1000) }\n  ?item wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2011-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"coordinateOverrides": {
+		"Q1748": [
+			12.5615399,
+			55.68051
+		]
+	},
+	"coordinateOverrideSource": "Natural Earth (public domain); same representative centres as the existing maps",
+	"excluded": [
+		{
+			"item": "http://www.wikidata.org/entity/Q643410",
+			"name": "Nexø",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q21179",
+			"name": "Sønderborg",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q21181",
+			"name": "Fredericia",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q28031",
+			"name": "Svendborg",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		}
+	],
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.4195,
+					55.0447
+				]
+			},
+			"properties": {
+				"NAME": "Aabenraa",
+				"NAME_EN": "Aabenraa",
+				"NAME_IT": "Aabenraa",
+				"NAME_DE": "Aabenraa",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 15967,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q154897"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.730555555,
+					57.1625
+				]
+			},
+			"properties": {
+				"NAME": "Aabybro",
+				"NAME_EN": "Aabybro",
+				"NAME_IT": "Aabybro",
+				"NAME_DE": "Aabybro",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6318,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3171757"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.92,
+					55.0697
+				]
+			},
+			"properties": {
+				"NAME": "Aakirkeby",
+				"NAME_EN": "Aakirkeby",
+				"NAME_IT": "Aakirkeby",
+				"NAME_DE": "Aakirkeby",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2100,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q259969"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.916666666,
+					57.05
+				]
+			},
+			"properties": {
+				"NAME": "Aalborg",
+				"NAME_EN": "Aalborg",
+				"NAME_IT": "Aalborg",
+				"NAME_DE": "Aalborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 121878,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q25410"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.209722222,
+					56.156388888
+				]
+			},
+			"properties": {
+				"NAME": "Aarhus",
+				"NAME_EN": "Aarhus",
+				"NAME_IT": "Aarhus",
+				"NAME_DE": "Aarhus",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 290598,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q25319"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.512777777,
+					56.803055555
+				]
+			},
+			"properties": {
+				"NAME": "Aars",
+				"NAME_EN": "Aars",
+				"NAME_IT": "Aars",
+				"NAME_DE": "Aars",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 8246,
+				"POP1950": 0,
+				"populationDate": "2017-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q303066"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.415,
+					57.5933
+				]
+			},
+			"properties": {
+				"NAME": "Ålbæk",
+				"NAME_EN": "Ålbæk",
+				"NAME_IT": "Ålbæk",
+				"NAME_DE": "Aalbæk",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1466,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q300865"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.7994,
+					55.2769
+				]
+			},
+			"properties": {
+				"NAME": "Allinge-Sandvig",
+				"NAME_EN": "Allinge-Sandvig",
+				"NAME_IT": "Allinge-Sandvig",
+				"NAME_DE": "Allinge-Sandvig",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1446,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2296596"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.87216,
+					54.95201
+				]
+			},
+			"properties": {
+				"NAME": "Augustenborg",
+				"NAME_EN": "Augustenborg",
+				"NAME_IT": "Augustenborg",
+				"NAME_DE": "Augustenborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3288,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q645631"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.1188,
+					55.7243
+				]
+			},
+			"properties": {
+				"NAME": "Billund",
+				"NAME_EN": "Billund",
+				"NAME_IT": "Billund",
+				"NAME_DE": "Billund",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 6194,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1701099"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.483056,
+					55.356667
+				]
+			},
+			"properties": {
+				"NAME": "Christiansfeld",
+				"NAME_EN": "Christiansfeld",
+				"NAME_IT": "Christiansfeld",
+				"NAME_DE": "Christiansfeld",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2855,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3197288"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.5615399,
+					55.68051
+				]
+			},
+			"properties": {
+				"NAME": "Copenhagen",
+				"NAME_EN": "Copenhagen",
+				"NAME_IT": "Copenaghen",
+				"NAME_DE": "Kopenhagen",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0,
+				"coordinateSource": "Natural Earth (public domain), representative city centre",
+				"ADM0CAP": 1,
+				"POP_MAX": 667099,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1748"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.736111111,
+					54.911111111
+				]
+			},
+			"properties": {
+				"NAME": "Dybbøl",
+				"NAME_EN": "Dybbøl",
+				"NAME_IT": "Dybbøl",
+				"NAME_DE": "Düppel",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2448,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2567585"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.451388888,
+					55.470833333
+				]
+			},
+			"properties": {
+				"NAME": "Esbjerg",
+				"NAME_EN": "Esbjerg",
+				"NAME_IT": "Esbjerg",
+				"NAME_DE": "Esbjerg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 71554,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q26234"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.242222222,
+					55.095
+				]
+			},
+			"properties": {
+				"NAME": "Faaborg",
+				"NAME_EN": "Faaborg",
+				"NAME_IT": "Faaborg",
+				"NAME_DE": "Faaborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7178,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3547421"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.5327,
+					55.6779
+				]
+			},
+			"properties": {
+				"NAME": "Frederiksberg",
+				"NAME_EN": "Frederiksberg",
+				"NAME_IT": "Frederiksberg",
+				"NAME_DE": "Frederiksberg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 105840,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q30096"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.536111111,
+					57.433888888
+				]
+			},
+			"properties": {
+				"NAME": "Frederikshavn",
+				"NAME_EN": "Frederikshavn",
+				"NAME_IT": "Frederikshavn",
+				"NAME_DE": "Frederikshavn",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 23501,
+				"POP1950": 0,
+				"populationDate": "2017-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27452"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.0199,
+					55.96989444
+				]
+			},
+			"properties": {
+				"NAME": "Frederiksværk",
+				"NAME_EN": "Frederiksværk",
+				"NAME_IT": "Frederiksværk",
+				"NAME_DE": "Frederiksværk",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.00000277777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12815,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1796191"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.875833333,
+					56.413333333
+				]
+			},
+			"properties": {
+				"NAME": "Grenaa",
+				"NAME_EN": "Grenaa",
+				"NAME_IT": "Grenaa",
+				"NAME_DE": "Grenaa",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14765,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3619316"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.5,
+					55.25
+				]
+			},
+			"properties": {
+				"NAME": "Haderslev",
+				"NAME_EN": "Haderslev",
+				"NAME_IT": "Haderslev",
+				"NAME_DE": "Haderslev",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 22182,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q29868"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.1155,
+					56.7185
+				]
+			},
+			"properties": {
+				"NAME": "Hadsund",
+				"NAME_EN": "Hadsund",
+				"NAME_IT": "Hadsund",
+				"NAME_DE": "Hadsund",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 5051,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q663011"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.866666666,
+					56.25
+				]
+			},
+			"properties": {
+				"NAME": "Hammel",
+				"NAME_EN": "Hammel",
+				"NAME_IT": "Hammel",
+				"NAME_DE": "Hammel",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7019,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2604983"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.6197,
+					57.1197
+				]
+			},
+			"properties": {
+				"NAME": "Hanstholm",
+				"NAME_EN": "Hanstholm",
+				"NAME_IT": "Hanstholm",
+				"NAME_DE": "Hanstholm",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2154,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1026874"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.70167,
+					55.7725
+				]
+			},
+			"properties": {
+				"NAME": "Hedensted",
+				"NAME_EN": "Hedensted",
+				"NAME_IT": "Hedensted",
+				"NAME_DE": "Hedensted",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 11591,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3500912"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.6106,
+					56.036
+				]
+			},
+			"properties": {
+				"NAME": "Helsingør",
+				"NAME_EN": "Helsingør",
+				"NAME_IT": "Helsingør",
+				"NAME_DE": "Helsingör",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.000277778,
+				"ADM0CAP": 0,
+				"POP_MAX": 47364,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q26881"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.976666666,
+					56.136111111
+				]
+			},
+			"properties": {
+				"NAME": "Herning",
+				"NAME_EN": "Herning",
+				"NAME_IT": "Herning",
+				"NAME_DE": "Herning",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 51312,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27393"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.3,
+					55.933333333
+				]
+			},
+			"properties": {
+				"NAME": "Hillerød",
+				"NAME_EN": "Hillerød",
+				"NAME_IT": "Hillerød",
+				"NAME_DE": "Hillerød",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 36043,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27425"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.986666666,
+					57.46
+				]
+			},
+			"properties": {
+				"NAME": "Hjørring",
+				"NAME_EN": "Hjørring",
+				"NAME_IT": "Hjørring",
+				"NAME_DE": "Hjørring",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 25917,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q21185"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.696111,
+					54.962222
+				]
+			},
+			"properties": {
+				"NAME": "Højer",
+				"NAME_EN": "Højer",
+				"NAME_IT": "Højer",
+				"NAME_DE": "Hoyer",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1181,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q12317764"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.6175,
+					56.358055555
+				]
+			},
+			"properties": {
+				"NAME": "Holstebro",
+				"NAME_EN": "Holstebro",
+				"NAME_IT": "Holstebro",
+				"NAME_DE": "Holstebro",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 37220,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27678"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.851944444,
+					55.861944444
+				]
+			},
+			"properties": {
+				"NAME": "Horsens",
+				"NAME_EN": "Horsens",
+				"NAME_IT": "Horsens",
+				"NAME_DE": "Horsens",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 64418,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q190235"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.126388888,
+					55.998611111
+				]
+			},
+			"properties": {
+				"NAME": "Hvide Sande",
+				"NAME_EN": "Hvide Sande",
+				"NAME_IT": "Hvide Sande",
+				"NAME_DE": "Hvide Sande",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3059,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q734408"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.1547,
+					56.1356
+				]
+			},
+			"properties": {
+				"NAME": "Ikast",
+				"NAME_EN": "Ikast",
+				"NAME_IT": "Ikast",
+				"NAME_DE": "Ikast",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 15979,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1021277"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.4194,
+					55.7558
+				]
+			},
+			"properties": {
+				"NAME": "Jelling",
+				"NAME_EN": "Jelling",
+				"NAME_IT": "Jelling",
+				"NAME_DE": "Jelling",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3370,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q835708"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.659,
+					55.449
+				]
+			},
+			"properties": {
+				"NAME": "Kerteminde",
+				"NAME_EN": "Kerteminde",
+				"NAME_IT": "Kerteminde",
+				"NAME_DE": "Kerteminde",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 5872,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q29969"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.183333333,
+					55.45
+				]
+			},
+			"properties": {
+				"NAME": "Køge",
+				"NAME_EN": "Køge",
+				"NAME_IT": "Køge",
+				"NAME_DE": "Køge",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Sjælland",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 38588,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q21184"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.472222222,
+					55.490833333
+				]
+			},
+			"properties": {
+				"NAME": "Kolding",
+				"NAME_EN": "Kolding",
+				"NAME_IT": "Kolding",
+				"NAME_DE": "Kolding",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 63645,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27119"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.4022,
+					54.8486
+				]
+			},
+			"properties": {
+				"NAME": "Kruså",
+				"NAME_EN": "Kruså",
+				"NAME_IT": "Kruså",
+				"NAME_DE": "Kruså",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1613,
+				"POP1950": 0,
+				"populationDate": "2017-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q570436"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.3033,
+					56.5477
+				]
+			},
+			"properties": {
+				"NAME": "Lemvig",
+				"NAME_EN": "Lemvig",
+				"NAME_IT": "Lemvig",
+				"NAME_DE": "Lemvig",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 6827,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q502632"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.356,
+					55.8708
+				]
+			},
+			"properties": {
+				"NAME": "Lillerød",
+				"NAME_EN": "Lillerød",
+				"NAME_IT": "Lillerød",
+				"NAME_DE": "Lillerød",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 16906,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q656234"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11.76666667,
+					55.23333333
+				]
+			},
+			"properties": {
+				"NAME": "Næstved",
+				"NAME_EN": "Næstved",
+				"NAME_IT": "Næstved",
+				"NAME_DE": "Næstved",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Sjælland",
+				"coordinatePrecision": 1e-8,
+				"ADM0CAP": 0,
+				"POP_MAX": 44996,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q21178"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11.15,
+					54.833333333
+				]
+			},
+			"properties": {
+				"NAME": "Nakskov",
+				"NAME_EN": "Nakskov",
+				"NAME_IT": "Nakskov",
+				"NAME_DE": "Nakskov",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Sjælland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12495,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q24231"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.50485,
+					55.93405
+				]
+			},
+			"properties": {
+				"NAME": "Nivå",
+				"NAME_EN": "Nivå",
+				"NAME_IT": "Nivå",
+				"NAME_DE": "Nivå",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 8048,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2926034"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.791666666,
+					55.309722222
+				]
+			},
+			"properties": {
+				"NAME": "Nyborg",
+				"NAME_EN": "Nyborg",
+				"NAME_IT": "Nyborg",
+				"NAME_DE": "Nyborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17415,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3530435"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.8622,
+					56.7981
+				]
+			},
+			"properties": {
+				"NAME": "Nykøbing Mors",
+				"NAME_EN": "Nykøbing Mors",
+				"NAME_IT": "Nykøbing Mors",
+				"NAME_DE": "Nykøbing Mors",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 9031,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1019481"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.149722222,
+					55.9725
+				]
+			},
+			"properties": {
+				"NAME": "Odder",
+				"NAME_EN": "Odder",
+				"NAME_IT": "Odder",
+				"NAME_DE": "Odder",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11568,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q925736"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.383333333,
+					55.4
+				]
+			},
+			"properties": {
+				"NAME": "Odense",
+				"NAME_EN": "Odense",
+				"NAME_IT": "Odense",
+				"NAME_DE": "Odense",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 185480,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q25331"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.2792,
+					55.6258
+				]
+			},
+			"properties": {
+				"NAME": "Oksbøl",
+				"NAME_EN": "Oksbøl",
+				"NAME_IT": "Oksbøl",
+				"NAME_DE": "Oksbøl",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2825,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q202965"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.670277777,
+					55.257222222
+				]
+			},
+			"properties": {
+				"NAME": "Ørbæk",
+				"NAME_EN": "Ørbæk",
+				"NAME_IT": "Ørbæk",
+				"NAME_DE": "Ørbæk",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1729,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q8079219"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.4,
+					55.516666666
+				]
+			},
+			"properties": {
+				"NAME": "Otterup",
+				"NAME_EN": "Otterup",
+				"NAME_IT": "Otterup",
+				"NAME_DE": "Otterup",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5083,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2633021"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.359,
+					54.824
+				]
+			},
+			"properties": {
+				"NAME": "Padborg",
+				"NAME_EN": "Padborg",
+				"NAME_IT": "Padborg",
+				"NAME_DE": "Padborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 4393,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q707345"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.039166666,
+					56.456944444
+				]
+			},
+			"properties": {
+				"NAME": "Randers",
+				"NAME_EN": "Randers",
+				"NAME_IT": "Randers",
+				"NAME_DE": "Randers",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 64674,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27168"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.763056,
+					55.327222
+				]
+			},
+			"properties": {
+				"NAME": "Ribe",
+				"NAME_EN": "Ribe",
+				"NAME_IT": "Ribe",
+				"NAME_DE": "Ribe",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 8317,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q322361"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.479444444,
+					55.236944444
+				]
+			},
+			"properties": {
+				"NAME": "Ringe",
+				"NAME_EN": "Ringe",
+				"NAME_IT": "Ringe",
+				"NAME_DE": "Ringe",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6729,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q303111"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11.39,
+					54.694
+				]
+			},
+			"properties": {
+				"NAME": "Rødby",
+				"NAME_EN": "Rødby",
+				"NAME_IT": "Rødby",
+				"NAME_DE": "Rødby",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Sjælland",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2066,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q161975"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.7,
+					55.1
+				]
+			},
+			"properties": {
+				"NAME": "Rønne",
+				"NAME_EN": "Rønne",
+				"NAME_IT": "Rønne",
+				"NAME_DE": "Rønne",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 13759,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q690062"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.080833333,
+					55.641666666
+				]
+			},
+			"properties": {
+				"NAME": "Roskilde",
+				"NAME_EN": "Roskilde",
+				"NAME_IT": "Roskilde",
+				"NAME_DE": "Roskilde",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Sjælland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 53354,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q26563"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.55,
+					56.166666666
+				]
+			},
+			"properties": {
+				"NAME": "Silkeborg",
+				"NAME_EN": "Silkeborg",
+				"NAME_IT": "Silkeborg",
+				"NAME_DE": "Silkeborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 50866,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q21180"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.587777777,
+					57.722222222
+				]
+			},
+			"properties": {
+				"NAME": "Skagen",
+				"NAME_EN": "Skagen",
+				"NAME_IT": "Skagen",
+				"NAME_DE": "Skagen",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7394,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q215177"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.933333333,
+					56.033333333
+				]
+			},
+			"properties": {
+				"NAME": "Skanderborg",
+				"NAME_EN": "Skanderborg",
+				"NAME_IT": "Skanderborg",
+				"NAME_DE": "Skanderborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 18659,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q503379"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.026944444,
+					56.566666666
+				]
+			},
+			"properties": {
+				"NAME": "Skive",
+				"NAME_EN": "Skive",
+				"NAME_IT": "Skive",
+				"NAME_DE": "Skive",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 20176,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1019470"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.0258,
+					54.9964
+				]
+			},
+			"properties": {
+				"NAME": "Stensved",
+				"NAME_EN": "Stensved",
+				"NAME_IT": "Stensved",
+				"NAME_DE": "Stensved",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Sjælland",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1583,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q2145682"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.1422,
+					55.1361
+				]
+			},
+			"properties": {
+				"NAME": "Svaneke",
+				"NAME_EN": "Svaneke",
+				"NAME_IT": "Svaneke",
+				"NAME_DE": "Svaneke",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1078,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q605001"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.3,
+					55.65
+				]
+			},
+			"properties": {
+				"NAME": "Taastrup",
+				"NAME_EN": "Taastrup",
+				"NAME_IT": "Taastrup",
+				"NAME_DE": "Taastrup",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 37231,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q20999"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.115,
+					57.3839
+				]
+			},
+			"properties": {
+				"NAME": "Tårs",
+				"NAME_EN": "Tårs",
+				"NAME_IT": "Tårs",
+				"NAME_DE": "Tårs",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Nordjylland",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1932,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2086166"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.2078,
+					56.6969
+				]
+			},
+			"properties": {
+				"NAME": "Thyborøn",
+				"NAME_EN": "Thyborøn",
+				"NAME_IT": "Thyborøn",
+				"NAME_DE": "Thyborøn",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2007,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q165793"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.21279,
+					55.3212
+				]
+			},
+			"properties": {
+				"NAME": "Tommerup",
+				"NAME_EN": "Tommerup",
+				"NAME_IT": "Tommerup",
+				"NAME_DE": "Tommerup",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1583,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2702722"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.863888888,
+					54.942777777
+				]
+			},
+			"properties": {
+				"NAME": "Tønder",
+				"NAME_EN": "Tønder",
+				"NAME_IT": "Tønder",
+				"NAME_DE": "Tønder",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7543,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3223979"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.533333333,
+					55.708333333
+				]
+			},
+			"properties": {
+				"NAME": "Vejle",
+				"NAME_EN": "Vejle",
+				"NAME_IT": "Vejle",
+				"NAME_DE": "Vejle",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 62011,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27116"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.4,
+					56.45
+				]
+			},
+			"properties": {
+				"NAME": "Viborg",
+				"NAME_EN": "Viborg",
+				"NAME_IT": "Viborg",
+				"NAME_DE": "Viborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 41079,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q21176"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8.7779,
+					56.4795
+				]
+			},
+			"properties": {
+				"NAME": "Vinderup",
+				"NAME_EN": "Vinderup",
+				"NAME_IT": "Vinderup",
+				"NAME_DE": "Vinderup",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Midtjylland",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3095,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3591036"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.305,
+					55.24833333
+				]
+			},
+			"properties": {
+				"NAME": "Vojens",
+				"NAME_EN": "Vojens",
+				"NAME_IT": "Vojens",
+				"NAME_DE": "Vojens",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7504,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1645444"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11.910277777,
+					55.008333333
+				]
+			},
+			"properties": {
+				"NAME": "Vordingborg",
+				"NAME_EN": "Vordingborg",
+				"NAME_IT": "Vordingborg",
+				"NAME_DE": "Vordingborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Sjælland",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11747,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2608258"
+			}
+		}
+	]
+}

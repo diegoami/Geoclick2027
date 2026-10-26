@@ -1,8 +1,5 @@
 <script lang="ts">
-	// The user manual (proposal #204): docs/USER_MANUAL.md rendered at build time
-	// by scripts/build-manual.mjs into static/manual/en.html, fetched here like a
-	// map's data. English only for now; German and Italian follow.
-	import { onMount } from 'svelte';
+	// Authored EN/DE/IT manuals are rendered at build time and bundled offline.
 	import { asset } from '$app/paths';
 	import { getLanguage, t } from '$lib/i18n.svelte';
 	import PageBar from '$lib/PageBar.svelte';
@@ -10,14 +7,22 @@
 	let html = $state('');
 	let failed = $state(false);
 
-	onMount(async () => {
-		try {
-			const res = await fetch(asset('/manual/en.html'));
-			if (!res.ok) throw new Error(String(res.status));
-			html = await res.text();
-		} catch {
-			failed = true;
-		}
+	$effect(() => {
+		const language = getLanguage();
+		const controller = new AbortController();
+		html = '';
+		failed = false;
+		void (async () => {
+			try {
+				const res = await fetch(asset(`/manual/${language}.html`), { signal: controller.signal });
+				if (!res.ok) throw new Error(String(res.status));
+				const text = await res.text();
+				if (!controller.signal.aborted) html = text;
+			} catch {
+				if (!controller.signal.aborted) failed = true;
+			}
+		})();
+		return () => controller.abort();
 	});
 </script>
 
@@ -26,13 +31,10 @@
 <PageBar title={t('about.manual')} />
 
 <main>
-	{#if getLanguage() !== 'en'}
-		<p class="note">{t('manual.englishOnly')}</p>
-	{/if}
 	{#if failed}
 		<p class="note">{t('manual.loadFailed')}</p>
 	{:else}
-		<article class="manual">
+		<article class="manual" lang={getLanguage()}>
 			<!-- eslint-disable-next-line svelte/no-at-html-tags -- our own manual, rendered at build time -->
 			{@html html}
 		</article>

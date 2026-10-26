@@ -1,6 +1,6 @@
 # Geoclick — Roadmap
 
-- **v1.0.0 in preparation (2026-10-26):** all 22 approved countries have 44 generated maps (217 total) and complete authored EN/IT/DE facts (735/735 targets). All four gates pass (2831 app tests). [PR #243](https://github.com/diegoami/Geoclick2027/pull/243) has a [no-blockers independent review](https://github.com/diegoami/Geoclick2027/pull/243#pullrequestreview-5656320311) and awaits owner testing/merge approval. Two cosmetic notes remain in its review thread. [PLAN_V1.0.md](docs/PLAN_V1.0.md), [proposal #241](https://github.com/diegoami/Geoclick2027/issues/241). No 1.0 tag/publication yet.
+- **v1.0.0 in preparation (2026-10-26):** the 44-map country expansion and its 735 EN/IT/DE fact sets are complete and independently reviewed in [PR #243](https://github.com/diegoami/Geoclick2027/pull/243), awaiting owner merge approval. The owner now requires all older playable facts before 1.0: baseline 1960 missing and 332 short sets ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)). German/Italian manuals are implemented; Denmark/Norway/Serbia map improvements and full fact completion are in progress. [PLAN_V1.0.md](docs/PLAN_V1.0.md). No 1.0 tag/publication yet.
 
 Self-contained iterations toward the desktop POC described in
 [ARCHITECTURE.md](ARCHITECTURE.md). Each iteration should leave the repo in

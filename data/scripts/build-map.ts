@@ -677,6 +677,8 @@ async function main() {
 		fc.features = fc.features
 			.map((feature) => {
 				const raw = String(feature.properties[sourceNameField] ?? '');
+				if (!raw.trim())
+					throw new Error('External boundary has no nonempty ' + sourceNameField + ' field');
 				// Only the name travels on; the register's own ids and codes
 				// would only bloat the tiles.
 				feature.properties = { name: cleanName ? cleanName(raw) : raw };
