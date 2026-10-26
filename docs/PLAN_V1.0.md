@@ -177,7 +177,7 @@ reviews, awards, unsupported platforms or simulated gameplay screenshots.
 
 Checkpoint saved at the owner's request; resumed on 2026-10-26. Branch: maps/v1.0-country-expansion.
 Worktree: C:/Users/diego/projects/Geoclick2027-work/maps-v1.0-country-expansion.
-The complete expansion is in [PR #243](https://github.com/diegoami/Geoclick2027/pull/243); final checks and fresh PR review precede owner testing.
+The complete expansion is in [PR #243](https://github.com/diegoami/Geoclick2027/pull/243); local gates pass and the independent review reports no blockers. Owner testing/merge approval is next.
 
 All 22 approved countries now have their two map packages: 44 new maps and
 735 targets, giving 217 maps across 79 country groups plus six continents.
@@ -197,8 +197,9 @@ in the world picker despite the continent quiz's minimum-area filter;
 Congo-Kinshasa links to the existing Democratic Republic of the Congo polygon.
 The catalogue regressions caught and now guard these missing-row cases.
 
-Next: obtain a fresh external-family PR review of the completed content before
-owner testing. The old first-batch review is historical.
+Next: owner testing and explicit merge approval for PR #243, then the version
+bump/candidate PR, milestone review and final release/itch.io artifacts. The old
+first-batch review is historical.
 
 Windows is canonical. A preserved Linux build mirror with its own dependencies,
 raw sources and tile tools is at
@@ -489,12 +490,38 @@ Every one of the 394 playable town-region associations resolves correctly;
 strict authored coverage remains 735/735. Four regional name-history sentences
 were also clarified to explicitly identify the namesake city.
 Focused data, boundary and translation checks: 1384 tests pass. Final local
-gates and a fresh follow-up review of these fixes precede owner testing.
+gates and the follow-up review pass; the PR awaits owner testing.
 
 Local verification on the review-fix commit: all four gates pass, with 2831 app
 tests and zero failures. Actual served assets cover all 735 targets, and all
 44 choices remain selectable. The 1024 × 640 Taiwan-tour screenshot exposed
 long source credits crossing the fact card; map attribution now starts in its
 expandable information control, matching the world picker's existing behavior.
-The source credit remains available on demand. A fresh follow-up review checks
+The source credit remains available on demand. The follow-up review confirmed
 all fixes and this layout adjustment before owner testing.
+
+### Ready for owner testing
+
+The independent follow-up reviewed all code at 46548f8c342530d6c41648ee52f49c40d3a0c6cc:
+https://github.com/diegoami/Geoclick2027/pull/243#pullrequestreview-5656320311.
+Verdict: no blockers; all six original findings resolved; no new MUST-FIX or
+SHOULD issues. The reviewer independently passed 1383 focused tests, checked
+the four corrected points against their committed polygons, inspected the
+largest-city results, and read all replacement-town and clarified regional
+sentences in all three languages.
+
+Two MINOR notes are retained in the PR thread: Miaoli city and county share
+the same correct name-origin sentence (kept to preserve their common etymology),
+and Ghana/DR Congo source credits include an extra Tanzania municipal source
+mention. The latter is cosmetic; all required licences are present. Neither
+permits a wrong result under the PR's Protects contract. This subsequent status
+record is documentation only; the independently reviewed code is unchanged.
+
+Local testing: Geoclick runs at http://localhost:5187 from the implementing
+worktree. Check the 44 new choices, Taiwan's twenty towns without the four
+boroughs, tour facts in EN/IT/DE and the expandable source-information control.
+All gates passed with 2831 app tests, strict coverage 735/735, and 394/394
+canonical town-region associations. Deployments remain stopped; no live test
+was performed. Merge requires the owner's explicit approval. Version bump,
+installer/device checks, release milestone review, final tagged screenshots
+and publication remain release tasks; itch.io is uploaded by the owner.
