@@ -2,11 +2,11 @@
 	"mapId": "hungary-towns-10k",
 	"steps": [
 		{
-			"targetId": "salgotarjan",
+			"targetId": "miskolc",
 			"dwellMs": 3000
 		},
 		{
-			"targetId": "miskolc",
+			"targetId": "salgotarjan",
 			"dwellMs": 3000
 		},
 		{
@@ -26,6 +26,14 @@
 			"dwellMs": 3000
 		},
 		{
+			"targetId": "sopron",
+			"dwellMs": 3000
+		},
+		{
+			"targetId": "dunakeszi",
+			"dwellMs": 3000
+		},
+		{
 			"targetId": "tatabanya",
 			"dwellMs": 3000
 		},
@@ -35,6 +43,10 @@
 		},
 		{
 			"targetId": "budapest",
+			"dwellMs": 3000
+		},
+		{
+			"targetId": "erd",
 			"dwellMs": 3000
 		},
 		{

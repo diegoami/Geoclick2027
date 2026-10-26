@@ -1741,7 +1741,7 @@ Optional: append --country=estonia (or another batch country).
 
 | Country | Administrative map (targets) | Towns map (targets) |
 | --- | --- | --- |
-| Hungary | hungary-counties (20) | hungary-towns-10k (20) |
+| Hungary | hungary-counties (20) | hungary-towns-10k (23) |
 | Slovakia | slovakia-regions (8) | slovakia-towns-10k (20) |
 | Estonia | estonia-counties (15) | estonia-towns-5k (20) |
 | Lithuania | lithuania-counties (10) | lithuania-towns-10k (20) |
@@ -1764,10 +1764,22 @@ b8862ad2217e3efbb4db3dd95f2d0e32cb2d0ca6b7c3c9447d9c87fb43d0abd9.
 A changed upstream ZIP requires deliberate review. A point check places Lihula
 in Parnu after the 2017 transfer, not Laane. boundaryFacts enables derived facts
 from named source polygons. placesSource selects the town snapshot for regional
-facts. The batch checks Kuressaare, Parnu, Reykjavik and Szeged explicitly.
+facts. The batch checks Kuressaare, Parnu, Kardla, Jogeva, Reykjavik, Szeged and Erd
+explicitly, plus previously missing Slovak/Lithuanian county cities. Hungary
+uses its dated snapshot for both maps so Pest includes Erd. Source/fact parity,
+town regions and trilingual target coverage are guarded by v1CountryData.test.ts.
 
-Slovakia, Estonia and Lithuania have committed CC0 Wikidata town snapshots,
-reproducible through data/scripts/fetch-v1-towns.ts. Population selection uses
+Hungary, Slovakia, Estonia and Lithuania have committed Wikidata town
+snapshots (CC0), reproducible through data/scripts/fetch-v1-towns.ts in WSL.
+The fetcher uses Wikidata administrative hierarchies for ADM1NAME; where
+Lithuanian municipalities bypass counties, missing associations use actual
+point-in-polygon containment against Natural Earth (public domain), with
+provenance preserved. Ambiguous or missing associations fail the refresh.
+Budapest is its own county-equivalent unit. GDAL and the Natural Earth admin-1
+source are required for that Lithuanian fallback. The default fetch refreshes
+only these four used snapshots; Costa Rica remains on Natural Earth.
+Estonia fetches towns from 1,000 population so smaller county seats remain in
+regional facts; its playable towns map still starts at 5,000. Population selection uses
 the latest dated non-future statement, even when lower than an older value.
 Petrzalka is excluded as a Bratislava borough rather than an independent town.
 Costa Rica uses Natural Earth towns at 1,000 population; bounds exclude Cocos.
@@ -1775,3 +1787,10 @@ Costa Rica uses Natural Earth towns at 1,000 population; bounds exclude Cocos.
 After editing authored data/facts files, refresh generated hooks:
 
     node --import tsx data/scripts/refresh-facts-hooks.ts
+
+Hungary retains Salgotarjan, Vac and Szekszard explicitly with --retain,
+beyond the twenty most populous towns selected from its snapshot. This keeps
+county seats and existing authored learning content while adding Erd, Sopron
+and Dunakeszi. The flag still respects source availability, bounds, exclusions
+and the population threshold, and rejects missing/ambiguous retained names.
+The twelve-map batch therefore contains 173 targets.

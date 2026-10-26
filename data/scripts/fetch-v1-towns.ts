@@ -1,9 +1,12 @@
-// Snapshot towns for the v1.0 batch where Natural Earth only has 5–7 places.
-// Wikidata CC0; run explicitly to refresh, then commit data/places/<id>.geojson.
+// Snapshot towns for the v1.0 batch where Natural Earth is incomplete.
+// Run in WSL with GDAL and Natural Earth inputs (Lithuanian county fallback).
+// Wikidata CC0 and Natural Earth public domain; refresh deliberately and commit.
 //   npx tsx data/scripts/fetch-v1-towns.ts [--country=lithuania]
+import { execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { REPO_ROOT, parseArgs } from './mapBuildUtils.js';
+import { REPO_ROOT, ADMIN1_SHP, parseArgs } from './mapBuildUtils.js';
+import { pointInPolygon, type AnyGeometry } from './factGeometry.js';
 import { newestTownRows, type TownBinding } from './townSnapshot.js';
 
 interface Country {
@@ -12,12 +15,42 @@ interface Country {
 	iso: string;
 	language: string;
 	population: number;
+	regionClass: string;
 }
 const countries: Country[] = [
-	{ id: 'slovakia', name: 'Slovakia', iso: 'SVK', language: 'sk', population: 10000 },
-	{ id: 'estonia', name: 'Estonia', iso: 'EST', language: 'et', population: 5000 },
-	{ id: 'lithuania', name: 'Lithuania', iso: 'LTU', language: 'lt', population: 10000 },
-	{ id: 'costa-rica', name: 'Costa Rica', iso: 'CRI', language: 'es', population: 10000 }
+	{
+		id: 'hungary',
+		name: 'Hungary',
+		iso: 'HUN',
+		language: 'hu',
+		population: 10000,
+		regionClass: 'Q188604'
+	},
+	{
+		id: 'slovakia',
+		name: 'Slovakia',
+		iso: 'SVK',
+		language: 'sk',
+		population: 10000,
+		regionClass: 'Q15057583'
+	},
+	{
+		id: 'estonia',
+		name: 'Estonia',
+		iso: 'EST',
+		language: 'et',
+		// Include smaller county seats for regional facts; the playable map stays at 5k.
+		population: 1000,
+		regionClass: 'Q189672'
+	},
+	{
+		id: 'lithuania',
+		name: 'Lithuania',
+		iso: 'LTU',
+		language: 'lt',
+		population: 10000,
+		regionClass: 'Q273789'
+	}
 ];
 const args = parseArgs(process.argv.slice(2));
 const selected = args.country
@@ -26,12 +59,15 @@ const selected = args.country
 if (!selected.length) throw new Error('Unknown country in this snapshot batch: ' + args.country);
 for (const country of selected) {
 	const query = [
-		'SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital WHERE {',
-		'  ?country wdt:P298 "' + country.iso + '" .',
-		'  ?item wdt:P17 ?country; wdt:P1082 ?best; wdt:P625 ?coord; wdt:P31 ?kind .',
+		'SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName WHERE {',
+		// Keep country-first traversal; the planner otherwise expands global paths.
+		'  hint:Query hint:optimizer "None" .',
+		'  ?country wdt:P298 "' + country.iso + '"; wdt:P36 ?capitalCity .',
+		'  ?item wdt:P17 ?country; wdt:P625 ?coord; wdt:P31 ?kind .',
 		'  VALUES ?base { wd:Q515 wd:Q3957 }',
 		'  ?kind wdt:P279* ?base .',
-		'  FILTER(?best >= ' + country.population + ')',
+		// Fetch every observed statement before applying the population threshold.
+		// A truthy/preferred old count must not hide a qualifying newer count.
 		'  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }',
 		'  ?item p:P1082 ?statement .',
 		'  ?statement ps:P1082 ?population; wikibase:rank ?rank .',
@@ -42,7 +78,12 @@ for (const country of selected) {
 		'  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)="en") }',
 		'  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)="it") }',
 		'  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)="de") }',
-		'  BIND(EXISTS { ?country wdt:P36 ?item } AS ?capital)',
+		'  OPTIONAL {',
+		'    ?item wdt:P131* ?region .',
+		'    ?region wdt:P31 wd:' + country.regionClass + '; wdt:P17 ?country;',
+		'      rdfs:label ?regionName . FILTER(LANG(?regionName)="' + country.language + '")',
+		'  }',
+		'  BIND(?item = ?capitalCity AS ?capital)',
 		'} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000'
 	].join('\n');
 	const url = new URL('https://query.wikidata.org/sparql');
@@ -60,6 +101,58 @@ for (const country of selected) {
 		throw new Error('Query limit reached; refusing partial snapshot');
 	const fetchedAt = new Date().toISOString();
 	const newest = newestTownRows(raw.results.bindings, fetchedAt);
+	// Do not let population-row ordering choose between conflicting regions.
+	const eligibleIds = new Set(
+		newest
+			.filter((row) => Number(row.population?.value) >= country.population)
+			.map((row) => row.item?.value)
+	);
+	const regionNames = new Map<string, Set<string>>();
+	for (const row of raw.results.bindings) {
+		if (!row.item?.value || !eligibleIds.has(row.item.value) || !row.regionName?.value) continue;
+		const names = regionNames.get(row.item.value) ?? new Set<string>();
+		names.add(row.regionName.value);
+		regionNames.set(row.item.value, names);
+		if (names.size > 1) throw new Error('Ambiguous regions for ' + row.item.value);
+	}
+
+	// Lithuania's municipal hierarchy often bypasses the counties since 2010.
+	// Fill only missing county labels by actual polygon containment, never bbox.
+	const countyNames: Record<string, string> = {
+		Utenos: 'Utenos',
+		Vilniaus: 'Vilniaus',
+		Alytaus: 'Alytaus',
+		Panevezio: 'Panevėžio',
+		Telšiai: 'Telšių',
+		Klaipedos: 'Klaipėdos',
+		Šiauliai: 'Šiaulių',
+		Marijampoles: 'Marijampolės',
+		Taurages: 'Tauragės',
+		Kauno: 'Kauno'
+	};
+	const countyRows =
+		country.id === 'lithuania'
+			? (
+					JSON.parse(
+						execFileSync(
+							'ogr2ogr',
+							[
+								'-f',
+								'GeoJSON',
+								'/vsistdout/',
+								ADMIN1_SHP,
+								'-where',
+								"admin = 'Lithuania'",
+								'-select',
+								'name'
+							],
+							{ encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 }
+						)
+					) as {
+						features: { geometry: AnyGeometry; properties: { name: string } }[];
+					}
+				).features
+			: [];
 	const features = newest
 		.filter((row) => Number(row.population?.value) >= country.population)
 		.map((row) => {
@@ -73,6 +166,26 @@ for (const country of selected) {
 				Math.abs(coordinates[1]) > 90
 			)
 				throw new Error('Invalid coordinates for ' + name);
+			let regionName = row.regionName?.value;
+			if (!regionName && country.id === 'hungary' && row.capital?.value === 'true')
+				regionName = name; // Budapest itself is the county-equivalent capital.
+			if (!regionName && countyRows.length) {
+				const matches = countyRows.filter((f) =>
+					pointInPolygon(coordinates as [number, number], f.geometry)
+				);
+				if (matches.length === 1 && countyNames[matches[0].properties.name])
+					regionName = countyNames[matches[0].properties.name] + ' apskritis';
+			}
+			if (!regionName)
+				throw new Error(
+					'Missing unambiguous region for ' +
+						name +
+						' (' +
+						row.item?.value +
+						'; capital=' +
+						row.capital?.value +
+						')'
+				);
 			return {
 				type: 'Feature',
 				geometry: { type: 'Point', coordinates },
@@ -82,7 +195,7 @@ for (const country of selected) {
 					NAME_IT: row.it?.value ?? name,
 					NAME_DE: row.de?.value ?? name,
 					ADM0NAME: country.name,
-					ADM1NAME: '',
+					ADM1NAME: regionName,
 					ADM0CAP: row.capital?.value === 'true' ? 1 : 0,
 					POP_MAX: Number(row.population?.value),
 					POP1950: 0,
@@ -100,7 +213,10 @@ for (const country of selected) {
 		JSON.stringify(
 			{
 				type: 'FeatureCollection',
-				source: 'Wikidata (CC0)',
+				source:
+					country.id === 'lithuania'
+						? 'Wikidata (CC0); missing county labels from Natural Earth (public domain), matched by point-in-polygon'
+						: 'Wikidata (CC0)',
 				fetchedAt,
 				query,
 				features

@@ -190,7 +190,7 @@ export const mapGroups: CountryGroup[] = [
 	{
 		country: 'Estonia',
 		maps: [
-			{ id: 'estonia-counties', labelKey: 'mapType.counties' },
+			{ id: 'estonia-counties', labelKey: 'mapType.estonianCounties' },
 			{ id: 'estonia-towns-5k', labelKey: 'mapType.towns' }
 		]
 	},
@@ -350,7 +350,7 @@ export const mapGroups: CountryGroup[] = [
 	{
 		country: 'Hungary',
 		maps: [
-			{ id: 'hungary-counties', labelKey: 'mapType.counties' },
+			{ id: 'hungary-counties', labelKey: 'mapType.hungarianCounties' },
 			{ id: 'hungary-towns-10k', labelKey: 'mapType.towns' }
 		]
 	},
@@ -462,7 +462,7 @@ export const mapGroups: CountryGroup[] = [
 	{
 		country: 'Lithuania',
 		maps: [
-			{ id: 'lithuania-counties', labelKey: 'mapType.counties' },
+			{ id: 'lithuania-counties', labelKey: 'mapType.lithuanianCounties' },
 			{ id: 'lithuania-towns-10k', labelKey: 'mapType.towns' }
 		]
 	},

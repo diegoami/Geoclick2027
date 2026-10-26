@@ -1,34 +1,9 @@
 {
-	"salgotarjan": {
-		"kind": "city",
-		"population": 39640,
-		"populationRank": 18,
-		"region": "Nógrád",
-		"coastal": false,
-		"position": "north",
-		"hooks": {
-			"en": [
-				"Its name joins Salgó Castle with the old Tarján tribal name.",
-				"Coal mining drove its nineteenth-century growth.",
-				"A former mine became an underground mining museum."
-			],
-			"it": [
-				"Il nome unisce il castello di Salgó all’antico nome tribale Tarján.",
-				"Le miniere di carbone ne trainarono la crescita nell’Ottocento.",
-				"Una vecchia miniera divenne un museo minerario sotterraneo."
-			],
-			"de": [
-				"Der Name verbindet Burg Salgó mit dem alten Stammesnamen Tarján.",
-				"Kohlebergbau trieb das Wachstum im 19. Jahrhundert an.",
-				"Ein früheres Bergwerk wurde zum unterirdischen Bergbaumuseum."
-			]
-		}
-	},
 	"miskolc": {
 		"kind": "city",
-		"population": 247757,
-		"populationRank": 2,
-		"region": "Borsod-Abaúj-Zemplén",
+		"population": 139246,
+		"populationRank": 4,
+		"region": "Borsod-Abaúj-Zemplén megye",
 		"coastal": false,
 		"position": "north-east",
 		"hooks": {
@@ -49,11 +24,36 @@
 			]
 		}
 	},
+	"salgotarjan": {
+		"kind": "city",
+		"population": 29824,
+		"populationRank": 22,
+		"region": "Nógrád megye",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name joins Salgó Castle with the old Tarján tribal name.",
+				"Coal mining drove its nineteenth-century growth.",
+				"A former mine became an underground mining museum."
+			],
+			"it": [
+				"Il nome unisce il castello di Salgó all’antico nome tribale Tarján.",
+				"Le miniere di carbone ne trainarono la crescita nell’Ottocento.",
+				"Una vecchia miniera divenne un museo minerario sotterraneo."
+			],
+			"de": [
+				"Der Name verbindet Burg Salgó mit dem alten Stammesnamen Tarján.",
+				"Kohlebergbau trieb das Wachstum im 19. Jahrhundert an.",
+				"Ein früheres Bergwerk wurde zum unterirdischen Bergbaumuseum."
+			]
+		}
+	},
 	"nyiregyhaza": {
 		"kind": "city",
-		"population": 176880,
-		"populationRank": 6,
-		"region": "Szabolcs-Szatmár-Bereg",
+		"population": 114096,
+		"populationRank": 7,
+		"region": "Szabolcs-Szatmár-Bereg megye",
 		"coastal": false,
 		"position": "north-east",
 		"hooks": {
@@ -76,9 +76,9 @@
 	},
 	"eger": {
 		"kind": "city",
-		"population": 56647,
-		"populationRank": 17,
-		"region": "Heves",
+		"population": 47921,
+		"populationRank": 19,
+		"region": "Heves megye",
 		"coastal": false,
 		"position": "north-east",
 		"hooks": {
@@ -101,9 +101,9 @@
 	},
 	"vac": {
 		"kind": "city",
-		"population": 35293,
-		"populationRank": 19,
-		"region": "Pest",
+		"population": 33646,
+		"populationRank": 21,
+		"region": "Pest megye",
 		"coastal": false,
 		"position": "north",
 		"hooks": {
@@ -126,9 +126,9 @@
 	},
 	"gyor": {
 		"kind": "city",
-		"population": 136081,
-		"populationRank": 8,
-		"region": "Gyor-Moson-Sopron",
+		"population": 128225,
+		"populationRank": 6,
+		"region": "Győr-Moson-Sopron megye",
 		"coastal": false,
 		"position": "north-west",
 		"hooks": {
@@ -149,11 +149,61 @@
 			]
 		}
 	},
+	"sopron": {
+		"kind": "city",
+		"population": 60035,
+		"populationRank": 14,
+		"region": "Győr-Moson-Sopron megye",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its Latin title Civitas Fidelissima means most loyal town.",
+				"A 1921 referendum kept the town in Hungary.",
+				"Its Fire Tower once watched for fires and approaching soldiers."
+			],
+			"it": [
+				"Il titolo latino Civitas Fidelissima significa città fedelissima.",
+				"Un referendum del 1921 mantenne la città in Ungheria.",
+				"La Torre del Fuoco sorvegliava un tempo incendi e soldati in avvicinamento."
+			],
+			"de": [
+				"Sein lateinischer Titel Civitas Fidelissima bedeutet treueste Stadt.",
+				"Eine Volksabstimmung von 1921 hielt die Stadt bei Ungarn.",
+				"Vom Feuerturm hielt man früher nach Bränden und herannahenden Soldaten Ausschau."
+			]
+		}
+	},
+	"dunakeszi": {
+		"kind": "city",
+		"population": 42328,
+		"populationRank": 20,
+		"region": "Pest megye",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Keszi in its name recalls an early Hungarian tribe.",
+				"The railway reached the settlement in 1846.",
+				"Alag became known for horse racing and training."
+			],
+			"it": [
+				"L’elemento Keszi nel nome richiama un’antica tribù magiara.",
+				"La ferrovia raggiunse l’abitato nel 1846.",
+				"Alag divenne nota per le corse e l’addestramento dei cavalli."
+			],
+			"de": [
+				"Der Namensbestandteil Keszi erinnert an einen frühen ungarischen Stamm.",
+				"Die Eisenbahn erreichte die Siedlung 1846.",
+				"Alag wurde für Pferderennen und Pferdetraining bekannt."
+			]
+		}
+	},
 	"tatabanya": {
 		"kind": "city",
-		"population": 70541,
+		"population": 64546,
 		"populationRank": 13,
-		"region": "Komárom-Esztergom",
+		"region": "Komárom-Esztergom megye",
 		"coastal": false,
 		"position": "north",
 		"hooks": {
@@ -176,9 +226,9 @@
 	},
 	"debrecen": {
 		"kind": "city",
-		"population": 231286,
-		"populationRank": 3,
-		"region": "Hajdú-Bihar",
+		"population": 202331,
+		"populationRank": 2,
+		"region": "Hajdú-Bihar megye",
 		"coastal": false,
 		"position": "north-east",
 		"hooks": {
@@ -201,9 +251,8 @@
 	},
 	"budapest": {
 		"kind": "city",
-		"population": 1679000,
+		"population": 1675777,
 		"populationRank": 1,
-		"population1950": 1618000,
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "north",
@@ -225,11 +274,36 @@
 			]
 		}
 	},
+	"erd": {
+		"kind": "city",
+		"population": 71613,
+		"populationRank": 11,
+		"region": "Pest megye",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"A document of 1243 records the name as Erdu.",
+				"Its surviving minaret recalls the seventeenth-century Ottoman period.",
+				"The Hungarian Geographical Museum occupies a former inn built in 1840."
+			],
+			"it": [
+				"Un documento del 1243 riporta il nome Erdu.",
+				"Il minareto superstite ricorda il periodo ottomano del Seicento.",
+				"Il Museo geografico ungherese occupa un’antica locanda costruita nel 1840."
+			],
+			"de": [
+				"Eine Urkunde von 1243 nennt den Ort Erdu.",
+				"Das erhaltene Minarett erinnert an die osmanische Zeit des siebzehnten Jahrhunderts.",
+				"Das Ungarische Geographische Museum befindet sich in einem ehemaligen Gasthof von 1840."
+			]
+		}
+	},
 	"szombathely": {
 		"kind": "city",
-		"population": 109518,
+		"population": 76389,
 		"populationRank": 10,
-		"region": "Vas",
+		"region": "Vas megye",
 		"coastal": false,
 		"position": "west",
 		"hooks": {
@@ -252,9 +326,9 @@
 	},
 	"szekesfehervar": {
 		"kind": "city",
-		"population": 144319,
-		"populationRank": 7,
-		"region": "Fejér",
+		"population": 94605,
+		"populationRank": 9,
+		"region": "Fejér megye",
 		"coastal": false,
 		"position": "centre",
 		"hooks": {
@@ -277,9 +351,9 @@
 	},
 	"szolnok": {
 		"kind": "city",
-		"population": 109261,
-		"populationRank": 11,
-		"region": "Jász-Nagykun-Szolnok",
+		"population": 64681,
+		"populationRank": 12,
+		"region": "Jász-Nagykun-Szolnok megye",
 		"coastal": false,
 		"position": "east",
 		"hooks": {
@@ -302,8 +376,9 @@
 	},
 	"veszprem": {
 		"kind": "city",
-		"population": 62023,
-		"populationRank": 15,
+		"population": 54590,
+		"populationRank": 16,
+		"region": "Veszprém megye",
 		"coastal": false,
 		"position": "west",
 		"hooks": {
@@ -326,9 +401,9 @@
 	},
 	"kecskemet": {
 		"kind": "city",
-		"population": 113895,
-		"populationRank": 9,
-		"region": "Bács-Kiskun",
+		"population": 108106,
+		"populationRank": 8,
+		"region": "Bács-Kiskun megye",
 		"coastal": false,
 		"position": "centre",
 		"hooks": {
@@ -351,9 +426,9 @@
 	},
 	"zalaegerszeg": {
 		"kind": "city",
-		"population": 61898,
-		"populationRank": 16,
-		"region": "Zala",
+		"population": 53494,
+		"populationRank": 17,
+		"region": "Zala megye",
 		"coastal": false,
 		"position": "west",
 		"hooks": {
@@ -376,9 +451,9 @@
 	},
 	"bekescsaba": {
 		"kind": "city",
-		"population": 65206,
-		"populationRank": 14,
-		"region": "Békés",
+		"population": 53433,
+		"populationRank": 18,
+		"region": "Békés megye",
 		"coastal": false,
 		"position": "south-east",
 		"hooks": {
@@ -401,9 +476,9 @@
 	},
 	"kaposvar": {
 		"kind": "city",
-		"population": 108528,
-		"populationRank": 12,
-		"region": "Somogy",
+		"population": 57454,
+		"populationRank": 15,
+		"region": "Somogy megye",
 		"coastal": false,
 		"position": "south-west",
 		"hooks": {
@@ -426,9 +501,9 @@
 	},
 	"szekszard": {
 		"kind": "city",
-		"population": 34174,
-		"populationRank": 20,
-		"region": "Tolna",
+		"population": 28975,
+		"populationRank": 23,
+		"region": "Tolna megye",
 		"coastal": false,
 		"position": "south",
 		"hooks": {
@@ -451,9 +526,9 @@
 	},
 	"szeged": {
 		"kind": "city",
-		"population": 187765,
-		"populationRank": 4,
-		"region": "Csongrád",
+		"population": 157596,
+		"populationRank": 3,
+		"region": "Csongrád-Csanád megye",
 		"coastal": false,
 		"position": "south-east",
 		"hooks": {
@@ -476,9 +551,9 @@
 	},
 	"pecs": {
 		"kind": "city",
-		"population": 186262,
+		"population": 137976,
 		"populationRank": 5,
-		"region": "Baranya",
+		"region": "Baranya megye",
 		"coastal": false,
 		"position": "south-west",
 		"hooks": {

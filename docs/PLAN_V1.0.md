@@ -11,7 +11,7 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | Distribution | Complete; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) merged | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
 | Boundary and target audit | In progress; first six countries audited | Licensed, reproducible sources and suitable map types for 22 countries |
 | Maps | First twelve generated and registered; local checks complete, external review pending | Administrative maps and towns/urban maps; generated through the existing pipeline |
-| Facts | All 170 first-batch targets complete in EN/DE/IT | Facts for added targets in English, German, and Italian; existing target gaps audited |
+| Facts | All 173 first-batch targets complete in EN/DE/IT | Facts for added targets in English, German, and Italian; existing target gaps audited |
 | Content completion | Pending | Deferred thin towns maps and German/Italian manual checked against agreed scope |
 | itch.io | Developer prepares package/assets; owner handles page and upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
 | Release preparation | Pending | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
@@ -177,10 +177,10 @@ reviews, awards, unsupported platforms or simulated gameplay screenshots.
 
 Checkpoint saved at the owner's request; resumed on 2026-10-26. Branch: maps/v1.0-country-expansion.
 Worktree: C:/Users/diego/projects/Geoclick2027-work/maps-v1.0-country-expansion.
-This is unfinished work, with no code PR or external review yet.
+The first batch is in [PR #243](https://github.com/diegoami/Geoclick2027/pull/243); the overall expansion remains unfinished.
 
 Hungary, Slovakia, Estonia, Lithuania, Iceland and Costa Rica have twelve
-registered maps adding 170 targets: 185 maps, 63 country groups plus six
+registered maps adding 173 targets: 185 maps, 63 country groups plus six
 continents. The index has 64 country labels because Natural Earth uses both
 Czech Republic and Czechia.
 
@@ -219,7 +219,7 @@ was preserved. Source references are recorded per target/kind in
 data/facts/estonia.json. Name hooks distinguish historical German exonyms
 from official renaming, following the Estonian Language Institute.
 
-The authored resolver reports full three-language coverage for all 170 targets
+The authored resolver reports full three-language coverage for all 173 targets
 in the twelve first-batch maps. Generated hooks were refreshed for Estonia
 counties/towns and the shared eastern-Europe towns map.
 
@@ -244,3 +244,67 @@ skipped to bypass this startup failure.
 
 First-batch local gates: check, test, lint and build all passed on 2026-10-26.
 The app test report includes 2,450 passing tests across all 63 files.
+
+First-batch administrative labels use country-specific keys: German Landkreise
+(Estonia), Komitate (Hungary) and Bezirke (Lithuania); Italian Comitati for
+Hungary. This preserves the existing labels used by other countries. The
+existing catalogue/localization tests pass (15 tests).
+
+### Next-batch source checks (2026-10-26)
+
+A bounded Natural Earth admin-1 audit found nine UAE pieces, including two
+Neutral Zone polygons; do not silently invent assignments to force seven.
+The [UAE government](https://u.ae/en/about-the-uae/the-seven-emirates) identifies
+seven emirates. Natural Earth provides Sri Lanka’s 25 districts rather than
+the intended nine provinces; the [tourism authority](https://srilanka.travel/provincial-tourism)
+confirms nine provinces. Natural Earth has fourteen Uzbekistan pieces, but
+the capital and its surrounding region both use Tashkent: they need distinct
+stable IDs and labels.
+
+The pinned geoBoundaries 9469f09 metadata provides 7/9/14 ADM1 units for
+[ARE](https://www.geoboundaries.org/api/current/gbOpen/ARE/ADM1/),
+[LKA](https://www.geoboundaries.org/api/current/gbOpen/LKA/ADM1/) and
+[UZB](https://www.geoboundaries.org/api/current/gbOpen/UZB/ADM1/), respectively,
+all representing 2017 OpenStreetMap/Wambacher data under ODbL 1.0. These are
+candidates requiring geometry, currency and licence/attribution checks, not
+implemented or accepted replacements. The preserved Linux toolchain is
+available via WSL; no new maps were generated in this audit.
+
+### PR #243 review fixes (2026-10-26)
+
+The [first independent review](https://github.com/diegoami/Geoclick2027/pull/243#pullrequestreview-5649697413)
+reported two blockers and two minor findings; all four were reproduced.
+Slovakia/Lithuania regional output was stale relative to the recipe; Pest
+omitted Erd; the three Wikidata towns maps had no region lines; the fetcher
+still listed an unused Costa Rica source.
+
+Regenerated the affected maps from the recipe. Hungary now also uses a dated
+Wikidata snapshot, and Pest correctly identifies Erd (71,613 in that snapshot).
+The town selection adds Sopron, Dunakeszi and Erd; all have three sourced
+sentences in each language. Hungary retains Salgotarjan, Vac and Szekszard explicitly alongside the twenty
+most populous choices, preserving their authored content. Hungary has 23 towns;
+the twelve-map batch now has 173 targets. Region names come from
+Wikidata hierarchies, with an attributed exact-geometry fallback for missing
+Lithuanian county associations. Empty/ambiguous associations fail the fetch.
+Costa Rica was removed from the snapshot refresh list. Estonia’s snapshot
+threshold is 1,000 for regional facts, preserving Kardla/Jogeva; the playable
+threshold stays 5,000. Each of the four snapshot-backed administrative maps
+now has a largest-city fact for every region.
+
+Added data regressions for snapshot metadata/population parity, town region
+lines and authored three-language coverage. The focused data/catalogue suites
+pass (41 tests). Full gates and a fresh independent review of the fixes follow
+before owner handoff.
+
+Population candidate selection no longer filters on Wikidata’s truthy preferred
+count before choosing the newest observed statement. All valid statements are
+fetched first, so an older preferred count cannot hide a qualifying newer
+observation. The post-selection population threshold still applies.
+
+Final source refresh succeeds for all four countries (135 Hungarian, 68 Slovak,
+44 Estonian and 29 Lithuanian candidates), including the region ambiguity
+checks. Regenerated all eight affected maps and refreshed the index/hooks.
+Data integrity/selection/coverage suites pass (981 tests). Final local Chromium
+checks show all retained/new Hungarian towns and the correct German Komitate
+label; Italian/German Tartu cards display both the authored translation and
+the restored region line. No page errors or horizontal overflow were reported.

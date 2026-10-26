@@ -10,6 +10,7 @@
 // MAPS.md's "Point-target implementation" section for the full reasoning.
 //
 // Usage:
+// Optional --retain=TownA,TownB keeps named eligible places beyond --max-count.
 //   npx tsx data/scripts/build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k --name-field=NAME_IT --min-population=100000 --name="Italy — Towns"
 //
 // Several countries at once (#39): --countries (ADM0NAME list) or
@@ -57,7 +58,8 @@ import {
 	isUnbounded,
 	parseBounds,
 	withinBounds,
-	spacedOut
+	spacedOut,
+	retainNamedPlaces
 } from './placeSelection.js';
 
 const SOURCE_SHP = path.join(
@@ -322,6 +324,14 @@ async function main() {
 	if (selectedFeatures.length > maxCount) {
 		selectedFeatures = selectedFeatures.slice(0, maxCount);
 	}
+
+	// Explicit curation may retain useful county seats below the population cap.
+	selectedFeatures = retainNamedPlaces(
+		selectedFeatures,
+		byPopulationDesc.filter((feature) => feature.properties.POP_MAX > minPopulation),
+		parseList(args.retain ?? ''),
+		(feature) => feature.properties.NAME
+	);
 
 	// Two places of the same name would collide on the map's feature-state key
 	// (promoteId: 'name'), so each gets its region added and keeps the plain

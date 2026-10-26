@@ -157,3 +157,22 @@ export function spacedOut<T extends { lon: number; lat: number }>(places: T[], m
 	}
 	return kept;
 }
+
+/** Retain explicit landmarks after a population cap; candidates already passed
+ * country, exclusion, bounds and population filters. Missing/ambiguous names
+ * fail rather than fabricating a target or silently losing curated content. */
+export function retainNamedPlaces<T>(
+	selected: readonly T[],
+	candidates: readonly T[],
+	names: readonly string[],
+	nameOf: (place: T) => string
+): T[] {
+	const result = [...selected];
+	for (const name of names) {
+		const matches = candidates.filter((place) => nameOf(place) === name);
+		if (matches.length !== 1)
+			throw new Error('Retained place must match one eligible town: ' + name);
+		if (!result.some((place) => nameOf(place) === name)) result.push(matches[0]);
+	}
+	return result;
+}

@@ -1,6 +1,6 @@
 # Geoclick — Roadmap
 
-- **v1.0.0 in preparation (2026-10-25):** owner-approved release consolidation, itch.io references and 22-country expansion. Scope and batch status: [PLAN_V1.0.md](docs/PLAN_V1.0.md), [proposal #241](https://github.com/diegoami/Geoclick2027/issues/241). No 1.0 tag or publication yet. First six-country batch: twelve maps and 170 targets now have complete English, Italian and German facts; local browser checks complete, PR review pending (2026-10-26).
+- **v1.0.0 in preparation (2026-10-25):** owner-approved release consolidation, itch.io references and 22-country expansion. Scope and batch status: [PLAN_V1.0.md](docs/PLAN_V1.0.md), [proposal #241](https://github.com/diegoami/Geoclick2027/issues/241). No 1.0 tag or publication yet. First six-country batch: twelve maps and 173 targets now have complete English, Italian and German facts; local browser checks complete, PR review pending (2026-10-26).
 
 Self-contained iterations toward the desktop POC described in
 [ARCHITECTURE.md](ARCHITECTURE.md). Each iteration should leave the repo in

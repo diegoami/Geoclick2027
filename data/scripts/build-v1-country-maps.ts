@@ -22,6 +22,7 @@ interface Country {
 	attribution?: string;
 	boundaryFacts?: boolean;
 	townExclude?: string;
+	retainTowns?: string;
 	expectedLargest?: Record<string, string>;
 }
 // Natural Earth separates county-right cities; merge them into their counties.
@@ -56,7 +57,9 @@ const countries: Country[] = [
 	{
 		country: 'Hungary',
 		id: 'hungary',
-		expectedLargest: { 'csongrad-csanad': 'Szeged' },
+		retainTowns: 'Salgótarján,Vác,Szekszárd',
+		expectedLargest: { 'csongrad-csanad': 'Szeged', pest: 'Érd' },
+		townSource: 'data/places/hungary.geojson',
 		type: 'county',
 		label: 'Counties',
 		expectedRegions: 20,
@@ -69,6 +72,7 @@ const countries: Country[] = [
 	{
 		country: 'Slovakia',
 		id: 'slovakia',
+		expectedLargest: { trenciansky: 'Trenčín', nitriansky: 'Nitra' },
 		// Petržalka is a Bratislava borough, not a separate town (petrzalka.sk).
 		townExclude: 'Petržalka',
 		townSource: 'data/places/slovakia.geojson',
@@ -85,7 +89,7 @@ const countries: Country[] = [
 		attribution:
 			'Administrative and settlement units: Estonian Land and Spatial Development Board, snapshot 2026-09-02; unrestricted use with attribution',
 		boundaryFacts: true,
-		expectedLargest: { parnu: 'Pärnu', saare: 'Kuressaare' },
+		expectedLargest: { parnu: 'Pärnu', saare: 'Kuressaare', hiiu: 'Kärdla', jogeva: 'Jõgeva' },
 		townSource: 'data/places/estonia.geojson',
 		type: 'county',
 		label: 'Counties',
@@ -95,6 +99,13 @@ const countries: Country[] = [
 	{
 		country: 'Lithuania',
 		id: 'lithuania',
+		expectedLargest: {
+			telsiu: 'Mažeikiai',
+			utenos: 'Utena',
+			taurages: 'Tauragė',
+			marijampoles: 'Marijampolė',
+			alytaus: 'Alytus'
+		},
 		townSource: 'data/places/lithuania.geojson',
 		rename:
 			'Telšiai=Telšių,Šiauliai=Šiaulių,Panevezio=Panevėžio,Klaipedos=Klaipėdos,Taurages=Tauragės,Marijampoles=Marijampolės',
@@ -183,6 +194,7 @@ for (const country of selected) {
 		'--name-field=' + (country.townSource ? 'NAME' : 'local'),
 		...(country.townSource ? ['--source=' + country.townSource] : []),
 		...(country.townExclude ? ['--exclude=' + country.townExclude] : []),
+		...(country.retainTowns ? ['--retain=' + country.retainTowns] : []),
 		...(country.clip ? ['--lat-min=7.8', '--lon-min=-86.1', '--lon-max=-82.3'] : [])
 	]);
 	run('build-terrain.ts', ['--map=' + townsId, '--force']);

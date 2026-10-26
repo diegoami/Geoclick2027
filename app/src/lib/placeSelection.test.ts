@@ -10,7 +10,8 @@ import {
 	withinBounds,
 	UNBOUNDED,
 	distanceKm,
-	spacedOut
+	spacedOut,
+	retainNamedPlaces
 } from '../../../data/scripts/placeSelection';
 
 const place = (name: string, lon: number, lat: number, region?: string) => ({
@@ -153,5 +154,30 @@ describe('spacedOut (#39, batch C)', () => {
 	it('is a no-op at zero', () => {
 		const all = [frankfurt, offenbach, maintal, muehlheim];
 		expect(spacedOut(all, 0)).toBe(all);
+	});
+});
+
+describe('retaining curated towns after the population cap', () => {
+	const big = { name: 'Budapest' };
+	const seat = { name: 'Szekszárd' };
+	it('keeps a county seat without duplicating an already selected place', () => {
+		const selected = [big];
+		expect(
+			retainNamedPlaces(
+				selected,
+				[big, seat],
+				['Budapest', 'Szekszárd', 'Szekszárd'],
+				(p) => p.name
+			)
+		).toEqual([big, seat]);
+		expect(selected).toEqual([big]);
+	});
+	it('rejects absent or ambiguous eligible towns instead of overriding source filters', () => {
+		expect(() => retainNamedPlaces([big], [big], ['Szekszárd'], (p) => p.name)).toThrow(
+			'one eligible town'
+		);
+		expect(() => retainNamedPlaces([], [seat, { ...seat }], ['Szekszárd'], (p) => p.name)).toThrow(
+			'one eligible town'
+		);
 	});
 });
