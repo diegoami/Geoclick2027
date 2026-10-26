@@ -10,7 +10,7 @@ interface MapData {
 	placesSource?: string;
 	regionsMap?: string;
 	attribution: string;
-	targets: { id: string; name: string; type: string }[];
+	targets: { id: string; name: string; type: string; centroid: number[] }[];
 }
 interface Snapshot {
 	features: { properties: { NAME: string; POP_MAX: number; ADM1NAME: string } }[];
@@ -36,6 +36,10 @@ describe('v1.0 country expansion data', () => {
 			const second = read<MapData>('maps/' + secondId + '/map.json');
 			expect(region.country).toBe(spec.country);
 			expect(region.targets).toHaveLength(spec.expectedRegions);
+			const regionFacts = read<Record<string, Fact>>('maps/' + regionId + '/facts.json');
+			for (const [target, expected] of Object.entries(spec.expectedLargest ?? {})) {
+				expect(regionFacts[target]?.largestCity?.name, regionId + '/' + target).toBe(expected);
+			}
 			expect(second.country).toBe(spec.country);
 			if (spec.secondAdministrative) {
 				expect(second.targets).toHaveLength(spec.secondAdministrative.expectedRegions);
@@ -44,6 +48,12 @@ describe('v1.0 country expansion data', () => {
 				expect(second.targets.length).toBeGreaterThan(0);
 				expect(second.targets.every((t) => t.type === 'city')).toBe(true);
 				expect(second.regionsMap).toBe(regionId);
+				const facts = read<Record<string, Fact>>('maps/' + secondId + '/facts.json');
+				const canonical = region.targets.map((target) => target.name);
+				for (const target of second.targets) {
+					const association = facts[target.id]?.region;
+					expect(canonical, secondId + '/' + target.id).toContain(association ?? target.name);
+				}
 			}
 		}
 	);
@@ -80,6 +90,34 @@ describe('v1.0 country expansion data', () => {
 			else expect(regionNames).toContain(association);
 		}
 	});
+	it.each([
+		['ghana-towns-10k', 'dome', 'Greater Accra'],
+		['ghana-towns-10k', 'cape-coast', 'Central'],
+		['latvia-towns-5k', 'jurmala', 'Rīga'],
+		['congo-kinshasa-towns-10k', 'kalemie', 'Tanganyika'],
+		['tanzania-towns-10k', 'musoma', 'Mara']
+	])('%s/%s keeps its reviewed region association', (map, town, expected) => {
+		expect(read<Record<string, Fact>>('maps/' + map + '/facts.json')[town]?.region).toBe(expected);
+	});
+	it('places Dome by Accra and never calls it Western North’s largest city', () => {
+		const towns = read<MapData>('maps/ghana-towns-10k/map.json');
+		const dome = towns.targets.find((target) => target.id === 'dome');
+		expect(dome?.centroid[0]).toBeGreaterThan(-0.3);
+		expect(dome?.centroid[0]).toBeLessThan(-0.2);
+		expect(dome?.centroid[1]).toBeGreaterThan(5.6);
+		expect(dome?.centroid[1]).toBeLessThan(5.7);
+		const facts = read<Record<string, Fact>>('maps/ghana-regions/facts.json');
+		expect(facts['western-north']?.largestCity?.name).not.toBe('Dome');
+	});
+	it('excludes the four Taoyuan boroughs from Taiwan towns and regional largest-city facts', () => {
+		const excluded = ['Zhongli', 'Bade', 'Pingzhen', 'Yangmei'];
+		const towns = read<MapData>('maps/taiwan-towns-10k/map.json');
+		for (const name of excluded)
+			expect(towns.targets.map((target) => target.name)).not.toContain(name);
+		const facts = read<Record<string, Fact>>('maps/taiwan-counties-and-cities/facts.json');
+		for (const fact of Object.values(facts)) expect(excluded).not.toContain(fact.largestCity?.name);
+	});
+
 	it.each([
 		['ethiopia-towns-10k', ['Adama', 'Woliso', 'Hawassa'], ['Nazret', 'Giyon', 'Awasa']],
 		['iraq-towns-10k', ['Erbil', 'Az Zubayr'], ['Irbil', 'Az Aubayr']]

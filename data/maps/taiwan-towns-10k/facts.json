@@ -2,7 +2,7 @@
 	"keelung": {
 		"kind": "city",
 		"population": 500000,
-		"populationRank": 10,
+		"populationRank": 9,
 		"region": "Keelung City",
 		"coastal": true,
 		"position": "north-east",
@@ -79,7 +79,7 @@
 	"taoyuan": {
 		"kind": "city",
 		"population": 500000,
-		"populationRank": 11,
+		"populationRank": 10,
 		"region": "Taoyuan City",
 		"coastal": true,
 		"position": "north-east",
@@ -101,110 +101,10 @@
 			]
 		}
 	},
-	"zhongli": {
-		"kind": "city",
-		"population": 1632616,
-		"populationRank": 6,
-		"region": "Taoyuan City",
-		"coastal": true,
-		"position": "north",
-		"hooks": {
-			"en": [
-				"Its name was formerly romanized Chungli.",
-				"Zhongping Road preserves a historic commercial district.",
-				"Renhai Temple is a centre of traditional worship."
-			],
-			"it": [
-				"Il nome era precedentemente romanizzato Chungli.",
-				"Via Zhongping conserva uno storico quartiere commerciale.",
-				"Il Tempio Renhai è un centro di culto tradizionale."
-			],
-			"de": [
-				"Der Name wurde früher als Chungli romanisiert.",
-				"Die Zhongping-Straße bewahrt ein historisches Geschäftsviertel.",
-				"Der Renhai-Tempel ist ein Zentrum traditioneller Verehrung."
-			]
-		}
-	},
-	"bade": {
-		"kind": "city",
-		"population": 172065,
-		"populationRank": 18,
-		"region": "Taoyuan City",
-		"coastal": true,
-		"position": "north-east",
-		"hooks": {
-			"en": [
-				"Its old name Bakuaicuo meant eight houses.",
-				"Dabei Pond provides habitat for birds.",
-				"Sanyuan Temple preserves community religious traditions."
-			],
-			"it": [
-				"L’antico nome Bakuaicuo significava otto case.",
-				"Lo stagno Dabei offre un habitat agli uccelli.",
-				"Il Tempio Sanyuan conserva le tradizioni religiose della comunità."
-			],
-			"de": [
-				"Der alte Name Bakuaicuo bedeutete acht Häuser.",
-				"Der Dabei-Teich bietet Vögeln Lebensraum.",
-				"Der Sanyuan-Tempel bewahrt religiöse Gemeindetraditionen."
-			]
-		}
-	},
-	"pingzhen": {
-		"kind": "city",
-		"population": 201632,
-		"populationRank": 14,
-		"region": "Taoyuan City",
-		"coastal": true,
-		"position": "north",
-		"hooks": {
-			"en": [
-				"Its older settlement was known as Anping Town.",
-				"Historic irrigation channels recall its farming past.",
-				"Baozhong Yimin Temple preserves Hakka religious heritage."
-			],
-			"it": [
-				"L’antico insediamento era noto come Anping Town.",
-				"Gli storici canali irrigui ricordano il passato agricolo.",
-				"Il Tempio Baozhong Yimin conserva il patrimonio religioso hakka."
-			],
-			"de": [
-				"Die ältere Siedlung war als Anping Town bekannt.",
-				"Historische Bewässerungskanäle erinnern an die Landwirtschaftsgeschichte.",
-				"Der Baozhong-Yimin-Tempel bewahrt religiöses Hakka-Erbe."
-			]
-		}
-	},
-	"yangmei": {
-		"kind": "city",
-		"population": 175000,
-		"populationRank": 16,
-		"region": "Taoyuan City",
-		"coastal": true,
-		"position": "north",
-		"hooks": {
-			"en": [
-				"Its name recalls the wild waxberry trees that once grew here.",
-				"Fugang preserves an old trading street.",
-				"The Kuo Yuan Ye museum explores pastry and wedding traditions."
-			],
-			"it": [
-				"Il nome ricorda gli alberi di yangmei selvatici che crescevano qui.",
-				"Fugang conserva un’antica via commerciale.",
-				"Il museo Kuo Yuan Ye esplora le tradizioni dolciarie e nuziali."
-			],
-			"de": [
-				"Der Name erinnert an die hier einst wachsenden Wachsbeerbäume.",
-				"Fugang bewahrt eine alte Handelsstraße.",
-				"Das Kuo-Yuan-Ye-Museum zeigt Gebäck- und Hochzeitstraditionen."
-			]
-		}
-	},
 	"zhubei": {
 		"kind": "city",
 		"population": 200000,
-		"populationRank": 15,
+		"populationRank": 13,
 		"region": "Hsinchu County",
 		"coastal": true,
 		"position": "north",
@@ -229,7 +129,7 @@
 	"hsinchu": {
 		"kind": "city",
 		"population": 750000,
-		"populationRank": 7,
+		"populationRank": 6,
 		"region": "Hsinchu City",
 		"coastal": true,
 		"position": "north",
@@ -254,7 +154,7 @@
 	"yilan": {
 		"kind": "city",
 		"population": 150000,
-		"populationRank": 20,
+		"populationRank": 16,
 		"region": "Yilan County",
 		"coastal": true,
 		"position": "north-east",
@@ -276,6 +176,31 @@
 			]
 		}
 	},
+	"miaoli": {
+		"kind": "city",
+		"population": 150000,
+		"populationRank": 17,
+		"region": "Miaoli County",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name was adapted from the Taokas place name Pali.",
+				"The 460-metre Gongweixu railway tunnel was completed in 1903.",
+				"Trains were rerouted in 1998, leaving the old tunnel for preservation."
+			],
+			"it": [
+				"Il nome fu adattato dal toponimo taokas Pali.",
+				"Il tunnel ferroviario Gongweixu, lungo 460 metri, fu completato nel 1903.",
+				"Nel 1998 i treni furono deviati, permettendo di conservare il vecchio tunnel."
+			],
+			"de": [
+				"Der Name wurde aus dem Taokas-Ortsnamen Pali übernommen.",
+				"Der 460 Meter lange Eisenbahntunnel Gongweixu wurde 1903 fertiggestellt.",
+				"1998 wurden die Züge umgeleitet, sodass der alte Tunnel erhalten werden konnte."
+			]
+		}
+	},
 	"taichung": {
 		"kind": "city",
 		"population": 2629323,
@@ -283,7 +208,7 @@
 		"population1950": 194000,
 		"region": "Taichung City",
 		"coastal": false,
-		"position": "west",
+		"position": "centre",
 		"hooks": {
 			"en": [
 				"Taichung means central Taiwan.",
@@ -305,10 +230,10 @@
 	"changhua": {
 		"kind": "city",
 		"population": 750000,
-		"populationRank": 8,
+		"populationRank": 7,
 		"region": "Changhua County",
 		"coastal": true,
-		"position": "west",
+		"position": "centre",
 		"hooks": {
 			"en": [
 				"Its earlier name was Banxian.",
@@ -330,7 +255,7 @@
 	"hualien": {
 		"kind": "city",
 		"population": 350468,
-		"populationRank": 13,
+		"populationRank": 12,
 		"region": "Hualien County",
 		"coastal": true,
 		"position": "east",
@@ -355,10 +280,10 @@
 	"nantou": {
 		"kind": "city",
 		"population": 165000,
-		"populationRank": 19,
+		"populationRank": 15,
 		"region": "Nantou County",
 		"coastal": false,
-		"position": "west",
+		"position": "centre",
 		"hooks": {
 			"en": [
 				"Its name transcribes the Hoanya place name Ramtau.",
@@ -377,13 +302,63 @@
 			]
 		}
 	},
+	"douliou": {
+		"kind": "city",
+		"population": 106653,
+		"populationRank": 18,
+		"region": "Yunlin County",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name is also romanized Douliu.",
+				"Taiping Street preserves ornate shopfronts from the Japanese colonial era.",
+				"Yunzhong Street’s former police dormitories became cultural spaces."
+			],
+			"it": [
+				"Il nome è trascritto anche Douliu.",
+				"Taiping Street conserva elaborate facciate di negozi dell’epoca coloniale giapponese.",
+				"Gli ex alloggi della polizia di Yunzhong Street sono diventati spazi culturali."
+			],
+			"de": [
+				"Der Name wird auch Douliu geschrieben.",
+				"Die Taiping-Straße bewahrt verzierte Ladenfassaden aus der japanischen Kolonialzeit.",
+				"Frühere Polizeiunterkünfte an der Yunzhong-Straße wurden zu Kulturräumen."
+			]
+		}
+	},
+	"magong": {
+		"kind": "city",
+		"population": 56435,
+		"populationRank": 19,
+		"region": "Penghu County",
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name recalls the historic Mazu temple.",
+				"The Four-Eyed Well has four circular openings for drawing water.",
+				"Shuncheng Gate preserves part of the old city defences."
+			],
+			"it": [
+				"Il nome ricorda lo storico tempio di Mazu.",
+				"Il Pozzo dei quattro occhi ha quattro aperture circolari per attingere acqua.",
+				"La porta Shuncheng conserva parte delle antiche difese cittadine."
+			],
+			"de": [
+				"Der Name erinnert an den historischen Mazu-Tempel.",
+				"Der Vier-Augen-Brunnen hat vier runde Öffnungen zum Wasserschöpfen.",
+				"Das Shuncheng-Tor bewahrt einen Teil der alten Stadtbefestigung."
+			]
+		}
+	},
 	"chiayi": {
 		"kind": "city",
 		"population": 500000,
-		"populationRank": 12,
+		"populationRank": 11,
 		"region": "Chiayi City",
 		"coastal": false,
-		"position": "west",
+		"position": "centre",
 		"hooks": {
 			"en": [
 				"Formerly Tsulosan, it was renamed Chiayi in 1787.",
@@ -399,6 +374,31 @@
 				"Das frühere Tsulosan wurde 1787 in Chiayi umbenannt.",
 				"Die Alishan-Waldbahn beginnt hier.",
 				"Das Hinoki-Dorf bewahrt frühere Forstarbeiterunterkünfte."
+			]
+		}
+	},
+	"puzi": {
+		"kind": "city",
+		"population": 50000,
+		"populationRank": 20,
+		"region": "Chiayi County",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"An earlier name meant beneath the hackberry tree.",
+				"Peitian Temple is a centre of Mazu worship.",
+				"The embroidery hall preserves a tradition of religious needlework."
+			],
+			"it": [
+				"Un nome precedente significava sotto l’albero di bagolaro.",
+				"Il tempio Peitian è un centro del culto di Mazu.",
+				"Il museo del ricamo conserva una tradizione di lavori ad ago religiosi."
+			],
+			"de": [
+				"Ein früherer Name bedeutete unter dem Zürgelbaum.",
+				"Der Peitian-Tempel ist ein Zentrum der Mazu-Verehrung.",
+				"Das Stickereimuseum bewahrt eine Tradition religiöser Nadelarbeiten."
 			]
 		}
 	},
@@ -431,10 +431,10 @@
 	"taitung": {
 		"kind": "city",
 		"population": 175000,
-		"populationRank": 17,
+		"populationRank": 14,
 		"region": "Taitung County",
 		"coastal": true,
-		"position": "south",
+		"position": "south-east",
 		"hooks": {
 			"en": [
 				"Taitung means eastern Taiwan.",
@@ -456,10 +456,10 @@
 	"pingtung": {
 		"kind": "city",
 		"population": 503530,
-		"populationRank": 9,
+		"populationRank": 8,
 		"region": "Pingtung County",
 		"coastal": true,
-		"position": "south-west",
+		"position": "south",
 		"hooks": {
 			"en": [
 				"Its earlier name was Akau.",

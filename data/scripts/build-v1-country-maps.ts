@@ -1,3 +1,4 @@
+import { placeCorrectionAttribution } from './placeCorrections.js';
 import { V1_COUNTRIES } from './v1CountrySpecs.js';
 // Reproducible maps for all 22 countries in the approved 1.0 plan (#241).
 // Run in the documented WSL toolchain. Each map is generated, never hand-edited.
@@ -26,7 +27,13 @@ for (const country of selected) {
 		'--name=' + country.country + ' — ' + country.label,
 		...(country.nameField ? ['--name-field=' + country.nameField] : []),
 		...(country.source
-			? ['--source=' + country.source, '--attribution=' + country.attribution]
+			? [
+					'--source=' + country.source,
+					'--attribution=' +
+						[country.attribution, placeCorrectionAttribution(country.country)]
+							.filter(Boolean)
+							.join('; ')
+				]
 			: []),
 		...(country.boundaryFacts ? ['--boundary-facts=true'] : []),
 		...(country.largestCityFacts === false ? ['--largest-city-facts=false'] : []),

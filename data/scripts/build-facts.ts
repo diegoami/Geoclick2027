@@ -1,3 +1,4 @@
+import { correctPlaces } from './placeCorrections.js';
 import { canonicalRegionAtPoint } from './boundaryRegions.js';
 import { applyBoundaryRenames } from './boundaryRenames.js';
 // Builds data/maps/<id>/facts.json - the derived half of the fact box
@@ -123,10 +124,16 @@ function sourcesFor(bbox: Bbox, placesPath: string = PLACES_SHP) {
 			[...spat, '-select', 'name,elevation,featurecla'],
 			tmp('peaks')
 		),
-		places: exportGeojson(
-			placesPath,
-			[...spat, '-select', 'NAME,NAME_DE,NAME_IT,POP_MAX,POP1950,ADM0CAP,ADM1NAME,ADM0NAME'],
-			tmp('places')
+		// Read snapshots directly: OGR's fixed Natural Earth field selection drops
+		// coordinatePrecision, silently disabling coastal association fallbacks.
+		places: correctPlaces(
+			placesPath !== PLACES_SHP
+				? readGeojson(placesPath)
+				: exportGeojson(
+						placesPath,
+						[...spat, '-select', 'NAME,NAME_DE,NAME_IT,POP_MAX,POP1950,ADM0CAP,ADM1NAME,ADM0NAME'],
+						tmp('places')
+					)
 		),
 		admin1: exportGeojson(
 			ADMIN1_SHP,
@@ -241,7 +248,8 @@ function factsForRegionMap(
 	borders: Map<string, Set<string>>,
 	// Targets from a register outside Natural Earth (#39): no admin-1 row is
 	// theirs, and the smallest one covering a district is its whole state.
-	ownRows = true
+	ownRows = true,
+	canonicalCountry?: string
 ): Record<string, DerivedFact> {
 	const coast = coastIndex(sources.coast.map((f) => f.geometry));
 	const countryMap = targets[0]?.type === 'country';
@@ -249,6 +257,7 @@ function factsForRegionMap(
 		? rowsByTarget(targets, sources.admin1, countryMap ? ['admin'] : ['name', 'region'])
 		: new Map<string, Feature[]>();
 
+	const canonicalNames = new Set(targets.map((target) => target.name));
 	const facts: Record<string, DerivedFact> = {};
 	for (const target of targets) {
 		const fact: DerivedFact = { kind: 'region' };
@@ -287,7 +296,19 @@ function factsForRegionMap(
 			const inside = (f: Feature) =>
 				shapes.some((s) => pointInPolygon(f.geometry.coordinates as Position, s));
 			const towns = sources.places
-				.filter((f) => typeof f.properties.POP_MAX === 'number' && inside(f))
+				.filter(
+					(f) =>
+						typeof f.properties.POP_MAX === 'number' &&
+						(canonicalCountry
+							? canonicalRegionAtPoint(
+									f.geometry.coordinates as Position,
+									sources.admin1,
+									canonicalCountry,
+									canonicalNames,
+									Number(f.properties.coordinatePrecision ?? 0)
+								) === target.name
+							: inside(f))
+				)
 				.sort((a, b) => Number(b.properties.POP_MAX) - Number(a.properties.POP_MAX));
 			if (towns[0]) {
 				fact.largestCity = {
@@ -456,7 +477,8 @@ async function buildOne(mapId: string): Promise<number> {
 				sources,
 				extent,
 				await adjacencyForMapDir(absOutDir),
-				!map.boundarySource || !!map.boundaryFacts
+				!map.boundarySource || !!map.boundaryFacts,
+				map.boundaryFacts ? map.country : undefined
 			);
 
 	if (map.largestCityFacts === false)

@@ -57,7 +57,7 @@ npx playwright install chromium  # once per machine: component tests run in it
 npm run dev
 ```
 
-Open the URL Vite prints (typically `http://localhost:5173`).
+Open the URL Vite prints (typically `http://localhost:5187`).
 
 `npm run setup-hooks` points git at the committed `.githooks/`, whose
 `pre-push` runs the four quality gates (`check`, `test`, `lint`, `build`)

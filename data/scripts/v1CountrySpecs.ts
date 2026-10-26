@@ -212,6 +212,8 @@ export const V1_COUNTRIES: Country[] = [
 		source: 'data/boundaries/taiwan-gb-9469f09.geojson',
 		boundaryFacts: true,
 		townNameField: 'NAME',
+		// Owner: exclude the four Taoyuan boroughs, as with Petržalka.
+		townExclude: 'Zhongli,Bade,Pingzhen,Yangmei',
 		attribution:
 			'geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/'
 	},
@@ -231,6 +233,7 @@ export const V1_COUNTRIES: Country[] = [
 	{
 		country: 'Democratic Republic of the Congo',
 		id: 'congo-kinshasa',
+		expectedLargest: { tanganyika: 'Kalemie' },
 		type: 'province',
 		label: 'Provinces',
 		expectedRegions: 26,
@@ -245,6 +248,7 @@ export const V1_COUNTRIES: Country[] = [
 	{
 		country: 'Ghana',
 		id: 'ghana',
+		expectedLargest: { central: 'Cape Coast' },
 		townSource: 'data/places/ghana.geojson',
 		type: 'region',
 		label: 'Regions',
@@ -258,6 +262,7 @@ export const V1_COUNTRIES: Country[] = [
 	},
 	{
 		...currentSource('ethiopia'),
+		expectedLargest: { tigray: 'Mekele' },
 		type: 'region',
 		label: 'Regions',
 		expectedRegions: 14,
@@ -266,6 +271,7 @@ export const V1_COUNTRIES: Country[] = [
 	},
 	{
 		...currentSource('tanzania'),
+		expectedLargest: { mara: 'Musoma', kigoma: 'Kigoma' },
 		type: 'region',
 		label: 'Regions',
 		expectedRegions: 31,

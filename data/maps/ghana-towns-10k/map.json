@@ -2,7 +2,7 @@
 	"id": "ghana-towns-10k",
 	"name": "Ghana — Towns",
 	"country": "Ghana",
-	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; Open Street Map; 2021; Creative Commons Attribution-ShareAlike 2.0; https://creativecommons.org/licenses/by-sa/2.0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; Open Street Map; 2021; Creative Commons Attribution-ShareAlike 2.0; https://creativecommons.org/licenses/by-sa/2.0/; Coordinate corrections: GeoNames, CC BY 4.0, https://www.geonames.org; Musoma coordinate: Tanzania municipal strategic plan; data/scripts/placeCorrections.ts; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org; Coordinate corrections: GeoNames, CC BY 4.0, https://www.geonames.org; Musoma coordinate: Tanzania municipal strategic plan; data/scripts/placeCorrections.ts",
 	"placesSource": "data/places/ghana.geojson",
 	"regionsMap": "ghana-regions",
 	"tiles": "tiles.pmtiles",
@@ -113,7 +113,7 @@
 				0.47362,
 				7.15181
 			],
-			"colorIndex": 4
+			"colorIndex": 5
 		},
 		{
 			"id": "mampong",
@@ -131,7 +131,7 @@
 				-1.4,
 				7.066666666
 			],
-			"colorIndex": 0
+			"colorIndex": 2
 		},
 		{
 			"id": "agogo",
@@ -149,7 +149,7 @@
 				-1.08193,
 				6.80004
 			],
-			"colorIndex": 3
+			"colorIndex": 4
 		},
 		{
 			"id": "kumasi",
@@ -167,7 +167,7 @@
 				-1.625,
 				6.7
 			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "ho",
@@ -185,25 +185,7 @@
 				0.4713,
 				6.60084
 			],
-			"colorIndex": 5
-		},
-		{
-			"id": "dome",
-			"name": "Dome",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				-2.79603,
-				6.56498
-			],
-			"bbox": [
-				-2.79603,
-				6.56498,
-				-2.79603,
-				6.56498
-			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
 			"id": "obuasi",
@@ -221,7 +203,7 @@
 				-1.66796,
 				6.20228
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "aflao",
@@ -257,7 +239,7 @@
 				-0.25913,
 				6.09408
 			],
-			"colorIndex": 3
+			"colorIndex": 0
 		},
 		{
 			"id": "tema",
@@ -275,7 +257,25 @@
 				-0.01657,
 				5.6698
 			],
-			"colorIndex": 2
+			"colorIndex": 5
+		},
+		{
+			"id": "dome",
+			"name": "Dome",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.236099,
+				5.650029
+			],
+			"bbox": [
+				-0.236099,
+				5.650029,
+				-0.236099,
+				5.650029
+			],
+			"colorIndex": 1
 		},
 		{
 			"id": "accra",
@@ -293,7 +293,7 @@
 				-0.1969,
 				5.55602
 			],
-			"colorIndex": 4
+			"colorIndex": 2
 		},
 		{
 			"id": "winneba",
@@ -311,7 +311,7 @@
 				-0.62313,
 				5.35113
 			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "tarkwa",
@@ -329,7 +329,7 @@
 				-1.98956,
 				5.30383
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "cape-coast",
@@ -347,7 +347,7 @@
 				-1.25,
 				5.1
 			],
-			"colorIndex": 0
+			"colorIndex": 5
 		},
 		{
 			"id": "sekondi-takoradi",
@@ -365,7 +365,7 @@
 				-1.75773,
 				4.92678
 			],
-			"colorIndex": 5
+			"colorIndex": 4
 		}
 	],
 	"tourOrder": [
@@ -379,11 +379,11 @@
 		"agogo",
 		"kumasi",
 		"ho",
-		"dome",
 		"obuasi",
 		"aflao",
 		"koforidua",
 		"tema",
+		"dome",
 		"accra",
 		"winneba",
 		"tarkwa",

@@ -22,7 +22,7 @@
 				121.7332824,
 				25.1332579
 			],
-			"colorIndex": 2
+			"colorIndex": 3
 		},
 		{
 			"id": "taipei",
@@ -40,7 +40,7 @@
 				121.5683333,
 				25.0358333
 			],
-			"colorIndex": 0
+			"colorIndex": 1
 		},
 		{
 			"id": "new-taipei",
@@ -58,7 +58,7 @@
 				121.465,
 				25.0127778
 			],
-			"colorIndex": 5
+			"colorIndex": 2
 		},
 		{
 			"id": "taoyuan",
@@ -76,79 +76,7 @@
 				121.3111111,
 				24.9888889
 			],
-			"colorIndex": 4
-		},
-		{
-			"id": "zhongli",
-			"name": "Zhongli",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				121.2167765,
-				24.9650252
-			],
-			"bbox": [
-				121.2167765,
-				24.9650252,
-				121.2167765,
-				24.9650252
-			],
-			"colorIndex": 0
-		},
-		{
-			"id": "bade",
-			"name": "Bade",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				121.2988889,
-				24.9575
-			],
-			"bbox": [
-				121.2988889,
-				24.9575,
-				121.2988889,
-				24.9575
-			],
 			"colorIndex": 3
-		},
-		{
-			"id": "pingzhen",
-			"name": "Pingzhen",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				121.2161111,
-				24.9438889
-			],
-			"bbox": [
-				121.2161111,
-				24.9438889,
-				121.2161111,
-				24.9438889
-			],
-			"colorIndex": 2
-		},
-		{
-			"id": "yangmei",
-			"name": "Yangmei",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				121.15,
-				24.9166667
-			],
-			"bbox": [
-				121.15,
-				24.9166667,
-				121.15,
-				24.9166667
-			],
-			"colorIndex": 1
 		},
 		{
 			"id": "zhubei",
@@ -166,7 +94,7 @@
 				121.0119444,
 				24.8333333
 			],
-			"colorIndex": 3
+			"colorIndex": 2
 		},
 		{
 			"id": "hsinchu",
@@ -202,7 +130,25 @@
 				121.75,
 				24.75
 			],
-			"colorIndex": 1
+			"colorIndex": 0
+		},
+		{
+			"id": "miaoli",
+			"name": "Miaoli",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.82,
+				24.57
+			],
+			"bbox": [
+				120.82,
+				24.57,
+				120.82,
+				24.57
+			],
+			"colorIndex": 5
 		},
 		{
 			"id": "taichung",
@@ -220,7 +166,7 @@
 				120.681667,
 				24.1520775
 			],
-			"colorIndex": 1
+			"colorIndex": 0
 		},
 		{
 			"id": "changhua",
@@ -238,7 +184,7 @@
 				120.5134086,
 				24.0734001
 			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
 			"id": "hualien",
@@ -256,7 +202,7 @@
 				121.6000089,
 				23.9837415
 			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
 			"id": "nantou",
@@ -274,7 +220,43 @@
 				120.6833333,
 				23.9166667
 			],
-			"colorIndex": 5
+			"colorIndex": 2
+		},
+		{
+			"id": "douliou",
+			"name": "Douliou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.5438889,
+				23.7075
+			],
+			"bbox": [
+				120.5438889,
+				23.7075,
+				120.5438889,
+				23.7075
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "magong",
+			"name": "Magong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.5833333,
+				23.5666667
+			],
+			"bbox": [
+				119.5833333,
+				23.5666667,
+				119.5833333,
+				23.5666667
+			],
+			"colorIndex": 4
 		},
 		{
 			"id": "chiayi",
@@ -292,7 +274,25 @@
 				120.4350671,
 				23.4754521
 			],
-			"colorIndex": 0
+			"colorIndex": 5
+		},
+		{
+			"id": "puzi",
+			"name": "Puzi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.2419444,
+				23.4611111
+			],
+			"bbox": [
+				120.2419444,
+				23.4611111,
+				120.2419444,
+				23.4611111
+			],
+			"colorIndex": 3
 		},
 		{
 			"id": "tainan",
@@ -310,7 +310,7 @@
 				120.2000427,
 				23.0000031
 			],
-			"colorIndex": 4
+			"colorIndex": 5
 		},
 		{
 			"id": "taitung",
@@ -328,7 +328,7 @@
 				121.140037,
 				22.7553927
 			],
-			"colorIndex": 3
+			"colorIndex": 4
 		},
 		{
 			"id": "pingtung",
@@ -346,7 +346,7 @@
 				120.4816792,
 				22.6817021
 			],
-			"colorIndex": 5
+			"colorIndex": 0
 		},
 		{
 			"id": "kaohsiung",
@@ -364,7 +364,7 @@
 				120.2666019,
 				22.6333071
 			],
-			"colorIndex": 0
+			"colorIndex": 1
 		}
 	],
 	"tourOrder": [
@@ -372,18 +372,18 @@
 		"taipei",
 		"new-taipei",
 		"taoyuan",
-		"zhongli",
-		"bade",
-		"pingzhen",
-		"yangmei",
 		"zhubei",
 		"hsinchu",
 		"yilan",
+		"miaoli",
 		"taichung",
 		"changhua",
 		"hualien",
 		"nantou",
+		"douliou",
+		"magong",
 		"chiayi",
+		"puzi",
 		"tainan",
 		"taitung",
 		"pingtung",

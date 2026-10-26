@@ -3,7 +3,8 @@
 		"Name-facts for Taiwan (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind.",
+		"Owner excludes four Taoyuan boroughs from towns; their authored text is preserved under _excludedDistricts for possible future district maps."
 	],
 	"taipei": {
 		"city": {
@@ -196,6 +197,24 @@
 		"pingtung:city": [
 			"https://en.wikipedia.org/wiki/Pingtung_City",
 			"https://eng.taiwan.net.tw/m1.aspx?sno=0042423"
+		],
+		"miaoli:city": [
+			"https://www.miaoli.gov.tw/eng/News_map.aspx?n=441&sms=9525",
+			"https://eng.taiwan.net.tw/m1.aspx?id=A12-00565&sNo=0002110"
+		],
+		"douliou:city": [
+			"https://www.yunlin.gov.tw/English/News_Content.aspx?n=1324&s=608499&sms=9695",
+			"https://www.taipeitimes.com/News/feat/archives/2021/09/03/2003763709"
+		],
+		"magong:city": [
+			"https://www.penghu-nsa.gov.tw/english/InDepthExperience/ThematicTours/CultureTour/CultureTour02eng.htm",
+			"https://www.penghu-nsa.gov.tw/english/InDepthExperience/ThematicTours/CultureTour/CultureTour01eng.htm",
+			"https://www.penghu.gov.tw/Tmakun/en/home.jsp?id=14"
+		],
+		"puzi:city": [
+			"https://taiwan-scene.com/2021/06/05/exploring-taiwans-mazu-belief-in-chiayi-a-trip-to-puzi/",
+			"https://taiwangods.moi.gov.tw/html/cultural_EN/3_0011.aspx?i=270",
+			"https://www.swcoast-nsa.gov.tw/en/attraction/details/541"
 		]
 	},
 	"lienchiang-county": {
@@ -806,82 +825,6 @@
 			]
 		}
 	},
-	"zhongli": {
-		"city": {
-			"en": [
-				"Its name was formerly romanized Chungli.",
-				"Zhongping Road preserves a historic commercial district.",
-				"Renhai Temple is a centre of traditional worship."
-			],
-			"it": [
-				"Il nome era precedentemente romanizzato Chungli.",
-				"Via Zhongping conserva uno storico quartiere commerciale.",
-				"Il Tempio Renhai è un centro di culto tradizionale."
-			],
-			"de": [
-				"Der Name wurde früher als Chungli romanisiert.",
-				"Die Zhongping-Straße bewahrt ein historisches Geschäftsviertel.",
-				"Der Renhai-Tempel ist ein Zentrum traditioneller Verehrung."
-			]
-		}
-	},
-	"bade": {
-		"city": {
-			"en": [
-				"Its old name Bakuaicuo meant eight houses.",
-				"Dabei Pond provides habitat for birds.",
-				"Sanyuan Temple preserves community religious traditions."
-			],
-			"it": [
-				"L’antico nome Bakuaicuo significava otto case.",
-				"Lo stagno Dabei offre un habitat agli uccelli.",
-				"Il Tempio Sanyuan conserva le tradizioni religiose della comunità."
-			],
-			"de": [
-				"Der alte Name Bakuaicuo bedeutete acht Häuser.",
-				"Der Dabei-Teich bietet Vögeln Lebensraum.",
-				"Der Sanyuan-Tempel bewahrt religiöse Gemeindetraditionen."
-			]
-		}
-	},
-	"pingzhen": {
-		"city": {
-			"en": [
-				"Its older settlement was known as Anping Town.",
-				"Historic irrigation channels recall its farming past.",
-				"Baozhong Yimin Temple preserves Hakka religious heritage."
-			],
-			"it": [
-				"L’antico insediamento era noto come Anping Town.",
-				"Gli storici canali irrigui ricordano il passato agricolo.",
-				"Il Tempio Baozhong Yimin conserva il patrimonio religioso hakka."
-			],
-			"de": [
-				"Die ältere Siedlung war als Anping Town bekannt.",
-				"Historische Bewässerungskanäle erinnern an die Landwirtschaftsgeschichte.",
-				"Der Baozhong-Yimin-Tempel bewahrt religiöses Hakka-Erbe."
-			]
-		}
-	},
-	"yangmei": {
-		"city": {
-			"en": [
-				"Its name recalls the wild waxberry trees that once grew here.",
-				"Fugang preserves an old trading street.",
-				"The Kuo Yuan Ye museum explores pastry and wedding traditions."
-			],
-			"it": [
-				"Il nome ricorda gli alberi di yangmei selvatici che crescevano qui.",
-				"Fugang conserva un’antica via commerciale.",
-				"Il museo Kuo Yuan Ye esplora le tradizioni dolciarie e nuziali."
-			],
-			"de": [
-				"Der Name erinnert an die hier einst wachsenden Wachsbeerbäume.",
-				"Fugang bewahrt eine alte Handelsstraße.",
-				"Das Kuo-Yuan-Ye-Museum zeigt Gebäck- und Hochzeitstraditionen."
-			]
-		}
-	},
 	"zhubei": {
 		"city": {
 			"en": [
@@ -975,6 +918,160 @@
 				"Das Shengli-Dorf bewahrt Militärunterkünfte aus japanischer Zeit.",
 				"Der Cifeng-Tempel ist Mazu geweiht."
 			]
+		}
+	},
+	"miaoli": {
+		"city": {
+			"en": [
+				"Its name was adapted from the Taokas place name Pali.",
+				"The 460-metre Gongweixu railway tunnel was completed in 1903.",
+				"Trains were rerouted in 1998, leaving the old tunnel for preservation."
+			],
+			"it": [
+				"Il nome fu adattato dal toponimo taokas Pali.",
+				"Il tunnel ferroviario Gongweixu, lungo 460 metri, fu completato nel 1903.",
+				"Nel 1998 i treni furono deviati, permettendo di conservare il vecchio tunnel."
+			],
+			"de": [
+				"Der Name wurde aus dem Taokas-Ortsnamen Pali übernommen.",
+				"Der 460 Meter lange Eisenbahntunnel Gongweixu wurde 1903 fertiggestellt.",
+				"1998 wurden die Züge umgeleitet, sodass der alte Tunnel erhalten werden konnte."
+			]
+		}
+	},
+	"douliou": {
+		"city": {
+			"en": [
+				"Its name is also romanized Douliu.",
+				"Taiping Street preserves ornate shopfronts from the Japanese colonial era.",
+				"Yunzhong Street’s former police dormitories became cultural spaces."
+			],
+			"it": [
+				"Il nome è trascritto anche Douliu.",
+				"Taiping Street conserva elaborate facciate di negozi dell’epoca coloniale giapponese.",
+				"Gli ex alloggi della polizia di Yunzhong Street sono diventati spazi culturali."
+			],
+			"de": [
+				"Der Name wird auch Douliu geschrieben.",
+				"Die Taiping-Straße bewahrt verzierte Ladenfassaden aus der japanischen Kolonialzeit.",
+				"Frühere Polizeiunterkünfte an der Yunzhong-Straße wurden zu Kulturräumen."
+			]
+		}
+	},
+	"magong": {
+		"city": {
+			"en": [
+				"Its name recalls the historic Mazu temple.",
+				"The Four-Eyed Well has four circular openings for drawing water.",
+				"Shuncheng Gate preserves part of the old city defences."
+			],
+			"it": [
+				"Il nome ricorda lo storico tempio di Mazu.",
+				"Il Pozzo dei quattro occhi ha quattro aperture circolari per attingere acqua.",
+				"La porta Shuncheng conserva parte delle antiche difese cittadine."
+			],
+			"de": [
+				"Der Name erinnert an den historischen Mazu-Tempel.",
+				"Der Vier-Augen-Brunnen hat vier runde Öffnungen zum Wasserschöpfen.",
+				"Das Shuncheng-Tor bewahrt einen Teil der alten Stadtbefestigung."
+			]
+		}
+	},
+	"puzi": {
+		"city": {
+			"en": [
+				"An earlier name meant beneath the hackberry tree.",
+				"Peitian Temple is a centre of Mazu worship.",
+				"The embroidery hall preserves a tradition of religious needlework."
+			],
+			"it": [
+				"Un nome precedente significava sotto l’albero di bagolaro.",
+				"Il tempio Peitian è un centro del culto di Mazu.",
+				"Il museo del ricamo conserva una tradizione di lavori ad ago religiosi."
+			],
+			"de": [
+				"Ein früherer Name bedeutete unter dem Zürgelbaum.",
+				"Der Peitian-Tempel ist ein Zentrum der Mazu-Verehrung.",
+				"Das Stickereimuseum bewahrt eine Tradition religiöser Nadelarbeiten."
+			]
+		}
+	},
+	"_excludedDistricts": {
+		"zhongli": {
+			"city": {
+				"en": [
+					"Its name was formerly romanized Chungli.",
+					"Zhongping Road preserves a historic commercial district.",
+					"Renhai Temple is a centre of traditional worship."
+				],
+				"it": [
+					"Il nome era precedentemente romanizzato Chungli.",
+					"Via Zhongping conserva uno storico quartiere commerciale.",
+					"Il Tempio Renhai è un centro di culto tradizionale."
+				],
+				"de": [
+					"Der Name wurde früher als Chungli romanisiert.",
+					"Die Zhongping-Straße bewahrt ein historisches Geschäftsviertel.",
+					"Der Renhai-Tempel ist ein Zentrum traditioneller Verehrung."
+				]
+			}
+		},
+		"bade": {
+			"city": {
+				"en": [
+					"Its old name Bakuaicuo meant eight houses.",
+					"Dabei Pond provides habitat for birds.",
+					"Sanyuan Temple preserves community religious traditions."
+				],
+				"it": [
+					"L’antico nome Bakuaicuo significava otto case.",
+					"Lo stagno Dabei offre un habitat agli uccelli.",
+					"Il Tempio Sanyuan conserva le tradizioni religiose della comunità."
+				],
+				"de": [
+					"Der alte Name Bakuaicuo bedeutete acht Häuser.",
+					"Der Dabei-Teich bietet Vögeln Lebensraum.",
+					"Der Sanyuan-Tempel bewahrt religiöse Gemeindetraditionen."
+				]
+			}
+		},
+		"pingzhen": {
+			"city": {
+				"en": [
+					"Its older settlement was known as Anping Town.",
+					"Historic irrigation channels recall its farming past.",
+					"Baozhong Yimin Temple preserves Hakka religious heritage."
+				],
+				"it": [
+					"L’antico insediamento era noto come Anping Town.",
+					"Gli storici canali irrigui ricordano il passato agricolo.",
+					"Il Tempio Baozhong Yimin conserva il patrimonio religioso hakka."
+				],
+				"de": [
+					"Die ältere Siedlung war als Anping Town bekannt.",
+					"Historische Bewässerungskanäle erinnern an die Landwirtschaftsgeschichte.",
+					"Der Baozhong-Yimin-Tempel bewahrt religiöses Hakka-Erbe."
+				]
+			}
+		},
+		"yangmei": {
+			"city": {
+				"en": [
+					"Its name recalls the wild waxberry trees that once grew here.",
+					"Fugang preserves an old trading street.",
+					"The Kuo Yuan Ye museum explores pastry and wedding traditions."
+				],
+				"it": [
+					"Il nome ricorda gli alberi di yangmei selvatici che crescevano qui.",
+					"Fugang conserva un’antica via commerciale.",
+					"Il museo Kuo Yuan Ye esplora le tradizioni dolciarie e nuziali."
+				],
+				"de": [
+					"Der Name erinnert an die hier einst wachsenden Wachsbeerbäume.",
+					"Fugang bewahrt eine alte Handelsstraße.",
+					"Das Kuo-Yuan-Ye-Museum zeigt Gebäck- und Hochzeitstraditionen."
+				]
+			}
 		}
 	}
 }

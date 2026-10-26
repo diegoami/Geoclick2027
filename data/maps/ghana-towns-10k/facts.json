@@ -155,7 +155,7 @@
 		"populationRank": 18,
 		"region": "Ashanti",
 		"coastal": false,
-		"position": "centre",
+		"position": "west",
 		"hooks": {
 			"en": [
 				"The traditional ruler, the Mamponghene, occupies the historic Silver Stool.",
@@ -246,31 +246,6 @@
 				"Das Gebäude des Regionalmuseums beherbergte früher den regionalen Rat der traditionellen Oberhäupter.",
 				"Das Volta-Regionalmuseum wurde 1973 eröffnet.",
 				"Das Asogli-Yamsfest feiert die Ernte und kulturelle Traditionen."
-			]
-		}
-	},
-	"dome": {
-		"kind": "city",
-		"population": 56655,
-		"populationRank": 15,
-		"region": "Western North",
-		"coastal": false,
-		"position": "south-west",
-		"hooks": {
-			"en": [
-				"Its name is commonly rendered phonetically as Dor-mi.",
-				"It contains a major traditional market of the Ga East municipality.",
-				"Tuesdays and Saturdays are traditionally its main market days."
-			],
-			"it": [
-				"Il nome è comunemente reso foneticamente come Dor-mi.",
-				"Ospita un importante mercato tradizionale della municipalità di Ga East.",
-				"Martedì e sabato sono tradizionalmente i principali giorni di mercato."
-			],
-			"de": [
-				"Der Name wird häufig lautlich als Dor-mi wiedergegeben.",
-				"Der Ort besitzt einen bedeutenden traditionellen Markt der Gemeinde Ga East.",
-				"Dienstag und Samstag sind traditionell die wichtigsten Markttage."
 			]
 		}
 	},
@@ -374,6 +349,31 @@
 			]
 		}
 	},
+	"dome": {
+		"kind": "city",
+		"population": 56655,
+		"populationRank": 15,
+		"region": "Greater Accra",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name is commonly rendered phonetically as Dor-mi.",
+				"It contains a major traditional market of the Ga East municipality.",
+				"Tuesdays and Saturdays are traditionally its main market days."
+			],
+			"it": [
+				"Il nome è comunemente reso foneticamente come Dor-mi.",
+				"Ospita un importante mercato tradizionale della municipalità di Ga East.",
+				"Martedì e sabato sono tradizionalmente i principali giorni di mercato."
+			],
+			"de": [
+				"Der Name wird häufig lautlich als Dor-mi wiedergegeben.",
+				"Der Ort besitzt einen bedeutenden traditionellen Markt der Gemeinde Ga East.",
+				"Dienstag und Samstag sind traditionell die wichtigsten Markttage."
+			]
+		}
+	},
 	"accra": {
 		"kind": "city",
 		"population": 1782150,
@@ -454,6 +454,7 @@
 		"kind": "city",
 		"population": 189925,
 		"populationRank": 5,
+		"region": "Central",
 		"coastal": true,
 		"position": "south",
 		"hooks": {

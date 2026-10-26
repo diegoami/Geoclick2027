@@ -1,3 +1,4 @@
+import { correctPlaces, placeCorrectionAttribution } from './placeCorrections.js';
 import { appendNeutralBoundaryContext } from './neutralBoundaryContext.js';
 // Builds one point-target map package (towns/cities) from Natural Earth's
 // populated-places dataset: filters by country + a minimum population,
@@ -168,6 +169,8 @@ async function main() {
 	if (regionsMap && (multiCountry || regionsMap.country !== country))
 		throw new Error('regions-map must belong to this one country');
 	if (regionsMap) attribution += '; ' + regionsMap.attribution;
+	const correctionCredit = placeCorrectionAttribution(country);
+	if (correctionCredit) attribution += '; ' + correctionCredit;
 	const outDir = args.out;
 	const minPopulation = Number(args['min-population'] ?? 100000);
 	// Adaptive selection, added when the >100k-population threshold alone
@@ -293,6 +296,7 @@ async function main() {
 		`[2/5] Selecting towns (population > ${minPopulation}, min ${minCount}, max ${maxCount === Infinity ? 'none' : maxCount}) and deriving draft map.json...`
 	);
 	const geojson: PlaceCollection = JSON.parse(readFileSync(filteredPath, 'utf-8'));
+	geojson.features = correctPlaces(geojson.features);
 	// The slice is applied first: "the 50 biggest" then means the 50 biggest
 	// of this part of the country, not of the whole of it.
 	const inSlice = withinBounds(

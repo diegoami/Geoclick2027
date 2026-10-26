@@ -1841,3 +1841,12 @@ editing them, run refresh-facts-hooks.ts and the strict audit above; the data
 regression suite enforces all 44 maps. Shared townNameFixups.ts normalizes
 Ethiopia's Nazret/Giyon/Awasa to Adama/Woliso/Hawassa and Iraq's Irbil/Az Aubayr
 to Erbil/Az Zubayr in both playable towns and derived regional facts.
+
+Reviewed place corrections are applied by build-points-map.ts and build-facts.ts
+before their population/spatial selection; raw input snapshots stay intact.
+placeCorrections.ts records the exact corrected points, census value and source
+URLs. GeoNames coordinate corrections are credited under CC BY 4.0 in affected
+map attribution. JSON place snapshots retain coordinatePrecision throughout
+fact generation; regional largest-city selection uses the same bounded resolver
+as town associations. expectedLargest checks guard Cape Coast, Kalemie, Musoma,
+Kigoma and Mekele. Taiwan excludes four Taoyuan boroughs by the owner's decision.

@@ -213,7 +213,7 @@ The owner handles itch.io navigation and upload; the developer still owes the
 asset pack above. No deployment was tested (deploys remain stopped).
 Vite defaults to strict port 5187 and Tauri uses the same devUrl, because
 5173 belongs to another game. Desktop opens at 1280 × 800 with a
-1024 × 768 minimum. Representative Nepal, Angola, DR Congo and Singapore
+1024 × 640 minimum (the 1024 × 768 lower-bound check remains). Representative Nepal, Angola, DR Congo and Singapore
 planning-area canvases loaded at 1280 × 800 without page errors or failed
 local asset requests. No installer or device check is implied.
 
@@ -458,3 +458,35 @@ without page errors or failed asset responses. Fresh external-family review
 precedes owner testing. Deployments remain stopped; no live deployment test
 was performed. No tag, publication, installer/device test or itch.io access
 is part of this content completion.
+
+### Full-scope PR review remediation
+
+The independent full-scope review of ebbb104 was BLOCK:
+https://github.com/diegoami/Geoclick2027/pull/243#pullrequestreview-5655934910.
+All six findings were reproduced and addressed before owner testing:
+
+- Dome's Wikidata item conflates the Accra locality with a Western North
+  coordinate. Shared placeCorrections.ts uses the GeoNames Accra coordinate
+  in both map selection and derived facts, while preserving the raw snapshot.
+- JSON snapshots are now read with all fields intact, including coordinate
+  precision. Both town-region and regional largest-city derivation use the
+  same bounded canonical resolver.
+- Sourced inhabited-centre coordinates replace obsolete shore points for
+  Kalemie, Musoma and Kigoma. Their regions' largest-city assertions are
+  enforced by the recipe and data tests, as are Cape Coast and Mekele.
+- Mekele's known-bad Natural Earth count is replaced with the observed 2007
+  census figure cited by UN-Habitat. The correction only replaces that stale
+  value; a future updated source count is preserved.
+- The owner explicitly excluded Zhongli, Bade, Pingzhen and Yangmei as Taoyuan
+  boroughs. Miaoli, Douliou, Magong and Puzi replace them in the twenty-town
+  selection and have complete sourced EN/IT/DE facts. The excluded districts'
+  authored text is preserved under _excludedDistricts in taiwan.json.
+- README uses localhost:5187. The desktop retains its 1280 × 800 default,
+  with a 1024 × 640 minimum that fits smaller Windows work areas.
+
+Ten affected map packages and all 44 expansion fact files were rebuilt.
+Every one of the 394 playable town-region associations resolves correctly;
+strict authored coverage remains 735/735. Four regional name-history sentences
+were also clarified to explicitly identify the namesake city.
+Focused data, boundary and translation checks: 1384 tests pass. Final local
+gates and a fresh follow-up review of these fixes precede owner testing.
