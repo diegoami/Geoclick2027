@@ -10,10 +10,10 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | --- | --- | --- |
 | Distribution | Complete; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) merged | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
 | Boundary and target audit | In progress; first six countries audited | Licensed, reproducible sources and suitable map types for 22 countries |
-| Maps | First twelve generated and registered; local checks complete, external review pending | Administrative maps and towns/urban maps; generated through the existing pipeline |
+| Maps | Twelve locally verified; PR #243 reviewed, owner testing/merge pending | Administrative maps and towns/urban maps; generated through the existing pipeline |
 | Facts | All 173 first-batch targets complete in EN/DE/IT | Facts for added targets in English, German, and Italian; existing target gaps audited |
 | Content completion | Pending | Deferred thin towns maps and German/Italian manual checked against agreed scope |
-| itch.io | Developer prepares package/assets; owner handles page and upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
+| itch.io | Draft covers/copy/previews exported; final packages/screenshots pending; owner handles upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
 | Release preparation | Pending | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
 | Milestone and publication | Pending | Owner-approved merge, milestone review, installers tried, exact tag and publication |
 | Retirement | Pending | Delete old release repository only after migration verification and merged replacement links |
@@ -201,7 +201,7 @@ Overlay committed tracked branch files before rebuilding; never copy Windows
 node_modules. MAPS.md records the batch commands.
 
 Version remains 0.20.0. No 1.0.0 bump, candidate, milestone review, tag,
-installers, publication or itch.io asset pack exists yet. The old releases
+installers, publication or final itch.io asset pack exists yet. The old releases
 repository still exists; its verified backup and migrated releases are preserved.
 The owner handles itch.io navigation and upload; the developer still owes the
 asset pack above. No deployment was tested (deploys remain stopped).
@@ -308,3 +308,32 @@ Data integrity/selection/coverage suites pass (981 tests). Final local Chromium
 checks show all retained/new Hungarian towns and the correct German Komitate
 label; Italian/German Tartu cards display both the authored translation and
 the restored region line. No page errors or horizontal overflow were reported.
+
+## First-batch owner handoff (2026-10-26)
+
+[PR #243](https://github.com/diegoami/Geoclick2027/pull/243) is ready for owner
+testing. The [Claude Opus 5.5 follow-up review](https://github.com/diegoami/Geoclick2027/pull/243#pullrequestreview-5650235087)
+covers code SHA 8ecfd30a828f67fe43b12921945706cf14516a3f and reports no blockers;
+all four original findings are fixed. Its remaining non-blocking name-polish
+item and disposition stay in the PR thread; address that item before final
+release screenshots. This handoff update changes documentation only.
+
+All four gates passed on the reviewed code, including 2,472 passing app tests
+across 64 files with the browser project. Local Chromium checks are recorded
+above. No deployment test: deploys remain stopped. The developer server is
+stopped; the owner can run it from the implementing worktree on port 5187.
+
+Draft itch.io promotional assets are exported durably at:
+C:/Users/diego/projects/Geoclick2027-itchio-assets/draft-2026-10-26-8ecfd30
+and the same path with .zip appended. The verified 15-file ZIP includes a
+630x500 cover, 1280x720 banner, short EN/IT/DE text, full English description,
+tags/settings notes, logo and a local listing-preview.html. Covers use the
+existing branding. Gameplay previews are authentic development captures with
+v0.20.0 badges, explicitly marked for replacement after the tagged 1.0.0 build.
+This is not the playable HTML5 ZIP or final 1.0.0 asset pack. The owner handles
+itch.io page changes/upload; no itch.io page was opened or changed.
+
+The other sixteen approved countries, final content polish, viewport/package
+work, final screenshots, installer/device checks, version bump, milestone
+review/tag/publication and old-repository retirement still remain. Merge of
+this first batch awaits the owner's explicit OK; no merge/tag/deploy occurred.
