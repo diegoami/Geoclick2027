@@ -41,6 +41,24 @@ describe('coverage CLI scope guards', () => {
 			true
 		);
 	});
+	it.each(['--strict', '--strict=true'])('recognizes the strict selector %s', (flag) => {
+		const dir = mkdtempSync(path.join(tmpdir(), 'gc-audit-strict-'));
+		dirs.push(dir);
+		const file = path.join(dir, 'audit.json');
+		execFileSync(
+			process.execPath,
+			['--import', 'tsx', script, '--country=Denmark', flag, '--json=' + file],
+			{ stdio: 'pipe' }
+		);
+		expect(JSON.parse(readFileSync(file, 'utf8')).strict).toBe(true);
+	});
+	it.each(['false', '1', 'typo'])('rejects ambiguous strict=%s', (value) => {
+		const result = spawnSync(process.execPath, ['--import', 'tsx', script, '--strict=' + value], {
+			encoding: 'utf8'
+		});
+		expect(result.status).not.toBe(0);
+		expect(result.stdout + result.stderr).toContain('Use --strict or --strict=true');
+	});
 	it.each(['--country=', '--maps='])('rejects the empty selector %s', (selector) => {
 		const result = spawnSync(process.execPath, ['--import', 'tsx', script, selector, '--strict'], {
 			encoding: 'utf8'

@@ -1,4 +1,4 @@
-import { placeSourceAttribution } from './placeSourceAttribution.js';
+import { combineAttributions, placeSourceAttribution } from './placeSourceAttribution.js';
 import { correctPlaces, placeCorrectionAttribution } from './placeCorrections.js';
 import { appendNeutralBoundaryContext } from './neutralBoundaryContext.js';
 // Builds one point-target map package (towns/cities) from Natural Earth's
@@ -150,10 +150,10 @@ async function main() {
 	// (placeSelection.ts's spacedOut). Off by default, so every map built
 	// before it existed rebuilds identically.
 	const minSpacing = Number(args['min-spacing'] ?? 0);
-	let attribution = placesSource
-		? placeSourceAttribution(sourcePath) +
-			'; Natural Earth (public domain), https://www.naturalearthdata.com'
-		: 'Natural Earth (public domain), https://www.naturalearthdata.com';
+	let attribution = combineAttributions(
+		placesSource ? placeSourceAttribution(sourcePath) : '',
+		'Natural Earth (public domain), https://www.naturalearthdata.com'
+	);
 	// Reuse the administrative map's current polygons and canonical names.
 	const regionsMapId = args['regions-map'];
 	const regionsMap = regionsMapId
@@ -170,9 +170,9 @@ async function main() {
 		: undefined;
 	if (regionsMap && (multiCountry || regionsMap.country !== country))
 		throw new Error('regions-map must belong to this one country');
-	if (regionsMap) attribution += '; ' + regionsMap.attribution;
+	if (regionsMap) attribution = combineAttributions(attribution, regionsMap.attribution);
 	const correctionCredit = placeCorrectionAttribution(country);
-	if (correctionCredit) attribution += '; ' + correctionCredit;
+	if (correctionCredit) attribution = combineAttributions(attribution, correctionCredit);
 	const outDir = args.out;
 	const minPopulation = Number(args['min-population'] ?? 100000);
 	// Adaptive selection, added when the >100k-population threshold alone
@@ -545,9 +545,7 @@ async function main() {
 		'--maximum-zoom=8',
 		'--drop-rate=1',
 		`--name=${mapName}`,
-		placesSource
-			? '--attribution=Wikidata (CC0); Natural Earth (public domain)'
-			: '--attribution=Natural Earth (public domain)',
+		'--attribution=' + attribution,
 		'--generate-ids',
 		'-L',
 		`targets:${targetsPath}`,

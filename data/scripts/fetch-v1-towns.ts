@@ -1,3 +1,5 @@
+import { createHash } from 'node:crypto';
+import { validateTownBindingsCache, type TownBindingsCache } from './townBindings.js';
 import { canonicalRegionAtPoint, type NamedRegion } from './boundaryRegions.js';
 // Snapshot towns for the v1.0 batch where Natural Earth is incomplete.
 // Run in WSL with GDAL and Natural Earth inputs (Lithuanian county fallback).
@@ -145,6 +147,8 @@ const countries: Country[] = [
 	}
 ];
 const args = parseArgs(process.argv.slice(2));
+if (Object.hasOwn(args, 'bindings') && (!args.bindings?.trim() || !args.country?.trim()))
+	throw new Error('--bindings requires one explicit --country and a cache file');
 const selected = args.country
 	? countries.filter((country) => country.id === args.country)
 	: countries;
@@ -199,9 +203,11 @@ for (const country of selected) {
 	url.search = new URLSearchParams({ query, format: 'json' }).toString();
 	// --bindings reprocesses an explicitly supplied saved SPARQL response.
 	const rawDir = path.join(REPO_ROOT, 'data/source/v1-town-bindings');
-	let raw: { results: { bindings: TownBinding[] } };
+	let raw: TownBindingsCache;
+	let bindingBytes: Buffer;
 	if (args.bindings) {
-		raw = JSON.parse(readFileSync(path.resolve(REPO_ROOT, args.bindings), 'utf8'));
+		bindingBytes = readFileSync(path.resolve(REPO_ROOT, args.bindings));
+		raw = validateTownBindingsCache(JSON.parse(bindingBytes.toString('utf8')), country.id, query);
 	} else {
 		const response = await fetch(url, {
 			headers: {
@@ -211,13 +217,25 @@ for (const country of selected) {
 			signal: AbortSignal.timeout(90_000)
 		});
 		if (!response.ok) throw new Error(country.name + ': Wikidata HTTP ' + response.status);
-		raw = (await response.json()) as typeof raw;
+		const reply = (await response.json()) as { results: { bindings: TownBinding[] } };
+		raw = validateTownBindingsCache(
+			{
+				...reply,
+				countryId: country.id,
+				fetchedAt: new Date().toISOString(),
+				query,
+				querySha256: createHash('sha256').update(query).digest('hex')
+			},
+			country.id,
+			query
+		);
+		bindingBytes = Buffer.from(JSON.stringify(raw));
 		mkdirSync(rawDir, { recursive: true });
-		writeFileSync(path.join(rawDir, country.id + '.json'), JSON.stringify(raw));
+		writeFileSync(path.join(rawDir, country.id + '.json'), bindingBytes);
 	}
-	if (!Array.isArray(raw.results?.bindings)) throw new Error('Invalid SPARQL bindings input');
-	if (raw.results.bindings.length === 10000)
-		throw new Error('Query limit reached; refusing partial snapshot');
+	const fetchedAt = raw.fetchedAt;
+	const bindingsSha256 = createHash('sha256').update(bindingBytes).digest('hex');
+	const reprocessedAt = args.bindings ? new Date().toISOString() : undefined;
 	const capitalIds = new Set(
 		raw.results.bindings
 			.filter((row) => row.capital?.value === 'true')
@@ -231,7 +249,6 @@ for (const country of selected) {
 		: undefined;
 	const boundaryNames = new Set(boundary?.features.map((f) => String(f.properties.name)) ?? []);
 	const excluded: { item: string | undefined; name: string; reason: string }[] = [];
-	const fetchedAt = new Date().toISOString();
 	const pointOverride = (row: TownBinding) =>
 		country.coordinateOverrides?.[row.item?.value?.split('/').pop() ?? ''];
 	const newest = newestTownRows(raw.results.bindings, fetchedAt, (row) => {
@@ -386,7 +403,10 @@ for (const country of selected) {
 						? 'Wikidata (CC0); missing county labels from Natural Earth (public domain), matched by point-in-polygon'
 						: 'Wikidata (CC0)',
 				fetchedAt,
-				query,
+				...(reprocessedAt ? { reprocessedAt } : {}),
+				bindingsSha256,
+				querySha256: raw.querySha256,
+				query: raw.query,
 				...(country.coordinateOverrides
 					? {
 							coordinateOverrides: country.coordinateOverrides,

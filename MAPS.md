@@ -1857,7 +1857,7 @@ Run in the same Linux toolchain as the country expansion:
 
     node --import tsx data/scripts/fetch-backlog-boundaries.ts
     node --import tsx data/scripts/fetch-v1-towns.ts --country=denmark
-    node --import tsx data/scripts/fetch-v1-towns.ts --country=serbia
+    node --import tsx data/scripts/fetch-serbia-towns.ts
     node --import tsx data/scripts/build-backlog-towns.ts
 
 The existing denmark-towns-50k, norway-towns-50k and serbia-towns-50k IDs are
@@ -1870,7 +1870,10 @@ combining the Belgrade/Niš municipal parts without using administrative totals;
 GeoNames supplies coordinates only. The importer checks the national urban
 total, every qualifying town and all 25 district associations. Population and
 coordinate source downloads are SHA256-pinned; Python's standard library reads
-the workbook, with no spreadsheet service or extra Python package.
+the workbook, with no spreadsheet service or extra Python package. Census
+oblast headers are retained and cross-walked to the pinned GeoNames district
+codes; the importer rejects every coordinate whose spatial district disagrees
+with the census, preventing homonymous villages from replacing urban towns.
 
 Norway is a curated twenty-town selection from Natural Earth, excluding Bærum
 municipality. It is not a national top-twenty list: the source lacks places
@@ -1891,7 +1894,11 @@ the builder now rejects a missing/blank name field before publishing metadata.
 
 Copenhagen uses the same Natural Earth representative centre as the old map.
 Its provenance remains recorded; containment uses the detailed Danish coastline
-without broadening geographic-association tolerance.
+without broadening geographic-association tolerance. To reprocess saved Wikidata
+data, use --country=denmark --bindings=data/source/v1-town-bindings/denmark.json.
+The cache requires the original country, query/digest and fetchedAt. Reprocessing
+records a separate reprocessedAt and input digest; it does not pretend a new
+network fetch occurred. A changed query requires a fresh response.
 Retired Norwegian county texts remain under _historicalCounties in norway.json.
 
 Whole-catalogue authored coverage, respecting aliases and city/region kinds:

@@ -11,7 +11,7 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | Distribution | Complete; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) merged | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
 | Boundary and target audit | All 22 new countries complete; Norway 15 counties; known Dutch/German corrections implemented | Licensed, reproducible sources and suitable map types for 22 countries |
 | Maps | All 44 expansion maps and six legacy-country packages complete (217 total) | Administrative maps and towns/urban maps; generated through the existing pipeline |
-| Facts | Current whole-catalogue checkpoint: 4551/6208 complete; 1408 missing and 249 short sets block 1.0 ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)) | Facts for added targets in English, German, and Italian; existing target gaps audited |
+| Facts | Current whole-catalogue checkpoint: 5061/6208 complete; 928 missing and 219 short sets block 1.0 ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)) | Facts for added targets in English, German, and Italian; existing target gaps audited |
 | Content completion | DE/IT manuals and all three town rebuilds complete; 120/120 playable country slots pass | Deferred thin towns maps and German/Italian manual checked against agreed scope |
 | itch.io | Draft covers/copy/previews exported; final packages/screenshots pending; owner handles upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
 | Release preparation | Waits for complete whole-catalogue facts; version remains 0.20.0 | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
@@ -563,8 +563,8 @@ Kartverket geometry. All three legacy town-map IDs remain stable.
 
 The three backlog country passes are complete: Denmark 28/28, Norway 35/35,
 Serbia 57/57 playable file/ID/kind slots, including two Danish continent aliases.
-The whole catalogue currently has 6208 distinct slots, of which 4551 have at
-least three sentences in EN/IT/DE; 1408 are missing and 249 are short. Germany,
+The whole catalogue currently has 6208 distinct slots, of which 5061 have at
+least three sentences in EN/IT/DE; 928 are missing and 219 are short. Germany,
 Poland, Romania, Malaysia and other country batches are researched in parallel,
 validated against exact queued IDs/kinds and integrated into authored files.
 All older gaps remain mandatory before 1.0. The complete Romania and Malaysia
@@ -604,3 +604,32 @@ the 21-town Danish/32-town Serbian packages at 1280 × 800, with no page errors
 or failed asset responses. Leipzig city/county separation and the Hanau cut
 also have focused regression coverage. These are local checks; no deployment
 or itch.io navigation was performed.
+
+
+### Second checkpoint review and identity/provenance remediation
+
+The independent review of 025941f is recorded at
+https://github.com/diegoami/Geoclick2027/pull/245#pullrequestreview-5660042591.
+It confirmed the border changes, country fact parity and prior fixes, with
+no blockers, one SHOULD and four MINOR findings. The Serbian snapshot’s four
+homonymous-village matches were reproduced and treated as rework despite not
+reaching the 32 shipped towns. Census oblast headers now constrain GeoNames
+matching, and every matched point must agree spatially with its census district.
+Kula, Odžaci, Aleksandrovac and Medveđa use their actual town coordinates.
+All 155 matched settlements pass the district check; two small unmatched places
+remain explicitly excluded. No shipped town IDs or populations change.
+
+The other findings are addressed too: --strict=true is strict and other value
+spellings fail; saved bindings require one country and original fetch/query
+provenance; the Danish snapshot retains 18:31:55.641Z as its 26 October fetch time
+and records reprocessing separately; Utrecht/Groningen hooks explicitly refer
+to their namesake city; repeated source-credit segments are removed. The actual
+PMTiles metadata now also credits RZS/GeoNames instead of hard-coded Wikidata.
+Focused provenance, coverage and country checks pass 29 tests. All six backlog
+packages are rebuilt, with original source SHA pins intact. Another review of
+the final head is required before owner testing.
+
+France’s 95 older gaps and Saudi Arabia’s 20 older gaps are complete: strict
+country audits pass 146/146 and 35/35 respectively. Poland remains 418/418.
+Germany and the Dutch municipalities continue in exact queued batches; no
+remaining gap is deferred past 1.0.

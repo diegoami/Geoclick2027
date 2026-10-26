@@ -3,18 +3,25 @@
 		"Name-facts for Saudi Arabia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"FT-73 added the thirteen regions (\"region\") and the towns of saudi-arabia-towns-100k (\"city\"); where a region and its town share an id, each has its own sentences. The Italian uses the Italian forms Gedda, La Mecca, Riad."
+		"FT-73 added the thirteen regions (\"region\") and the towns of saudi-arabia-towns-100k (\"city\"); where a region and its town share an id, each has its own sentences. The Italian uses the Italian forms Gedda, La Mecca, Riad.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"abha": {
 		"city": {
 			"en": [
-				"At about 2,200 m, it stays cool when the rest of the kingdom bakes."
+				"Abha’s Shada Palace was built in 1927 as a seat of the Aseer administration.",
+				"Abha’s four-storey Abu Malha Palace displays the traditional architecture and decorative plasterwork of Aseer.",
+				"Abha was chosen as the Arab Tourism Capital for 2017."
 			],
 			"it": [
-				"A circa 2.200 m, resta fresca quando il resto del regno è rovente."
+				"Il palazzo Shada di Abha fu costruito nel 1927 come sede dell’amministrazione dell’Aseer.",
+				"Il palazzo Abu Malha di Abha, a quattro piani, mostra l’architettura tradizionale e le decorazioni in gesso dell’Aseer.",
+				"Abha fu scelta come Capitale del turismo arabo per il 2017."
 			],
 			"de": [
-				"Auf etwa 2.200 m bleibt sie kühl, wenn der Rest des Königreichs in der Hitze brütet."
+				"Abhas Shada-Palast wurde 1927 als Sitz der Verwaltung von Asir erbaut.",
+				"Abhas vierstöckiger Abu-Malha-Palast zeigt traditionelle Architektur und dekorative Stuckarbeiten aus Asir.",
+				"Abha wurde für 2017 zur Hauptstadt des arabischen Tourismus gewählt."
 			]
 		}
 	},
@@ -40,13 +47,19 @@
 	"al-hillah": {
 		"city": {
 			"en": [
-				"The name means \"the settlement\" in Arabic."
+				"Al-Hillah was the original urban nucleus of the modern town of Hawtat Bani Tamim.",
+				"Nearby al-Hulweh preserves a fort associated with Imam Turki bin Abdullah, founder of the Second Saudi State.",
+				"An ardah poem by Saad bin Haryoul celebrated King Saud’s visit to Hawtat Bani Tamim."
 			],
 			"it": [
-				"Il nome significa \"l’insediamento\" in arabo."
+				"Al-Hillah fu il nucleo urbano originario della moderna città di Hawtat Bani Tamim.",
+				"La vicina al-Hulweh conserva un forte associato all’imam Turki bin Abdullah, fondatore del Secondo Stato Saudita.",
+				"Una poesia ardah di Saad bin Haryoul celebrò la visita di re Saud a Hawtat Bani Tamim."
 			],
 			"de": [
-				"Der Name bedeutet auf Arabisch „die Siedlung“."
+				"Al-Hillah war der ursprüngliche Siedlungskern der heutigen Stadt Hawtat Bani Tamim.",
+				"Das nahe al-Hulweh bewahrt ein Fort, das mit Imam Turki bin Abdullah, dem Gründer des zweiten saudischen Staates, verbunden ist.",
+				"Ein Ardah-Gedicht von Saad bin Haryoul feierte König Sauds Besuch in Hawtat Bani Tamim."
 			]
 		}
 	},
@@ -72,39 +85,57 @@
 	"al-kharj": {
 		"city": {
 			"en": [
-				"An oasis town, now one of the kingdom’s great dairy-farming areas."
+				"Al-Kharj’s main urban centre is also known as al-Saih.",
+				"King Abdulaziz ordered the construction of his palace in al-Saih, Al-Kharj, in 1940.",
+				"Al-Kharj’s royal palace had separate reception and residential sections joined by a passage about 160 metres long."
 			],
 			"it": [
-				"Una città oasi, oggi una delle grandi zone di allevamento da latte del regno."
+				"Il principale centro urbano di Al-Kharj è conosciuto anche come al-Saih.",
+				"Re Abdulaziz ordinò la costruzione del suo palazzo ad al-Saih, Al-Kharj, nel 1940.",
+				"Il palazzo reale di Al-Kharj aveva sezioni separate per i ricevimenti e la residenza, unite da un passaggio lungo circa 160 metri."
 			],
 			"de": [
-				"Eine Oasenstadt, heute eines der großen Milchwirtschaftsgebiete des Königreichs."
+				"Al-Kharjs wichtigstes städtisches Zentrum ist auch als al-Saih bekannt.",
+				"König Abdulaziz ordnete 1940 den Bau seines Palastes in al-Saih in Al-Kharj an.",
+				"Al-Kharjs Königspalast hatte getrennte Empfangs- und Wohnbereiche, verbunden durch einen etwa 160 Meter langen Gang."
 			]
 		}
 	},
 	"al-mubarraz": {
 		"city": {
 			"en": [
-				"One of the two towns of the Al-Ahsa oasis, with Hofuf."
+				"Al-Mubarraz was a seat of the Bani Khaled rulers in the eighteenth century.",
+				"Al-Mubarraz’s Qasr Sahood takes its name from a large cannon once kept in the fort.",
+				"Qasr Sahood in Al-Mubarraz has six round defensive towers and a square entrance tower."
 			],
 			"it": [
-				"Una delle due città dell’oasi di Al-Ahsa, insieme a Hofuf."
+				"Al-Mubarraz fu una sede dei governanti Bani Khaled nel XVIII secolo.",
+				"Il Qasr Sahood di Al-Mubarraz prende il nome da un grande cannone un tempo custodito nel forte.",
+				"Il Qasr Sahood ad Al-Mubarraz ha sei torri difensive circolari e una torre d’ingresso quadrata."
 			],
 			"de": [
-				"Eine der beiden Städte der Oase Al-Ahsa, neben Hofuf."
+				"Al-Mubarraz war im achtzehnten Jahrhundert ein Herrschaftssitz der Bani Khaled.",
+				"Al-Mubarraz’ Qasr Sahood ist nach einer großen Kanone benannt, die einst im Fort stand.",
+				"Qasr Sahood in Al-Mubarraz besitzt sechs runde Wehrtürme und einen quadratischen Torturm."
 			]
 		}
 	},
 	"arar": {
 		"city": {
 			"en": [
-				"It began in the 1950s as a pumping station on the Trans-Arabian Pipeline."
+				"Arar is also the Arabic word for juniper.",
+				"Modern Arar was founded in 1951 around a station on the Tapline oil pipeline.",
+				"Northern Border University, based in Arar, was founded in 2007."
 			],
 			"it": [
-				"Nacque negli anni Cinquanta come stazione di pompaggio dell’oleodotto transarabico."
+				"Arar è anche la parola araba per ginepro.",
+				"La moderna Arar fu fondata nel 1951 attorno a una stazione dell’oleodotto Tapline.",
+				"La Northern Border University, con sede ad Arar, fu fondata nel 2007."
 			],
 			"de": [
-				"Sie begann in den 1950er-Jahren als Pumpstation an der Trans-Arabischen Pipeline."
+				"Arar ist auch das arabische Wort für Wacholder.",
+				"Das moderne Arar entstand 1951 um eine Station der Tapline-Erdölleitung.",
+				"Die Northern Border University mit Sitz in Arar wurde 2007 gegründet."
 			]
 		}
 	},
@@ -130,26 +161,38 @@
 	"buraydah": {
 		"city": {
 			"en": [
-				"Its date festival fills one of the largest date markets in the world."
+				"Buraydah developed as a trading settlement from the sixteenth century.",
+				"Buraydah joined UNESCO’s Creative Cities Network for gastronomy in 2021.",
+				"Buraydah’s Al-Oqilat Museum documents the Najdi merchants who traded camels and other goods across the region."
 			],
 			"it": [
-				"La sua festa dei datteri riempie uno dei più grandi mercati di datteri del mondo."
+				"Buraydah si sviluppò come insediamento commerciale a partire dal XVI secolo.",
+				"Buraydah entrò nella Rete delle città creative dell’UNESCO per la gastronomia nel 2021.",
+				"Il Museo Al-Oqilat di Buraydah documenta i mercanti del Najd che commerciavano cammelli e altre merci nella regione."
 			],
 			"de": [
-				"Ihr Dattelfest füllt einen der größten Dattelmärkte der Welt."
+				"Buraydah entwickelte sich seit dem sechzehnten Jahrhundert als Handelssiedlung.",
+				"Buraydah trat 2021 dem UNESCO-Netzwerk der kreativen Städte im Bereich Gastronomie bei.",
+				"Buraydahs Al-Oqilat-Museum dokumentiert die Händler aus Nadschd, die in der Region mit Kamelen und anderen Waren handelten."
 			]
 		}
 	},
 	"dammam": {
 		"city": {
 			"en": [
-				"A well here, Dammam No. 7, the \"Prosperity Well\", struck the kingdom’s first commercial oil in 1938."
+				"Dammam’s Al-Ettifaq football club was formed in 1945 by merging three local teams.",
+				"Dammam’s Regional Museum opened in 1985 with archaeological and heritage collections.",
+				"Dammam’s port received the name King Abdulaziz Port after an expansion inaugurated in 1961."
 			],
 			"it": [
-				"Un pozzo di qui, il Dammam n. 7, il \"Pozzo della prosperità\", trovò nel 1938 il primo petrolio commerciale del regno."
+				"Il club calcistico Al-Ettifaq di Dammam nacque nel 1945 dalla fusione di tre squadre locali.",
+				"Il Museo regionale di Dammam aprì nel 1985 con collezioni archeologiche e del patrimonio locale.",
+				"Il porto di Dammam prese il nome di Porto Re Abdulaziz dopo un ampliamento inaugurato nel 1961."
 			],
 			"de": [
-				"Hier stieß 1938 die Ölquelle Dammam Nr. 7, die „Quelle des Wohlstands“, auf das erste kommerziell förderbare Öl des Königreichs."
+				"Dammams Fußballverein Al-Ettifaq entstand 1945 durch den Zusammenschluss dreier örtlicher Mannschaften.",
+				"Dammams Regionalmuseum eröffnete 1985 mit archäologischen und heimatkundlichen Sammlungen.",
+				"Dammams Hafen erhielt nach einer 1961 eingeweihten Erweiterung den Namen König-Abdulaziz-Hafen."
 			]
 		}
 	},
@@ -192,45 +235,57 @@
 		},
 		"city": {
 			"en": [
-				"The home of Hatim al-Tai, the pre-Islamic poet whose name still stands for generosity in Arabic."
+				"Ha’il’s name is commonly explained as a barrier, referring to seasonal water flowing through its valley.",
+				"Ha’il’s Qishlah Palace was built in 1941 as a military fort and security headquarters.",
+				"Two towers survive from Ha’il’s historic Barzan Palace."
 			],
 			"it": [
-				"La patria di Hatim al-Tai, il poeta preislamico il cui nome in arabo è ancora sinonimo di generosità."
+				"Il nome di Ha’il è comunemente interpretato come barriera, in riferimento all’acqua stagionale che scorre nella valle.",
+				"Il palazzo Qishlah di Ha’il fu costruito nel 1941 come forte militare e sede della sicurezza.",
+				"Del palazzo storico Barzan a Ha’il sopravvivono due torri."
 			],
 			"de": [
-				"Die Heimat von Hatim al-Tai, dem vorislamischen Dichter, dessen Name im Arabischen noch immer für Großzügigkeit steht."
+				"Ha’ils Name wird häufig als Barriere gedeutet und auf das zeitweise durch sein Tal fließende Wasser bezogen.",
+				"Der Qishlah-Palast in Ha’il wurde 1941 als Militärfestung und Sicherheitszentrale erbaut.",
+				"Vom historischen Barzan-Palast in Ha’il sind zwei Türme erhalten."
 			]
 		}
 	},
 	"hafar-al-batin": {
 		"city": {
 			"en": [
-				"Named for the wells dug in the Wadi al-Batin, on the old road from Iraq to the Gulf.",
-				"In 1990 and 1991 it was a staging ground for the coalition armies of the Gulf War."
+				"Hafar al-Batin’s name refers to wells dug in Wadi al-Batin.",
+				"Historical accounts credit Abu Musa al-Ashari with digging wells for pilgrims here during Caliph Uthman’s reign.",
+				"The University of Hafr Al Batin was established by royal decree in 2014."
 			],
 			"it": [
-				"Prende il nome dai pozzi scavati nel Wadi al-Batin, sull’antica strada fra l’Iraq e il Golfo.",
-				"Nel 1990 e nel 1991 fu una base di raccolta per gli eserciti della coalizione nella guerra del Golfo."
+				"Il nome di Hafar al-Batin si riferisce ai pozzi scavati nel Wadi al-Batin.",
+				"Le fonti storiche attribuiscono ad Abu Musa al-Ashari lo scavo di pozzi per i pellegrini durante il regno del califfo Uthman.",
+				"L’Università di Hafr Al Batin fu istituita con decreto reale nel 2014."
 			],
 			"de": [
-				"Nach den Brunnen benannt, die im Wadi al-Batin gegraben wurden, an der alten Straße vom Irak zum Golf.",
-				"1990 und 1991 war sie ein Aufmarschgebiet der Koalitionsheere im Golfkrieg."
+				"Der Name Hafar al-Batin bezieht sich auf Brunnen im Wadi al-Batin.",
+				"Historische Berichte schreiben Abu Musa al-Aschari den Bau von Pilgerbrunnen während der Herrschaft des Kalifen Uthman zu.",
+				"Die Universität Hafr Al Batin wurde 2014 durch königlichen Erlass gegründet."
 			]
 		}
 	},
 	"hofuf": {
 		"city": {
 			"en": [
-				"The Ottomans’ Ibrahim Palace, a fort with a mosque, stands in its old town.",
-				"The caves of Al-Qarah mountain, nearby, stay cool through the summer."
+				"Hofuf developed as an Ottoman administrative centre for the Al-Ahsa oasis.",
+				"Hofuf’s Ibrahim Palace combines a domed mosque, military buildings and a Turkish bath inside a fortified compound.",
+				"Hofuf’s traditional souq has long traded handmade coffee pots, woven textiles and silver jewellery."
 			],
 			"it": [
-				"Il palazzo Ibrahim degli Ottomani, un forte con una moschea, sorge nella sua città vecchia.",
-				"Le grotte della montagna di Al-Qarah, poco lontano, restano fresche per tutta l’estate."
+				"Hofuf si sviluppò come centro amministrativo ottomano dell’oasi di Al-Ahsa.",
+				"Il palazzo Ibrahim di Hofuf riunisce una moschea con cupola, edifici militari e un bagno turco all’interno di un complesso fortificato.",
+				"Il suq tradizionale di Hofuf commercia da lungo tempo caffettiere artigianali, tessuti e gioielli d’argento."
 			],
 			"de": [
-				"Der Ibrahim-Palast der Osmanen, eine Festung mit Moschee, steht in ihrer Altstadt.",
-				"Die Höhlen des Berges Al-Qarah in der Nähe bleiben den ganzen Sommer kühl."
+				"Hofuf entwickelte sich zu einem osmanischen Verwaltungszentrum der Oase Al-Ahsa.",
+				"Hofufs Ibrahim-Palast vereint eine Kuppelmoschee, Militärbauten und ein türkisches Bad in einer befestigten Anlage.",
+				"Hofufs traditioneller Souk handelt seit Langem mit handgefertigten Kaffeekannen, Webwaren und Silberschmuck."
 			]
 		}
 	},
@@ -254,13 +309,19 @@
 		},
 		"city": {
 			"en": [
-				"A port, and the gateway to the Farasan Islands."
+				"Jazan’s name is also written Jizan in English.",
+				"Jazan’s Al-Dosariyah Castle is a square fort with four cylindrical corner towers.",
+				"Jazan’s maghash is a meat-and-vegetable dish cooked in a stone pot that shares its name."
 			],
 			"it": [
-				"Un porto, e la porta d’accesso alle isole Farasan."
+				"Il nome di Jazan è scritto anche Jizan in inglese.",
+				"Il castello Al-Dosariyah di Jazan è un forte quadrato con quattro torri angolari cilindriche.",
+				"Il maghash di Jazan è un piatto di carne e verdure cotto in una pentola di pietra che porta lo stesso nome."
 			],
 			"de": [
-				"Ein Hafen und das Tor zu den Farasan-Inseln."
+				"Jazans Name wird im Englischen auch Jizan geschrieben.",
+				"Jazans Burg Al-Dosariyah ist ein quadratisches Fort mit vier zylindrischen Ecktürmen.",
+				"Jazans Maghash ist ein Fleisch-Gemüse-Gericht, das in einem gleichnamigen Steintopf gegart wird."
 			]
 		}
 	},
@@ -286,16 +347,19 @@
 	"jubail": {
 		"city": {
 			"en": [
-				"Planned from 1975, it is one of the largest industrial cities in the world.",
-				"The ruins of a church of the 4th century were found near it in 1986."
+				"The area around Jubail was known as Aynayn in pre-Islamic and early Islamic times.",
+				"Jubail came under Saudi rule during the conquest of Al-Ahsa in 1913.",
+				"The Royal Commission created in 1975 was tasked with developing Jubail and Yanbu as industrial cities."
 			],
 			"it": [
-				"Pianificata dal 1975, è una delle più grandi città industriali del mondo.",
-				"Le rovine di una chiesa del IV secolo furono trovate nelle vicinanze nel 1986."
+				"L’area attorno a Jubail era conosciuta come Aynayn in epoca preislamica e nei primi secoli dell’Islam.",
+				"Jubail passò sotto il dominio saudita durante la conquista di Al-Ahsa nel 1913.",
+				"La Commissione reale creata nel 1975 ebbe il compito di sviluppare Jubail e Yanbu come città industriali."
 			],
 			"de": [
-				"Ab 1975 geplant, ist sie eine der größten Industriestädte der Welt.",
-				"Die Ruinen einer Kirche aus dem 4. Jahrhundert wurden 1986 in ihrer Nähe gefunden."
+				"Das Gebiet um Jubail war in vorislamischer und frühislamischer Zeit als Aynayn bekannt.",
+				"Jubail kam während der Eroberung von Al-Ahsa im Jahr 1913 unter saudische Herrschaft.",
+				"Die 1975 gegründete Königliche Kommission erhielt den Auftrag, Jubail und Yanbu als Industriestädte zu entwickeln."
 			]
 		}
 	},
@@ -338,16 +402,19 @@
 	"medina": {
 		"region": {
 			"en": [
-				"Named for its holy city.",
-				"Hegra, near al-Ula, with more than a hundred Nabataean tombs cut into the rock, was the kingdom’s first UNESCO site, in 2008."
+				"Medina Province is named after its capital, which was known as Yathrib before Islam.",
+				"Hegra in Medina Province preserves 111 monumental tombs from the Nabataean civilisation.",
+				"Hegra in Medina Province entered the UNESCO World Heritage List in 2008."
 			],
 			"it": [
-				"Prende il nome dalla sua città santa.",
-				"Hegra, vicino ad al-Ula, con più di cento tombe nabatee scavate nella roccia, fu il primo sito UNESCO del regno, nel 2008."
+				"La provincia di Medina prende il nome dal capoluogo, conosciuto come Yathrib prima dell’Islam.",
+				"Hegra, nella provincia di Medina, conserva 111 tombe monumentali della civiltà nabatea.",
+				"Hegra, nella provincia di Medina, entrò nella Lista del patrimonio mondiale dell’UNESCO nel 2008."
 			],
 			"de": [
-				"Nach ihrer heiligen Stadt benannt.",
-				"Hegra bei al-Ula, mit mehr als hundert in den Fels gehauenen nabatäischen Gräbern, war 2008 die erste UNESCO-Stätte des Königreichs."
+				"Die Provinz Medina ist nach ihrer Hauptstadt benannt, die vor dem Islam Yathrib hieß.",
+				"Hegra in der Provinz Medina bewahrt 111 monumentale Gräber der nabatäischen Zivilisation.",
+				"Hegra in der Provinz Medina wurde 2008 in die UNESCO-Welterbeliste aufgenommen."
 			]
 		},
 		"city": {
@@ -388,58 +455,76 @@
 		},
 		"city": {
 			"en": [
-				"Its old houses are mud-brick towers of several storeys."
+				"Ancient inscriptions at Najran’s Al-Ukhdud site record the name Najrn.",
+				"Najran’s historic Emirate Palace was built with mud walls and four round corner watchtowers.",
+				"Najran’s traditional markets specialise in making, selling and repairing curved jambiya daggers."
 			],
 			"it": [
-				"Le sue vecchie case sono torri di mattoni crudi a più piani."
+				"Le antiche iscrizioni del sito di Al-Ukhdud a Najran riportano il nome Najrn.",
+				"Lo storico palazzo dell’Emirato di Najran fu costruito con mura di fango e quattro torri circolari agli angoli.",
+				"I mercati tradizionali di Najran sono specializzati nella fabbricazione, vendita e riparazione dei pugnali ricurvi jambiya."
 			],
 			"de": [
-				"Ihre alten Häuser sind Lehmziegeltürme mit mehreren Stockwerken."
+				"Antike Inschriften von Najrans Fundstätte Al-Ukhdud überliefern den Namen Najrn.",
+				"Najrans historischer Emiratspalast wurde mit Lehmmauern und vier runden Ecktürmen erbaut.",
+				"Najrans traditionelle Märkte sind auf Herstellung, Verkauf und Reparatur der gekrümmten Jambiya-Dolche spezialisiert."
 			]
 		}
 	},
 	"northern-borders": {
 		"region": {
 			"en": [
-				"Named for its place on the kingdom’s northern frontier.",
-				"The Darb Zubaydah, a pilgrim road from Kufa to Mecca with wells and cisterns built under the Abbasids, crosses it."
+				"The province’s Arabic name, al-Hudud al-Shamaliyah, means the northern borders.",
+				"The historic Darb Zubaydah pilgrimage route through Northern Borders preserves wells, reservoirs and former caravan stations.",
+				"King Abdulaziz’s palace at Linah in Northern Borders was built in 1935."
 			],
 			"it": [
-				"Prende il nome dalla sua posizione sulla frontiera settentrionale del regno.",
-				"La attraversa il Darb Zubaydah, una via di pellegrinaggio da Kufa alla Mecca con pozzi e cisterne costruiti sotto gli Abbasidi."
+				"Il nome arabo della provincia, al-Hudud al-Shamaliyah, significa i confini settentrionali.",
+				"Lo storico itinerario di pellegrinaggio Darb Zubaydah attraverso Northern Borders conserva pozzi, cisterne e antiche stazioni carovaniere.",
+				"Il palazzo di re Abdulaziz a Linah, nella provincia di Northern Borders, fu costruito nel 1935."
 			],
 			"de": [
-				"Nach ihrer Lage an der Nordgrenze des Königreichs benannt.",
-				"Der Darb Zubaida, ein Pilgerweg von Kufa nach Mekka mit unter den Abbasiden gebauten Brunnen und Zisternen, durchquert sie."
+				"Der arabische Provinzname al-Hudud al-Shamaliyah bedeutet die nördlichen Grenzen.",
+				"Die historische Pilgerroute Darb Zubaydah durch Northern Borders bewahrt Brunnen, Wasserbecken und ehemalige Karawanenstationen.",
+				"König Abdulaziz’ Palast in Linah in der Provinz Northern Borders wurde 1935 erbaut."
 			]
 		}
 	},
 	"qassim": {
 		"region": {
 			"en": [
-				"Named for the old district of Qassim, a name of uncertain origin.",
-				"Pumped from deep underground, its water grows much of the kingdom’s wheat and dates."
+				"Qassim’s present provincial administration dates from 1992.",
+				"King Abdulaziz maintained a private palace at Qibah in Qassim.",
+				"Qassim celebrates kleija, its traditional pastry, at a festival in Buraydah."
 			],
 			"it": [
-				"Prende il nome dall’antico distretto del Qassim, un nome di origine incerta.",
-				"Pompata dalle profondità del sottosuolo, la sua acqua fa crescere buona parte del grano e dei datteri del regno."
+				"L’attuale amministrazione provinciale del Qassim risale al 1992.",
+				"Re Abdulaziz aveva una residenza privata a Qibah, nel Qassim.",
+				"Il Qassim celebra la kleija, il suo dolce tradizionale, con un festival a Buraydah."
 			],
 			"de": [
-				"Nach dem alten Bezirk Qassim benannt, ein Name ungewissen Ursprungs.",
-				"Ihr Wasser, aus großer Tiefe gepumpt, lässt einen großen Teil des Weizens und der Datteln des Königreichs wachsen."
+				"Die heutige Provinzverwaltung von Qassim geht auf 1992 zurück.",
+				"König Abdulaziz unterhielt einen privaten Palast in Qibah in Qassim.",
+				"Qassim feiert sein traditionelles Gebäck Kleija mit einem Festival in Buraydah."
 			]
 		}
 	},
 	"qatif": {
 		"city": {
 			"en": [
-				"An old oasis town; nearby Tarout island has been lived on for about 5,000 years."
+				"Qatif’s name is commonly linked to the Arabic word qatf, the picking of fruit.",
+				"Qatif’s municipality was established in 1927.",
+				"Nearby Tarout Island was a trading centre of the ancient Dilmun civilisation."
 			],
 			"it": [
-				"Un’antica città oasi; la vicina isola di Tarout è abitata da circa 5.000 anni."
+				"Il nome di Qatif è comunemente collegato alla parola araba qatf, la raccolta della frutta.",
+				"Il municipio di Qatif fu istituito nel 1927.",
+				"La vicina isola di Tarout era un centro commerciale dell’antica civiltà di Dilmun."
 			],
 			"de": [
-				"Eine alte Oasenstadt; auf der nahen Insel Tarut leben Menschen seit etwa 5.000 Jahren."
+				"Qatifs Name wird häufig mit dem arabischen Wort qatf für das Pflücken von Früchten verbunden.",
+				"Qatifs Gemeindeverwaltung wurde 1927 gegründet.",
+				"Die nahe Insel Tarout war ein Handelszentrum der antiken Dilmun-Zivilisation."
 			]
 		}
 	},
@@ -482,13 +567,19 @@
 	"sakaka": {
 		"city": {
 			"en": [
-				"The Rajajil, standing stone pillars thousands of years old, stand in groups on its edge."
+				"Sakaka’s Rajajil stone pillars date to the fourth millennium BC.",
+				"Sakaka’s Sisra Well has a staircase and water channels cut into the rock.",
+				"Zaabal Castle at Sakaka has four watchtowers and walls built from stone and mud."
 			],
 			"it": [
-				"I Rajajil, pilastri di pietra eretti migliaia di anni fa, stanno in gruppi alle sue porte."
+				"I pilastri di pietra di Rajajil a Sakaka risalgono al IV millennio a.C.",
+				"Il pozzo di Sisra a Sakaka ha una scalinata e canali per l’acqua scavati nella roccia.",
+				"Il castello di Zaabal a Sakaka ha quattro torri di avvistamento e mura di pietra e fango."
 			],
 			"de": [
-				"Die Rajajil, Tausende Jahre alte aufgerichtete Steinsäulen, stehen in Gruppen an ihrem Rand."
+				"Die Rajajil-Steinpfeiler bei Sakaka stammen aus dem vierten Jahrtausend v. Chr.",
+				"Der Sisra-Brunnen in Sakaka besitzt eine in den Fels gehauene Treppe und Wasserkanäle.",
+				"Die Burg Zaabal bei Sakaka hat vier Wachtürme und Mauern aus Stein und Lehm."
 			]
 		}
 	},
@@ -512,16 +603,19 @@
 		},
 		"city": {
 			"en": [
-				"In 630 the Prophet Muhammad led an expedition here, the last of his campaigns.",
-				"Its station on the Hejaz Railway, built by the Ottomans, still stands."
+				"Tabuk’s name appears in early Islamic accounts of the expedition led there by Muhammad.",
+				"Tabuk Castle served pilgrims travelling on the historic route from the Levant to Medina.",
+				"The first train reached Tabuk’s Hejaz Railway station in 1906."
 			],
 			"it": [
-				"Nel 630 il profeta Maometto guidò qui una spedizione, l’ultima delle sue campagne.",
-				"La sua stazione della Ferrovia dell’Hegiaz, costruita dagli Ottomani, è ancora in piedi."
+				"Il nome di Tabuk compare nelle prime fonti islamiche sulla spedizione guidata da Maometto.",
+				"Il castello di Tabuk accoglieva i pellegrini lungo lo storico itinerario dal Levante a Medina.",
+				"Il primo treno raggiunse la stazione della ferrovia dell’Hegiaz a Tabuk nel 1906."
 			],
 			"de": [
-				"Im Jahr 630 führte der Prophet Mohammed einen Feldzug hierher, den letzten seiner Kriegszüge.",
-				"Ihr Bahnhof an der Hedschasbahn, von den Osmanen gebaut, steht noch."
+				"Tabuks Name erscheint in frühen islamischen Berichten über Mohammeds Expedition dorthin.",
+				"Die Burg von Tabuk versorgte Pilger auf der historischen Route von der Levante nach Medina.",
+				"Der erste Zug erreichte Tabuks Bahnhof der Hedschasbahn im Jahr 1906."
 			]
 		}
 	},
@@ -547,17 +641,103 @@
 	"yanbu": {
 		"city": {
 			"en": [
-				"An old port for pilgrims to Medina, it has also been a planned industrial city since 1975.",
-				"T. E. Lawrence used it as a base during the Arab Revolt of 1916 to 1918."
+				"Yanbu was an important stop on historic spice-trade routes.",
+				"Yanbu’s coral-stone house associated with T. E. Lawrence has been restored as a museum.",
+				"Groundbreaking for the planned Yanbu Industrial City took place in 1979."
 			],
 			"it": [
-				"Antico porto dei pellegrini diretti a Medina, dal 1975 è anche una città industriale pianificata.",
-				"T. E. Lawrence la usò come base durante la rivolta araba dal 1916 al 1918."
+				"Yanbu fu una tappa importante degli storici itinerari commerciali delle spezie.",
+				"La casa in pietra corallina di Yanbu associata a T. E. Lawrence è stata restaurata come museo.",
+				"La posa della prima pietra della città industriale pianificata di Yanbu avvenne nel 1979."
 			],
 			"de": [
-				"Ein alter Hafen für Pilger nach Medina, ist sie seit 1975 auch eine geplante Industriestadt.",
-				"T. E. Lawrence nutzte sie während des Arabischen Aufstands von 1916 bis 1918 als Stützpunkt."
+				"Yanbu war eine wichtige Station auf historischen Gewürzhandelsrouten.",
+				"Yanbus mit T. E. Lawrence verbundenes Haus aus Korallenstein wurde als Museum restauriert.",
+				"Der erste Spatenstich für die geplante Industriestadt Yanbu erfolgte 1979."
 			]
 		}
+	},
+	"_sources": {
+		"northern-borders:region": [
+			"https://saudipedia.com/en/provinces-of-saudi-arabia",
+			"https://saudipedia.com/en/antiquities-in-northern-borders-province",
+			"https://saudipedia.com/en/king-abdulaziz-palace-in-linah"
+		],
+		"qassim:region": [
+			"https://saudipedia.com/en/qassim-province",
+			"https://www.spa.gov.sa/N2483123"
+		],
+		"medina:region": [
+			"https://saudipedia.com/en/provinces-of-saudi-arabia",
+			"https://era.ed.ac.uk/bitstream/1842/6989/1/235406.pdf",
+			"https://whc.unesco.org/en/list/1293/",
+			"https://snc-ecs.moc.gov.sa/the-kingdoms-achievements-in-international-organizations/hegra/"
+		],
+		"arar:city": [
+			"https://unhabitat.org/sites/default/files/2020/04/cpi_profile_for_arar_2019.pdf",
+			"https://www.nbu.edu.sa/en/pagetabs"
+		],
+		"sakaka:city": [
+			"https://saudipedia.com/en/sakaka-city",
+			"https://saudipedia.com/en/antiquities-in-al-jawf-province",
+			"https://saudipedia.com/en/where-is-zabal-castle-located"
+		],
+		"hafar-al-batin:city": [
+			"https://en.wikipedia.org/wiki/Hafar_al-Batin",
+			"https://www.uhb.edu.sa/ar/node/1414"
+		],
+		"tabuk:city": [
+			"https://saudipedia.com/en/tabuk-city",
+			"https://saudipedia.com/en/tabuk-archaeological-castle"
+		],
+		"ha-il:city": [
+			"https://saudipedia.com/en/hail-city"
+		],
+		"jubail:city": [
+			"https://saudipedia.com/en/why-was-al-jubayl-given-this-name",
+			"https://my.gov.sa/en/agencies/17411",
+			"https://www.rcjy.gov.sa/en/50-years-history"
+		],
+		"qatif:city": [
+			"https://saudipedia.com/en/al-qatif-governorate",
+			"https://saudipedia.com/en/tarout-island"
+		],
+		"dammam:city": [
+			"https://saudipedia.com/en/dammam-city"
+		],
+		"buraydah:city": [
+			"https://saudipedia.com/en/buraydah-city"
+		],
+		"al-mubarraz:city": [
+			"https://whc.unesco.org/document/160478"
+		],
+		"hofuf:city": [
+			"https://static.grupojoly.com/joly/public/content/file/original/2018/0515/10/el-informe-de-las-evaluaciones-de-las-candidaturas-pdf.pdf",
+			"https://www.iau.edu.sa/sites/default/files/resources/facultyhandbook-finalforprinting.compressed.pdf"
+		],
+		"al-kharj:city": [
+			"https://saudipedia.com/en/king-abdulaziz-historical-palace-in-al-kharj",
+			"https://www.spa.gov.sa/en/N2406034"
+		],
+		"yanbu:city": [
+			"https://www.visitsaudi.com/content/dam/saudi-tourism/media/guides/saudi-series-culture-english.pdf",
+			"https://www.rcjy.gov.sa/en/50-years-history"
+		],
+		"al-hillah:city": [
+			"https://saudiency.kapl.org.sa/Loader.aspx?BookID=46&PID=85&TOCID=39&pageid=20",
+			"https://saudipedia.com/en/hawtat-bani-tamim-governorate",
+			"https://kingsaud.org/en/archives/poetry/ardah-poem-hawtat-bani-tamim-triumphed-saad-bin-haryoul/"
+		],
+		"abha:city": [
+			"https://saudipedia.com/en/abha-city"
+		],
+		"najran:city": [
+			"https://saudipedia.com/en/najran-city"
+		],
+		"jazan:city": [
+			"https://www.spa.gov.sa/en/N2514266",
+			"https://saudipedia.com/en/al-dosariyah-castle",
+			"https://www.visitsaudi.com/en/jazan/stories/jazan-taste"
+		]
 	}
 }

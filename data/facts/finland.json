@@ -13,7 +13,8 @@
 		"'Finland proper' - the part the name Finland meant first. The historical",
 		"provinces underneath are Savo, Karjala (Karelia), Häme and Pohjanmaa.",
 		"",
-		"Ids drop the umlauts, so Etelä-Savo is 'etela-savo'."
+		"Ids drop the umlauts, so Etelä-Savo is 'etela-savo'.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"etela-karjala": {
 		"en": [
@@ -86,13 +87,19 @@
 	"joensuu": {
 		"city": {
 			"en": [
-				"\"River mouth\", at the mouth of the Pielisjoki."
+				"Joensuu means ‘river mouth’, referring to the Pielisjoki estuary.",
+				"Joensuu’s old town hall, designed by Eliel Saarinen, was completed in 1914.",
+				"Emperor Nicholas I confirmed Joensuu’s status as a town in 1848."
 			],
 			"it": [
-				"\"Foce del fiume\", alla foce del Pielisjoki."
+				"Joensuu significa «foce del fiume», in riferimento all’estuario del Pielisjoki.",
+				"Il vecchio municipio di Joensuu, progettato da Eliel Saarinen, fu completato nel 1914.",
+				"L’imperatore Nicola I confermò lo status di città di Joensuu nel 1848."
 			],
 			"de": [
-				"„Flussmündung“, an der Mündung des Pielisjoki."
+				"Joensuu bedeutet „Flussmündung“ und bezieht sich auf die Mündung des Pielisjoki.",
+				"Joensuus altes Rathaus wurde von Eliel Saarinen entworfen und 1914 fertiggestellt.",
+				"Kaiser Nikolaus I. bestätigte Joensuus Status als Stadt im Jahr 1848."
 			]
 		}
 	},
@@ -235,16 +242,19 @@
 	"lappeenranta": {
 		"city": {
 			"en": [
-				"Its fortress once guarded the border between Sweden and Russia.",
-				"It lies on Lake Saimaa, the largest lake in Finland."
+				"Lappeenranta is known in Swedish as Villmanstrand, a name associated with the wild-man figure on its town seal.",
+				"Swedish fortifications at Lappeenranta began in the 1720s, and Russian authorities later continued the fortress works.",
+				"The Orthodox Church of the Protection of the Mother of God in Lappeenranta’s fortress was consecrated in 1785."
 			],
 			"it": [
-				"La sua fortezza sorvegliava un tempo il confine tra Svezia e Russia.",
-				"Si trova sul lago Saimaa, il più grande della Finlandia."
+				"Lappeenranta è conosciuta in svedese come Villmanstrand, nome associato alla figura dell’uomo selvatico sul sigillo cittadino.",
+				"Le fortificazioni svedesi di Lappeenranta iniziarono negli anni Venti del Settecento e le autorità russe proseguirono in seguito i lavori della fortezza.",
+				"La chiesa ortodossa della Protezione della Madre di Dio nella fortezza di Lappeenranta fu consacrata nel 1785."
 			],
 			"de": [
-				"Ihre Festung bewachte einst die Grenze zwischen Schweden und Russland.",
-				"Sie liegt am Saimaa, dem größten See Finnlands."
+				"Lappeenranta heißt auf Schwedisch Villmanstrand, ein Name, der mit der Figur des wilden Mannes auf dem Stadtsiegel verbunden ist.",
+				"Die schwedischen Befestigungsarbeiten in Lappeenranta begannen in den 1720er Jahren und wurden später unter russischer Herrschaft fortgesetzt.",
+				"Die orthodoxe Kirche Mariä Schutz in Lappeenrantas Festung wurde 1785 geweiht."
 			]
 		}
 	},
@@ -472,16 +482,19 @@
 	"vaasa": {
 		"city": {
 			"en": [
-				"Named in 1606 for the Swedish royal house of Vasa.",
-				"It was the seat of the Finnish government in the civil war of 1918."
+				"Founded in 1606, Vaasa received its name in 1611 in honour of Sweden’s royal House of Vasa.",
+				"Finland’s Senate met in Vaasa during the civil war of 1918.",
+				"After the fire of 1852, Vaasa was rebuilt at a new site, leaving the ruins now known as Old Vaasa."
 			],
 			"it": [
-				"Prende il nome, dal 1606, dalla casa reale svedese dei Vasa.",
-				"Fu la sede del governo finlandese durante la guerra civile del 1918."
+				"Fondata nel 1606, Vaasa ricevette il proprio nome nel 1611 in onore della casa reale svedese dei Vasa.",
+				"Il Senato finlandese si riunì a Vaasa durante la guerra civile del 1918.",
+				"Dopo l’incendio del 1852, Vaasa fu ricostruita in un nuovo sito, lasciando le rovine oggi conosciute come Vecchia Vaasa."
 			],
 			"de": [
-				"1606 nach dem schwedischen Königshaus Wasa benannt.",
-				"Sie war im Bürgerkrieg von 1918 der Sitz der finnischen Regierung."
+				"Vaasa wurde 1606 gegründet und erhielt 1611 seinen Namen zu Ehren des schwedischen Königshauses Wasa.",
+				"Finnlands Senat tagte während des Bürgerkriegs von 1918 in Vaasa.",
+				"Nach dem Brand von 1852 wurde Vaasa an einem neuen Standort wiederaufgebaut; zurück blieben die heute als Alt-Vaasa bekannten Ruinen."
 			]
 		}
 	},
@@ -500,6 +513,23 @@
 			"„Eigentliches Finnland“ – hier bezeichnete der Name Finnland ursprünglich dieses Gebiet, bevor er sich auf das ganze Land ausbreitete.",
 			"Turku war bis 1812 die Hauptstadt und hat Finnlands älteste Universitätstradition, seit 1640.",
 			"Sein Schärenmeer besteht aus Zehntausenden von Inseln, nach der Inselzahl der größte Archipel der Welt."
+		]
+	},
+	"_sources": {
+		"vaasa:city": [
+			"https://www.vaasa.fi/app/uploads/2024/03/f4ef20f7-foremalsjakt-vasa-400-sve.pdf",
+			"https://www.vaasa.fi/uploads/2019/10/7b8e01c8-kaupunkikavelyesite-setterbergin-vaasa.pdf",
+			"https://www.kyppi.fi/palveluikkuna/VARKL/asp/v_kohde_det.aspx?KOHDE_ID=1000006122"
+		],
+		"joensuu:city": [
+			"https://www.joensuunoppaat.fi/en/joensuu/",
+			"https://joensuunmuseot.fi/opi-ja-koe/kulttuurireitit/siltareitti/",
+			"https://www.visitjoensuu.fi/en-FI/topic/6037d4aed6f09f25ba65ea8c"
+		],
+		"lappeenranta:city": [
+			"https://projects.gtk.fi/export/sites/projects/ENPI/results/documents/lappeenranta_town_guide.pdf",
+			"https://visitlappeenranta.fi/en/Experience/Sights-and-history/Fortress",
+			"https://visitlappeenranta.fi/en/Experience/Sights-and-history/Churches/The-Orthodox-Church"
 		]
 	}
 }

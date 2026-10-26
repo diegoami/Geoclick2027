@@ -56,15 +56,20 @@ for (const feature of parsed.features) {
 		'Serbia',
 		names
 	);
-	if (!region) {
-		if (feature.properties.POP_MAX >= 10000)
-			throw new Error('Eligible town outside canonical source: ' + feature.properties.NAME);
-		parsed.excluded.push({
-			name: feature.properties.NAME,
-			population: feature.properties.POP_MAX,
-			reason: 'Outside/ambiguous within the committed district footprint'
-		});
-		continue;
+	if (
+		!region ||
+		typeof feature.properties.censusDistrict !== 'string' ||
+		!names.has(feature.properties.censusDistrict) ||
+		region !== feature.properties.censusDistrict
+	) {
+		throw new Error(
+			'Census/gazetteer district mismatch for ' +
+				feature.properties.NAME +
+				': expected ' +
+				feature.properties.censusDistrict +
+				', found ' +
+				region
+		);
 	}
 	feature.properties.ADM1NAME = region;
 	features.push(feature);

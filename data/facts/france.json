@@ -11,7 +11,8 @@
 		"provincia. Those are the ones worth learning.",
 		"",
 		"Ids drop the accents and the apostrophe, so Provence-Alpes-Côte-d'Azur",
-		"is 'provence-alpes-cote-d-azur'."
+		"is 'provence-alpes-cote-d-azur'.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"hauts-de-france": {
 		"en": [
@@ -862,5 +863,2306 @@
 			"Sie war im 14. Jahrhundert die Hauptstadt des Königreichs Mallorca, und hier wird noch immer Katalanisch gesprochen.",
 			"Dalí erklärte ihren Bahnhof zum Mittelpunkt des Universums, und die Stadt nimmt den Scherz seither ernst."
 		]
+	},
+	"_sources": {
+		"nord:region": [
+			"https://evasion.lenord.fr/fr/print/pdf/node/13929",
+			"https://evasion.lenord.fr/decouvrir/les-grands-evenements/les-geants-du-nord/",
+			"https://www.chm-lewarde.com/wp-content/uploads/2020/07/Dossier_de_presse_francais_2020.pdf"
+		],
+		"pas-de-calais:region": [
+			"https://www.pasdecalais.fr/histoire-du-departement-du-pas-de-calais-de-cesar-nos-jours",
+			"https://www.louvrelens.fr/le-louvre-lens/",
+			"https://www.veterans.gc.ca/en/remembrance/memorials/overseas/canadian-national-vimy-memorial"
+		],
+		"somme:region": [
+			"https://www.somme.fr/departement/votre-departement/le-territoire/un-fleuve-une-vallee-des-hommes-toute-une-histoire/",
+			"https://whc.unesco.org/en/list/162",
+			"https://www.historial.fr/nos-musees/peronne-musee-dhistoire/le-site-et-son-histoire/"
+		],
+		"ardennes:region": [
+			"https://patrimoinesdardennes.fr/visite-ardennes/",
+			"https://chr.grandest.fr/acteurs/musee-municipal-de-sedan/",
+			"https://www.charleville-mezieres.fr/musee-rimbaud"
+		],
+		"seine-maritime:region": [
+			"https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000492693",
+			"https://whc.unesco.org/fr/list/1181",
+			"https://www.historial-jeannedarc.fr/scolaires/parcours-numerique-scolaire/"
+		],
+		"aisne:region": [
+			"https://infoterre.brgm.fr/rapports/RP-59179-FR.pdf",
+			"https://www.familistere.com/uploads/media/684bd7db302e6/catalogue-godin-publicite-2025-06-10-compressed.pdf",
+			"https://www.chemindesdames.fr/de/node/112666"
+		],
+		"oise:region": [
+			"https://archives.oise.fr/fileadmin/user_upload/archives/decouvrir/publications-et-ressources/expositions_itinerantes/de-l-eau-et-des-hommes/panneaux_expo_eau.pdf",
+			"https://chateaudechantilly.fr/histoire/un-domaine-au-coeur-de-l-histoire/",
+			"https://www.chateau-pierrefonds.fr/decouvrir/histoire-du-chateau-de-pierrefonds"
+		],
+		"calvados:region": [
+			"https://archives.calvados.fr/media/a416666a-a64f-4158-9e7e-d442ab6ac906.pdf",
+			"https://www.bayeuxmuseum.com/la-tapisserie-de-bayeux/decouvrir-la-tapisserie-de-bayeux/que-raconte-la-tapisserie-de-bayeux/",
+			"https://caen.fr/index.php/visiter-labbaye-aux-hommes"
+		],
+		"manche:region": [
+			"https://www.manche.fr/mon-departement/portrait/",
+			"https://www.abbaye-mont-saint-michel.fr/decouvrir/histoire-du-monument",
+			"https://www.musee-dior-granville.com/christian-dior/"
+		],
+		"eure:region": [
+			"https://www.eure.gouv.fr/content/download/5999/35349/file/franges%20franciliennes%20p1%20%C3%A0%2027.pdf",
+			"https://fondation-monet.com/en/actualites/when-claude-monet-discovered-giverny/",
+			"https://www.eure.gouv.fr/content/download/18042/123815/file/ESSENTIEL_CONNAISSANCE_08%20Historique%20de%20Ch%C3%A2teau%20Gaillard.pdf"
+		],
+		"val-d-oise:region": [
+			"https://philidor.cmbv.fr/ita/Publications/Bases-prosopographiques/MUSEFREM-Base-de-donnees-prosopographique-des-musiciens-d-Eglise-en-1790/Val-d-Oise",
+			"https://www.valdoise-tourisme.com/fiches/auberge-ravoux/",
+			"https://www.royaumont.com/en/history-of-the-abbey/"
+		],
+		"meuse:region": [
+			"https://inventaire-forestier.ign.fr/IMG/pdf/PubDep/55-meuse/ifn_55_2_meuse_1980.pdf",
+			"https://memorial-verdun.fr/en/ressources/la-bataille-de-verdun",
+			"https://www.tourisme-barleducsudmeuse.fr/spip.php?categorie=4000048&genre=4000003&id_article=&page=fiche-sitlor&produit=754005855&produit_nom="
+		],
+		"moselle:region": [
+			"https://infoterre.brgm.fr/rapports/RP-59631-FR.pdf",
+			"https://www.centrepompidou.fr/fr/le-centre-pompidou/action-territoriale",
+			"https://www.saint-louis.com/en/saint-louis-since1586"
+		],
+		"marne:region": [
+			"https://www.marne.gouv.fr/contenu/telechargement/47828/344649/file/EPCA_.pdf",
+			"https://www.palais-du-tau.fr/var/cmn_inter/storage/original/application/23db7ee114b111c67835640a63b39a5a.pdf",
+			"https://whc.unesco.org/en/list/1465/"
+		],
+		"meurthe-et-moselle:region": [
+			"https://archives.meurthe-et-moselle.fr/Population/Un-d%C3%A9partement-n%C3%A9-d%E2%80%99une-d%C3%A9faite-militaire/Les-optants",
+			"https://whc.unesco.org/en/list/229/",
+			"https://www.baccarat.com/en_us/world-of-baccarat/the-history.html"
+		],
+		"seine-saint-denis:region": [
+			"https://archives.assemblee-nationale.fr/2/cri/1963-1964-ordinaire2/043.pdf",
+			"https://www.culture.gouv.fr/regions/drac-ile-de-france/actualites/actualite-a-la-une/mise-au-jour-d-une-necropole-a-la-basilique-cathedrale-de-saint-denis",
+			"https://www.stadefrance.com/medias/docs/site_internet/25_ans_stade_dates_cles_2023.pdf"
+		],
+		"hauts-de-seine:region": [
+			"https://www.iledefrance.fr/mediatheque/1860-1960-cent-ans-de-patrimoine-industriel",
+			"https://www.meudon.musee-rodin.fr/parc",
+			"https://domaine-de-sceaux.hauts-de-seine.fr/le-domaine/histoire-du-domaine/frise-chronologique-1"
+		],
+		"val-de-marne:region": [
+			"https://fr.wikipedia.org/wiki/Val-de-Marne",
+			"https://www.monuments-nationaux.fr/content/download/9887678/file_fr/CP%20Tablettes_CHATEAU%20DE%20VINCENNES.pdf?inLanguage=fre-FR&version=1",
+			"https://cms.rungisinternational.com/uploads/rapport_d_activite_2008_7e1dae4329.pdf"
+		],
+		"yvelines:region": [
+			"https://lelabarchives.yvelines.fr/Pays_d%27Yveline/Haute_Vall%C3%A9e_de_Chevreuse",
+			"https://partir.ouest-france.fr/magazine/mais-dou-vient-le-nom-du-departement-des-yvelines/",
+			"https://www.chateauversailles.fr/decouvrir/les-ressources/versailles-cour",
+			"https://www.bergerie-nationale.fr/qui-sommes-nous/histoire-bergerie-nationale/"
+		],
+		"seine-et-marne:region": [
+			"https://beta-omk.manioc.org/files/original/21719/ADG18227.pdf",
+			"https://www.chateaudefontainebleau.fr/espace-groupe/visites-scolaires-chateau-de-fontainebleau/les-dossiers-pedagogiques/le-palais-de-napoleon-ier/",
+			"https://moliere21.cnrs.fr/relation-des-magnificences-faites-par-m-fouquet-a-vaux-le-vicomte/"
+		],
+		"bas-rhin:region": [
+			"https://dictionnaire-academie.fr/article/A7B0330",
+			"https://www.oeuvre-notre-dame.org/chantier/fleche/",
+			"https://www.haut-koenigsbourg.fr/histoire-du-chateau/la-restauration/"
+		],
+		"orne:region": [
+			"https://junior.universalis.fr/encyclopedie/orne",
+			"https://ich.unesco.org/en/RL/craftsmanship-of-alencon-needle-lace-making-00438?RL=00438",
+			"https://cheval-patrimoine.culture.gouv.fr/fr/le-haras-national-du-pin"
+		],
+		"essonne:region": [
+			"https://iledefrance.ffvelo.fr/wp-content/uploads/sites/7/2018/10/BLIF_N%C2%B0101C.pdf",
+			"https://maisonjeancocteau.com/le-lieu/",
+			"https://chamarande.essonne.fr/wp-content/uploads/2022/04/DDC-_-PC-_-Au-fil-de-leau-2013_09-1.pdf"
+		],
+		"cotes-d-armor:region": [
+			"https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000707929",
+			"https://www.dinan.fr/vivre-a-dinan/je-minstalle-a-dinan/lhistoire-a-chaque-pas/",
+			"https://www.patrimoine.bzh/gertrude-diffusion/dossier/IA22015730",
+			"https://www.persee.fr/doc/arcme_0153-9337_1999_num_29_1_942_t1_0296_0000_4"
+		],
+		"eure-et-loir:region": [
+			"https://junior.universalis.fr/index/eure-et-loir",
+			"https://whc.unesco.org/en/list/81",
+			"https://www.chateaudemaintenon.fr/son-aqueduc-_r_28.html"
+		],
+		"aube:region": [
+			"https://www.larousse.fr/encyclopedie/riviere-lac/Aube/106606",
+			"https://www.abbayedeclairvaux.com/presentation-de-clairvaux/histoire-de-clairvaux",
+			"https://www.aube.fr/actualite/188/9-le-departement-inaugure-la-cite-du-vitrail.htm"
+		],
+		"finistere:region": [
+			"https://www.finistere.gouv.fr/contenu/telechargement/58018/446283/file/DP_Biodiversite.pdf",
+			"https://museepontaven.fr/en/to-visit/",
+			"https://www.henriot-quimper.com/fr/decouvrez/index.php.html"
+		],
+		"ille-et-vilaine:region": [
+			"https://paysages.ille-et-vilaine.fr/une-identite-hesitante",
+			"https://www.tourisme-rennes.com/decouvrir-rennes/histoire/parlement-de-bretagne-rennes/",
+			"https://www.saint-malo.fr/accueil/sortir/musees/manoir-jacques-cartier/"
+		],
+		"vosges:region": [
+			"https://www.vosges.gouv.fr/content/download/15741/121467/file/DGO_VOSGES_2018_2022.pdf",
+			"https://www.tourisme.vosges.fr/wp-content/uploads/2026/01/dp-vosges-premieres-fois-web-compressed.pdf",
+			"https://catalogue.bnf.fr/ark%3A/12148/cb11877980s",
+			"https://www.imagesdepinal.com/content/7-un-peu-d-histoire"
+		],
+		"haute-marne:region": [
+			"https://www.onisr.securite-routiere.gouv.fr/sites/default/files/2019-03/DGO_52-Haute-Marne_2018-2022.pdf",
+			"https://www.musees-langres.fr/actualites/le-label-maisons-des-illustres/",
+			"https://www.charles-de-gaulle.org/les-lieux-gaulliens/la-boisserie/"
+		],
+		"mayenne:region": [
+			"https://junior.universalis.fr/encyclopedie/mayenne",
+			"https://patrimoine.lamayenne.fr/jublains/decouvrir/",
+			"https://musees.laval.fr/manas/henri-rousseau-dit-le-douanier/"
+		],
+		"sarthe:region": [
+			"https://fr.wikisource.org/wiki/G%C3%A9ographie_de_la_Sarthe/1",
+			"https://www.24h-lemans.com/en/news/first-winner-of-the-24-hours-of-le-mans-who-was-rene-leonard-andre-lagaches-teammate-50683",
+			"https://www.abbayedesolesmes.fr/notre-histoire/nos-abbes/"
+		],
+		"loiret:region": [
+			"https://www.loiret.fr/sites/loiret/files/media/documents/2020/03/20200305_CP_Signature%20DSP%20Loiret.pdf",
+			"https://www.orleans.fr/fetes-de-jeanne-d-arc/presentation",
+			"https://www.vnf.fr/vnf/dossiers-actualitess/une-histoire-simplifiee-du-canal-du-midi/?lang=en",
+			"https://www.vnf.fr/vnf/dossiers-actualitess/chiffres-trafic-2018-2/"
+		],
+		"yonne:region": [
+			"https://www.yonne.gouv.fr/content/download/14924/105765/file/SDGC%2089%20partie%201.pdf",
+			"https://whc.unesco.org/en/list/84",
+			"https://www.guedelon.fr/presse/"
+		],
+		"haut-rhin:region": [
+			"https://www.dictionnaire-academie.fr/article/A8H0171",
+			"https://www.musee-unterlinden.com/wp-content/uploads/2022/06/2022_05_DOSSIER_PRESSE_RETABLE_VV-WEB.pdf",
+			"https://www.musee-automobile.fr/decouvrir-le-musee/le-lieu/"
+		],
+		"morbihan:region": [
+			"https://www.morbihan.fr/fileadmin/user_upload/Actualites/Assemblee_Institution/2022/MORBIHAN_DOSSIER_PRESSE_LOGO.pdf",
+			"https://www.monuments-nationaux.fr/editions-du-patrimoine/les-ouvrages/les-alignements-de-carnac",
+			"https://patrimoine.lorient.bzh/histoire/histoire-generale/evenements-et-historiques/lorient-les-compagnies-des-indes-et-lesclavage"
+		],
+		"loir-et-cher:region": [
+			"https://www.culture.gouv.fr/Media/Medias-creation-rapide/CVL_Atlas_Fascicule_Loir_et_Cher.pdf",
+			"https://www.chambord.org/en/history/the-chateau/as-history-unfolds/",
+			"https://archives.blois.fr/article.php?laref=465&titre=1498"
+		],
+		"haute-saone:region": [
+			"https://fr.wikisource.org/wiki/Petit_dictionnaire_de_la_langue_fran%C3%A7aise_%281860%29/SA%C3%94NE_%28LA%29",
+			"https://www.dictionnaire-academie.fr/article/A8H0171",
+			"https://www.fondationlecorbusier.fr/actualite/la-chapelle-de-ronchamp-a-70-ans/",
+			"https://ecomusee-fougerolles.fr/"
+		],
+		"territoire-de-belfort:region": [
+			"https://www.territoiredebelfort.fr/histoire-du-territoire-de-belfort",
+			"https://musees.belfort.fr/fileadmin/Minisites/musees/Brochure_evenement/Plaquette_lion_centenaire.pdf",
+			"https://www.belfort.fr/loisirs/culture/archives/presentation-du-service/documents-marquants/pdf",
+			"https://sites-vauban.org/en/resources/vauban-site/belfort"
+		],
+		"cote-d-or:region": [
+			"https://archives.cotedor.fr/v2/site/AD21/Decouvrir/Documents_du_mois/Publications_en_2006/Fevrier_-_9_fevrier_1790_le_departement_de_la_Cote-dOr_est_officiellement_constitue",
+			"https://www.hospices-de-beaune.com/",
+			"https://whc.unesco.org/en/list/165"
+		],
+		"maine-et-loire:region": [
+			"https://media.electre-ng.com/extraits/extrait-id/a4cd18dd83b80e35caccdfc51dff63a69a5cdc183b82a01b28788118bcc5a7a0.pdf",
+			"https://www.angers.fr/actualites-sorties/65806-la-tenture-de-l-apocalypse-un-tresor-a-redecouvrir/index.html",
+			"https://www.paysdelaloire.fr/sites/default/files/2021-05/dp_19-05-2021_culture_musee-fontevraud.pdf"
+		],
+		"loire-atlantique:region": [
+			"https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000000325408&pageCourante=02733",
+			"https://www.chateaunantes.fr/wp-content/uploads/2020/07/04-NantesHistoryMuseum-FCRE.pdf",
+			"https://julesverne.nantesmetropole.fr/le-musee/",
+			"https://www.enpaysdelaloire.com/visites/musees-et-centres-d-interpretation/musee-jules-verne"
+		],
+		"indre-et-loire:region": [
+			"https://fr.wikisource.org/wiki/Dictionnaire_universel_d%E2%80%99histoire_et_de_g%C3%A9ographie_Bouillet_Chassang/Lettre_I",
+			"https://www.vinci-closluce.com/le-chateau-du-clos-luce/",
+			"https://www.chenonceau.com/wp-content/uploads/2018/03/guide-2018-FR.pdf"
+		],
+		"nievre:region": [
+			"https://childin.eu/fr/about-us/conseil-departemental-de-la-nievre/",
+			"https://culture.nevers.fr/musee-de-la-faience-et-des-beaux-arts/",
+			"https://www.chateau-bazoches.com/en/history-of-the-estate/"
+		],
+		"doubs:region": [
+			"https://draaf.bourgogne-franche-comte.agriculture.gouv.fr/IMG/pdf/No3_Agri_Doubs_VF_cle09527e.pdf",
+			"https://sites-vauban.org/sites-majeurs/besancon",
+			"https://www.salineroyale.com/en/heritage/discover/"
+		],
+		"cher:region": [
+			"https://junior.universalis.fr/encyclopedie/cher",
+			"https://whc.unesco.org/en/list/635",
+			"https://www.monuments-nationaux.fr/content/download/9929536/file_fr/CP%20Fermeture%20palais%20Jacques%20Coeur_VF.pdf?inLanguage=fre-FR&version=3"
+		],
+		"indre:region": [
+			"https://archives36.fr/image/56046/16987?crop=centre&download=1&force-inline=&format=pdf&realHeight=1754&realWidth=1240&region=full&size=%21800%2C800",
+			"https://www.maison-george-sand.fr/content/download/9840195/file/Fiche%20de%20visite%20-%20Maison%20de%20George%20Sand%20%C3%A0%20Nohant.pdf?inLanguage=fre-FR&version=5",
+			"https://www.chateau-valencay.fr/decouvrir/histoire-chateau/"
+		],
+		"jura:region": [
+			"https://www.jura.gouv.fr/contenu/telechargement/6965/52224/file/SDACR%2B23.pdf",
+			"https://www.jura.gouv.fr/content/download/13591/104494/file/Jura_phys_hist2017.pdf",
+			"https://www.doledujura.fr/maison-natale-de-pasteur",
+			"https://www.mairie-salinslesbains.fr/grande-saline/"
+		],
+		"vendee:region": [
+			"https://fr.wikisource.org/wiki/Grand_dictionnaire_universel_du_XIXe_si%C3%A8cle/VEND%C3%89E%2C_rivi%C3%A8re_de_France",
+			"https://musee-clemenceau-delattre.fr/",
+			"https://www.amisabbayemaillezais.fr/abbaye"
+		],
+		"saone-et-loire:region": [
+			"https://junior.universalis.fr/encyclopedie/saone-et-loire",
+			"https://www.cluny-abbaye.fr/decouvrir/histoire-de-l-abbaye-de-cluny",
+			"https://archeologie.autun.com/point-d-interet/le-temple-dit-de-janus/"
+		],
+		"vienne:region": [
+			"https://infoterre.brgm.fr/rapports/RP-59452-FR.pdf",
+			"https://www.abbaye-saint-savin.fr/fr/un-site-du-patrimoine-mondial-de-lunesco",
+			"https://scolaires.futuroscope.com/sites/default/files/2025-02/L%27histoire%20du%20Futuroscope%20-%20chronologie%20comment%C3%A9e.pdf"
+		],
+		"deux-sevres:region": [
+			"https://www.deux-sevres.fr/sites/default/files/2023-09/Dossier%20de%20presseJO.pdf",
+			"https://tumulus-de-bougon.fr/tumulus/tumulus-de-bougon/",
+			"https://pop.culture.gouv.fr/notice/museo/M0842"
+		],
+		"allier:region": [
+			"https://junior.universalis.fr/encyclopedie/allier",
+			"https://www.ville-vichy.fr/actualites/les-grandes-villes-deaux-deurope-sont-un-patrimoine-mondial-de-lunesco/",
+			"https://cncs.fr/a-visiter/quartier-villars/"
+		],
+		"ain:region": [
+			"https://scd-resnum.univ-lyon3.fr/out/memoires/histoire/LARHRA_1986_DAM.pdf",
+			"https://www.monastere-de-brou.fr/decouvrir/histoire-du-monument",
+			"https://www.memorializieu.eu/cetaient-des-enfants/"
+		],
+		"haute-savoie:region": [
+			"https://patrimoines.savoie.fr/web/psp_7488/qui-sommes-nous",
+			"https://visitationannecy.org/lordre-de-la-visitation/un-peu-dhistoire/",
+			"https://www.olympics.com/ioc/olympic-legacy/100-years-winter-legacy"
+		],
+		"creuse:region": [
+			"https://www.creuse.fr/Une-exposition-pour-feter-les-230-ans-des-departements",
+			"https://ich.unesco.org/en/RL/aubusson-mix-00250",
+			"https://www.culture.gouv.fr/content/download/31665/file/liste_MI21.pdf"
+		],
+		"haute-vienne:region": [
+			"https://bnl-bfm.limoges.fr/files/original/8fc580b5b1ca3c90037af0419603982623040fc6.pdf",
+			"https://www.musee-adriendubouche.fr/la-porcelaine-de-limoges/",
+			"https://www.oradour.org/index.php/recit-du-massacre"
+		],
+		"rhone:region": [
+			"https://musee-site.rhone.fr/wp-content/uploads/2022/09/PSC_Musee_2022_200x240mm_v7_sans_annexe_web_compresse.pdf",
+			"https://saint-chamond.fr/decouvrir-saint-chamond/patrimoine-et-tourisme/laqueduc-romain-du-gier/",
+			"https://www.aqueduc-romain-du-gier.fr/commune/chaponost/"
+		],
+		"puy-de-dome:region": [
+			"https://volcan.puy-de-dome.fr/fileadmin/user_upload/cd63-Dossier-scolaire-puy-de-dome.pdf",
+			"https://musee-gergovie.fr/le-plateau-de-gergovie/histoire/",
+			"https://clermont-ferrand.fr/qui-est-blaise-pascal"
+		],
+		"loire:region": [
+			"https://www.loire.fr/jcms/lw_1327907/en/chiffres-cles",
+			"https://www.unesco.org/sites/default/files/medias/fichiers/2025/01/SAINT-ETIENNE_Monitoring_Report_2017.pdf",
+			"https://sitelecorbusier.com/decouvrir/maison-de-la-culture/"
+		],
+		"charente-maritime:region": [
+			"https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000868642",
+			"https://www.larochelle.fr/action-municipale/ville-culturelle/patrimoine/lhistoire-de-la-ville-en-quelques-dates",
+			"https://www.corderie-royale.com/la-corderie-royale/histoire-de-la-corderie-royale/"
+		],
+		"charente:region": [
+			"https://sportsdenature16.lacharente.fr/fileadmin/user_upload/SSN/4-Activites/vtt/plaquette/lacs_de_H_Charente-bd.pdf",
+			"https://archives.bdangouleme.com/medias/2017/documents/2017_Historique_fibd.pdf",
+			"https://www.ville-cognac.fr/mes-sorties-et-loisirs/ville-dart-et-dhistoire/cognac-ville-de-francois-1er/"
+		],
+		"savoie:region": [
+			"https://patrimoines.savoie.fr/web/psp_7488/qui-sommes-nous",
+			"https://hautecombe.chemin-neuf.fr/patrimoine-de-labbaye/histoire/",
+			"https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2955161&parentDocumentId=172543&skipCopyright=true&skipWatermark=true"
+		],
+		"correze:region": [
+			"https://www.correze.gouv.fr/content/download/6812/45386/file/Sch%C3%A9ma%20d%C3%A9partemental%20de%20gestion%20cyn%C3%A9g%C3%A9tique%20%28SDGC%29.pdf",
+			"https://www.vallee-dordogne.com/la-vallee-de-la-dordogne/villes-et-villages/collonges-la-rouge",
+			"https://www.archives.correze.fr/wp-content/uploads/La-fabrique-daccordeons-Maugein.pdf"
+		],
+		"isere:region": [
+			"https://www.isere.fr/nature/rivieres-fleuves-lieu-vie-voie-migration",
+			"https://www.olympics.com/ioc/legacy/living-legacy/grenoble-1968",
+			"https://musees.isere.fr/page/domaine-de-vizille-musee-de-la-revolution-francaise-le-site-historique"
+		],
+		"dordogne:region": [
+			"https://espritdepays.com/comprendre/introduction/dordogne-descriptions-joanne-et-vuillemin",
+			"https://lascaux.fr/fr/histoire-de-la-decouverte/",
+			"https://musee-prehistoire-eyzies.fr/musees-napoleonien-africain/collection/objet/homo-sapiens-homme-de-cro-magnon1"
+		],
+		"haute-loire:region": [
+			"https://junior.universalis.fr/encyclopedie/haute-loire",
+			"https://www.cathedrale-puy-en-velay.fr/en/decouvrir/un-point-de-depart-historique-vers-compostelle",
+			"https://www.lepuyenvelay-tourisme.fr/patrimoine-culturel/centre-denseignement-de-la-dentelle-aux-fuseaux/"
+		],
+		"cantal:region": [
+			"https://inventaire-forestier.ign.fr/IMG/pdf/PubDep/15-cantal/ifn_15_4_cantal_2004.pdf",
+			"https://fr.wikipedia.org/wiki/Cantal_%28d%C3%A9partement%29",
+			"https://1986.aurillac.net/index.php",
+			"https://www.mauriac.fr/article_65_1_basilique-notre-dame-des-miracles-xiie-_fr.html"
+		],
+		"gironde:region": [
+			"https://www.gironde.gouv.fr/contenu/telechargement/19117/115337/file/Tome1.6_paysages_patrimoine.pdf",
+			"https://whc.unesco.org/en/list/1256",
+			"https://www.phare-de-cordouan.fr/en/discover/life-at-the-lighthouse/",
+			"https://pop.culture.gouv.fr/notice/merimee/IA33001224"
+		],
+		"ardeche:region": [
+			"https://www.routard.com/fr/guide/a/carte-d-identite/france/ardeche-drome",
+			"https://archeologie.culture.gouv.fr/chauvet/fr/la-decouverte-0",
+			"https://www.annonay.fr/actualites-et-sorties/evenements-les-grands-rdv/festival-de-la-montgolfiere",
+			"https://oncf.fr/le-premier-envol-officiel-de-montgolfiere-en-public/"
+		],
+		"drome:region": [
+			"https://www.fnmji.fr/images/organisations-regionales/schema_dorganisation_des_mjpm_et_des_dpf_de_la_region_rhone-alpes_2010-2014.pdf",
+			"https://www.facteurcheval.com/wp-content/uploads/2021/02/Guide-de-visite-FR.pdf",
+			"https://www.chateaudegrignan.fr/le-chateau/histoire/"
+		],
+		"hautes-alpes:region": [
+			"https://www.academie-francaise.fr/lia-l-karlsruhe",
+			"https://www.dictionnaire-academie.fr/article/A8H0171",
+			"https://www.ville-briancon.fr/decouverte/ville-dart-dhistoire-patrimoine-unesco/briancon-patrimoine-mondial-unesco",
+			"https://sites-vauban.org/sites-majeurs/mont-dauphin",
+			"https://excerpts.numilog.com/books/9782402619059.pdf"
+		],
+		"lot:region": [
+			"https://aurore.unilim.fr/memoires/nxfile/default/baf51dce-73c6-42a8-8205-91d82150d1ce/blobholder%3A0/M-LMHS12-2022-001.pdf",
+			"https://www.tourisme-occitanie.com/fr/fiche/patrimoine-culturel/le-pont-valentre-cahors_TFOPCUMIP046V509P97/",
+			"https://www.rocamadour.com/histoire-et-patrimoine/"
+		],
+		"lozere:region": [
+			"https://www.academie-francaise.fr/bertrand-b-france",
+			"https://avenarmand.com/histoire/decouverte-et-exploration/",
+			"https://www.chemin-stevenson.org/hebergement/hotel-auberge-des-cevennes/",
+			"https://auberge-des-cevennes.com/lauberge/"
+		],
+		"lot-et-garonne:region": [
+			"https://moncompte.ffgym.fr/download/5bd6d37afaef1641428b4572/PV%20AG%20FFG%2023%20juin%202018.pdf",
+			"https://www.pruneau.fr/un-fruit-simplement-seche/",
+			"https://www.tourisme-lotetgaronne.com/culture-patrimoine/bastide-de-villeneuve-sur-lot/",
+			"https://tourisme.villeneuve-valleedulot.com/app/uploads/grandvilleneuvois/2024/05/OT-VVL_Villeneuve-sur-Lot-en-toute-liberte.pdf"
+		],
+		"aveyron:region": [
+			"https://fr.wikipedia.org/wiki/Aveyron_%28d%C3%A9partement%29",
+			"https://patrimoine.rodezagglo.fr/fr/patrimoine-rodez-agglomeration/documents/B.pdf",
+			"https://www.tourisme-conques.fr/fr/preparer-mon-sejour/sites-loisirs/f_abbatiale-sainte-foy-de-conques-1730"
+		],
+		"alpes-de-haute-provence:region": [
+			"https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000000500316&pageCourante=03534",
+			"https://www.dignelesbains-tourisme.com/decouvrir/les-incontournables/maison-alexandra-david-neel/",
+			"https://lejournal.cnrs.fr/articles/a-la-poursuite-des-exoplanetes"
+		],
+		"tarn-et-garonne:region": [
+			"https://frcoccitanie.fr/docs/SDGC-Tarn-et-Garonne/SDGC-2018.pdf",
+			"https://www.diocese-montauban.fr/le-diocese/histoire-et-patrimoine/notes-historiques/",
+			"https://abbayemoissac.com/sites/default/files/uploads/fiche_pedagogique_-_cloitre.pdf"
+		],
+		"vaucluse:region": [
+			"https://extranet.inao.gouv.fr/fichier/PNO2CDCIGPVaucluse.pdf",
+			"https://palais-des-papes.com/le-parcours-de-visite/",
+			"https://provence-alpes-cotedazur.com/que-faire/culture-et-patrimoine/monuments/theatre-antique-orange/",
+			"https://theatre-antique.com/"
+		],
+		"landes:region": [
+			"https://www.dictionnaire-academie.fr/article/A9L0249",
+			"https://archives.landes.fr/_recherche-ef-api/inventaire-pdf?idIR=245",
+			"https://www.marqueze.fr/l-ecomusee-de-marqueze-landes/histoire-et-projet-de-l-ecomusee-de-marqueze.html"
+		],
+		"gard:region": [
+			"https://www.gard.fr/information/actualites/forum-eau-climat-2025-le-gard-face-au-defi-du-siecle",
+			"https://whc.unesco.org/en/list/344/",
+			"https://whc.unesco.org/en/list/1569/"
+		],
+		"alpes-maritimes:region": [
+			"https://www.departement06.fr/en/node/499",
+			"https://www.explorenicecotedazur.com/culture/promenade-des-anglais/",
+			"https://ich.unesco.org/en/RL/the-skills-related-to-perfume-in-pays-de-grasse-the-cultivation-of-perfume-plants-the-knowledge-and-processing-of-natural-raw-materials-and-the-art-of-perfume-composition-01207"
+		],
+		"tarn:region": [
+			"https://junior.universalis.fr/encyclopedie/tarn",
+			"https://whc.unesco.org/en/list/1337/",
+			"https://www.la-toscane-occitane.com/visiter/villes-villages/cordes-sur-ciel/"
+		],
+		"gers:region": [
+			"https://sicodei.projets-environnement.gouv.fr/2025/06/18/9471181/9471181_FEI.pdf",
+			"https://pop.culture.gouv.fr/notice/palissy/PM32000007",
+			"https://www.gers-armagnac.com/explorer/incontournables/labbaye-de-flaran/"
+		],
+		"herault:region": [
+			"https://junior.universalis.fr/encyclopedie/herault",
+			"https://facmedecine.umontpellier.fr/wp-content/uploads/2020/08/20200827-Statuts-PDF.pdf",
+			"https://www.herault-tourisme.com/fr/decouvrir/culture-et-patrimoine/top-des-plus-belles-abbayes-de-lherault/abbaye-de-gellone/"
+		],
+		"bouches-du-rhone:region": [
+			"https://junior.universalis.fr/encyclopedie/bouches-du-rhone",
+			"https://www.patrimoine.ville-arles.fr/index.php?idx=3&obj=edifice&quartier=14",
+			"https://www.culture.gouv.fr/regions/drac-provence-alpes-cote-d-azur/politique-et-actions-culturelles/le-label-maison-des-illustres-en-provence-alpes-cote-d-azur/atelier-cezanne-aix-en-provence-13"
+		],
+		"var:region": [
+			"https://hdevar.fr/fr/web/departement-du-var/le-departement/l-histoire-du-var",
+			"https://www.le-thoronet.fr/content/download/9924374/file/Brochure%202026%20abbaye%20thoronet.pdf?inLanguage=fre-FR&version=1",
+			"https://www.servicehistorique.sga.defense.gouv.fr/ark/54973"
+		],
+		"haute-garonne:region": [
+			"https://junior.universalis.fr/encyclopedie/haute-garonne",
+			"https://www.toulouse-tourisme.com/assets/uploads/sites/3/2025/02/le-quartier-saint-sernin.pdf",
+			"https://www.culture.gouv.fr/regions/drac-occitanie/la-direction-regionale-des-affaires-culturelles-drac-occitanie/patrimoines-et-architecture/patrimoine-mondial-en-occitanie/canal-du-midi"
+		],
+		"pyrenees-atlantiques:region": [
+			"https://catalogue.bnf.fr/ark%3A/12148/cb11872782q",
+			"https://chateau-pau.fr/grandes-dates",
+			"https://samb-baiona.net/bmb/BMB-197.pdf"
+		],
+		"hautes-pyrenees:region": [
+			"https://junior.universalis.fr/index/observatoire-astronomique",
+			"https://www.lourdes-france.com/les-apparitions-de-lourdes/",
+			"https://inventaire-forestier.ign.fr/IMG/pdf/PubDep/65-hautes-pyrenees/ifn_65_3_hautes-pyrenees_1997.pdf",
+			"https://picdumidi.com/fr/page/offres-dediees"
+		],
+		"aude:region": [
+			"https://junior.universalis.fr/encyclopedie/aude",
+			"https://whc.unesco.org/fr/list/345",
+			"https://www.narbonne.fr/musee-narbo-via"
+		],
+		"ariege:region": [
+			"https://junior.universalis.fr/encyclopedie/ariege",
+			"https://www.ariegepyrenees.com/decouvrir/incontournables/grottes-prehistoire/la-grotte-de-niaux/",
+			"https://www.montsegur.fr/guide-de-visite-du-chateau-de-montsegur/"
+		],
+		"pyrenees-orientales:region": [
+			"https://junior.universalis.fr/encyclopedie/pyrenees-orientales",
+			"https://www.ledepartement66.fr/dossier/le-palais-des-rois-de-majorque/",
+			"https://musee-archeologienationale.fr/collection/objet/lhomme-de-tautavel-chasseur-de-la-prehistoire"
+		],
+		"haute-corse:region": [
+			"https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000521934",
+			"https://m3c.universita.corsica/s/fr/item/7521",
+			"https://www.visit-corsica.com/fr/Mon-sejour/Patrimoine-culturel/Tout-le-patrimoine-culturel/CITADELLE-DE-CORTE",
+			"https://musee.bastia.corsica/histoire-du-palais/"
+		],
+		"corse-du-sud:region": [
+			"https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000521934",
+			"https://m3c.universita.corsica/s/fr/item/7521",
+			"https://musees-nationaux-malmaison.fr/musee-maisonbonaparte/maison-bonaparte-0",
+			"https://www.visit-corsica.com/fr/Mon-sejour/Patrimoine-culturel/Tout-le-patrimoine-culturel/SITE-DE-FILITOSA"
+		]
+	},
+	"nord": {
+		"region": {
+			"en": [
+				"Nord means ‘north’ in French; the department bearing this name was created in 1790.",
+				"Towns in Nord, including Douai and Cassel, maintain traditions of processional giants carried through the streets.",
+				"The Centre Historique Minier at Lewarde opened in 1984 on the former Delloye colliery site."
+			],
+			"it": [
+				"Nord significa «nord» in francese; il dipartimento che porta questo nome fu creato nel 1790.",
+				"Città del Nord, tra cui Douai e Cassel, mantengono tradizioni di giganti processionali portati per le strade.",
+				"Il Centre Historique Minier di Lewarde aprì nel 1984 sul sito dell’ex miniera Delloye."
+			],
+			"de": [
+				"Nord bedeutet auf Französisch „Norden“; das so benannte Département wurde 1790 geschaffen.",
+				"Städte im Département Nord, darunter Douai und Cassel, pflegen Traditionen von Prozessionsriesen, die durch die Straßen getragen werden.",
+				"Das Centre Historique Minier in Lewarde eröffnete 1984 auf dem Gelände der ehemaligen Zeche Delloye."
+			]
+		}
+	},
+	"pas-de-calais": {
+		"region": {
+			"en": [
+				"Pas-de-Calais was named in 1790 after the strait between Calais and Dover, with pas meaning a passage.",
+				"The Louvre-Lens museum in Pas-de-Calais opened on 4 December 2012, Saint Barbara’s Day, the miners’ patronal festival.",
+				"The Canadian National Vimy Memorial in Pas-de-Calais was unveiled in 1936 to commemorate Canada’s First World War dead."
+			],
+			"it": [
+				"Il Pas-de-Calais prese il nome nel 1790 dallo stretto tra Calais e Dover, con pas nel senso di passaggio.",
+				"Il museo Louvre-Lens nel Pas-de-Calais aprì il 4 dicembre 2012, giorno di santa Barbara, patrona dei minatori.",
+				"Il Memoriale nazionale canadese di Vimy nel Pas-de-Calais fu inaugurato nel 1936 per commemorare i caduti canadesi della Prima guerra mondiale."
+			],
+			"de": [
+				"Pas-de-Calais wurde 1790 nach der Meerenge zwischen Calais und Dover benannt, wobei pas einen Durchgang bezeichnet.",
+				"Das Museum Louvre-Lens in Pas-de-Calais eröffnete am 4. Dezember 2012, dem Festtag der Bergmannspatronin Barbara.",
+				"Die kanadische nationale Gedenkstätte von Vimy in Pas-de-Calais wurde 1936 zum Gedenken an Kanadas Gefallene des Ersten Weltkriegs eingeweiht."
+			]
+		}
+	},
+	"somme": {
+		"region": {
+			"en": [
+				"The Somme department takes its name from the River Somme.",
+				"Amiens Cathedral in the Somme, mainly built between 1220 and 1288, is a UNESCO World Heritage Site.",
+				"The Historial de la Grande Guerre in Péronne opened in 1992, combining a medieval castle with a museum designed by Henri-Édouard Ciriani."
+			],
+			"it": [
+				"Il dipartimento della Somme prende il nome dal fiume Somme.",
+				"La cattedrale di Amiens nella Somme, costruita principalmente tra il 1220 e il 1288, è Patrimonio Mondiale dell’UNESCO.",
+				"L’Historial de la Grande Guerre di Péronne aprì nel 1992, unendo un castello medievale a un museo progettato da Henri-Édouard Ciriani."
+			],
+			"de": [
+				"Das Département Somme ist nach dem Fluss Somme benannt.",
+				"Die Kathedrale von Amiens im Département Somme wurde hauptsächlich zwischen 1220 und 1288 erbaut und gehört zum UNESCO-Welterbe.",
+				"Das Historial de la Grande Guerre in Péronne eröffnete 1992 und verbindet eine mittelalterliche Burg mit einem von Henri-Édouard Ciriani entworfenen Museum."
+			]
+		}
+	},
+	"ardennes": {
+		"region": {
+			"en": [
+				"The Ardennes department recalls the ancient forest recorded by Julius Caesar as Arduenna silva.",
+				"Sedan Castle in the Ardennes was begun by Évrard de La Marck after he acquired the lordship in 1424.",
+				"Poet Arthur Rimbaud was born in Charleville in the Ardennes in 1854, and the town’s museum preserves documents relating to his life and work."
+			],
+			"it": [
+				"Il dipartimento delle Ardenne richiama l’antica foresta ricordata da Giulio Cesare come Arduenna silva.",
+				"Il castello di Sedan nelle Ardenne fu iniziato da Évrard de La Marck dopo l’acquisto della signoria nel 1424.",
+				"Il poeta Arthur Rimbaud nacque a Charleville nelle Ardenne nel 1854 e il museo cittadino conserva documenti sulla sua vita e sulla sua opera."
+			],
+			"de": [
+				"Das Département Ardennes erinnert an den antiken Wald, den Julius Caesar als Arduenna silva beschrieb.",
+				"Évrard de La Marck begann mit dem Bau der Burg Sedan in den Ardennen, nachdem er 1424 die Herrschaft erworben hatte.",
+				"Der Dichter Arthur Rimbaud wurde 1854 in Charleville in den Ardennen geboren; das dortige Museum bewahrt Dokumente zu seinem Leben und Werk."
+			]
+		}
+	},
+	"seine-maritime": {
+		"region": {
+			"en": [
+				"Seine-Maritime was called Seine-Inférieure until a decree renamed the department in 1955.",
+				"Le Havre’s centre in Seine-Maritime was rebuilt between 1945 and 1964 by a team led by Auguste Perret.",
+				"Joan of Arc was burned at the stake in Rouen, in present-day Seine-Maritime, on 30 May 1431."
+			],
+			"it": [
+				"La Seine-Maritime si chiamava Seine-Inférieure finché un decreto rinominò il dipartimento nel 1955.",
+				"Il centro di Le Havre nella Seine-Maritime fu ricostruito tra il 1945 e il 1964 da un gruppo guidato da Auguste Perret.",
+				"Giovanna d’Arco fu arsa sul rogo a Rouen, nell’attuale Seine-Maritime, il 30 maggio 1431."
+			],
+			"de": [
+				"Seine-Maritime hieß Seine-Inférieure, bis ein Dekret das Département 1955 umbenannte.",
+				"Das Zentrum von Le Havre in Seine-Maritime wurde zwischen 1945 und 1964 von einem Team unter Auguste Perret wiederaufgebaut.",
+				"Jeanne d’Arc wurde am 30. Mai 1431 in Rouen im heutigen Département Seine-Maritime auf dem Scheiterhaufen verbrannt."
+			]
+		}
+	},
+	"aisne": {
+		"region": {
+			"en": [
+				"The Aisne department takes its name from the River Aisne.",
+				"At Guise in the Aisne, Jean-Baptiste André Godin began building the Familistère in 1859 as a social housing experiment for industrial workers.",
+				"The Nivelle offensive on the Chemin des Dames in the Aisne began on 16 April 1917."
+			],
+			"it": [
+				"Il dipartimento dell’Aisne prende il nome dal fiume Aisne.",
+				"A Guise nell’Aisne, Jean-Baptiste André Godin iniziò nel 1859 la costruzione del Familistère come esperimento di edilizia sociale per gli operai industriali.",
+				"L’offensiva Nivelle sul Chemin des Dames nell’Aisne iniziò il 16 aprile 1917."
+			],
+			"de": [
+				"Das Département Aisne ist nach dem Fluss Aisne benannt.",
+				"In Guise im Département Aisne begann Jean-Baptiste André Godin 1859 mit dem Bau des Familistère als sozialem Wohnexperiment für Industriearbeiter.",
+				"Die Nivelle-Offensive am Chemin des Dames im Département Aisne begann am 16. April 1917."
+			]
+		}
+	},
+	"oise": {
+		"region": {
+			"en": [
+				"The Oise department, created in 1790, was named after the River Oise.",
+				"The Duke of Aumale donated Chantilly’s estate and collections to the Institut de France, completing the donation in 1886.",
+				"Napoleon III commissioned Eugène Viollet-le-Duc to restore Pierrefonds Castle in the Oise in 1857."
+			],
+			"it": [
+				"Il dipartimento dell’Oise, creato nel 1790, prese il nome dal fiume Oise.",
+				"Il duca d’Aumale donò la tenuta e le collezioni di Chantilly all’Institut de France, completando la donazione nel 1886.",
+				"Napoleone III incaricò Eugène Viollet-le-Duc di restaurare il castello di Pierrefonds nell’Oise nel 1857."
+			],
+			"de": [
+				"Das 1790 geschaffene Département Oise wurde nach dem Fluss Oise benannt.",
+				"Der Herzog von Aumale schenkte das Anwesen und die Sammlungen von Chantilly dem Institut de France und vervollständigte die Schenkung 1886.",
+				"Napoleon III. beauftragte Eugène Viollet-le-Duc 1857 mit der Restaurierung der Burg Pierrefonds im Département Oise."
+			]
+		}
+	},
+	"calvados": {
+		"region": {
+			"en": [
+				"Calvados received its name in 1790 from rocks off Asnelles, although the older origin of the rocks’ name remains uncertain.",
+				"The eleventh-century Bayeux Tapestry, associated with Bayeux in Calvados, tells the story of the Norman conquest of England in 1066 through embroidery.",
+				"William the Conqueror founded the Abbaye-aux-Hommes at Caen in Calvados in the eleventh century."
+			],
+			"it": [
+				"Il Calvados ricevette il nome nel 1790 dagli scogli al largo di Asnelles, anche se l’origine più antica del nome degli scogli resta incerta.",
+				"L’Arazzo di Bayeux dell’XI secolo, legato a Bayeux nel Calvados, racconta con il ricamo la conquista normanna dell’Inghilterra del 1066.",
+				"Guglielmo il Conquistatore fondò l’Abbaye-aux-Hommes a Caen nel Calvados nell’XI secolo."
+			],
+			"de": [
+				"Calvados erhielt seinen Namen 1790 von Felsen vor Asnelles, wobei der ältere Ursprung des Felsennamens ungewiss bleibt.",
+				"Der Teppich von Bayeux aus dem 11. Jahrhundert, der mit Bayeux in Calvados verbunden ist, erzählt in Stickerei von der normannischen Eroberung Englands 1066.",
+				"Wilhelm der Eroberer gründete im 11. Jahrhundert die Abbaye-aux-Hommes in Caen in Calvados."
+			]
+		}
+	},
+	"manche": {
+		"region": {
+			"en": [
+				"The Manche department was named after La Manche, the French name for the English Channel, when it was created in 1790.",
+				"Benedictine monks were installed at Mont-Saint-Michel in the Manche by Duke Richard I of Normandy in 966.",
+				"Fashion designer Christian Dior was born at Granville in the Manche in 1905."
+			],
+			"it": [
+				"Il dipartimento della Manche prese il nome da La Manche, nome francese del canale della Manica, quando fu creato nel 1790.",
+				"Il duca Riccardo I di Normandia insediò monaci benedettini a Mont-Saint-Michel nella Manche nel 966.",
+				"Lo stilista Christian Dior nacque a Granville nella Manche nel 1905."
+			],
+			"de": [
+				"Das Département Manche wurde bei seiner Gründung 1790 nach La Manche benannt, dem französischen Namen des Ärmelkanals.",
+				"Herzog Richard I. von der Normandie siedelte 966 Benediktinermönche auf dem Mont-Saint-Michel im Département Manche an.",
+				"Der Modeschöpfer Christian Dior wurde 1905 in Granville im Département Manche geboren."
+			]
+		}
+	},
+	"eure": {
+		"region": {
+			"en": [
+				"The Eure department takes its name from the River Eure.",
+				"Claude Monet made his home and gardens at Giverny in the Eure from 1883 until his death in 1926.",
+				"Richard the Lionheart’s Château Gaillard at Les Andelys in the Eure was completed in 1198."
+			],
+			"it": [
+				"Il dipartimento dell’Eure prende il nome dal fiume Eure.",
+				"Claude Monet stabilì la propria casa e i propri giardini a Giverny nell’Eure dal 1883 fino alla morte nel 1926.",
+				"Il Château Gaillard di Riccardo Cuor di Leone a Les Andelys nell’Eure fu completato nel 1198."
+			],
+			"de": [
+				"Das Département Eure ist nach dem Fluss Eure benannt.",
+				"Claude Monet lebte von 1883 bis zu seinem Tod 1926 in seinem Haus mit Garten in Giverny im Département Eure.",
+				"Richard Löwenherz’ Château Gaillard bei Les Andelys im Département Eure wurde 1198 fertiggestellt."
+			]
+		}
+	},
+	"val-d-oise": {
+		"region": {
+			"en": [
+				"Before Val-d’Oise became a department in 1968, its territory belonged to the former department of Seine-et-Oise.",
+				"Vincent van Gogh spent the last months of his life in 1890 at the Auberge Ravoux in Auvers-sur-Oise, in Val-d’Oise.",
+				"Royaumont Abbey in Val-d’Oise was founded in 1228 by Louis IX and his mother Blanche of Castile."
+			],
+			"it": [
+				"Prima che il Val-d’Oise diventasse un dipartimento nel 1968, il suo territorio apparteneva all’antico dipartimento di Seine-et-Oise.",
+				"Vincent van Gogh trascorse gli ultimi mesi della sua vita nel 1890 all’Auberge Ravoux di Auvers-sur-Oise, nel Val-d’Oise.",
+				"L’abbazia di Royaumont nel Val-d’Oise fu fondata nel 1228 da Luigi IX e da sua madre Bianca di Castiglia."
+			],
+			"de": [
+				"Bevor Val-d’Oise 1968 ein Département wurde, gehörte sein Gebiet zum früheren Département Seine-et-Oise.",
+				"Vincent van Gogh verbrachte 1890 seine letzten Lebensmonate in der Auberge Ravoux in Auvers-sur-Oise im Département Val-d’Oise.",
+				"Die Abtei Royaumont im Département Val-d’Oise wurde 1228 von Ludwig IX. und seiner Mutter Blanka von Kastilien gegründet."
+			]
+		}
+	},
+	"meuse": {
+		"region": {
+			"en": [
+				"The Meuse department takes its name from the River Meuse.",
+				"The Battle of Verdun in the Meuse lasted from 21 February to 18 December 1916.",
+				"The upper town of Bar-le-Duc in the Meuse preserves Renaissance mansions built for nobles and officials of the Duchy of Bar."
+			],
+			"it": [
+				"Il dipartimento della Meuse prende il nome dal fiume Mosa.",
+				"La battaglia di Verdun nella Meuse durò dal 21 febbraio al 18 dicembre 1916.",
+				"La città alta di Bar-le-Duc nella Meuse conserva palazzi rinascimentali costruiti per nobili e funzionari del ducato di Bar."
+			],
+			"de": [
+				"Das Département Meuse ist nach dem Fluss Maas benannt.",
+				"Die Schlacht von Verdun im Département Meuse dauerte vom 21. Februar bis zum 18. Dezember 1916.",
+				"Die Oberstadt von Bar-le-Duc im Département Meuse bewahrt Renaissancepalais, die für Adlige und Beamte des Herzogtums Bar errichtet wurden."
+			]
+		}
+	},
+	"moselle": {
+		"region": {
+			"en": [
+				"The Moselle department takes its name from the River Moselle.",
+				"The Centre Pompidou-Metz in the Moselle opened in 2010 as a venue for modern and contemporary art.",
+				"The glassworks at present-day Saint-Louis-lès-Bitche in the Moselle received royal status from Louis XV in 1767."
+			],
+			"it": [
+				"Il dipartimento della Moselle prende il nome dal fiume Mosella.",
+				"Il Centre Pompidou-Metz nella Moselle aprì nel 2010 come spazio dedicato all’arte moderna e contemporanea.",
+				"La vetreria dell’attuale Saint-Louis-lès-Bitche nella Moselle ricevette lo status di manifattura reale da Luigi XV nel 1767."
+			],
+			"de": [
+				"Das Département Moselle ist nach dem Fluss Mosel benannt.",
+				"Das Centre Pompidou-Metz im Département Moselle eröffnete 2010 als Ort für moderne und zeitgenössische Kunst.",
+				"Die Glashütte im heutigen Saint-Louis-lès-Bitche im Département Moselle erhielt 1767 von Ludwig XV. den Status einer königlichen Manufaktur."
+			]
+		}
+	},
+	"marne": {
+		"region": {
+			"en": [
+				"The Marne department takes its name from the River Marne.",
+				"Charles VII was crowned at Reims Cathedral in the Marne in 1429, with Joan of Arc present.",
+				"Champagne vineyards, houses and cellars around Reims, Épernay and nearby villages in the Marne entered the UNESCO World Heritage List in 2015."
+			],
+			"it": [
+				"Il dipartimento della Marne prende il nome dal fiume Marna.",
+				"Carlo VII fu incoronato nella cattedrale di Reims nella Marne nel 1429, alla presenza di Giovanna d’Arco.",
+				"I vigneti, le case produttrici e le cantine dello Champagne intorno a Reims, Épernay e ai villaggi vicini nella Marne entrarono nella Lista del Patrimonio Mondiale dell’UNESCO nel 2015."
+			],
+			"de": [
+				"Das Département Marne ist nach dem Fluss Marne benannt.",
+				"Karl VII. wurde 1429 in der Kathedrale von Reims im Département Marne in Anwesenheit von Jeanne d’Arc gekrönt.",
+				"Champagner-Weinberge, Handelshäuser und Keller um Reims, Épernay und benachbarte Dörfer im Département Marne wurden 2015 in die UNESCO-Welterbeliste aufgenommen."
+			]
+		}
+	},
+	"meurthe-et-moselle": {
+		"region": {
+			"en": [
+				"Meurthe-et-Moselle combines the names of the former Meurthe and Moselle departments whose remaining French districts were united in 1871.",
+				"Nancy’s Place Stanislas in Meurthe-et-Moselle belongs to an eighteenth-century ensemble commissioned by Stanislas Leszczyński, Duke of Lorraine.",
+				"The glassworks that became Baccarat’s crystal manufacture was founded at Baccarat in present-day Meurthe-et-Moselle in 1764."
+			],
+			"it": [
+				"Meurthe-et-Moselle unisce i nomi degli antichi dipartimenti di Meurthe e Moselle, i cui distretti rimasti francesi furono riuniti nel 1871.",
+				"La Place Stanislas di Nancy nella Meurthe-et-Moselle appartiene a un complesso settecentesco commissionato da Stanislao Leszczyński, duca di Lorena.",
+				"La vetreria che sarebbe diventata la manifattura di cristallo Baccarat fu fondata a Baccarat, nell’attuale Meurthe-et-Moselle, nel 1764."
+			],
+			"de": [
+				"Meurthe-et-Moselle verbindet die Namen der früheren Départements Meurthe und Moselle, deren französisch gebliebene Bezirke 1871 vereinigt wurden.",
+				"Nancys Place Stanislas in Meurthe-et-Moselle gehört zu einem Ensemble des 18. Jahrhunderts, das Herzog Stanislaus Leszczyński von Lothringen in Auftrag gab.",
+				"Die Glashütte, aus der die Kristallmanufaktur Baccarat hervorging, wurde 1764 in Baccarat im heutigen Département Meurthe-et-Moselle gegründet."
+			]
+		}
+	},
+	"seine-saint-denis": {
+		"region": {
+			"en": [
+				"Seine-Saint-Denis combines the names of the Seine and the historic town of Saint-Denis, following debates over the new department’s name in 1964.",
+				"The Basilica of Saint-Denis in Seine-Saint-Denis is a burial place of French kings and queens, including Dagobert and Louis XVIII.",
+				"The Stade de France in Saint-Denis opened in January 1998 and hosted that year’s football World Cup final."
+			],
+			"it": [
+				"Seine-Saint-Denis unisce i nomi della Senna e della storica città di Saint-Denis, dopo i dibattiti sul nome del nuovo dipartimento nel 1964.",
+				"La basilica di Saint-Denis nella Seine-Saint-Denis è un luogo di sepoltura di re e regine di Francia, tra cui Dagoberto e Luigi XVIII.",
+				"Lo Stade de France a Saint-Denis aprì nel gennaio 1998 e ospitò la finale dei Mondiali di calcio dello stesso anno."
+			],
+			"de": [
+				"Seine-Saint-Denis verbindet die Namen der Seine und der historischen Stadt Saint-Denis nach Debatten über den Namen des neuen Départements im Jahr 1964.",
+				"Die Basilika Saint-Denis im Département Seine-Saint-Denis ist eine Grablege französischer Könige und Königinnen, darunter Dagobert und Ludwig XVIII.",
+				"Das Stade de France in Saint-Denis eröffnete im Januar 1998 und war im selben Jahr Schauplatz des Endspiels der Fußball-Weltmeisterschaft."
+			]
+		}
+	},
+	"hauts-de-seine": {
+		"region": {
+			"en": [
+				"The name Hauts-de-Seine recalls the slopes and heights overlooking the Seine.",
+				"Auguste Rodin and Rose Beuret, both of whom died in 1917, are buried beneath a cast of The Thinker at Meudon in Hauts-de-Seine.",
+				"André Le Nôtre laid out the formal gardens at Sceaux in Hauts-de-Seine for Jean-Baptiste Colbert in the 1670s."
+			],
+			"it": [
+				"Il nome Hauts-de-Seine richiama i pendii e le alture che dominano la Senna.",
+				"Auguste Rodin e Rose Beuret, entrambi morti nel 1917, sono sepolti sotto una fusione del Pensatore a Meudon negli Hauts-de-Seine.",
+				"André Le Nôtre progettò i giardini formali di Sceaux negli Hauts-de-Seine per Jean-Baptiste Colbert negli anni Settanta del Seicento."
+			],
+			"de": [
+				"Der Name Hauts-de-Seine erinnert an die Hänge und Höhen über der Seine.",
+				"Auguste Rodin und Rose Beuret, die beide 1917 starben, sind unter einem Guss des Denkers in Meudon im Département Hauts-de-Seine begraben.",
+				"André Le Nôtre legte in den 1670er Jahren die formalen Gärten von Sceaux im Département Hauts-de-Seine für Jean-Baptiste Colbert an."
+			]
+		}
+	},
+	"val-de-marne": {
+		"region": {
+			"en": [
+				"Val-de-Marne takes its name from the River Marne.",
+				"The keep of Vincennes Castle in Val-de-Marne was built between 1361 and 1367 as part of a royal residence.",
+				"The wholesale food market at Rungis in Val-de-Marne opened in March 1969 after the transfer of trading activities from Les Halles in Paris."
+			],
+			"it": [
+				"Il Val-de-Marne prende il nome dal fiume Marna.",
+				"Il mastio del castello di Vincennes nel Val-de-Marne fu costruito tra il 1361 e il 1367 come parte di una residenza reale.",
+				"Il mercato alimentare all’ingrosso di Rungis nel Val-de-Marne aprì nel marzo 1969 dopo il trasferimento delle attività commerciali da Les Halles a Parigi."
+			],
+			"de": [
+				"Val-de-Marne ist nach dem Fluss Marne benannt.",
+				"Der Bergfried des Schlosses Vincennes in Val-de-Marne wurde zwischen 1361 und 1367 als Teil einer königlichen Residenz erbaut.",
+				"Der Lebensmittelgroßmarkt Rungis in Val-de-Marne eröffnete im März 1969 nach der Verlagerung des Handels aus den Pariser Hallen."
+			]
+		}
+	},
+	"yvelines": {
+		"region": {
+			"en": [
+				"Yvelines recalls the historic forest of Yveline, also written Iveline, whose surviving woods include the Rambouillet forest.",
+				"Louis XIV’s court settled at Versailles in present-day Yvelines in 1682.",
+				"Louis XVI brought Spanish Merino sheep to Rambouillet in 1786 to improve the quality of French wool."
+			],
+			"it": [
+				"Yvelines richiama la storica foresta di Yveline, scritta anche Iveline, i cui boschi superstiti comprendono la foresta di Rambouillet.",
+				"La corte di Luigi XIV si stabilì a Versailles, nell’attuale dipartimento delle Yvelines, nel 1682.",
+				"Luigi XVI portò pecore merine spagnole a Rambouillet nel 1786 per migliorare la qualità della lana francese."
+			],
+			"de": [
+				"Yvelines erinnert an den historischen Wald von Yveline, auch Iveline geschrieben, zu dessen erhaltenen Teilen der Wald von Rambouillet gehört.",
+				"Der Hof Ludwigs XIV. ließ sich 1682 in Versailles im heutigen Département Yvelines nieder.",
+				"Ludwig XVI. brachte 1786 spanische Merinoschafe nach Rambouillet, um die Qualität französischer Wolle zu verbessern."
+			]
+		}
+	},
+	"seine-et-marne": {
+		"region": {
+			"en": [
+				"Seine-et-Marne takes its name from the rivers Seine and Marne.",
+				"Napoleon I signed his unconditional abdication at Fontainebleau in present-day Seine-et-Marne in April 1814.",
+				"Nicolas Fouquet entertained Louis XIV at Vaux-le-Vicomte in present-day Seine-et-Marne on 17 August 1661."
+			],
+			"it": [
+				"La Seine-et-Marne prende il nome dai fiumi Senna e Marna.",
+				"Napoleone I firmò la propria abdicazione incondizionata a Fontainebleau, nell’attuale Seine-et-Marne, nell’aprile 1814.",
+				"Nicolas Fouquet ricevette Luigi XIV a Vaux-le-Vicomte, nell’attuale Seine-et-Marne, il 17 agosto 1661."
+			],
+			"de": [
+				"Seine-et-Marne ist nach den Flüssen Seine und Marne benannt.",
+				"Napoleon I. unterzeichnete im April 1814 in Fontainebleau im heutigen Département Seine-et-Marne seine bedingungslose Abdankung.",
+				"Nicolas Fouquet empfing Ludwig XIV. am 17. August 1661 in Vaux-le-Vicomte im heutigen Département Seine-et-Marne."
+			]
+		}
+	},
+	"bas-rhin": {
+		"region": {
+			"en": [
+				"Bas-Rhin means ‘Lower Rhine’, a departmental name referring to its position farther downstream than Haut-Rhin.",
+				"The spire of Strasbourg Cathedral in Bas-Rhin was completed by master builder Johannes Hültz in 1439.",
+				"Haut-Koenigsbourg Castle in Bas-Rhin was restored between 1900 and 1908 by Bodo Ebhardt for Emperor Wilhelm II."
+			],
+			"it": [
+				"Bas-Rhin significa «Basso Reno», nome dipartimentale che richiama la posizione più a valle rispetto all’Haut-Rhin.",
+				"La guglia della cattedrale di Strasburgo nel Bas-Rhin fu completata dal maestro costruttore Johannes Hültz nel 1439.",
+				"Il castello di Haut-Koenigsbourg nel Bas-Rhin fu restaurato tra il 1900 e il 1908 da Bodo Ebhardt per l’imperatore Guglielmo II."
+			],
+			"de": [
+				"Bas-Rhin bedeutet „Niederrhein“ und bezeichnet als Départementsname die flussabwärts gelegene Position gegenüber Haut-Rhin.",
+				"Die Spitze des Straßburger Münsters im Département Bas-Rhin wurde 1439 von Baumeister Johannes Hültz vollendet.",
+				"Die Hohkönigsburg im Département Bas-Rhin wurde zwischen 1900 und 1908 von Bodo Ebhardt für Kaiser Wilhelm II. restauriert."
+			]
+		}
+	},
+	"orne": {
+		"region": {
+			"en": [
+				"The Orne department takes its name from the River Orne.",
+				"The craftsmanship of Alençon needle lace-making in the Orne entered UNESCO’s intangible cultural heritage list in 2010.",
+				"The Haras du Pin stud farm in the Orne was created in 1715, with its principal buildings constructed between 1715 and 1730."
+			],
+			"it": [
+				"Il dipartimento dell’Orne prende il nome dal fiume Orne.",
+				"Il sapere artigianale del merletto ad ago di Alençon nell’Orne entrò nella lista UNESCO del patrimonio culturale immateriale nel 2010.",
+				"L’allevamento equino Haras du Pin nell’Orne fu creato nel 1715, con gli edifici principali costruiti tra il 1715 e il 1730."
+			],
+			"de": [
+				"Das Département Orne ist nach dem Fluss Orne benannt.",
+				"Die Handwerkskunst der Nadelspitze von Alençon im Département Orne wurde 2010 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen.",
+				"Das Gestüt Haras du Pin im Département Orne wurde 1715 gegründet; seine Hauptgebäude entstanden zwischen 1715 und 1730."
+			]
+		}
+	},
+	"essonne": {
+		"region": {
+			"en": [
+				"The Essonne department takes its name from the River Essonne.",
+				"Jean Cocteau lived and worked at his house in Milly-la-Forêt in the Essonne from 1947 until his death in 1963.",
+				"The ornamental moats at Chamarande’s château in the Essonne were designed to enhance its owner’s status rather than to defend the building."
+			],
+			"it": [
+				"Il dipartimento dell’Essonne prende il nome dal fiume Essonne.",
+				"Jean Cocteau visse e lavorò nella sua casa di Milly-la-Forêt nell’Essonne dal 1947 fino alla morte nel 1963.",
+				"I fossati ornamentali del castello di Chamarande nell’Essonne furono progettati per valorizzare il rango del proprietario anziché per difendere l’edificio."
+			],
+			"de": [
+				"Das Département Essonne ist nach dem Fluss Essonne benannt.",
+				"Jean Cocteau lebte und arbeitete von 1947 bis zu seinem Tod 1963 in seinem Haus in Milly-la-Forêt im Département Essonne.",
+				"Die Ziergräben des Schlosses Chamarande im Département Essonne sollten den Rang seines Besitzers unterstreichen und dienten nicht der Verteidigung."
+			]
+		}
+	},
+	"cotes-d-armor": {
+		"region": {
+			"en": [
+				"Côtes-d’Armor was called Côtes-du-Nord until a decree changed the department’s name in 1990.",
+				"Dinan’s defences in Côtes-d’Armor were strengthened with a ducal castle in the late fourteenth century and artillery towers in the late fifteenth century.",
+				"Beauport Abbey at Paimpol in Côtes-d’Armor was founded in 1202 by Alain, Count of Goëlo."
+			],
+			"it": [
+				"Il dipartimento delle Côtes-d’Armor si chiamava Côtes-du-Nord finché un decreto ne cambiò il nome nel 1990.",
+				"Le difese di Dinan nelle Côtes-d’Armor furono rafforzate con un castello ducale alla fine del XIV secolo e torri d’artiglieria alla fine del XV secolo.",
+				"L’abbazia di Beauport a Paimpol nelle Côtes-d’Armor fu fondata nel 1202 da Alain, conte di Goëlo."
+			],
+			"de": [
+				"Côtes-d’Armor hieß Côtes-du-Nord, bis ein Dekret den Namen des Départements 1990 änderte.",
+				"Dinans Befestigungen in Côtes-d’Armor wurden im späten 14. Jahrhundert durch eine herzogliche Burg und im späten 15. Jahrhundert durch Artillerietürme verstärkt.",
+				"Die Abtei Beauport bei Paimpol in Côtes-d’Armor wurde 1202 von Alain, Graf von Goëlo, gegründet."
+			]
+		}
+	},
+	"eure-et-loir": {
+		"region": {
+			"en": [
+				"Eure-et-Loir takes its name from the rivers Eure and Loir.",
+				"Chartres Cathedral in Eure-et-Loir, celebrated for its medieval stained glass, entered the UNESCO World Heritage List in 1979.",
+				"The unfinished aqueduct at Maintenon in Eure-et-Loir was part of Louis XIV’s scheme to carry water from the Eure to Versailles."
+			],
+			"it": [
+				"L’Eure-et-Loir prende il nome dai fiumi Eure e Loir.",
+				"La cattedrale di Chartres nell’Eure-et-Loir, celebre per le vetrate medievali, entrò nella Lista del Patrimonio Mondiale dell’UNESCO nel 1979.",
+				"L’acquedotto incompiuto di Maintenon nell’Eure-et-Loir faceva parte del progetto di Luigi XIV per portare acqua dall’Eure a Versailles."
+			],
+			"de": [
+				"Eure-et-Loir ist nach den Flüssen Eure und Loir benannt.",
+				"Die Kathedrale von Chartres in Eure-et-Loir, bekannt für ihre mittelalterlichen Glasfenster, wurde 1979 in die UNESCO-Welterbeliste aufgenommen.",
+				"Das unvollendete Aquädukt von Maintenon in Eure-et-Loir war Teil von Ludwigs XIV. Plan, Wasser aus der Eure nach Versailles zu leiten."
+			]
+		}
+	},
+	"aube": {
+		"region": {
+			"en": [
+				"The Aube department takes its name from the River Aube.",
+				"Bernard of Clairvaux founded Clairvaux Abbey in present-day Aube in 1115.",
+				"The Cité du Vitrail in Troyes opened its expanded stained-glass exhibitions in the former Hôtel-Dieu-le-Comte in December 2022."
+			],
+			"it": [
+				"Il dipartimento dell’Aube prende il nome dal fiume Aube.",
+				"Bernardo di Chiaravalle fondò l’abbazia di Clairvaux nell’attuale Aube nel 1115.",
+				"La Cité du Vitrail di Troyes aprì le sue esposizioni ampliate sulle vetrate nell’ex Hôtel-Dieu-le-Comte nel dicembre 2022."
+			],
+			"de": [
+				"Das Département Aube ist nach dem Fluss Aube benannt.",
+				"Bernhard von Clairvaux gründete 1115 die Abtei Clairvaux im heutigen Département Aube.",
+				"Die Cité du Vitrail in Troyes eröffnete ihre erweiterten Glasmalereiausstellungen im ehemaligen Hôtel-Dieu-le-Comte im Dezember 2022."
+			]
+		}
+	},
+	"finistere": {
+		"region": {
+			"en": [
+				"Finistère echoes the Latin finis terrae, ‘land’s end’, associated with the abbey of Saint-Mathieu de Fine-Terre.",
+				"Paul Gauguin first came to the artists’ colony at Pont-Aven in Finistère in 1886.",
+				"Quimper’s faience tradition in Finistère developed around 1690 with the Bousquet family’s manufacture at Locmaria."
+			],
+			"it": [
+				"Finistère richiama il latino finis terrae, «fine della terra», associato all’abbazia di Saint-Mathieu de Fine-Terre.",
+				"Paul Gauguin giunse per la prima volta nella colonia di artisti di Pont-Aven nel Finistère nel 1886.",
+				"La tradizione della maiolica di Quimper nel Finistère si sviluppò intorno al 1690 con la manifattura della famiglia Bousquet a Locmaria."
+			],
+			"de": [
+				"Finistère erinnert an das lateinische finis terrae, „Ende der Erde“, das mit der Abtei Saint-Mathieu de Fine-Terre verbunden ist.",
+				"Paul Gauguin kam 1886 erstmals in die Künstlerkolonie Pont-Aven im Département Finistère.",
+				"Quimpers Fayencetradition im Département Finistère entwickelte sich um 1690 mit der Manufaktur der Familie Bousquet in Locmaria."
+			]
+		}
+	},
+	"ille-et-vilaine": {
+		"region": {
+			"en": [
+				"Ille-et-Vilaine combines the names of the rivers Ille and Vilaine.",
+				"The seventeenth-century Palace of the Parliament of Brittany in Rennes, in Ille-et-Vilaine, was completed in 1655.",
+				"The restored Manoir de Limoëlou at Saint-Malo in Ille-et-Vilaine has offered museum visits about its former owner Jacques Cartier since 1984."
+			],
+			"it": [
+				"Ille-et-Vilaine unisce i nomi dei fiumi Ille e Vilaine.",
+				"Il seicentesco palazzo del Parlamento di Bretagna a Rennes, nell’Ille-et-Vilaine, fu completato nel 1655.",
+				"Il restaurato Manoir de Limoëlou a Saint-Malo nell’Ille-et-Vilaine offre dal 1984 visite museali dedicate al suo antico proprietario Jacques Cartier."
+			],
+			"de": [
+				"Ille-et-Vilaine verbindet die Namen der Flüsse Ille und Vilaine.",
+				"Der Palast des bretonischen Parlaments aus dem 17. Jahrhundert in Rennes im Département Ille-et-Vilaine wurde 1655 fertiggestellt.",
+				"Das restaurierte Manoir de Limoëlou in Saint-Malo im Département Ille-et-Vilaine bietet seit 1984 Museumsbesuche über seinen früheren Besitzer Jacques Cartier an."
+			]
+		}
+	},
+	"vosges": {
+		"region": {
+			"en": [
+				"The Vosges department shares its name with the Vosges mountain range, although only its eastern part is mountainous.",
+				"Joan of Arc was born around 1412 at Domrémy, now in the Vosges department.",
+				"Jean-Charles Pellerin established the Imagerie Pellerin at Épinal in the Vosges in 1796, helping create the town’s tradition of popular illustrated prints."
+			],
+			"it": [
+				"Il dipartimento dei Vosges condivide il nome con il massiccio dei Vosgi, anche se soltanto la sua parte orientale è montuosa.",
+				"Giovanna d’Arco nacque intorno al 1412 a Domrémy, oggi nel dipartimento dei Vosges.",
+				"Jean-Charles Pellerin fondò l’Imagerie Pellerin a Épinal nei Vosges nel 1796, contribuendo alla tradizione cittadina delle stampe illustrate popolari."
+			],
+			"de": [
+				"Das Département Vosges teilt seinen Namen mit dem Vogesenmassiv, obwohl nur sein östlicher Teil gebirgig ist.",
+				"Jeanne d’Arc wurde um 1412 in Domrémy geboren, das heute im Département Vosges liegt.",
+				"Jean-Charles Pellerin gründete 1796 die Imagerie Pellerin in Épinal im Département Vosges und prägte damit die örtliche Tradition volkstümlicher Bilderbogen."
+			]
+		}
+	},
+	"haute-marne": {
+		"region": {
+			"en": [
+				"Haute-Marne takes its name from the Marne, whose upper course begins near Langres.",
+				"Philosopher and Encyclopédie editor Denis Diderot was born at Langres in present-day Haute-Marne in 1713.",
+				"Charles de Gaulle bought La Boisserie at Colombey-les-Deux-Églises in Haute-Marne in 1934 as a family home and retreat for writing."
+			],
+			"it": [
+				"Haute-Marne prende il nome dalla Marna, il cui corso superiore inizia nei pressi di Langres.",
+				"Il filosofo e curatore dell’Encyclopédie Denis Diderot nacque a Langres nell’attuale Haute-Marne nel 1713.",
+				"Charles de Gaulle acquistò La Boisserie a Colombey-les-Deux-Églises nell’Haute-Marne nel 1934 come casa familiare e rifugio per scrivere."
+			],
+			"de": [
+				"Haute-Marne ist nach der Marne benannt, deren Oberlauf bei Langres beginnt.",
+				"Der Philosoph und Encyclopédie-Herausgeber Denis Diderot wurde 1713 in Langres im heutigen Département Haute-Marne geboren.",
+				"Charles de Gaulle kaufte 1934 La Boisserie in Colombey-les-Deux-Églises im Département Haute-Marne als Familienhaus und Rückzugsort zum Schreiben."
+			]
+		}
+	},
+	"mayenne": {
+		"region": {
+			"en": [
+				"The Mayenne department takes its name from the River Mayenne.",
+				"Jublains in the Mayenne preserves a Gallo-Roman fortified complex with a central building and adjoining bathhouses.",
+				"Painter Henri Rousseau, known as Le Douanier, was born at Laval in the Mayenne in 1844."
+			],
+			"it": [
+				"Il dipartimento della Mayenne prende il nome dal fiume Mayenne.",
+				"Jublains nella Mayenne conserva un complesso fortificato gallo-romano con un edificio centrale e terme adiacenti.",
+				"Il pittore Henri Rousseau, detto il Doganiere, nacque a Laval nella Mayenne nel 1844."
+			],
+			"de": [
+				"Das Département Mayenne ist nach dem Fluss Mayenne benannt.",
+				"Jublains im Département Mayenne bewahrt einen gallorömischen Befestigungskomplex mit Zentralgebäude und angrenzenden Badehäusern.",
+				"Der Maler Henri Rousseau, bekannt als Le Douanier, wurde 1844 in Laval im Département Mayenne geboren."
+			]
+		}
+	},
+	"sarthe": {
+		"region": {
+			"en": [
+				"The Sarthe department takes its name from the River Sarthe.",
+				"The first 24 Hours of Le Mans motor race in the Sarthe was held on 26–27 May 1923.",
+				"Prosper Guéranger restored Benedictine life at Solesmes in the Sarthe in 1833, and the community became influential in reviving Gregorian chant."
+			],
+			"it": [
+				"Il dipartimento della Sarthe prende il nome dal fiume Sarthe.",
+				"La prima gara automobilistica della 24 Ore di Le Mans nella Sarthe si disputò il 26–27 maggio 1923.",
+				"Prosper Guéranger ripristinò la vita benedettina a Solesmes nella Sarthe nel 1833 e la comunità esercitò un’importante influenza sulla rinascita del canto gregoriano."
+			],
+			"de": [
+				"Das Département Sarthe ist nach dem Fluss Sarthe benannt.",
+				"Das erste 24-Stunden-Autorennen von Le Mans im Département Sarthe fand am 26.–27. Mai 1923 statt.",
+				"Prosper Guéranger stellte 1833 das benediktinische Leben in Solesmes im Département Sarthe wieder her; die Gemeinschaft wurde für die Erneuerung des gregorianischen Gesangs bedeutend."
+			]
+		}
+	},
+	"loiret": {
+		"region": {
+			"en": [
+				"The Loiret department takes its name from the River Loiret, which is fed by resurgent Loire water.",
+				"Orléans in present-day Loiret commemorates the lifting of its siege on 8 May 1429 after Joan of Arc’s intervention.",
+				"The Briare Canal, which runs through the Loiret, was completed in 1642 to link the Loire and Seine river systems."
+			],
+			"it": [
+				"Il dipartimento del Loiret prende il nome dal fiume Loiret, alimentato da acque risorgive della Loira.",
+				"Orléans nell’attuale Loiret commemora la fine dell’assedio l’8 maggio 1429 dopo l’intervento di Giovanna d’Arco.",
+				"Il canale di Briare, che attraversa il Loiret, fu completato nel 1642 per collegare i sistemi fluviali della Loira e della Senna."
+			],
+			"de": [
+				"Das Département Loiret ist nach dem Fluss Loiret benannt, der von wieder austretendem Wasser der Loire gespeist wird.",
+				"Orléans im heutigen Département Loiret erinnert an das Ende seiner Belagerung am 8. Mai 1429 nach dem Eingreifen von Jeanne d’Arc.",
+				"Der durch das Département Loiret verlaufende Briare-Kanal wurde 1642 fertiggestellt, um die Flusssysteme von Loire und Seine zu verbinden."
+			]
+		}
+	},
+	"yonne": {
+		"region": {
+			"en": [
+				"The Yonne department takes its name from the River Yonne.",
+				"The church and hill of Vézelay in the Yonne entered the UNESCO World Heritage List in 1979.",
+				"Construction of Guédelon Castle in the Yonne began in 1997 as an experiment using medieval building techniques."
+			],
+			"it": [
+				"Il dipartimento dell’Yonne prende il nome dal fiume Yonne.",
+				"La chiesa e la collina di Vézelay nell’Yonne entrarono nella Lista del Patrimonio Mondiale dell’UNESCO nel 1979.",
+				"La costruzione del castello di Guédelon nell’Yonne iniziò nel 1997 come esperimento basato su tecniche edilizie medievali."
+			],
+			"de": [
+				"Das Département Yonne ist nach dem Fluss Yonne benannt.",
+				"Die Kirche und der Hügel von Vézelay im Département Yonne wurden 1979 in die UNESCO-Welterbeliste aufgenommen.",
+				"Der Bau der Burg Guédelon im Département Yonne begann 1997 als Experiment mit mittelalterlichen Bautechniken."
+			]
+		}
+	},
+	"haut-rhin": {
+		"region": {
+			"en": [
+				"Haut-Rhin means ‘Upper Rhine’, referring to the river’s upstream course relative to Bas-Rhin.",
+				"The Unterlinden Museum at Colmar in Haut-Rhin preserves the Isenheim Altarpiece, with paintings by Grünewald and sculptures by Nicolas of Haguenau.",
+				"Mulhouse’s National Automobile Museum in Haut-Rhin opened in 1982 to display the Schlumpf brothers’ collection."
+			],
+			"it": [
+				"Haut-Rhin significa «Alto Reno», in riferimento al tratto del fiume più a monte rispetto al Bas-Rhin.",
+				"Il Museo Unterlinden di Colmar nell’Haut-Rhin conserva l’Altare di Isenheim, con dipinti di Grünewald e sculture di Nicolas di Haguenau.",
+				"Il Museo nazionale dell’automobile di Mulhouse nell’Haut-Rhin aprì nel 1982 per esporre la collezione dei fratelli Schlumpf."
+			],
+			"de": [
+				"Haut-Rhin bedeutet „Oberrhein“ und verweist auf den flussaufwärts gelegenen Abschnitt gegenüber Bas-Rhin.",
+				"Das Unterlinden-Museum in Colmar im Département Haut-Rhin bewahrt den Isenheimer Altar mit Gemälden von Grünewald und Skulpturen von Niklaus von Hagenau.",
+				"Das Nationale Automobilmuseum in Mulhouse im Département Haut-Rhin eröffnete 1982 mit der Sammlung der Brüder Schlumpf."
+			]
+		}
+	},
+	"morbihan": {
+		"region": {
+			"en": [
+				"Morbihan means ‘little sea’ in Breton, recalling the Gulf of Morbihan.",
+				"The Neolithic stone alignments at Carnac in Morbihan include the fields of Le Ménec, Kermario and Kerlescan.",
+				"The port of Lorient in present-day Morbihan was established in 1666 for the French East India Company."
+			],
+			"it": [
+				"Morbihan significa «piccolo mare» in bretone e richiama il golfo di Morbihan.",
+				"Gli allineamenti neolitici di pietre di Carnac nel Morbihan comprendono i campi di Le Ménec, Kermario e Kerlescan.",
+				"Il porto di Lorient nell’attuale Morbihan fu creato nel 1666 per la Compagnia francese delle Indie orientali."
+			],
+			"de": [
+				"Morbihan bedeutet auf Bretonisch „kleines Meer“ und erinnert an den Golf von Morbihan.",
+				"Zu den neolithischen Steinreihen von Carnac in Morbihan gehören die Felder Le Ménec, Kermario und Kerlescan.",
+				"Der Hafen von Lorient im heutigen Département Morbihan wurde 1666 für die Französische Ostindienkompanie gegründet."
+			]
+		}
+	},
+	"loir-et-cher": {
+		"region": {
+			"en": [
+				"Loir-et-Cher takes its name from the rivers Loir and Cher, rather than from the Loire.",
+				"Francis I ordered construction of Chambord in present-day Loir-et-Cher in 1519.",
+				"Louis XII made Blois in present-day Loir-et-Cher a royal residence after his accession in 1498 and rebuilt parts of its château."
+			],
+			"it": [
+				"Loir-et-Cher prende il nome dai fiumi Loir e Cher, anziché dalla Loira.",
+				"Francesco I ordinò la costruzione di Chambord nell’attuale Loir-et-Cher nel 1519.",
+				"Luigi XII fece di Blois nell’attuale Loir-et-Cher una residenza reale dopo l’ascesa al trono nel 1498 e ricostruì parti del castello."
+			],
+			"de": [
+				"Loir-et-Cher ist nach den Flüssen Loir und Cher benannt, nicht nach der Loire.",
+				"Franz I. ordnete 1519 den Bau von Chambord im heutigen Département Loir-et-Cher an.",
+				"Ludwig XII. machte Blois im heutigen Département Loir-et-Cher nach seiner Thronbesteigung 1498 zur königlichen Residenz und ließ Teile des Schlosses neu bauen."
+			]
+		}
+	},
+	"haute-saone": {
+		"region": {
+			"en": [
+				"Haute-Saône takes its name from the River Saône and its upper course.",
+				"Le Corbusier’s chapel of Notre-Dame du Haut at Ronchamp in Haute-Saône was inaugurated in 1955.",
+				"The cherry-country ecomuseum at Fougerolles in Haute-Saône occupies an 1830s distillers’ estate and explains kirsch production."
+			],
+			"it": [
+				"Haute-Saône prende il nome dal fiume Saona e dal suo corso superiore.",
+				"La cappella di Notre-Dame du Haut di Le Corbusier a Ronchamp nell’Haute-Saône fu inaugurata nel 1955.",
+				"L’ecomuseo del paese delle ciliegie a Fougerolles nell’Haute-Saône occupa una tenuta di distillatori degli anni Trenta dell’Ottocento e illustra la produzione del kirsch."
+			],
+			"de": [
+				"Haute-Saône ist nach der Saône und ihrem Oberlauf benannt.",
+				"Le Corbusiers Kapelle Notre-Dame du Haut in Ronchamp im Département Haute-Saône wurde 1955 eingeweiht.",
+				"Das Ökomuseum des Kirschenlandes in Fougerolles im Département Haute-Saône befindet sich auf einem Brennereianwesen aus den 1830er Jahren und erklärt die Kirschwasserherstellung."
+			]
+		}
+	},
+	"territoire-de-belfort": {
+		"region": {
+			"en": [
+				"The name Territoire de Belfort recalls the part of Haut-Rhin around Belfort that remained French in 1871 and became a full department in 1922.",
+				"Bartholdi’s sandstone Lion at Belfort, completed in 1880, commemorates the city’s resistance during the siege of 1870–1871.",
+				"Vauban’s major remodelling of Belfort’s fortifications began in 1687, creating a pentagonal fortified town."
+			],
+			"it": [
+				"Il nome Territoire de Belfort ricorda la parte dell’Haut-Rhin intorno a Belfort rimasta francese nel 1871 e divenuta un dipartimento a pieno titolo nel 1922.",
+				"Il Leone in arenaria di Bartholdi a Belfort, completato nel 1880, commemora la resistenza della città durante l’assedio del 1870–1871.",
+				"La grande trasformazione delle fortificazioni di Belfort da parte di Vauban iniziò nel 1687, creando una città fortificata pentagonale."
+			],
+			"de": [
+				"Der Name Territoire de Belfort erinnert an den Teil von Haut-Rhin um Belfort, der 1871 französisch blieb und 1922 ein vollwertiges Département wurde.",
+				"Bartholdis 1880 vollendeter Sandsteinlöwe in Belfort erinnert an den Widerstand der Stadt während der Belagerung von 1870–1871.",
+				"Vaubans großer Umbau der Befestigungen von Belfort begann 1687 und schuf eine fünfeckige Festungsstadt."
+			]
+		}
+	},
+	"cote-d-or": {
+		"region": {
+			"en": [
+				"Côte-d’Or appears as Coste d’Or in a departmental boundary document of February 1790, after the provisional name ‘department of Dijon’.",
+				"Nicolas Rolin and Guigone de Salins founded the Hôtel-Dieu at Beaune in present-day Côte-d’Or in 1443 to care for the poor.",
+				"Fontenay’s Cistercian abbey in Côte-d’Or, inscribed as UNESCO World Heritage in 1981, preserves its church, cloister, dormitory and forge."
+			],
+			"it": [
+				"Côte-d’Or compare come Coste d’Or in un documento sui confini dipartimentali del febbraio 1790, dopo il nome provvisorio di «dipartimento di Digione».",
+				"Nicolas Rolin e Guigone de Salins fondarono l’Hôtel-Dieu di Beaune nell’attuale Côte-d’Or nel 1443 per curare i poveri.",
+				"L’abbazia cistercense di Fontenay nella Côte-d’Or, iscritta nel Patrimonio Mondiale dell’UNESCO nel 1981, conserva chiesa, chiostro, dormitorio e fucina."
+			],
+			"de": [
+				"Côte-d’Or erscheint in einem Dokument zur Départementsgrenze vom Februar 1790 als Coste d’Or, nach dem vorläufigen Namen „Département Dijon“.",
+				"Nicolas Rolin und Guigone de Salins gründeten 1443 das Hôtel-Dieu in Beaune im heutigen Département Côte-d’Or zur Versorgung armer Kranker.",
+				"Die Zisterzienserabtei Fontenay in Côte-d’Or, seit 1981 UNESCO-Welterbe, bewahrt Kirche, Kreuzgang, Schlafsaal und Schmiede."
+			]
+		}
+	},
+	"maine-et-loire": {
+		"region": {
+			"en": [
+				"Maine-et-Loire also appears as Mayenne-et-Loire in records of the department’s creation during the French Revolution.",
+				"The fourteenth-century Apocalypse Tapestry at Angers in Maine-et-Loire was commissioned by Duke Louis I of Anjou.",
+				"Robert of Arbrissel founded Fontevraud Abbey in present-day Maine-et-Loire in 1101."
+			],
+			"it": [
+				"Maine-et-Loire compare anche come Mayenne-et-Loire nei documenti sulla creazione del dipartimento durante la Rivoluzione francese.",
+				"L’Arazzo dell’Apocalisse del XIV secolo ad Angers nel Maine-et-Loire fu commissionato dal duca Luigi I d’Angiò.",
+				"Roberto d’Arbrissel fondò l’abbazia di Fontevraud nell’attuale Maine-et-Loire nel 1101."
+			],
+			"de": [
+				"Maine-et-Loire erscheint in Unterlagen zur Gründung des Départements während der Französischen Revolution auch als Mayenne-et-Loire.",
+				"Der Apokalypse-Wandteppich aus dem 14. Jahrhundert in Angers im Département Maine-et-Loire wurde von Herzog Ludwig I. von Anjou in Auftrag gegeben.",
+				"Robert von Arbrissel gründete 1101 die Abtei Fontevraud im heutigen Département Maine-et-Loire."
+			]
+		}
+	},
+	"loire-atlantique": {
+		"region": {
+			"en": [
+				"Loire-Atlantique was called Loire-Inférieure until a decree changed the department’s name in 1957.",
+				"Henry IV signed the Edict of Nantes in 1598, granting rights to Protestants after France’s Wars of Religion.",
+				"Jules Verne was born in Nantes, in present-day Loire-Atlantique, in 1828."
+			],
+			"it": [
+				"La Loire-Atlantique si chiamava Loire-Inférieure finché un decreto cambiò il nome del dipartimento nel 1957.",
+				"Enrico IV firmò l’Editto di Nantes nel 1598, concedendo diritti ai protestanti dopo le guerre di religione francesi.",
+				"Jules Verne nacque a Nantes, nell’attuale Loire-Atlantique, nel 1828."
+			],
+			"de": [
+				"Loire-Atlantique hieß Loire-Inférieure, bis ein Dekret den Namen des Départements 1957 änderte.",
+				"Heinrich IV. unterzeichnete 1598 das Edikt von Nantes, das Protestanten nach den französischen Religionskriegen Rechte gewährte.",
+				"Jules Verne wurde 1828 in Nantes im heutigen Département Loire-Atlantique geboren."
+			]
+		}
+	},
+	"indre-et-loire": {
+		"region": {
+			"en": [
+				"Indre-et-Loire takes its name from the rivers Indre and Loire.",
+				"Leonardo da Vinci lived at the Clos Lucé in Amboise, in present-day Indre-et-Loire, from 1516 until his death in 1519.",
+				"Catherine de’ Medici added Chenonceau’s gallery above Diane de Poitiers’ bridge across the Cher in present-day Indre-et-Loire."
+			],
+			"it": [
+				"L’Indre-et-Loire prende il nome dai fiumi Indre e Loira.",
+				"Leonardo da Vinci visse al Clos Lucé di Amboise, nell’attuale Indre-et-Loire, dal 1516 fino alla morte nel 1519.",
+				"Caterina de’ Medici aggiunse la galleria di Chenonceau sopra il ponte di Diana di Poitiers sul Cher nell’attuale Indre-et-Loire."
+			],
+			"de": [
+				"Indre-et-Loire ist nach den Flüssen Indre und Loire benannt.",
+				"Leonardo da Vinci lebte von 1516 bis zu seinem Tod 1519 im Clos Lucé in Amboise im heutigen Département Indre-et-Loire.",
+				"Katharina von Medici ergänzte Chenonceau um die Galerie über Diane de Poitiers’ Brücke über den Cher im heutigen Département Indre-et-Loire."
+			]
+		}
+	},
+	"nievre": {
+		"region": {
+			"en": [
+				"The Nièvre department takes its name from the River Nièvre.",
+				"Italian craftsmen introduced faience production to Nevers in present-day Nièvre in the sixteenth century.",
+				"Vauban bought the Château de Bazoches in present-day Nièvre in 1675 and adapted it as his home and a centre for military work."
+			],
+			"it": [
+				"Il dipartimento della Nièvre prende il nome dal fiume Nièvre.",
+				"Artigiani italiani introdussero la produzione di maiolica a Nevers nell’attuale Nièvre nel XVI secolo.",
+				"Vauban acquistò il castello di Bazoches nell’attuale Nièvre nel 1675 e lo adattò come residenza e centro di lavoro militare."
+			],
+			"de": [
+				"Das Département Nièvre ist nach dem Fluss Nièvre benannt.",
+				"Italienische Handwerker führten im 16. Jahrhundert die Fayenceherstellung in Nevers im heutigen Département Nièvre ein.",
+				"Vauban kaufte 1675 das Schloss Bazoches im heutigen Département Nièvre und richtete es als Wohnsitz und Zentrum militärischer Arbeit ein."
+			]
+		}
+	},
+	"doubs": {
+		"region": {
+			"en": [
+				"The Doubs department takes its name from the River Doubs.",
+				"Vauban remodelled Besançon’s defences in present-day Doubs in the seventeenth century, including its citadel and Fort Griffon.",
+				"Claude-Nicolas Ledoux’s Royal Saltworks at Arc-et-Senans in present-day Doubs were built between 1775 and 1779 as a salt-producing community."
+			],
+			"it": [
+				"Il dipartimento del Doubs prende il nome dal fiume Doubs.",
+				"Vauban trasformò le difese di Besançon nell’attuale Doubs nel XVII secolo, comprese la cittadella e il Fort Griffon.",
+				"La Salina reale di Claude-Nicolas Ledoux ad Arc-et-Senans nell’attuale Doubs fu costruita tra il 1775 e il 1779 come comunità dedicata alla produzione del sale."
+			],
+			"de": [
+				"Das Département Doubs ist nach dem Fluss Doubs benannt.",
+				"Vauban gestaltete im 17. Jahrhundert die Befestigungen von Besançon im heutigen Département Doubs um, darunter die Zitadelle und das Fort Griffon.",
+				"Claude-Nicolas Ledoux’ Königliche Saline in Arc-et-Senans im heutigen Département Doubs wurde zwischen 1775 und 1779 als Gemeinschaft zur Salzproduktion errichtet."
+			]
+		}
+	},
+	"cher": {
+		"region": {
+			"en": [
+				"The Cher department takes its name from the River Cher.",
+				"Bourges Cathedral in the Cher entered the UNESCO World Heritage List in 1992 as a major work of Gothic architecture.",
+				"Merchant and royal financier Jacques Cœur had his grand house built at Bourges in present-day Cher between 1443 and 1451, but never lived there."
+			],
+			"it": [
+				"Il dipartimento del Cher prende il nome dal fiume Cher.",
+				"La cattedrale di Bourges nel Cher entrò nella Lista del Patrimonio Mondiale dell’UNESCO nel 1992 come importante opera dell’architettura gotica.",
+				"Il mercante e finanziere reale Jacques Cœur fece costruire la propria grande dimora a Bourges nell’attuale Cher tra il 1443 e il 1451, ma non vi abitò mai."
+			],
+			"de": [
+				"Das Département Cher ist nach dem Fluss Cher benannt.",
+				"Die Kathedrale von Bourges im Département Cher wurde 1992 als bedeutendes Werk gotischer Architektur in die UNESCO-Welterbeliste aufgenommen.",
+				"Der Kaufmann und königliche Finanzier Jacques Cœur ließ sein großes Haus zwischen 1443 und 1451 in Bourges im heutigen Département Cher errichten, wohnte jedoch nie darin."
+			]
+		}
+	},
+	"indre": {
+		"region": {
+			"en": [
+				"The Indre department takes its name from the River Indre.",
+				"Writer George Sand inherited the Nohant estate in the Indre from her grandmother in 1821.",
+				"Diplomat Charles-Maurice de Talleyrand-Périgord acquired the Château de Valençay in the Indre in 1803."
+			],
+			"it": [
+				"Il dipartimento dell’Indre prende il nome dal fiume Indre.",
+				"La scrittrice George Sand ereditò dalla nonna la tenuta di Nohant nell’Indre nel 1821.",
+				"Il diplomatico Charles-Maurice de Talleyrand-Périgord acquistò il castello di Valençay nell’Indre nel 1803."
+			],
+			"de": [
+				"Das Département Indre ist nach dem Fluss Indre benannt.",
+				"Die Schriftstellerin George Sand erbte 1821 das Anwesen Nohant im Département Indre von ihrer Großmutter.",
+				"Der Diplomat Charles-Maurice de Talleyrand-Périgord erwarb 1803 das Schloss Valençay im Département Indre."
+			]
+		}
+	},
+	"jura": {
+		"region": {
+			"en": [
+				"The Jura department takes its name from the Jura mountain range, which extends beyond the department into Switzerland.",
+				"Louis Pasteur was born at Dole in the Jura in 1822, and his birthplace became a museum in 1923.",
+				"The Great Saltworks at Salins-les-Bains in the Jura extracted salt from brine for centuries and continued production until 1962."
+			],
+			"it": [
+				"Il dipartimento del Jura prende il nome dal massiccio del Giura, che si estende oltre il dipartimento fino alla Svizzera.",
+				"Louis Pasteur nacque a Dole nel Jura nel 1822 e la sua casa natale divenne un museo nel 1923.",
+				"La Grande Salina di Salins-les-Bains nel Jura estrasse sale dalla salamoia per secoli e continuò la produzione fino al 1962."
+			],
+			"de": [
+				"Das Département Jura ist nach dem Juragebirge benannt, das über das Département hinaus bis in die Schweiz reicht.",
+				"Louis Pasteur wurde 1822 in Dole im Département Jura geboren; sein Geburtshaus wurde 1923 zum Museum.",
+				"Die Große Saline von Salins-les-Bains im Département Jura gewann jahrhundertelang Salz aus Sole und produzierte bis 1962."
+			]
+		}
+	},
+	"vendee": {
+		"region": {
+			"en": [
+				"The Vendée department takes its name from the River Vendée.",
+				"Georges Clemenceau was born at Mouilleron-en-Pareds in the Vendée in 1841.",
+				"Writer François Rabelais served Geoffroy d’Estissac, bishop of Maillezais in present-day Vendée, as a secretary."
+			],
+			"it": [
+				"Il dipartimento della Vendée prende il nome dal fiume Vendée.",
+				"Georges Clemenceau nacque a Mouilleron-en-Pareds nella Vendée nel 1841.",
+				"Lo scrittore François Rabelais lavorò come segretario di Geoffroy d’Estissac, vescovo di Maillezais nell’attuale Vendée."
+			],
+			"de": [
+				"Das Département Vendée ist nach dem Fluss Vendée benannt.",
+				"Georges Clemenceau wurde 1841 in Mouilleron-en-Pareds im Département Vendée geboren.",
+				"Der Schriftsteller François Rabelais diente Geoffroy d’Estissac, dem Bischof von Maillezais im heutigen Département Vendée, als Sekretär."
+			]
+		}
+	},
+	"saone-et-loire": {
+		"region": {
+			"en": [
+				"Saône-et-Loire takes its name from the rivers Saône and Loire.",
+				"The foundation charter of Cluny Abbey in present-day Saône-et-Loire dates from 910 and places its monks under the Rule of Saint Benedict.",
+				"Autun’s so-called Temple of Janus in Saône-et-Loire was built in stone in the first century AD, but its traditional dedication to Janus is unsupported."
+			],
+			"it": [
+				"La Saône-et-Loire prende il nome dai fiumi Saona e Loira.",
+				"La carta di fondazione dell’abbazia di Cluny nell’attuale Saône-et-Loire risale al 910 e sottopone i monaci alla Regola di san Benedetto.",
+				"Il cosiddetto Tempio di Giano di Autun nella Saône-et-Loire fu costruito in pietra nel I secolo d.C., ma la tradizionale dedica a Giano non è supportata dalle prove."
+			],
+			"de": [
+				"Saône-et-Loire ist nach den Flüssen Saône und Loire benannt.",
+				"Die Gründungsurkunde der Abtei Cluny im heutigen Département Saône-et-Loire stammt von 910 und verpflichtet ihre Mönche auf die Regel des heiligen Benedikt.",
+				"Autuns sogenannter Janustempel im Département Saône-et-Loire wurde im ersten Jahrhundert n. Chr. aus Stein erbaut, doch seine traditionelle Zuordnung zu Janus ist unbelegt."
+			]
+		}
+	},
+	"vienne": {
+		"region": {
+			"en": [
+				"The Vienne department takes its name from the River Vienne.",
+				"The abbey church of Saint-Savin-sur-Gartempe in the Vienne preserves Romanesque wall paintings from the late eleventh and early twelfth centuries.",
+				"Futuroscope in the Vienne opened to the public on 31 May 1987 with cinema-based attractions and exhibitions."
+			],
+			"it": [
+				"Il dipartimento della Vienne prende il nome dal fiume Vienne.",
+				"La chiesa abbaziale di Saint-Savin-sur-Gartempe nella Vienne conserva pitture murali romaniche della fine dell’XI e dell’inizio del XII secolo.",
+				"Il Futuroscope nella Vienne aprì al pubblico il 31 maggio 1987 con attrazioni basate sul cinema ed esposizioni."
+			],
+			"de": [
+				"Das Département Vienne ist nach dem Fluss Vienne benannt.",
+				"Die Abteikirche Saint-Savin-sur-Gartempe im Département Vienne bewahrt romanische Wandmalereien aus dem späten 11. und frühen 12. Jahrhundert.",
+				"Das Futuroscope im Département Vienne eröffnete am 31. Mai 1987 mit filmbezogenen Attraktionen und Ausstellungen für das Publikum."
+			]
+		}
+	},
+	"deux-sevres": {
+		"region": {
+			"en": [
+				"Deux-Sèvres takes its name from the rivers Sèvre Niortaise and Sèvre Nantaise.",
+				"The burial mounds at Bougon in Deux-Sèvres include monuments built in the fifth millennium BC and reused in the fourth millennium.",
+				"Niort’s keep in Deux-Sèvres was commissioned around 1180 by Henry II Plantagenet, Count of Anjou and King of England."
+			],
+			"it": [
+				"Deux-Sèvres prende il nome dai fiumi Sèvre Niortaise e Sèvre Nantaise.",
+				"I tumuli funerari di Bougon nelle Deux-Sèvres comprendono monumenti costruiti nel V millennio a.C. e riutilizzati nel IV millennio.",
+				"Il mastio di Niort nelle Deux-Sèvres fu commissionato intorno al 1180 da Enrico II Plantageneto, conte d’Angiò e re d’Inghilterra."
+			],
+			"de": [
+				"Deux-Sèvres ist nach den Flüssen Sèvre Niortaise und Sèvre Nantaise benannt.",
+				"Die Grabhügel von Bougon in Deux-Sèvres umfassen im fünften Jahrtausend v. Chr. errichtete und im vierten Jahrtausend wiederverwendete Monumente.",
+				"Der Bergfried von Niort in Deux-Sèvres wurde um 1180 von Heinrich II. Plantagenet, Graf von Anjou und König von England, in Auftrag gegeben."
+			]
+		}
+	},
+	"allier": {
+		"region": {
+			"en": [
+				"The Allier department takes its name from the River Allier.",
+				"Vichy in the Allier entered UNESCO’s World Heritage List in 2021 as one of the Great Spa Towns of Europe.",
+				"The National Centre for Costume and Stage in Moulins in the Allier opened in 2006 inside a former military barracks."
+			],
+			"it": [
+				"Il dipartimento dell’Allier prende il nome dal fiume Allier.",
+				"Vichy nell’Allier entrò nella Lista del Patrimonio Mondiale dell’UNESCO nel 2021 come una delle Grandi città termali d’Europa.",
+				"Il Centro nazionale del costume e della scena di Moulins nell’Allier aprì nel 2006 all’interno di un’ex caserma militare."
+			],
+			"de": [
+				"Das Département Allier ist nach dem Fluss Allier benannt.",
+				"Vichy im Département Allier wurde 2021 als eine der Bedeutenden Kurstädte Europas in die UNESCO-Welterbeliste aufgenommen.",
+				"Das Nationale Zentrum für Kostüm und Bühne in Moulins im Département Allier eröffnete 2006 in einer ehemaligen Kaserne."
+			]
+		}
+	},
+	"ain": {
+		"region": {
+			"en": [
+				"The Ain department takes its name from the River Ain.",
+				"Margaret of Austria began the Royal Monastery of Brou at Bourg-en-Bresse in present-day Ain in 1506 to house family tombs.",
+				"The Maison d’Izieu memorial in the Ain recalls the Nazi arrest of 44 Jewish children and seven educators on 6 April 1944."
+			],
+			"it": [
+				"Il dipartimento dell’Ain prende il nome dal fiume Ain.",
+				"Margherita d’Austria avviò il monastero reale di Brou a Bourg-en-Bresse nell’attuale Ain nel 1506 per ospitare tombe familiari.",
+				"Il memoriale della Maison d’Izieu nell’Ain ricorda l’arresto nazista di 44 bambini ebrei e sette educatori il 6 aprile 1944."
+			],
+			"de": [
+				"Das Département Ain ist nach dem Fluss Ain benannt.",
+				"Margarete von Österreich begann 1506 den Bau des Königlichen Klosters Brou in Bourg-en-Bresse im heutigen Département Ain als Familiengrablege.",
+				"Die Gedenkstätte Maison d’Izieu im Département Ain erinnert an die Verhaftung von 44 jüdischen Kindern und sieben Erziehern durch die Nationalsozialisten am 6. April 1944."
+			]
+		}
+	},
+	"haute-savoie": {
+		"region": {
+			"en": [
+				"Haute-Savoie was formed in 1860 from territory formerly belonging to the Duchy of Savoy.",
+				"Francis de Sales and Jane de Chantal founded the Order of the Visitation at Annecy in present-day Haute-Savoie in 1610.",
+				"Chamonix in Haute-Savoie hosted the winter sports event of 1924 that was later recognised as the first Olympic Winter Games."
+			],
+			"it": [
+				"L’Haute-Savoie fu formata nel 1860 da territori precedentemente appartenenti al ducato di Savoia.",
+				"Francesco di Sales e Giovanna di Chantal fondarono l’Ordine della Visitazione ad Annecy nell’attuale Haute-Savoie nel 1610.",
+				"Chamonix nell’Haute-Savoie ospitò nel 1924 la manifestazione di sport invernali riconosciuta in seguito come i primi Giochi olimpici invernali."
+			],
+			"de": [
+				"Haute-Savoie wurde 1860 aus zuvor zum Herzogtum Savoyen gehörenden Gebieten gebildet.",
+				"Franz von Sales und Johanna von Chantal gründeten 1610 in Annecy im heutigen Département Haute-Savoie den Orden der Heimsuchung Mariens.",
+				"Chamonix in Haute-Savoie veranstaltete 1924 das Wintersportereignis, das später als erste Olympische Winterspiele anerkannt wurde."
+			]
+		}
+	},
+	"creuse": {
+		"region": {
+			"en": [
+				"The Creuse department takes its name from the River Creuse.",
+				"The craft of Aubusson tapestry in the Creuse entered UNESCO’s intangible cultural heritage list in 2009.",
+				"Martin Nadaud wrote his memoirs at La Martinèche in the Creuse, recording the lives and working conditions of nineteenth-century migrant masons."
+			],
+			"it": [
+				"Il dipartimento della Creuse prende il nome dal fiume Creuse.",
+				"L’arte dell’arazzo di Aubusson nella Creuse entrò nella lista UNESCO del patrimonio culturale immateriale nel 2009.",
+				"Martin Nadaud scrisse le proprie memorie a La Martinèche nella Creuse, documentando la vita e le condizioni di lavoro dei muratori migranti dell’Ottocento."
+			],
+			"de": [
+				"Das Département Creuse ist nach dem Fluss Creuse benannt.",
+				"Das Handwerk der Aubusson-Wandteppiche im Département Creuse wurde 2009 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen.",
+				"Martin Nadaud schrieb seine Memoiren in La Martinèche im Département Creuse und schilderte darin Leben und Arbeitsbedingungen wandernder Maurer des 19. Jahrhunderts."
+			]
+		}
+	},
+	"haute-vienne": {
+		"region": {
+			"en": [
+				"Haute-Vienne takes its name from its position along the upper valley of the River Vienne.",
+				"The discovery of kaolin at Saint-Yrieix-la-Perche in Haute-Vienne in 1768 helped launch Limoges porcelain manufacture.",
+				"Oradour-sur-Glane in Haute-Vienne preserves the memory of the massacre committed by Waffen-SS troops on 10 June 1944."
+			],
+			"it": [
+				"Haute-Vienne prende il nome dalla sua posizione nell’alta valle del fiume Vienne.",
+				"La scoperta del caolino a Saint-Yrieix-la-Perche nell’Haute-Vienne nel 1768 contribuì alla nascita della manifattura di porcellana di Limoges.",
+				"Oradour-sur-Glane nell’Haute-Vienne conserva la memoria del massacro compiuto dalle truppe delle Waffen-SS il 10 giugno 1944."
+			],
+			"de": [
+				"Haute-Vienne ist nach seiner Lage im oberen Tal des Flusses Vienne benannt.",
+				"Die Entdeckung von Kaolin bei Saint-Yrieix-la-Perche im Département Haute-Vienne im Jahr 1768 ermöglichte den Aufschwung der Porzellanherstellung in Limoges.",
+				"Oradour-sur-Glane im Département Haute-Vienne bewahrt die Erinnerung an das Massaker von Waffen-SS-Truppen am 10. Juni 1944."
+			]
+		}
+	},
+	"rhone": {
+		"region": {
+			"en": [
+				"The Rhône department takes its name from the River Rhône.",
+				"Saint-Romain-en-Gal in the Rhône preserves houses, baths and commercial buildings from an ancient quarter of Roman Vienne.",
+				"The surviving arches at Chaponost in the Rhône formed part of the Gier aqueduct that supplied Roman Lugdunum, now Lyon."
+			],
+			"it": [
+				"Il dipartimento del Rhône prende il nome dal fiume Rodano.",
+				"Saint-Romain-en-Gal nel Rhône conserva case, terme ed edifici commerciali di un antico quartiere della città romana di Vienne.",
+				"Le arcate superstiti di Chaponost nel Rhône facevano parte dell’acquedotto del Gier che riforniva la Lugdunum romana, oggi Lione."
+			],
+			"de": [
+				"Das Département Rhône ist nach dem Fluss Rhône benannt.",
+				"Saint-Romain-en-Gal im Département Rhône bewahrt Häuser, Thermen und Gewerbebauten eines antiken Viertels des römischen Vienne.",
+				"Die erhaltenen Bögen in Chaponost im Département Rhône gehörten zum Gier-Aquädukt, das das römische Lugdunum, heute Lyon, versorgte."
+			]
+		}
+	},
+	"puy-de-dome": {
+		"region": {
+			"en": [
+				"The Puy-de-Dôme department takes its name from the puy de Dôme volcano.",
+				"At Gergovia in present-day Puy-de-Dôme, Vercingetorix’s forces defeated Julius Caesar’s army in 52 BC.",
+				"Mathematician and philosopher Blaise Pascal was born in 1623 at Clermont, now Clermont-Ferrand in Puy-de-Dôme."
+			],
+			"it": [
+				"Il dipartimento del Puy-de-Dôme prende il nome dal vulcano puy de Dôme.",
+				"A Gergovia nell’attuale Puy-de-Dôme, le forze di Vercingetorige sconfissero l’esercito di Giulio Cesare nel 52 a.C.",
+				"Il matematico e filosofo Blaise Pascal nacque nel 1623 a Clermont, oggi Clermont-Ferrand nel Puy-de-Dôme."
+			],
+			"de": [
+				"Das Département Puy-de-Dôme ist nach dem Vulkan puy de Dôme benannt.",
+				"Bei Gergovia im heutigen Département Puy-de-Dôme besiegten Vercingetorix’ Truppen 52 v. Chr. das Heer Julius Caesars.",
+				"Der Mathematiker und Philosoph Blaise Pascal wurde 1623 in Clermont geboren, heute Clermont-Ferrand im Département Puy-de-Dôme."
+			]
+		}
+	},
+	"loire": {
+		"region": {
+			"en": [
+				"The Loire department takes its name from the River Loire.",
+				"Saint-Étienne in the Loire joined UNESCO’s Creative Cities Network for design in 2010.",
+				"Le Corbusier’s Maison de la Culture at Firminy in the Loire was built in 1961–1965 with a curved roof and sloping façades."
+			],
+			"it": [
+				"Il dipartimento della Loire prende il nome dal fiume Loira.",
+				"Saint-Étienne nella Loire entrò nella Rete delle Città Creative dell’UNESCO per il design nel 2010.",
+				"La Maison de la Culture di Le Corbusier a Firminy nella Loire fu costruita nel 1961–1965 con un tetto curvo e facciate inclinate."
+			],
+			"de": [
+				"Das Département Loire ist nach dem Fluss Loire benannt.",
+				"Saint-Étienne im Département Loire trat 2010 dem UNESCO-Netzwerk der kreativen Städte im Bereich Design bei.",
+				"Le Corbusiers Maison de la Culture in Firminy im Département Loire wurde 1961–1965 mit geschwungenem Dach und geneigten Fassaden erbaut."
+			]
+		}
+	},
+	"charente-maritime": {
+		"region": {
+			"en": [
+				"Charente-Maritime was called Charente-Inférieure until a law changed the department’s name in 1941.",
+				"La Rochelle in present-day Charente-Maritime endured a royal siege in 1627–1628 before surrendering after famine.",
+				"Rochefort’s Royal Ropeworks in Charente-Maritime were begun in 1666 and started producing ropes for naval sailing ships in 1669."
+			],
+			"it": [
+				"La Charente-Maritime si chiamava Charente-Inférieure finché una legge cambiò il nome del dipartimento nel 1941.",
+				"La Rochelle nell’attuale Charente-Maritime subì un assedio reale nel 1627–1628 prima di arrendersi dopo la carestia.",
+				"La Corderie Royale di Rochefort nella Charente-Maritime fu iniziata nel 1666 e cominciò a produrre cordami per le navi militari a vela nel 1669."
+			],
+			"de": [
+				"Charente-Maritime hieß Charente-Inférieure, bis ein Gesetz den Namen des Départements 1941 änderte.",
+				"La Rochelle im heutigen Département Charente-Maritime widerstand 1627–1628 einer königlichen Belagerung, bevor die Stadt nach einer Hungersnot kapitulierte.",
+				"Rocheforts Königliche Seilerei in Charente-Maritime wurde 1666 begonnen und nahm 1669 die Herstellung von Tauwerk für Segelkriegsschiffe auf."
+			]
+		}
+	},
+	"charente": {
+		"region": {
+			"en": [
+				"The Charente department takes its name from the River Charente.",
+				"Angoulême’s international comics festival in the Charente began as a comics salon in January 1974.",
+				"Francis I was born at Cognac Castle in present-day Charente on 12 September 1494."
+			],
+			"it": [
+				"Il dipartimento della Charente prende il nome dal fiume Charente.",
+				"Il festival internazionale del fumetto di Angoulême nella Charente nacque come salone del fumetto nel gennaio 1974.",
+				"Francesco I nacque nel castello di Cognac nell’attuale Charente il 12 settembre 1494."
+			],
+			"de": [
+				"Das Département Charente ist nach dem Fluss Charente benannt.",
+				"Angoulêmes internationales Comicfestival im Département Charente begann im Januar 1974 als Comicsalon.",
+				"Franz I. wurde am 12. September 1494 im Schloss Cognac im heutigen Département Charente geboren."
+			]
+		}
+	},
+	"savoie": {
+		"region": {
+			"en": [
+				"The Savoie department was created in 1860 from part of the former Duchy of Savoy when it became French.",
+				"Hautecombe Abbey in present-day Savoie became a burial place of the House of Savoy, a tradition beginning in the twelfth century.",
+				"Albertville in Savoie hosted the Olympic Winter Games in 1992."
+			],
+			"it": [
+				"Il dipartimento della Savoie fu creato nel 1860 da una parte dell’antico ducato di Savoia quando questo divenne francese.",
+				"L’abbazia di Hautecombe nell’attuale Savoie divenne un luogo di sepoltura della Casa di Savoia, tradizione iniziata nel XII secolo.",
+				"Albertville nella Savoie ospitò i Giochi olimpici invernali nel 1992."
+			],
+			"de": [
+				"Das Département Savoie wurde 1860 aus einem Teil des früheren Herzogtums Savoyen geschaffen, als dieses französisch wurde.",
+				"Die Abtei Hautecombe im heutigen Département Savoie wurde zur Grablege des Hauses Savoyen, eine im 12. Jahrhundert beginnende Tradition.",
+				"Albertville im Département Savoie veranstaltete 1992 die Olympischen Winterspiele."
+			]
+		}
+	},
+	"correze": {
+		"region": {
+			"en": [
+				"The Corrèze department takes its name from the River Corrèze.",
+				"The red stone buildings of Collonges-la-Rouge in Corrèze owe their colour to iron oxide in the local sandstone.",
+				"The Maugein brothers began manufacturing accordions at Tulle in Corrèze in 1922, after Jean Maugein opened a sales and repair workshop in 1919."
+			],
+			"it": [
+				"Il dipartimento della Corrèze prende il nome dal fiume Corrèze.",
+				"Gli edifici in pietra rossa di Collonges-la-Rouge nella Corrèze devono il colore all’ossido di ferro nell’arenaria locale.",
+				"I fratelli Maugein iniziarono a fabbricare fisarmoniche a Tulle nella Corrèze nel 1922, dopo che Jean Maugein aveva aperto un laboratorio di vendita e riparazione nel 1919."
+			],
+			"de": [
+				"Das Département Corrèze ist nach dem Fluss Corrèze benannt.",
+				"Die roten Steinbauten von Collonges-la-Rouge im Département Corrèze verdanken ihre Farbe dem Eisenoxid im örtlichen Sandstein.",
+				"Die Brüder Maugein begannen 1922 in Tulle im Département Corrèze mit der Akkordeonherstellung, nachdem Jean Maugein 1919 eine Verkaufs- und Reparaturwerkstatt eröffnet hatte."
+			]
+		}
+	},
+	"isere": {
+		"region": {
+			"en": [
+				"The Isère department takes its name from the River Isère.",
+				"Grenoble in the Isère hosted the Olympic Winter Games in 1968.",
+				"The Château de Vizille in present-day Isère hosted the Assembly of the Three Estates of Dauphiné on 21 July 1788."
+			],
+			"it": [
+				"Il dipartimento dell’Isère prende il nome dal fiume Isère.",
+				"Grenoble nell’Isère ospitò i Giochi olimpici invernali nel 1968.",
+				"Il castello di Vizille nell’attuale Isère ospitò l’Assemblea dei tre stati del Delfinato il 21 luglio 1788."
+			],
+			"de": [
+				"Das Département Isère ist nach dem Fluss Isère benannt.",
+				"Grenoble im Département Isère veranstaltete 1968 die Olympischen Winterspiele.",
+				"Das Schloss Vizille im heutigen Département Isère war am 21. Juli 1788 Tagungsort der Versammlung der drei Stände der Dauphiné."
+			]
+		}
+	},
+	"dordogne": {
+		"region": {
+			"en": [
+				"The Dordogne department takes its name from the River Dordogne.",
+				"Four teenagers discovered the prehistoric paintings at Lascaux in the Dordogne in September 1940.",
+				"Human remains discovered at the Cro-Magnon rock shelter at Les Eyzies in the Dordogne in 1868 helped establish the antiquity of Homo sapiens."
+			],
+			"it": [
+				"Il dipartimento della Dordogne prende il nome dal fiume Dordogna.",
+				"Quattro adolescenti scoprirono le pitture preistoriche di Lascaux nella Dordogne nel settembre 1940.",
+				"I resti umani scoperti nel riparo roccioso di Cro-Magnon a Les Eyzies nella Dordogne nel 1868 contribuirono a dimostrare l’antichità dell’Homo sapiens."
+			],
+			"de": [
+				"Das Département Dordogne ist nach dem Fluss Dordogne benannt.",
+				"Vier Jugendliche entdeckten im September 1940 die prähistorischen Malereien von Lascaux im Département Dordogne.",
+				"Die 1868 im Felsunterstand Cro-Magnon bei Les Eyzies im Département Dordogne entdeckten Menschenreste halfen, das hohe Alter des Homo sapiens nachzuweisen."
+			]
+		}
+	},
+	"haute-loire": {
+		"region": {
+			"en": [
+				"Haute-Loire means ‘Upper Loire’, referring to the upstream portion of the River Loire.",
+				"Le Puy-en-Velay Cathedral in Haute-Loire entered the UNESCO World Heritage List in 1998 as part of the Routes of Santiago de Compostela.",
+				"The bobbin-lace teaching centre at Le Puy-en-Velay in Haute-Loire was created in 1974 to preserve the craft through teaching and conservation."
+			],
+			"it": [
+				"Haute-Loire significa «Alta Loira», in riferimento al tratto superiore del fiume Loira.",
+				"La cattedrale di Le Puy-en-Velay nell’Haute-Loire entrò nella Lista del Patrimonio Mondiale dell’UNESCO nel 1998 come parte dei Cammini di Santiago di Compostela.",
+				"Il centro d’insegnamento del merletto a fuselli di Le Puy-en-Velay nell’Haute-Loire fu creato nel 1974 per preservare l’arte attraverso l’insegnamento e la conservazione."
+			],
+			"de": [
+				"Haute-Loire bedeutet „Obere Loire“ und bezieht sich auf den Oberlauf des Flusses Loire.",
+				"Die Kathedrale von Le Puy-en-Velay in Haute-Loire wurde 1998 als Teil der französischen Jakobswege in die UNESCO-Welterbeliste aufgenommen.",
+				"Das Lehrzentrum für Klöppelspitze in Le Puy-en-Velay im Département Haute-Loire wurde 1974 gegründet, um das Handwerk durch Unterricht und Bewahrung zu erhalten."
+			]
+		}
+	},
+	"cantal": {
+		"region": {
+			"en": [
+				"The Cantal department takes its name from the volcanic mountains of Cantal.",
+				"Aurillac’s International Street Theatre Festival in the Cantal held its first edition in August 1986.",
+				"Construction of Notre-Dame-des-Miracles at Mauriac in present-day Cantal began in the twelfth century, leaving an important Romanesque church."
+			],
+			"it": [
+				"Il dipartimento del Cantal prende il nome dalle montagne vulcaniche del Cantal.",
+				"Il Festival internazionale del teatro di strada di Aurillac nel Cantal tenne la prima edizione nell’agosto 1986.",
+				"La costruzione di Notre-Dame-des-Miracles a Mauriac nell’attuale Cantal iniziò nel XII secolo, lasciando un’importante chiesa romanica."
+			],
+			"de": [
+				"Das Département Cantal ist nach dem vulkanischen Gebirge des Cantal benannt.",
+				"Aurillacs Internationales Straßentheaterfestival im Département Cantal fand erstmals im August 1986 statt.",
+				"Der Bau von Notre-Dame-des-Miracles in Mauriac im heutigen Département Cantal begann im 12. Jahrhundert und hinterließ eine bedeutende romanische Kirche."
+			]
+		}
+	},
+	"gironde": {
+		"region": {
+			"en": [
+				"The Gironde department takes its name from the Gironde estuary, where the Garonne and Dordogne meet.",
+				"Bordeaux’s historic Port of the Moon in the Gironde entered the UNESCO World Heritage List in 2007.",
+				"Cordouan lighthouse, administratively part of Le Verdon-sur-Mer in the Gironde, was completed in 1611 and later heightened by Joseph Teulère."
+			],
+			"it": [
+				"Il dipartimento della Gironde prende il nome dall’estuario della Gironda, dove si incontrano Garonna e Dordogna.",
+				"Lo storico Porto della Luna di Bordeaux nella Gironde entrò nella Lista del Patrimonio Mondiale dell’UNESCO nel 2007.",
+				"Il faro di Cordouan, amministrativamente parte di Le Verdon-sur-Mer nella Gironde, fu completato nel 1611 e successivamente sopraelevato da Joseph Teulère."
+			],
+			"de": [
+				"Das Département Gironde ist nach der Gironde-Mündung benannt, in der Garonne und Dordogne zusammenfließen.",
+				"Bordeaux’ historischer Hafen des Mondes im Département Gironde wurde 2007 in die UNESCO-Welterbeliste aufgenommen.",
+				"Der Leuchtturm Cordouan, der verwaltungsmäßig zu Le Verdon-sur-Mer im Département Gironde gehört, wurde 1611 vollendet und später von Joseph Teulère erhöht."
+			]
+		}
+	},
+	"ardeche": {
+		"region": {
+			"en": [
+				"The Ardèche department takes its name from the River Ardèche.",
+				"The decorated Chauvet Cave in the Ardèche was discovered by Jean-Marie Chauvet, Éliette Brunel and Christian Hillaire on 18 December 1994.",
+				"The Montgolfier brothers demonstrated an unmanned hot-air balloon at Annonay in present-day Ardèche on 4 June 1783."
+			],
+			"it": [
+				"Il dipartimento dell’Ardèche prende il nome dal fiume Ardèche.",
+				"La grotta decorata di Chauvet nell’Ardèche fu scoperta da Jean-Marie Chauvet, Éliette Brunel e Christian Hillaire il 18 dicembre 1994.",
+				"I fratelli Montgolfier dimostrarono il volo di una mongolfiera senza equipaggio ad Annonay nell’attuale Ardèche il 4 giugno 1783."
+			],
+			"de": [
+				"Das Département Ardèche ist nach dem Fluss Ardèche benannt.",
+				"Die mit Malereien geschmückte Chauvet-Höhle im Département Ardèche wurde am 18. Dezember 1994 von Jean-Marie Chauvet, Éliette Brunel und Christian Hillaire entdeckt.",
+				"Die Brüder Montgolfier führten am 4. Juni 1783 in Annonay im heutigen Département Ardèche einen unbemannten Heißluftballon vor."
+			]
+		}
+	},
+	"drome": {
+		"region": {
+			"en": [
+				"The Drôme department takes its name from the River Drôme.",
+				"Postman Ferdinand Cheval built his Palais Idéal at Hauterives in the Drôme between 1879 and 1912.",
+				"The letter-writer Madame de Sévigné died at Grignan Castle in present-day Drôme in 1696 while staying with her daughter."
+			],
+			"it": [
+				"Il dipartimento della Drôme prende il nome dal fiume Drôme.",
+				"Il postino Ferdinand Cheval costruì il proprio Palais Idéal a Hauterives nella Drôme tra il 1879 e il 1912.",
+				"La scrittrice di lettere Madame de Sévigné morì nel castello di Grignan nell’attuale Drôme nel 1696, durante un soggiorno presso la figlia."
+			],
+			"de": [
+				"Das Département Drôme ist nach dem Fluss Drôme benannt.",
+				"Der Postbote Ferdinand Cheval errichtete seinen Palais Idéal zwischen 1879 und 1912 in Hauterives im Département Drôme.",
+				"Die Briefschriftstellerin Madame de Sévigné starb 1696 während eines Besuchs bei ihrer Tochter im Schloss Grignan im heutigen Département Drôme."
+			]
+		}
+	},
+	"hautes-alpes": {
+		"region": {
+			"en": [
+				"Hautes-Alpes means ‘High Alps’; the name was chosen when the department was created in 1790.",
+				"Briançon’s fortifications in the Hautes-Alpes entered the UNESCO World Heritage List in 2008 as part of the Fortifications of Vauban.",
+				"Vauban began the fortified town of Mont-Dauphin in the Hautes-Alpes in 1693 as a new garrison settlement."
+			],
+			"it": [
+				"Hautes-Alpes significa «Alte Alpi»; il nome fu scelto quando il dipartimento venne creato nel 1790.",
+				"Le fortificazioni di Briançon nelle Hautes-Alpes entrarono nella Lista del Patrimonio Mondiale dell’UNESCO nel 2008 come parte delle Fortificazioni di Vauban.",
+				"Vauban iniziò la città fortificata di Mont-Dauphin nelle Hautes-Alpes nel 1693 come nuovo insediamento di guarnigione."
+			],
+			"de": [
+				"Hautes-Alpes bedeutet „Hohe Alpen“; der Name wurde bei der Gründung des Départements im Jahr 1790 gewählt.",
+				"Briançons Befestigungen im Département Hautes-Alpes wurden 2008 als Teil der Festungsanlagen von Vauban in die UNESCO-Welterbeliste aufgenommen.",
+				"Vauban begann 1693 mit der befestigten Stadt Mont-Dauphin im Département Hautes-Alpes als neuer Garnisonssiedlung."
+			]
+		}
+	},
+	"lot": {
+		"region": {
+			"en": [
+				"The Lot department takes its name from the River Lot.",
+				"Construction of the fortified Valentré Bridge at Cahors in the Lot began in 1308 at the initiative of the town’s consuls.",
+				"The Black Madonna at Rocamadour in the Lot is a twelfth-century wooden statue kept in the chapel of Notre-Dame."
+			],
+			"it": [
+				"Il dipartimento del Lot prende il nome dal fiume Lot.",
+				"La costruzione del ponte fortificato Valentré a Cahors nel Lot iniziò nel 1308 per iniziativa dei consoli cittadini.",
+				"La Madonna Nera di Rocamadour nel Lot è una statua lignea del XII secolo custodita nella cappella di Notre-Dame."
+			],
+			"de": [
+				"Das Département Lot ist nach dem Fluss Lot benannt.",
+				"Der Bau der befestigten Valentré-Brücke in Cahors im Département Lot begann 1308 auf Initiative der städtischen Konsuln.",
+				"Die Schwarze Madonna von Rocamadour im Département Lot ist eine Holzstatue aus dem 12. Jahrhundert in der Kapelle Notre-Dame."
+			]
+		}
+	},
+	"lozere": {
+		"region": {
+			"en": [
+				"The Lozère department takes its name from Mont Lozère.",
+				"Louis Armand descended into the Aven Armand cave in Lozère on 19 September 1897 during its initial exploration.",
+				"Robert Louis Stevenson stayed at Pont-de-Montvert in Lozère in 1878 during his journey with the donkey Modestine."
+			],
+			"it": [
+				"Il dipartimento della Lozère prende il nome dal Mont Lozère.",
+				"Louis Armand scese nella grotta dell’Aven Armand nella Lozère il 19 settembre 1897 durante la sua prima esplorazione.",
+				"Robert Louis Stevenson soggiornò a Pont-de-Montvert nella Lozère nel 1878 durante il viaggio con l’asinella Modestine."
+			],
+			"de": [
+				"Das Département Lozère ist nach dem Mont Lozère benannt.",
+				"Louis Armand stieg am 19. September 1897 bei der ersten Erkundung in die Höhle Aven Armand im Département Lozère hinab.",
+				"Robert Louis Stevenson übernachtete 1878 auf seiner Reise mit der Eselin Modestine in Pont-de-Montvert im Département Lozère."
+			]
+		}
+	},
+	"lot-et-garonne": {
+		"region": {
+			"en": [
+				"Lot-et-Garonne takes its name from the rivers Lot and Garonne.",
+				"Agen’s prune-making tradition in Lot-et-Garonne uses Ente plums, which are dried to produce pruneaux d’Agen.",
+				"Villeneuve-sur-Lot in Lot-et-Garonne developed as a thirteenth-century bastide founded through an agreement between Alphonse of Poitiers and the Abbey of Eysses."
+			],
+			"it": [
+				"Lot-et-Garonne prende il nome dai fiumi Lot e Garonna.",
+				"La tradizione delle prugne secche di Agen nel Lot-et-Garonne utilizza susine Ente, essiccate per produrre i pruneaux d’Agen.",
+				"Villeneuve-sur-Lot nel Lot-et-Garonne si sviluppò come bastide del XIII secolo, fondata attraverso un accordo tra Alfonso di Poitiers e l’abbazia di Eysses."
+			],
+			"de": [
+				"Lot-et-Garonne ist nach den Flüssen Lot und Garonne benannt.",
+				"Agens Dörrpflaumentradition im Département Lot-et-Garonne verwendet Ente-Pflaumen, die zu Pruneaux d’Agen getrocknet werden.",
+				"Villeneuve-sur-Lot im Département Lot-et-Garonne entstand im 13. Jahrhundert als Bastide durch eine Vereinbarung zwischen Alfons von Poitiers und der Abtei Eysses."
+			]
+		}
+	},
+	"aveyron": {
+		"region": {
+			"en": [
+				"The Aveyron department takes its name from the River Aveyron.",
+				"Construction of Rodez’s Gothic cathedral in the Aveyron began in 1277 after the bell tower of its predecessor collapsed.",
+				"The Romanesque abbey church of Sainte-Foy at Conques in the Aveyron was built in the eleventh and twelfth centuries and preserves a Last Judgement tympanum."
+			],
+			"it": [
+				"Il dipartimento dell’Aveyron prende il nome dal fiume Aveyron.",
+				"La costruzione della cattedrale gotica di Rodez nell’Aveyron iniziò nel 1277 dopo il crollo del campanile dell’edificio precedente.",
+				"La chiesa abbaziale romanica di Sainte-Foy a Conques nell’Aveyron fu costruita nell’XI e XII secolo e conserva un timpano del Giudizio Universale."
+			],
+			"de": [
+				"Das Département Aveyron ist nach dem Fluss Aveyron benannt.",
+				"Der Bau der gotischen Kathedrale von Rodez im Département Aveyron begann 1277 nach dem Einsturz des Glockenturms ihres Vorgängerbaus.",
+				"Die romanische Abteikirche Sainte-Foy in Conques im Département Aveyron entstand im 11. und 12. Jahrhundert und bewahrt ein Tympanon des Jüngsten Gerichts."
+			]
+		}
+	},
+	"alpes-de-haute-provence": {
+		"region": {
+			"en": [
+				"Alpes-de-Haute-Provence was called Basses-Alpes until a decree authorised the new departmental name in 1970.",
+				"Traveller and writer Alexandra David-Néel settled at her house Samten Dzong in Digne-les-Bains in 1928.",
+				"The Haute-Provence Observatory in Alpes-de-Haute-Provence was used for the 1995 discovery of 51 Pegasi b, a planet orbiting a Sun-like star."
+			],
+			"it": [
+				"Il dipartimento Alpes-de-Haute-Provence si chiamava Basses-Alpes fino al cambiamento di nome del 1970.",
+				"La viaggiatrice e scrittrice Alexandra David-Néel si stabilì nella sua casa Samten Dzong a Digne-les-Bains nel 1928.",
+				"L’Osservatorio dell’Alta Provenza nell’Alpes-de-Haute-Provence fu utilizzato per la scoperta nel 1995 di 51 Pegasi b, pianeta in orbita intorno a una stella simile al Sole."
+			],
+			"de": [
+				"Alpes-de-Haute-Provence hieß Basses-Alpes, bis ein Dekret 1970 den neuen Départementsnamen genehmigte.",
+				"Die Reisende und Schriftstellerin Alexandra David-Néel ließ sich 1928 in ihrem Haus Samten Dzong in Digne-les-Bains nieder.",
+				"Am Observatorium Haute-Provence im Département Alpes-de-Haute-Provence wurde 1995 der Planet 51 Pegasi b entdeckt, der einen sonnenähnlichen Stern umkreist."
+			]
+		}
+	},
+	"tarn-et-garonne": {
+		"region": {
+			"en": [
+				"Tarn-et-Garonne takes its name from the rivers Tarn and Garonne.",
+				"Count Alphonse Jourdain of Toulouse founded Montauban in present-day Tarn-et-Garonne in 1144.",
+				"A Latin inscription dates completion of the Romanesque cloister at Moissac in Tarn-et-Garonne to 1100 under Abbot Ansquitil."
+			],
+			"it": [
+				"Tarn-et-Garonne prende il nome dai fiumi Tarn e Garonna.",
+				"Il conte Alfonso Giordano di Tolosa fondò Montauban nell’attuale Tarn-et-Garonne nel 1144.",
+				"Un’iscrizione latina data il completamento del chiostro romanico di Moissac nel Tarn-et-Garonne al 1100, sotto l’abate Ansquitil."
+			],
+			"de": [
+				"Tarn-et-Garonne ist nach den Flüssen Tarn und Garonne benannt.",
+				"Graf Alfons Jordan von Toulouse gründete 1144 Montauban im heutigen Département Tarn-et-Garonne.",
+				"Eine lateinische Inschrift datiert die Fertigstellung des romanischen Kreuzgangs von Moissac in Tarn-et-Garonne auf 1100 unter Abt Ansquitil."
+			]
+		}
+	},
+	"vaucluse": {
+		"region": {
+			"en": [
+				"Vaucluse takes its name from the village now called Fontaine-de-Vaucluse, whose older name Vallis Clausa means ‘closed valley’.",
+				"The Palace of the Popes at Avignon in Vaucluse was built mainly between 1335 and 1352 under Benedict XII and Clement VI.",
+				"The Roman theatre at Orange in Vaucluse was built under Augustus and preserves its monumental stage wall."
+			],
+			"it": [
+				"Vaucluse prende il nome dal villaggio oggi chiamato Fontaine-de-Vaucluse, il cui antico nome Vallis Clausa significa «valle chiusa».",
+				"Il Palazzo dei Papi di Avignone nel Vaucluse fu costruito principalmente tra il 1335 e il 1352 sotto Benedetto XII e Clemente VI.",
+				"Il teatro romano di Orange nel Vaucluse fu costruito sotto Augusto e conserva la monumentale parete scenica."
+			],
+			"de": [
+				"Vaucluse ist nach dem heute Fontaine-de-Vaucluse genannten Dorf benannt, dessen älterer Name Vallis Clausa „geschlossenes Tal“ bedeutet.",
+				"Der Papstpalast in Avignon im Département Vaucluse wurde hauptsächlich zwischen 1335 und 1352 unter Benedikt XII. und Clemens VI. erbaut.",
+				"Das römische Theater von Orange im Département Vaucluse wurde unter Augustus errichtet und bewahrt seine monumentale Bühnenwand."
+			]
+		}
+	},
+	"landes": {
+		"region": {
+			"en": [
+				"Landes comes from the French word landes, meaning heathlands.",
+				"Large-scale nineteenth-century pine planting in the Landes, encouraged by an 1857 law, helped develop a resin-tapping industry.",
+				"The Marquèze Ecomuseum at Sabres in the Landes was created in 1969 to preserve and reconstruct the region’s nineteenth-century rural way of life."
+			],
+			"it": [
+				"Landes deriva dalla parola francese landes, che significa brughiere.",
+				"La piantagione su larga scala di pini nelle Landes nell’Ottocento, favorita da una legge del 1857, contribuì allo sviluppo dell’industria della raccolta della resina.",
+				"L’Ecomuseo di Marquèze a Sabres nelle Landes fu creato nel 1969 per preservare e ricostruire il modo di vita rurale ottocentesco della regione."
+			],
+			"de": [
+				"Landes kommt vom französischen Wort landes für Heidelandschaften.",
+				"Die großflächige Kiefernpflanzung im Département Landes im 19. Jahrhundert, gefördert durch ein Gesetz von 1857, unterstützte die Entwicklung der Harzgewinnung.",
+				"Das Ökomuseum Marquèze in Sabres im Département Landes wurde 1969 gegründet, um die ländliche Lebensweise der Region im 19. Jahrhundert zu bewahren und nachzubilden."
+			]
+		}
+	},
+	"gard": {
+		"region": {
+			"en": [
+				"Gard takes its name from the River Gard.",
+				"The Pont du Gard was built in the mid-first century AD as part of the aqueduct supplying Roman Nîmes.",
+				"The Maison Carrée in Nîmes was dedicated to Gaius and Lucius Caesar, the intended heirs of Emperor Augustus."
+			],
+			"it": [
+				"Il Gard prende il nome dal fiume Gard.",
+				"Il Pont du Gard fu costruito verso la metà del I secolo d.C. come parte dell’acquedotto che riforniva la Nîmes romana.",
+				"La Maison Carrée di Nîmes era dedicata a Gaio e Lucio Cesare, gli eredi designati dell’imperatore Augusto."
+			],
+			"de": [
+				"Das Département Gard ist nach dem Fluss Gard benannt.",
+				"Der Pont du Gard entstand um die Mitte des ersten Jahrhunderts nach Christus als Teil der Wasserleitung für das römische Nîmes.",
+				"Die Maison Carrée in Nîmes war Gaius und Lucius Caesar gewidmet, den vorgesehenen Erben von Kaiser Augustus."
+			]
+		}
+	},
+	"alpes-maritimes": {
+		"region": {
+			"en": [
+				"Alpes-Maritimes was used as a French department name in 1793 and revived in 1860 after Nice joined France.",
+				"Nice’s Promenade des Anglais developed from a path financed by British winter visitors in the 1820s.",
+				"Perfume-making skills in the Pays de Grasse were inscribed on UNESCO’s intangible cultural heritage list in 2018."
+			],
+			"it": [
+				"Alpes-Maritimes fu usato come nome di un dipartimento francese nel 1793 e ripreso nel 1860, dopo il passaggio di Nizza alla Francia.",
+				"La Promenade des Anglais di Nizza si sviluppò da un sentiero finanziato da visitatori britannici che vi trascorrevano l’inverno negli anni Venti dell’Ottocento.",
+				"Le competenze legate alla produzione di profumi nel Pays de Grasse furono iscritte nella lista del patrimonio culturale immateriale dell’UNESCO nel 2018."
+			],
+			"de": [
+				"Alpes-Maritimes wurde 1793 als Name eines französischen Départements verwendet und 1860 nach dem Anschluss Nizzas an Frankreich wieder aufgegriffen.",
+				"Die Promenade des Anglais in Nizza entwickelte sich aus einem Weg, den britische Wintergäste in den 1820er-Jahren finanzierten.",
+				"Die Kenntnisse der Parfümherstellung im Pays de Grasse wurden 2018 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen."
+			]
+		}
+	},
+	"tarn": {
+		"region": {
+			"en": [
+				"Tarn takes its name from the River Tarn.",
+				"The Episcopal City of Albi entered UNESCO’s World Heritage List in 2010.",
+				"Raymond VII, Count of Toulouse, founded Cordes-sur-Ciel in 1222."
+			],
+			"it": [
+				"Il Tarn prende il nome dal fiume Tarn.",
+				"La città episcopale di Albi entrò nella Lista del Patrimonio Mondiale dell’UNESCO nel 2010.",
+				"Raimondo VII, conte di Tolosa, fondò Cordes-sur-Ciel nel 1222."
+			],
+			"de": [
+				"Das Département Tarn ist nach dem Fluss Tarn benannt.",
+				"Die Bischofsstadt Albi wurde 2010 in die UNESCO-Welterbeliste aufgenommen.",
+				"Raimund VII., Graf von Toulouse, gründete Cordes-sur-Ciel im Jahr 1222."
+			]
+		}
+	},
+	"gers": {
+		"region": {
+			"en": [
+				"Gers takes its name from the River Gers.",
+				"The stained-glass windows by Arnaud de Moles in Auch Cathedral were made between 1507 and 1513.",
+				"Flaran Abbey at Valence-sur-Baïse was founded as a Cistercian monastery in 1151."
+			],
+			"it": [
+				"Il Gers prende il nome dal fiume Gers.",
+				"Le vetrate di Arnaud de Moles nella cattedrale di Auch furono realizzate tra il 1507 e il 1513.",
+				"L’abbazia di Flaran a Valence-sur-Baïse fu fondata come monastero cistercense nel 1151."
+			],
+			"de": [
+				"Das Département Gers ist nach dem Fluss Gers benannt.",
+				"Die Glasfenster von Arnaud de Moles in der Kathedrale von Auch entstanden zwischen 1507 und 1513.",
+				"Die Abtei Flaran in Valence-sur-Baïse wurde 1151 als Zisterzienserkloster gegründet."
+			]
+		}
+	},
+	"herault": {
+		"region": {
+			"en": [
+				"Hérault takes its name from the River Hérault.",
+				"Cardinal Conrad of Urach granted statutes to Montpellier’s medical university in 1220.",
+				"Gellone Abbey at Saint-Guilhem-le-Désert was founded by Guilhem in 804."
+			],
+			"it": [
+				"L’Hérault prende il nome dal fiume Hérault.",
+				"Il cardinale Corrado di Urach concesse gli statuti all’università medica di Montpellier nel 1220.",
+				"L’abbazia di Gellone a Saint-Guilhem-le-Désert fu fondata da Guilhem nell’804."
+			],
+			"de": [
+				"Das Département Hérault ist nach dem Fluss Hérault benannt.",
+				"Kardinal Konrad von Urach verlieh der medizinischen Universität von Montpellier 1220 ihre Statuten.",
+				"Die Abtei Gellone in Saint-Guilhem-le-Désert wurde 804 von Guilhem gegründet."
+			]
+		}
+	},
+	"bouches-du-rhone": {
+		"region": {
+			"en": [
+				"Bouches-du-Rhône means mouths of the Rhône, referring to the river’s outlets in the Mediterranean.",
+				"Arles’s Roman amphitheatre dates from the late first century AD and became a fortified settlement during the Middle Ages.",
+				"Paul Cézanne painted his final works in his studio on the Lauves hill at Aix-en-Provence."
+			],
+			"it": [
+				"Bouches-du-Rhône significa bocche del Rodano e si riferisce alle foci del fiume nel Mediterraneo.",
+				"L’anfiteatro romano di Arles risale alla fine del I secolo d.C. e divenne un insediamento fortificato durante il Medioevo.",
+				"Paul Cézanne dipinse le sue ultime opere nell’atelier sulla collina dei Lauves ad Aix-en-Provence."
+			],
+			"de": [
+				"Bouches-du-Rhône bedeutet Mündungen der Rhône und bezieht sich auf die Flussmündungen ins Mittelmeer.",
+				"Das römische Amphitheater von Arles stammt aus dem späten ersten Jahrhundert nach Christus und wurde im Mittelalter zu einer befestigten Siedlung.",
+				"Paul Cézanne malte seine letzten Werke in seinem Atelier auf dem Hügel Les Lauves in Aix-en-Provence."
+			]
+		}
+	},
+	"var": {
+		"region": {
+			"en": [
+				"Var retains the name of a river that ceased to run through the department after the 1860 boundary change.",
+				"The Cistercian abbey of Le Thoronet was built between 1160 and 1230.",
+				"Toulon’s naval penal establishment operated from 1748 until 1873."
+			],
+			"it": [
+				"Il Var conserva il nome di un fiume che non attraversa più il dipartimento dopo la modifica dei confini del 1860.",
+				"L’abbazia cistercense di Le Thoronet fu costruita tra il 1160 e il 1230.",
+				"Il bagno penale della Marina a Tolone rimase in attività dal 1748 al 1873."
+			],
+			"de": [
+				"Var bewahrt den Namen eines Flusses, der seit der Grenzänderung von 1860 nicht mehr durch das Département fließt.",
+				"Die Zisterzienserabtei Le Thoronet wurde zwischen 1160 und 1230 erbaut.",
+				"Das Straflager der Marine in Toulon bestand von 1748 bis 1873."
+			]
+		}
+	},
+	"haute-garonne": {
+		"region": {
+			"en": [
+				"Haute-Garonne takes its name from the upper course of the River Garonne.",
+				"The University of Toulouse was founded in 1229.",
+				"A royal edict of 1666 authorized Pierre-Paul Riquet’s canal project beginning at Toulouse, the future Canal du Midi."
+			],
+			"it": [
+				"L’Haute-Garonne prende il nome dal corso superiore della Garonna.",
+				"L’Università di Tolosa fu fondata nel 1229.",
+				"Un editto reale del 1666 autorizzò il progetto di canale di Pierre-Paul Riquet con partenza da Tolosa, il futuro Canal du Midi."
+			],
+			"de": [
+				"Haute-Garonne ist nach dem Oberlauf der Garonne benannt.",
+				"Die Universität Toulouse wurde 1229 gegründet.",
+				"Ein königliches Edikt von 1666 genehmigte Pierre-Paul Riquets Kanalprojekt mit Ausgangspunkt Toulouse, den späteren Canal du Midi."
+			]
+		}
+	},
+	"pyrenees-atlantiques": {
+		"region": {
+			"en": [
+				"Pyrénées-Atlantiques was called Basses-Pyrénées until a decree changed the name in 1969.",
+				"The future King Henry IV was born at the Château de Pau in 1553.",
+				"Jewish merchants and craftspeople played a central role in establishing chocolate-making in seventeenth-century Bayonne."
+			],
+			"it": [
+				"Il dipartimento Pyrénées-Atlantiques si chiamava Basses-Pyrénées fino al cambiamento di nome disposto per decreto nel 1969.",
+				"Il futuro re Enrico IV nacque nel castello di Pau nel 1553.",
+				"Mercanti e artigiani ebrei ebbero un ruolo centrale nell’introduzione della produzione di cioccolato a Bayonne nel Seicento."
+			],
+			"de": [
+				"Das Département Pyrénées-Atlantiques hieß bis zur Umbenennung durch ein Dekret von 1969 Basses-Pyrénées.",
+				"Der spätere König Heinrich IV. wurde 1553 im Schloss Pau geboren.",
+				"Jüdische Händler und Handwerker spielten eine zentrale Rolle beim Aufbau der Schokoladenherstellung im Bayonne des 17. Jahrhunderts."
+			]
+		}
+	},
+	"hautes-pyrenees": {
+		"region": {
+			"en": [
+				"Hautes-Pyrénées means High Pyrenees, a name referring to the department’s mountain summits.",
+				"Lourdes became a pilgrimage centre after Bernadette Soubirous reported Marian apparitions there in 1858.",
+				"The foundation stone of the Pic du Midi observatory was laid in 1878."
+			],
+			"it": [
+				"Hautes-Pyrénées significa Alti Pirenei, un nome che richiama le cime montuose del dipartimento.",
+				"Lourdes divenne un centro di pellegrinaggio dopo che Bernadette Soubirous riferì di apparizioni mariane nel 1858.",
+				"La prima pietra dell’osservatorio del Pic du Midi fu posata nel 1878."
+			],
+			"de": [
+				"Hautes-Pyrénées bedeutet Hohe Pyrenäen und verweist auf die Berggipfel des Départements.",
+				"Lourdes wurde zum Wallfahrtsort, nachdem Bernadette Soubirous dort 1858 von Marienerscheinungen berichtet hatte.",
+				"Der Grundstein für das Observatorium auf dem Pic du Midi wurde 1878 gelegt."
+			]
+		}
+	},
+	"aude": {
+		"region": {
+			"en": [
+				"Aude takes its name from the River Aude.",
+				"Eugène Viollet-le-Duc directed a major restoration of Carcassonne’s fortified city from 1853 to 1879.",
+				"Narbonne was founded as the Roman colony Narbo Martius in 118 BC."
+			],
+			"it": [
+				"L’Aude prende il nome dal fiume Aude.",
+				"Eugène Viollet-le-Duc diresse un importante restauro della città fortificata di Carcassonne dal 1853 al 1879.",
+				"Narbona fu fondata come colonia romana con il nome di Narbo Martius nel 118 a.C."
+			],
+			"de": [
+				"Das Département Aude ist nach dem Fluss Aude benannt.",
+				"Eugène Viollet-le-Duc leitete von 1853 bis 1879 eine umfassende Restaurierung der befestigten Stadt Carcassonne.",
+				"Narbonne wurde 118 vor Christus als römische Kolonie Narbo Martius gegründet."
+			]
+		}
+	},
+	"ariege": {
+		"region": {
+			"en": [
+				"Ariège takes its name from the River Ariège.",
+				"The Salon Noir in Niaux Cave preserves prehistoric paintings of animals including bison, horses and ibex.",
+				"Montségur’s Cathar community surrendered in 1244, and the surviving castle was built after the Cathar stronghold was dismantled."
+			],
+			"it": [
+				"L’Ariège prende il nome dal fiume Ariège.",
+				"Il Salon Noir della grotta di Niaux conserva pitture preistoriche di animali, tra cui bisonti, cavalli e stambecchi.",
+				"La comunità catara di Montségur si arrese nel 1244 e il castello oggi visibile fu costruito dopo lo smantellamento della roccaforte catara."
+			],
+			"de": [
+				"Das Département Ariège ist nach dem Fluss Ariège benannt.",
+				"Der Salon Noir in der Höhle von Niaux bewahrt vorgeschichtliche Tierbilder, darunter Bisons, Pferde und Steinböcke.",
+				"Die Katharergemeinschaft von Montségur kapitulierte 1244, und die erhaltene Burg entstand nach der Zerstörung der Katharerfestung."
+			]
+		}
+	},
+	"pyrenees-orientales": {
+		"region": {
+			"en": [
+				"Pyrénées-Orientales means Eastern Pyrenees, referring to the eastern end of the mountain range.",
+				"Perpignan’s Palace of the Kings of Majorca became a centre of the medieval kingdom of Majorca and was completed after 1300.",
+				"A human skull dating back about 450,000 years was discovered at the Caune de l’Arago near Tautavel in 1971."
+			],
+			"it": [
+				"Pyrénées-Orientales significa Pirenei Orientali e si riferisce all’estremità orientale della catena montuosa.",
+				"Il Palazzo dei Re di Maiorca a Perpignan divenne un centro del regno medievale di Maiorca e fu completato dopo il 1300.",
+				"Un cranio umano risalente a circa 450.000 anni fa fu scoperto nella Caune de l’Arago, presso Tautavel, nel 1971."
+			],
+			"de": [
+				"Pyrénées-Orientales bedeutet Östliche Pyrenäen und bezieht sich auf das östliche Ende des Gebirges.",
+				"Der Palast der Könige von Mallorca in Perpignan war ein Zentrum des mittelalterlichen Königreichs Mallorca und wurde nach 1300 vollendet.",
+				"In der Caune de l’Arago bei Tautavel wurde 1971 ein etwa 450.000 Jahre alter menschlicher Schädel entdeckt."
+			]
+		}
+	},
+	"haute-corse": {
+		"region": {
+			"en": [
+				"The name Haute-Corse was established by Corsica’s 1975 reorganisation law, with the department beginning in 1976.",
+				"Corte served as the capital of Pasquale Paoli’s independent Corsican state from 1755 to 1769.",
+				"Bastia’s Governors’ Palace housed the Genoese administration and was remodelled in the sixteenth and seventeenth centuries."
+			],
+			"it": [
+				"Il nome Haute-Corse fu stabilito dalla legge di riorganizzazione della Corsica del 1975 e il dipartimento nacque nel 1976.",
+				"Corte fu la capitale dello Stato corso indipendente di Pasquale Paoli dal 1755 al 1769.",
+				"Il Palazzo dei Governatori di Bastia ospitava l’amministrazione genovese e fu rimaneggiato nel Cinquecento e nel Seicento."
+			],
+			"de": [
+				"Der Name Haute-Corse wurde durch das Gesetz zur Neuordnung Korsikas von 1975 festgelegt, und das Département entstand 1976.",
+				"Corte war von 1755 bis 1769 die Hauptstadt des unabhängigen korsischen Staates unter Pasquale Paoli.",
+				"Der Gouverneurspalast in Bastia beherbergte die genuesische Verwaltung und wurde im 16. und 17. Jahrhundert umgestaltet."
+			]
+		}
+	},
+	"corse-du-sud": {
+		"region": {
+			"en": [
+				"The name Corse-du-Sud was established by Corsica’s 1975 reorganisation law, with the department beginning in 1976.",
+				"The Bonaparte family home in Ajaccio, where Napoleon was born, became a national museum in 1967.",
+				"Filitosa at Sollacaro preserves prehistoric statue-menhirs and circular stone monuments known as torre."
+			],
+			"it": [
+				"Il nome Corse-du-Sud fu stabilito dalla legge di riorganizzazione della Corsica del 1975 e il dipartimento nacque nel 1976.",
+				"La casa della famiglia Bonaparte ad Ajaccio, dove nacque Napoleone, divenne museo nazionale nel 1967.",
+				"Filitosa, a Sollacaro, conserva statue-menhir preistoriche e monumenti circolari in pietra chiamati torre."
+			],
+			"de": [
+				"Der Name Corse-du-Sud wurde durch das Gesetz zur Neuordnung Korsikas von 1975 festgelegt, und das Département entstand 1976.",
+				"Das Haus der Familie Bonaparte in Ajaccio, in dem Napoleon geboren wurde, wurde 1967 zum Nationalmuseum.",
+				"Filitosa in Sollacaro bewahrt vorgeschichtliche Statuenmenhire und kreisförmige Steinbauten, die als Torre bezeichnet werden."
+			]
+		}
 	}
 }

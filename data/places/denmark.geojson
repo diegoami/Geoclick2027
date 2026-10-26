@@ -9,7 +9,10 @@
 		"attribution": "geoBoundaries / Web Vectors Map, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/"
 	},
 	"source": "Wikidata (CC0); regional associations under regionSource licence",
-	"fetchedAt": "2026-10-26T22:09:34.377Z",
+	"fetchedAt": "2026-10-26T18:31:55.641Z",
+	"reprocessedAt": "2026-10-26T23:00:17.284Z",
+	"bindingsSha256": "be4b8af78a95d01792ff526f4ff232edae807a2cf270b7cf3a6e8996de1b753c",
+	"querySha256": "f96aa54a1a3dc21da9b8d732ec6faf1bce9b8c98b60fa9ec7c1028224b175cf1",
 	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"DNK\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country .\n  FILTER EXISTS { ?item p:P1082/ps:P1082 ?candidatePopulation . FILTER(?candidatePopulation >= 1000) }\n  ?item wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2011-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
 	"coordinateOverrides": {
 		"Q1748": [

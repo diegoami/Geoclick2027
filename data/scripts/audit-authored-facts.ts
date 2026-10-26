@@ -6,6 +6,9 @@ import { REPO_ROOT, parseArgs } from './mapBuildUtils.js';
 import { authoredResolver, storedHooksFor, factsFileFor, WORLD } from './factsHooks.js';
 const args = parseArgs(process.argv.slice(2));
 const minimum = Number(args.minimum ?? 3);
+if (Object.hasOwn(args, 'strict') && args.strict !== 'true')
+	throw new Error('Use --strict or --strict=true');
+const strict = process.argv.includes('--strict') || args.strict === 'true';
 if (Object.hasOwn(args, 'country') && !args.country?.trim())
 	throw new Error('Country selector cannot be empty');
 if (Object.hasOwn(args, 'maps') && !args.maps?.trim())
@@ -62,12 +65,13 @@ for (const id of selected) {
 	}
 }
 const rows = [...unique.values()];
-if (rows.length === 0 && (wantedFile || process.argv.includes('--strict')))
+if (rows.length === 0 && (wantedFile || strict))
 	throw new Error('No playable targets match the selected country/maps');
 const incomplete = rows.filter((row) => Math.min(...Object.values(row.counts)) < minimum);
 const report = {
 	maps: auditedMaps.size,
 	minimum,
+	strict,
 	total: rows.length,
 	complete: rows.length - incomplete.length,
 	withoutAuthoredFacts: rows.filter((row) => Math.min(...Object.values(row.counts)) === 0).length,
@@ -82,4 +86,4 @@ if (args.json)
 console.log(
 	`${report.maps} maps; ${report.complete}/${report.total} unique targets with ${minimum}+ sentences in EN/IT/DE; ${report.withoutAuthoredFacts} without authored facts, ${report.shortSets} short sets`
 );
-if (process.argv.includes('--strict') && incomplete.length) process.exitCode = 1;
+if (strict && incomplete.length) process.exitCode = 1;

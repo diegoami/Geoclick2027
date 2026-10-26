@@ -6,3 +6,12 @@ export function placeSourceAttribution(file: string): string {
 		? snapshot.attribution.trim()
 		: 'Wikidata (CC0), https://www.wikidata.org';
 }
+
+/** Builders pass compound credits through each other; retain each segment once. */
+export function combineAttributions(...parts: string[]): string {
+	return [
+		...new Set(
+			parts.flatMap((part) => part.split(';').map((segment) => segment.trim())).filter(Boolean)
+		)
+	].join('; ');
+}

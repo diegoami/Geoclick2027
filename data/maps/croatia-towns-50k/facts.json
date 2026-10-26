@@ -31,7 +31,24 @@
 		"populationRank": 5,
 		"region": "Osjecko-Baranjska",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The Roman city of Mursa stood in the area of present-day Osijek.",
+				"Osijek’s Baroque Tvrđa district grew around a Habsburg fortress built in the early eighteenth century.",
+				"The Holy Trinity column in Osijek’s Tvrđa was erected in 1729 as a plague monument."
+			],
+			"it": [
+				"La città romana di Mursa sorgeva nell’area dell’odierna Osijek.",
+				"Il quartiere barocco Tvrđa di Osijek si sviluppò intorno a una fortezza asburgica costruita all’inizio del Settecento.",
+				"La colonna della Santissima Trinità nella Tvrđa di Osijek fu eretta nel 1729 come monumento legato alla peste."
+			],
+			"de": [
+				"Die römische Stadt Mursa lag im Gebiet des heutigen Osijek.",
+				"Osijeks barockes Viertel Tvrđa entstand um eine Anfang des 18. Jahrhunderts erbaute Habsburgerfestung.",
+				"Die Dreifaltigkeitssäule in Osijeks Tvrđa wurde 1729 als Pestsäule errichtet."
+			]
+		}
 	},
 	"karlovac": {
 		"kind": "city",
@@ -39,7 +56,24 @@
 		"populationRank": 8,
 		"region": "Karlovacka",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Karlovac is named after the Habsburg archduke Charles II.",
+				"Karlovac’s original fortress was laid out as a six-pointed star beginning in 1579.",
+				"Karlovac’s brewery tradition includes the brewery established by Nikola Vranyczany in 1854."
+			],
+			"it": [
+				"Karlovac prende il nome dall’arciduca asburgico Carlo II.",
+				"La fortezza originaria di Karlovac fu progettata come una stella a sei punte a partire dal 1579.",
+				"La tradizione birraria di Karlovac comprende il birrificio fondato da Nikola Vranyczany nel 1854."
+			],
+			"de": [
+				"Karlovac ist nach dem Habsburger Erzherzog Karl II. benannt.",
+				"Die ursprüngliche Festung von Karlovac wurde ab 1579 als sechszackiger Stern angelegt.",
+				"Zu Karlovacs Brautradition gehört die 1854 von Nikola Vranyczany gegründete Brauerei."
+			]
+		}
 	},
 	"rijeka": {
 		"kind": "city",
@@ -72,7 +106,24 @@
 		"populationRank": 4,
 		"region": "Brodsko-Posavska",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Slavonski Brod occupies the area of the Roman settlement Marsonia.",
+				"Slavonski Brod’s fortress was built in stages from 1715 to 1780 as part of the Habsburg defensive system.",
+				"Ivana Brlić-Mažuranić moved into Slavonski Brod’s Brlić House in 1892 and later wrote her children’s stories there."
+			],
+			"it": [
+				"Slavonski Brod occupa l’area dell’insediamento romano di Marsonia.",
+				"La fortezza di Slavonski Brod fu costruita per fasi dal 1715 al 1780 come parte del sistema difensivo asburgico.",
+				"Ivana Brlić-Mažuranić si trasferì nella casa Brlić di Slavonski Brod nel 1892 e in seguito vi scrisse i suoi racconti per bambini."
+			],
+			"de": [
+				"Slavonski Brod liegt im Gebiet der römischen Siedlung Marsonia.",
+				"Die Festung von Slavonski Brod wurde 1715–1780 in mehreren Phasen als Teil des habsburgischen Verteidigungssystems erbaut.",
+				"Ivana Brlić-Mažuranić zog 1892 in das Brlić-Haus in Slavonski Brod und schrieb dort später ihre Kindergeschichten."
+			]
+		}
 	},
 	"pula": {
 		"kind": "city",
@@ -80,7 +131,24 @@
 		"populationRank": 7,
 		"region": "Istarska",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Pula was known in Roman times as Colonia Pietas Iulia Pola.",
+				"Pula’s Arena amphitheatre was built in the first century AD.",
+				"James Joyce taught English at Pula’s Berlitz School in 1904–1905."
+			],
+			"it": [
+				"In epoca romana Pula era conosciuta come Colonia Pietas Iulia Pola.",
+				"L’anfiteatro Arena di Pula fu costruito nel I secolo d.C.",
+				"James Joyce insegnò inglese alla scuola Berlitz di Pula nel 1904–1905."
+			],
+			"de": [
+				"In römischer Zeit war Pula als Colonia Pietas Iulia Pola bekannt.",
+				"Das Amphitheater Arena in Pula wurde im 1. Jahrhundert n. Chr. erbaut.",
+				"James Joyce unterrichtete 1904–1905 Englisch an der Berlitz-Schule in Pula."
+			]
+		}
 	},
 	"zadar": {
 		"kind": "city",
@@ -88,7 +156,24 @@
 		"populationRank": 6,
 		"region": "Zadarska",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Zadar was known in Roman times as Iader.",
+				"Zadar’s circular Church of Saint Donatus dates from the ninth century.",
+				"Zadar’s Sea Organ, completed in 2005, turns wave movement into music through pipes beneath the waterfront steps."
+			],
+			"it": [
+				"In epoca romana Zadar era conosciuta come Iader.",
+				"La chiesa circolare di San Donato di Zadar risale al IX secolo.",
+				"L’Organo marino di Zadar, completato nel 2005, trasforma il movimento delle onde in musica attraverso tubi sotto i gradini del lungomare."
+			],
+			"de": [
+				"In römischer Zeit war Zadar als Iader bekannt.",
+				"Die runde Donatuskirche in Zadar stammt aus dem 9. Jahrhundert.",
+				"Zadars 2005 fertiggestellte Meeresorgel verwandelt Wellenbewegungen durch Rohre unter den Uferstufen in Musik."
+			]
+		}
 	},
 	"sibenik": {
 		"kind": "city",
@@ -96,7 +181,24 @@
 		"populationRank": 9,
 		"region": "Šibensko-Kninska",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Šibenik’s name is recorded in a charter issued by King Petar Krešimir IV in 1066.",
+				"Šibenik’s Cathedral of Saint James was built entirely of stone during the fifteenth and sixteenth centuries.",
+				"Šibenik’s Saint Michael’s Fortress reopened in 2014 with an open-air stage for cultural and musical events."
+			],
+			"it": [
+				"Il nome Šibenik è attestato in una carta emanata dal re Petar Krešimir IV nel 1066.",
+				"La cattedrale di San Giacomo di Šibenik fu costruita interamente in pietra nel Quattrocento e nel Cinquecento.",
+				"La fortezza di San Michele di Šibenik riaprì nel 2014 con un palcoscenico all’aperto per eventi culturali e musicali."
+			],
+			"de": [
+				"Šibeniks Name ist in einer 1066 von König Petar Krešimir IV. ausgestellten Urkunde belegt.",
+				"Šibeniks Kathedrale des heiligen Jakob wurde im 15. und 16. Jahrhundert vollständig aus Stein erbaut.",
+				"Die Michaelsfestung in Šibenik wurde 2014 mit einer Freilichtbühne für Kultur- und Musikveranstaltungen wiedereröffnet."
+			]
+		}
 	},
 	"split": {
 		"kind": "city",
@@ -129,6 +231,23 @@
 		"populationRank": 10,
 		"region": "Dubrovacko-Neretvanska",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Dubrovnik was long known internationally as Ragusa.",
+				"Dubrovnik’s Great Council introduced quarantine rules in 1377 to protect the city from plague while maintaining trade.",
+				"French authorities abolished the Republic of Dubrovnik in 1808."
+			],
+			"it": [
+				"Dubrovnik fu a lungo conosciuta internazionalmente come Ragusa.",
+				"Il Maggior Consiglio di Dubrovnik introdusse norme di quarantena nel 1377 per proteggere la città dalla peste mantenendo i commerci.",
+				"Le autorità francesi abolirono la Repubblica di Dubrovnik nel 1808."
+			],
+			"de": [
+				"Dubrovnik war international lange als Ragusa bekannt.",
+				"Dubrovniks Großer Rat führte 1377 Quarantäneregeln ein, um die Stadt vor der Pest zu schützen und den Handel aufrechtzuerhalten.",
+				"Die französischen Behörden schafften die Republik Dubrovnik 1808 ab."
+			]
+		}
 	}
 }
