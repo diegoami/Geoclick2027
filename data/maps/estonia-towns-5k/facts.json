@@ -4,7 +4,24 @@
 		"population": 17017,
 		"populationRank": 7,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The settlement grew on the lands of Maardu Manor around a new phosphorite factory.",
+				"Phosphorite extraction shaped the town’s industrial history.",
+				"Muuga Harbour opened in the 1980s beside the town."
+			],
+			"it": [
+				"L’abitato crebbe sui terreni del maniero di Maardu attorno a una nuova fabbrica di fosforite.",
+				"L’estrazione di fosforite segnò la storia industriale della città.",
+				"Il porto di Muuga aprì negli anni Ottanta accanto alla città."
+			],
+			"de": [
+				"Die Siedlung entstand auf dem Land des Gutes Maardu um eine neue Phosphoritfabrik.",
+				"Der Phosphoritabbau prägte die Industriegeschichte der Stadt.",
+				"Neben der Stadt wurde in den 1980er Jahren der Hafen Muuga eröffnet."
+			]
+		}
 	},
 	"tallinn": {
 		"kind": "city",
@@ -36,77 +53,264 @@
 		"population": 33434,
 		"populationRank": 5,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its name joins those of the Kohtla and Järve manors.",
+				"The city grew with the oil-shale industry in the 1920s.",
+				"Its urban districts occupy separate patches of land."
+			],
+			"it": [
+				"Il nome unisce quelli dei manieri di Kohtla e Järve.",
+				"La città crebbe con l’industria degli scisti bituminosi negli anni Venti.",
+				"I suoi quartieri occupano aree separate tra loro."
+			],
+			"de": [
+				"Der Name verbindet die Namen der Güter Kohtla und Järve.",
+				"Die Stadt wuchs in den 1920er Jahren mit der Ölschieferindustrie.",
+				"Ihre Stadtteile liegen auf räumlich getrennten Flächen."
+			]
+		}
 	},
 	"sillamae": {
 		"kind": "city",
 		"population": 12352,
 		"populationRank": 10,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The settlement was first recorded in 1502.",
+				"It became a closed Soviet town because of its uranium industry.",
+				"Its seafront preserves an ensemble of Stalinist architecture."
+			],
+			"it": [
+				"L’insediamento fu menzionato per la prima volta nel 1502.",
+				"Divenne una città sovietica chiusa per via della sua industria dell’uranio.",
+				"Il lungomare conserva un complesso di architettura stalinista."
+			],
+			"de": [
+				"Die Siedlung wurde erstmals 1502 erwähnt.",
+				"Wegen ihrer Uranindustrie wurde sie zu einer geschlossenen sowjetischen Stadt.",
+				"An ihrer Küste ist ein Ensemble stalinistischer Architektur erhalten."
+			]
+		}
 	},
 	"narva": {
 		"kind": "city",
 		"population": 53360,
 		"populationRank": 3,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Narva Castle is also known as Hermann Castle.",
+				"It faces Ivangorod’s fortress across the river.",
+				"The Kreenholm textile works grew here in the nineteenth century."
+			],
+			"it": [
+				"Il castello di Narva è noto anche come castello di Hermann.",
+				"Si affaccia sulla fortezza di Ivangorod, oltre il fiume.",
+				"La manifattura tessile di Kreenholm si sviluppò qui nell’Ottocento."
+			],
+			"de": [
+				"Die Burg Narva ist auch als Hermannsfeste bekannt.",
+				"Ihr gegenüber liegt jenseits des Flusses die Festung Iwangorod.",
+				"Im neunzehnten Jahrhundert entstand hier die Textilfabrik Kreenholm."
+			]
+		}
 	},
 	"johvi": {
 		"kind": "city",
 		"population": 10880,
 		"populationRank": 14,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Jewe is its historical German name.",
+				"St Michael’s Church was built to serve as a fortress as well as a place of worship.",
+				"A museum occupies the vaulted rooms beneath the church’s altar."
+			],
+			"it": [
+				"Jewe è il suo nome storico tedesco.",
+				"La chiesa di San Michele fu costruita come fortezza oltre che come luogo di culto.",
+				"Un museo occupa gli ambienti voltati sotto l’altare della chiesa."
+			],
+			"de": [
+				"Jewe ist sein historischer deutscher Name.",
+				"Die Michaelskirche wurde zugleich als Festung und Gotteshaus gebaut.",
+				"In den Gewölberäumen unter dem Altar befindet sich ein Museum."
+			]
+		}
 	},
 	"rakvere": {
 		"kind": "city",
 		"population": 15695,
 		"populationRank": 8,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Wesenberg is its historical German name.",
+				"Its castle recalls the town’s medieval past.",
+				"The bronze Tarvas sculpture celebrates an aurochs, a symbol of the town."
+			],
+			"it": [
+				"Wesenberg è il suo nome storico tedesco.",
+				"Il castello ricorda il passato medievale della città.",
+				"La scultura bronzea Tarvas celebra un uro, simbolo della città."
+			],
+			"de": [
+				"Wesenberg ist sein historischer deutscher Name.",
+				"Die Burg erinnert an die mittelalterliche Vergangenheit der Stadt.",
+				"Die Bronzeskulptur Tarvas zeigt einen Auerochsen als Wahrzeichen der Stadt."
+			]
+		}
 	},
 	"saue": {
 		"kind": "city",
 		"population": 6227,
 		"populationRank": 17,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Saue’s manor was also known as Friedrichshof.",
+				"Its present manor house was completed in 1792.",
+				"The manor is an example of early Classical architecture in Estonia."
+			],
+			"it": [
+				"Il maniero di Saue era noto anche come Friedrichshof.",
+				"L’attuale edificio padronale fu completato nel 1792.",
+				"Il maniero è un esempio del primo classicismo in Estonia."
+			],
+			"de": [
+				"Das Gut Saue war auch als Friedrichshof bekannt.",
+				"Das heutige Herrenhaus wurde 1792 fertiggestellt.",
+				"Das Gut ist ein Beispiel des frühen Klassizismus in Estland."
+			]
+		}
 	},
 	"keila": {
 		"kind": "city",
 		"population": 10964,
 		"populationRank": 13,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Kegel is its historical German name.",
+				"The Harju County Museum occupies its former manor house.",
+				"Ruins of the medieval manor stand nearby in the river-island park."
+			],
+			"it": [
+				"Kegel è il suo nome storico tedesco.",
+				"Il Museo della contea di Harju occupa il suo antico maniero.",
+				"I resti del maniero medievale sorgono poco lontano nel parco sull’isola fluviale."
+			],
+			"de": [
+				"Kegel ist sein historischer deutscher Name.",
+				"Das Museum des Kreises Harju befindet sich im ehemaligen Herrenhaus.",
+				"Im nahen Park auf einer Flussinsel liegen die Ruinen des mittelalterlichen Gutshauses."
+			]
+		}
 	},
 	"tapa": {
 		"kind": "city",
 		"population": 5492,
 		"populationRank": 20,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Tapa probably comes from an old personal name such as Tabbe or Tappe.",
+				"The railway built in 1870 helped the settlement grow.",
+				"Its museum traces both railway and military history."
+			],
+			"it": [
+				"Tapa deriva probabilmente da un antico nome personale come Tabbe o Tappe.",
+				"La ferrovia costruita nel 1870 favorì la crescita dell’abitato.",
+				"Il suo museo racconta la storia ferroviaria e militare."
+			],
+			"de": [
+				"Tapa geht wahrscheinlich auf einen alten Personennamen wie Tabbe oder Tappe zurück.",
+				"Die 1870 gebaute Eisenbahn förderte das Wachstum der Siedlung.",
+				"Das Stadtmuseum erzählt von Eisenbahn- und Militärgeschichte."
+			]
+		}
 	},
 	"haapsalu": {
 		"kind": "city",
 		"population": 9812,
 		"populationRank": 15,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Hapsal is its historical German name.",
+				"Its mud-spa tradition began in 1825.",
+				"A medieval bishop’s castle stands in the town."
+			],
+			"it": [
+				"Hapsal è il suo nome storico tedesco.",
+				"La sua tradizione di cure con il fango iniziò nel 1825.",
+				"Nella città sorge un castello vescovile medievale."
+			],
+			"de": [
+				"Hapsal ist sein historischer deutscher Name.",
+				"Seine Tradition als Schlammbad begann 1825.",
+				"In der Stadt steht eine mittelalterliche Bischofsburg."
+			]
+		}
 	},
 	"paide": {
 		"kind": "city",
 		"population": 8073,
 		"populationRank": 16,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Weißenstein is its historical German name.",
+				"Its medieval castle site is marked by a prominent tower.",
+				"The Opinion Festival has brought public debates here since 2013."
+			],
+			"it": [
+				"Weißenstein è il suo nome storico tedesco.",
+				"Una torre imponente segnala il sito del castello medievale.",
+				"Il Festival delle opinioni porta qui dibattiti pubblici dal 2013."
+			],
+			"de": [
+				"Weißenstein ist sein historischer deutscher Name.",
+				"Ein markanter Turm kennzeichnet den Standort der mittelalterlichen Burg.",
+				"Seit 2013 bringt das Meinungsfestival öffentliche Debatten in die Stadt."
+			]
+		}
 	},
 	"parnu": {
 		"kind": "city",
 		"population": 41520,
 		"populationRank": 4,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Pernau is its historical German name.",
+				"Its first seaside bathing establishment opened in 1838.",
+				"Its waterfront has notable examples of 1930s functionalist architecture."
+			],
+			"it": [
+				"Pernau è il suo nome storico tedesco.",
+				"Il suo primo stabilimento balneare aprì nel 1838.",
+				"Il lungomare ospita notevoli esempi di architettura funzionalista degli anni Trenta."
+			],
+			"de": [
+				"Pernau ist sein historischer deutscher Name.",
+				"Seine erste Seebadeanstalt eröffnete 1838.",
+				"An der Küste stehen bedeutende Beispiele funktionalistischer Architektur der 1930er Jahre."
+			]
+		}
 	},
 	"tartu": {
 		"kind": "city",
@@ -116,16 +320,19 @@
 		"position": "east",
 		"hooks": {
 			"en": [
-				"Its university was founded in 1632 by the Swedish king Gustavus Adolphus.",
-				"It calls itself the city of good thoughts."
+				"Dorpat is its historical German name.",
+				"Its university was founded in 1632 by Sweden’s King Gustav II Adolf.",
+				"An innovative Fraunhofer telescope arrived at its observatory in 1824."
 			],
 			"it": [
-				"La sua università fu fondata nel 1632 dal re di Svezia Gustavo Adolfo.",
-				"Si definisce la città dei buoni pensieri."
+				"Dorpat è il suo nome storico tedesco.",
+				"La sua università fu fondata nel 1632 dal re svedese Gustavo II Adolfo.",
+				"Un innovativo telescopio Fraunhofer arrivò al suo osservatorio nel 1824."
 			],
 			"de": [
-				"Ihre Universität wurde 1632 vom schwedischen König Gustav Adolf gegründet.",
-				"Sie nennt sich die Stadt der guten Gedanken."
+				"Dorpat ist sein historischer deutscher Name.",
+				"Seine Universität wurde 1632 vom schwedischen König Gustav II. Adolf gegründet.",
+				"1824 erhielt seine Sternwarte ein neuartiges Fraunhofer-Teleskop."
 			]
 		}
 	},
@@ -134,41 +341,143 @@
 		"population": 17255,
 		"populationRank": 6,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Fellin is its historical German name.",
+				"The town belonged to the medieval Hanseatic trading network.",
+				"Its annual folk-music festival celebrates traditional music."
+			],
+			"it": [
+				"Fellin è il suo nome storico tedesco.",
+				"La città faceva parte della rete commerciale anseatica medievale.",
+				"Il suo festival folk annuale celebra la musica tradizionale."
+			],
+			"de": [
+				"Fellin ist sein historischer deutscher Name.",
+				"Die Stadt gehörte zum mittelalterlichen Handelsnetz der Hanse.",
+				"Ihr jährliches Folkfestival feiert die traditionelle Musik."
+			]
+		}
 	},
 	"kuressaare": {
 		"kind": "city",
 		"population": 13185,
 		"populationRank": 9,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Arensburg is its historical German name.",
+				"Its medieval bishop’s castle houses the Saaremaa Museum.",
+				"The fortress gained much of its present form during Swedish rule."
+			],
+			"it": [
+				"Arensburg è il suo nome storico tedesco.",
+				"Il castello vescovile medievale ospita il Museo di Saaremaa.",
+				"La fortezza assunse gran parte della sua forma attuale sotto il dominio svedese."
+			],
+			"de": [
+				"Arensburg ist sein historischer deutscher Name.",
+				"Die mittelalterliche Bischofsburg beherbergt das Saaremaa-Museum.",
+				"Die Festung erhielt einen Großteil ihrer heutigen Form unter schwedischer Herrschaft."
+			]
+		}
 	},
 	"elva": {
 		"kind": "city",
 		"population": 5692,
 		"populationRank": 18,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Elva takes its name from the Elva River.",
+				"Pine forests and lakes helped it develop as a summer resort.",
+				"Professors from Tartu built summer homes beside Lake Verevi."
+			],
+			"it": [
+				"Elva prende il nome dal fiume Elva.",
+				"Pinete e laghi favorirono il suo sviluppo come località di villeggiatura estiva.",
+				"Professori di Tartu costruirono case per le vacanze accanto al lago Verevi."
+			],
+			"de": [
+				"Elva ist nach dem Fluss Elva benannt.",
+				"Kiefernwälder und Seen förderten seine Entwicklung zum Sommerkurort.",
+				"Professoren aus Tartu bauten Sommerhäuser am Verevi-See."
+			]
+		}
 	},
 	"polva": {
 		"kind": "city",
 		"population": 5498,
 		"populationRank": 19,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Pölwe is a historical German form of the name.",
+				"The Church of the Blessed Virgin Mary stands near the town centre.",
+				"Its central square opened in 2018 as part of Estonia’s centenary programme."
+			],
+			"it": [
+				"Pölwe è una forma storica tedesca del nome.",
+				"La chiesa della Beata Vergine Maria sorge vicino al centro.",
+				"La piazza centrale aprì nel 2018 nell’ambito del programma per il centenario dell’Estonia."
+			],
+			"de": [
+				"Pölwe ist eine historische deutsche Namensform.",
+				"Die Marienkirche steht nahe dem Stadtzentrum.",
+				"Der zentrale Platz wurde 2018 im Rahmen von Estlands Hundertjahrfeier eröffnet."
+			]
+		}
 	},
 	"voru": {
 		"kind": "city",
 		"population": 12112,
 		"populationRank": 12,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Werro is its historical German name.",
+				"The planned town was founded on manor lands in 1784.",
+				"The physician and Kalevipoeg compiler Friedrich Reinhold Kreutzwald lived here."
+			],
+			"it": [
+				"Werro è il suo nome storico tedesco.",
+				"La città pianificata fu fondata sui terreni di un maniero nel 1784.",
+				"Qui visse Friedrich Reinhold Kreutzwald, medico e compilatore del Kalevipoeg."
+			],
+			"de": [
+				"Werro ist sein historischer deutscher Name.",
+				"Die planmäßig angelegte Stadt wurde 1784 auf Gutsland gegründet.",
+				"Hier lebte der Arzt und Kalevipoeg-Bearbeiter Friedrich Reinhold Kreutzwald."
+			]
+		}
 	},
 	"valga": {
 		"kind": "city",
 		"population": 12173,
 		"populationRank": 11,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Walk is its historical German name.",
+				"A border divided the town between Estonia and Latvia in 1920.",
+				"Railway connections fuelled its rapid growth around the turn of the twentieth century."
+			],
+			"it": [
+				"Walk è il suo nome storico tedesco.",
+				"Nel 1920 un confine divise la città tra Estonia e Lettonia.",
+				"I collegamenti ferroviari favorirono la sua rapida crescita tra Ottocento e Novecento."
+			],
+			"de": [
+				"Walk ist sein historischer deutscher Name.",
+				"1920 teilte eine Grenze die Stadt zwischen Estland und Lettland.",
+				"Eisenbahnverbindungen förderten ihr rasches Wachstum um die Wende zum zwanzigsten Jahrhundert."
+			]
+		}
 	}
 }

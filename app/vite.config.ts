@@ -90,6 +90,9 @@ export default defineConfig({
 					name: 'client',
 					browser: {
 						enabled: true,
+						// Windows can reserve Vitest’s default port 63315. Keep the
+						// browser API on loopback and let Vite try the next port if busy.
+						api: { host: '127.0.0.1', port: 5191 },
 						provider: playwright(),
 						instances: [{ browser: 'chromium', headless: true }]
 					},

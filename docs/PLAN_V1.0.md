@@ -10,8 +10,8 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | --- | --- | --- |
 | Distribution | Complete; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) merged | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
 | Boundary and target audit | In progress; first six countries audited | Licensed, reproducible sources and suitable map types for 22 countries |
-| Maps | First twelve generated and registered; unfinished and unreviewed | Administrative maps and towns/urban maps; generated through the existing pipeline |
-| Facts | Five first-batch countries complete in EN/DE/IT; Estonia has 34 sets left | Facts for added targets in English, German, and Italian; existing target gaps audited |
+| Maps | First twelve generated and registered; local checks complete, external review pending | Administrative maps and towns/urban maps; generated through the existing pipeline |
+| Facts | All 170 first-batch targets complete in EN/DE/IT | Facts for added targets in English, German, and Italian; existing target gaps audited |
 | Content completion | Pending | Deferred thin towns maps and German/Italian manual checked against agreed scope |
 | itch.io | Developer prepares package/assets; owner handles page and upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
 | Release preparation | Pending | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
@@ -175,7 +175,7 @@ reviews, awards, unsupported platforms or simulated gameplay screenshots.
 
 ## Country-expansion checkpoint (2026-10-25)
 
-Paused at the owner's request. Branch: maps/v1.0-country-expansion.
+Checkpoint saved at the owner's request; resumed on 2026-10-26. Branch: maps/v1.0-country-expansion.
 Worktree: C:/Users/diego/projects/Geoclick2027-work/maps-v1.0-country-expansion.
 This is unfinished work, with no code PR or external review yet.
 
@@ -184,15 +184,14 @@ registered maps adding 170 targets: 185 maps, 63 country groups plus six
 continents. The index has 64 country labels because Natural Earth uses both
 Czech Republic and Czechia.
 
-Hungary, Slovakia, Lithuania, Iceland and Costa Rica have at least three authored
-sentences per new target in English, Italian and German. Estonia still needs
-34 sets: all 15 counties and 19 towns; Tallinn already has a complete set.
-Generated hooks were refreshed from completed authored inputs, including shared
+All six countries now have at least three authored sentences per new target
+in English, Italian and German (Estonia completed on 2026-10-26; Tallinn’s
+existing set preserved). Generated hooks were refreshed, including shared
 continent targets. The other 16 approved countries are not implemented.
 
-Next: finish Estonia's authored facts; refresh hooks; verify complete target
-coverage and facts in all three languages; inspect maps and desktop resolution;
-then continue the remaining countries. Finish documentation, local gates and
+Next: complete the first-batch code review and owner testing, then continue
+the remaining countries. Target coverage and desktop/browser viewport checks
+are recorded below. Finish documentation, local gates and
 external-family code review before handing a PR to the owner.
 
 Windows is canonical. A preserved Linux build mirror with its own dependencies,
@@ -211,3 +210,37 @@ because 5173 belongs to another game.
 
 Checkpoint local verification: check, tests, lint and build all passed through
 npm run gates -- --quiet. Visual/browser and installer checks remain pending.
+
+## First-batch verification (2026-10-26)
+
+Estonia now has all 34 previously missing sets (15 counties and 19 towns),
+with three authored sentences in English, Italian and German per set; Tallinn
+was preserved. Source references are recorded per target/kind in
+data/facts/estonia.json. Name hooks distinguish historical German exonyms
+from official renaming, following the Estonian Language Institute.
+
+The authored resolver reports full three-language coverage for all 170 targets
+in the twelve first-batch maps. Generated hooks were refreshed for Estonia
+counties/towns and the shared eastern-Europe towns map.
+
+Local browser verification: all twelve Overview maps rendered at 1280x800
+without page/console errors or horizontal page overflow. Estonia Quiz also
+rendered at 1024x768 and an emulated 390x844 touch viewport. Screenshots and
+the browser report are in ignored rendered/v1-map-checks. These are browser
+checks, not physical-device or installer checks. About contains the canonical
+Geoclick2027 releases URL and no old releases-repository link. No itch.io page
+was opened. No deployment was tested; deploys remain stopped.
+
+The next sixteen countries, final viewport/package work, final itch.io assets,
+installer checks and 1.0.0 release steps remain pending. This first batch is
+prepared as an ordinary PR for review and owner testing before merge.
+
+Italian and German Tartu facts were also opened by clicking its map point in
+the running browser; both displayed their authored translations. Windows
+blocked Vitest’s default browser API port 63315 on IPv4 and IPv6. The client
+project now binds loopback port 5191 with Vite’s normal busy-port fallback;
+the full test gate then passed, including the client project. No test was
+skipped to bypass this startup failure.
+
+First-batch local gates: check, test, lint and build all passed on 2026-10-26.
+The app test report includes 2,450 passing tests across all 63 files.
