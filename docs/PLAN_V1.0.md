@@ -490,3 +490,11 @@ strict authored coverage remains 735/735. Four regional name-history sentences
 were also clarified to explicitly identify the namesake city.
 Focused data, boundary and translation checks: 1384 tests pass. Final local
 gates and a fresh follow-up review of these fixes precede owner testing.
+
+Local verification on the review-fix commit: all four gates pass, with 2831 app
+tests and zero failures. Actual served assets cover all 735 targets, and all
+44 choices remain selectable. The 1024 × 640 Taiwan-tour screenshot exposed
+long source credits crossing the fact card; map attribution now starts in its
+expandable information control, matching the world picker's existing behavior.
+The source credit remains available on demand. A fresh follow-up review checks
+all fixes and this layout adjustment before owner testing.
