@@ -1,0 +1,1977 @@
+{
+	"id": "singapore-planning-areas",
+	"name": "Singapore — Planning Areas",
+	"country": "Singapore",
+	"attribution": "Urban Redevelopment Authority, Master Plan 2019 Planning Area Boundary (No Sea), data.gov.sg; 2019; Singapore Open Data Licence 1.0; https://data.gov.sg/open-data-licence; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"largestCityFacts": false,
+	"boundarySource": "data/boundaries/singapore-planning-areas-2019.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "sembawang",
+			"name": "Sembawang",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.8198,
+				1.45305
+			],
+			"bbox": [
+				103.7918,
+				1.4354,
+				103.8478,
+				1.4707
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.802,
+						1.4619
+					],
+					[
+						103.8177,
+						1.45
+					],
+					[
+						103.8365,
+						1.4547
+					]
+				],
+				"aspect": 1.46
+			}
+		},
+		{
+			"id": "simpang",
+			"name": "Simpang",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.85275,
+				1.4425
+			],
+			"bbox": [
+				103.8331,
+				1.4245,
+				103.8724,
+				1.4605
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.8405,
+						1.4503
+					],
+					[
+						103.8526,
+						1.4429
+					],
+					[
+						103.8647,
+						1.4385
+					]
+				],
+				"aspect": 0.99
+			}
+		},
+		{
+			"id": "woodlands",
+			"name": "Woodlands",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.78805,
+				1.4417499999999999
+			],
+			"bbox": [
+				103.7644,
+				1.4215,
+				103.8117,
+				1.462
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.7718,
+						1.4363
+					],
+					[
+						103.7878,
+						1.4419
+					],
+					[
+						103.8037,
+						1.4421
+					]
+				],
+				"aspect": 1.11
+			}
+		},
+		{
+			"id": "lim-chu-kang",
+			"name": "Lim Chu Kang",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.7182,
+				1.4311500000000001
+			],
+			"bbox": [
+				103.693,
+				1.4111,
+				103.7434,
+				1.4512
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.7023,
+						1.4268
+					],
+					[
+						103.7192,
+						1.4317
+					],
+					[
+						103.7361,
+						1.431
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "mandai",
+			"name": "Mandai",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.7991,
+				1.42715
+			],
+			"bbox": [
+				103.7713,
+				1.41,
+				103.8269,
+				1.4443
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.7755,
+						1.4167
+					],
+					[
+						103.7997,
+						1.4198
+					],
+					[
+						103.8213,
+						1.4311
+					]
+				],
+				"aspect": 3.69
+			}
+		},
+		{
+			"id": "yishun",
+			"name": "Yishun",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.8366,
+				1.4193500000000001
+			],
+			"bbox": [
+				103.8058,
+				1.3931,
+				103.8674,
+				1.4456
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.8166,
+						1.408
+					],
+					[
+						103.8373,
+						1.4222
+					],
+					[
+						103.8579,
+						1.4166
+					]
+				],
+				"aspect": 1.18
+			}
+		},
+		{
+			"id": "sungei-kadut",
+			"name": "Sungei Kadut",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.75575,
+				1.4176
+			],
+			"bbox": [
+				103.737,
+				1.3889,
+				103.7745,
+				1.4463
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.7526,
+						1.439
+					],
+					[
+						103.7552,
+						1.4154
+					],
+					[
+						103.7645,
+						1.3936
+					]
+				],
+				"aspect": 1.83
+			}
+		},
+		{
+			"id": "seletar",
+			"name": "Seletar",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.87625,
+				1.41625
+			],
+			"bbox": [
+				103.8551,
+				1.4009,
+				103.8974,
+				1.4316
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						103.863,
+						1.4102
+					],
+					[
+						103.8771,
+						1.4179
+					],
+					[
+						103.8912,
+						1.4136
+					]
+				],
+				"aspect": 1.12
+			}
+		},
+		{
+			"id": "punggol",
+			"name": "Punggol",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.90885,
+				1.4035
+			],
+			"bbox": [
+				103.8868,
+				1.3859,
+				103.9309,
+				1.4211
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.8949,
+						1.4064
+					],
+					[
+						103.9092,
+						1.4053
+					],
+					[
+						103.9236,
+						1.4011
+					]
+				],
+				"aspect": 1.39
+			}
+		},
+		{
+			"id": "north-eastern-islands",
+			"name": "North-Eastern Islands",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.0077,
+				1.38905
+			],
+			"bbox": [
+				103.927,
+				1.3377,
+				104.0884,
+				1.4404
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						104.0276,
+						1.4279
+					],
+					[
+						104.0604,
+						1.4085
+					],
+					[
+						104.0678,
+						1.3722
+					]
+				],
+				"aspect": 1.53
+			}
+		},
+		{
+			"id": "sengkang",
+			"name": "Sengkang",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.88495,
+				1.38865
+			],
+			"bbox": [
+				103.8524,
+				1.3759,
+				103.9175,
+				1.4014
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.8621,
+						1.3953
+					],
+					[
+						103.8885,
+						1.3969
+					],
+					[
+						103.9111,
+						1.383
+					]
+				],
+				"aspect": 4.13
+			}
+		},
+		{
+			"id": "choa-chu-kang",
+			"name": "Choa Chu Kang",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.74695,
+				1.3873
+			],
+			"bbox": [
+				103.7327,
+				1.3691,
+				103.7612,
+				1.4055
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.7476,
+						1.3717
+					],
+					[
+						103.7464,
+						1.3869
+					],
+					[
+						103.7488,
+						1.4021
+					]
+				],
+				"aspect": 2.81
+			}
+		},
+		{
+			"id": "western-water-catchment",
+			"name": "Western Water Catchment",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.69239999999999,
+				1.3808500000000001
+			],
+			"bbox": [
+				103.6388,
+				1.328,
+				103.746,
+				1.4337
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.6602,
+						1.347
+					],
+					[
+						103.6773,
+						1.3912
+					],
+					[
+						103.7225,
+						1.4056
+					]
+				],
+				"aspect": 1.75
+			}
+		},
+		{
+			"id": "pasir-ris",
+			"name": "Pasir Ris",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.94715,
+				1.3768500000000001
+			],
+			"bbox": [
+				103.9143,
+				1.3527,
+				103.98,
+				1.401
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.9243,
+						1.3917
+					],
+					[
+						103.9478,
+						1.3799
+					],
+					[
+						103.9709,
+						1.3674
+					]
+				],
+				"aspect": 2.8
+			}
+		},
+		{
+			"id": "ang-mo-kio",
+			"name": "Ang Mo Kio",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.83935,
+				1.3765999999999998
+			],
+			"bbox": [
+				103.8178,
+				1.3555,
+				103.8609,
+				1.3977
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.8213,
+						1.3868
+					],
+					[
+						103.8393,
+						1.3795
+					],
+					[
+						103.8574,
+						1.3753
+					]
+				],
+				"aspect": 1.21
+			}
+		},
+		{
+			"id": "central-water-catchment",
+			"name": "Central Water Catchment",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.80425,
+				1.37595
+			],
+			"bbox": [
+				103.7717,
+				1.3358,
+				103.8368,
+				1.4161
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						103.7906,
+						1.4053
+					],
+					[
+						103.8005,
+						1.3724
+					],
+					[
+						103.8197,
+						1.3441
+					]
+				],
+				"aspect": 1.72
+			}
+		},
+		{
+			"id": "bukit-panjang",
+			"name": "Bukit Panjang",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.77340000000001,
+				1.3663500000000002
+			],
+			"bbox": [
+				103.7551,
+				1.3419,
+				103.7917,
+				1.3908
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.7651,
+						1.3861
+					],
+					[
+						103.7717,
+						1.3669
+					],
+					[
+						103.7797,
+						1.3481
+					]
+				],
+				"aspect": 2.47
+			}
+		},
+		{
+			"id": "serangoon",
+			"name": "Serangoon",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.871,
+				1.366
+			],
+			"bbox": [
+				103.8569,
+				1.3409,
+				103.8851,
+				1.3911
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						103.8682,
+						1.3836
+					],
+					[
+						103.8631,
+						1.3632
+					],
+					[
+						103.8711,
+						1.3442
+					]
+				],
+				"aspect": 2.67
+			}
+		},
+		{
+			"id": "tengah",
+			"name": "Tengah",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.72735,
+				1.36245
+			],
+			"bbox": [
+				103.7062,
+				1.346,
+				103.7485,
+				1.3789
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.7139,
+						1.3654
+					],
+					[
+						103.7281,
+						1.3615
+					],
+					[
+						103.7423,
+						1.3654
+					]
+				],
+				"aspect": 1.59
+			}
+		},
+		{
+			"id": "hougang",
+			"name": "Hougang",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.89155,
+				1.3611
+			],
+			"bbox": [
+				103.8731,
+				1.3336,
+				103.91,
+				1.3886
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.8768,
+						1.3654
+					],
+					[
+						103.8904,
+						1.3577
+					],
+					[
+						103.904,
+						1.363
+					]
+				],
+				"aspect": 0.69
+			}
+		},
+		{
+			"id": "paya-lebar",
+			"name": "Paya Lebar",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.9127,
+				1.3608
+			],
+			"bbox": [
+				103.8935,
+				1.3392,
+				103.9319,
+				1.3824
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						103.9045,
+						1.3458
+					],
+					[
+						103.9189,
+						1.3572
+					],
+					[
+						103.9232,
+						1.3753
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "bukit-batok",
+			"name": "Bukit Batok",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.7535,
+				1.35625
+			],
+			"bbox": [
+				103.7366,
+				1.3328,
+				103.7704,
+				1.3797
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.7417,
+						1.353
+					],
+					[
+						103.7534,
+						1.3585
+					],
+					[
+						103.765,
+						1.3528
+					]
+				],
+				"aspect": 0.73
+			}
+		},
+		{
+			"id": "bishan",
+			"name": "Bishan",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.8397,
+				1.3547500000000001
+			],
+			"bbox": [
+				103.819,
+				1.342,
+				103.8604,
+				1.3675
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.8233,
+						1.3605
+					],
+					[
+						103.8393,
+						1.3565
+					],
+					[
+						103.8542,
+						1.3496
+					]
+				],
+				"aspect": 2.19
+			}
+		},
+		{
+			"id": "changi",
+			"name": "Changi",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.99885,
+				1.3515000000000001
+			],
+			"bbox": [
+				103.9643,
+				1.3095,
+				104.0334,
+				1.3935
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.9786,
+						1.3608
+					],
+					[
+						103.9993,
+						1.3422
+					],
+					[
+						104.02,
+						1.3421
+					]
+				],
+				"aspect": 0.7
+			}
+		},
+		{
+			"id": "tampines",
+			"name": "Tampines",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.95490000000001,
+				1.3451
+			],
+			"bbox": [
+				103.925,
+				1.3144,
+				103.9848,
+				1.3758
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.9341,
+						1.3622
+					],
+					[
+						103.9549,
+						1.344
+					],
+					[
+						103.9741,
+						1.3242
+					]
+				],
+				"aspect": 2.23
+			}
+		},
+		{
+			"id": "jurong-west",
+			"name": "Jurong West",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.70155,
+				1.34395
+			],
+			"bbox": [
+				103.6749,
+				1.3236,
+				103.7282,
+				1.3643
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.687,
+						1.3377
+					],
+					[
+						103.7047,
+						1.349
+					],
+					[
+						103.7224,
+						1.3433
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "changi-bay",
+			"name": "Changi Bay",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.0239,
+				1.3367
+			],
+			"bbox": [
+				104.0151,
+				1.3157,
+				104.0327,
+				1.3577
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						104.0185,
+						1.3202
+					],
+					[
+						104.0241,
+						1.3242
+					],
+					[
+						104.0308,
+						1.3224
+					]
+				],
+				"aspect": 2.16
+			}
+		},
+		{
+			"id": "toa-payoh",
+			"name": "Toa Payoh",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.86245,
+				1.3364500000000001
+			],
+			"bbox": [
+				103.836,
+				1.3278,
+				103.8889,
+				1.3451
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.8423,
+						1.3376
+					],
+					[
+						103.8608,
+						1.3346
+					],
+					[
+						103.8795,
+						1.3359
+					]
+				],
+				"aspect": 2.24
+			}
+		},
+		{
+			"id": "bukit-timah",
+			"name": "Bukit Timah",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.79135,
+				1.32825
+			],
+			"bbox": [
+				103.7641,
+				1.3072,
+				103.8186,
+				1.3493
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.771,
+						1.3364
+					],
+					[
+						103.7895,
+						1.3246
+					],
+					[
+						103.8081,
+						1.3294
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "novena",
+			"name": "Novena",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.83789999999999,
+				1.32615
+			],
+			"bbox": [
+				103.8134,
+				1.3106,
+				103.8624,
+				1.3417
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.8197,
+						1.3315
+					],
+					[
+						103.836,
+						1.3277
+					],
+					[
+						103.851,
+						1.3199
+					]
+				],
+				"aspect": 1.88
+			}
+		},
+		{
+			"id": "bedok",
+			"name": "Bedok",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.9299,
+				1.3253
+			],
+			"bbox": [
+				103.8962,
+				1.302,
+				103.9636,
+				1.3486
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.9099,
+						1.3269
+					],
+					[
+						103.9307,
+						1.3238
+					],
+					[
+						103.9514,
+						1.322
+					]
+				],
+				"aspect": 1.17
+			}
+		},
+		{
+			"id": "jurong-east",
+			"name": "Jurong East",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.73355000000001,
+				1.32505
+			],
+			"bbox": [
+				103.7098,
+				1.2965,
+				103.7573,
+				1.3536
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						103.7222,
+						1.3194
+					],
+					[
+						103.7349,
+						1.3279
+					],
+					[
+						103.7476,
+						1.3242
+					]
+				],
+				"aspect": 0.55
+			}
+		},
+		{
+			"id": "geylang",
+			"name": "Geylang",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.8877,
+				1.32115
+			],
+			"bbox": [
+				103.8687,
+				1.3045,
+				103.9067,
+				1.3378
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.8782,
+						1.3174
+					],
+					[
+						103.8909,
+						1.3221
+					],
+					[
+						103.9035,
+						1.3227
+					]
+				],
+				"aspect": 0.95
+			}
+		},
+		{
+			"id": "clementi",
+			"name": "Clementi",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.7616,
+				1.31725
+			],
+			"bbox": [
+				103.7476,
+				1.2932,
+				103.7756,
+				1.3413
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.758,
+						1.3339
+					],
+					[
+						103.7648,
+						1.3201
+					],
+					[
+						103.7604,
+						1.3048
+					]
+				],
+				"aspect": 1.42
+			}
+		},
+		{
+			"id": "boon-lay",
+			"name": "Boon Lay",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.7011,
+				1.3154
+			],
+			"bbox": [
+				103.6811,
+				1.2991,
+				103.7211,
+				1.3317
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.6865,
+						1.3035
+					],
+					[
+						103.704,
+						1.3114
+					],
+					[
+						103.7158,
+						1.3265
+					]
+				],
+				"aspect": 2.23
+			}
+		},
+		{
+			"id": "kallang",
+			"name": "Kallang",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.8649,
+				1.3123
+			],
+			"bbox": [
+				103.8443,
+				1.2942,
+				103.8855,
+				1.3304
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						103.8543,
+						1.3193
+					],
+					[
+						103.8705,
+						1.3142
+					],
+					[
+						103.8774,
+						1.2983
+					]
+				],
+				"aspect": 1.5
+			}
+		},
+		{
+			"id": "pioneer",
+			"name": "Pioneer",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.67314999999999,
+				1.3098999999999998
+			],
+			"bbox": [
+				103.6498,
+				1.2887,
+				103.6965,
+				1.3311
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						103.6608,
+						1.2985
+					],
+					[
+						103.6688,
+						1.3185
+					],
+					[
+						103.6894,
+						1.3249
+					]
+				],
+				"aspect": 1.7
+			}
+		},
+		{
+			"id": "newton",
+			"name": "Newton",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.8374,
+				1.3087
+			],
+			"bbox": [
+				103.8278,
+				1.3,
+				103.847,
+				1.3174
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.8315,
+						1.3129
+					],
+					[
+						103.8386,
+						1.309
+					],
+					[
+						103.8457,
+						1.3051
+					]
+				],
+				"aspect": 1.8
+			}
+		},
+		{
+			"id": "tanglin",
+			"name": "Tanglin",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.81880000000001,
+				1.3075999999999999
+			],
+			"bbox": [
+				103.8023,
+				1.2919,
+				103.8353,
+				1.3233
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.8062,
+						1.309
+					],
+					[
+						103.8161,
+						1.3057
+					],
+					[
+						103.8259,
+						1.3113
+					]
+				],
+				"aspect": 0.74
+			}
+		},
+		{
+			"id": "rochor",
+			"name": "Rochor",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.85385,
+				1.3035
+			],
+			"bbox": [
+				103.8454,
+				1.2964,
+				103.8623,
+				1.3106
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.8481,
+						1.3034
+					],
+					[
+						103.8535,
+						1.3036
+					],
+					[
+						103.8588,
+						1.3018
+					]
+				],
+				"aspect": 1.12
+			}
+		},
+		{
+			"id": "orchard",
+			"name": "Orchard",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.83315,
+				1.3033000000000001
+			],
+			"bbox": [
+				103.8233,
+				1.2991,
+				103.843,
+				1.3075
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.8247,
+						1.3038
+					],
+					[
+						103.8318,
+						1.3042
+					],
+					[
+						103.8378,
+						1.3005
+					]
+				],
+				"aspect": 3.2
+			}
+		},
+		{
+			"id": "marine-parade",
+			"name": "Marine Parade",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.89750000000001,
+				1.2990499999999998
+			],
+			"bbox": [
+				103.8755,
+				1.2848,
+				103.9195,
+				1.3133
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.8806,
+						1.2906
+					],
+					[
+						103.8919,
+						1.3036
+					],
+					[
+						103.9078,
+						1.3052
+					]
+				],
+				"aspect": 2.19
+			}
+		},
+		{
+			"id": "river-valley",
+			"name": "River Valley",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.83335,
+				1.29785
+			],
+			"bbox": [
+				103.8234,
+				1.291,
+				103.8433,
+				1.3047
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						103.827,
+						1.3022
+					],
+					[
+						103.8338,
+						1.2983
+					],
+					[
+						103.8403,
+						1.2938
+					]
+				],
+				"aspect": 2.53
+			}
+		},
+		{
+			"id": "museum",
+			"name": "Museum",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.84684999999999,
+				1.29575
+			],
+			"bbox": [
+				103.8414,
+				1.2901,
+				103.8523,
+				1.3014
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.8445,
+						1.2985
+					],
+					[
+						103.8481,
+						1.2951
+					],
+					[
+						103.8517,
+						1.2952
+					]
+				],
+				"aspect": 1.09
+			}
+		},
+		{
+			"id": "singapore-river",
+			"name": "Singapore River",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.84055000000001,
+				1.2908
+			],
+			"bbox": [
+				103.8303,
+				1.2854,
+				103.8508,
+				1.2962
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.8335,
+						1.2923
+					],
+					[
+						103.8401,
+						1.2891
+					],
+					[
+						103.8475,
+						1.2879
+					]
+				],
+				"aspect": 3.39
+			}
+		},
+		{
+			"id": "marina-east",
+			"name": "Marina East",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.8729,
+				1.28815
+			],
+			"bbox": [
+				103.8647,
+				1.2808,
+				103.8811,
+				1.2955
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.8659,
+						1.2902
+					],
+					[
+						103.8717,
+						1.2883
+					],
+					[
+						103.8776,
+						1.2864
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "queenstown",
+			"name": "Queenstown",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.7834,
+				1.2868499999999998
+			],
+			"bbox": [
+				103.7502,
+				1.255,
+				103.8166,
+				1.3187
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.77,
+						1.2957
+					],
+					[
+						103.7869,
+						1.2919
+					],
+					[
+						103.8038,
+						1.2884
+					]
+				],
+				"aspect": 0.92
+			}
+		},
+		{
+			"id": "downtown-core",
+			"name": "Downtown Core",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.85525,
+				1.28655
+			],
+			"bbox": [
+				103.8414,
+				1.2687,
+				103.8691,
+				1.3044
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.8503,
+						1.2734
+					],
+					[
+						103.8541,
+						1.2879
+					],
+					[
+						103.8631,
+						1.2997
+					]
+				],
+				"aspect": 2.35
+			}
+		},
+		{
+			"id": "tuas",
+			"name": "Tuas",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.63669999999999,
+				1.2816999999999998
+			],
+			"bbox": [
+				103.6057,
+				1.2103,
+				103.6677,
+				1.3531
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "outram",
+			"name": "Outram",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.84235,
+				1.2816999999999998
+			],
+			"bbox": [
+				103.835,
+				1.2742,
+				103.8497,
+				1.2892
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.8381,
+						1.2862
+					],
+					[
+						103.843,
+						1.2827
+					],
+					[
+						103.8467,
+						1.278
+					]
+				],
+				"aspect": 1.45
+			}
+		},
+		{
+			"id": "marina-south",
+			"name": "Marina South",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.86545000000001,
+				1.28085
+			],
+			"bbox": [
+				103.8584,
+				1.2728,
+				103.8725,
+				1.2889
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.861,
+						1.281
+					],
+					[
+						103.8655,
+						1.2792
+					],
+					[
+						103.87,
+						1.2779
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "bukit-merah",
+			"name": "Bukit Merah",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.8254,
+				1.2744499999999999
+			],
+			"bbox": [
+				103.7992,
+				1.2548,
+				103.8516,
+				1.2941
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.8053,
+						1.2748
+					],
+					[
+						103.8217,
+						1.2828
+					],
+					[
+						103.8381,
+						1.2759
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "straits-view",
+			"name": "Straits View",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.85900000000001,
+				1.2718
+			],
+			"bbox": [
+				103.8516,
+				1.2656,
+				103.8664,
+				1.278
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.8542,
+						1.2698
+					],
+					[
+						103.8593,
+						1.2722
+					],
+					[
+						103.8645,
+						1.2715
+					]
+				],
+				"aspect": 1.43
+			}
+		},
+		{
+			"id": "southern-islands",
+			"name": "Southern Islands",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.83295000000001,
+				1.23745
+			],
+			"bbox": [
+				103.8067,
+				1.2149,
+				103.8592,
+				1.26
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.8167,
+						1.2564
+					],
+					[
+						103.8271,
+						1.2469
+					],
+					[
+						103.8412,
+						1.247
+					]
+				],
+				"aspect": 2.21
+			}
+		},
+		{
+			"id": "western-islands",
+			"name": "Western Islands",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.72605,
+				1.23195
+			],
+			"bbox": [
+				103.6537,
+				1.1665,
+				103.7984,
+				1.2974
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.6669,
+						1.2531
+					],
+					[
+						103.6947,
+						1.2736
+					],
+					[
+						103.729,
+						1.2793
+					]
+				],
+				"aspect": 2.35
+			}
+		}
+	],
+	"tourOrder": [
+		"sembawang",
+		"simpang",
+		"woodlands",
+		"lim-chu-kang",
+		"mandai",
+		"yishun",
+		"sungei-kadut",
+		"seletar",
+		"punggol",
+		"north-eastern-islands",
+		"sengkang",
+		"choa-chu-kang",
+		"western-water-catchment",
+		"pasir-ris",
+		"ang-mo-kio",
+		"central-water-catchment",
+		"bukit-panjang",
+		"serangoon",
+		"tengah",
+		"hougang",
+		"paya-lebar",
+		"bukit-batok",
+		"bishan",
+		"changi",
+		"tampines",
+		"jurong-west",
+		"changi-bay",
+		"toa-payoh",
+		"bukit-timah",
+		"novena",
+		"bedok",
+		"jurong-east",
+		"geylang",
+		"clementi",
+		"boon-lay",
+		"kallang",
+		"pioneer",
+		"newton",
+		"tanglin",
+		"rochor",
+		"orchard",
+		"marine-parade",
+		"river-valley",
+		"museum",
+		"singapore-river",
+		"marina-east",
+		"queenstown",
+		"downtown-core",
+		"tuas",
+		"outram",
+		"marina-south",
+		"bukit-merah",
+		"straits-view",
+		"southern-islands",
+		"western-islands"
+	]
+}

@@ -1,0 +1,1947 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "geoBoundaries gbOpen 9469f09; Wikimedia district geometry",
+		"year": "2006",
+		"url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/ISR/ADM1/geoBoundaries-ISR-ADM1.geojson",
+		"sha256": "1ddf8523ef2074d658fd4a696fbb7ff82b73b77a0d69e620ed564f9a1b8c85d3",
+		"hashMode": "raw",
+		"rawSha256": "1ddf8523ef2074d658fd4a696fbb7ff82b73b77a0d69e620ed564f9a1b8c85d3",
+		"licence": "Public Domain",
+		"licenceUrl": "https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM1/",
+		"simplification": "25%, keep-shapes; EPSG:4326 precision 0.000001",
+		"contextOnly": []
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T12:37:41.867Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"ISR\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"excluded": [
+		{
+			"item": "http://www.wikidata.org/entity/Q2369607",
+			"name": "Giv'at Ze'ev",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		}
+	],
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.083888888,
+					32.926111111
+				]
+			},
+			"properties": {
+				"NAME": "Acre",
+				"NAME_EN": "Acre",
+				"NAME_IT": "Acri",
+				"NAME_DE": "Akkon",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 48900,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q126084"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.289722222,
+					32.607777777
+				]
+			},
+			"properties": {
+				"NAME": "Afula",
+				"NAME_EN": "Afula",
+				"NAME_IT": "Afula",
+				"NAME_DE": "Afula",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 60000,
+				"POP1950": 0,
+				"populationDate": "2020-08-14T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152462"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.171797222,
+					32.7295
+				]
+			},
+			"properties": {
+				"NAME": "Alonei Abba",
+				"NAME_EN": "Alonei Abba",
+				"NAME_IT": "Alonei Abba",
+				"NAME_DE": "Alonei Abba",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1000,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2839248"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.214722222,
+					31.260277777
+				]
+			},
+			"properties": {
+				"NAME": "Arad",
+				"NAME_EN": "Arad",
+				"NAME_IT": "Arad",
+				"NAME_DE": "Arad",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24436,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152473"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.338611111,
+					32.851111111
+				]
+			},
+			"properties": {
+				"NAME": "Arraba",
+				"NAME_EN": "Arraba",
+				"NAME_IT": "Arraba",
+				"NAME_DE": "Arraba",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26641,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2568887"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.650277777,
+					31.797777777
+				]
+			},
+			"properties": {
+				"NAME": "Ashdod",
+				"NAME_EN": "Ashdod",
+				"NAME_IT": "Ashdod",
+				"NAME_DE": "Aschdod",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 225939,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q171639"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.566388888,
+					31.665833333
+				]
+			},
+			"properties": {
+				"NAME": "Ashkelon",
+				"NAME_EN": "Ashkelon",
+				"NAME_IT": "Ashqelon",
+				"NAME_DE": "Aschkelon",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 141000,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q60956"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.048297222,
+					32.41645
+				]
+			},
+			"properties": {
+				"NAME": "Baqa-Jatt",
+				"NAME_EN": "Baqa-Jatt",
+				"NAME_IT": "Baqa-Jatt",
+				"NAME_DE": "Baka-Dschat",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28125,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152593"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.750277777,
+					32.023055555
+				]
+			},
+			"properties": {
+				"NAME": "Bat Yam",
+				"NAME_EN": "Bat Yam",
+				"NAME_IT": "Bat Yam",
+				"NAME_DE": "Bat Jam",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 128800,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q208725"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.786666666,
+					31.252222222
+				]
+			},
+			"properties": {
+				"NAME": "Beersheba",
+				"NAME_EN": "Beersheba",
+				"NAME_IT": "Be'er Sheva",
+				"NAME_DE": "Be’er Scheva",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 209687,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q41843"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.498888888,
+					32.496111111
+				]
+			},
+			"properties": {
+				"NAME": "Beit She'an",
+				"NAME_EN": "Beit She'an",
+				"NAME_IT": "Beit She'an",
+				"NAME_DE": "Bet Sche’an",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 18200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152368"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.988611111,
+					31.751388888
+				]
+			},
+			"properties": {
+				"NAME": "Beit Shemesh",
+				"NAME_EN": "Beit Shemesh",
+				"NAME_IT": "Bet Shemesh",
+				"NAME_DE": "Bet Schemesch",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Jerusalem",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 118700,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152449"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.8338,
+					32.08074
+				]
+			},
+			"properties": {
+				"NAME": "Bnei Brak",
+				"NAME_EN": "Bnei Brak",
+				"NAME_IT": "Bnei Brak",
+				"NAME_DE": "Bnei Berak",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 193774,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152467"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.9,
+					32.5
+				]
+			},
+			"properties": {
+				"NAME": "Caesarea",
+				"NAME_EN": "Caesarea",
+				"NAME_IT": "Cesarea",
+				"NAME_DE": "Caesarea",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 5343,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1615560"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.03,
+					31.07
+				]
+			},
+			"properties": {
+				"NAME": "Dimona",
+				"NAME_EN": "Dimona",
+				"NAME_IT": "Dimona",
+				"NAME_DE": "Dimona",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 34135,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152396"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.95,
+					29.55
+				]
+			},
+			"properties": {
+				"NAME": "Eilat",
+				"NAME_EN": "Eilat",
+				"NAME_IT": "Eilat",
+				"NAME_DE": "Eilat",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 51935,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q134762"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.778333333,
+					31.813888888
+				]
+			},
+			"properties": {
+				"NAME": "Gedera",
+				"NAME_EN": "Gedera",
+				"NAME_IT": "Gedera",
+				"NAME_DE": "Gedera",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26217,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q921505"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.811666666,
+					32.069722222
+				]
+			},
+			"properties": {
+				"NAME": "Givatayim",
+				"NAME_EN": "Givatayim",
+				"NAME_IT": "Giv'atayim",
+				"NAME_DE": "Giv’atajim",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 60200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152413"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.916666666,
+					32.45
+				]
+			},
+			"properties": {
+				"NAME": "Hadera",
+				"NAME_EN": "Hadera",
+				"NAME_IT": "Hadera",
+				"NAME_DE": "Hadera",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 100630,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q471886"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.999166666,
+					32.819166666
+				]
+			},
+			"properties": {
+				"NAME": "Haifa",
+				"NAME_EN": "Haifa",
+				"NAME_IT": "Haifa",
+				"NAME_DE": "Haifa",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 284560,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q41621"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.0419,
+					32.4586
+				]
+			},
+			"properties": {
+				"NAME": "Harish",
+				"NAME_EN": "Harish",
+				"NAME_IT": "Harish",
+				"NAME_DE": "Harish",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.01,
+				"ADM0CAP": 0,
+				"POP_MAX": 13232,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2891177"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.842222222,
+					32.155555555
+				]
+			},
+			"properties": {
+				"NAME": "Herzliya",
+				"NAME_EN": "Herzliya",
+				"NAME_IT": "Herzliya",
+				"NAME_DE": "Herzlia",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 95100,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152491"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.883333333,
+					32.15
+				]
+			},
+			"properties": {
+				"NAME": "Hod HaSharon",
+				"NAME_EN": "Hod HaSharon",
+				"NAME_IT": "Hod HaSharon",
+				"NAME_DE": "Hod haScharon",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 56659,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152379"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.766666666,
+					32.016666666
+				]
+			},
+			"properties": {
+				"NAME": "Holon",
+				"NAME_EN": "Holon",
+				"NAME_IT": "Holon",
+				"NAME_DE": "Cholon",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 197935,
+				"POP1950": 0,
+				"populationDate": "2022-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q192213"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.225555555,
+					31.778888888
+				]
+			},
+			"properties": {
+				"NAME": "Jerusalem",
+				"NAME_EN": "Jerusalem",
+				"NAME_IT": "Gerusalemme",
+				"NAME_DE": "Jerusalem",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Jerusalem",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 1050151,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1218"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.912227777,
+					32.537919444
+				]
+			},
+			"properties": {
+				"NAME": "Jisr az-Zarqa",
+				"NAME_EN": "Jisr az-Zarqa",
+				"NAME_IT": "Jisr az-Zarqa",
+				"NAME_DE": "Dschisr az-Zarqa",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14930,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q764601"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.266666666,
+					32.816666666
+				]
+			},
+			"properties": {
+				"NAME": "Kafr Manda",
+				"NAME_EN": "Kafr Manda",
+				"NAME_IT": "Kafr Manda",
+				"NAME_DE": "Kafr Manda",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 20188,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2915534"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.053822222,
+					32.505802777
+				]
+			},
+			"properties": {
+				"NAME": "Kafr Qara",
+				"NAME_EN": "Kafr Qara",
+				"NAME_IT": "Kafr Qara",
+				"NAME_DE": "Kafr-Qara",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19018,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1721086"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.977222222,
+					32.114166666
+				]
+			},
+			"properties": {
+				"NAME": "Kafr Qasim",
+				"NAME_EN": "Kafr Qasim",
+				"NAME_IT": "Kafr Qasim",
+				"NAME_DE": "Kafr Qasim",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22743,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152659"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.283333333,
+					32.9
+				]
+			},
+			"properties": {
+				"NAME": "Karmiel",
+				"NAME_EN": "Karmiel",
+				"NAME_IT": "Karmiel",
+				"NAME_DE": "Karmi’el",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 45300,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152418"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.907683333,
+					32.185783333
+				]
+			},
+			"properties": {
+				"NAME": "Kfar Saba",
+				"NAME_EN": "Kfar Saba",
+				"NAME_IT": "Kfar Saba",
+				"NAME_DE": "Kfar Saba",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 101432,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152436"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.1,
+					32.8
+				]
+			},
+			"properties": {
+				"NAME": "Kiryat Ata",
+				"NAME_EN": "Kiryat Ata",
+				"NAME_IT": "Kiryat Ata",
+				"NAME_DE": "Kirjat Ata",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 62354,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152602"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.066388888,
+					32.833055555
+				]
+			},
+			"properties": {
+				"NAME": "Kiryat Bialik",
+				"NAME_EN": "Kiryat Bialik",
+				"NAME_IT": "Kiryat Bialik",
+				"NAME_DE": "Kirjat Bialik",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 39900,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152374"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.771666666,
+					31.606111111
+				]
+			},
+			"properties": {
+				"NAME": "Kiryat Gat",
+				"NAME_EN": "Kiryat Gat",
+				"NAME_IT": "Kiryat Gat",
+				"NAME_DE": "Kirjat Gat",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 55000,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152406"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.75,
+					31.733333333
+				]
+			},
+			"properties": {
+				"NAME": "Kiryat Malachi",
+				"NAME_EN": "Kiryat Malachi",
+				"NAME_IT": "Kiryat Malakhi",
+				"NAME_DE": "Kirjat Malʾachi",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 25362,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q501543"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.0775,
+					32.836944444
+				]
+			},
+			"properties": {
+				"NAME": "Kiryat Motzkin",
+				"NAME_EN": "Kiryat Motzkin",
+				"NAME_IT": "Kiryat Motzkin",
+				"NAME_DE": "Kirjat Motzkin",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 51349,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152567"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.855277777,
+					32.063611111
+				]
+			},
+			"properties": {
+				"NAME": "Kiryat Ono",
+				"NAME_EN": "Kiryat Ono",
+				"NAME_IT": "Kiryat Ono",
+				"NAME_DE": "Kirjat Ono",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 45500,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152501"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.569722222,
+					33.2075
+				]
+			},
+			"properties": {
+				"NAME": "Kiryat Shmona",
+				"NAME_EN": "Kiryat Shmona",
+				"NAME_IT": "Kiryat Shmona",
+				"NAME_DE": "Kirjat Schmona",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22600,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q327413"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.066388888,
+					32.833055555
+				]
+			},
+			"properties": {
+				"NAME": "Kiryat Yam",
+				"NAME_EN": "Kiryat Yam",
+				"NAME_IT": "Kiryat Yam",
+				"NAME_DE": "Kirjat Jam",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 42110,
+				"POP1950": 0,
+				"populationDate": "2025-06-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152387"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.891688,
+					31.965599
+				]
+			},
+			"properties": {
+				"NAME": "Lod",
+				"NAME_EN": "Lod",
+				"NAME_IT": "Lod",
+				"NAME_DE": "Lod",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 75700,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q207540"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.270833333,
+					33.016666666
+				]
+			},
+			"properties": {
+				"NAME": "Ma'alot-Tarshiha",
+				"NAME_EN": "Ma'alot-Tarshiha",
+				"NAME_IT": "Ma'alot-Tarshiha",
+				"NAME_DE": "Ma’alot",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 23550,
+				"POP1950": 0,
+				"populationDate": "2023-07-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q152385"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.576666666,
+					33.278888888
+				]
+			},
+			"properties": {
+				"NAME": "Metula",
+				"NAME_EN": "Metula",
+				"NAME_IT": "Metulla",
+				"NAME_DE": "Metulla",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1615,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1011497"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.244444444,
+					32.678611111
+				]
+			},
+			"properties": {
+				"NAME": "Migdal HaEmek",
+				"NAME_EN": "Migdal HaEmek",
+				"NAME_IT": "Migdal HaEmek",
+				"NAME_DE": "Migdal haEmek",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 25675,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q168337"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.007636111,
+					31.907652777
+				]
+			},
+			"properties": {
+				"NAME": "Modi'in-Maccabim-Re'ut",
+				"NAME_EN": "Modi'in-Maccabim-Re'ut",
+				"NAME_IT": "Modi'in-Maccabim-Re'ut",
+				"NAME_DE": "Modi’in",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 97097,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q165867"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.0925,
+					33.003611111
+				]
+			},
+			"properties": {
+				"NAME": "Nahariya",
+				"NAME_EN": "Nahariya",
+				"NAME_IT": "Nahariya",
+				"NAME_DE": "Naharija",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 60000,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167749"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.29785,
+					32.702102777
+				]
+			},
+			"properties": {
+				"NAME": "Nazareth",
+				"NAME_EN": "Nazareth",
+				"NAME_IT": "Nazareth",
+				"NAME_DE": "Nazareth",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 83400,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q430776"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.039444444,
+					32.771111111
+				]
+			},
+			"properties": {
+				"NAME": "Nesher",
+				"NAME_EN": "Nesher",
+				"NAME_IT": "Nesher",
+				"NAME_DE": "Nescher",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24000,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q135432"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.8,
+					31.933333333
+				]
+			},
+			"properties": {
+				"NAME": "Ness Ziona",
+				"NAME_EN": "Ness Ziona",
+				"NAME_IT": "Ness Ziona",
+				"NAME_DE": "Nes Ziona",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 50200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q168162"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.856666666,
+					32.328611111
+				]
+			},
+			"properties": {
+				"NAME": "Netanya",
+				"NAME_EN": "Netanya",
+				"NAME_IT": "Natanya",
+				"NAME_DE": "Netanja",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 217200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q192225"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.583333333,
+					31.416666666
+				]
+			},
+			"properties": {
+				"NAME": "Netivot",
+				"NAME_EN": "Netivot",
+				"NAME_IT": "Netivot",
+				"NAME_DE": "Netiwot",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 31314,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167649"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.333333333,
+					32.716666666
+				]
+			},
+			"properties": {
+				"NAME": "Nof HaGalil",
+				"NAME_EN": "Nof HaGalil",
+				"NAME_IT": "Nazaret Illit",
+				"NAME_DE": "Nof HaGalil",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 41200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167659"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.616666666,
+					31.283333333
+				]
+			},
+			"properties": {
+				"NAME": "Ofakim",
+				"NAME_EN": "Ofakim",
+				"NAME_IT": "Ofakim",
+				"NAME_DE": "Ofakim",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 29000,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167632"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.848888888,
+					31.268333333
+				]
+			},
+			"properties": {
+				"NAME": "Omer",
+				"NAME_EN": "Omer",
+				"NAME_IT": "Omer",
+				"NAME_DE": "Omer",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 8215,
+				"POP1950": 0,
+				"populationDate": "2025-06-30T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1968636"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.916666666,
+					32.5
+				]
+			},
+			"properties": {
+				"NAME": "Or Akiva",
+				"NAME_EN": "Or Akiva",
+				"NAME_IT": "Or Akiva",
+				"NAME_DE": "Or Akiwa",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 18200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1814658"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.85,
+					32.033333333
+				]
+			},
+			"properties": {
+				"NAME": "Or Yehuda",
+				"NAME_EN": "Or Yehuda",
+				"NAME_IT": "Or Yehuda",
+				"NAME_DE": "Or Jehuda",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 36900,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q950347"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.9675,
+					32.471111111
+				]
+			},
+			"properties": {
+				"NAME": "Pardes Hanna-Karkur",
+				"NAME_EN": "Pardes Hanna-Karkur",
+				"NAME_IT": "Pardes Hanna-Karkur",
+				"NAME_DE": "Pardes Hanna-Karkur",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 42100,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2475182"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.883333333,
+					32.083333333
+				]
+			},
+			"properties": {
+				"NAME": "Petah Tikva",
+				"NAME_EN": "Petah Tikva",
+				"NAME_IT": "Petah Tiqwa",
+				"NAME_DE": "Petach Tikwa",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 244300,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q190828"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.866666666,
+					32.183333333
+				]
+			},
+			"properties": {
+				"NAME": "Ra'anana",
+				"NAME_EN": "Ra'anana",
+				"NAME_IT": "Ra'anana",
+				"NAME_DE": "Ra’anana",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 74000,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q309164"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.754444444,
+					31.3925
+				]
+			},
+			"properties": {
+				"NAME": "Rahat",
+				"NAME_EN": "Rahat",
+				"NAME_IT": "Rahat",
+				"NAME_DE": "Rahat",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 64462,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167617"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.823541,
+					32.070007
+				]
+			},
+			"properties": {
+				"NAME": "Ramat Gan",
+				"NAME_EN": "Ramat Gan",
+				"NAME_IT": "Ramat Gan",
+				"NAME_DE": "Ramat Gan",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 159200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q192807"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.839444444,
+					32.146111111
+				]
+			},
+			"properties": {
+				"NAME": "Ramat HaSharon",
+				"NAME_EN": "Ramat HaSharon",
+				"NAME_IT": "Ramat HaSharon",
+				"NAME_DE": "Ramat haScharon",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 46700,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q845866"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.8625,
+					31.9275
+				]
+			},
+			"properties": {
+				"NAME": "Ramla",
+				"NAME_EN": "Ramla",
+				"NAME_IT": "Ramla",
+				"NAME_DE": "Ramla",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 75500,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q221447"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.807777777,
+					31.891388888
+				]
+			},
+			"properties": {
+				"NAME": "Rehovot",
+				"NAME_EN": "Rehovot",
+				"NAME_IT": "Rehovot",
+				"NAME_DE": "Rechovot",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 141600,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q207350"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.8,
+					31.95
+				]
+			},
+			"properties": {
+				"NAME": "Rishon LeZion",
+				"NAME_EN": "Rishon LeZion",
+				"NAME_IT": "Rishon LeZion",
+				"NAME_DE": "Rischon LeZion",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 258535,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q201051"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.95,
+					32.083333333
+				]
+			},
+			"properties": {
+				"NAME": "Rosh HaAyin",
+				"NAME_EN": "Rosh HaAyin",
+				"NAME_IT": "Rosh HaAyin",
+				"NAME_DE": "Rosch haAjin",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 56300,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q168202"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.498333333,
+					32.965833333
+				]
+			},
+			"properties": {
+				"NAME": "Safed",
+				"NAME_EN": "Safed",
+				"NAME_IT": "Safad",
+				"NAME_DE": "Safed",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 35700,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q188336"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.3,
+					32.866666666
+				]
+			},
+			"properties": {
+				"NAME": "Sakhnin",
+				"NAME_EN": "Sakhnin",
+				"NAME_IT": "Sakhnin",
+				"NAME_DE": "Sachnin",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 32743,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q168330"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.596944444,
+					31.525
+				]
+			},
+			"properties": {
+				"NAME": "Sderot",
+				"NAME_EN": "Sderot",
+				"NAME_IT": "Sderot",
+				"NAME_DE": "Sderot",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26500,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q123196"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.169444444,
+					32.805555555
+				]
+			},
+			"properties": {
+				"NAME": "Shefa-Amr",
+				"NAME_EN": "Shefa-Amr",
+				"NAME_IT": "Shefaram",
+				"NAME_DE": "Schefar’am",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 41600,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q990657"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35,
+					32.266666666
+				]
+			},
+			"properties": {
+				"NAME": "Taibe",
+				"NAME_EN": "Taibe",
+				"NAME_IT": "Tayibe",
+				"NAME_DE": "Tayyibe",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 43100,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1022481"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.207108333,
+					32.851147222
+				]
+			},
+			"properties": {
+				"NAME": "Tamra",
+				"NAME_EN": "Tamra",
+				"NAME_IT": "Tamra",
+				"NAME_DE": "Tamra",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 34000,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q168176"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.78,
+					32.08
+				]
+			},
+			"properties": {
+				"NAME": "Tel Aviv",
+				"NAME_EN": "Tel Aviv",
+				"NAME_IT": "Tel Aviv",
+				"NAME_DE": "Tel Aviv-Jaffa",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Tel Aviv",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 467875,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q33935"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.542011,
+					32.775458
+				]
+			},
+			"properties": {
+				"NAME": "Tiberias",
+				"NAME_EN": "Tiberias",
+				"NAME_IT": "Tiberiade",
+				"NAME_DE": "Tiberias",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 44200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q151920"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.950277777,
+					32.232777777
+				]
+			},
+			"properties": {
+				"NAME": "Tira",
+				"NAME_EN": "Tira",
+				"NAME_IT": "Tira",
+				"NAME_DE": "Tira",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167594"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.966666666,
+					32.766666666
+				]
+			},
+			"properties": {
+				"NAME": "Tirat Carmel",
+				"NAME_EN": "Tirat Carmel",
+				"NAME_IT": "Tirat Carmel",
+				"NAME_DE": "Tirat Carmel",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 22200,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q168215"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.1525,
+					32.515833333
+				]
+			},
+			"properties": {
+				"NAME": "Umm al-Fahm",
+				"NAME_EN": "Umm al-Fahm",
+				"NAME_IT": "Umm al-Fahm",
+				"NAME_DE": "Umm al-Fahm",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 55300,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q168245"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.733333333,
+					31.883333333
+				]
+			},
+			"properties": {
+				"NAME": "Yavne",
+				"NAME_EN": "Yavne",
+				"NAME_IT": "Yavne",
+				"NAME_DE": "Jawne",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 46700,
+				"POP1950": 0,
+				"populationDate": "2018-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167677"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.883333333,
+					32.033333333
+				]
+			},
+			"properties": {
+				"NAME": "Yehud",
+				"NAME_EN": "Yehud",
+				"NAME_IT": "Yehud",
+				"NAME_DE": "Jehud",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29146,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1000887"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35.11,
+					32.659444444
+				]
+			},
+			"properties": {
+				"NAME": "Yokneam Illit",
+				"NAME_EN": "Yokneam Illit",
+				"NAME_IT": "Yokneam Illit",
+				"NAME_DE": "Jokne’am",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24158,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167582"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34.951666666,
+					32.570833333
+				]
+			},
+			"properties": {
+				"NAME": "Zichron Yaakov",
+				"NAME_EN": "Zichron Yaakov",
+				"NAME_IT": "Zikhron Ya'aqov",
+				"NAME_DE": "Zichron Ja’akow",
+				"ADM0NAME": "Israel",
+				"ADM1NAME": "Haifa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22984,
+				"POP1950": 0,
+				"populationDate": "2017-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q198399"
+			}
+		}
+	]
+}

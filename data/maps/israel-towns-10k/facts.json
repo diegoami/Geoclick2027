@@ -1,0 +1,177 @@
+{
+	"haifa": {
+		"kind": "city",
+		"population": 284560,
+		"populationRank": 3,
+		"coastal": true,
+		"position": "north"
+	},
+	"nazareth": {
+		"kind": "city",
+		"population": 83400,
+		"populationRank": 20,
+		"region": "Northern",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"hadera": {
+		"kind": "city",
+		"population": 100630,
+		"populationRank": 17,
+		"region": "Haifa",
+		"coastal": true,
+		"position": "north"
+	},
+	"netanya": {
+		"kind": "city",
+		"population": 217200,
+		"populationRank": 7,
+		"region": "Central",
+		"coastal": true,
+		"position": "north"
+	},
+	"kfar-saba": {
+		"kind": "city",
+		"population": 101432,
+		"populationRank": 16,
+		"region": "Central",
+		"coastal": true,
+		"position": "centre"
+	},
+	"herzliya": {
+		"kind": "city",
+		"population": 95100,
+		"populationRank": 19,
+		"region": "Tel Aviv",
+		"coastal": true,
+		"position": "centre"
+	},
+	"petah-tikva": {
+		"kind": "city",
+		"population": 244300,
+		"populationRank": 5,
+		"region": "Central",
+		"coastal": true,
+		"position": "centre"
+	},
+	"bnei-brak": {
+		"kind": "city",
+		"population": 193774,
+		"populationRank": 10,
+		"region": "Tel Aviv",
+		"coastal": true,
+		"position": "centre"
+	},
+	"tel-aviv": {
+		"kind": "city",
+		"population": 467875,
+		"populationRank": 2,
+		"coastal": true,
+		"position": "west"
+	},
+	"ramat-gan": {
+		"kind": "city",
+		"population": 159200,
+		"populationRank": 11,
+		"region": "Tel Aviv",
+		"coastal": true,
+		"position": "centre"
+	},
+	"bat-yam": {
+		"kind": "city",
+		"population": 128800,
+		"populationRank": 14,
+		"region": "Tel Aviv",
+		"coastal": true,
+		"position": "west"
+	},
+	"holon": {
+		"kind": "city",
+		"population": 197935,
+		"populationRank": 9,
+		"region": "Tel Aviv",
+		"coastal": true,
+		"position": "west"
+	},
+	"rishon-lezion": {
+		"kind": "city",
+		"population": 258535,
+		"populationRank": 4,
+		"region": "Central",
+		"coastal": true,
+		"position": "west"
+	},
+	"modi-in-maccabim-re-ut": {
+		"kind": "city",
+		"population": 97097,
+		"populationRank": 18,
+		"region": "Central",
+		"coastal": false,
+		"position": "centre"
+	},
+	"rehovot": {
+		"kind": "city",
+		"population": 141600,
+		"populationRank": 12,
+		"region": "Central",
+		"coastal": true,
+		"position": "west"
+	},
+	"ashdod": {
+		"kind": "city",
+		"population": 225939,
+		"populationRank": 6,
+		"region": "Southern",
+		"coastal": true,
+		"position": "west"
+	},
+	"jerusalem": {
+		"kind": "city",
+		"population": 1050151,
+		"populationRank": 1,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"A city holy to Judaism, Christianity and Islam.",
+				"The walls of its Old City were built by the Ottoman sultan Suleiman the Magnificent in the 1530s.",
+				"Its status is one of the most disputed questions in the world."
+			],
+			"it": [
+				"Una città santa per l’ebraismo, il cristianesimo e l’islam.",
+				"Le mura della sua città vecchia furono costruite dal sultano ottomano Solimano il Magnifico negli anni Trenta del Cinquecento.",
+				"Il suo status è una delle questioni più contese del mondo."
+			],
+			"de": [
+				"Eine Stadt, die dem Judentum, dem Christentum und dem Islam heilig ist.",
+				"Die Mauern ihrer Altstadt ließ der osmanische Sultan Süleyman der Prächtige in den 1530er-Jahren bauen.",
+				"Ihr Status ist eine der umstrittensten Fragen der Welt."
+			]
+		}
+	},
+	"beit-shemesh": {
+		"kind": "city",
+		"population": 118700,
+		"populationRank": 15,
+		"region": "Jerusalem",
+		"coastal": false,
+		"position": "south"
+	},
+	"ashkelon": {
+		"kind": "city",
+		"population": 141000,
+		"populationRank": 13,
+		"region": "Southern",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"beersheba": {
+		"kind": "city",
+		"population": 209687,
+		"populationRank": 8,
+		"region": "Southern",
+		"coastal": false,
+		"position": "south-west"
+	}
+}

@@ -1,0 +1,166 @@
+{
+	"vidzeme": {
+		"kind": "region",
+		"borders": [
+			"Latgale",
+			"Rīga",
+			"Zemgale"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Valmiera",
+			"nameDe": "Valmiera",
+			"nameIt": "Valmiera",
+			"population": 22746
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its Latvian name means middle land.",
+				"The Gauja valley exposes dramatic sandstone cliffs.",
+				"Cēsis preserves a medieval castle and a long tradition of craftsmanship."
+			],
+			"it": [
+				"Il nome lettone significa terra di mezzo.",
+				"La valle della Gauja rivela spettacolari pareti di arenaria.",
+				"Cēsis conserva un castello medievale e una lunga tradizione artigiana."
+			],
+			"de": [
+				"Der lettische Name bedeutet Mittelland.",
+				"Im Gauja-Tal liegen eindrucksvolle Sandsteinfelsen frei.",
+				"Cēsis bewahrt eine mittelalterliche Burg und eine lange Handwerkstradition."
+			]
+		}
+	},
+	"riga": {
+		"kind": "region",
+		"borders": [
+			"Kurzeme",
+			"Vidzeme",
+			"Zemgale"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rīga",
+			"nameDe": "Riga",
+			"nameIt": "Riga",
+			"population": 588911
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The planning region is named after Latvia’s capital.",
+				"Ķemeri’s spa traditions developed around sulphurous springs.",
+				"Riga’s Ethnographic Open-Air Museum preserves rural buildings from across Latvia."
+			],
+			"it": [
+				"La regione di pianificazione prende il nome dalla capitale lettone.",
+				"Le tradizioni termali di Ķemeri si svilupparono attorno a sorgenti sulfuree.",
+				"Il Museo etnografico all’aperto di Riga conserva edifici rurali provenienti da tutta la Lettonia."
+			],
+			"de": [
+				"Die Planungsregion ist nach Lettlands Hauptstadt benannt.",
+				"Ķemeris Kurtraditionen entwickelten sich um Schwefelquellen.",
+				"Rigas Ethnografisches Freilichtmuseum bewahrt ländliche Gebäude aus ganz Lettland."
+			]
+		}
+	},
+	"kurzeme": {
+		"kind": "region",
+		"borders": [
+			"Rīga",
+			"Zemgale"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Liepāja",
+			"nameDe": "Libau",
+			"nameIt": "Liepāja",
+			"population": 66746
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The name recalls the Curonians, a medieval Baltic people.",
+				"The Curonians were known for seafaring and resistance to crusading orders.",
+				"Much of the historic region later belonged to the Duchy of Courland and Semigallia."
+			],
+			"it": [
+				"Il nome ricorda i curi, un popolo baltico medievale.",
+				"I curi erano noti per la navigazione e la resistenza agli ordini crociati.",
+				"Gran parte della regione storica appartenne poi al Ducato di Curlandia e Semigallia."
+			],
+			"de": [
+				"Der Name erinnert an die Kuren, ein mittelalterliches baltisches Volk.",
+				"Die Kuren waren für Seefahrt und Widerstand gegen Kreuzritterorden bekannt.",
+				"Große Teile der historischen Region gehörten später zum Herzogtum Kurland und Semgallen."
+			]
+		}
+	},
+	"latgale": {
+		"kind": "region",
+		"borders": [
+			"Vidzeme",
+			"Zemgale"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Daugavpils",
+			"nameDe": "Daugavpils",
+			"nameIt": "Daugavpils",
+			"population": 77486
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name recalls the ancient Latgalians.",
+				"The region preserves a distinctive Latgalian language tradition.",
+				"Its pottery traditions include decorated vessels for milk, honey and other foods."
+			],
+			"it": [
+				"Il nome ricorda gli antichi latgalli.",
+				"La regione conserva una distinta tradizione linguistica latgaliana.",
+				"Le tradizioni ceramiche comprendono recipienti decorati per latte, miele e altri alimenti."
+			],
+			"de": [
+				"Der Name erinnert an die alten Lettgallen.",
+				"Die Region bewahrt eine eigene lettgallische Sprachtradition.",
+				"Ihre Töpfertradition umfasst verzierte Gefäße für Milch, Honig und andere Lebensmittel."
+			]
+		}
+	},
+	"zemgale": {
+		"kind": "region",
+		"borders": [
+			"Kurzeme",
+			"Latgale",
+			"Rīga",
+			"Vidzeme"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jelgava",
+			"nameDe": "Jelgava",
+			"nameIt": "Jelgava",
+			"population": 54408
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its historic name, Semigallia, recalls the Semigallian people.",
+				"The fertile plains have supported farming for centuries.",
+				"Rundāle Palace preserves an elaborate Baroque and Rococo ensemble."
+			],
+			"it": [
+				"Il nome storico, Semigallia, ricorda il popolo dei semigalli.",
+				"Le fertili pianure sostengono l’agricoltura da secoli.",
+				"Il palazzo di Rundāle conserva un elaborato complesso barocco e rococò."
+			],
+			"de": [
+				"Der historische Name Semgallen erinnert an das Volk der Semgaller.",
+				"Die fruchtbaren Ebenen ermöglichen seit Jahrhunderten Landwirtschaft.",
+				"Schloss Rundāle bewahrt eine aufwendige Barock- und Rokokoanlage."
+			]
+		}
+	}
+}

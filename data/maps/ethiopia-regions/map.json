@@ -1,0 +1,500 @@
+{
+	"id": "ethiopia-regions",
+	"name": "Ethiopia — Regions",
+	"country": "Ethiopia",
+	"attribution": "OCHA Field Information Services; COD-AB Ethiopia version 04; 2025; CC BY 3.0 IGO; https://creativecommons.org/licenses/by/3.0/igo/; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/boundaries/ethiopia-regions-2025.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "tigray",
+			"name": "Tigray",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.66605,
+				13.68235
+			],
+			"bbox": [
+				37.3478,
+				12.5595,
+				39.9843,
+				14.8052
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						37.8765,
+						14.4632
+					],
+					[
+						39.1106,
+						14.2582
+					],
+					[
+						39.7416,
+						13.1554
+					]
+				],
+				"aspect": 2.58
+			}
+		},
+		{
+			"id": "afar",
+			"name": "Afar",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.040850000000006,
+				11.6704
+			],
+			"bbox": [
+				39.682,
+				8.8622,
+				42.3997,
+				14.4786
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						40.4368,
+						9.7677
+					],
+					[
+						41.5129,
+						11.8041
+					],
+					[
+						40.5593,
+						13.9076
+					]
+				],
+				"aspect": 2.49
+			}
+		},
+		{
+			"id": "amhara",
+			"name": "Amhara",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.73675,
+				11.2346
+			],
+			"bbox": [
+				35.2611,
+				8.7148,
+				40.2124,
+				13.7544
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						36.4966,
+						12.0153
+					],
+					[
+						38.1191,
+						12.0567
+					],
+					[
+						39.7416,
+						10.7455
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "benishangul-gumuz",
+			"name": "Benishangul-Gumuz",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.3856,
+				10.44515
+			],
+			"bbox": [
+				34.0858,
+				8.9626,
+				36.6854,
+				11.9277
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						34.2642,
+						10.1123
+					],
+					[
+						35.215,
+						10.9174
+					],
+					[
+						36.1657,
+						10.8252
+					]
+				],
+				"aspect": 1.01
+			}
+		},
+		{
+			"id": "dire-dawa",
+			"name": "Dire Dawa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				42.0372,
+				9.62255
+			],
+			"bbox": [
+				41.7346,
+				9.4715,
+				42.3398,
+				9.7736
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						41.7765,
+						9.5505
+					],
+					[
+						42.0398,
+						9.5285
+					],
+					[
+						42.236,
+						9.7003
+					]
+				],
+				"aspect": 3.11
+			}
+		},
+		{
+			"id": "harari",
+			"name": "Harari",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				42.165800000000004,
+				9.292200000000001
+			],
+			"bbox": [
+				42.0613,
+				9.2119,
+				42.2703,
+				9.3725
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						42.0938,
+						9.2829
+					],
+					[
+						42.1623,
+						9.2924
+					],
+					[
+						42.2307,
+						9.3042
+					]
+				],
+				"aspect": 0.88
+			}
+		},
+		{
+			"id": "addis-ababa",
+			"name": "Addis Ababa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.782799999999995,
+				8.961549999999999
+			],
+			"bbox": [
+				38.6594,
+				8.8413,
+				38.9062,
+				9.0818
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						38.7072,
+						9.0064
+					],
+					[
+						38.7907,
+						8.9551
+					],
+					[
+						38.8742,
+						8.983
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "central-ethiopia",
+			"name": "Central Ethiopia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.9923,
+				7.7557
+			],
+			"bbox": [
+				37.3495,
+				7.0764,
+				38.6351,
+				8.435
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						37.5218,
+						7.6705
+					],
+					[
+						38.0132,
+						7.6372
+					],
+					[
+						38.5045,
+						8.0711
+					]
+				],
+				"aspect": 0.86
+			}
+		},
+		{
+			"id": "gambella",
+			"name": "Gambella",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.192049999999995,
+				7.500500000000001
+			],
+			"bbox": [
+				32.9918,
+				6.3189,
+				35.3923,
+				8.6821
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						33.5832,
+						8.3122
+					],
+					[
+						34.5,
+						8.0473
+					],
+					[
+						34.8571,
+						7.1916
+					]
+				],
+				"aspect": 1.59
+			}
+		},
+		{
+			"id": "somali",
+			"name": "Somali",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.53915,
+				7.2736
+			],
+			"bbox": [
+				39.0911,
+				3.4501,
+				47.9872,
+				11.0971
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						40.225,
+						4.643
+					],
+					[
+						43.2639,
+						7.4137
+					],
+					[
+						46.3029,
+						7.2838
+					]
+				],
+				"aspect": 2.14
+			}
+		},
+		{
+			"id": "oromia",
+			"name": "Oromia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.551100000000005,
+				6.939649999999999
+			],
+			"bbox": [
+				34.1242,
+				3.5139,
+				42.978,
+				10.3654
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sidama",
+			"name": "Sidama",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.5731,
+				6.6619
+			],
+			"bbox": [
+				38.0188,
+				6.1593,
+				39.1274,
+				7.1645
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						38.2213,
+						6.879
+					],
+					[
+						38.6439,
+						6.6113
+					],
+					[
+						39.0546,
+						6.326
+					]
+				],
+				"aspect": 2.47
+			}
+		},
+		{
+			"id": "southwest-ethiopia",
+			"name": "Southwest Ethiopia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.191649999999996,
+				6.638999999999999
+			],
+			"bbox": [
+				34.8529,
+				5.3454,
+				37.5304,
+				7.9326
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						35.2048,
+						6.32
+					],
+					[
+						36.1917,
+						7.1816
+					],
+					[
+						37.1787,
+						7.1023
+					]
+				],
+				"aspect": 1.97
+			}
+		},
+		{
+			"id": "south-ethiopia",
+			"name": "South Ethiopia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.09425,
+				5.8119
+			],
+			"bbox": [
+				35.7538,
+				4.4339,
+				38.4347,
+				7.1899
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						36.0753,
+						4.8713
+					],
+					[
+						36.8765,
+						5.8546
+					],
+					[
+						37.8052,
+						6.7204
+					]
+				],
+				"aspect": 1.98
+			}
+		}
+	],
+	"tourOrder": [
+		"tigray",
+		"afar",
+		"amhara",
+		"benishangul-gumuz",
+		"dire-dawa",
+		"harari",
+		"addis-ababa",
+		"central-ethiopia",
+		"gambella",
+		"somali",
+		"oromia",
+		"sidama",
+		"southwest-ethiopia",
+		"south-ethiopia"
+	]
+}

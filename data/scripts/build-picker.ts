@@ -1,6 +1,6 @@
 // Builds the world picker (FT-76, docs/PLAN_V0.13.md): the map the home
-// screen opens on. It holds the same 172 countries as the six continents'
-// Countries maps, each tagged with its continent, so a tap can go world ->
+// screen opens on. It holds the countries from the six continents'
+// Countries maps plus Singapore, each tagged with its continent, so a tap can go world ->
 // continent -> that country's maps. It is not a map anyone plays: it has no
 // map.json (every scan for maps skips it), no terrain, no facts, no tour.
 //
@@ -136,7 +136,9 @@ function main(): void {
 			const p = feature.properties;
 			const englishName = p.NAME_EN || p.ADMIN;
 			const name = COUNTRY_NAME_FIXUPS[englishName] ?? englishName;
-			if (polygonAreaKm2(feature.geometry) < MIN_AREA_KM2) continue;
+			// Singapore has its own playable maps despite falling below the
+			// continent quiz's area threshold. It must remain selectable here.
+			if (name !== 'Singapore' && polygonAreaKm2(feature.geometry) < MIN_AREA_KM2) continue;
 			// Only what the home screen reads travels into the tiles.
 			const names = countryNames(name, p.NAME_IT, p.NAME_DE);
 			if (Object.keys(names).length > 0) namesOf.set(slugify(name), names);

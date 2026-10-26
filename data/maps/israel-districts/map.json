@@ -1,0 +1,230 @@
+{
+	"id": "israel-districts",
+	"name": "Israel — Districts",
+	"country": "Israel",
+	"attribution": "geoBoundaries gbOpen 9469f09; Wikimedia district geometry; 2006; Public Domain; https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM1/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/israel-districts-gb-9469f09.geojson",
+	"placesSource": "data/places/israel.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "northern",
+			"name": "Northern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.34765,
+				32.81125
+			],
+			"bbox": [
+				35.0297,
+				32.389,
+				35.6656,
+				33.2335
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						35.152,
+						32.7872
+					],
+					[
+						35.3766,
+						32.7114
+					],
+					[
+						35.6012,
+						32.8171
+					]
+				],
+				"aspect": 0.66
+			}
+		},
+		{
+			"id": "haifa",
+			"name": "Haifa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.041700000000006,
+				32.63075
+			],
+			"bbox": [
+				34.8712,
+				32.3735,
+				35.2122,
+				32.888
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						34.9818,
+						32.4183
+					],
+					[
+						35.0024,
+						32.6222
+					],
+					[
+						35.0539,
+						32.822
+					]
+				],
+				"aspect": 2.67
+			}
+		},
+		{
+			"id": "tel-aviv",
+			"name": "Tel Aviv",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.78365,
+				32.1011
+			],
+			"bbox": [
+				34.7368,
+				32.0033,
+				34.8305,
+				32.1989
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						34.7736,
+						32.0168
+					],
+					[
+						34.8097,
+						32.0784
+					],
+					[
+						34.8016,
+						32.1471
+					]
+				],
+				"aspect": 3.01
+			}
+		},
+		{
+			"id": "central",
+			"name": "Central",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.8638,
+				32.0994
+			],
+			"bbox": [
+				34.6806,
+				31.788,
+				35.047,
+				32.4108
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						34.8336,
+						31.8549
+					],
+					[
+						34.914,
+						32.1002
+					],
+					[
+						34.9427,
+						32.353
+					]
+				],
+				"aspect": 3.3
+			}
+		},
+		{
+			"id": "jerusalem",
+			"name": "Jerusalem",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.0018,
+				31.723950000000002
+			],
+			"bbox": [
+				34.8293,
+				31.6009,
+				35.1743,
+				31.847
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						34.8728,
+						31.7299
+					],
+					[
+						34.9863,
+						31.7088
+					],
+					[
+						35.0998,
+						31.7803
+					]
+				],
+				"aspect": 1.1
+			}
+		},
+		{
+			"id": "southern",
+			"name": "Southern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.86465,
+				30.7133
+			],
+			"bbox": [
+				34.2664,
+				29.5439,
+				35.4629,
+				31.8827
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						34.7176,
+						31.5859
+					],
+					[
+						34.974,
+						30.7773
+					],
+					[
+						34.9072,
+						29.9393
+					]
+				],
+				"aspect": 3.43
+			}
+		}
+	],
+	"tourOrder": [
+		"northern",
+		"haifa",
+		"tel-aviv",
+		"central",
+		"jerusalem",
+		"southern"
+	]
+}

@@ -133,7 +133,7 @@ npx playwright install chromium  # once per machine - component tests run in it
 npm run dev
 ```
 
-Then open the URL Vite prints (typically `http://localhost:5173`). Pick a
+Then open the URL Vite prints (`http://localhost:5187`). Pick a
 map from the home page, try both Tour and Quiz modes.
 
 Useful root-level scripts (run from the repo root, they fan out across
@@ -200,7 +200,7 @@ show up in the output as `|client (chromium)|`, check the config first.
 ## Running the desktop build (Iteration 7)
 
 ```bash
-npm run dev --workspace=app    # start the Vite dev server first (port 5173)
+npm run dev --workspace=app    # start the Vite dev server first (port 5187)
 cd desktop && npm run dev      # in a second terminal: opens the app in a native window
 ```
 

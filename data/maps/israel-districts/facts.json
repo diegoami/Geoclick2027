@@ -1,0 +1,96 @@
+{
+	"northern": {
+		"kind": "region",
+		"borders": [
+			"Haifa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nazareth",
+			"nameDe": "Nazareth",
+			"nameIt": "Nazareth",
+			"population": 83400
+		},
+		"peak": {
+			"name": "Har Meron",
+			"elevation": 1208
+		},
+		"position": "north-east"
+	},
+	"haifa": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Northern"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Haifa",
+			"nameDe": "Haifa",
+			"nameIt": "Haifa",
+			"population": 284560
+		},
+		"position": "north"
+	},
+	"tel-aviv": {
+		"kind": "region",
+		"borders": [
+			"Central"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tel Aviv",
+			"nameDe": "Tel Aviv-Jaffa",
+			"nameIt": "Tel Aviv",
+			"population": 467875
+		},
+		"position": "north"
+	},
+	"central": {
+		"kind": "region",
+		"borders": [
+			"Haifa",
+			"Jerusalem",
+			"Southern",
+			"Tel Aviv"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Rishon LeZion",
+			"nameDe": "Rischon LeZion",
+			"nameIt": "Rishon LeZion",
+			"population": 258535
+		},
+		"position": "north"
+	},
+	"jerusalem": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Southern"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jerusalem",
+			"nameDe": "Jerusalem",
+			"nameIt": "Gerusalemme",
+			"population": 1050151
+		},
+		"position": "centre"
+	},
+	"southern": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Jerusalem"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ashdod",
+			"nameDe": "Aschdod",
+			"nameIt": "Ashdod",
+			"population": 225939
+		},
+		"position": "south"
+	}
+}

@@ -1,0 +1,353 @@
+{
+	"cabinda": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Cabinda",
+			"nameDe": "Cabinda",
+			"nameIt": "Cabinda",
+			"population": 91791
+		},
+		"position": "north-west"
+	},
+	"zaire": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Uíge"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Soyo",
+			"nameDe": "Soyo",
+			"nameIt": "Soyo",
+			"population": 67491
+		},
+		"position": "north-west"
+	},
+	"uige": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Cuanza Norte",
+			"Malanje",
+			"Zaire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Uíge",
+			"nameDe": "Uíge",
+			"nameIt": "Uíge",
+			"population": 60008
+		},
+		"position": "north-west"
+	},
+	"bengo": {
+		"kind": "region",
+		"borders": [
+			"Cuanza Norte",
+			"Icolo e Bengo",
+			"Luanda",
+			"Uíge",
+			"Zaire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Caxito",
+			"nameDe": "Caxito",
+			"nameIt": "Caxito",
+			"population": 28224
+		},
+		"position": "north-west"
+	},
+	"lunda-norte": {
+		"kind": "region",
+		"borders": [
+			"Lunda Sul",
+			"Malanje"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Capenda-Camulemba",
+			"nameDe": "Capenda Camulemba",
+			"nameIt": "Capenda Camulemba",
+			"population": 80000
+		},
+		"position": "north"
+	},
+	"cuanza-norte": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Cuanza Sul",
+			"Icolo e Bengo",
+			"Malanje",
+			"Uíge"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Camabatela",
+			"nameDe": "Ambaca",
+			"nameIt": "Ambaca",
+			"population": 12837
+		},
+		"position": "north-west"
+	},
+	"luanda": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Icolo e Bengo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Luanda",
+			"nameDe": "Luanda",
+			"nameIt": "Luanda",
+			"population": 5172900
+		},
+		"position": "west"
+	},
+	"malanje": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Cuanza Norte",
+			"Cuanza Sul",
+			"Lunda Norte",
+			"Lunda Sul",
+			"Uíge"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Malanje",
+			"nameDe": "Malanje",
+			"nameIt": "Malanje",
+			"population": 125856
+		},
+		"position": "centre"
+	},
+	"icolo-e-bengo": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Cuanza Norte",
+			"Cuanza Sul",
+			"Luanda"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"lunda-sul": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Lunda Norte",
+			"Malanje",
+			"Moxico",
+			"Moxico Leste"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saurimo",
+			"nameDe": "Saurimo",
+			"nameIt": "Saurimo",
+			"population": 41316
+		},
+		"position": "east"
+	},
+	"cuanza-sul": {
+		"kind": "region",
+		"borders": [
+			"Benguela",
+			"Bié",
+			"Cuanza Norte",
+			"Huambo",
+			"Icolo e Bengo",
+			"Malanje"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sumbe",
+			"nameDe": "Sumbe",
+			"nameIt": "Sumbe",
+			"population": 33277
+		},
+		"position": "west"
+	},
+	"moxico-leste": {
+		"kind": "region",
+		"borders": [
+			"Lunda Sul",
+			"Moxico"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luau",
+			"nameDe": "Luau",
+			"nameIt": "Luau",
+			"population": 18465
+		},
+		"position": "east"
+	},
+	"bie": {
+		"kind": "region",
+		"borders": [
+			"Cuando",
+			"Cuanza Sul",
+			"Cubango",
+			"Huambo",
+			"Huíla",
+			"Lunda Sul",
+			"Malanje",
+			"Moxico"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kuito",
+			"nameDe": "Kuito",
+			"nameIt": "Kuito",
+			"population": 114286
+		},
+		"position": "centre"
+	},
+	"huambo": {
+		"kind": "region",
+		"borders": [
+			"Benguela",
+			"Bié",
+			"Cuanza Sul",
+			"Huíla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Huambo",
+			"nameDe": "Huambo",
+			"nameIt": "Huambo",
+			"population": 1100000
+		},
+		"peak": {
+			"name": "Moro de Môco",
+			"elevation": 2620
+		},
+		"position": "centre"
+	},
+	"benguela": {
+		"kind": "region",
+		"borders": [
+			"Cuanza Sul",
+			"Huambo",
+			"Huíla",
+			"Namibe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lobito",
+			"nameDe": "Lobito",
+			"nameIt": "Lobito",
+			"population": 207932
+		},
+		"position": "west"
+	},
+	"moxico": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Cuando",
+			"Lunda Sul",
+			"Moxico Leste"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luena",
+			"nameDe": "Luena",
+			"nameIt": "Luena",
+			"population": 21115
+		},
+		"position": "south-east"
+	},
+	"huila": {
+		"kind": "region",
+		"borders": [
+			"Benguela",
+			"Bié",
+			"Cubango",
+			"Cunene",
+			"Huambo",
+			"Namibe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lubango",
+			"nameDe": "Lubango",
+			"nameIt": "Lubango",
+			"population": 125632
+		},
+		"position": "south-west"
+	},
+	"namibe": {
+		"kind": "region",
+		"borders": [
+			"Benguela",
+			"Cunene",
+			"Huíla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Moçâmedes",
+			"nameDe": "Namibe",
+			"nameIt": "Namibe",
+			"population": 132900
+		},
+		"position": "south-west"
+	},
+	"cubango": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Cuando",
+			"Cunene",
+			"Huíla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Menongue",
+			"nameDe": "Menongue",
+			"nameIt": "Menongue",
+			"population": 13030
+		},
+		"position": "south"
+	},
+	"cuando": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Cubango",
+			"Moxico"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mavinga",
+			"nameDe": "Mavinga",
+			"nameIt": "Mavinga",
+			"population": 30000
+		},
+		"position": "south-east"
+	},
+	"cunene": {
+		"kind": "region",
+		"borders": [
+			"Cubango",
+			"Huíla",
+			"Namibe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ondjiva",
+			"nameDe": "Ondjiva",
+			"nameIt": "Ondjiva",
+			"population": 10169
+		},
+		"position": "south-west"
+	}
+}

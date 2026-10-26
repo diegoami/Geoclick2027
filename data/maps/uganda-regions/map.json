@@ -1,0 +1,157 @@
+{
+	"id": "uganda-regions",
+	"name": "Uganda — Regions",
+	"country": "Uganda",
+	"attribution": "geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/boundaries/uganda-gb-9469f09.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "northern",
+			"name": "Northern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.870850000000004,
+				2.7996499999999997
+			],
+			"bbox": [
+				30.7414,
+				1.3652,
+				35.0003,
+				4.2341
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						31.213,
+						2.9485
+					],
+					[
+						32.9843,
+						3.0944
+					],
+					[
+						34.653,
+						2.4877
+					]
+				],
+				"aspect": 2.23
+			}
+		},
+		{
+			"id": "eastern",
+			"name": "Eastern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.82515,
+				1.1338499999999998
+			],
+			"bbox": [
+				32.8195,
+				-0.1512,
+				34.8308,
+				2.4189
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						33.0685,
+						1.1862
+					],
+					[
+						33.6986,
+						1.3934
+					],
+					[
+						34.3287,
+						1.211
+					]
+				],
+				"aspect": 0.73
+			}
+		},
+		{
+			"id": "western",
+			"name": "Western",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.96685,
+				0.4447000000000001
+			],
+			"bbox": [
+				29.5734,
+				-1.4823,
+				32.3603,
+				2.3717
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						30.0792,
+						-1.1241
+					],
+					[
+						30.5472,
+						0.6637
+					],
+					[
+						31.825,
+						1.9828
+					]
+				],
+				"aspect": 4.11
+			}
+		},
+		{
+			"id": "central",
+			"name": "Central",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.203649999999996,
+				0.33885
+			],
+			"bbox": [
+				31.0125,
+				-1,
+				33.3948,
+				1.6777
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						31.3415,
+						-0.5756
+					],
+					[
+						31.7667,
+						0.4925
+					],
+					[
+						32.6648,
+						1.2194
+					]
+				],
+				"aspect": 2
+			}
+		}
+	],
+	"tourOrder": [
+		"northern",
+		"eastern",
+		"western",
+		"central"
+	]
+}

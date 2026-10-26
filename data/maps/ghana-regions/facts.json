@@ -1,0 +1,252 @@
+{
+	"upper-east": {
+		"kind": "region",
+		"borders": [
+			"North East",
+			"Upper West"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bolgatanga",
+			"nameDe": "Bolgatanga",
+			"nameIt": "Bolgatanga",
+			"population": 89255
+		},
+		"position": "north"
+	},
+	"upper-west": {
+		"kind": "region",
+		"borders": [
+			"North East",
+			"Savannah",
+			"Upper East"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Wa",
+			"nameDe": "Wa",
+			"nameIt": "Wa",
+			"population": 107214
+		},
+		"position": "north-west"
+	},
+	"north-east": {
+		"kind": "region",
+		"borders": [
+			"Northern",
+			"Savannah",
+			"Upper East",
+			"Upper West"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"northern": {
+		"kind": "region",
+		"borders": [
+			"North East",
+			"Oti",
+			"Savannah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tamale",
+			"nameDe": "Tamale",
+			"nameIt": "Tamale",
+			"population": 729768
+		},
+		"position": "north"
+	},
+	"savannah": {
+		"kind": "region",
+		"borders": [
+			"Bono",
+			"Bono East",
+			"North East",
+			"Northern",
+			"Oti",
+			"Upper West"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Damongo",
+			"nameDe": "Damongo",
+			"nameIt": "Damongo",
+			"population": 14442
+		},
+		"position": "north"
+	},
+	"bono-east": {
+		"kind": "region",
+		"borders": [
+			"Ashanti",
+			"Bono",
+			"Eastern",
+			"Oti",
+			"Savannah",
+			"Volta"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"oti": {
+		"kind": "region",
+		"borders": [
+			"Bono East",
+			"Eastern",
+			"Northern",
+			"Savannah",
+			"Volta"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"bono": {
+		"kind": "region",
+		"borders": [
+			"Ahafo",
+			"Ashanti",
+			"Bono East",
+			"Savannah",
+			"Western North"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"ahafo": {
+		"kind": "region",
+		"borders": [
+			"Ashanti",
+			"Bono",
+			"Western North"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ashanti": {
+		"kind": "region",
+		"borders": [
+			"Ahafo",
+			"Bono",
+			"Bono East",
+			"Central",
+			"Eastern",
+			"Western North"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kumasi",
+			"nameDe": "Kumasi",
+			"nameIt": "Kumasi",
+			"population": 3903480
+		},
+		"position": "south"
+	},
+	"volta": {
+		"kind": "region",
+		"borders": [
+			"Bono East",
+			"Eastern",
+			"Greater Accra",
+			"Oti"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ho",
+			"nameDe": "Ho",
+			"nameIt": "Ho",
+			"population": 125914
+		},
+		"peak": {
+			"name": "Mount Afadjoto",
+			"elevation": 885
+		},
+		"position": "south-east"
+	},
+	"eastern": {
+		"kind": "region",
+		"borders": [
+			"Ashanti",
+			"Bono East",
+			"Central",
+			"Greater Accra",
+			"Oti",
+			"Volta"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Koforidua",
+			"nameDe": "Koforidua",
+			"nameIt": "Koforidua",
+			"population": 127334
+		},
+		"position": "south"
+	},
+	"western-north": {
+		"kind": "region",
+		"borders": [
+			"Ahafo",
+			"Ashanti",
+			"Bono",
+			"Central",
+			"Western"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dome",
+			"nameDe": "Dome",
+			"nameIt": "Dome",
+			"population": 56655
+		},
+		"position": "south-west"
+	},
+	"greater-accra": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Eastern",
+			"Volta"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Accra",
+			"nameDe": "Accra",
+			"nameIt": "Accra",
+			"population": 1782150
+		},
+		"position": "south-east"
+	},
+	"central": {
+		"kind": "region",
+		"borders": [
+			"Ashanti",
+			"Eastern",
+			"Greater Accra",
+			"Western",
+			"Western North"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Winneba",
+			"nameDe": "Winneba",
+			"nameIt": "Winneba",
+			"population": 55331
+		},
+		"position": "south"
+	},
+	"western": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Western North"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sekondi-Takoradi",
+			"nameDe": "Sekondi-Takoradi",
+			"nameIt": "Sekondi-Takoradi",
+			"population": 539548
+		},
+		"position": "south-west"
+	}
+}

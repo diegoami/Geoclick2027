@@ -1,0 +1,329 @@
+{
+	"duhok": {
+		"kind": "region",
+		"borders": [
+			"Erbil",
+			"Nineveh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Duhok",
+			"nameDe": "Dohuk",
+			"nameIt": "Dahuk",
+			"population": 986000
+		},
+		"position": "north"
+	},
+	"erbil": {
+		"kind": "region",
+		"borders": [
+			"Duhok",
+			"Kirkuk",
+			"Nineveh",
+			"Sulaymaniyah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Irbil",
+			"nameDe": "Erbil",
+			"nameIt": "Arbil",
+			"population": 926000
+		},
+		"peak": {
+			"name": "Kuh-e Haji Ebrahim",
+			"elevation": 3587
+		},
+		"position": "north"
+	},
+	"nineveh": {
+		"kind": "region",
+		"borders": [
+			"Anbar",
+			"Duhok",
+			"Erbil",
+			"Kirkuk",
+			"Saladin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mosul",
+			"nameDe": "Mossul",
+			"nameIt": "Mosul",
+			"population": 1316000
+		},
+		"position": "north"
+	},
+	"sulaymaniyah": {
+		"kind": "region",
+		"borders": [
+			"Diyala",
+			"Erbil",
+			"Halabja",
+			"Kirkuk",
+			"Saladin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "As Sulaymaniyah",
+			"nameDe": "Sulaimaniyya",
+			"nameIt": "Sulaymaniyya",
+			"population": 723170
+		},
+		"position": "north"
+	},
+	"kirkuk": {
+		"kind": "region",
+		"borders": [
+			"Erbil",
+			"Nineveh",
+			"Saladin",
+			"Sulaymaniyah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kirkuk",
+			"nameDe": "Kirkuk",
+			"nameIt": "Kirkuk",
+			"population": 601433
+		},
+		"position": "north"
+	},
+	"halabja": {
+		"kind": "region",
+		"borders": [
+			"Sulaymaniyah"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"saladin": {
+		"kind": "region",
+		"borders": [
+			"Anbar",
+			"Baghdad",
+			"Diyala",
+			"Kirkuk",
+			"Nineveh",
+			"Sulaymaniyah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Samarra",
+			"nameDe": "Samarra",
+			"nameIt": "Samarra",
+			"population": 158508
+		},
+		"position": "north"
+	},
+	"diyala": {
+		"kind": "region",
+		"borders": [
+			"Baghdad",
+			"Saladin",
+			"Sulaymaniyah",
+			"Wasit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Baqubah",
+			"nameDe": "Baquba",
+			"nameIt": "Ba'quba",
+			"population": 299479
+		},
+		"position": "centre"
+	},
+	"baghdad": {
+		"kind": "region",
+		"borders": [
+			"Anbar",
+			"Babil",
+			"Diyala",
+			"Saladin",
+			"Wasit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Baghdad",
+			"nameDe": "Bagdad",
+			"nameIt": "Baghdad",
+			"population": 5054000
+		},
+		"position": "centre"
+	},
+	"anbar": {
+		"kind": "region",
+		"borders": [
+			"Babil",
+			"Baghdad",
+			"Karbala",
+			"Najaf",
+			"Nineveh",
+			"Saladin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ar Ramadi",
+			"nameDe": "Ramadi",
+			"nameIt": "Ramadi",
+			"population": 295121
+		},
+		"position": "west"
+	},
+	"wasit": {
+		"kind": "region",
+		"borders": [
+			"Babil",
+			"Baghdad",
+			"Dhi Qar",
+			"Diyala",
+			"Maysan",
+			"Qadisiyyah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Al Kut",
+			"nameDe": "Kut",
+			"nameIt": "Al-Kut",
+			"population": 321521
+		},
+		"position": "centre"
+	},
+	"babil": {
+		"kind": "region",
+		"borders": [
+			"Anbar",
+			"Baghdad",
+			"Karbala",
+			"Najaf",
+			"Qadisiyyah",
+			"Wasit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Al Hillah",
+			"nameDe": "Hilla",
+			"nameIt": "Al-Hilla",
+			"population": 594605
+		},
+		"position": "centre"
+	},
+	"karbala": {
+		"kind": "region",
+		"borders": [
+			"Anbar",
+			"Babil",
+			"Najaf"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Karbala",
+			"nameDe": "Kerbela",
+			"nameIt": "Kerbela",
+			"population": 510692
+		},
+		"position": "centre"
+	},
+	"maysan": {
+		"kind": "region",
+		"borders": [
+			"Basra",
+			"Dhi Qar",
+			"Wasit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Al Amarah",
+			"nameDe": "Amara",
+			"nameIt": "Al-'Amara",
+			"population": 345007
+		},
+		"position": "east"
+	},
+	"qadisiyyah": {
+		"kind": "region",
+		"borders": [
+			"Babil",
+			"Dhi Qar",
+			"Muthanna",
+			"Najaf",
+			"Wasit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ad Diwaniyah",
+			"nameDe": "Diwaniyya",
+			"nameIt": "Al-Diwaniyya",
+			"population": 358408
+		},
+		"position": "centre"
+	},
+	"dhi-qar": {
+		"kind": "region",
+		"borders": [
+			"Basra",
+			"Maysan",
+			"Muthanna",
+			"Qadisiyyah",
+			"Wasit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "An Nasiriyah",
+			"nameDe": "Nasiriya",
+			"nameIt": "Nasiriyya",
+			"population": 451547
+		},
+		"position": "south-east"
+	},
+	"najaf": {
+		"kind": "region",
+		"borders": [
+			"Anbar",
+			"Babil",
+			"Karbala",
+			"Muthanna",
+			"Qadisiyyah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Najaf",
+			"nameDe": "Nadschaf",
+			"nameIt": "Najaf",
+			"population": 665552
+		},
+		"position": "south"
+	},
+	"muthanna": {
+		"kind": "region",
+		"borders": [
+			"Basra",
+			"Dhi Qar",
+			"Najaf",
+			"Qadisiyyah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "As Samawah",
+			"nameDe": "Samawa",
+			"nameIt": "Samawa",
+			"population": 174978
+		},
+		"position": "south"
+	},
+	"basra": {
+		"kind": "region",
+		"borders": [
+			"Dhi Qar",
+			"Maysan",
+			"Muthanna"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Basra",
+			"nameDe": "Basra",
+			"nameIt": "Bassora",
+			"population": 870000
+		},
+		"position": "south-east"
+	}
+}

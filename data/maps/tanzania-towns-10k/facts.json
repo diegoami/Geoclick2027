@@ -1,0 +1,168 @@
+{
+	"bukoba": {
+		"kind": "city",
+		"population": 100504,
+		"populationRank": 17,
+		"region": "Kagera",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"musoma": {
+		"kind": "city",
+		"population": 133156,
+		"populationRank": 12,
+		"coastal": false,
+		"position": "north"
+	},
+	"mwanza": {
+		"kind": "city",
+		"population": 493944,
+		"populationRank": 3,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"moshi": {
+		"kind": "city",
+		"population": 721018,
+		"populationRank": 2,
+		"region": "Kilimanjaro",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"arusha": {
+		"kind": "city",
+		"population": 341136,
+		"populationRank": 5,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"shinyanga": {
+		"kind": "city",
+		"population": 107362,
+		"populationRank": 16,
+		"coastal": false,
+		"position": "north"
+	},
+	"kigoma": {
+		"kind": "city",
+		"population": 164268,
+		"populationRank": 10,
+		"coastal": false,
+		"position": "west"
+	},
+	"tabora": {
+		"kind": "city",
+		"population": 146495,
+		"populationRank": 11,
+		"coastal": false,
+		"position": "west"
+	},
+	"tanga": {
+		"kind": "city",
+		"population": 224876,
+		"populationRank": 8,
+		"coastal": true,
+		"position": "east"
+	},
+	"zanzibar": {
+		"kind": "city",
+		"population": 403658,
+		"populationRank": 4,
+		"region": "Mjini Magharibi",
+		"coastal": true,
+		"position": "east"
+	},
+	"dodoma": {
+		"kind": "city",
+		"population": 218269,
+		"populationRank": 9,
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Chosen as the capital in 1973, though the government moved from Dar es Salaam only slowly, over decades.",
+				"It lies near the middle of the country, chosen so the capital would be close to every region.",
+				"Tanzania’s wine is grown on the land around it."
+			],
+			"it": [
+				"Scelta come capitale nel 1973, anche se il governo si trasferì da Dar es Salaam solo lentamente, nel corso di decenni.",
+				"Si trova vicino al centro del paese, scelta perché la capitale fosse vicina a tutte le regioni.",
+				"Il vino della Tanzania si coltiva nelle terre intorno."
+			],
+			"de": [
+				"1973 zur Hauptstadt gewählt, doch die Regierung zog nur langsam, über Jahrzehnte, aus Daressalam um.",
+				"Sie liegt nahe der Mitte des Landes, gewählt, damit die Hauptstadt jeder Region nahe wäre.",
+				"Tansanias Wein wird auf dem Land um sie herum angebaut."
+			]
+		}
+	},
+	"dar-es-salaam": {
+		"kind": "city",
+		"population": 2930000,
+		"populationRank": 1,
+		"population1950": 67000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east"
+	},
+	"morogoro": {
+		"kind": "city",
+		"population": 250902,
+		"populationRank": 7,
+		"coastal": false,
+		"position": "east"
+	},
+	"kilosa": {
+		"kind": "city",
+		"population": 91889,
+		"populationRank": 19,
+		"region": "Morogoro",
+		"coastal": false,
+		"position": "east"
+	},
+	"iringa": {
+		"kind": "city",
+		"population": 111820,
+		"populationRank": 15,
+		"coastal": false,
+		"position": "south"
+	},
+	"sumbawanga": {
+		"kind": "city",
+		"population": 89161,
+		"populationRank": 20,
+		"region": "Rukwa",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"mbeya": {
+		"kind": "city",
+		"population": 291649,
+		"populationRank": 6,
+		"coastal": false,
+		"position": "south"
+	},
+	"tukuyu": {
+		"kind": "city",
+		"population": 127570,
+		"populationRank": 13,
+		"region": "Mbeya",
+		"coastal": false,
+		"position": "south"
+	},
+	"mtwara": {
+		"kind": "city",
+		"population": 96602,
+		"populationRank": 18,
+		"coastal": true,
+		"position": "south-east"
+	},
+	"songea": {
+		"kind": "city",
+		"population": 126449,
+		"populationRank": 14,
+		"region": "Ruvuma",
+		"coastal": false,
+		"position": "south"
+	}
+}

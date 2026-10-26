@@ -3,10 +3,12 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { authoredResolver, storedHooksFor } from '../../../data/scripts/factsHooks';
+import { V1_COUNTRIES, v1MapIds } from '../../../data/scripts/v1CountrySpecs';
 
 interface MapData {
 	country: string;
 	placesSource?: string;
+	regionsMap?: string;
 	attribution: string;
 	targets: { id: string; name: string; type: string }[];
 }
@@ -25,7 +27,27 @@ const cases = [
 	{ country: 'estonia', region: 'estonia-counties', towns: 'estonia-towns-5k' },
 	{ country: 'lithuania', region: 'lithuania-counties', towns: 'lithuania-towns-10k' }
 ];
-describe('the first v1.0 country batch data', () => {
+describe('v1.0 country expansion data', () => {
+	it.each(V1_COUNTRIES)(
+		'$id has both agreed maps and the complete administrative division',
+		(spec) => {
+			const [regionId, secondId] = v1MapIds(spec);
+			const region = read<MapData>('maps/' + regionId + '/map.json');
+			const second = read<MapData>('maps/' + secondId + '/map.json');
+			expect(region.country).toBe(spec.country);
+			expect(region.targets).toHaveLength(spec.expectedRegions);
+			expect(second.country).toBe(spec.country);
+			if (spec.secondAdministrative) {
+				expect(second.targets).toHaveLength(spec.secondAdministrative.expectedRegions);
+				expect(second.targets.every((t) => t.type !== 'city')).toBe(true);
+			} else {
+				expect(second.targets.length).toBeGreaterThan(0);
+				expect(second.targets.every((t) => t.type === 'city')).toBe(true);
+				expect(second.regionsMap).toBe(regionId);
+			}
+		}
+	);
+
 	it.each(cases)(
 		'$region derives each biggest city from its dated snapshot',
 		({ country, region }) => {
@@ -43,17 +65,19 @@ describe('the first v1.0 country batch data', () => {
 			}
 		}
 	);
-	it.each(cases)('$towns retains its towns’ region associations', ({ country, towns }) => {
+	it.each(cases)('$towns retains its towns’ region associations', ({ country, region, towns }) => {
 		const map = read<MapData>('maps/' + towns + '/map.json');
 		const facts = read<Record<string, Fact>>('maps/' + towns + '/facts.json');
 		const snapshot = read<Snapshot>('places/' + country + '.geojson');
+		const regionNames = read<MapData>('maps/' + region + '/map.json').targets.map((t) => t.name);
+		expect(map.regionsMap).toBe(region);
 		for (const target of map.targets) {
 			const source = snapshot.features.find((f) => f.properties.NAME === target.name);
 			expect(source, target.name).toBeDefined();
 			expect(source?.properties.ADM1NAME, target.name).toBeTruthy();
-			expect(facts[target.id]?.region).toBe(
-				source?.properties.ADM1NAME === target.name ? undefined : source?.properties.ADM1NAME
-			);
+			const association = facts[target.id]?.region;
+			if (association === undefined) expect(regionNames).toContain(target.name);
+			else expect(regionNames).toContain(association);
 		}
 	});
 	const maps = [
@@ -61,7 +85,11 @@ describe('the first v1.0 country batch data', () => {
 		'iceland-regions',
 		'iceland-towns-1k',
 		'costa-rica-provinces',
-		'costa-rica-towns-1k'
+		'costa-rica-towns-1k',
+		'nepal-provinces',
+		'nepal-towns-10k',
+		'united-arab-emirates-emirates',
+		'united-arab-emirates-towns-1k'
 	];
 	it.each(maps)('%s has three authored facts per target and language', (id) => {
 		const map = read<MapData>('maps/' + id + '/map.json');

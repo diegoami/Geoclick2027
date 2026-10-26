@@ -1,3 +1,4 @@
+import { canonicalRegionAtPoint } from './boundaryRegions.js';
 import { applyBoundaryRenames } from './boundaryRenames.js';
 // Builds data/maps/<id>/facts.json - the derived half of the fact box
 // (FT-34, docs/PLAN_V0.8.md).
@@ -324,7 +325,8 @@ function factsForRegionMap(
 function factsForCityMap(
 	targets: MapTarget[],
 	sources: Sources,
-	extent: Bbox
+	extent: Bbox,
+	canonicalRegions?: { country: string; names: Set<string> }
 ): Record<string, DerivedFact> {
 	const coast = coastIndex(sources.coast.map((f) => f.geometry));
 	// Matched on position, not on name: a town's name on the map may have
@@ -360,7 +362,15 @@ function factsForCityMap(
 			// right once multiplied out, and both nonsense if they are not.
 			const in1950 = Number(row.properties.POP1950);
 			if (Number.isFinite(in1950) && in1950 > 0) fact.population1950 = in1950 * 1000;
-			const region = row.properties.ADM1NAME;
+			const region = canonicalRegions
+				? canonicalRegionAtPoint(
+						target.centroid,
+						sources.admin1,
+						canonicalRegions.country,
+						canonicalRegions.names,
+						Number(row.properties.coordinatePrecision ?? 0)
+					)
+				: row.properties.ADM1NAME;
 			if (typeof region === 'string' && region !== '' && region !== target.name) {
 				fact.region = region;
 			}
@@ -380,6 +390,8 @@ async function buildOne(mapId: string): Promise<number> {
 	const map = JSON.parse(readFileSync(path.join(absOutDir, 'map.json'), 'utf8')) as {
 		country?: string;
 		placesSource?: string;
+		regionsMap?: string;
+		largestCityFacts?: boolean;
 		boundarySource?: string;
 		boundaryFacts?: boolean;
 		boundaryRenames?: Record<string, string>;
@@ -394,11 +406,21 @@ async function buildOne(mapId: string): Promise<number> {
 		map.placesSource ? path.join(REPO_ROOT, map.placesSource) : undefined
 	);
 
+	const regionsMap = map.regionsMap
+		? (JSON.parse(
+				readFileSync(path.join(MAPS_DIR, map.regionsMap, 'map.json'), 'utf8')
+			) as typeof map)
+		: undefined;
+	if (regionsMap && regionsMap.country !== map.country)
+		throw new Error('regionsMap country mismatch');
+	const geometryMap = regionsMap ?? map;
 	// Prepared external snapshots may supply canonical name/admin properties.
 	// Use their actual geometry for area/coast/city facts rather than old admin-1.
-	if (map.boundaryFacts) {
-		if (!map.boundarySource) throw new Error('boundaryFacts requires boundarySource');
-		const external = JSON.parse(readFileSync(path.join(REPO_ROOT, map.boundarySource), 'utf8')) as {
+	if (geometryMap.boundaryFacts) {
+		if (!geometryMap.boundarySource) throw new Error('boundaryFacts requires boundarySource');
+		const external = JSON.parse(
+			readFileSync(path.join(REPO_ROOT, geometryMap.boundarySource), 'utf8')
+		) as {
 			features: Feature<AnyGeometry & { type: string }>[];
 		};
 		if (
@@ -417,11 +439,18 @@ async function buildOne(mapId: string): Promise<number> {
 
 	// Match the same unions used by --rename + --dissolve=name. Without this,
 	// county-right cities can disappear from their merged county's facts.
-	if (map.boundaryRenames)
-		sources.admin1 = applyBoundaryRenames(sources.admin1, map.country, map.boundaryRenames);
+	if (geometryMap.boundaryRenames)
+		sources.admin1 = applyBoundaryRenames(sources.admin1, map.country, geometryMap.boundaryRenames);
 	const isCityMap = map.targets[0]?.type === 'city';
 	const facts = isCityMap
-		? factsForCityMap(map.targets, sources, extent)
+		? factsForCityMap(
+				map.targets,
+				sources,
+				extent,
+				regionsMap
+					? { country: map.country!, names: new Set(regionsMap.targets.map((t) => t.name)) }
+					: undefined
+			)
 		: factsForRegionMap(
 				map.targets,
 				sources,
@@ -429,6 +458,9 @@ async function buildOne(mapId: string): Promise<number> {
 				await adjacencyForMapDir(absOutDir),
 				!map.boundarySource || !!map.boundaryFacts
 			);
+
+	if (map.largestCityFacts === false)
+		for (const fact of Object.values(facts)) delete fact.largestCity;
 
 	// The authored name-facts, where a person has written any (FT-36).
 	const hooksFor = authoredResolver(map.country);

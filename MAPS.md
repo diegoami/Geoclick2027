@@ -1729,7 +1729,7 @@ actually testing the built maps (tippecanoe's zoom-dependent dropping,
 the dense-cluster tolerance bug) — real work, not a footnote.
 
 
-### v1.0 first country batch
+### v1.0 country expansion
 
 Draft implementation tracked in docs/PLAN_V1.0.md. On Linux with GDAL 3.12.2,
 tippecanoe 2.53.0 and PMTiles CLI 1.31.2, from the repository root:
@@ -1776,8 +1776,7 @@ Lithuanian municipalities bypass counties, missing associations use actual
 point-in-polygon containment against Natural Earth (public domain), with
 provenance preserved. Ambiguous or missing associations fail the refresh.
 Budapest is its own county-equivalent unit. GDAL and the Natural Earth admin-1
-source are required for that Lithuanian fallback. The default fetch refreshes
-only these four used snapshots; Costa Rica remains on Natural Earth.
+source are required for that Lithuanian fallback. The fetcher now refreshes twelve used country snapshots; Costa Rica remains on Natural Earth.
 Estonia fetches towns from 1,000 population so smaller county seats remain in
 regional facts; its playable towns map still starts at 5,000. Population selection uses
 the latest dated non-future statement, even when lower than an older value.
@@ -1793,4 +1792,46 @@ beyond the twenty most populous towns selected from its snapshot. This keeps
 county seats and existing authored learning content while adding Erd, Sopron
 and Dunakeszi. The flag still respects source availability, bounds, exclusions
 and the population threshold, and rejects missing/ambiguous retained names.
-The twelve-map batch therefore contains 173 targets.
+The first six countries contain 173 targets; the complete expansion contains 735.
+
+
+The complete v1.0 expansion is configured in data/scripts/v1CountrySpecs.ts:
+22 countries, two maps each, 217 maps in the catalogue after regeneration.
+Fetch the additional pinned polygon inputs before building:
+
+    node --import tsx data/scripts/fetch-v1-boundaries.ts
+    node --import tsx data/scripts/fetch-v1-current-boundaries.ts
+    node --import tsx data/scripts/fetch-v1-towns.ts
+    node --import tsx data/scripts/build-v1-country-maps.ts
+    node --import tsx data/scripts/build-picker.ts
+    node --import tsx data/scripts/audit-v1-country-facts.ts --strict
+
+The first boundary fetcher pins geoBoundaries commit 9469f09 for UAE, Sri
+Lanka, Uzbekistan, Nepal, Taiwan, Uganda, DR Congo and Ghana; each input has
+its source licence and hash in v1BoundarySources.ts. The current-source
+fetcher handles Ethiopia, Tanzania, Latvia, Slovenia, Singapore, Israel,
+Iraq and Angola. v1CurrentBoundarySources.ts records URLs, dates, licences,
+raw hashes (or the canonical feature digest for the volatile Slovenian WFS
+wrapper) and exact expected division counts. Singapore uses two official
+URA 2019 layers: five regions and 55 planning areas; its planning-area map
+is detailed and omits inappropriate largest-city facts.
+
+Angola's 21 provinces are a documented cartographic reconstruction: current
+OSM/Geofabrik outer outlines with the four new-province partitions derived
+from licensed OCHA municipal outlines and legal 2025 groupings. The derivation
+in deriveAngolaProvinces.ts checks area conservation, non-overlap and five
+capital anchors. It is not an official cadastral survey. Iraq's source contains
+Halabja, unlike stale eighteen-governorate snapshots. Ethiopia's contested
+polygon is neutral land context, not a quiz target.
+
+Town maps store regionsMap to reuse the administrative map's source polygons,
+renames and credits for their context and generated region facts. Precise
+coordinates are preferred only after selecting the newest observed population;
+a coastal point can be associated within its stated source precision only when
+one canonical region is unambiguous. Israel explicitly clips to the selected
+six-district source footprint and requires that its source capital survives.
+The twelve snapshot profiles include native labels for Latvia and Slovenia.
+
+The world picker retains Singapore despite the continent quiz's area threshold;
+it is selectable without adding a tiny target to the continent quiz. Rebuild
+its tiles and metadata together using build-picker.ts after this change.

@@ -1,0 +1,178 @@
+{
+	"duhok": {
+		"kind": "city",
+		"population": 986000,
+		"populationRank": 3,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"mosul": {
+		"kind": "city",
+		"population": 1316000,
+		"populationRank": 2,
+		"population1950": 145000,
+		"region": "Nineveh",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"irbil": {
+		"kind": "city",
+		"population": 926000,
+		"populationRank": 4,
+		"population1950": 30000,
+		"region": "Erbil",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"as-sulaymaniyah": {
+		"kind": "city",
+		"population": 723170,
+		"populationRank": 6,
+		"region": "Sulaymaniyah",
+		"coastal": false,
+		"position": "north"
+	},
+	"kirkuk": {
+		"kind": "city",
+		"population": 601433,
+		"populationRank": 8,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"baqubah": {
+		"kind": "city",
+		"population": 299479,
+		"populationRank": 15,
+		"region": "Diyala",
+		"coastal": false,
+		"position": "centre"
+	},
+	"ar-ramadi": {
+		"kind": "city",
+		"population": 295121,
+		"populationRank": 16,
+		"region": "Anbar",
+		"coastal": false,
+		"position": "west"
+	},
+	"al-fallujah": {
+		"kind": "city",
+		"population": 231819,
+		"populationRank": 18,
+		"region": "Anbar",
+		"coastal": false,
+		"position": "west"
+	},
+	"baghdad": {
+		"kind": "city",
+		"population": 5054000,
+		"populationRank": 1,
+		"population1950": 579000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Founded in 762 by the caliph al-Mansur as a round city.",
+				"Its House of Wisdom was a great centre of learning in the Islamic golden age.",
+				"The Tigris flows through its centre."
+			],
+			"it": [
+				"Fondata nel 762 dal califfo al-Mansur come città rotonda.",
+				"La sua Casa della sapienza fu un grande centro di studi nell’età d’oro islamica.",
+				"Il Tigri scorre nel suo centro."
+			],
+			"de": [
+				"762 vom Kalifen al-Mansur als runde Stadt gegründet.",
+				"Ihr Haus der Weisheit war im goldenen Zeitalter des Islam ein großes Zentrum der Gelehrsamkeit.",
+				"Der Tigris fließt durch ihr Zentrum."
+			]
+		}
+	},
+	"karbala": {
+		"kind": "city",
+		"population": 510692,
+		"populationRank": 10,
+		"coastal": false,
+		"position": "west"
+	},
+	"al-kut": {
+		"kind": "city",
+		"population": 321521,
+		"populationRank": 14,
+		"region": "Wasit",
+		"coastal": false,
+		"position": "south"
+	},
+	"al-hillah": {
+		"kind": "city",
+		"population": 594605,
+		"populationRank": 9,
+		"region": "Babil",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"najaf": {
+		"kind": "city",
+		"population": 665552,
+		"populationRank": 7,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ad-diwaniyah": {
+		"kind": "city",
+		"population": 358408,
+		"populationRank": 12,
+		"region": "Qadisiyyah",
+		"coastal": false,
+		"position": "south"
+	},
+	"al-amarah": {
+		"kind": "city",
+		"population": 345007,
+		"populationRank": 13,
+		"region": "Maysan",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"ash-shatrah": {
+		"kind": "city",
+		"population": 161949,
+		"populationRank": 20,
+		"region": "Dhi Qar",
+		"coastal": false,
+		"position": "south"
+	},
+	"as-samawah": {
+		"kind": "city",
+		"population": 174978,
+		"populationRank": 19,
+		"region": "Muthanna",
+		"coastal": false,
+		"position": "south"
+	},
+	"an-nasiriyah": {
+		"kind": "city",
+		"population": 451547,
+		"populationRank": 11,
+		"region": "Dhi Qar",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"basra": {
+		"kind": "city",
+		"population": 870000,
+		"populationRank": 5,
+		"population1950": 116000,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"az-aubayr": {
+		"kind": "city",
+		"population": 262219,
+		"populationRank": 17,
+		"region": "Basra",
+		"coastal": false,
+		"position": "south-east"
+	}
+}

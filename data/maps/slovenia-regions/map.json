@@ -1,0 +1,446 @@
+{
+	"id": "slovenia-regions",
+	"name": "Slovenia — Regions",
+	"country": "Slovenia",
+	"attribution": "Geodetska uprava Republike Slovenije, Register prostorskih enot - statisticne regije, snapshot 2026-10-26; 2026-10-26; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/slovenia-regions-2026-10-26.geojson",
+	"placesSource": "data/places/slovenia.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "pomurska",
+			"name": "Pomurska",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.186349999999997,
+				46.6726
+			],
+			"bbox": [
+				15.7866,
+				46.469,
+				16.5861,
+				46.8762
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						15.9798,
+						46.6167
+					],
+					[
+						16.1968,
+						46.7667
+					],
+					[
+						16.4139,
+						46.5971
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "koroska",
+			"name": "Koroška",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.059899999999999,
+				46.52325
+			],
+			"bbox": [
+				14.6749,
+				46.3867,
+				15.4449,
+				46.6598
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						14.8178,
+						46.4955
+					],
+					[
+						15.1052,
+						46.516
+					],
+					[
+						15.373,
+						46.5897
+					]
+				],
+				"aspect": 2.22
+			}
+		},
+		{
+			"id": "podravska",
+			"name": "Podravska",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.80935,
+				46.480999999999995
+			],
+			"bbox": [
+				15.3112,
+				46.2544,
+				16.3075,
+				46.7076
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						15.4314,
+						46.4838
+					],
+					[
+						15.7167,
+						46.5089
+					],
+					[
+						16.002,
+						46.4273
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "gorenjska",
+			"name": "Gorenjska",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.1251,
+				46.2633
+			],
+			"bbox": [
+				13.6763,
+				46.0034,
+				14.5739,
+				46.5232
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						13.8733,
+						46.3605
+					],
+					[
+						14.1801,
+						46.2075
+					],
+					[
+						14.4869,
+						46.258
+					]
+				],
+				"aspect": 1.43
+			}
+		},
+		{
+			"id": "savinjska",
+			"name": "Savinjska",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.1834,
+				46.2383
+			],
+			"bbox": [
+				14.5652,
+				45.9964,
+				15.8016,
+				46.4802
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						14.7225,
+						46.3576
+					],
+					[
+						15.1721,
+						46.3281
+					],
+					[
+						15.5538,
+						46.157
+					]
+				],
+				"aspect": 2.59
+			}
+		},
+		{
+			"id": "goriska",
+			"name": "Goriška",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.7579,
+				46.103899999999996
+			],
+			"bbox": [
+				13.3755,
+				45.7615,
+				14.1403,
+				46.4463
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						13.5927,
+						46.3541
+					],
+					[
+						13.747,
+						46.1027
+					],
+					[
+						13.954,
+						45.8689
+					]
+				],
+				"aspect": 1.78
+			}
+		},
+		{
+			"id": "zasavska",
+			"name": "Zasavska",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.950099999999999,
+				46.0854
+			],
+			"bbox": [
+				14.7118,
+				45.963,
+				15.1884,
+				46.2078
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						14.8003,
+						46.1064
+					],
+					[
+						14.9571,
+						46.0701
+					],
+					[
+						15.1138,
+						46.1215
+					]
+				],
+				"aspect": 1.76
+			}
+		},
+		{
+			"id": "osrednjeslovenska",
+			"name": "Osrednjeslovenska",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.523499999999999,
+				46.047200000000004
+			],
+			"bbox": [
+				14.0979,
+				45.7266,
+				14.9491,
+				46.3678
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						14.1838,
+						46.0196
+					],
+					[
+						14.4985,
+						46.1046
+					],
+					[
+						14.8133,
+						45.9798
+					]
+				],
+				"aspect": 1.5
+			}
+		},
+		{
+			"id": "posavska",
+			"name": "Posavska",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.3993,
+				45.94215
+			],
+			"bbox": [
+				15.0661,
+				45.7912,
+				15.7325,
+				46.0931
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						15.1567,
+						46.0475
+					],
+					[
+						15.3832,
+						45.9458
+					],
+					[
+						15.6458,
+						45.9212
+					]
+				],
+				"aspect": 2.06
+			}
+		},
+		{
+			"id": "jugovzhodna-slovenija",
+			"name": "Jugovzhodna Slovenija",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.97175,
+				45.72165
+			],
+			"bbox": [
+				14.5375,
+				45.4214,
+				15.406,
+				46.0219
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						14.6751,
+						45.6654
+					],
+					[
+						14.9716,
+						45.7108
+					],
+					[
+						15.2681,
+						45.7406
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "primorsko-notranjska",
+			"name": "Primorsko-notranjska",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.3081,
+				45.681749999999994
+			],
+			"bbox": [
+				14.0427,
+				45.4693,
+				14.5735,
+				45.8942
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						14.1286,
+						45.6893
+					],
+					[
+						14.3171,
+						45.6549
+					],
+					[
+						14.5056,
+						45.7091
+					]
+				],
+				"aspect": 0.73
+			}
+		},
+		{
+			"id": "obalno-kraska",
+			"name": "Obalno-kraška",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.848749999999999,
+				45.64465
+			],
+			"bbox": [
+				13.5664,
+				45.4259,
+				14.1311,
+				45.8634
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						13.6394,
+						45.5012
+					],
+					[
+						13.8472,
+						45.5978
+					],
+					[
+						14.055,
+						45.6281
+					]
+				],
+				"aspect": 1.77
+			}
+		}
+	],
+	"tourOrder": [
+		"pomurska",
+		"koroska",
+		"podravska",
+		"gorenjska",
+		"savinjska",
+		"goriska",
+		"zasavska",
+		"osrednjeslovenska",
+		"posavska",
+		"jugovzhodna-slovenija",
+		"primorsko-notranjska",
+		"obalno-kraska"
+	]
+}

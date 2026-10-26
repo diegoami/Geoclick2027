@@ -1,0 +1,155 @@
+{
+	"northern": {
+		"kind": "region",
+		"borders": [
+			"Eastern",
+			"North Central",
+			"North Western"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jaffna",
+			"nameDe": "Jaffna",
+			"nameIt": "Jaffna",
+			"population": 88138
+		},
+		"position": "north-west"
+	},
+	"north-central": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Eastern",
+			"North Western",
+			"Northern"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Anuradhapura",
+			"nameDe": "Anuradhapura",
+			"nameIt": "Anurādhapura",
+			"population": 63208
+		},
+		"position": "centre"
+	},
+	"north-western": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"North Central",
+			"Northern",
+			"Sabaragamuwa",
+			"Western"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"eastern": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"North Central",
+			"Northern",
+			"Southern",
+			"Uva"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Trincomalee",
+			"nameDe": "Trincomalee",
+			"nameIt": "Trincomalee",
+			"population": 99135
+		},
+		"position": "east"
+	},
+	"central": {
+		"kind": "region",
+		"borders": [
+			"Eastern",
+			"North Central",
+			"North Western",
+			"Sabaragamuwa",
+			"Uva"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kandy",
+			"nameDe": "Kandy",
+			"nameIt": "Kandy",
+			"population": 120087
+		},
+		"peak": {
+			"name": "Pidurutalagala",
+			"elevation": 2524
+		},
+		"position": "centre"
+	},
+	"uva": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Eastern",
+			"Sabaragamuwa",
+			"Southern"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Badulla",
+			"nameDe": "Badulla",
+			"nameIt": "Badulla",
+			"population": 42923
+		},
+		"position": "south-east"
+	},
+	"western": {
+		"kind": "region",
+		"borders": [
+			"North Western",
+			"Sabaragamuwa",
+			"Southern"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Colombo",
+			"nameDe": "Colombo",
+			"nameIt": "Colombo",
+			"population": 647557
+		},
+		"position": "south-west"
+	},
+	"sabaragamuwa": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"North Western",
+			"Southern",
+			"Uva",
+			"Western"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kegalle",
+			"nameDe": "Kegalle",
+			"nameIt": "Kegalle",
+			"population": 17962
+		},
+		"position": "south"
+	},
+	"southern": {
+		"kind": "region",
+		"borders": [
+			"Eastern",
+			"Sabaragamuwa",
+			"Uva",
+			"Western"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Galle",
+			"nameDe": "Galle",
+			"nameIt": "Galle",
+			"population": 93118
+		},
+		"position": "south"
+	}
+}

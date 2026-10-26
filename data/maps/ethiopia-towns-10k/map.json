@@ -1,0 +1,392 @@
+{
+	"id": "ethiopia-towns-10k",
+	"name": "Ethiopia — Towns",
+	"country": "Ethiopia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; OCHA Field Information Services; COD-AB Ethiopia version 04; 2025; CC BY 3.0 IGO; https://creativecommons.org/licenses/by/3.0/igo/; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"regionsMap": "ethiopia-regions",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "adigrat",
+			"name": "Adigrat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.4699833,
+				14.2804319
+			],
+			"bbox": [
+				39.4699833,
+				14.2804319,
+				39.4699833,
+				14.2804319
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mekele",
+			"name": "Mekele",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.4699833,
+				13.4999886
+			],
+			"bbox": [
+				39.4699833,
+				13.4999886,
+				39.4699833,
+				13.4999886
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "gondar",
+			"name": "Gondar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.4600284,
+				12.6100429
+			],
+			"bbox": [
+				37.4600284,
+				12.6100429,
+				37.4600284,
+				12.6100429
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bahir-dar",
+			"name": "Bahir Dar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.3832889,
+				11.6000529
+			],
+			"bbox": [
+				37.3832889,
+				11.6000529,
+				37.3832889,
+				11.6000529
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "dese",
+			"name": "Dese",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.6300252,
+				11.1299783
+			],
+			"bbox": [
+				39.6300252,
+				11.1299783,
+				39.6300252,
+				11.1299783
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "debre-markos",
+			"name": "Debre Markos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.7200126,
+				10.3399748
+			],
+			"bbox": [
+				37.7200126,
+				10.3399748,
+				37.7200126,
+				10.3399748
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "dire-dawa",
+			"name": "Dire Dawa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.8600183,
+				9.5899947
+			],
+			"bbox": [
+				41.8600183,
+				9.5899947,
+				41.8600183,
+				9.5899947
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "harar",
+			"name": "Harar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				42.1500264,
+				9.3199595
+			],
+			"bbox": [
+				42.1500264,
+				9.3199595,
+				42.1500264,
+				9.3199595
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nekemte",
+			"name": "Nekemte",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.5300077,
+				9.0904645
+			],
+			"bbox": [
+				36.5300077,
+				9.0904645,
+				36.5300077,
+				9.0904645
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "addis-ababa",
+			"name": "Addis Ababa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.6980586,
+				9.0352562
+			],
+			"bbox": [
+				38.6980586,
+				9.0352562,
+				38.6980586,
+				9.0352562
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nazret",
+			"name": "Nazret",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.2699955,
+				8.5499807
+			],
+			"bbox": [
+				39.2699955,
+				8.5499807,
+				39.2699955,
+				8.5499807
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "giyon",
+			"name": "Giyon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.9700232,
+				8.5304212
+			],
+			"bbox": [
+				37.9700232,
+				8.5304212,
+				37.9700232,
+				8.5304212
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "asela",
+			"name": "Asela",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.1399259,
+				7.9504049
+			],
+			"bbox": [
+				39.1399259,
+				7.9504049,
+				39.1399259,
+				7.9504049
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "jima",
+			"name": "Jima",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.8300411,
+				7.6799821
+			],
+			"bbox": [
+				36.8300411,
+				7.6799821,
+				36.8300411,
+				7.6799821
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "hosaina",
+			"name": "Hosaina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.8500305,
+				7.5503776
+			],
+			"bbox": [
+				37.8500305,
+				7.5503776,
+				37.8500305,
+				7.5503776
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "shashemene",
+			"name": "Shashemene",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.590037,
+				7.200399
+			],
+			"bbox": [
+				38.590037,
+				7.200399,
+				38.590037,
+				7.200399
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "awasa",
+			"name": "Awasa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.4769986,
+				7.0599961
+			],
+			"bbox": [
+				38.4769986,
+				7.0599961,
+				38.4769986,
+				7.0599961
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "sodo",
+			"name": "Sodo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.7499849,
+				6.9000039
+			],
+			"bbox": [
+				37.7499849,
+				6.9000039,
+				37.7499849,
+				6.9000039
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "arba-minch",
+			"name": "Arba Minch",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.5499971,
+				6.0400047
+			],
+			"bbox": [
+				37.5499971,
+				6.0400047,
+				37.5499971,
+				6.0400047
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gode",
+			"name": "Gode",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.4499987,
+				5.9500102
+			],
+			"bbox": [
+				43.4499987,
+				5.9500102,
+				43.4499987,
+				5.9500102
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"adigrat",
+		"mekele",
+		"gondar",
+		"bahir-dar",
+		"dese",
+		"debre-markos",
+		"dire-dawa",
+		"harar",
+		"nekemte",
+		"addis-ababa",
+		"nazret",
+		"giyon",
+		"asela",
+		"jima",
+		"hosaina",
+		"shashemene",
+		"awasa",
+		"sodo",
+		"arba-minch",
+		"gode"
+	]
+}

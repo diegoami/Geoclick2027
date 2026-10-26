@@ -5,6 +5,7 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
+import { mapGroups } from './mapCatalog';
 
 const repo = (path: string) => fileURLToPath(new URL(`../../../${path}`, import.meta.url));
 const index = JSON.parse(readFileSync(repo('data/maps/index.json'), 'utf8')) as {
@@ -18,7 +19,7 @@ const continents = new Set([
 	'South America',
 	'Oceania'
 ]);
-const countries = new Set(index.map((m) => m.country).filter((c) => !continents.has(c)));
+const countries = new Set(mapGroups.map((g) => g.country).filter((c) => !continents.has(c)));
 
 describe('the map counts the docs state', () => {
 	for (const file of ['README.md', 'ARCHITECTURE.md']) {

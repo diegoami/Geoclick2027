@@ -76,6 +76,7 @@ describe('the catalog order', () => {
 				'italy-towns-50k-north',
 				'italy-towns-50k-south',
 				'philippines-provinces',
+				'singapore-planning-areas',
 				'spain-provinces',
 				'usa-cities-center',
 				'usa-cities-east',

@@ -1,0 +1,179 @@
+{
+	"bawku": {
+		"kind": "city",
+		"population": 61151,
+		"populationRank": 14,
+		"region": "Upper East",
+		"coastal": false,
+		"position": "north"
+	},
+	"bolgatanga": {
+		"kind": "city",
+		"population": 89255,
+		"populationRank": 12,
+		"region": "Upper East",
+		"coastal": false,
+		"position": "north"
+	},
+	"wa": {
+		"kind": "city",
+		"population": 107214,
+		"populationRank": 10,
+		"region": "Upper West",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"saboba": {
+		"kind": "city",
+		"population": 95683,
+		"populationRank": 11,
+		"region": "Northern",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"tamale": {
+		"kind": "city",
+		"population": 729768,
+		"populationRank": 3,
+		"region": "Northern",
+		"coastal": false,
+		"position": "north"
+	},
+	"hohoe": {
+		"kind": "city",
+		"population": 56202,
+		"populationRank": 16,
+		"region": "Volta",
+		"coastal": false,
+		"position": "east"
+	},
+	"mampong": {
+		"kind": "city",
+		"population": 42037,
+		"populationRank": 18,
+		"region": "Ashanti",
+		"coastal": false,
+		"position": "centre"
+	},
+	"agogo": {
+		"kind": "city",
+		"population": 36797,
+		"populationRank": 19,
+		"region": "Ashanti",
+		"coastal": false,
+		"position": "south"
+	},
+	"kumasi": {
+		"kind": "city",
+		"population": 3903480,
+		"populationRank": 1,
+		"region": "Ashanti",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ho": {
+		"kind": "city",
+		"population": 125914,
+		"populationRank": 9,
+		"region": "Volta",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"dome": {
+		"kind": "city",
+		"population": 56655,
+		"populationRank": 15,
+		"region": "Western North",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"obuasi": {
+		"kind": "city",
+		"population": 180460,
+		"populationRank": 6,
+		"region": "Ashanti",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"aflao": {
+		"kind": "city",
+		"population": 66546,
+		"populationRank": 13,
+		"region": "Volta",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"koforidua": {
+		"kind": "city",
+		"population": 127334,
+		"populationRank": 8,
+		"region": "Eastern",
+		"coastal": false,
+		"position": "south"
+	},
+	"tema": {
+		"kind": "city",
+		"population": 161612,
+		"populationRank": 7,
+		"region": "Greater Accra",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"accra": {
+		"kind": "city",
+		"population": 1782150,
+		"populationRank": 2,
+		"region": "Greater Accra",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From an Akan word often read as \"ants\", for the anthills on its plain.",
+				"Kwame Nkrumah declared the country’s independence here in 1957.",
+				"Three European forts, Dutch, Danish and British, stand on its old shoreline."
+			],
+			"it": [
+				"Da una parola akan spesso letta come \"formiche\", per i formicai della sua pianura.",
+				"Qui Kwame Nkrumah proclamò l’indipendenza del paese nel 1957.",
+				"Sulla sua vecchia riva sorgono tre forti europei, olandese, danese e britannico."
+			],
+			"de": [
+				"Von einem Akan-Wort, das oft als „Ameisen“ gedeutet wird, nach den Ameisenhügeln auf ihrer Ebene.",
+				"Kwame Nkrumah erklärte hier 1957 die Unabhängigkeit des Landes.",
+				"Drei europäische Forts, ein niederländisches, ein dänisches und ein britisches, stehen an ihrem alten Ufer."
+			]
+		}
+	},
+	"winneba": {
+		"kind": "city",
+		"population": 55331,
+		"populationRank": 17,
+		"region": "Central",
+		"coastal": true,
+		"position": "south"
+	},
+	"tarkwa": {
+		"kind": "city",
+		"population": 34941,
+		"populationRank": 20,
+		"region": "Western",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"cape-coast": {
+		"kind": "city",
+		"population": 189925,
+		"populationRank": 5,
+		"coastal": true,
+		"position": "south"
+	},
+	"sekondi-takoradi": {
+		"kind": "city",
+		"population": 539548,
+		"populationRank": 4,
+		"region": "Western",
+		"coastal": true,
+		"position": "south-west"
+	}
+}

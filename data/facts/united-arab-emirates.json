@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for United Arab Emirates (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"abu-dhabi": {
 		"city": {
@@ -20,6 +21,382 @@
 				"„Vater der Gazelle“.",
 				"Der Louvre Abu Dhabi wurde 2017 unter einer Kuppel aus Stahlgitter eröffnet.",
 				"Die Scheich-Zayid-Moschee hat einen der größten Teppiche der Welt."
+			]
+		},
+		"region": {
+			"en": [
+				"Its Arabic name is commonly translated as father of the gazelle.",
+				"Al Ain’s cultural sites include ancient tombs and oasis landscapes.",
+				"Traditional falaj channels still irrigate the Al Ain Oasis."
+			],
+			"it": [
+				"Il nome arabo è comunemente tradotto come padre della gazzella.",
+				"I siti culturali di Al Ain comprendono tombe antiche e paesaggi di oasi.",
+				"I tradizionali canali falaj irrigano ancora l’oasi di Al Ain."
+			],
+			"de": [
+				"Der arabische Name wird gewöhnlich als Vater der Gazelle übersetzt.",
+				"Zu den Kulturstätten von Al Ain gehören alte Gräber und Oasenlandschaften.",
+				"Traditionelle Faladsch-Kanäle bewässern noch immer die Oase von Al Ain."
+			]
+		}
+	},
+	"_sources": {
+		"umm-al-quwain:region": [
+			"https://u.ae/en/about-the-uae/the-seven-emirates",
+			"https://culturalmap.gov.ae/en/facilities/ed-dour-archaeological-site"
+		],
+		"ras-al-khaimah:region": [
+			"https://www.rakmediaoffice.ae/en/about-ras-al-khaimah/history-of-ras-al-khaimah/",
+			"https://visitrasalkhaimah.com/about-ras-al-khaimah/history-culture/"
+		],
+		"fujairah:region": [
+			"https://u.ae/en/about-the-uae/the-seven-emirates",
+			"https://fujairah.ae/en/pages/about.aspx"
+		],
+		"sharjah:region": [
+			"https://www.visitsharjah.com/activities/culture/"
+		],
+		"ajman:region": [
+			"https://u.ae/en/about-the-uae/the-seven-emirates",
+			"https://scc.ajman.ae/sites/default/files/publications/book/EN-Statistical%20Book%202025.pdf"
+		],
+		"dubai:region": [
+			"https://www.visitdubai.com/en/explore-dubai/about-dubai"
+		],
+		"abu-dhabi:region": [
+			"https://en.wikipedia.org/wiki/Abu_Dhabi",
+			"https://visitabudhabi.ae/en/plan-your-trip/article-hub/the-ancient-world-of-al-ain-abu-dhabis-unesco-heritage"
+		],
+		"ras-al-khaimah:city": [
+			"https://www.rakmediaoffice.ae/en/about-ras-al-khaimah/history-of-ras-al-khaimah/",
+			"https://visitrasalkhaimah.com/about-ras-al-khaimah/history-culture/"
+		],
+		"dibba-al-fujairah:city": [
+			"https://tourism.fujairah.ae/destinations/dibba"
+		],
+		"ajman:city": [
+			"https://moc.gov.ae/en/archaeological_site/hsn-aajman/"
+		],
+		"sharjah:city": [
+			"https://www.uil.unesco.org/en/learning-cities/sharjah",
+			"https://www.sharjahwbc.com/content/userfiles/assets/documents/Sharjah_World_Book_Capital_2019_Final_Report.pdf"
+		],
+		"dubai:city": [
+			"https://www.dubai.ae/web/dubai.ae/visit/staying-in-dubai/dubai-neighborhoods/",
+			"https://pddportalstg.dubai.gov.ae/en/uae-dubai/about-dubai/"
+		],
+		"fujairah:city": [
+			"https://moc.gov.ae/en/archaeological_site/klaa-alfjyr/"
+		],
+		"jebel-ali:city": [
+			"https://dpw-prod-cd-1.dpworld.com/about-us",
+			"https://www.dpworld.com/uae/-/media/project/dpwg/dpwg-tenant/mea/uae/media-files/publications/56962015114925pm845-dp-world-uae-region-handbook-english-1.pdf?rev=-1"
+		],
+		"hatta:city": [
+			"https://www.visitdubai.com/en/articles/hattas-rich-history",
+			"https://www.dubai.ae/arriving-to-dubai"
+		],
+		"al-ain:city": [
+			"https://aau.ac.ae/en/about-aau/alain-city/",
+			"https://visitabudhabi.ae/en/plan-your-trip/article-hub/the-ancient-world-of-al-ain-abu-dhabis-unesco-heritage"
+		],
+		"madinat-zayed:city": [
+			"https://en.wikipedia.org/wiki/Madinat_Zayed",
+			"https://cdnc.heyzine.com/files/uploaded/7dc20a4e6b81021e694df2af9f41d507f4cafbe2-1.pdf"
+		]
+	},
+	"umm-al-quwain": {
+		"region": {
+			"en": [
+				"It was one of the six emirates that founded the federation in 1971.",
+				"Ed Dur was an ancient trading port linking Mesopotamia, Persia and India.",
+				"Its archaeological remains include a temple dedicated to the sun god."
+			],
+			"it": [
+				"Fu uno dei sei emirati che fondarono la federazione nel 1971.",
+				"Ed Dur era un antico porto commerciale tra Mesopotamia, Persia e India.",
+				"I suoi resti archeologici comprendono un tempio dedicato al dio del sole."
+			],
+			"de": [
+				"Es gehörte zu den sechs Emiraten, die 1971 die Föderation gründeten.",
+				"Ed Dur war ein alter Handelshafen zwischen Mesopotamien, Persien und Indien.",
+				"Zu seinen archäologischen Resten gehört ein Tempel des Sonnengottes."
+			]
+		}
+	},
+	"ras-al-khaimah": {
+		"region": {
+			"en": [
+				"It joined the UAE in 1972, after the other six emirates.",
+				"The medieval port of Julfar traded across the Gulf.",
+				"Pottery made in its valleys was exported for centuries."
+			],
+			"it": [
+				"Entrò negli EAU nel 1972, dopo gli altri sei emirati.",
+				"Il porto medievale di Julfar commerciava in tutto il Golfo.",
+				"Le ceramiche prodotte nelle sue valli furono esportate per secoli."
+			],
+			"de": [
+				"Es trat den VAE 1972 nach den anderen sechs Emiraten bei.",
+				"Der mittelalterliche Hafen Julfar handelte im gesamten Golfgebiet.",
+				"Keramik aus seinen Tälern wurde über Jahrhunderte exportiert."
+			]
+		},
+		"city": {
+			"en": [
+				"The town developed as the successor to the trading centre of Julfar.",
+				"Its growth followed the silting of Julfar’s earlier harbour.",
+				"Its national museum presents the area’s archaeological and maritime heritage."
+			],
+			"it": [
+				"La città si sviluppò come erede del centro commerciale di Julfar.",
+				"La sua crescita seguì l’insabbiamento del precedente porto di Julfar.",
+				"Il museo nazionale presenta il patrimonio archeologico e marittimo della zona."
+			],
+			"de": [
+				"Die Stadt entwickelte sich als Nachfolgerin des Handelszentrums Julfar.",
+				"Ihr Wachstum folgte auf die Versandung des früheren Hafens von Julfar.",
+				"Ihr Nationalmuseum zeigt das archäologische und maritime Erbe der Gegend."
+			]
+		}
+	},
+	"fujairah": {
+		"region": {
+			"en": [
+				"It was among the founding emirates of the UAE in 1971.",
+				"Mountain forts once guarded routes through the Hajar Mountains.",
+				"Its heritage village displays houses and fishing boats made from palm fronds."
+			],
+			"it": [
+				"Fu tra gli emirati fondatori degli EAU nel 1971.",
+				"Fortezze montane proteggevano le vie attraverso i monti Hajar.",
+				"Il suo villaggio del patrimonio espone case e barche da pesca realizzate con fronde di palma."
+			],
+			"de": [
+				"Es gehörte 1971 zu den Gründungsemiraten der VAE.",
+				"Bergfestungen bewachten einst Wege durch das Hadschar-Gebirge.",
+				"Sein Museumsdorf zeigt Häuser und Fischerboote aus Palmblättern."
+			]
+		},
+		"city": {
+			"en": [
+				"Its old fort was built on a rocky rise overlooking the town.",
+				"The fort combines three round towers with one square tower.",
+				"Its irregular design follows the shape of the underlying rocks."
+			],
+			"it": [
+				"L’antica fortezza fu costruita su un rilievo roccioso che domina la città.",
+				"La fortezza combina tre torri rotonde con una torre quadrata.",
+				"Il disegno irregolare segue la forma delle rocce sottostanti."
+			],
+			"de": [
+				"Die alte Festung entstand auf einer felsigen Anhöhe über der Stadt.",
+				"Sie verbindet drei Rundtürme mit einem viereckigen Turm.",
+				"Ihr unregelmäßiger Grundriss folgt der Form der darunterliegenden Felsen."
+			]
+		}
+	},
+	"sharjah": {
+		"region": {
+			"en": [
+				"It received the title Cultural Capital of the Arab World in 1998.",
+				"Its cultural institutions range from archaeology museums to contemporary art spaces.",
+				"The emirate’s eastern settlements include Khorfakkan."
+			],
+			"it": [
+				"Ricevette il titolo di Capitale della cultura del mondo arabo nel 1998.",
+				"Le sue istituzioni culturali spaziano dai musei archeologici agli spazi di arte contemporanea.",
+				"Tra gli insediamenti orientali dell’emirato vi è Khorfakkan."
+			],
+			"de": [
+				"Es erhielt 1998 den Titel Kulturhauptstadt der arabischen Welt.",
+				"Seine Kultureinrichtungen reichen von Archäologiemuseen bis zu Räumen für Gegenwartskunst.",
+				"Zu den östlichen Siedlungen des Emirats gehört Khorfakkan."
+			]
+		},
+		"city": {
+			"en": [
+				"It was designated Islamic Culture Capital in 2014.",
+				"Its museums and festivals are central to the city’s cultural life.",
+				"It also received UNESCO’s World Book Capital title for 2019."
+			],
+			"it": [
+				"Fu designata Capitale della cultura islamica nel 2014.",
+				"Musei e festival sono centrali nella vita culturale cittadina.",
+				"Ricevette anche il titolo UNESCO di Capitale mondiale del libro per il 2019."
+			],
+			"de": [
+				"Die Stadt wurde 2014 zur Hauptstadt der islamischen Kultur ernannt.",
+				"Museen und Festivals prägen ihr kulturelles Leben.",
+				"Sie erhielt auch den UNESCO-Titel Welthauptstadt des Buches für 2019."
+			]
+		}
+	},
+	"ajman": {
+		"region": {
+			"en": [
+				"It was one of the federation’s founding emirates in 1971.",
+				"Its territory includes the separate inland areas of Masfout and Manama.",
+				"Masfout has fertile valleys and a long farming tradition."
+			],
+			"it": [
+				"Fu uno degli emirati fondatori della federazione nel 1971.",
+				"Il territorio comprende le aree interne separate di Masfout e Manama.",
+				"Masfout ha valli fertili e una lunga tradizione agricola."
+			],
+			"de": [
+				"Es war 1971 eines der Gründungsemirate der Föderation.",
+				"Zu seinem Gebiet gehören die abgetrennten Binnengebiete Masfout und Manama.",
+				"Masfout besitzt fruchtbare Täler und eine lange Landwirtschaftstradition."
+			]
+		},
+		"city": {
+			"en": [
+				"Its old ruling-family fort became a museum in 1991.",
+				"The fort served as police headquarters after the rulers moved out in 1970.",
+				"Museum displays recreate traditional Emirati occupations and domestic life."
+			],
+			"it": [
+				"L’antica fortezza della famiglia regnante divenne un museo nel 1991.",
+				"La fortezza ospitò il comando di polizia dopo il trasferimento dei governanti nel 1970.",
+				"Le esposizioni ricreano mestieri e vita domestica tradizionali degli Emirati."
+			],
+			"de": [
+				"Die frühere Festung der Herrscherfamilie wurde 1991 zum Museum.",
+				"Nach dem Auszug der Herrscher 1970 diente sie als Polizeihauptquartier.",
+				"Die Ausstellungen zeigen traditionelle emiratische Berufe und häusliches Leben."
+			]
+		}
+	},
+	"dubai": {
+		"region": {
+			"en": [
+				"The Al Maktoum family established its rule here in 1833.",
+				"Pearling and maritime trade shaped its early economy.",
+				"Oil was discovered in the emirate in 1966."
+			],
+			"it": [
+				"La famiglia Al Maktoum vi stabilì il proprio governo nel 1833.",
+				"La pesca delle perle e il commercio marittimo ne plasmarono l’economia iniziale.",
+				"Il petrolio fu scoperto nell’emirato nel 1966."
+			],
+			"de": [
+				"Die Familie Al Maktoum begründete hier 1833 ihre Herrschaft.",
+				"Perlenfischerei und Seehandel prägten seine frühe Wirtschaft.",
+				"Im Emirat wurde 1966 Erdöl entdeckt."
+			]
+		},
+		"city": {
+			"en": [
+				"The historic town grew around Dubai Creek.",
+				"Bur Dubai and Deira developed on opposite sides of the creek.",
+				"Deira’s traditional markets include the Gold and Spice souks."
+			],
+			"it": [
+				"La città storica crebbe attorno al Dubai Creek.",
+				"Bur Dubai e Deira si svilupparono sui lati opposti dell’insenatura.",
+				"Tra i mercati tradizionali di Deira vi sono i suq dell’oro e delle spezie."
+			],
+			"de": [
+				"Die historische Stadt wuchs am Dubai Creek.",
+				"Bur Dubai und Deira entstanden an gegenüberliegenden Seiten des Meeresarms.",
+				"Zu Deiras traditionellen Märkten gehören der Gold- und der Gewürzsouk."
+			]
+		}
+	},
+	"dibba-al-fujairah": {
+		"city": {
+			"en": [
+				"Its fort recalls Dibba’s history as a defended agricultural settlement.",
+				"The fort also served as a place to receive guests and settle disputes.",
+				"Its coves attract divers and traditional dhow trips."
+			],
+			"it": [
+				"La fortezza ricorda la storia di Dibba come insediamento agricolo fortificato.",
+				"La fortezza serviva anche ad accogliere ospiti e risolvere controversie.",
+				"Le sue insenature attirano subacquei ed escursioni sui tradizionali dhow."
+			],
+			"de": [
+				"Die Festung erinnert an Dibbas Geschichte als geschützte Landwirtschaftssiedlung.",
+				"Sie diente auch dem Empfang von Gästen und der Beilegung von Streitigkeiten.",
+				"Die Buchten ziehen Taucher und Ausflüge mit traditionellen Dhaus an."
+			]
+		}
+	},
+	"jebel-ali": {
+		"city": {
+			"en": [
+				"Its modern port opened in 1979.",
+				"The harbour was built to support large-scale trade and industrial development.",
+				"The Jebel Ali Free Zone began operating in 1985."
+			],
+			"it": [
+				"Il porto moderno aprì nel 1979.",
+				"Il bacino fu costruito per sostenere il commercio su larga scala e lo sviluppo industriale.",
+				"La zona franca di Jebel Ali iniziò a operare nel 1985."
+			],
+			"de": [
+				"Der moderne Hafen wurde 1979 eröffnet.",
+				"Das Hafenbecken sollte Handel im großen Maßstab und Industrieentwicklung fördern.",
+				"Die Freihandelszone Jebel Ali nahm 1985 den Betrieb auf."
+			]
+		}
+	},
+	"hatta": {
+		"city": {
+			"en": [
+				"Its heritage village preserves the history of Dubai’s mountain communities.",
+				"Forts and watchtowers recall older defensive settlements.",
+				"Its border crossing connects Dubai with Oman."
+			],
+			"it": [
+				"Il villaggio del patrimonio conserva la storia delle comunità montane di Dubai.",
+				"Fortezze e torri di guardia ricordano gli antichi insediamenti difensivi.",
+				"Il suo valico di frontiera collega Dubai all’Oman."
+			],
+			"de": [
+				"Das Museumsdorf bewahrt die Geschichte der Berggemeinden Dubais.",
+				"Festungen und Wachtürme erinnern an ältere Verteidigungssiedlungen.",
+				"Der Grenzübergang verbindet Dubai mit Oman."
+			]
+		}
+	},
+	"al-ain": {
+		"city": {
+			"en": [
+				"Its Arabic name means the spring.",
+				"Its oasis uses traditional falaj irrigation channels.",
+				"Nearby Hili and Jebel Hafit preserve Bronze Age tombs."
+			],
+			"it": [
+				"Il nome arabo significa la sorgente.",
+				"La sua oasi utilizza i tradizionali canali di irrigazione falaj.",
+				"Le vicine Hili e Jebel Hafit conservano tombe dell’età del bronzo."
+			],
+			"de": [
+				"Der arabische Name bedeutet die Quelle.",
+				"Die Oase nutzt traditionelle Faladsch-Bewässerungskanäle.",
+				"Im nahen Hili und am Jebel Hafit sind bronzezeitliche Gräber erhalten."
+			]
+		}
+	},
+	"madinat-zayed": {
+		"city": {
+			"en": [
+				"Its name honours Sheikh Zayed, the UAE’s founding president.",
+				"It hosts events celebrating the date-growing traditions of Al Dhafra.",
+				"Date auctions and agricultural knowledge are part of this heritage."
+			],
+			"it": [
+				"Il nome onora lo sceicco Zayed, presidente fondatore degli EAU.",
+				"Ospita eventi che celebrano le tradizioni della coltivazione dei datteri di Al Dhafra.",
+				"Le aste di datteri e il sapere agricolo fanno parte di questo patrimonio."
+			],
+			"de": [
+				"Der Name ehrt Scheich Zayed, den Gründungspräsidenten der VAE.",
+				"Der Ort veranstaltet Feste zu den Dattelanbautraditionen von Al Dhafra.",
+				"Dattelauktionen und landwirtschaftliches Wissen gehören zu diesem Erbe."
 			]
 		}
 	}

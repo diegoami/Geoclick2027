@@ -1,0 +1,615 @@
+{
+	"sembawang": {
+		"kind": "region",
+		"borders": [
+			"Mandai",
+			"Simpang",
+			"Woodlands",
+			"Yishun"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"simpang": {
+		"kind": "region",
+		"borders": [
+			"Sembawang",
+			"Yishun"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"woodlands": {
+		"kind": "region",
+		"borders": [
+			"Mandai",
+			"Sembawang",
+			"Sungei Kadut"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"lim-chu-kang": {
+		"kind": "region",
+		"borders": [
+			"Sungei Kadut",
+			"Western Water Catchment"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"mandai": {
+		"kind": "region",
+		"borders": [
+			"Central Water Catchment",
+			"Sembawang",
+			"Sungei Kadut",
+			"Woodlands",
+			"Yishun"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"yishun": {
+		"kind": "region",
+		"borders": [
+			"Ang Mo Kio",
+			"Central Water Catchment",
+			"Mandai",
+			"Seletar",
+			"Sembawang",
+			"Sengkang",
+			"Simpang"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"sungei-kadut": {
+		"kind": "region",
+		"borders": [
+			"Bukit Panjang",
+			"Central Water Catchment",
+			"Choa Chu Kang",
+			"Lim Chu Kang",
+			"Mandai",
+			"Western Water Catchment",
+			"Woodlands"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"seletar": {
+		"kind": "region",
+		"borders": [
+			"Punggol",
+			"Sengkang",
+			"Yishun"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"punggol": {
+		"kind": "region",
+		"borders": [
+			"Pasir Ris",
+			"Seletar",
+			"Sengkang"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"north-eastern-islands": {
+		"kind": "region",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"sengkang": {
+		"kind": "region",
+		"borders": [
+			"Ang Mo Kio",
+			"Hougang",
+			"Paya Lebar",
+			"Punggol",
+			"Seletar",
+			"Serangoon",
+			"Yishun"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"choa-chu-kang": {
+		"kind": "region",
+		"borders": [
+			"Bukit Batok",
+			"Bukit Panjang",
+			"Sungei Kadut",
+			"Tengah",
+			"Western Water Catchment"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"western-water-catchment": {
+		"kind": "region",
+		"borders": [
+			"Choa Chu Kang",
+			"Jurong West",
+			"Lim Chu Kang",
+			"Pioneer",
+			"Sungei Kadut",
+			"Tengah",
+			"Tuas"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"pasir-ris": {
+		"kind": "region",
+		"borders": [
+			"Changi",
+			"Punggol",
+			"Tampines"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"ang-mo-kio": {
+		"kind": "region",
+		"borders": [
+			"Bishan",
+			"Central Water Catchment",
+			"Sengkang",
+			"Serangoon",
+			"Yishun"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"central-water-catchment": {
+		"kind": "region",
+		"borders": [
+			"Ang Mo Kio",
+			"Bishan",
+			"Bukit Timah",
+			"Mandai",
+			"Novena",
+			"Sungei Kadut",
+			"Yishun"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"bukit-panjang": {
+		"kind": "region",
+		"borders": [
+			"Bukit Batok",
+			"Bukit Timah",
+			"Choa Chu Kang",
+			"Sungei Kadut"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Bukit Timah",
+			"elevation": 176
+		},
+		"position": "centre"
+	},
+	"serangoon": {
+		"kind": "region",
+		"borders": [
+			"Ang Mo Kio",
+			"Bishan",
+			"Hougang",
+			"Sengkang",
+			"Toa Payoh"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"tengah": {
+		"kind": "region",
+		"borders": [
+			"Bukit Batok",
+			"Choa Chu Kang",
+			"Jurong East",
+			"Jurong West",
+			"Western Water Catchment"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"hougang": {
+		"kind": "region",
+		"borders": [
+			"Paya Lebar",
+			"Sengkang",
+			"Serangoon",
+			"Toa Payoh"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"paya-lebar": {
+		"kind": "region",
+		"borders": [
+			"Bedok",
+			"Hougang",
+			"Sengkang",
+			"Tampines"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"bukit-batok": {
+		"kind": "region",
+		"borders": [
+			"Bukit Panjang",
+			"Bukit Timah",
+			"Choa Chu Kang",
+			"Clementi",
+			"Jurong East",
+			"Tengah"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"bishan": {
+		"kind": "region",
+		"borders": [
+			"Ang Mo Kio",
+			"Central Water Catchment",
+			"Serangoon",
+			"Toa Payoh"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"changi": {
+		"kind": "region",
+		"borders": [
+			"Pasir Ris",
+			"Tampines"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"tampines": {
+		"kind": "region",
+		"borders": [
+			"Bedok",
+			"Changi",
+			"Pasir Ris",
+			"Paya Lebar"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"jurong-west": {
+		"kind": "region",
+		"borders": [
+			"Boon Lay",
+			"Jurong East",
+			"Pioneer",
+			"Tengah",
+			"Western Water Catchment"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"changi-bay": {
+		"kind": "region",
+		"coastal": false,
+		"position": "east"
+	},
+	"toa-payoh": {
+		"kind": "region",
+		"borders": [
+			"Bishan",
+			"Geylang",
+			"Hougang",
+			"Kallang",
+			"Novena",
+			"Serangoon"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"bukit-timah": {
+		"kind": "region",
+		"borders": [
+			"Bukit Batok",
+			"Bukit Panjang",
+			"Central Water Catchment",
+			"Clementi",
+			"Queenstown",
+			"Tanglin"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"novena": {
+		"kind": "region",
+		"borders": [
+			"Central Water Catchment",
+			"Kallang",
+			"Newton",
+			"Tanglin",
+			"Toa Payoh"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"bedok": {
+		"kind": "region",
+		"borders": [
+			"Geylang",
+			"Marine Parade",
+			"Paya Lebar",
+			"Tampines"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"jurong-east": {
+		"kind": "region",
+		"borders": [
+			"Boon Lay",
+			"Bukit Batok",
+			"Clementi",
+			"Jurong West",
+			"Queenstown",
+			"Tengah"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"geylang": {
+		"kind": "region",
+		"borders": [
+			"Bedok",
+			"Kallang",
+			"Marine Parade",
+			"Toa Payoh"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"clementi": {
+		"kind": "region",
+		"borders": [
+			"Bukit Batok",
+			"Bukit Timah",
+			"Jurong East",
+			"Queenstown"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"boon-lay": {
+		"kind": "region",
+		"borders": [
+			"Jurong East",
+			"Jurong West",
+			"Pioneer"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"kallang": {
+		"kind": "region",
+		"borders": [
+			"Downtown Core",
+			"Geylang",
+			"Marina East",
+			"Marine Parade",
+			"Newton",
+			"Novena",
+			"Rochor",
+			"Toa Payoh"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"pioneer": {
+		"kind": "region",
+		"borders": [
+			"Boon Lay",
+			"Jurong West",
+			"Tuas",
+			"Western Water Catchment"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"newton": {
+		"kind": "region",
+		"borders": [
+			"Kallang",
+			"Museum",
+			"Novena",
+			"Orchard",
+			"Rochor",
+			"Tanglin"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"tanglin": {
+		"kind": "region",
+		"borders": [
+			"Bukit Merah",
+			"Bukit Timah",
+			"Newton",
+			"Novena",
+			"Orchard",
+			"Queenstown",
+			"River Valley",
+			"Singapore River"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"rochor": {
+		"kind": "region",
+		"borders": [
+			"Downtown Core",
+			"Kallang",
+			"Museum",
+			"Newton"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"orchard": {
+		"kind": "region",
+		"borders": [
+			"Newton",
+			"River Valley",
+			"Tanglin"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"marine-parade": {
+		"kind": "region",
+		"borders": [
+			"Bedok",
+			"Geylang",
+			"Kallang",
+			"Marina East"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"river-valley": {
+		"kind": "region",
+		"borders": [
+			"Orchard",
+			"Singapore River",
+			"Tanglin"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"museum": {
+		"kind": "region",
+		"borders": [
+			"Downtown Core",
+			"Newton",
+			"Rochor"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"singapore-river": {
+		"kind": "region",
+		"borders": [
+			"Bukit Merah",
+			"Downtown Core",
+			"Outram",
+			"River Valley",
+			"Tanglin"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"marina-east": {
+		"kind": "region",
+		"borders": [
+			"Downtown Core",
+			"Kallang",
+			"Marina South",
+			"Marine Parade"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"queenstown": {
+		"kind": "region",
+		"borders": [
+			"Bukit Merah",
+			"Bukit Timah",
+			"Clementi",
+			"Jurong East",
+			"Tanglin"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"downtown-core": {
+		"kind": "region",
+		"borders": [
+			"Kallang",
+			"Marina East",
+			"Marina South",
+			"Museum",
+			"Outram",
+			"Rochor",
+			"Singapore River",
+			"Straits View"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"tuas": {
+		"kind": "region",
+		"borders": [
+			"Pioneer",
+			"Western Water Catchment"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"outram": {
+		"kind": "region",
+		"borders": [
+			"Bukit Merah",
+			"Downtown Core",
+			"Singapore River"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"marina-south": {
+		"kind": "region",
+		"borders": [
+			"Downtown Core",
+			"Marina East",
+			"Straits View"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"bukit-merah": {
+		"kind": "region",
+		"borders": [
+			"Outram",
+			"Queenstown",
+			"Singapore River",
+			"Straits View",
+			"Tanglin"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"straits-view": {
+		"kind": "region",
+		"borders": [
+			"Bukit Merah",
+			"Downtown Core",
+			"Marina South"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"southern-islands": {
+		"kind": "region",
+		"coastal": true,
+		"position": "south"
+	},
+	"western-islands": {
+		"kind": "region",
+		"coastal": false,
+		"position": "south-west"
+	}
+}

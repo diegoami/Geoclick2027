@@ -54,7 +54,7 @@ describe('the user manual: what it says about the app (#204)', () => {
 			'South America',
 			'Oceania'
 		]);
-		const countries = new Set(index.map((m) => m.country).filter((c) => !continents.has(c)));
+		const countries = new Set(mapGroups.map((g) => g.country).filter((c) => !continents.has(c)));
 		const stated = [...manual.matchAll(/(\d+) maps across (\d+) countries/g)];
 		expect(stated.length).toBeGreaterThan(0);
 		for (const [, maps, nations] of stated) {

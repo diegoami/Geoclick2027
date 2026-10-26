@@ -1,0 +1,392 @@
+{
+	"id": "tanzania-towns-10k",
+	"name": "Tanzania — Towns",
+	"country": "Tanzania",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; Tanzania administrative boundaries via OCHA COD-AB, 2018-10-19; 2018; CC BY 3.0 IGO; https://creativecommons.org/licenses/by/3.0/igo/; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"regionsMap": "tanzania-regions",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "bukoba",
+			"name": "Bukoba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.7999605,
+				-1.3196236
+			],
+			"bbox": [
+				31.7999605,
+				-1.3196236,
+				31.7999605,
+				-1.3196236
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "musoma",
+			"name": "Musoma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.7999934,
+				-1.4895874
+			],
+			"bbox": [
+				33.7999934,
+				-1.4895874,
+				33.7999934,
+				-1.4895874
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "mwanza",
+			"name": "Mwanza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.9300207,
+				-2.5200154
+			],
+			"bbox": [
+				32.9300207,
+				-2.5200154,
+				32.9300207,
+				-2.5200154
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "moshi",
+			"name": "Moshi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.3399841,
+				-3.3396037
+			],
+			"bbox": [
+				37.3399841,
+				-3.3396037,
+				37.3399841,
+				-3.3396037
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "arusha",
+			"name": "Arusha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.6699991,
+				-3.3600158
+			],
+			"bbox": [
+				36.6699991,
+				-3.3600158,
+				36.6699991,
+				-3.3600158
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "shinyanga",
+			"name": "Shinyanga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.4200166,
+				-3.6595841
+			],
+			"bbox": [
+				33.4200166,
+				-3.6595841,
+				33.4200166,
+				-3.6595841
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kigoma",
+			"name": "Kigoma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.6100166,
+				-4.879613
+			],
+			"bbox": [
+				29.6100166,
+				-4.879613,
+				29.6100166,
+				-4.879613
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tabora",
+			"name": "Tabora",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.8000028,
+				-5.0200179
+			],
+			"bbox": [
+				32.8000028,
+				-5.0200179,
+				32.8000028,
+				-5.0200179
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tanga",
+			"name": "Tanga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.0900065,
+				-5.0700407
+			],
+			"bbox": [
+				39.0900065,
+				-5.0700407,
+				39.0900065,
+				-5.0700407
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "zanzibar",
+			"name": "Zanzibar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.2000256,
+				-6.16
+			],
+			"bbox": [
+				39.2000256,
+				-6.16,
+				39.2000256,
+				-6.16
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "dodoma",
+			"name": "Dodoma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.7500036,
+				-6.1833061
+			],
+			"bbox": [
+				35.7500036,
+				-6.1833061,
+				35.7500036,
+				-6.1833061
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "dar-es-salaam",
+			"name": "Dar es Salaam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.266396,
+				-6.7980667
+			],
+			"bbox": [
+				39.266396,
+				-6.7980667,
+				39.266396,
+				-6.7980667
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "morogoro",
+			"name": "Morogoro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.6600162,
+				-6.8200114
+			],
+			"bbox": [
+				37.6600162,
+				-6.8200114,
+				37.6600162,
+				-6.8200114
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kilosa",
+			"name": "Kilosa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.9900313,
+				-6.8395967
+			],
+			"bbox": [
+				36.9900313,
+				-6.8395967,
+				36.9900313,
+				-6.8395967
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "iringa",
+			"name": "Iringa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.6900073,
+				-7.7696175
+			],
+			"bbox": [
+				35.6900073,
+				-7.7696175,
+				35.6900073,
+				-7.7696175
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "sumbawanga",
+			"name": "Sumbawanga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.6200232,
+				-7.9595801
+			],
+			"bbox": [
+				31.6200232,
+				-7.9595801,
+				31.6200232,
+				-7.9595801
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "mbeya",
+			"name": "Mbeya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.4300419,
+				-8.8900142
+			],
+			"bbox": [
+				33.4300419,
+				-8.8900142,
+				33.4300419,
+				-8.8900142
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tukuyu",
+			"name": "Tukuyu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.6400032,
+				-9.2495788
+			],
+			"bbox": [
+				33.6400032,
+				-9.2495788,
+				33.6400032,
+				-9.2495788
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "mtwara",
+			"name": "Mtwara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				40.189991,
+				-10.2696199
+			],
+			"bbox": [
+				40.189991,
+				-10.2696199,
+				40.189991,
+				-10.2696199
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "songea",
+			"name": "Songea",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.6500097,
+				-10.6800342
+			],
+			"bbox": [
+				35.6500097,
+				-10.6800342,
+				35.6500097,
+				-10.6800342
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"bukoba",
+		"musoma",
+		"mwanza",
+		"moshi",
+		"arusha",
+		"shinyanga",
+		"kigoma",
+		"tabora",
+		"tanga",
+		"zanzibar",
+		"dodoma",
+		"dar-es-salaam",
+		"morogoro",
+		"kilosa",
+		"iringa",
+		"sumbawanga",
+		"mbeya",
+		"tukuyu",
+		"mtwara",
+		"songea"
+	]
+}

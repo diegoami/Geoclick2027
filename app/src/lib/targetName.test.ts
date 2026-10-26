@@ -107,15 +107,17 @@ describe('the names the maps carry', () => {
 		expect(targetName(byId.get('cote-d-ivoire')!, 'it')).toBe("Côte d'Ivoire");
 	});
 
-	it('the world picker names each country as its Countries map does', () => {
+	it('the world picker names countries consistently, including playable Singapore', () => {
 		const picker: { countries: { id: string; names?: Record<string, string> }[] } = JSON.parse(
 			readFileSync(path.join(DEFAULT_MAPS_DIR, 'world-picker', 'picker.json'), 'utf-8')
 		);
 		const countries = new Map(
-			CONTINENTS.flatMap((c) => readMap(`${c}-countries`).targets).map((t) => [t.id, t])
+			CONTINENTS.flatMap((c) => readMap(`${c}-countries`).targets).map((t) => [t.id, t.names])
 		);
+		// Singapore is selectable but below the continent quiz's area threshold.
+		countries.set('singapore', { de: 'Singapur' });
 		for (const country of picker.countries) {
-			expect(country.names, country.id).toEqual(countries.get(country.id)?.names);
+			expect(country.names, country.id).toEqual(countries.get(country.id));
 		}
 	});
 });

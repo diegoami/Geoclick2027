@@ -28,3 +28,30 @@ describe('town snapshot population observations', () => {
 		expect(() => newestTownRows([{ population: { value: '10' } }], '2026-10-25')).toThrow();
 	});
 });
+
+it('uses coordinate precision only after choosing the newest population observation', () => {
+	const dated = row('18000', '2025-01-01T00:00:00Z');
+	const rough = { ...dated, coord: { value: 'Point(1 1)' }, precision: { value: '0.0166667' } };
+	const precise = {
+		...dated,
+		coord: { value: 'Point(1.001 1.001)' },
+		precision: { value: '0.00001' }
+	};
+	expect(newestTownRows([rough, precise], '2026-10-26')).toEqual([precise]);
+	const old = {
+		...precise,
+		date: { value: '2011-01-01T00:00:00Z' },
+		precision: { value: '0.000001' }
+	};
+	expect(newestTownRows([rough, old], '2026-10-26')).toEqual([rough]);
+});
+
+it('chooses a supported city coordinate without preferring an older population observation', () => {
+	const observation = row('18000', '2025-01-01T00:00:00Z');
+	const outside = { ...observation, coord: { value: 'outside' }, precision: { value: '0.000001' } };
+	const inside = { ...observation, coord: { value: 'inside' }, precision: { value: '0.00027778' } };
+	const supports = (r: TownBinding) => r.coord?.value === 'inside';
+	expect(newestTownRows([outside, inside], '2026-10-26', supports)).toEqual([inside]);
+	const old = { ...inside, date: { value: '2011-01-01T00:00:00Z' } };
+	expect(newestTownRows([outside, old], '2026-10-26', supports)).toEqual([outside]);
+});

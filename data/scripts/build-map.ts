@@ -1,3 +1,4 @@
+import { appendNeutralBoundaryContext } from './neutralBoundaryContext.js';
 // Builds one demo map package from the Natural Earth admin-1 dataset:
 // filters by country, simplifies geometry, builds a PMTiles tileset, and
 // derives a draft map.json (Target[] + a default north-to-south tour
@@ -890,6 +891,7 @@ async function main() {
 		name: mapName,
 		country,
 		attribution,
+		...(args['largest-city-facts'] === 'false' ? { largestCityFacts: false } : {}),
 		// Boundaries from outside Natural Earth: build-facts.ts then does not
 		// match targets to Natural Earth's admin-1 rows, which would describe
 		// a district as its whole state.
@@ -897,7 +899,7 @@ async function main() {
 		...(args['places-source'] ? { placesSource: args['places-source'] } : {}),
 		...(source && args['boundary-facts'] === 'true' ? { boundaryFacts: true } : {}),
 		// Keep custom name-based dissolves reproducible for derived facts too.
-		...(!source && !countryLevel && dissolveField === 'name' && renames.size
+		...(!source && !countryLevel && renames.size
 			? { boundaryRenames: Object.fromEntries(renames) }
 			: {}),
 		tiles: 'tiles.pmtiles',
@@ -945,7 +947,13 @@ async function main() {
 		const targetAdmins = geojson.features.map((f) => f.properties.ADMIN as string);
 		selectAdmin0Context(padBbox(overallBboxOf(targets)), contextPath, targetAdmins);
 	} else {
-		selectAdmin0Context(padBbox(overallBboxOf(targets)), landPath, [country]);
+		selectAdmin0Context(padBbox(overallBboxOf(targets)), landPath, source ? [] : [country]);
+		if (source) {
+			const external = JSON.parse(readFileSync(path.resolve(REPO_ROOT, source), 'utf8')) as {
+				contextFeatures?: unknown[];
+			};
+			appendNeutralBoundaryContext(landPath, external.contextFeatures ?? []);
+		}
 	}
 
 	console.log('[5/6] Building vector tiles (tippecanoe + pmtiles convert)...');

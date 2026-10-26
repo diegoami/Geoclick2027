@@ -10,8 +10,8 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | --- | --- | --- |
 | Distribution | Complete; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) merged | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
 | Boundary and target audit | In progress; first six countries audited | Licensed, reproducible sources and suitable map types for 22 countries |
-| Maps | Twelve locally verified; PR #243 reviewed, owner testing/merge pending | Administrative maps and towns/urban maps; generated through the existing pipeline |
-| Facts | All 173 first-batch targets complete in EN/DE/IT | Facts for added targets in English, German, and Italian; existing target gaps audited |
+| Maps | Full 22-country expansion active; 44 maps generated for all 22 countries (217 total); facts and verification in progress | Administrative maps and towns/urban maps; generated through the existing pipeline |
+| Facts | First six countries complete; facts for the remaining sixteen still in progress | Facts for added targets in English, German, and Italian; existing target gaps audited |
 | Content completion | Pending | Deferred thin towns maps and German/Italian manual checked against agreed scope |
 | itch.io | Draft covers/copy/previews exported; final packages/screenshots pending; owner handles upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
 | Release preparation | Pending | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
@@ -179,20 +179,29 @@ Checkpoint saved at the owner's request; resumed on 2026-10-26. Branch: maps/v1.
 Worktree: C:/Users/diego/projects/Geoclick2027-work/maps-v1.0-country-expansion.
 The first batch is in [PR #243](https://github.com/diegoami/Geoclick2027/pull/243); the overall expansion remains unfinished.
 
-Hungary, Slovakia, Estonia, Lithuania, Iceland and Costa Rica have twelve
-registered maps adding 173 targets: 185 maps, 63 country groups plus six
-continents. The index has 64 country labels because Natural Earth uses both
-Czech Republic and Czechia.
+All 22 approved countries now have their two map packages: 44 new maps and
+735 targets, giving 217 maps across 79 country groups plus six continents.
+The raw index has 80 country labels because Czech Republic and Czechia are
+joined in the catalogue. Singapore has five regions and 55 planning areas,
+rather than a misleading towns map. All 44 new choices were verified in the
+rendered browser catalogue at 1280 × 800 on localhost:5187.
 
-All six countries now have at least three authored sentences per new target
-in English, Italian and German (Estonia completed on 2026-10-26; Tallinn’s
-existing set preserved). Generated hooks were refreshed, including shared
-continent targets. The other 16 approved countries are not implemented.
+Authored facts are still in progress: 288/735 new targets have three sentences
+in each of English, Italian and German. The first six countries, Nepal, UAE,
+Uzbekistan and Latvia are complete; twelve countries remain. The reproducible
+coverage check is data/scripts/audit-v1-country-facts.ts (--strict fails until
+all remaining targets are complete). Generated hooks are refreshed from the
+authored data/facts files, including shared continent targets.
 
-Next: complete the first-batch code review and owner testing, then continue
-the remaining countries. Target coverage and desktop/browser viewport checks
-are recorded below. Finish documentation, local gates and
-external-family code review before handing a PR to the owner.
+Current Angola (21), Iraq (19), Ethiopia (14) and Tanzania (31) source polygons
+pass validity and pairwise area-overlap checks. Singapore is explicitly retained
+in the world picker despite the continent quiz's minimum-area filter;
+Congo-Kinshasa links to the existing Democratic Republic of the Congo polygon.
+The catalogue regressions caught and now guard these missing-row cases.
+
+Next: finish all remaining authored facts, document and verify the complete
+pipeline, run local gates on the final content, and obtain a fresh external-family
+PR review before owner testing. The old first-batch review is historical.
 
 Windows is canonical. A preserved Linux build mirror with its own dependencies,
 raw sources and tile tools is at
@@ -205,8 +214,11 @@ installers, publication or final itch.io asset pack exists yet. The old releases
 repository still exists; its verified backup and migrated releases are preserved.
 The owner handles itch.io navigation and upload; the developer still owes the
 asset pack above. No deployment was tested (deploys remain stopped).
-The Geoclick dev server is stopped; resume on port 5187 with --strictPort,
-because 5173 belongs to another game.
+Vite defaults to strict port 5187 and Tauri uses the same devUrl, because
+5173 belongs to another game. Desktop opens at 1280 × 800 with a
+1024 × 768 minimum. Representative Nepal, Angola, DR Congo and Singapore
+planning-area canvases loaded at 1280 × 800 without page errors or failed
+local asset requests. No installer or device check is implied.
 
 Checkpoint local verification: check, tests, lint and build all passed through
 npm run gates -- --quiet. Visual/browser and installer checks remain pending.
@@ -309,7 +321,7 @@ checks show all retained/new Hungarian towns and the correct German Komitate
 label; Italian/German Tartu cards display both the authored translation and
 the restored region line. No page errors or horizontal overflow were reported.
 
-## First-batch owner handoff (2026-10-26)
+## First-batch review record (2026-10-26; superseded handoff)
 
 [PR #243](https://github.com/diegoami/Geoclick2027/pull/243) is ready for owner
 testing. The [Claude Opus 5.5 follow-up review](https://github.com/diegoami/Geoclick2027/pull/243#pullrequestreview-5650235087)
@@ -337,3 +349,64 @@ The other sixteen approved countries, final content polish, viewport/package
 work, final screenshots, installer/device checks, version bump, milestone
 review/tag/publication and old-repository retirement still remain. Merge of
 this first batch awaits the owner's explicit OK; no merge/tag/deploy occurred.
+
+
+## Full-scope continuation (2026-10-26)
+
+The owner correctly pointed out that twelve maps covered only six of the 22
+approved countries. Do not hand off another partial country batch as though
+the agreed expansion were complete. Continue all sixteen remaining countries,
+their authored EN/IT/DE facts, final content polish and required verification.
+PR #243 was converted back to draft; its prior reviews apply only to the
+earlier code. Run a fresh external-family review after the full scope is ready.
+
+The intermediate eight-country batch added sixteen maps for UAE, Sri Lanka,
+Uzbekistan, Nepal, Taiwan, Uganda, DR Congo and Ghana. The subsequent batch
+completed all 44 new map packages; current counts and fact coverage are above.
+Pinned/licensed polygon inputs and their fetch recipes are in
+v1BoundarySources.ts and fetch-v1-boundaries.ts. Town maps now reuse their
+administrative map's polygons/names through regionsMap, fixing stale context
+and the previously deferred suffix inconsistency when maps are rebuilt.
+
+UAE, Sri Lanka and Ghana have richer dated Wikidata source snapshots after
+the initial Natural Earth coverage audit. Coordinate selection prefers precision
+only after choosing the newest population; rounded coastal points get a bounded,
+unambiguous association within stated precision. Full source/fact audits and
+facts authoring remain required before completion.
+
+The last eight countries are Ethiopia, Tanzania, Angola, Iraq, Singapore,
+Israel, Slovenia and Latvia. Their source specifications and reproducible importers are now durable code
+in v1CurrentBoundarySources.ts and fetch-v1-current-boundaries.ts.
+Official sources exist for Latvia's five regions (CC0), Slovenia's twelve
+statistical regions (GURS CC BY 4.0), Singapore's five regions and 55 planning
+areas (URA 2019; Singapore Open Data Licence), Tanzania's 31 regions and
+Ethiopia's 14 regions/city administrations (OCHA CC BY IGO). OCHA's extra
+Ethiopia Contested polygon must be neutral land context, not a fifteenth quiz
+region. Iraq's current OSM/Geofabrik extract includes all nineteen governorates,
+including Halabja. Angola can be reconstructed reproducibly from the current
+licensed OSM outlines and OCHA municipality unions using the legal 2025
+groupings; final checks pass Luena, Cazombo, Menongue, Mavinga and Catete,
+polygon validity and pairwise non-overlap.
+Do not use the unclear-licence third-party AI reconstruction.
+
+Preserved Linux build mirror remains
+/home/diego/projects/Geoclick2027-build/v1.0-connected-20261025.
+Sources/caches there are task-owned and must not be wiped. Windows worktree
+remains canonical. No merge, version bump, tag, deployment or itch.io access.
+
+
+### Full catalogue local verification (2026-10-26)
+
+All four local gates pass after the full 44-map expansion: type checks,
+2792 app tests (zero failures), lint and production web build. The desktop
+build also produced development-version 0.20.0 MSI/NSIS bundles; neither was
+installed or tried, and these are not 1.0 release artifacts. No deployment
+was triggered or checked (deploys remain stopped).
+
+Browser checks at 1280 × 800 confirmed all 44 choices in the rendered start
+screen menus and successful canvases for Nepal, Angola, DR Congo and
+Singapore planning areas, without page errors or failed local asset requests.
+Facts remain 288/735 complete; the strict content audit still intentionally
+fails. PR #243 remains draft and needs a fresh external-family review after
+content completion, followed by owner testing/merge approval. Its old reviews
+do not cover this expanded code. No 1.0 bump, tag or publication has happened.

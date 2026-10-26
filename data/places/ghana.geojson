@@ -1,0 +1,762 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "Open Street Map",
+		"via": "geoBoundaries gbOpen 9469f09",
+		"year": "2021",
+		"url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/GHA/ADM1/geoBoundaries-GHA-ADM1.geojson",
+		"sha256": "ee73028cfcfbfc5a5bb851c118d47136086de499d23a5e0e27dc2876b6796bca",
+		"licence": "Creative Commons Attribution-ShareAlike 2.0",
+		"licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+		"simplification": "25%, keep-shapes; precision 0.000001"
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T12:35:32.245Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"GHA\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.1969,
+					5.55602
+				]
+			},
+			"properties": {
+				"NAME": "Accra",
+				"NAME_EN": "Accra",
+				"NAME_IT": "Accra",
+				"NAME_DE": "Accra",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Greater Accra",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 1,
+				"POP_MAX": 1782150,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3761"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1.19012,
+					6.11982
+				]
+			},
+			"properties": {
+				"NAME": "Aflao",
+				"NAME_EN": "Aflao",
+				"NAME_IT": "Aflao",
+				"NAME_DE": "Aflao",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Volta",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 66546,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q383333"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.08193,
+					6.80004
+				]
+			},
+			"properties": {
+				"NAME": "Agogo",
+				"NAME_EN": "Agogo",
+				"NAME_IT": "Agogo",
+				"NAME_DE": "Agogo",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Ashanti",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 36797,
+				"POP1950": 0,
+				"populationDate": "2013-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q395201"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.24249,
+					11.05926
+				]
+			},
+			"properties": {
+				"NAME": "Bawku",
+				"NAME_EN": "Bawku",
+				"NAME_IT": "Bawku",
+				"NAME_DE": "Bawku",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Upper East",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 61151,
+				"POP1950": 0,
+				"populationDate": "2010-09-26T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q812036"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.85139,
+					10.78556
+				]
+			},
+			"properties": {
+				"NAME": "Bolgatanga",
+				"NAME_EN": "Bolgatanga",
+				"NAME_IT": "Bolgatanga",
+				"NAME_DE": "Bolgatanga",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Upper East",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 89255,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q4939409"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.25,
+					5.1
+				]
+			},
+			"properties": {
+				"NAME": "Cape Coast",
+				"NAME_EN": "Cape Coast",
+				"NAME_IT": "Cape Coast",
+				"NAME_DE": "Cape Coast",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.0166667,
+				"ADM0CAP": 0,
+				"POP_MAX": 189925,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q221283"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.81884,
+					9.08296
+				]
+			},
+			"properties": {
+				"NAME": "Damongo",
+				"NAME_EN": "Damongo",
+				"NAME_IT": "Damongo",
+				"NAME_DE": "Damongo",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Savannah",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 14442,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1158732"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2.79603,
+					6.56498
+				]
+			},
+			"properties": {
+				"NAME": "Dome",
+				"NAME_EN": "Dome",
+				"NAME_IT": "Dome",
+				"NAME_DE": "Dome",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Western North",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 56655,
+				"POP1950": 0,
+				"populationDate": "2007-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1236987"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.76667,
+					9.45
+				]
+			},
+			"properties": {
+				"NAME": "Gumani",
+				"NAME_EN": "Gumani",
+				"NAME_IT": "Gumani",
+				"NAME_DE": "Gumani",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 12506,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q11924987"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.69822,
+					9.40067
+				]
+			},
+			"properties": {
+				"NAME": "Gurugu",
+				"NAME_EN": "Gurugu",
+				"NAME_IT": "Gurugu",
+				"NAME_DE": "Gurugu",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 5498,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q24696637"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					0.4713,
+					6.60084
+				]
+			},
+			"properties": {
+				"NAME": "Ho",
+				"NAME_EN": "Ho",
+				"NAME_IT": "Ho",
+				"NAME_DE": "Ho",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Volta",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 125914,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q615006"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					0.47362,
+					7.15181
+				]
+			},
+			"properties": {
+				"NAME": "Hohoe",
+				"NAME_EN": "Hohoe",
+				"NAME_IT": "Hohoe",
+				"NAME_DE": "Hohoe",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Volta",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 56202,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1017008"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.85781667,
+					9.45315278
+				]
+			},
+			"properties": {
+				"NAME": "Jisonaayili",
+				"NAME_EN": "Jisonaayili",
+				"NAME_IT": "Jisonaayili",
+				"NAME_DE": "Jisonaayili",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00000277777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 9359,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15229609"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.844444,
+					9.45833
+				]
+			},
+			"properties": {
+				"NAME": "Kanvili",
+				"NAME_EN": "Kanvili",
+				"NAME_IT": "Kanvili",
+				"NAME_DE": "Kanvili",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.091069585153113,
+				"ADM0CAP": 0,
+				"POP_MAX": 5506,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q18386926"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.429722,
+					9.925
+				]
+			},
+			"properties": {
+				"NAME": "Karaga",
+				"NAME_EN": "Karaga",
+				"NAME_IT": "Karaga",
+				"NAME_DE": "Karaga",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 15581,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15045734"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					0.98789,
+					5.91793
+				]
+			},
+			"properties": {
+				"NAME": "Keta",
+				"NAME_EN": "Keta",
+				"NAME_IT": "Keta",
+				"NAME_DE": "Keta",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Volta",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 22739,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1471408"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.25913,
+					6.09408
+				]
+			},
+			"properties": {
+				"NAME": "Koforidua",
+				"NAME_EN": "Koforidua",
+				"NAME_IT": "Koforidua",
+				"NAME_DE": "Koforidua",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Eastern",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 127334,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q406358"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.625,
+					6.7
+				]
+			},
+			"properties": {
+				"NAME": "Kumasi",
+				"NAME_EN": "Kumasi",
+				"NAME_IT": "Kumasi",
+				"NAME_DE": "Kumasi",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Ashanti",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3903480,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q182059"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.04011,
+					5.68476
+				]
+			},
+			"properties": {
+				"NAME": "Lashibi",
+				"NAME_EN": "Lashibi",
+				"NAME_IT": "Lashibi",
+				"NAME_DE": "Lashibi",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Greater Accra",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 30193,
+				"POP1950": 0,
+				"populationDate": "2000-03-26T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1295219"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.4,
+					7.066666666
+				]
+			},
+			"properties": {
+				"NAME": "Mampong",
+				"NAME_EN": "Mampong",
+				"NAME_IT": "Mampong",
+				"NAME_DE": "Mampong",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Ashanti",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 42037,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q992747"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66796,
+					6.20228
+				]
+			},
+			"properties": {
+				"NAME": "Obuasi",
+				"NAME_EN": "Obuasi",
+				"NAME_IT": "Obuasi",
+				"NAME_DE": "Obuasi",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Ashanti",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 180460,
+				"POP1950": 0,
+				"populationDate": "2013-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1020901"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2.13472,
+					4.79361
+				]
+			},
+			"properties": {
+				"NAME": "Princes Town",
+				"NAME_EN": "Princes Town",
+				"NAME_IT": "Princes Town",
+				"NAME_DE": "Princes Town",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Western",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 28335,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q2275292"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					0.31843,
+					9.70738
+				]
+			},
+			"properties": {
+				"NAME": "Saboba",
+				"NAME_EN": "Saboba",
+				"NAME_IT": "Saboba",
+				"NAME_DE": "Saboba",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 95683,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q7396274"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.2786047,
+					9.4171465
+				]
+			},
+			"properties": {
+				"NAME": "Sang",
+				"NAME_EN": "Sang",
+				"NAME_IT": "Sang",
+				"NAME_DE": "Sang",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 7278,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q21190404"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.75773,
+					4.92678
+				]
+			},
+			"properties": {
+				"NAME": "Sekondi-Takoradi",
+				"NAME_EN": "Sekondi-Takoradi",
+				"NAME_IT": "Sekondi-Takoradi",
+				"NAME_DE": "Sekondi-Takoradi",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Western",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 539548,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q243293"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.87885,
+					9.40561
+				]
+			},
+			"properties": {
+				"NAME": "Shishegu",
+				"NAME_EN": "Shishegu",
+				"NAME_IT": "Shishegu",
+				"NAME_DE": "Shishegu",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 5565,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q20855186"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.853333333,
+					9.4075
+				]
+			},
+			"properties": {
+				"NAME": "Tamale",
+				"NAME_EN": "Tamale",
+				"NAME_IT": "Tamale",
+				"NAME_DE": "Tamale",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 729768,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q217040"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.98956,
+					5.30383
+				]
+			},
+			"properties": {
+				"NAME": "Tarkwa",
+				"NAME_EN": "Tarkwa",
+				"NAME_IT": "Tarkwa",
+				"NAME_DE": "Tarkwa",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Western",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 34941,
+				"POP1950": 0,
+				"populationDate": "2013-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q995439"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.01657,
+					5.6698
+				]
+			},
+			"properties": {
+				"NAME": "Tema",
+				"NAME_EN": "Tema",
+				"NAME_IT": "Tema",
+				"NAME_DE": "Tema",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Greater Accra",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 161612,
+				"POP1950": 0,
+				"populationDate": "2013-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q726143"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2.5,
+					10.0667
+				]
+			},
+			"properties": {
+				"NAME": "Wa",
+				"NAME_EN": "Wa",
+				"NAME_IT": "Wa",
+				"NAME_DE": "Wa",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Upper West",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 107214,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q250733"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.62313,
+					5.35113
+				]
+			},
+			"properties": {
+				"NAME": "Winneba",
+				"NAME_EN": "Winneba",
+				"NAME_IT": "Winneba",
+				"NAME_DE": "Winneba",
+				"ADM0NAME": "Ghana",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 55331,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1188560"
+			}
+		}
+	]
+}

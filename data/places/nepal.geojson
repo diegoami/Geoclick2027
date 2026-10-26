@@ -1,0 +1,954 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "Survey Department of Nepal, OCHA FISS",
+		"via": "geoBoundaries gbOpen 9469f09",
+		"year": "2020",
+		"url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/NPL/ADM1/geoBoundaries-NPL-ADM1.geojson",
+		"sha256": "5c1799924d277df4f63f6c8e29fbcbb2cd61320fd13e013e431c4a68f09656c1",
+		"licence": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+		"licenceUrl": "https://creativecommons.org/licenses/by/3.0/igo/",
+		"simplification": "25%, keep-shapes; precision 0.000001"
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T12:38:01.491Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"NPL\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.826389,
+					26.701667
+				]
+			},
+			"properties": {
+				"NAME": "Anaittha",
+				"NAME_EN": "Anaittha",
+				"NAME_IT": "Anaittha",
+				"NAME_DE": "Anaittha",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Madhesh",
+				"coordinatePrecision": 0,
+				"ADM0CAP": 0,
+				"POP_MAX": 2533,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q21995688"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.427777777,
+					27.672222222
+				]
+			},
+			"properties": {
+				"NAME": "Bhaktapur",
+				"NAME_EN": "Bhaktapur",
+				"NAME_IT": "Bhaktapur",
+				"NAME_DE": "Bhaktapur",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 81748,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q843138"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					84.433333333,
+					27.683333333
+				]
+			},
+			"properties": {
+				"NAME": "Bharatpur",
+				"NAME_EN": "Bharatpur",
+				"NAME_IT": "Bharatpur",
+				"NAME_DE": "Bharatpur",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 369377,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q250220"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.333333333,
+					28.916666666
+				]
+			},
+			"properties": {
+				"NAME": "Bhimdatta",
+				"NAME_EN": "Bhimdatta",
+				"NAME_IT": "Mahendranagar",
+				"NAME_DE": "Bhim Datta",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Sudurpashchim",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 104599,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1447167"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.145555555,
+					27.896111111
+				]
+			},
+			"properties": {
+				"NAME": "Bidur",
+				"NAME_EN": "Bidur",
+				"NAME_IT": "Bidur",
+				"NAME_DE": "Bidur",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26750,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1844478"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					87.283333333,
+					26.483333333
+				]
+			},
+			"properties": {
+				"NAME": "Biratnagar",
+				"NAME_EN": "Biratnagar",
+				"NAME_IT": "Biratnagar",
+				"NAME_DE": "Biratnagar",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Koshi",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 242548,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q8247"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81.633333333,
+					28.6
+				]
+			},
+			"properties": {
+				"NAME": "Birendranagar",
+				"NAME_EN": "Birendranagar",
+				"NAME_IT": "Birendranagara",
+				"NAME_DE": "Birendranagar",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Karnali",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 47914,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q865146"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					84.866666666,
+					27
+				]
+			},
+			"properties": {
+				"NAME": "Birgunj",
+				"NAME_EN": "Birgunj",
+				"NAME_IT": "Birganj",
+				"NAME_DE": "Birganj",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Madhesh",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 135904,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q8252"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					83.45,
+					27.7
+				]
+			},
+			"properties": {
+				"NAME": "Butwal",
+				"NAME_EN": "Butwal",
+				"NAME_IT": "Butwal",
+				"NAME_DE": "Butwal",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Lumbini",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 118462,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q11283"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81.2,
+					29.55
+				]
+			},
+			"properties": {
+				"NAME": "Chainpur",
+				"NAME_EN": "Chainpur",
+				"NAME_IT": "Chainpur",
+				"NAME_DE": "Chainpur",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Sudurpashchim",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 6642,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2739794"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.2672456,
+					27.608909
+				]
+			},
+			"properties": {
+				"NAME": "Dakshinkali",
+				"NAME_EN": "Dakshinkali",
+				"NAME_IT": "Dakshinkali",
+				"NAME_DE": "Dakshinkali",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 24297,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3415703"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.575,
+					28.705555555
+				]
+			},
+			"properties": {
+				"NAME": "Dhangadhi",
+				"NAME_EN": "Dhangadhi",
+				"NAME_IT": "Dhangadhi",
+				"NAME_DE": "Dhangadhi",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Sudurpashchim",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 101970,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1446993"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					87.266666666,
+					26.816666666
+				]
+			},
+			"properties": {
+				"NAME": "Dharan",
+				"NAME_EN": "Dharan",
+				"NAME_IT": "Dharan",
+				"NAME_DE": "Dharan",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Koshi",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 116181,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q8254"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					82.486111111,
+					28.040833333
+				]
+			},
+			"properties": {
+				"NAME": "Ghorahi",
+				"NAME_EN": "Ghorahi",
+				"NAME_IT": "Ghorahi",
+				"NAME_DE": "Ghorahi",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Lumbini",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 156164,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1447290"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.4,
+					27.73333333
+				]
+			},
+			"properties": {
+				"NAME": "Gokarneshwor",
+				"NAME_EN": "Gokarneshwor",
+				"NAME_IT": "Gokarneshwor",
+				"NAME_DE": "Gokarneshwar",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 107351,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q20809757"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81.347222222,
+					28.205555555
+				]
+			},
+			"properties": {
+				"NAME": "Gulariya",
+				"NAME_EN": "Gulariya",
+				"NAME_IT": "Gularia",
+				"NAME_DE": "Gulariya",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Lumbini",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 55747,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1765809"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.033333333,
+					27.416666666
+				]
+			},
+			"properties": {
+				"NAME": "Hetauda",
+				"NAME_EN": "Hetauda",
+				"NAME_IT": "Hetauda",
+				"NAME_DE": "Hetauda",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 84671,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q11285"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					87.283333333,
+					26.666666666
+				]
+			},
+			"properties": {
+				"NAME": "Itahari",
+				"NAME_EN": "Itahari",
+				"NAME_IT": "Itahari",
+				"NAME_DE": "Itahari",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Koshi",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 74501,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1675026"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.8,
+					26.65
+				]
+			},
+			"properties": {
+				"NAME": "Jaleshwar",
+				"NAME_EN": "Jaleshwar",
+				"NAME_IT": "Jaleshwar",
+				"NAME_DE": "Jaleshwar",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Madhesh",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 23533,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2514515"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.921666666,
+					26.712222222
+				]
+			},
+			"properties": {
+				"NAME": "Janakpurdham",
+				"NAME_EN": "Janakpurdham",
+				"NAME_IT": "Janakpur",
+				"NAME_DE": "Janakpur",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Madhesh",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 97776,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q378649"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					83.730555555,
+					28.783333333
+				]
+			},
+			"properties": {
+				"NAME": "Jomsom",
+				"NAME_EN": "Jomsom",
+				"NAME_IT": "Jomsom",
+				"NAME_DE": "Jomsom",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Gandaki",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1370,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1702717"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.411667,
+					27.725833
+				]
+			},
+			"properties": {
+				"NAME": "Kageshwari-Manohara",
+				"NAME_EN": "Kageshwari-Manohara",
+				"NAME_IT": "Kageshwari-Manohara",
+				"NAME_DE": "Kageshwari-Manohara",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 60237,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q20809750"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85,
+					27.033333333
+				]
+			},
+			"properties": {
+				"NAME": "Kalaiya",
+				"NAME_EN": "Kalaiya",
+				"NAME_IT": "Kalaiya",
+				"NAME_DE": "Kalaiya",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Madhesh",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 42826,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2506989"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.32,
+					27.71
+				]
+			},
+			"properties": {
+				"NAME": "Kathmandu",
+				"NAME_EN": "Kathmandu",
+				"NAME_IT": "Katmandu",
+				"NAME_DE": "Kathmandu",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 845767,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3037"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.55,
+					29.83
+				]
+			},
+			"properties": {
+				"NAME": "Khalanga",
+				"NAME_EN": "Khalanga",
+				"NAME_IT": "Khalanga",
+				"NAME_DE": "Khalanga",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Sudurpashchim",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 8577,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q6399266"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					87.216666666,
+					27.366666666
+				]
+			},
+			"properties": {
+				"NAME": "Khandbari",
+				"NAME_EN": "Khandbari",
+				"NAME_IT": "Khandbari",
+				"NAME_DE": "Khandbari",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Koshi",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 26301,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1740554"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.283333333,
+					27.666666666
+				]
+			},
+			"properties": {
+				"NAME": "Kirtipur",
+				"NAME_EN": "Kirtipur",
+				"NAME_IT": "Kirtipur",
+				"NAME_DE": "Kirtipur",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 65602,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1517030"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.3333,
+					27.6833
+				]
+			},
+			"properties": {
+				"NAME": "Lalitpur",
+				"NAME_EN": "Lalitpur",
+				"NAME_IT": "Patan",
+				"NAME_DE": "Lalitpur",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.010144390611485,
+				"ADM0CAP": 0,
+				"POP_MAX": 513200,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q6647"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.566666666,
+					26.866666666
+				]
+			},
+			"properties": {
+				"NAME": "Malangawa",
+				"NAME_EN": "Malangawa",
+				"NAME_IT": "Malangwa",
+				"NAME_DE": "Malangwa",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Madhesh",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 25102,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1923693"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					88.14944444,
+					26.64638889
+				]
+			},
+			"properties": {
+				"NAME": "Mechinagar Municipality",
+				"NAME_EN": "Mechinagar Municipality",
+				"NAME_IT": "Mechinagar Municipality",
+				"NAME_DE": "Mechinagar",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Koshi",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 57545,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1520560"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81.616666666,
+					28.05
+				]
+			},
+			"properties": {
+				"NAME": "Nepalgunj",
+				"NAME_EN": "Nepalgunj",
+				"NAME_IT": "Nepalganj",
+				"NAME_DE": "Nepalganj",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Lumbini",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 72503,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1025462"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.514722222,
+					27.584444444
+				]
+			},
+			"properties": {
+				"NAME": "Panauti",
+				"NAME_EN": "Panauti",
+				"NAME_IT": "Panauti",
+				"NAME_DE": "Panauti",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Bagmati",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 27358,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2049147"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					83.985277777,
+					28.209722222
+				]
+			},
+			"properties": {
+				"NAME": "Pokhara",
+				"NAME_EN": "Pokhara",
+				"NAME_IT": "Pokhara",
+				"NAME_DE": "Pokhara",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Gandaki",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 353841,
+				"POP1950": 0,
+				"populationDate": "2017-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q6640"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					86.74833333,
+					26.53944444
+				]
+			},
+			"properties": {
+				"NAME": "Rajbiraj",
+				"NAME_EN": "Rajbiraj",
+				"NAME_IT": "Rajbiraj",
+				"NAME_DE": "Rajbiraj",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Madhesh",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 37738,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2463109"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					83.45,
+					27.5
+				]
+			},
+			"properties": {
+				"NAME": "Siddharthanagar",
+				"NAME_EN": "Siddharthanagar",
+				"NAME_IT": "Siddharthanagar",
+				"NAME_DE": "Siddharthanagar",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Lumbini",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 63483,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1530936"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					86.20694444,
+					26.65277778
+				]
+			},
+			"properties": {
+				"NAME": "Siraha",
+				"NAME_EN": "Siraha",
+				"NAME_IT": "Siraha",
+				"NAME_DE": "Siraha",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Madhesh",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28442,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1930452"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					83.55,
+					27.866666666
+				]
+			},
+			"properties": {
+				"NAME": "Tansen",
+				"NAME_EN": "Tansen",
+				"NAME_IT": "Tansen",
+				"NAME_DE": "Tansen",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Lumbini",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29095,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1499762"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81.118888888,
+					28.527777777
+				]
+			},
+			"properties": {
+				"NAME": "Tikapur",
+				"NAME_EN": "Tikapur",
+				"NAME_IT": "Tikapur",
+				"NAME_DE": "Tikapur",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Sudurpashchim",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 56127,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1659926"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					82.295555555,
+					28.127777777
+				]
+			},
+			"properties": {
+				"NAME": "Tulsipur",
+				"NAME_EN": "Tulsipur",
+				"NAME_IT": "Tulsipur",
+				"NAME_DE": "Tulsipur",
+				"ADM0NAME": "Nepal",
+				"ADM1NAME": "Lumbini",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 51537,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1766076"
+			}
+		}
+	]
+}

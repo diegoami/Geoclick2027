@@ -1,0 +1,165 @@
+{
+	"jaffna": {
+		"kind": "city",
+		"population": 88138,
+		"populationRank": 8,
+		"region": "Northern",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"mullaitivu": {
+		"kind": "city",
+		"population": 37339,
+		"populationRank": 12,
+		"region": "Northern",
+		"coastal": true,
+		"position": "north"
+	},
+	"mannar": {
+		"kind": "city",
+		"population": 35000,
+		"populationRank": 14,
+		"region": "Northern",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"trincomalee": {
+		"kind": "city",
+		"population": 99135,
+		"populationRank": 6,
+		"region": "Eastern",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"anuradhapura": {
+		"kind": "city",
+		"population": 63208,
+		"populationRank": 10,
+		"region": "North Central",
+		"coastal": false,
+		"position": "centre"
+	},
+	"vakarai": {
+		"kind": "city",
+		"population": 21000,
+		"populationRank": 16,
+		"region": "Eastern",
+		"coastal": true,
+		"position": "east"
+	},
+	"matale": {
+		"kind": "city",
+		"population": 36451,
+		"populationRank": 13,
+		"region": "Central",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kandy": {
+		"kind": "city",
+		"population": 120087,
+		"populationRank": 4,
+		"region": "Central",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kegalle": {
+		"kind": "city",
+		"population": 17962,
+		"populationRank": 17,
+		"region": "Sabaragamuwa",
+		"coastal": false,
+		"position": "west"
+	},
+	"negombo": {
+		"kind": "city",
+		"population": 142136,
+		"populationRank": 3,
+		"region": "Western",
+		"coastal": true,
+		"position": "west"
+	},
+	"gampaha": {
+		"kind": "city",
+		"population": 191040,
+		"populationRank": 2,
+		"region": "Western",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"badulla": {
+		"kind": "city",
+		"population": 42923,
+		"populationRank": 11,
+		"region": "Uva",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"nuwara-eliya": {
+		"kind": "city",
+		"population": 27500,
+		"populationRank": 15,
+		"region": "Central",
+		"coastal": false,
+		"position": "south"
+	},
+	"colombo": {
+		"kind": "city",
+		"population": 647557,
+		"populationRank": 1,
+		"region": "Western",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its commercial capital; the official capital is Sri Jayawardenepura Kotte, on its edge.",
+				"Its seaside park, Galle Face Green, dates from 1859.",
+				"Arab traders knew its harbour centuries before the Portuguese arrived in 1505."
+			],
+			"it": [
+				"La capitale commerciale; quella ufficiale è Sri Jayawardenepura Kotte, alle sue porte.",
+				"Il suo parco sul mare, Galle Face Green, risale al 1859.",
+				"I mercanti arabi conoscevano il suo porto secoli prima che arrivassero i portoghesi, nel 1505."
+			],
+			"de": [
+				"Die Handelshauptstadt Sri Lankas; die amtliche Hauptstadt ist Sri Jayawardenepura Kotte an ihrem Rand.",
+				"Ihr Park am Meer, Galle Face Green, stammt von 1859.",
+				"Arabische Händler kannten ihren Hafen Jahrhunderte, bevor die Portugiesen 1505 eintrafen."
+			]
+		}
+	},
+	"sri-jayawardenepura-kotte": {
+		"kind": "city",
+		"population": 115826,
+		"populationRank": 5,
+		"region": "Western",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"hambantota": {
+		"kind": "city",
+		"population": 11213,
+		"populationRank": 18,
+		"region": "Southern",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"galle": {
+		"kind": "city",
+		"population": 93118,
+		"populationRank": 7,
+		"region": "Southern",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"matara": {
+		"kind": "city",
+		"population": 68244,
+		"populationRank": 9,
+		"region": "Southern",
+		"coastal": true,
+		"position": "south"
+	}
+}

@@ -60,8 +60,9 @@ describe('the world picker', () => {
 		}
 	});
 
-	it("holds exactly the Countries maps' countries, each on its own continent", () => {
+	it('holds the Countries maps plus playable Singapore, each on its own continent', () => {
 		const targets = countriesMapTargets();
+		targets.set('singapore', ['asia']);
 		const ids = picker.countries.map((c) => c.id);
 		expect(new Set(ids).size).toBe(ids.length);
 		expect([...ids].sort()).toEqual([...targets.keys()].sort());

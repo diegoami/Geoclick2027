@@ -1,0 +1,55 @@
+{
+	"north": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"North East",
+			"West"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"north-east": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"East",
+			"North"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"east": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"North East"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"west": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"North"
+		],
+		"coastal": true,
+		"peak": {
+			"name": "Bukit Timah",
+			"elevation": 176
+		},
+		"position": "west"
+	},
+	"central": {
+		"kind": "region",
+		"borders": [
+			"East",
+			"North",
+			"North East",
+			"West"
+		],
+		"coastal": true,
+		"position": "centre"
+	}
+}

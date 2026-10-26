@@ -1,0 +1,1820 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "Geodetska uprava Republike Slovenije, Register prostorskih enot - statisticne regije, snapshot 2026-10-26",
+		"year": "2026-10-26",
+		"url": "https://ipi.eprostor.gov.si/wfs-si-gurs-rpe/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=SI.GURS.RPE:STATISTICNE_REGIJE&outputFormat=application/json&srsName=EPSG:4326",
+		"sha256": "edaa6f3c0bbd0a78bbe4774bb0f5ccfdf2337b37db39c3f1606ab558b388a080",
+		"hashMode": "features",
+		"rawSha256": "fc35341ca67ccb1017f703f3093ee91cc0306341726805b3b36c784ac43568c4",
+		"licence": "CC BY 4.0",
+		"licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+		"simplification": "25%, keep-shapes; EPSG:4326 precision 0.000001",
+		"contextOnly": []
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T12:36:45.596Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"SVN\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"sl\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.905237912,
+					45.888356136
+				]
+			},
+			"properties": {
+				"NAME": "Ajdovščina",
+				"NAME_EN": "Ajdovščina",
+				"NAME_IT": "Aidussina",
+				"NAME_DE": "Ajdovščina",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 6843,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15854"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.737928,
+					45.579314
+				]
+			},
+			"properties": {
+				"NAME": "Ankaran",
+				"NAME_EN": "Ankaran",
+				"NAME_IT": "Ancarano",
+				"NAME_DE": "Ankaran",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Obalno-kraška",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3224,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q387789"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.232842,
+					46.606011
+				]
+			},
+			"properties": {
+				"NAME": "Beltinci",
+				"NAME_EN": "Beltinci",
+				"NAME_IT": "Beltinci",
+				"NAME_DE": "Beltinci",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Pomurska",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2430,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q855820"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.114722222,
+					46.368333333
+				]
+			},
+			"properties": {
+				"NAME": "Bled",
+				"NAME_EN": "Bled",
+				"NAME_IT": "Bled",
+				"NAME_DE": "Bled",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Gorenjska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4969,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q202852"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.364172222,
+					45.917977777
+				]
+			},
+			"properties": {
+				"NAME": "Borovnica",
+				"NAME_EN": "Borovnica",
+				"NAME_IT": "Borovnica",
+				"NAME_DE": "Borovnica",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Osrednjeslovenska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2674,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q787824"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.552222222,
+					46.337777777
+				]
+			},
+			"properties": {
+				"NAME": "Bovec",
+				"NAME_EN": "Bovec",
+				"NAME_IT": "Plezzo",
+				"NAME_DE": "Bovec",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1586,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15855"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.592530518,
+					45.904443305
+				]
+			},
+			"properties": {
+				"NAME": "Brežice",
+				"NAME_EN": "Brežice",
+				"NAME_IT": "Brežice",
+				"NAME_DE": "Brežice",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Posavska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 6843,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15858"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.264128741,
+					46.22909194
+				]
+			},
+			"properties": {
+				"NAME": "Celje",
+				"NAME_EN": "Celje",
+				"NAME_IT": "Celje",
+				"NAME_DE": "Celje",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Savinjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 37122,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1012"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.358055555,
+					45.796388888
+				]
+			},
+			"properties": {
+				"NAME": "Cerknica",
+				"NAME_EN": "Cerknica",
+				"NAME_IT": "Circonio",
+				"NAME_DE": "Cerknica",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Primorsko-notranjska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4018,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15860"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.18889,
+					45.57111
+				]
+			},
+			"properties": {
+				"NAME": "Črnomelj",
+				"NAME_EN": "Črnomelj",
+				"NAME_IT": "Črnomelj",
+				"NAME_DE": "Črnomelj",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Jugovzhodna Slovenija",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 5496,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15861"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.6,
+					46.133333333
+				]
+			},
+			"properties": {
+				"NAME": "Domžale",
+				"NAME_EN": "Domžale",
+				"NAME_IT": "Domžale",
+				"NAME_DE": "Domžale",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Osrednjeslovenska",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 13222,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15865"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.017967473,
+					46.59004243
+				]
+			},
+			"properties": {
+				"NAME": "Dravograd",
+				"NAME_EN": "Dravograd",
+				"NAME_IT": "Dravograd",
+				"NAME_DE": "Dravograd",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Koroška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3088,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15867"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.988345636,
+					46.681005313
+				]
+			},
+			"properties": {
+				"NAME": "Gornja Radgona",
+				"NAME_EN": "Gornja Radgona",
+				"NAME_IT": "Gornja Radgona",
+				"NAME_DE": "Gornja Radgona",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Pomurska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3086,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15868"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.6562,
+					45.955125
+				]
+			},
+			"properties": {
+				"NAME": "Grosuplje",
+				"NAME_EN": "Grosuplje",
+				"NAME_IT": "Grosuplje",
+				"NAME_DE": "Grosuplje",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Osrednjeslovenska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 7703,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15870"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.08139,
+					46.14611
+				]
+			},
+			"properties": {
+				"NAME": "Hrastnik",
+				"NAME_EN": "Hrastnik",
+				"NAME_IT": "Hrastnik",
+				"NAME_DE": "Hrastnik",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Zasavska",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 4962,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15871"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.0275,
+					46.0025
+				]
+			},
+			"properties": {
+				"NAME": "Idrija",
+				"NAME_EN": "Idrija",
+				"NAME_IT": "Idria",
+				"NAME_DE": "Idrija",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5848,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15875"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.249259577,
+					45.565131677
+				]
+			},
+			"properties": {
+				"NAME": "Ilirska Bistrica",
+				"NAME_EN": "Ilirska Bistrica",
+				"NAME_IT": "Bisterza",
+				"NAME_DE": "Ilirska Bistrica",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Primorsko-notranjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 4323,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15876"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.660405031,
+					45.539545223
+				]
+			},
+			"properties": {
+				"NAME": "Izola",
+				"NAME_EN": "Izola",
+				"NAME_IT": "Isola (Slovenia)",
+				"NAME_DE": "Izola",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Obalno-kraška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 11489,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15877"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.060172222,
+					46.436572222
+				]
+			},
+			"properties": {
+				"NAME": "Jesenice",
+				"NAME_EN": "Jesenice",
+				"NAME_IT": "Jesenice",
+				"NAME_DE": "Jesenice",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Gorenjska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13702,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q4165497"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.609661395,
+					46.224979812
+				]
+			},
+			"properties": {
+				"NAME": "Kamnik",
+				"NAME_EN": "Kamnik",
+				"NAME_IT": "Kamnik",
+				"NAME_DE": "Kamnik",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Osrednjeslovenska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 13800,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15883"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.579598515,
+					46.24705938
+				]
+			},
+			"properties": {
+				"NAME": "Kobarid",
+				"NAME_EN": "Kobarid",
+				"NAME_IT": "Caporetto",
+				"NAME_DE": "Karfreit",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1085,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3618115"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.859383333,
+					45.642961111
+				]
+			},
+			"properties": {
+				"NAME": "Kočevje",
+				"NAME_EN": "Kočevje",
+				"NAME_IT": "Kočevje",
+				"NAME_DE": "Kočevje",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Jugovzhodna Slovenija",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 8151,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q12958961"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.7306571,
+					45.547542728
+				]
+			},
+			"properties": {
+				"NAME": "Koper",
+				"NAME_EN": "Koper",
+				"NAME_IT": "Capodistria",
+				"NAME_DE": "Koper",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Obalno-kraška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 25913,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1015"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.35561,
+					46.23887
+				]
+			},
+			"properties": {
+				"NAME": "Kranj",
+				"NAME_EN": "Kranj",
+				"NAME_IT": "Kranj",
+				"NAME_DE": "Krainburg",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Gorenjska",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 37605,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1021"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.787108,
+					46.485381
+				]
+			},
+			"properties": {
+				"NAME": "Kranjska Gora",
+				"NAME_EN": "Kranjska Gora",
+				"NAME_IT": "Kranjska Gora",
+				"NAME_DE": "Kranjska Gora",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Gorenjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1519,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2139428"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.492155555,
+					45.958963888
+				]
+			},
+			"properties": {
+				"NAME": "Krško",
+				"NAME_EN": "Krško",
+				"NAME_IT": "Krško",
+				"NAME_DE": "Krško",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Posavska",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6852,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15886"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.238617,
+					46.156303
+				]
+			},
+			"properties": {
+				"NAME": "Laško",
+				"NAME_EN": "Laško",
+				"NAME_IT": "Laško",
+				"NAME_DE": "Laško",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Savinjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3288,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1292940"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.830578497,
+					46.575526188
+				]
+			},
+			"properties": {
+				"NAME": "Lenart v Slovenskih goricah",
+				"NAME_EN": "Lenart v Slovenskih Goricah",
+				"NAME_IT": "Lenart v Slovenskih goricah",
+				"NAME_DE": "Lenart",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Podravska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3285,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15889"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.449885788,
+					46.566201748
+				]
+			},
+			"properties": {
+				"NAME": "Lendava",
+				"NAME_EN": "Lendava",
+				"NAME_IT": "Lendava",
+				"NAME_DE": "Lendava",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Pomurska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2954,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15890"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.830306,
+					46.056469
+				]
+			},
+			"properties": {
+				"NAME": "Litija",
+				"NAME_EN": "Litija",
+				"NAME_IT": "Litija",
+				"NAME_DE": "Litija",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Zasavska",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 6688,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2115226"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.506111111,
+					46.051388888
+				]
+			},
+			"properties": {
+				"NAME": "Ljubljana",
+				"NAME_EN": "Ljubljana",
+				"NAME_IT": "Lubiana",
+				"NAME_DE": "Ljubljana",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Osrednjeslovenska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 284293,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q437"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.229728,
+					45.916703
+				]
+			},
+			"properties": {
+				"NAME": "Logatec",
+				"NAME_EN": "Logatec",
+				"NAME_IT": "Longatico",
+				"NAME_DE": "Logatec",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Osrednjeslovenska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 9752,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2752423"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.633333333,
+					46.55
+				]
+			},
+			"properties": {
+				"NAME": "Maribor",
+				"NAME_EN": "Maribor",
+				"NAME_IT": "Maribor",
+				"NAME_DE": "Maribor",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Podravska",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 114301,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1010"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.31417,
+					45.64722
+				]
+			},
+			"properties": {
+				"NAME": "Metlika",
+				"NAME_EN": "Metlika",
+				"NAME_IT": "Metlika",
+				"NAME_DE": "Metlika",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Jugovzhodna Slovenija",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3229,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15896"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.853647,
+					46.520581
+				]
+			},
+			"properties": {
+				"NAME": "Mežica",
+				"NAME_EN": "Mežica",
+				"NAME_IT": "Mežica",
+				"NAME_DE": "Mežica",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Koroška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3176,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15898"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.161944444,
+					46.658611111
+				]
+			},
+			"properties": {
+				"NAME": "Murska Sobota",
+				"NAME_EN": "Murska Sobota",
+				"NAME_IT": "Murska Sobota",
+				"NAME_DE": "Murska Sobota",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Pomurska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11190,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15899"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.65,
+					45.966666666
+				]
+			},
+			"properties": {
+				"NAME": "Nova Gorica",
+				"NAME_EN": "Nova Gorica",
+				"NAME_IT": "Nova Gorica",
+				"NAME_DE": "Nova Gorica",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 13031,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1018"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.63472,
+					46.08583
+				]
+			},
+			"properties": {
+				"NAME": "Občina Kanal ob Soči",
+				"NAME_EN": "Municipality of Kanal ob Soči",
+				"NAME_IT": "Comune di Canale d'Isonzo",
+				"NAME_DE": "Gemeinde Kanal ob Soči",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 5304,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3435496"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.783333333,
+					46.483333333
+				]
+			},
+			"properties": {
+				"NAME": "Občina Kranjska Gora",
+				"NAME_EN": "Municipality of Kranjska Gora",
+				"NAME_IT": "Comune di Kranjska Gora",
+				"NAME_DE": "Kranjska Gora",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Gorenjska",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 5590,
+				"POP1950": 0,
+				"populationDate": "2020-07-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q507051"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.05,
+					46.366666666
+				]
+			},
+			"properties": {
+				"NAME": "Občina Zavrč",
+				"NAME_EN": "Municipality of Zavrč",
+				"NAME_IT": "Zavrč",
+				"NAME_DE": "Zavrč",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Podravska",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 1485,
+				"POP1950": 0,
+				"populationDate": "2020-07-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167001"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.283333333,
+					46.583333333
+				]
+			},
+			"properties": {
+				"NAME": "Odranci",
+				"NAME_EN": "Odranci",
+				"NAME_IT": "Odranci",
+				"NAME_DE": "Odranci",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Pomurska",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 1632,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q966592"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.150534332,
+					46.407125458
+				]
+			},
+			"properties": {
+				"NAME": "Ormož",
+				"NAME_EN": "Ormož",
+				"NAME_IT": "Ormož",
+				"NAME_DE": "Ormož",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Podravska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1962,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1944509"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.568531066,
+					45.527107649
+				]
+			},
+			"properties": {
+				"NAME": "Piran",
+				"NAME_EN": "Piran",
+				"NAME_IT": "Pirano",
+				"NAME_DE": "Piran",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Obalno-kraška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3787,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1382"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.590833333,
+					45.514166666
+				]
+			},
+			"properties": {
+				"NAME": "Portorož",
+				"NAME_EN": "Portorož",
+				"NAME_IT": "Portorose",
+				"NAME_DE": "Portorož",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Obalno-kraška",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2866,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q564988"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.21528,
+					45.77435
+				]
+			},
+			"properties": {
+				"NAME": "Postojna",
+				"NAME_EN": "Postojna",
+				"NAME_IT": "Postumia",
+				"NAME_DE": "Postojna",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Primorsko-notranjska",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 9605,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15901"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.92083,
+					46.54694
+				]
+			},
+			"properties": {
+				"NAME": "Prevalje",
+				"NAME_EN": "Prevalje",
+				"NAME_IT": "Prevalje",
+				"NAME_DE": "Prevalje",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Koroška",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 4620,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15905"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.871388888,
+					46.418611111
+				]
+			},
+			"properties": {
+				"NAME": "Ptuj",
+				"NAME_EN": "Ptuj",
+				"NAME_IT": "Ptuj",
+				"NAME_DE": "Ptuj",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Podravska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17880,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15906"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.172872222,
+					46.065936111
+				]
+			},
+			"properties": {
+				"NAME": "Radeče",
+				"NAME_EN": "Radeče",
+				"NAME_IT": "Radeče",
+				"NAME_DE": "Ratschach",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Posavska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1993,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15908"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.222594564,
+					46.614898301
+				]
+			},
+			"properties": {
+				"NAME": "Radlje ob Dravi",
+				"NAME_EN": "Radlje ob Dravi",
+				"NAME_IT": "Radlje ob Dravi",
+				"NAME_DE": "Radlje ob Dravi",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Koroška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2856,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q6565933"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.172078,
+					46.342517
+				]
+			},
+			"properties": {
+				"NAME": "Radovljica",
+				"NAME_EN": "Radovljica",
+				"NAME_IT": "Radovljica",
+				"NAME_DE": "Radovljica",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Gorenjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 6099,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q604194"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.964233333,
+					46.543736111
+				]
+			},
+			"properties": {
+				"NAME": "Ravne na Koroškem",
+				"NAME_EN": "Ravne na Koroškem",
+				"NAME_IT": "Ravne na Koroškem",
+				"NAME_DE": "Ravne na Koroškem",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Koroška",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7363,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15911"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.639444,
+					45.942222
+				]
+			},
+			"properties": {
+				"NAME": "Rožna Dolina",
+				"NAME_EN": "Rožna Dolina",
+				"NAME_IT": "Valdirose",
+				"NAME_DE": "Rosenthal",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1127,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2143232"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.515277777,
+					46.538333333
+				]
+			},
+			"properties": {
+				"NAME": "Ruše",
+				"NAME_EN": "Ruše",
+				"NAME_IT": "Ruše",
+				"NAME_DE": "Ruše",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Podravska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4206,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15914"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.637778,
+					45.928333
+				]
+			},
+			"properties": {
+				"NAME": "Šempeter pri Gorici",
+				"NAME_EN": "Šempeter pri Gorici",
+				"NAME_IT": "San Pietro",
+				"NAME_DE": "Šempeter pri Gorici",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3694,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15853"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.336244,
+					45.838883
+				]
+			},
+			"properties": {
+				"NAME": "Šentjernej",
+				"NAME_EN": "Šentjernej",
+				"NAME_IT": "Šentjernej",
+				"NAME_DE": "Šentjernej",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Jugovzhodna Slovenija",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1441,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1809670"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.397312366,
+					46.222480742
+				]
+			},
+			"properties": {
+				"NAME": "Šentjur",
+				"NAME_EN": "Šentjur",
+				"NAME_IT": "Šentjur",
+				"NAME_DE": "Šentjur",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Savinjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 4940,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15921"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.303888888,
+					46.009166666
+				]
+			},
+			"properties": {
+				"NAME": "Sevnica",
+				"NAME_EN": "Sevnica",
+				"NAME_IT": "Sevnica",
+				"NAME_DE": "Sevnica",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Posavska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4533,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15915"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.85,
+					45.7
+				]
+			},
+			"properties": {
+				"NAME": "Sežana",
+				"NAME_EN": "Sežana",
+				"NAME_IT": "Sesana",
+				"NAME_DE": "Sežana",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Obalno-kraška",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 6037,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15916"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.306448281,
+					46.16549744
+				]
+			},
+			"properties": {
+				"NAME": "Škofja Loka",
+				"NAME_EN": "Škofja Loka",
+				"NAME_IT": "Škofja Loka",
+				"NAME_DE": "Škofja Loka",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Gorenjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 11797,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15922"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.079044398,
+					46.509344605
+				]
+			},
+			"properties": {
+				"NAME": "Slovenj Gradec",
+				"NAME_EN": "Slovenj Gradec",
+				"NAME_IT": "Slovenj Gradec",
+				"NAME_DE": "Slovenj Gradec",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Koroška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 7249,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15918"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.570726245,
+					46.394136552
+				]
+			},
+			"properties": {
+				"NAME": "Slovenska Bistrica",
+				"NAME_EN": "Slovenska Bistrica",
+				"NAME_IT": "Slovenska Bistrica",
+				"NAME_DE": "Slovenska Bistrica",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Podravska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 8219,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15917"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.42099741,
+					46.336214186
+				]
+			},
+			"properties": {
+				"NAME": "Slovenske Konjice",
+				"NAME_EN": "Slovenske Konjice",
+				"NAME_IT": "Slovenske Konjice",
+				"NAME_DE": "Slovenske Konjice",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Savinjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 5157,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15919"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.645278,
+					45.969444
+				]
+			},
+			"properties": {
+				"NAME": "Solkan",
+				"NAME_EN": "Solkan",
+				"NAME_IT": "Salcano",
+				"NAME_DE": "Solkan",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3216,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q543631"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.791389,
+					45.571389
+				]
+			},
+			"properties": {
+				"NAME": "Spodnje Škofije",
+				"NAME_EN": "Spodnje Škofije",
+				"NAME_IT": "Scoffie di Sotto",
+				"NAME_DE": "Spodnje Škofije",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Obalno-kraška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1455,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2227842"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.05,
+					46.15
+				]
+			},
+			"properties": {
+				"NAME": "Trbovlje",
+				"NAME_EN": "Trbovlje",
+				"NAME_IT": "Trbovlje",
+				"NAME_DE": "Trbovlje",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Zasavska",
+				"coordinatePrecision": 0.12966954385097,
+				"ADM0CAP": 0,
+				"POP_MAX": 13678,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q8011202"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.008627777,
+					45.910377777
+				]
+			},
+			"properties": {
+				"NAME": "Trebnje",
+				"NAME_EN": "Trebnje",
+				"NAME_IT": "Trebnje",
+				"NAME_DE": "Trebnje",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Jugovzhodna Slovenija",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3927,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15926"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.116666666,
+					46.366666666
+				]
+			},
+			"properties": {
+				"NAME": "Velenje",
+				"NAME_EN": "Velenje",
+				"NAME_IT": "Velenje",
+				"NAME_DE": "Velenje",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Savinjska",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 25235,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15928"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.962156849,
+					45.846272784
+				]
+			},
+			"properties": {
+				"NAME": "Vipava",
+				"NAME_EN": "Vipava",
+				"NAME_IT": "Vipacco",
+				"NAME_DE": "Vipava",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2101,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2527695"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.743127564,
+					45.953941652
+				]
+			},
+			"properties": {
+				"NAME": "Višnja Gora",
+				"NAME_EN": "Višnja Gora",
+				"NAME_IT": "Višnja Gora",
+				"NAME_DE": "Višnja Gora",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Osrednjeslovenska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 1090,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15929"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.302752783,
+					46.293120452
+				]
+			},
+			"properties": {
+				"NAME": "Vojnik",
+				"NAME_EN": "Vojnik",
+				"NAME_IT": "Vojnik",
+				"NAME_DE": "Vojnik",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Savinjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2475,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q16469"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.293611111,
+					45.962222222
+				]
+			},
+			"properties": {
+				"NAME": "Vrhnika",
+				"NAME_EN": "Vrhnika",
+				"NAME_IT": "Nauporto",
+				"NAME_DE": "Vrhnika",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Osrednjeslovenska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 8969,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q438"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13.636389,
+					45.908889
+				]
+			},
+			"properties": {
+				"NAME": "Vrtojba",
+				"NAME_EN": "Vrtojba",
+				"NAME_IT": "Vertoiba",
+				"NAME_DE": "Vrtojba",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Goriška",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2598,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2233861"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.994166666,
+					46.134166666
+				]
+			},
+			"properties": {
+				"NAME": "Zagorje ob Savi",
+				"NAME_EN": "Zagorje ob Savi",
+				"NAME_IT": "Zagorje ob Savi",
+				"NAME_DE": "Zagorje ob Savi",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Zasavska",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6023,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15930"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15.167445787,
+					46.251564594
+				]
+			},
+			"properties": {
+				"NAME": "Žalec",
+				"NAME_EN": "Žalec",
+				"NAME_IT": "Žalec",
+				"NAME_DE": "Žalec",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Savinjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 5004,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q631387"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.108283,
+					46.046019
+				]
+			},
+			"properties": {
+				"NAME": "Žiri",
+				"NAME_EN": "Žiri",
+				"NAME_IT": "Žiri",
+				"NAME_DE": "Žiri",
+				"ADM0NAME": "Slovenia",
+				"ADM1NAME": "Gorenjska",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 3657,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q15933"
+			}
+		}
+	]
+}

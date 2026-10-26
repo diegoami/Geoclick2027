@@ -1,0 +1,25 @@
+{
+	"mapId": "singapore-regions",
+	"steps": [
+		{
+			"targetId": "north",
+			"dwellMs": 3000
+		},
+		{
+			"targetId": "north-east",
+			"dwellMs": 3000
+		},
+		{
+			"targetId": "east",
+			"dwellMs": 3000
+		},
+		{
+			"targetId": "west",
+			"dwellMs": 3000
+		},
+		{
+			"targetId": "central",
+			"dwellMs": 3000
+		}
+	]
+}

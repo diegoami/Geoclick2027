@@ -1,0 +1,204 @@
+{
+	"pomurska": {
+		"kind": "region",
+		"borders": [
+			"Podravska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Murska Sobota",
+			"nameDe": "Murska Sobota",
+			"nameIt": "Murska Sobota",
+			"population": 11190
+		},
+		"position": "north-east"
+	},
+	"koroska": {
+		"kind": "region",
+		"borders": [
+			"Podravska",
+			"Savinjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ravne na Koroškem",
+			"nameDe": "Ravne na Koroškem",
+			"nameIt": "Ravne na Koroškem",
+			"population": 7363
+		},
+		"position": "north"
+	},
+	"podravska": {
+		"kind": "region",
+		"borders": [
+			"Koroška",
+			"Pomurska",
+			"Savinjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Maribor",
+			"nameDe": "Maribor",
+			"nameIt": "Maribor",
+			"population": 114301
+		},
+		"position": "north-east"
+	},
+	"gorenjska": {
+		"kind": "region",
+		"borders": [
+			"Goriška",
+			"Osrednjeslovenska",
+			"Savinjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kranj",
+			"nameDe": "Krainburg",
+			"nameIt": "Kranj",
+			"population": 37605
+		},
+		"position": "west"
+	},
+	"savinjska": {
+		"kind": "region",
+		"borders": [
+			"Gorenjska",
+			"Koroška",
+			"Osrednjeslovenska",
+			"Podravska",
+			"Posavska",
+			"Zasavska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Celje",
+			"nameDe": "Celje",
+			"nameIt": "Celje",
+			"population": 37122
+		},
+		"position": "centre"
+	},
+	"goriska": {
+		"kind": "region",
+		"borders": [
+			"Gorenjska",
+			"Obalno-kraška",
+			"Osrednjeslovenska",
+			"Primorsko-notranjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nova Gorica",
+			"nameDe": "Nova Gorica",
+			"nameIt": "Nova Gorica",
+			"population": 13031
+		},
+		"peak": {
+			"name": "Triglav",
+			"elevation": 2864
+		},
+		"position": "west"
+	},
+	"zasavska": {
+		"kind": "region",
+		"borders": [
+			"Jugovzhodna Slovenija",
+			"Osrednjeslovenska",
+			"Posavska",
+			"Savinjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Trbovlje",
+			"nameDe": "Trbovlje",
+			"nameIt": "Trbovlje",
+			"population": 13678
+		},
+		"position": "centre"
+	},
+	"osrednjeslovenska": {
+		"kind": "region",
+		"borders": [
+			"Gorenjska",
+			"Goriška",
+			"Jugovzhodna Slovenija",
+			"Primorsko-notranjska",
+			"Savinjska",
+			"Zasavska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ljubljana",
+			"nameDe": "Ljubljana",
+			"nameIt": "Lubiana",
+			"population": 284293
+		},
+		"position": "centre"
+	},
+	"posavska": {
+		"kind": "region",
+		"borders": [
+			"Jugovzhodna Slovenija",
+			"Savinjska",
+			"Zasavska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Krško",
+			"nameDe": "Krško",
+			"nameIt": "Krško",
+			"population": 6852
+		},
+		"position": "centre"
+	},
+	"jugovzhodna-slovenija": {
+		"kind": "region",
+		"borders": [
+			"Osrednjeslovenska",
+			"Posavska",
+			"Primorsko-notranjska",
+			"Zasavska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kočevje",
+			"nameDe": "Kočevje",
+			"nameIt": "Kočevje",
+			"population": 8151
+		},
+		"position": "south"
+	},
+	"primorsko-notranjska": {
+		"kind": "region",
+		"borders": [
+			"Goriška",
+			"Jugovzhodna Slovenija",
+			"Obalno-kraška",
+			"Osrednjeslovenska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Postojna",
+			"nameDe": "Postojna",
+			"nameIt": "Postumia",
+			"population": 9605
+		},
+		"position": "south-west"
+	},
+	"obalno-kraska": {
+		"kind": "region",
+		"borders": [
+			"Goriška",
+			"Primorsko-notranjska"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Koper",
+			"nameDe": "Koper",
+			"nameIt": "Capodistria",
+			"population": 25913
+		},
+		"position": "south-west"
+	}
+}

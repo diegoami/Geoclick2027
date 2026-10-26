@@ -1,0 +1,194 @@
+{
+	"murska-sobota": {
+		"kind": "city",
+		"population": 11190,
+		"populationRank": 15,
+		"region": "Pomurska",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"maribor": {
+		"kind": "city",
+		"population": 114301,
+		"populationRank": 2,
+		"region": "Podravska",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"A vine on one of its old houses, more than 400 years old, is listed as the oldest in the world.",
+				"It was a European Capital of Culture in 2012."
+			],
+			"it": [
+				"Una vite su una delle sue vecchie case, di oltre 400 anni, è indicata come la più antica del mondo.",
+				"Fu Capitale europea della cultura nel 2012."
+			],
+			"de": [
+				"Ein Weinstock an einem ihrer alten Häuser, mehr als 400 Jahre alt, gilt als der älteste der Welt.",
+				"Sie war 2012 Europäische Kulturhauptstadt."
+			]
+		}
+	},
+	"jesenice": {
+		"kind": "city",
+		"population": 13702,
+		"populationRank": 9,
+		"region": "Gorenjska",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"ptuj": {
+		"kind": "city",
+		"population": 17880,
+		"populationRank": 7,
+		"region": "Podravska",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"slovenska-bistrica": {
+		"kind": "city",
+		"population": 8219,
+		"populationRank": 19,
+		"region": "Podravska",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"velenje": {
+		"kind": "city",
+		"population": 25235,
+		"populationRank": 6,
+		"region": "Savinjska",
+		"coastal": false,
+		"position": "north"
+	},
+	"kranj": {
+		"kind": "city",
+		"population": 37605,
+		"populationRank": 3,
+		"region": "Gorenjska",
+		"coastal": false,
+		"position": "west"
+	},
+	"celje": {
+		"kind": "city",
+		"population": 37122,
+		"populationRank": 4,
+		"region": "Savinjska",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kamnik": {
+		"kind": "city",
+		"population": 13800,
+		"populationRank": 8,
+		"region": "Osrednjeslovenska",
+		"coastal": false,
+		"position": "centre"
+	},
+	"skofja-loka": {
+		"kind": "city",
+		"population": 11797,
+		"populationRank": 13,
+		"region": "Gorenjska",
+		"coastal": false,
+		"position": "west"
+	},
+	"trbovlje": {
+		"kind": "city",
+		"population": 13678,
+		"populationRank": 10,
+		"region": "Zasavska",
+		"coastal": false,
+		"position": "centre"
+	},
+	"domzale": {
+		"kind": "city",
+		"population": 13222,
+		"populationRank": 11,
+		"region": "Osrednjeslovenska",
+		"coastal": false,
+		"position": "centre"
+	},
+	"ljubljana": {
+		"kind": "city",
+		"population": 284293,
+		"populationRank": 1,
+		"region": "Osrednjeslovenska",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Where the name comes from is disputed; a legend puts Jason and the Argonauts here, killing the dragon now on its arms.",
+				"The architect Jože Plečnik reshaped much of it between the wars.",
+				"It was European Green Capital in 2016."
+			],
+			"it": [
+				"Da dove venga il nome è discusso; una leggenda porta qui Giasone e gli Argonauti, che uccisero il drago oggi sul suo stemma.",
+				"L’architetto Jože Plečnik ne ridisegnò buona parte tra le due guerre.",
+				"Fu Capitale verde europea nel 2016."
+			],
+			"de": [
+				"Woher der Name kommt, ist umstritten; eine Legende lässt Jason und die Argonauten hier den Drachen töten, der heute in ihrem Wappen steht.",
+				"Der Architekt Jože Plečnik hat zwischen den Kriegen einen großen Teil von ihr umgestaltet.",
+				"Sie war 2016 Umwelthauptstadt Europas."
+			]
+		}
+	},
+	"nova-gorica": {
+		"kind": "city",
+		"population": 13031,
+		"populationRank": 12,
+		"region": "Goriška",
+		"coastal": false,
+		"position": "west"
+	},
+	"vrhnika": {
+		"kind": "city",
+		"population": 8969,
+		"populationRank": 18,
+		"region": "Osrednjeslovenska",
+		"coastal": false,
+		"position": "west"
+	},
+	"logatec": {
+		"kind": "city",
+		"population": 9752,
+		"populationRank": 16,
+		"region": "Osrednjeslovenska",
+		"coastal": false,
+		"position": "west"
+	},
+	"postojna": {
+		"kind": "city",
+		"population": 9605,
+		"populationRank": 17,
+		"region": "Primorsko-notranjska",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"kocevje": {
+		"kind": "city",
+		"population": 8151,
+		"populationRank": 20,
+		"region": "Jugovzhodna Slovenija",
+		"coastal": false,
+		"position": "south"
+	},
+	"koper": {
+		"kind": "city",
+		"population": 25913,
+		"populationRank": 5,
+		"region": "Obalno-kraška",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"izola": {
+		"kind": "city",
+		"population": 11489,
+		"populationRank": 14,
+		"region": "Obalno-kraška",
+		"coastal": true,
+		"position": "south-west"
+	}
+}

@@ -1,0 +1,521 @@
+{
+	"mara": {
+		"kind": "region",
+		"borders": [
+			"Arusha",
+			"Simiyu"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"kagera": {
+		"kind": "region",
+		"borders": [
+			"Geita",
+			"Kigoma"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bukoba",
+			"nameDe": "Bukoba",
+			"nameIt": "Bukoba",
+			"population": 100504
+		},
+		"position": "north-west"
+	},
+	"mwanza": {
+		"kind": "region",
+		"borders": [
+			"Geita",
+			"Shinyanga",
+			"Simiyu"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mwanza",
+			"nameDe": "Mwanza",
+			"nameIt": "Mwanza",
+			"population": 493944
+		},
+		"position": "north-west"
+	},
+	"arusha": {
+		"kind": "region",
+		"borders": [
+			"Kilimanjaro",
+			"Manyara",
+			"Mara",
+			"Simiyu",
+			"Singida"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arusha",
+			"nameDe": "Arusha",
+			"nameIt": "Arusha",
+			"population": 341136
+		},
+		"peak": {
+			"name": "Loolmalasin",
+			"elevation": 3682
+		},
+		"position": "north"
+	},
+	"simiyu": {
+		"kind": "region",
+		"borders": [
+			"Arusha",
+			"Mara",
+			"Mwanza",
+			"Shinyanga",
+			"Singida"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"geita": {
+		"kind": "region",
+		"borders": [
+			"Kagera",
+			"Kigoma",
+			"Mwanza",
+			"Shinyanga",
+			"Tabora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Geita",
+			"nameDe": "Geita",
+			"nameIt": "Geita",
+			"population": 1536
+		},
+		"position": "north-west"
+	},
+	"kilimanjaro": {
+		"kind": "region",
+		"borders": [
+			"Arusha",
+			"Manyara",
+			"Tanga"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Moshi",
+			"nameDe": "Moshi",
+			"nameIt": "Moshi",
+			"population": 721018
+		},
+		"peak": {
+			"name": "Mount Kilimanjaro",
+			"elevation": 5895
+		},
+		"position": "north-east"
+	},
+	"shinyanga": {
+		"kind": "region",
+		"borders": [
+			"Geita",
+			"Mwanza",
+			"Simiyu",
+			"Singida",
+			"Tabora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Shinyanga",
+			"nameDe": "Shinyanga",
+			"nameIt": "Shinyanga",
+			"population": 107362
+		},
+		"position": "north-west"
+	},
+	"manyara": {
+		"kind": "region",
+		"borders": [
+			"Arusha",
+			"Dodoma",
+			"Kilimanjaro",
+			"Morogoro",
+			"Singida",
+			"Tanga"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Babati",
+			"nameDe": "Babati",
+			"nameIt": "Babati",
+			"population": 34291
+		},
+		"position": "centre"
+	},
+	"kigoma": {
+		"kind": "region",
+		"borders": [
+			"Geita",
+			"Kagera",
+			"Katavi",
+			"Tabora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Uvinza",
+			"nameDe": "Uvinza",
+			"nameIt": "Uvinza",
+			"population": 80350
+		},
+		"position": "west"
+	},
+	"kaskazini-pemba": {
+		"kind": "region",
+		"borders": [
+			"Kusini Pemba"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Wete",
+			"nameDe": "Wete",
+			"nameIt": "Wete",
+			"population": 26450
+		},
+		"position": "east"
+	},
+	"tanga": {
+		"kind": "region",
+		"borders": [
+			"Kilimanjaro",
+			"Manyara",
+			"Morogoro",
+			"Pwani"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tanga",
+			"nameDe": "Tanga",
+			"nameIt": "Tanga",
+			"population": 224876
+		},
+		"position": "east"
+	},
+	"kusini-pemba": {
+		"kind": "region",
+		"borders": [
+			"Kaskazini Pemba"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chake Chake",
+			"nameDe": "Chake-Chake",
+			"nameIt": "Chake-Chake",
+			"population": 49959
+		},
+		"position": "east"
+	},
+	"tabora": {
+		"kind": "region",
+		"borders": [
+			"Geita",
+			"Katavi",
+			"Kigoma",
+			"Mbeya",
+			"Shinyanga",
+			"Singida",
+			"Songwe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tabora",
+			"nameDe": "Tabora",
+			"nameIt": "Tabora",
+			"population": 146495
+		},
+		"position": "west"
+	},
+	"singida": {
+		"kind": "region",
+		"borders": [
+			"Arusha",
+			"Dodoma",
+			"Iringa",
+			"Manyara",
+			"Mbeya",
+			"Shinyanga",
+			"Simiyu",
+			"Tabora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Singida",
+			"nameDe": "Singida",
+			"nameIt": "Singida",
+			"population": 62432
+		},
+		"position": "centre"
+	},
+	"dodoma": {
+		"kind": "region",
+		"borders": [
+			"Iringa",
+			"Manyara",
+			"Morogoro",
+			"Singida"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dodoma",
+			"nameDe": "Dodoma",
+			"nameIt": "Dodoma",
+			"population": 218269
+		},
+		"position": "centre"
+	},
+	"kaskazini-unguja": {
+		"kind": "region",
+		"borders": [
+			"Kusini Unguja",
+			"Mjini Magharibi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mkokotoni",
+			"nameDe": "Mkokotoni",
+			"nameIt": "Mkokotoni",
+			"population": 2572
+		},
+		"position": "east"
+	},
+	"mjini-magharibi": {
+		"kind": "region",
+		"borders": [
+			"Kaskazini Unguja",
+			"Kusini Unguja"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zanzibar",
+			"nameDe": "Sansibar",
+			"nameIt": "Zanzibar",
+			"population": 403658
+		},
+		"position": "east"
+	},
+	"kusini-unguja": {
+		"kind": "region",
+		"borders": [
+			"Kaskazini Unguja",
+			"Mjini Magharibi"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"katavi": {
+		"kind": "region",
+		"borders": [
+			"Kigoma",
+			"Rukwa",
+			"Songwe",
+			"Tabora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mpanda",
+			"nameDe": "Mpanda",
+			"nameIt": "Mpanda",
+			"population": 73338
+		},
+		"position": "west"
+	},
+	"dar-es-salaam": {
+		"kind": "region",
+		"borders": [
+			"Pwani"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dar es Salaam",
+			"nameDe": "Daressalam",
+			"nameIt": "Dar es Salaam",
+			"population": 2930000
+		},
+		"position": "east"
+	},
+	"pwani": {
+		"kind": "region",
+		"borders": [
+			"Dar es Salaam",
+			"Lindi",
+			"Morogoro",
+			"Tanga"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bagamoyo",
+			"nameDe": "Bagamoyo",
+			"nameIt": "Bagamoyo",
+			"population": 82426
+		},
+		"position": "east"
+	},
+	"morogoro": {
+		"kind": "region",
+		"borders": [
+			"Dodoma",
+			"Iringa",
+			"Lindi",
+			"Manyara",
+			"Njombe",
+			"Pwani",
+			"Ruvuma",
+			"Tanga"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Morogoro",
+			"nameDe": "Morogoro",
+			"nameIt": "Morogoro",
+			"population": 250902
+		},
+		"peak": {
+			"name": "Kimhandu",
+			"elevation": 2653
+		},
+		"position": "east"
+	},
+	"iringa": {
+		"kind": "region",
+		"borders": [
+			"Dodoma",
+			"Mbeya",
+			"Morogoro",
+			"Njombe",
+			"Singida"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Iringa",
+			"nameDe": "Iringa",
+			"nameIt": "Iringa",
+			"population": 111820
+		},
+		"position": "centre"
+	},
+	"rukwa": {
+		"kind": "region",
+		"borders": [
+			"Katavi",
+			"Songwe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sumbawanga",
+			"nameDe": "Sumbawanga",
+			"nameIt": "Sumbawanga",
+			"population": 89161
+		},
+		"position": "west"
+	},
+	"songwe": {
+		"kind": "region",
+		"borders": [
+			"Katavi",
+			"Mbeya",
+			"Rukwa",
+			"Tabora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tunduma",
+			"nameDe": "Tunduma",
+			"nameIt": "Tunduma",
+			"population": 36556
+		},
+		"position": "south-west"
+	},
+	"mbeya": {
+		"kind": "region",
+		"borders": [
+			"Iringa",
+			"Njombe",
+			"Singida",
+			"Songwe",
+			"Tabora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mbeya",
+			"nameDe": "Mbeya",
+			"nameIt": "Mbeya",
+			"population": 291649
+		},
+		"position": "south"
+	},
+	"lindi": {
+		"kind": "region",
+		"borders": [
+			"Morogoro",
+			"Mtwara",
+			"Pwani",
+			"Ruvuma"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lindi",
+			"nameDe": "Lindi",
+			"nameIt": "Lindi",
+			"population": 41912
+		},
+		"position": "south-east"
+	},
+	"njombe": {
+		"kind": "region",
+		"borders": [
+			"Iringa",
+			"Mbeya",
+			"Morogoro",
+			"Ruvuma"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Njombe",
+			"nameDe": "Njombe",
+			"nameIt": "Njombe",
+			"population": 46724
+		},
+		"peak": {
+			"name": "Mtorwi",
+			"elevation": 2980
+		},
+		"position": "south"
+	},
+	"ruvuma": {
+		"kind": "region",
+		"borders": [
+			"Lindi",
+			"Morogoro",
+			"Mtwara",
+			"Njombe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Songea",
+			"nameDe": "Songea",
+			"nameIt": "Songea",
+			"population": 126449
+		},
+		"position": "south"
+	},
+	"mtwara": {
+		"kind": "region",
+		"borders": [
+			"Lindi",
+			"Ruvuma"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mtwara",
+			"nameDe": "Mtwara",
+			"nameIt": "Mtwara",
+			"population": 96602
+		},
+		"position": "south-east"
+	}
+}

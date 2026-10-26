@@ -5,6 +5,9 @@
 // row where even the chosen --name-field is wrong or dated, not a whole new
 // per-country table until there's more than one or two exceptions.
 export const NAME_FIXUPS: Record<string, Record<string, string>> = {
+	'Sri Lanka': { 'Mullaitivu(මූලදීපය)': 'Mullaitivu' },
+	// The Angolan city resumed Moçâmedes in 2016; Namibe remains its province.
+	Angola: { Namibe: 'Moçâmedes' },
 	// Turkish dropped the circumflex from this city's name; its own
 	// municipality writes Elazığ. Hakkâri, also on this map, keeps its.
 	Turkey: { Elâzığ: 'Elazığ' },

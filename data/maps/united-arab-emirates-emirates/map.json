@@ -1,0 +1,249 @@
+{
+	"id": "united-arab-emirates-emirates",
+	"name": "United Arab Emirates — Emirates",
+	"country": "United Arab Emirates",
+	"attribution": "geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/united-arab-emirates-gb-9469f09.geojson",
+	"placesSource": "data/places/united-arab-emirates.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "umm-al-quwain",
+			"name": "Umm Al Quwain",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.724599999999995,
+				25.4606
+			],
+			"bbox": [
+				55.5211,
+				25.2756,
+				55.9281,
+				25.6456
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						55.6783,
+						25.5724
+					],
+					[
+						55.7767,
+						25.448
+					],
+					[
+						55.8697,
+						25.319
+					]
+				],
+				"aspect": 2.3
+			}
+		},
+		{
+			"id": "ras-al-khaimah",
+			"name": "Ras Al Khaimah",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				56.001400000000004,
+				25.4449
+			],
+			"bbox": [
+				55.7311,
+				24.8203,
+				56.2717,
+				26.0695
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						55.9513,
+						25.4331
+					],
+					[
+						55.9029,
+						25.748
+					],
+					[
+						56.1531,
+						25.9867
+					]
+				],
+				"aspect": 3.18
+			}
+		},
+		{
+			"id": "fujairah",
+			"name": "Fujairah",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				56.170249999999996,
+				25.26345
+			],
+			"bbox": [
+				55.9647,
+				24.8661,
+				56.3758,
+				25.6608
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sharjah",
+			"name": "Sharjah",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.8654,
+				25.19125
+			],
+			"bbox": [
+				55.3498,
+				24.7534,
+				56.381,
+				25.6291
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						55.6137,
+						25.3749
+					],
+					[
+						55.8562,
+						25.2198
+					],
+					[
+						55.8738,
+						24.9527
+					]
+				],
+				"aspect": 1.82
+			}
+		},
+		{
+			"id": "ajman",
+			"name": "Ajman",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.7644,
+				25.095100000000002
+			],
+			"bbox": [
+				55.4232,
+				24.7395,
+				56.1056,
+				25.4507
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						55.4515,
+						25.4069
+					],
+					[
+						55.5231,
+						25.4006
+					],
+					[
+						55.5948,
+						25.3991
+					]
+				],
+				"aspect": 1.72
+			}
+		},
+		{
+			"id": "dubai",
+			"name": "Dubai",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.54705,
+				24.99445
+			],
+			"bbox": [
+				54.8905,
+				24.6245,
+				56.2036,
+				25.3644
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						55.1312,
+						24.8978
+					],
+					[
+						55.3819,
+						25.0073
+					],
+					[
+						55.6326,
+						24.9447
+					]
+				],
+				"aspect": 0.85
+			}
+		},
+		{
+			"id": "abu-dhabi",
+			"name": "Abu Dhabi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				53.7762,
+				23.9422
+			],
+			"bbox": [
+				51.535,
+				22.6316,
+				56.0174,
+				25.2528
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						52.4203,
+						23.4779
+					],
+					[
+						54.0656,
+						23.0821
+					],
+					[
+						55.4574,
+						24.0291
+					]
+				],
+				"aspect": 2.17
+			}
+		}
+	],
+	"tourOrder": [
+		"umm-al-quwain",
+		"ras-al-khaimah",
+		"fujairah",
+		"sharjah",
+		"ajman",
+		"dubai",
+		"abu-dhabi"
+	]
+}

@@ -1,0 +1,393 @@
+{
+	"id": "nepal-towns-10k",
+	"name": "Nepal — Towns",
+	"country": "Nepal",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; Survey Department of Nepal, OCHA FISS; 2020; Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO); https://creativecommons.org/licenses/by/3.0/igo/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/nepal.geojson",
+	"regionsMap": "nepal-provinces",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "bhimdatta",
+			"name": "Bhimdatta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.333333333,
+				28.916666666
+			],
+			"bbox": [
+				80.333333333,
+				28.916666666,
+				80.333333333,
+				28.916666666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "dhangadhi",
+			"name": "Dhangadhi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.575,
+				28.705555555
+			],
+			"bbox": [
+				80.575,
+				28.705555555,
+				80.575,
+				28.705555555
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "pokhara",
+			"name": "Pokhara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				83.985277777,
+				28.209722222
+			],
+			"bbox": [
+				83.985277777,
+				28.209722222,
+				83.985277777,
+				28.209722222
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "nepalgunj",
+			"name": "Nepalgunj",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.616666666,
+				28.05
+			],
+			"bbox": [
+				81.616666666,
+				28.05,
+				81.616666666,
+				28.05
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ghorahi",
+			"name": "Ghorahi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				82.486111111,
+				28.040833333
+			],
+			"bbox": [
+				82.486111111,
+				28.040833333,
+				82.486111111,
+				28.040833333
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gokarneshwor",
+			"name": "Gokarneshwor",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.4,
+				27.73333333
+			],
+			"bbox": [
+				85.4,
+				27.73333333,
+				85.4,
+				27.73333333
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kageshwari-manohara",
+			"name": "Kageshwari-Manohara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.411667,
+				27.725833
+			],
+			"bbox": [
+				85.411667,
+				27.725833,
+				85.411667,
+				27.725833
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kathmandu",
+			"name": "Kathmandu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.32,
+				27.71
+			],
+			"bbox": [
+				85.32,
+				27.71,
+				85.32,
+				27.71
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "butwal",
+			"name": "Butwal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				83.45,
+				27.7
+			],
+			"bbox": [
+				83.45,
+				27.7,
+				83.45,
+				27.7
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bharatpur",
+			"name": "Bharatpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				84.433333333,
+				27.683333333
+			],
+			"bbox": [
+				84.433333333,
+				27.683333333,
+				84.433333333,
+				27.683333333
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lalitpur",
+			"name": "Lalitpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.3333,
+				27.6833
+			],
+			"bbox": [
+				85.3333,
+				27.6833,
+				85.3333,
+				27.6833
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bhaktapur",
+			"name": "Bhaktapur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.427777777,
+				27.672222222
+			],
+			"bbox": [
+				85.427777777,
+				27.672222222,
+				85.427777777,
+				27.672222222
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kirtipur",
+			"name": "Kirtipur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.283333333,
+				27.666666666
+			],
+			"bbox": [
+				85.283333333,
+				27.666666666,
+				85.283333333,
+				27.666666666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "siddharthanagar",
+			"name": "Siddharthanagar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				83.45,
+				27.5
+			],
+			"bbox": [
+				83.45,
+				27.5,
+				83.45,
+				27.5
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "hetauda",
+			"name": "Hetauda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.033333333,
+				27.416666666
+			],
+			"bbox": [
+				85.033333333,
+				27.416666666,
+				85.033333333,
+				27.416666666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "birgunj",
+			"name": "Birgunj",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				84.866666666,
+				27
+			],
+			"bbox": [
+				84.866666666,
+				27,
+				84.866666666,
+				27
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "dharan",
+			"name": "Dharan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				87.266666666,
+				26.816666666
+			],
+			"bbox": [
+				87.266666666,
+				26.816666666,
+				87.266666666,
+				26.816666666
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "janakpurdham",
+			"name": "Janakpurdham",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.921666666,
+				26.712222222
+			],
+			"bbox": [
+				85.921666666,
+				26.712222222,
+				85.921666666,
+				26.712222222
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "itahari",
+			"name": "Itahari",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				87.283333333,
+				26.666666666
+			],
+			"bbox": [
+				87.283333333,
+				26.666666666,
+				87.283333333,
+				26.666666666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "biratnagar",
+			"name": "Biratnagar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				87.283333333,
+				26.483333333
+			],
+			"bbox": [
+				87.283333333,
+				26.483333333,
+				87.283333333,
+				26.483333333
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"bhimdatta",
+		"dhangadhi",
+		"pokhara",
+		"nepalgunj",
+		"ghorahi",
+		"gokarneshwor",
+		"kageshwari-manohara",
+		"kathmandu",
+		"butwal",
+		"bharatpur",
+		"lalitpur",
+		"bhaktapur",
+		"kirtipur",
+		"siddharthanagar",
+		"hetauda",
+		"birgunj",
+		"dharan",
+		"janakpurdham",
+		"itahari",
+		"biratnagar"
+	]
+}

@@ -4,6 +4,10 @@
 	"country": "Slovakia",
 	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
 	"placesSource": "data/places/slovakia.geojson",
+	"boundaryRenames": {
+		"Prešov": "Prešovský",
+		"Trenciansky": "Trenčiansky"
+	},
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{

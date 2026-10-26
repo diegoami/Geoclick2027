@@ -4,6 +4,14 @@
 	"country": "Lithuania",
 	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
 	"placesSource": "data/places/lithuania.geojson",
+	"boundaryRenames": {
+		"Telšiai": "Telšių",
+		"Šiauliai": "Šiaulių",
+		"Panevezio": "Panevėžio",
+		"Klaipedos": "Klaipėdos",
+		"Taurages": "Tauragės",
+		"Marijampoles": "Marijampolės"
+	},
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{

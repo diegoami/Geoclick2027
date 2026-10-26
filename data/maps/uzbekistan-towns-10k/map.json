@@ -1,0 +1,393 @@
+{
+	"id": "uzbekistan-towns-10k",
+	"name": "Uzbekistan — Towns",
+	"country": "Uzbekistan",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/uzbekistan.geojson",
+	"regionsMap": "uzbekistan-regions",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "nukus",
+			"name": "Nukus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				59.602222222,
+				42.464722222
+			],
+			"bbox": [
+				59.602222222,
+				42.464722222,
+				59.602222222,
+				42.464722222
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "urgench",
+			"name": "Urgench",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				60.6249,
+				41.5345
+			],
+			"bbox": [
+				60.6249,
+				41.5345,
+				60.6249,
+				41.5345
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "khiva",
+			"name": "Khiva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				60.361111111,
+				41.381388888
+			],
+			"bbox": [
+				60.361111111,
+				41.381388888,
+				60.361111111,
+				41.381388888
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tashkent",
+			"name": "Tashkent",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				69.279722222,
+				41.311111111
+			],
+			"bbox": [
+				69.279722222,
+				41.311111111,
+				69.279722222,
+				41.311111111
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "angren",
+			"name": "Angren",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				70.07348,
+				41.01107
+			],
+			"bbox": [
+				70.07348,
+				41.01107,
+				70.07348,
+				41.01107
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "namangan",
+			"name": "Namangan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.6725,
+				40.995277777
+			],
+			"bbox": [
+				71.6725,
+				40.995277777,
+				71.6725,
+				40.995277777
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "olmaliq",
+			"name": "Olmaliq",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				69.6,
+				40.85
+			],
+			"bbox": [
+				69.6,
+				40.85,
+				69.6,
+				40.85
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "andijan",
+			"name": "Andijan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.350555555,
+				40.783333333
+			],
+			"bbox": [
+				72.350555555,
+				40.783333333,
+				72.350555555,
+				40.783333333
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "asaka",
+			"name": "Asaka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.233333333,
+				40.633333333
+			],
+			"bbox": [
+				72.233333333,
+				40.633333333,
+				72.233333333,
+				40.633333333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "qo-qon",
+			"name": "Qoʻqon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				70.9425,
+				40.528611111
+			],
+			"bbox": [
+				70.9425,
+				40.528611111,
+				70.9425,
+				40.528611111
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "margilan",
+			"name": "Margilan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.716666666,
+				40.466666666
+			],
+			"bbox": [
+				71.716666666,
+				40.466666666,
+				71.716666666,
+				40.466666666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "fergana",
+			"name": "Fergana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.786388888,
+				40.386388888
+			],
+			"bbox": [
+				71.786388888,
+				40.386388888,
+				71.786388888,
+				40.386388888
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "jizzakh",
+			"name": "Jizzakh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				67.85,
+				40.116666666
+			],
+			"bbox": [
+				67.85,
+				40.116666666,
+				67.85,
+				40.116666666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "navoiy",
+			"name": "Navoiy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				65.383333333,
+				40.083333333
+			],
+			"bbox": [
+				65.383333333,
+				40.083333333,
+				65.383333333,
+				40.083333333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bukhara",
+			"name": "Bukhara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				64.428611111,
+				39.774722222
+			],
+			"bbox": [
+				64.428611111,
+				39.774722222,
+				64.428611111,
+				39.774722222
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kagan",
+			"name": "Kagan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				64.551666666,
+				39.722777777
+			],
+			"bbox": [
+				64.551666666,
+				39.722777777,
+				64.551666666,
+				39.722777777
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "samarkand",
+			"name": "Samarkand",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				66.975833333,
+				39.654722222
+			],
+			"bbox": [
+				66.975833333,
+				39.654722222,
+				66.975833333,
+				39.654722222
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "shahrisabz",
+			"name": "Shahrisabz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				66.833333333,
+				39.05
+			],
+			"bbox": [
+				66.833333333,
+				39.05,
+				66.833333333,
+				39.05
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "qarshi",
+			"name": "Qarshi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				65.8,
+				38.866666666
+			],
+			"bbox": [
+				65.8,
+				38.866666666,
+				65.8,
+				38.866666666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "termez",
+			"name": "Termez",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				67.278333333,
+				37.224166666
+			],
+			"bbox": [
+				67.278333333,
+				37.224166666,
+				67.278333333,
+				37.224166666
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"nukus",
+		"urgench",
+		"khiva",
+		"tashkent",
+		"angren",
+		"namangan",
+		"olmaliq",
+		"andijan",
+		"asaka",
+		"qo-qon",
+		"margilan",
+		"fergana",
+		"jizzakh",
+		"navoiy",
+		"bukhara",
+		"kagan",
+		"samarkand",
+		"shahrisabz",
+		"qarshi",
+		"termez"
+	]
+}

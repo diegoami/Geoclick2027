@@ -25,6 +25,8 @@ try {
 }
 
 export default defineConfig({
+	// Port 5173 belongs to another local game; keep web and Tauri development aligned.
+	server: { port: 5187, strictPort: true },
 	define: {
 		__APP_VERSION__: JSON.stringify(pkg.version),
 		__BUILD_SHA__: JSON.stringify(buildSha)

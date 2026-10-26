@@ -1,0 +1,393 @@
+{
+	"id": "ghana-towns-10k",
+	"name": "Ghana — Towns",
+	"country": "Ghana",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; Open Street Map; 2021; Creative Commons Attribution-ShareAlike 2.0; https://creativecommons.org/licenses/by-sa/2.0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/ghana.geojson",
+	"regionsMap": "ghana-regions",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "bawku",
+			"name": "Bawku",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.24249,
+				11.05926
+			],
+			"bbox": [
+				-0.24249,
+				11.05926,
+				-0.24249,
+				11.05926
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bolgatanga",
+			"name": "Bolgatanga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.85139,
+				10.78556
+			],
+			"bbox": [
+				-0.85139,
+				10.78556,
+				-0.85139,
+				10.78556
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "wa",
+			"name": "Wa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.5,
+				10.0667
+			],
+			"bbox": [
+				-2.5,
+				10.0667,
+				-2.5,
+				10.0667
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "saboba",
+			"name": "Saboba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.31843,
+				9.70738
+			],
+			"bbox": [
+				0.31843,
+				9.70738,
+				0.31843,
+				9.70738
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "tamale",
+			"name": "Tamale",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.853333333,
+				9.4075
+			],
+			"bbox": [
+				-0.853333333,
+				9.4075,
+				-0.853333333,
+				9.4075
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "hohoe",
+			"name": "Hohoe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.47362,
+				7.15181
+			],
+			"bbox": [
+				0.47362,
+				7.15181,
+				0.47362,
+				7.15181
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "mampong",
+			"name": "Mampong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.4,
+				7.066666666
+			],
+			"bbox": [
+				-1.4,
+				7.066666666,
+				-1.4,
+				7.066666666
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "agogo",
+			"name": "Agogo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.08193,
+				6.80004
+			],
+			"bbox": [
+				-1.08193,
+				6.80004,
+				-1.08193,
+				6.80004
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kumasi",
+			"name": "Kumasi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.625,
+				6.7
+			],
+			"bbox": [
+				-1.625,
+				6.7,
+				-1.625,
+				6.7
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ho",
+			"name": "Ho",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.4713,
+				6.60084
+			],
+			"bbox": [
+				0.4713,
+				6.60084,
+				0.4713,
+				6.60084
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "dome",
+			"name": "Dome",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.79603,
+				6.56498
+			],
+			"bbox": [
+				-2.79603,
+				6.56498,
+				-2.79603,
+				6.56498
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "obuasi",
+			"name": "Obuasi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.66796,
+				6.20228
+			],
+			"bbox": [
+				-1.66796,
+				6.20228,
+				-1.66796,
+				6.20228
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "aflao",
+			"name": "Aflao",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.19012,
+				6.11982
+			],
+			"bbox": [
+				1.19012,
+				6.11982,
+				1.19012,
+				6.11982
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "koforidua",
+			"name": "Koforidua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.25913,
+				6.09408
+			],
+			"bbox": [
+				-0.25913,
+				6.09408,
+				-0.25913,
+				6.09408
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tema",
+			"name": "Tema",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.01657,
+				5.6698
+			],
+			"bbox": [
+				-0.01657,
+				5.6698,
+				-0.01657,
+				5.6698
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "accra",
+			"name": "Accra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.1969,
+				5.55602
+			],
+			"bbox": [
+				-0.1969,
+				5.55602,
+				-0.1969,
+				5.55602
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "winneba",
+			"name": "Winneba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.62313,
+				5.35113
+			],
+			"bbox": [
+				-0.62313,
+				5.35113,
+				-0.62313,
+				5.35113
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tarkwa",
+			"name": "Tarkwa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.98956,
+				5.30383
+			],
+			"bbox": [
+				-1.98956,
+				5.30383,
+				-1.98956,
+				5.30383
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "cape-coast",
+			"name": "Cape Coast",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.25,
+				5.1
+			],
+			"bbox": [
+				-1.25,
+				5.1,
+				-1.25,
+				5.1
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "sekondi-takoradi",
+			"name": "Sekondi-Takoradi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.75773,
+				4.92678
+			],
+			"bbox": [
+				-1.75773,
+				4.92678,
+				-1.75773,
+				4.92678
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"bawku",
+		"bolgatanga",
+		"wa",
+		"saboba",
+		"tamale",
+		"hohoe",
+		"mampong",
+		"agogo",
+		"kumasi",
+		"ho",
+		"dome",
+		"obuasi",
+		"aflao",
+		"koforidua",
+		"tema",
+		"accra",
+		"winneba",
+		"tarkwa",
+		"cape-coast",
+		"sekondi-takoradi"
+	]
+}

@@ -1,0 +1,464 @@
+{
+	"karakalpakstan": {
+		"kind": "region",
+		"borders": [
+			"Bukhara",
+			"Khorezm",
+			"Navoi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nukus",
+			"nameDe": "Nukus",
+			"nameIt": "Nukus",
+			"population": 319583
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the Karakalpak people, whose name means black hats.",
+				"Nukus’s Savitsky Museum is renowned for its avant-garde art collection.",
+				"Moynaq’s stranded ships recall the retreat of the Aral Sea."
+			],
+			"it": [
+				"Prende il nome dai karakalpaki, il cui etnonimo significa cappelli neri.",
+				"Il Museo Savitsky di Nukus è celebre per la sua collezione d’arte d’avanguardia.",
+				"Le navi arenate di Moynaq ricordano il ritiro del lago d’Aral."
+			],
+			"de": [
+				"Benannt nach den Karakalpaken, deren Name schwarze Mützen bedeutet.",
+				"Das Savitsky-Museum in Nukus ist für seine Avantgarde-Sammlung bekannt.",
+				"Die gestrandeten Schiffe von Moynaq erinnern an den Rückzug des Aralsees."
+			]
+		}
+	},
+	"navoi": {
+		"kind": "region",
+		"borders": [
+			"Bukhara",
+			"Jizzakh",
+			"Karakalpakstan",
+			"Kashkadarya",
+			"Samarkand"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Navoiy",
+			"nameDe": "Navoiy",
+			"nameIt": "Navoiy",
+			"population": 220000
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name honours the poet Alisher Navoi.",
+				"Nurata’s mountains contrast with the surrounding Kyzylkum desert.",
+				"Sarmishsay preserves extensive ancient rock carvings."
+			],
+			"it": [
+				"Il nome onora il poeta Alisher Navoi.",
+				"Le montagne di Nurata contrastano con il deserto circostante del Kyzylkum.",
+				"Sarmishsay conserva numerose antiche incisioni rupestri."
+			],
+			"de": [
+				"Der Name ehrt den Dichter Alisher Navoi.",
+				"Die Berge von Nurata bilden einen Kontrast zur umliegenden Kysylkum-Wüste.",
+				"Sarmishsay bewahrt zahlreiche alte Felszeichnungen."
+			]
+		}
+	},
+	"tashkent-city": {
+		"kind": "region",
+		"borders": [
+			"Tashkent Region"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tashkent",
+			"nameDe": "Taschkent",
+			"nameIt": "Tashkent",
+			"population": 2956384
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Tashkent is commonly interpreted as stone city.",
+				"Much of its centre was rebuilt after the 1966 earthquake.",
+				"Its metro opened in 1977 as the first in Central Asia."
+			],
+			"it": [
+				"Il nome Tashkent viene comunemente interpretato come città di pietra.",
+				"Gran parte del centro fu ricostruita dopo il terremoto del 1966.",
+				"La sua metropolitana aprì nel 1977, prima dell’Asia centrale."
+			],
+			"de": [
+				"Der Name Tashkent wird meist als steinerne Stadt gedeutet.",
+				"Große Teile des Zentrums wurden nach dem Erdbeben von 1966 wiederaufgebaut.",
+				"Die 1977 eröffnete Metro war die erste Zentralasiens."
+			]
+		}
+	},
+	"khorezm": {
+		"kind": "region",
+		"borders": [
+			"Bukhara",
+			"Karakalpakstan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Urgench",
+			"nameDe": "Urganch",
+			"nameIt": "Urgench",
+			"population": 150000
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Khorezm preserves the name of the ancient region called Chorasmia.",
+				"Khiva’s walled Itchan Kala is a UNESCO World Heritage site.",
+				"Khiva’s Kalta Minor is a famously unfinished minaret."
+			],
+			"it": [
+				"Khorezm conserva il nome dell’antica regione chiamata Corasmia.",
+				"L’Itchan Kala, la città murata di Khiva, è patrimonio UNESCO.",
+				"Il Kalta Minor di Khiva è un celebre minareto incompiuto."
+			],
+			"de": [
+				"Khorezm bewahrt den Namen der antiken Landschaft Choresmien.",
+				"Die ummauerte Altstadt Itchan Kala in Khiva gehört zum UNESCO-Welterbe.",
+				"Khivas Kalta Minor ist ein berühmtes unvollendetes Minarett."
+			]
+		}
+	},
+	"tashkent-region": {
+		"kind": "region",
+		"borders": [
+			"Namangan",
+			"Syrdarya",
+			"Tashkent City"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Olmaliq",
+			"nameDe": "Olmaliq",
+			"nameIt": "Olmaliq",
+			"population": 141894
+		},
+		"peak": {
+			"name": "Gora Manas",
+			"elevation": 4482
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Shares its name with Tashkent, which is administered separately.",
+				"The Charvak reservoir is a major mountain recreation area.",
+				"Protected areas here form part of the Western Tien-Shan UNESCO site."
+			],
+			"it": [
+				"Condivide il nome con Tashkent, che ha un’amministrazione separata.",
+				"Il bacino di Charvak è un’importante area ricreativa montana.",
+				"Aree protette della regione fanno parte del sito UNESCO del Tien Shan occidentale."
+			],
+			"de": [
+				"Teilt seinen Namen mit Tashkent, das getrennt verwaltet wird.",
+				"Der Charvak-Stausee ist ein wichtiges Erholungsgebiet im Gebirge.",
+				"Schutzgebiete der Region gehören zur UNESCO-Stätte Westlicher Tian-Shan."
+			]
+		}
+	},
+	"namangan": {
+		"kind": "region",
+		"borders": [
+			"Andijan",
+			"Fergana",
+			"Tashkent Region"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Namangan",
+			"nameDe": "Namangan",
+			"nameIt": "Namangan",
+			"population": 626120
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named after the city of Namangan.",
+				"Chust is known for traditional knives and embroidered skullcaps.",
+				"Ahsikent preserves the ruins of a medieval Fergana Valley centre."
+			],
+			"it": [
+				"Prende il nome dalla città di Namangan.",
+				"Chust è nota per i coltelli tradizionali e gli zucchetti ricamati.",
+				"Ahsikent conserva i resti di un centro medievale della valle di Fergana."
+			],
+			"de": [
+				"Benannt nach der Stadt Namangan.",
+				"Chust ist für traditionelle Messer und bestickte Kappen bekannt.",
+				"Ahsikent bewahrt die Ruinen eines mittelalterlichen Zentrums im Ferganatal."
+			]
+		}
+	},
+	"andijan": {
+		"kind": "region",
+		"borders": [
+			"Fergana",
+			"Namangan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Andijan",
+			"nameDe": "Andijon",
+			"nameIt": "Andijan",
+			"population": 547800
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named after the city of Andijan.",
+				"Babur, founder of the Mughal dynasty, was born in Andijan in 1483.",
+				"Andijan’s Jami complex preserves a historic religious ensemble."
+			],
+			"it": [
+				"Prende il nome dalla città di Andijan.",
+				"Babur, fondatore della dinastia moghul, nacque ad Andijan nel 1483.",
+				"Il complesso Jami di Andijan conserva un insieme storico di edifici religiosi."
+			],
+			"de": [
+				"Benannt nach der Stadt Andijan.",
+				"Babur, der Gründer der Moguldynastie, wurde 1483 in Andijan geboren.",
+				"Andijans Jami-Komplex bewahrt ein historisches religiöses Bauensemble."
+			]
+		}
+	},
+	"syrdarya": {
+		"kind": "region",
+		"borders": [
+			"Jizzakh",
+			"Tashkent Region"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Guliston",
+			"nameDe": "Guliston",
+			"nameIt": "Gulistan",
+			"population": 55600
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named after the Syr Darya River.",
+				"Large irrigation projects transformed the former Hungry Steppe.",
+				"Gulistan’s Persian name means rose garden."
+			],
+			"it": [
+				"Prende il nome dal fiume Syr Darya.",
+				"Grandi progetti d’irrigazione trasformarono l’antica Steppa della Fame.",
+				"Il nome persiano Gulistan significa giardino di rose."
+			],
+			"de": [
+				"Benannt nach dem Fluss Syr Darya.",
+				"Große Bewässerungsprojekte veränderten die frühere Hungersteppe.",
+				"Der persische Name Gulistan bedeutet Rosengarten."
+			]
+		}
+	},
+	"fergana": {
+		"kind": "region",
+		"borders": [
+			"Andijan",
+			"Namangan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Fergana",
+			"nameDe": "Fargʻona",
+			"nameIt": "Fergana",
+			"population": 299200
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Takes its name from the Fergana Valley.",
+				"Margilan is renowned for its silk-weaving traditions.",
+				"Kokand’s Khan’s Palace recalls the former Kokand Khanate."
+			],
+			"it": [
+				"Prende il nome dalla valle di Fergana.",
+				"Margilan è celebre per le tradizioni della tessitura della seta.",
+				"Il palazzo del Khan di Kokand ricorda l’antico khanato di Kokand."
+			],
+			"de": [
+				"Benannt nach dem Ferganatal.",
+				"Margilan ist für seine Tradition der Seidenweberei bekannt.",
+				"Der Khanspalast von Kokand erinnert an das frühere Khanat Kokand."
+			]
+		}
+	},
+	"jizzakh": {
+		"kind": "region",
+		"borders": [
+			"Navoi",
+			"Samarkand",
+			"Syrdarya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jizzakh",
+			"nameDe": "Jizzax",
+			"nameIt": "Jizzax",
+			"population": 163200
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named after the city of Jizzakh.",
+				"Zaamin National Park protects mountain juniper forests.",
+				"The Arnasay lake system provides important bird habitats."
+			],
+			"it": [
+				"Prende il nome dalla città di Jizzakh.",
+				"Il Parco nazionale di Zaamin protegge foreste montane di ginepro.",
+				"Il sistema lacustre di Arnasay offre importanti habitat agli uccelli."
+			],
+			"de": [
+				"Benannt nach der Stadt Jizzakh.",
+				"Der Zaamin-Nationalpark schützt Wacholderwälder im Gebirge.",
+				"Das Arnasay-Seensystem bietet wichtige Lebensräume für Vögel."
+			]
+		}
+	},
+	"bukhara": {
+		"kind": "region",
+		"borders": [
+			"Karakalpakstan",
+			"Kashkadarya",
+			"Khorezm",
+			"Navoi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bukhara",
+			"nameDe": "Buchara",
+			"nameIt": "Bukhara",
+			"population": 280187
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named after the city of Bukhara.",
+				"Bukhara’s Ark fortress was a residence of its rulers.",
+				"The Samanid Mausoleum is a landmark of early Islamic architecture."
+			],
+			"it": [
+				"Prende il nome dalla città di Bukhara.",
+				"La fortezza Ark di Bukhara fu residenza dei suoi sovrani.",
+				"Il mausoleo dei Samanidi è un capolavoro della prima architettura islamica."
+			],
+			"de": [
+				"Benannt nach der Stadt Bukhara.",
+				"Die Festung Ark in Bukhara war eine Residenz der Herrscher.",
+				"Das Samaniden-Mausoleum ist ein bedeutendes Beispiel früher islamischer Architektur."
+			]
+		}
+	},
+	"samarkand": {
+		"kind": "region",
+		"borders": [
+			"Jizzakh",
+			"Kashkadarya",
+			"Navoi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Samarkand",
+			"nameDe": "Samarqand",
+			"nameIt": "Samarcanda",
+			"population": 546303
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named after the city of Samarkand.",
+				"The Registan’s madrasas form a celebrated monumental square.",
+				"Ulugh Beg’s observatory recalls the region’s astronomical heritage."
+			],
+			"it": [
+				"Prende il nome dalla città di Samarkand.",
+				"Le madrase del Registan formano una celebre piazza monumentale.",
+				"L’osservatorio di Ulugh Beg ricorda il patrimonio astronomico della regione."
+			],
+			"de": [
+				"Benannt nach der Stadt Samarkand.",
+				"Die Medresen des Registan bilden einen berühmten monumentalen Platz.",
+				"Ulugh Begs Observatorium erinnert an das astronomische Erbe der Region."
+			]
+		}
+	},
+	"kashkadarya": {
+		"kind": "region",
+		"borders": [
+			"Bukhara",
+			"Navoi",
+			"Samarkand",
+			"Surkhandarya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Qarshi",
+			"nameDe": "Qarshi",
+			"nameIt": "Karshi",
+			"population": 274891
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named after the Kashkadarya River.",
+				"Shahrisabz preserves the ruins of Timur’s Ak-Saray palace.",
+				"Kitab hosted a station of the International Latitude Service."
+			],
+			"it": [
+				"Prende il nome dal fiume Kashkadarya.",
+				"Shahrisabz conserva i resti del palazzo Ak-Saray di Timur.",
+				"Kitab ospitò una stazione del Servizio internazionale delle latitudini."
+			],
+			"de": [
+				"Benannt nach dem Fluss Kashkadarya.",
+				"Shahrisabz bewahrt die Ruinen von Timurs Palast Ak-Saray.",
+				"Kitab beherbergte eine Station des Internationalen Breitendienstes."
+			]
+		}
+	},
+	"surkhandarya": {
+		"kind": "region",
+		"borders": [
+			"Kashkadarya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Termez",
+			"nameDe": "Termiz",
+			"nameIt": "Termez",
+			"population": 136200
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named after the Surkhan Darya River.",
+				"Old Termez preserves traces of a major Buddhist centre.",
+				"Boysun’s cultural traditions are recognised by UNESCO."
+			],
+			"it": [
+				"Prende il nome dal fiume Surkhan Darya.",
+				"L’antica Termez conserva tracce di un importante centro buddista.",
+				"Le tradizioni culturali di Boysun sono riconosciute dall’UNESCO."
+			],
+			"de": [
+				"Benannt nach dem Fluss Surkhan Darya.",
+				"Alt-Termez bewahrt Spuren eines bedeutenden buddhistischen Zentrums.",
+				"Boysuns Kulturtraditionen sind von der UNESCO anerkannt."
+			]
+		}
+	}
+}

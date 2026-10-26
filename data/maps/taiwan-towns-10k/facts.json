@@ -1,0 +1,184 @@
+{
+	"keelung": {
+		"kind": "city",
+		"population": 500000,
+		"populationRank": 10,
+		"region": "Keelung City",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"taipei": {
+		"kind": "city",
+		"population": 6900273,
+		"populationRank": 1,
+		"population1950": 604000,
+		"region": "Taipei City",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"North Taiwan\".",
+				"Its National Palace Museum holds treasures that came from the imperial collections of Beijing.",
+				"Its night markets are among the busiest in Asia."
+			],
+			"it": [
+				"\"Taiwan del nord\".",
+				"Il suo Museo nazionale del palazzo custodisce tesori provenienti dalle collezioni imperiali di Pechino.",
+				"I suoi mercati notturni sono tra i più affollati dell’Asia."
+			],
+			"de": [
+				"„Nord-Taiwan“.",
+				"Ihr Nationales Palastmuseum birgt Schätze, die aus den kaiserlichen Sammlungen Pekings stammen.",
+				"Ihre Nachtmärkte gehören zu den belebtesten Asiens."
+			]
+		}
+	},
+	"new-taipei": {
+		"kind": "city",
+		"population": 3893740,
+		"populationRank": 2,
+		"region": "New Taipei City",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"taoyuan": {
+		"kind": "city",
+		"population": 500000,
+		"populationRank": 11,
+		"region": "Taoyuan City",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"zhongli": {
+		"kind": "city",
+		"population": 1632616,
+		"populationRank": 6,
+		"region": "Taoyuan City",
+		"coastal": true,
+		"position": "north"
+	},
+	"bade": {
+		"kind": "city",
+		"population": 172065,
+		"populationRank": 18,
+		"region": "Taoyuan City",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"pingzhen": {
+		"kind": "city",
+		"population": 201632,
+		"populationRank": 14,
+		"region": "Taoyuan City",
+		"coastal": true,
+		"position": "north"
+	},
+	"yangmei": {
+		"kind": "city",
+		"population": 175000,
+		"populationRank": 16,
+		"region": "Taoyuan City",
+		"coastal": true,
+		"position": "north"
+	},
+	"zhubei": {
+		"kind": "city",
+		"population": 200000,
+		"populationRank": 15,
+		"region": "Hsinchu County",
+		"coastal": true,
+		"position": "north"
+	},
+	"hsinchu": {
+		"kind": "city",
+		"population": 750000,
+		"populationRank": 7,
+		"region": "Hsinchu City",
+		"coastal": true,
+		"position": "north"
+	},
+	"yilan": {
+		"kind": "city",
+		"population": 150000,
+		"populationRank": 20,
+		"region": "Yilan County",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"taichung": {
+		"kind": "city",
+		"population": 2629323,
+		"populationRank": 4,
+		"population1950": 194000,
+		"region": "Taichung City",
+		"coastal": false,
+		"position": "west"
+	},
+	"changhua": {
+		"kind": "city",
+		"population": 750000,
+		"populationRank": 8,
+		"region": "Changhua County",
+		"coastal": true,
+		"position": "west"
+	},
+	"hualien": {
+		"kind": "city",
+		"population": 350468,
+		"populationRank": 13,
+		"region": "Hualien County",
+		"coastal": true,
+		"position": "east"
+	},
+	"nantou": {
+		"kind": "city",
+		"population": 165000,
+		"populationRank": 19,
+		"region": "Nantou County",
+		"coastal": false,
+		"position": "west"
+	},
+	"chiayi": {
+		"kind": "city",
+		"population": 500000,
+		"populationRank": 12,
+		"region": "Chiayi City",
+		"coastal": false,
+		"position": "west"
+	},
+	"tainan": {
+		"kind": "city",
+		"population": 1876312,
+		"populationRank": 5,
+		"population1950": 313000,
+		"region": "Tainan City",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"taitung": {
+		"kind": "city",
+		"population": 175000,
+		"populationRank": 17,
+		"region": "Taitung County",
+		"coastal": true,
+		"position": "south"
+	},
+	"pingtung": {
+		"kind": "city",
+		"population": 503530,
+		"populationRank": 9,
+		"region": "Pingtung County",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"kaohsiung": {
+		"kind": "city",
+		"population": 2769072,
+		"populationRank": 3,
+		"population1950": 255000,
+		"region": "Kaohsiung City",
+		"coastal": true,
+		"position": "south-west"
+	}
+}

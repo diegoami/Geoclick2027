@@ -1,0 +1,340 @@
+{
+	"lienchiang-county": {
+		"kind": "region",
+		"coastal": false,
+		"position": "north"
+	},
+	"keelung-city": {
+		"kind": "region",
+		"borders": [
+			"New Taipei City"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Keelung",
+			"nameDe": "Keelung",
+			"nameIt": "Keelung",
+			"population": 500000
+		},
+		"position": "north-east"
+	},
+	"taipei-city": {
+		"kind": "region",
+		"borders": [
+			"New Taipei City"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Taipei",
+			"nameDe": "Taipeh",
+			"nameIt": "Taipei",
+			"population": 6900273
+		},
+		"position": "north-east"
+	},
+	"new-taipei-city": {
+		"kind": "region",
+		"borders": [
+			"Keelung City",
+			"Taipei City",
+			"Taoyuan City",
+			"Yilan County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "New Taipei",
+			"nameDe": "Neu-Taipeh",
+			"nameIt": "Nuova Taipei",
+			"population": 3893740
+		},
+		"position": "north-east"
+	},
+	"taoyuan-city": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu County",
+			"New Taipei City",
+			"Yilan County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zhongli",
+			"nameDe": "Zhongli",
+			"nameIt": "Zhongli",
+			"population": 1632616
+		},
+		"position": "east"
+	},
+	"hsinchu-city": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu County",
+			"Miaoli County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hsinchu",
+			"nameDe": "Hsinchu",
+			"nameIt": "Hsinchu",
+			"population": 750000
+		},
+		"position": "east"
+	},
+	"hsinchu-county": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu City",
+			"Miaoli County",
+			"Taichung City",
+			"Taoyuan City",
+			"Yilan County"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zhubei",
+			"nameDe": "Zhubei",
+			"nameIt": "Zhubei",
+			"population": 200000
+		},
+		"position": "east"
+	},
+	"yilan-county": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu County",
+			"Hualien County",
+			"New Taipei City",
+			"Taichung City",
+			"Taoyuan City"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yilan",
+			"nameDe": "Yilan",
+			"nameIt": "Yilan",
+			"population": 150000
+		},
+		"position": "east"
+	},
+	"miaoli-county": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu City",
+			"Hsinchu County",
+			"Taichung City"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Miaoli",
+			"nameDe": "Miaoli",
+			"nameIt": "Miaoli",
+			"population": 150000
+		},
+		"position": "east"
+	},
+	"kinmen-county": {
+		"kind": "region",
+		"coastal": true,
+		"position": "west"
+	},
+	"taichung-city": {
+		"kind": "region",
+		"borders": [
+			"Changhua County",
+			"Hsinchu County",
+			"Hualien County",
+			"Miaoli County",
+			"Nantou County",
+			"Yilan County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Taichung",
+			"nameDe": "Taichung",
+			"nameIt": "Taichung",
+			"population": 2629323
+		},
+		"position": "east"
+	},
+	"changhua-county": {
+		"kind": "region",
+		"borders": [
+			"Nantou County",
+			"Taichung City",
+			"Yunlin County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Changhua",
+			"nameDe": "Changhua",
+			"nameIt": "Changhua",
+			"population": 750000
+		},
+		"position": "centre"
+	},
+	"nantou-county": {
+		"kind": "region",
+		"borders": [
+			"Changhua County",
+			"Chiayi County",
+			"Hualien County",
+			"Kaohsiung City",
+			"Taichung City",
+			"Yunlin County"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nantou",
+			"nameDe": "Nantou",
+			"nameIt": "Nantou",
+			"population": 165000
+		},
+		"peak": {
+			"name": "Yu Shan",
+			"elevation": 3952
+		},
+		"position": "east"
+	},
+	"hualien-county": {
+		"kind": "region",
+		"borders": [
+			"Kaohsiung City",
+			"Nantou County",
+			"Taichung City",
+			"Taitung County",
+			"Yilan County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hualien",
+			"nameDe": "Hualien",
+			"nameIt": "Hualien",
+			"population": 350468
+		},
+		"position": "east"
+	},
+	"yunlin-county": {
+		"kind": "region",
+		"borders": [
+			"Changhua County",
+			"Chiayi County",
+			"Nantou County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Douliou",
+			"nameDe": "Douliu",
+			"nameIt": "Douliu",
+			"population": 106653
+		},
+		"position": "centre"
+	},
+	"chiayi-city": {
+		"kind": "region",
+		"borders": [
+			"Chiayi County"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chiayi",
+			"nameDe": "Chiayi",
+			"nameIt": "Chiayi",
+			"population": 500000
+		},
+		"position": "centre"
+	},
+	"penghu-county": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Magong",
+			"nameDe": "Makung",
+			"nameIt": "Magong",
+			"population": 56435
+		},
+		"position": "centre"
+	},
+	"chiayi-county": {
+		"kind": "region",
+		"borders": [
+			"Chiayi City",
+			"Kaohsiung City",
+			"Nantou County",
+			"Tainan City",
+			"Yunlin County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Puzi",
+			"nameDe": "Puzih",
+			"nameIt": "Puzi",
+			"population": 50000
+		},
+		"position": "centre"
+	},
+	"tainan-city": {
+		"kind": "region",
+		"borders": [
+			"Chiayi County",
+			"Kaohsiung City"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tainan",
+			"nameDe": "Tainan",
+			"nameIt": "Tainan",
+			"population": 1876312
+		},
+		"position": "south"
+	},
+	"kaohsiung-city": {
+		"kind": "region",
+		"borders": [
+			"Chiayi County",
+			"Hualien County",
+			"Nantou County",
+			"Pingtung County",
+			"Tainan City",
+			"Taitung County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kaohsiung",
+			"nameDe": "Kaohsiung",
+			"nameIt": "Kaohsiung",
+			"population": 2769072
+		},
+		"position": "south"
+	},
+	"taitung-county": {
+		"kind": "region",
+		"borders": [
+			"Hualien County",
+			"Kaohsiung City",
+			"Pingtung County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Taitung",
+			"nameDe": "Taitung",
+			"nameIt": "Taitung",
+			"population": 175000
+		},
+		"position": "south-east"
+	},
+	"pingtung-county": {
+		"kind": "region",
+		"borders": [
+			"Kaohsiung City",
+			"Taitung County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pingtung",
+			"nameDe": "Pingtung",
+			"nameIt": "Pingtung",
+			"population": 503530
+		},
+		"position": "south"
+	}
+}

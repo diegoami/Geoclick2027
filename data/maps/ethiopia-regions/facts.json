@@ -1,0 +1,224 @@
+{
+	"tigray": {
+		"kind": "region",
+		"borders": [
+			"Afar",
+			"Amhara"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Adigrat",
+			"nameDe": "Adigrat",
+			"nameIt": "Adigrat",
+			"population": 104021
+		},
+		"position": "north"
+	},
+	"afar": {
+		"kind": "region",
+		"borders": [
+			"Amhara",
+			"Oromia",
+			"Somali",
+			"Tigray"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"amhara": {
+		"kind": "region",
+		"borders": [
+			"Afar",
+			"Benishangul-Gumuz",
+			"Oromia",
+			"Tigray"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bahir Dar",
+			"nameDe": "Bahir Dar",
+			"nameIt": "Bahar Dar",
+			"population": 206748
+		},
+		"peak": {
+			"name": "Ras Dejen",
+			"elevation": 4533
+		},
+		"position": "north-west"
+	},
+	"benishangul-gumuz": {
+		"kind": "region",
+		"borders": [
+			"Amhara",
+			"Oromia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Asosa",
+			"nameDe": "Asosa",
+			"nameIt": "Asosa",
+			"population": 30512
+		},
+		"position": "west"
+	},
+	"dire-dawa": {
+		"kind": "region",
+		"borders": [
+			"Oromia",
+			"Somali"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dire Dawa",
+			"nameDe": "Dire Dawa",
+			"nameIt": "Dire Daua",
+			"population": 252279
+		},
+		"position": "centre"
+	},
+	"harari": {
+		"kind": "region",
+		"borders": [
+			"Oromia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Harar",
+			"nameDe": "Harar",
+			"nameIt": "Harar",
+			"population": 174994
+		},
+		"position": "centre"
+	},
+	"addis-ababa": {
+		"kind": "region",
+		"borders": [
+			"Oromia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Addis Ababa",
+			"nameDe": "Addis Abeba",
+			"nameIt": "Addis Abeba",
+			"population": 3100000
+		},
+		"position": "centre"
+	},
+	"central-ethiopia": {
+		"kind": "region",
+		"borders": [
+			"Oromia",
+			"South Ethiopia",
+			"Southwest Ethiopia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hosaina",
+			"nameDe": "Hosaena",
+			"nameIt": "Hosaena",
+			"population": 89300
+		},
+		"position": "centre"
+	},
+	"gambella": {
+		"kind": "region",
+		"borders": [
+			"Oromia",
+			"Southwest Ethiopia"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"somali": {
+		"kind": "region",
+		"borders": [
+			"Afar",
+			"Dire Dawa",
+			"Oromia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gode",
+			"nameDe": "Gode",
+			"nameIt": "Gode",
+			"population": 75000
+		},
+		"position": "east"
+	},
+	"oromia": {
+		"kind": "region",
+		"borders": [
+			"Addis Ababa",
+			"Afar",
+			"Amhara",
+			"Benishangul-Gumuz",
+			"Central Ethiopia",
+			"Dire Dawa",
+			"Gambella",
+			"Harari",
+			"Sidama",
+			"Somali",
+			"South Ethiopia",
+			"Southwest Ethiopia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nazret",
+			"nameDe": "Adama",
+			"nameIt": "Adama",
+			"population": 476892
+		},
+		"peak": {
+			"name": "Mount Batu",
+			"elevation": 4307
+		},
+		"position": "south"
+	},
+	"sidama": {
+		"kind": "region",
+		"borders": [
+			"Oromia",
+			"South Ethiopia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Awasa",
+			"nameDe": "Awassa",
+			"nameIt": "Auasa",
+			"population": 133097
+		},
+		"position": "south"
+	},
+	"southwest-ethiopia": {
+		"kind": "region",
+		"borders": [
+			"Central Ethiopia",
+			"Gambella",
+			"Oromia",
+			"South Ethiopia"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"south-ethiopia": {
+		"kind": "region",
+		"borders": [
+			"Central Ethiopia",
+			"Oromia",
+			"Sidama",
+			"Southwest Ethiopia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arba Minch",
+			"nameDe": "Arba Minch",
+			"nameIt": "Arba Minch",
+			"population": 69622
+		},
+		"peak": {
+			"name": "Argun",
+			"elevation": 3418
+		},
+		"position": "south-west"
+	}
+}

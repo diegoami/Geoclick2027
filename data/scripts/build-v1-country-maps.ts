@@ -1,4 +1,5 @@
-// Reproducible first country batch for the approved 1.0 plan (#241).
+import { V1_COUNTRIES } from './v1CountrySpecs.js';
+// Reproducible maps for all 22 countries in the approved 1.0 plan (#241).
 // Run in the documented WSL toolchain. Each map is generated, never hand-edited.
 //   npx tsx data/scripts/build-v1-country-maps.ts [--country=iceland]
 import { execFileSync } from 'node:child_process';
@@ -6,140 +7,10 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { REPO_ROOT, parseArgs, slugify } from './mapBuildUtils.js';
 
-interface Country {
-	country: string;
-	id: string;
-	type: string;
-	label: string;
-	expectedRegions: number;
-	nameField?: string;
-	population: number;
-	clip?: string;
-	rename?: string;
-	dissolve?: string;
-	townSource?: string;
-	source?: string;
-	attribution?: string;
-	boundaryFacts?: boolean;
-	townExclude?: string;
-	retainTowns?: string;
-	expectedLargest?: Record<string, string>;
-}
-// Natural Earth separates county-right cities; merge them into their counties.
-// Budapest remains its own unit. Veszprém city already shares its county name.
-const hungarianCounties: Record<string, string> = {
-	Sopron: 'Győr-Moson-Sopron',
-	Szeged: 'Csongrád-Csanád',
-	Salgótarján: 'Nógrád',
-	Szolnok: 'Jász-Nagykun-Szolnok',
-	Érd: 'Pest',
-	Eger: 'Heves',
-	Miskolc: 'Borsod-Abaúj-Zemplén',
-	Hódmezôvásárhely: 'Csongrád-Csanád',
-	Dunaújváros: 'Fejér',
-	Kecskemét: 'Bács-Kiskun',
-	Tatabánya: 'Komárom-Esztergom',
-	Gyôr: 'Győr-Moson-Sopron',
-	Szombathely: 'Vas',
-	Zalaegerszeg: 'Zala',
-	Nagykanizsa: 'Zala',
-	Kaposvár: 'Somogy',
-	Pécs: 'Baranya',
-	Szekszárd: 'Tolna',
-	Székesfehérvár: 'Fejér',
-	Békéscsaba: 'Békés',
-	Debrecen: 'Hajdú-Bihar',
-	Nyíregyháza: 'Szabolcs-Szatmár-Bereg',
-	'Gyor-Moson-Sopron': 'Győr-Moson-Sopron',
-	Csongrád: 'Csongrád-Csanád'
-};
-const countries: Country[] = [
-	{
-		country: 'Hungary',
-		id: 'hungary',
-		retainTowns: 'Salgótarján,Vác,Szekszárd',
-		expectedLargest: { 'csongrad-csanad': 'Szeged', pest: 'Érd' },
-		townSource: 'data/places/hungary.geojson',
-		type: 'county',
-		label: 'Counties',
-		expectedRegions: 20,
-		dissolve: 'name',
-		rename: Object.entries(hungarianCounties)
-			.map(([from, to]) => from + '=' + to)
-			.join(','),
-		population: 10000
-	},
-	{
-		country: 'Slovakia',
-		id: 'slovakia',
-		expectedLargest: { trenciansky: 'Trenčín', nitriansky: 'Nitra' },
-		// Petržalka is a Bratislava borough, not a separate town (petrzalka.sk).
-		townExclude: 'Petržalka',
-		townSource: 'data/places/slovakia.geojson',
-		rename: 'Prešov=Prešovský,Trenciansky=Trenčiansky',
-		type: 'region',
-		label: 'Regions',
-		expectedRegions: 8,
-		population: 10000
-	},
-	{
-		country: 'Estonia',
-		id: 'estonia',
-		source: 'data/boundaries/estonia-counties-2026-09-02.geojson',
-		attribution:
-			'Administrative and settlement units: Estonian Land and Spatial Development Board, snapshot 2026-09-02; unrestricted use with attribution',
-		boundaryFacts: true,
-		expectedLargest: { parnu: 'Pärnu', saare: 'Kuressaare', hiiu: 'Kärdla', jogeva: 'Jõgeva' },
-		townSource: 'data/places/estonia.geojson',
-		type: 'county',
-		label: 'Counties',
-		expectedRegions: 15,
-		population: 5000
-	},
-	{
-		country: 'Lithuania',
-		id: 'lithuania',
-		expectedLargest: {
-			telsiu: 'Mažeikiai',
-			utenos: 'Utena',
-			taurages: 'Tauragė',
-			marijampoles: 'Marijampolė',
-			alytaus: 'Alytus'
-		},
-		townSource: 'data/places/lithuania.geojson',
-		rename:
-			'Telšiai=Telšių,Šiauliai=Šiaulių,Panevezio=Panevėžio,Klaipedos=Klaipėdos,Taurages=Tauragės,Marijampoles=Marijampolės',
-		type: 'county',
-		label: 'Counties',
-		expectedRegions: 10,
-		population: 10000
-	},
-	{
-		country: 'Iceland',
-		id: 'iceland',
-		expectedLargest: { [slugify('Höfuðborgarsvæðið')]: 'Reykjavík' },
-		dissolve: 'name',
-		rename: 'Reykjavík=Höfuðborgarsvæðið,Höfuðborgarsvæði=Höfuðborgarsvæðið',
-		type: 'region',
-		label: 'Regions',
-		expectedRegions: 8,
-		population: 1000
-	},
-	{
-		country: 'Costa Rica',
-		id: 'costa-rica',
-		type: 'province',
-		label: 'Provinces',
-		expectedRegions: 7,
-		nameField: 'name_es',
-		population: 1000,
-		clip: '-86.1,7.8,-82.3,11.3'
-	}
-];
 const args = parseArgs(process.argv.slice(2));
 const selected = args.country
-	? countries.filter((country) => country.id === args.country)
-	: countries;
+	? V1_COUNTRIES.filter((country) => country.id === args.country)
+	: V1_COUNTRIES;
 if (!selected.length) throw new Error('Unknown country in this batch: ' + args.country);
 const run = (script: string, flags: string[]) =>
 	execFileSync(process.execPath, ['--import', 'tsx', 'data/scripts/' + script, ...flags], {
@@ -147,7 +18,7 @@ const run = (script: string, flags: string[]) =>
 		stdio: 'inherit'
 	});
 for (const country of selected) {
-	const regionId = country.id + '-' + country.label.toLowerCase();
+	const regionId = country.mapId ?? country.id + '-' + slugify(country.label);
 	run('build-map.ts', [
 		'--country=' + country.country,
 		'--out=data/maps/' + regionId,
@@ -158,6 +29,7 @@ for (const country of selected) {
 			? ['--source=' + country.source, '--attribution=' + country.attribution]
 			: []),
 		...(country.boundaryFacts ? ['--boundary-facts=true'] : []),
+		...(country.largestCityFacts === false ? ['--largest-city-facts=false'] : []),
 		...(country.townSource ? ['--places-source=' + country.townSource] : []),
 		...(country.rename ? ['--rename=' + country.rename] : []),
 		...(country.dissolve ? ['--dissolve=' + country.dissolve] : []),
@@ -184,6 +56,29 @@ for (const country of selected) {
 			if (derived[id]?.largestCity?.name !== name)
 				throw new Error(regionId + '/' + id + ': expected largest city ' + name);
 	}
+	if (country.secondAdministrative) {
+		const extra = country.secondAdministrative;
+		const extraId = extra.mapId ?? country.id + '-' + slugify(extra.label);
+		run('build-map.ts', [
+			'--country=' + country.country,
+			'--out=data/maps/' + extraId,
+			'--type=' + extra.type,
+			'--name=' + country.country + ' — ' + extra.label,
+			'--source=' + extra.source,
+			'--attribution=' + extra.attribution,
+			'--boundary-facts=true',
+			...(extra.largestCityFacts === false ? ['--largest-city-facts=false'] : [])
+		]);
+		const extraMap = JSON.parse(
+			readFileSync(path.join(REPO_ROOT, 'data/maps', extraId, 'map.json'), 'utf8')
+		) as { targets: unknown[] };
+		if (extraMap.targets.length !== extra.expectedRegions)
+			throw new Error(extraId + ': unexpected unit count');
+		run('build-terrain.ts', ['--map=' + extraId, '--force']);
+		run('build-facts.ts', ['--map=' + extraId]);
+		console.log('Completed ' + country.country);
+		continue;
+	}
 	const townsId = country.id + '-towns-' + country.population / 1000 + 'k';
 	run('build-points-map.ts', [
 		'--country=' + country.country,
@@ -191,7 +86,9 @@ for (const country of selected) {
 		'--name=' + country.country + ' — Towns',
 		'--min-population=' + country.population,
 		'--max-count=20',
-		'--name-field=' + (country.townSource ? 'NAME' : 'local'),
+		'--name-field=' + (country.townNameField ?? (country.townSource ? 'NAME' : 'local')),
+		'--regions-map=' + regionId,
+		...(country.townSourceCountry ? ['--source-country=' + country.townSourceCountry] : []),
 		...(country.townSource ? ['--source=' + country.townSource] : []),
 		...(country.townExclude ? ['--exclude=' + country.townExclude] : []),
 		...(country.retainTowns ? ['--retain=' + country.retainTowns] : []),
