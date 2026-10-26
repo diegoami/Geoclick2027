@@ -12,7 +12,24 @@
 			"nameIt": "Bolgatanga",
 			"population": 89255
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The area has long been a crossroads for overland trade.",
+				"Bolgatanga’s artisans are renowned for woven baskets.",
+				"At Paga, local tradition regards crocodiles as sacred."
+			],
+			"it": [
+				"La zona è da lungo tempo un crocevia del commercio terrestre.",
+				"Gli artigiani di Bolgatanga sono rinomati per i cesti intrecciati.",
+				"A Paga la tradizione locale considera sacri i coccodrilli."
+			],
+			"de": [
+				"Die Gegend ist seit Langem ein Knotenpunkt des Überlandhandels.",
+				"Bolgatangas Handwerker sind für geflochtene Körbe bekannt.",
+				"In Paga gelten Krokodile nach örtlicher Überlieferung als heilig."
+			]
+		}
 	},
 	"upper-west": {
 		"kind": "region",
@@ -28,7 +45,24 @@
 			"nameIt": "Wa",
 			"population": 107214
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It was separated from the former Upper Region in 1983.",
+				"Wa Naa’s palace preserves a distinctive earthen architectural tradition.",
+				"Wechiau’s community sanctuary protects hippopotamuses along the Black Volta."
+			],
+			"it": [
+				"Fu separata dalla precedente Regione Superiore nel 1983.",
+				"Il palazzo del Wa Naa conserva una caratteristica tradizione architettonica in terra.",
+				"Il santuario comunitario di Wechiau protegge gli ippopotami lungo il Volta Nero."
+			],
+			"de": [
+				"Die Region wurde 1983 von der früheren Upper Region abgetrennt.",
+				"Der Palast des Wa Naa bewahrt eine charakteristische Lehmbautradition.",
+				"Das gemeinschaftlich betriebene Schutzgebiet Wechiau schützt Flusspferde am Schwarzen Volta."
+			]
+		}
 	},
 	"north-east": {
 		"kind": "region",
@@ -39,7 +73,24 @@
 			"Upper West"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It was created in 2019 from part of Northern Region.",
+				"The Mamprusi kingdom is central to its historical identity.",
+				"Fugu smocks are traditionally made from strips of handwoven patterned cloth."
+			],
+			"it": [
+				"Fu creata nel 2019 da una parte della Regione Settentrionale.",
+				"Il regno mamprusi è centrale nella sua identità storica.",
+				"Le casacche fugu sono tradizionalmente confezionate con strisce di stoffa decorata tessuta a mano."
+			],
+			"de": [
+				"Die Region entstand 2019 aus einem Teil der Northern Region.",
+				"Das Königreich der Mamprusi prägt ihre historische Identität.",
+				"Traditionelle Fugu-Kittel werden aus handgewebten gemusterten Stoffstreifen zusammengesetzt."
+			]
+		}
 	},
 	"northern": {
 		"kind": "region",
@@ -55,7 +106,24 @@
 			"nameIt": "Tamale",
 			"population": 729768
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The area includes the historical heartland of the Dagbon kingdom.",
+				"Damba celebrations bring together royal ceremony, music and dance.",
+				"Tamale’s crafts include textile weaving and pottery."
+			],
+			"it": [
+				"La zona comprende il cuore storico del regno del Dagbon.",
+				"Le celebrazioni Damba uniscono cerimonie reali, musica e danza.",
+				"Tra i mestieri di Tamale vi sono la tessitura e la ceramica."
+			],
+			"de": [
+				"Die Gegend umfasst das historische Kernland des Königreichs Dagbon.",
+				"Damba-Feiern verbinden königliches Zeremoniell, Musik und Tanz.",
+				"Zu Tamales Handwerken gehören Weberei und Töpferei."
+			]
+		}
 	},
 	"savannah": {
 		"kind": "region",
@@ -74,7 +142,24 @@
 			"nameIt": "Damongo",
 			"population": 14442
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It was created in 2019 from part of Northern Region.",
+				"Mole National Park protects savanna wildlife, including elephants.",
+				"Larabanga’s mosque is known for its earthen walls and projecting timber beams."
+			],
+			"it": [
+				"Fu creata nel 2019 da una parte della Regione Settentrionale.",
+				"Il Parco nazionale di Mole protegge la fauna della savana, compresi gli elefanti.",
+				"La moschea di Larabanga è nota per le pareti in terra e le travi di legno sporgenti."
+			],
+			"de": [
+				"Die Region entstand 2019 aus einem Teil der Northern Region.",
+				"Der Mole-Nationalpark schützt Savannentiere, darunter Elefanten.",
+				"Larabangas Moschee ist für Lehmwände und herausragende Holzbalken bekannt."
+			]
+		}
 	},
 	"bono-east": {
 		"kind": "region",
@@ -87,7 +172,24 @@
 			"Volta"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It was created in 2019 from the former Brong Ahafo Region.",
+				"Boabeng-Fiema’s monkeys are protected by local religious traditions.",
+				"Kintampo’s waterfalls cascade through a series of rocky steps."
+			],
+			"it": [
+				"Fu creata nel 2019 dalla precedente Regione del Brong Ahafo.",
+				"Le scimmie di Boabeng-Fiema sono protette dalle tradizioni religiose locali.",
+				"Le cascate di Kintampo scendono attraverso una serie di gradini rocciosi."
+			],
+			"de": [
+				"Die Region entstand 2019 aus der früheren Region Brong Ahafo.",
+				"Boabeng-Fiemas Affen werden durch örtliche religiöse Traditionen geschützt.",
+				"Kintampos Wasserfälle stürzen über mehrere Felsstufen."
+			]
+		}
 	},
 	"oti": {
 		"kind": "region",
@@ -99,7 +201,24 @@
 			"Volta"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name refers to the Oti River.",
+				"The region was created from part of Volta Region in 2019.",
+				"Kyabobo National Park protects woodland and forest habitats near the Togo border."
+			],
+			"it": [
+				"Il nome si riferisce al fiume Oti.",
+				"La regione fu creata da una parte della Regione del Volta nel 2019.",
+				"Il Parco nazionale di Kyabobo protegge habitat boschivi e forestali presso il confine togolese."
+			],
+			"de": [
+				"Der Name bezieht sich auf den Oti-Fluss.",
+				"Die Region entstand 2019 aus einem Teil der Volta Region.",
+				"Der Kyabobo-Nationalpark schützt Waldhabitate nahe der Grenze zu Togo."
+			]
+		}
 	},
 	"bono": {
 		"kind": "region",
@@ -111,7 +230,24 @@
 			"Western North"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name recalls the Bono people and their historic kingdom.",
+				"Duasidan preserves a community monkey sanctuary.",
+				"The Bui Dam stands on the Black Volta in the Banda area."
+			],
+			"it": [
+				"Il nome ricorda il popolo bono e il suo regno storico.",
+				"Duasidan conserva un santuario comunitario delle scimmie.",
+				"La diga di Bui sorge sul Volta Nero nell’area di Banda."
+			],
+			"de": [
+				"Der Name erinnert an das Volk der Bono und sein historisches Königreich.",
+				"Duasidan bewahrt ein gemeinschaftliches Affenschutzgebiet.",
+				"Der Bui-Staudamm liegt am Schwarzen Volta im Gebiet Banda."
+			]
+		}
 	},
 	"ahafo": {
 		"kind": "region",
@@ -121,7 +257,24 @@
 			"Western North"
 		],
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"It was created in 2019 from the former Brong Ahafo Region.",
+				"Mim Bour is a distinctive group of rocky peaks.",
+				"Asumura’s forest shelters the white-necked rockfowl."
+			],
+			"it": [
+				"Fu creata nel 2019 dalla precedente Regione del Brong Ahafo.",
+				"Mim Bour è un caratteristico gruppo di cime rocciose.",
+				"La foresta di Asumura ospita il picatarte collobianco."
+			],
+			"de": [
+				"Die Region entstand 2019 aus der früheren Region Brong Ahafo.",
+				"Mim Bour ist eine markante Gruppe felsiger Gipfel.",
+				"Asumuras Wald beherbergt den Gelbkopf-Felshüpfer."
+			]
+		}
 	},
 	"ashanti": {
 		"kind": "region",
@@ -140,7 +293,24 @@
 			"nameIt": "Kumasi",
 			"population": 3903480
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name recalls the Asante people and their kingdom.",
+				"The Golden Stool is a sacred symbol of Asante unity.",
+				"Adinkra cloth uses printed symbols to convey proverbs and ideas."
+			],
+			"it": [
+				"Il nome ricorda il popolo asante e il suo regno.",
+				"Lo Sgabello d’Oro è un simbolo sacro dell’unità asante.",
+				"Il tessuto adinkra usa simboli stampati per esprimere proverbi e idee."
+			],
+			"de": [
+				"Der Name erinnert an das Volk der Asante und sein Königreich.",
+				"Der Goldene Stuhl ist ein heiliges Symbol der Einheit der Asante.",
+				"Adinkra-Stoff vermittelt durch aufgedruckte Symbole Sprichwörter und Gedanken."
+			]
+		}
 	},
 	"volta": {
 		"kind": "region",
@@ -161,7 +331,24 @@
 			"name": "Mount Afadjoto",
 			"elevation": 885
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its name comes from the Volta River.",
+				"Ewe weavers preserve distinctive traditions of kente cloth.",
+				"The Hogbetsotso festival commemorates the migration of the Anlo-Ewe people."
+			],
+			"it": [
+				"Il nome deriva dal fiume Volta.",
+				"I tessitori ewe conservano particolari tradizioni del tessuto kente.",
+				"Il festival Hogbetsotso ricorda la migrazione del popolo anlo-ewe."
+			],
+			"de": [
+				"Der Name geht auf den Volta-Fluss zurück.",
+				"Ewe-Weber bewahren eigene Traditionen des Kente-Stoffs.",
+				"Das Hogbetsotso-Fest erinnert an die Wanderung des Volkes der Anlo-Ewe."
+			]
+		}
 	},
 	"eastern": {
 		"kind": "region",
@@ -180,7 +367,24 @@
 			"nameIt": "Koforidua",
 			"population": 127334
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Tetteh Quarshie’s farm at Mampong-Akuapem played a pioneering role in Ghana’s cocoa industry.",
+				"Aburi Botanical Gardens preserves a collection of tropical plants.",
+				"The Akosombo Dam created the vast artificial Lake Volta."
+			],
+			"it": [
+				"La fattoria di Tetteh Quarshie a Mampong-Akuapem ebbe un ruolo pionieristico nell’industria ghanese del cacao.",
+				"I giardini botanici di Aburi conservano una collezione di piante tropicali.",
+				"La diga di Akosombo creò il vasto lago artificiale Volta."
+			],
+			"de": [
+				"Tetteh Quarshies Farm in Mampong-Akuapem spielte eine Pionierrolle in Ghanas Kakaoanbau.",
+				"Der botanische Garten Aburi bewahrt eine Sammlung tropischer Pflanzen.",
+				"Der Akosombo-Staudamm schuf den riesigen künstlichen Voltasee."
+			]
+		}
 	},
 	"western-north": {
 		"kind": "region",
@@ -198,7 +402,24 @@
 			"nameIt": "Dome",
 			"population": 56655
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"It was separated from Western Region in 2019.",
+				"Cocoa farming is an important part of its economy.",
+				"Bia National Park preserves forest wildlife and habitats."
+			],
+			"it": [
+				"Fu separata dalla Regione Occidentale nel 2019.",
+				"La coltivazione del cacao è una parte importante dell’economia.",
+				"Il Parco nazionale di Bia conserva habitat e fauna forestali."
+			],
+			"de": [
+				"Die Region wurde 2019 von der Western Region abgetrennt.",
+				"Kakaoanbau ist ein wichtiger Teil ihrer Wirtschaft.",
+				"Der Bia-Nationalpark bewahrt Waldlebensräume und ihre Tierwelt."
+			]
+		}
 	},
 	"greater-accra": {
 		"kind": "region",
@@ -214,7 +435,24 @@
 			"nameIt": "Accra",
 			"population": 1782150
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The region includes the historic coastal communities of the Ga people.",
+				"Homowo means hooting at hunger and recalls victory over famine.",
+				"Figurative coffins can reflect the life, work or aspirations of the deceased."
+			],
+			"it": [
+				"La regione comprende le storiche comunità costiere del popolo ga.",
+				"Homowo significa deridere la fame e ricorda la vittoria sulla carestia.",
+				"Le bare figurative possono riflettere la vita, il lavoro o le aspirazioni del defunto."
+			],
+			"de": [
+				"Die Region umfasst die historischen Küstengemeinden der Ga.",
+				"Homowo bedeutet den Hunger verhöhnen und erinnert an die Überwindung einer Hungersnot.",
+				"Figürliche Särge können Leben, Beruf oder Wünsche der Verstorbenen widerspiegeln."
+			]
+		}
 	},
 	"central": {
 		"kind": "region",
@@ -232,7 +470,24 @@
 			"nameIt": "Winneba",
 			"population": 55331
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its coastal towns preserve the historical culture of the Fante people.",
+				"Cape Coast’s castle bears witness to the transatlantic slave trade.",
+				"Kakum National Park has a walkway suspended above the forest floor."
+			],
+			"it": [
+				"Le città costiere conservano la cultura storica del popolo fante.",
+				"Il castello di Cape Coast testimonia la tratta transatlantica degli schiavi.",
+				"Il Parco nazionale di Kakum possiede una passerella sospesa sopra il suolo della foresta."
+			],
+			"de": [
+				"Die Küstenstädte bewahren die historische Kultur der Fante.",
+				"Cape Coasts Burg zeugt vom transatlantischen Sklavenhandel.",
+				"Der Kakum-Nationalpark besitzt einen hoch über dem Waldboden verlaufenden Steg."
+			]
+		}
 	},
 	"western": {
 		"kind": "region",
@@ -247,6 +502,23 @@
 			"nameIt": "Sekondi-Takoradi",
 			"population": 539548
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its cultural heritage includes the Nzema and Ahanta peoples.",
+				"Nzulezu is a settlement built on stilts above a lake.",
+				"Historic forts at Dixcove and Princes Town recall European coastal trade."
+			],
+			"it": [
+				"Il patrimonio culturale comprende i popoli nzema e ahanta.",
+				"Nzulezu è un insediamento costruito su palafitte sopra un lago.",
+				"Gli storici forti di Dixcove e Princes Town ricordano il commercio costiero europeo."
+			],
+			"de": [
+				"Zum kulturellen Erbe gehören die Völker der Nzema und Ahanta.",
+				"Nzulezu ist eine auf Pfählen über einem See errichtete Siedlung.",
+				"Historische Forts in Dixcove und Princes Town erinnern an den europäischen Küstenhandel."
+			]
+		}
 	}
 }

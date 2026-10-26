@@ -186,9 +186,9 @@ joined in the catalogue. Singapore has five regions and 55 planning areas,
 rather than a misleading towns map. All 44 new choices were verified in the
 rendered browser catalogue at 1280 × 800 on localhost:5187.
 
-Authored facts are still in progress: 368/735 new targets have three sentences
+Authored facts are still in progress: 403/735 new targets have three sentences
 in each of English, Italian and German. The first six countries, Nepal, UAE,
-Uzbekistan, Latvia, Sri Lanka, Uganda and Slovenia are complete; nine countries remain. The reproducible
+Uzbekistan, Latvia, Sri Lanka, Uganda, Slovenia and Ghana are complete; eight countries remain. The reproducible
 coverage check is data/scripts/audit-v1-country-facts.ts (--strict fails until
 all remaining targets are complete). Generated hooks are refreshed from the
 authored data/facts files, including shared continent targets.
@@ -406,7 +406,7 @@ was triggered or checked (deploys remain stopped).
 Browser checks at 1280 × 800 confirmed all 44 choices in the rendered start
 screen menus and successful canvases for Nepal, Angola, DR Congo and
 Singapore planning areas, without page errors or failed local asset requests.
-Facts remain 368/735 complete; the strict content audit still intentionally
+Facts remain 403/735 complete; the strict content audit still intentionally
 fails. PR #243 remains draft and needs a fresh external-family review after
 content completion, followed by owner testing/merge approval. Its old reviews
 do not cover this expanded code. No 1.0 bump, tag or publication has happened.
@@ -420,10 +420,22 @@ Existing Colombo, Kampala and Ljubljana sets were preserved. Maribor’s two
 sentences were retained in substance and expanded with its historic name.
 Per-target checking references are stored in the authored country files.
 Generated hooks were refreshed for their six maps and the shared Central
-European cities map. The coverage regressions now include all 26 maps of
-the thirteen completed countries; 1380 focused data/fact/translation tests pass.
+European cities map. The coverage regressions now include all 28 maps of
+the fourteen completed countries; 1382 focused data/fact/translation tests pass.
 
-Remaining authoring: Ghana, Taiwan, DR Congo, Ethiopia, Tanzania, Singapore,
-Israel, Iraq and Angola (367 targets lacking complete EN/IT/DE sets).
+Remaining authoring: Taiwan, DR Congo, Ethiopia, Tanzania, Singapore,
+Israel, Iraq and Angola (332 targets lacking complete EN/IT/DE sets).
 The full-scope strict audit remains a release-readiness check, not a passed
 gate. Fresh external-family review and owner testing follow content completion.
+
+
+Ghana's sixteen regions and nineteen remaining towns now have 35 complete
+EN/IT/DE fact sets (315 sentences); Accra's existing set is preserved.
+References are recorded per target in data/facts/ghana.json. The facts use
+the current sixteen-region geography, despite older ten-region descriptions
+on some tourism pages. Mole/Larabanga are in Savannah and Kyabobo is in Oti.
+The Mampong town target is Asante-Mampong; Eastern Region's cocoa-history
+fact explicitly names Mampong-Akuapem. Formation dates of the six 2019
+regions were checked against the Ministry's implementation report.
+Generated hooks are refreshed for both Ghana maps. No tag, release,
+deployment, installer test or itch.io access is part of this content batch.

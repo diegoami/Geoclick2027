@@ -99,7 +99,9 @@ describe('v1.0 country expansion data', () => {
 		'uganda-regions',
 		'uganda-towns-10k',
 		'slovenia-regions',
-		'slovenia-towns-5k'
+		'slovenia-towns-5k',
+		'ghana-regions',
+		'ghana-towns-10k'
 	];
 	it.each(maps)('%s has three authored facts per target and language', (id) => {
 		const map = read<MapData>('maps/' + id + '/map.json');
