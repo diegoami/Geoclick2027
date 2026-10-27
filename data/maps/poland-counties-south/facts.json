@@ -7,7 +7,24 @@
 			"powiat opolski (Opolskie)"
 		],
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Namysłów, its administrative seat.",
+				"Namysłów’s Gothic town hall dates from the second half of the fourteenth century.",
+				"Namysłów’s medieval castle was adapted for brewery use in the nineteenth century."
+			],
+			"it": [
+				"Il distretto prende il nome da Namysłów, la sua sede amministrativa.",
+				"Il municipio gotico di Namysłów risale alla seconda metà del Trecento.",
+				"Il castello medievale di Namysłów fu adattato all’uso del birrificio nell’Ottocento."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Namysłów benannt.",
+				"Das gotische Rathaus in Namysłów stammt aus der zweiten Hälfte des 14. Jahrhunderts.",
+				"Die mittelalterliche Burg in Namysłów wurde im 19. Jahrhundert für die Brauerei umgenutzt."
+			]
+		}
 	},
 	"powiat-kluczborski": {
 		"kind": "region",
@@ -17,7 +34,24 @@
 			"powiat opolski (Opolskie)"
 		],
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Kluczbork, its administrative seat.",
+				"Kluczbork’s Jan Dzierżon Museum preserves the history of beekeeping and the work of its namesake.",
+				"Beekeeping pioneer Jan Dzierżon was born at Łowkowice in 1811."
+			],
+			"it": [
+				"Il distretto prende il nome da Kluczbork, la sua sede amministrativa.",
+				"Il Museo Jan Dzierżon di Kluczbork conserva la storia dell’apicoltura e l’opera dello studioso a cui è intitolato.",
+				"Il pioniere dell’apicoltura Jan Dzierżon nacque a Łowkowice nel 1811."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Kluczbork benannt.",
+				"Das Jan-Dzierżon-Museum in Kluczbork bewahrt die Geschichte der Imkerei und das Werk seines Namensgebers.",
+				"Der Imkereipionier Jan Dzierżon wurde 1811 in Łowkowice geboren."
+			]
+		}
 	},
 	"powiat-k-obucki": {
 		"kind": "region",
@@ -28,7 +62,24 @@
 			"powiat oleski"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The county takes its name from Kłobuck, its administrative seat.",
+				"Krzepice preserves the ruins of an early-nineteenth-century synagogue.",
+				"Danków retains seventeenth-century bastion fortifications."
+			],
+			"it": [
+				"Il distretto prende il nome da Kłobuck, la sua sede amministrativa.",
+				"Krzepice conserva le rovine di una sinagoga dell’inizio dell’Ottocento.",
+				"Danków conserva fortificazioni bastionate del Seicento."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Kłobuck benannt.",
+				"Krzepice bewahrt die Ruine einer Synagoge aus dem frühen 19. Jahrhundert.",
+				"In Danków sind Bastionsbefestigungen aus dem 17. Jahrhundert erhalten."
+			]
+		}
 	},
 	"powiat-oleski": {
 		"kind": "region",
@@ -40,7 +91,24 @@
 			"powiat strzelecki"
 		],
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Olesno, its administrative seat.",
+				"Olesno’s wooden church of Saint Anne was built in 1518.",
+				"Saint Anne’s church at Olesno was enlarged in 1668–1670 with an extension shaped like a five-petalled rose."
+			],
+			"it": [
+				"Il distretto prende il nome da Olesno, la sua sede amministrativa.",
+				"La chiesa di legno di Sant’Anna a Olesno fu costruita nel 1518.",
+				"La chiesa di Sant’Anna a Olesno fu ampliata nel 1668–1670 con una parte a forma di rosa a cinque petali."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Olesno benannt.",
+				"Die hölzerne Annakirche in Olesno wurde 1518 erbaut.",
+				"Die Annakirche in Olesno erhielt 1668–1670 einen Anbau in Form einer fünfblättrigen Rose."
+			]
+		}
 	},
 	"powiat-czestochowski": {
 		"kind": "region",
@@ -52,7 +120,24 @@
 			"powiat zawierciański"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The county takes its name from Częstochowa, its administrative seat, which forms a separate city county.",
+				"The ruined castle at Olsztyn in the Polish Jura is documented in 1349.",
+				"Złoty Potok’s Krasiński manor houses a museum of poet Zygmunt Krasiński and the families connected with the estate."
+			],
+			"it": [
+				"Il distretto prende il nome da Częstochowa, la sua sede amministrativa, che costituisce un distretto urbano separato.",
+				"Il castello in rovina di Olsztyn nella Giura polacca è documentato nel 1349.",
+				"La dimora Krasiński di Złoty Potok ospita un museo del poeta Zygmunt Krasiński e delle famiglie legate alla tenuta."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Częstochowa benannt, der einen eigenständigen Stadtkreis bildet.",
+				"Die Burgruine Olsztyn im Polnischen Jura ist 1349 urkundlich belegt.",
+				"Das Krasiński-Gutshaus in Złoty Potok beherbergt ein Museum über den Dichter Zygmunt Krasiński und die mit dem Gut verbundenen Familien."
+			]
+		}
 	},
 	"czestochowa": {
 		"kind": "region",
@@ -61,7 +146,24 @@
 			"powiat kłobucki"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Częstochowa’s name originally meant Częstoch’s property, using an old personal name.",
+				"Jasna Góra monastery houses the revered icon of Our Lady of Częstochowa.",
+				"Częstochowa expanded as an industrial centre in the late nineteenth century."
+			],
+			"it": [
+				"Il nome Częstochowa significava originariamente proprietà di Częstoch, da un antico nome personale.",
+				"Il monastero di Jasna Góra conserva la venerata icona della Madonna di Częstochowa.",
+				"Częstochowa si sviluppò come centro industriale alla fine dell’Ottocento."
+			],
+			"de": [
+				"Der Name Częstochowa bedeutete ursprünglich Besitz eines Mannes namens Częstoch.",
+				"Das Kloster Jasna Góra beherbergt die verehrte Ikone der Gottesmutter von Częstochowa.",
+				"Częstochowa entwickelte sich im späten 19. Jahrhundert zu einem Industriezentrum."
+			]
+		}
 	},
 	"powiat-brzeski-opolskie": {
 		"kind": "region",
@@ -71,7 +173,24 @@
 			"powiat opolski (Opolskie)"
 		],
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Brzeg, its administrative seat.",
+				"Brzeg’s ducal castle preserves Renaissance architecture associated with the Silesian Piast dynasty.",
+				"The church at Małujowice contains Gothic wall paintings."
+			],
+			"it": [
+				"Il distretto prende il nome da Brzeg, la sua sede amministrativa.",
+				"Il castello ducale di Brzeg conserva architetture rinascimentali legate alla dinastia dei Piast di Slesia.",
+				"La chiesa di Małujowice conserva pitture murali gotiche."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Brzeg benannt.",
+				"Das Herzogsschloss in Brzeg bewahrt Renaissancearchitektur der schlesischen Piasten.",
+				"Die Kirche in Małujowice besitzt gotische Wandmalereien."
+			]
+		}
 	},
 	"powiat-opolski-opolskie": {
 		"kind": "region",
@@ -87,7 +206,24 @@
 			"powiat strzelecki"
 		],
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Opole, its administrative seat, which forms a separate city county.",
+				"Ozimek’s iron suspension bridge was built in 1827.",
+				"Krasiejów’s palaeontological pavilion displays fossils of Triassic amphibians and reptiles."
+			],
+			"it": [
+				"Il distretto prende il nome da Opole, la sua sede amministrativa, che costituisce un distretto urbano separato.",
+				"Il ponte sospeso in ferro di Ozimek fu costruito nel 1827.",
+				"Il padiglione paleontologico di Krasiejów espone fossili di anfibi e rettili del Triassico."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Opole benannt, der einen eigenständigen Stadtkreis bildet.",
+				"Die eiserne Hängebrücke in Ozimek wurde 1827 erbaut.",
+				"Der paläontologische Pavillon in Krasiejów zeigt Fossilien von Amphibien und Reptilien aus der Trias."
+			]
+		}
 	},
 	"opole": {
 		"kind": "region",
@@ -125,7 +261,24 @@
 			"powiat tarnogórski"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The county takes its name from Lubliniec, its administrative seat.",
+				"Lubliniec’s Edith Stein museum occupies a house once owned by her grandparents.",
+				"Kochcice’s neo-Baroque palace was built for Count Ludwig Karl von Ballestrem in 1906–1909."
+			],
+			"it": [
+				"Il distretto prende il nome da Lubliniec, la sua sede amministrativa.",
+				"Il museo di Edith Stein a Lubliniec occupa una casa un tempo appartenuta ai suoi nonni.",
+				"Il palazzo neobarocco di Kochcice fu costruito per il conte Ludwig Karl von Ballestrem nel 1906–1909."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Lubliniec benannt.",
+				"Das Edith-Stein-Museum in Lubliniec befindet sich in einem Haus ihrer Großeltern.",
+				"Das neobarocke Schloss in Kochcice wurde 1906–1909 für Graf Ludwig Karl von Ballestrem erbaut."
+			]
+		}
 	},
 	"powiat-myszkowski": {
 		"kind": "region",
@@ -137,7 +290,24 @@
 			"powiat zawierciański"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The county takes its name from Myszków, its administrative seat.",
+				"Mirów Castle developed from a fourteenth-century watchtower.",
+				"The royal castle at Bobolice has reconstructed walls and chambers."
+			],
+			"it": [
+				"Il distretto prende il nome da Myszków, la sua sede amministrativa.",
+				"Il castello di Mirów si sviluppò da una torre di guardia del Trecento.",
+				"Il castello reale di Bobolice presenta mura e ambienti ricostruiti."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Myszków benannt.",
+				"Die Burg Mirów entwickelte sich aus einem Wachturm des 14. Jahrhunderts.",
+				"Die Königsburg Bobolice besitzt rekonstruierte Mauern und Innenräume."
+			]
+		}
 	},
 	"powiat-zawiercianski": {
 		"kind": "region",
@@ -150,7 +320,24 @@
 			"powiat olkuski"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The county takes its name from Zawiercie, its administrative seat.",
+				"The Boner family transformed Ogrodzieniec Castle into a Renaissance residence in the sixteenth century.",
+				"Birów Hill near Podzamcze has a reconstructed wooden fortified settlement."
+			],
+			"it": [
+				"Il distretto prende il nome da Zawiercie, la sua sede amministrativa.",
+				"La famiglia Boner trasformò il castello di Ogrodzieniec in una residenza rinascimentale nel Cinquecento.",
+				"La collina Birów presso Podzamcze ospita la ricostruzione di un insediamento fortificato di legno."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Zawiercie benannt.",
+				"Die Familie Boner ließ die Burg Ogrodzieniec im 16. Jahrhundert zu einer Renaissanceresidenz umbauen.",
+				"Auf dem Birów-Hügel bei Podzamcze steht eine rekonstruierte befestigte Holzsiedlung."
+			]
+		}
 	},
 	"powiat-strzelecki": {
 		"kind": "region",
@@ -164,7 +351,24 @@
 			"powiat tarnogórski"
 		],
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Strzelce Opolskie, its administrative seat.",
+				"Góra Świętej Anny preserves the remains of an ancient volcano.",
+				"Strzelce Opolskie’s medieval defensive tower was later adapted as a church bell tower."
+			],
+			"it": [
+				"Il distretto prende il nome da Strzelce Opolskie, la sua sede amministrativa.",
+				"Góra Świętej Anny conserva i resti di un antico vulcano.",
+				"La torre difensiva medievale di Strzelce Opolskie fu in seguito adattata a campanile."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Strzelce Opolskie benannt.",
+				"Góra Świętej Anny bewahrt die Reste eines alten Vulkans.",
+				"Der mittelalterliche Wehrturm in Strzelce Opolskie wurde später zum Kirchturm umgebaut."
+			]
+		}
 	},
 	"powiat-tarnogorski": {
 		"kind": "region",
@@ -180,7 +384,24 @@
 			"Zabrze"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Tarnowskie Góry, its administrative seat.",
+				"Tarnowskie Góry’s mining heritage and underground water-management system entered the UNESCO World Heritage List in 2017.",
+				"The Black Trout Adit at Tarnowskie Góry offers boat journeys through flooded underground passages."
+			],
+			"it": [
+				"Il distretto prende il nome da Tarnowskie Góry, la sua sede amministrativa.",
+				"Il patrimonio minerario di Tarnowskie Góry e il suo sistema sotterraneo di gestione delle acque entrarono nella Lista del patrimonio mondiale dell’UNESCO nel 2017.",
+				"La Galleria della trota nera a Tarnowskie Góry propone percorsi in barca nei passaggi sotterranei allagati."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Tarnowskie Góry benannt.",
+				"Das Bergbauerbe und unterirdische Wassersystem von Tarnowskie Góry wurden 2017 UNESCO-Welterbe.",
+				"Der Schwarze-Forelle-Stollen in Tarnowskie Góry bietet Bootsfahrten durch überflutete unterirdische Gänge."
+			]
+		}
 	},
 	"powiat-nyski": {
 		"kind": "region",
@@ -190,7 +411,24 @@
 			"powiat prudnicki"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Nysa, its administrative seat.",
+				"Prussian king Frederick II transformed Nysa into a major fortress.",
+				"Paczków preserves substantial fourteenth-century defensive walls."
+			],
+			"it": [
+				"Il distretto prende il nome da Nysa, la sua sede amministrativa.",
+				"Il re prussiano Federico II trasformò Nysa in un’importante fortezza.",
+				"Paczków conserva ampi tratti delle mura difensive del Trecento."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Nysa benannt.",
+				"Preußenkönig Friedrich II. ließ Nysa zu einer bedeutenden Festung ausbauen.",
+				"Paczków bewahrt umfangreiche Verteidigungsmauern aus dem 14. Jahrhundert."
+			]
+		}
 	},
 	"powiat-krapkowicki": {
 		"kind": "region",
@@ -201,7 +439,24 @@
 			"powiat strzelecki"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Krapkowice, its administrative seat.",
+				"Moszna Palace gained its neo-Gothic wing during rebuilding after a fire in 1896.",
+				"Gogolin’s nineteenth-century lime kilns recall the limestone industry that shaped the town’s growth."
+			],
+			"it": [
+				"Il distretto prende il nome da Krapkowice, la sua sede amministrativa.",
+				"Il palazzo di Moszna acquisì l’ala neogotica durante la ricostruzione dopo un incendio nel 1896.",
+				"I forni da calce ottocenteschi di Gogolin ricordano l’industria del calcare che segnò lo sviluppo della città."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Krapkowice benannt.",
+				"Das Schloss Moszna erhielt seinen neugotischen Flügel beim Wiederaufbau nach dem Brand von 1896.",
+				"Gogolins Kalköfen aus dem 19. Jahrhundert erinnern an die Kalkindustrie, die das Wachstum der Stadt prägte."
+			]
+		}
 	},
 	"powiat-prudnicki": {
 		"kind": "region",
@@ -213,7 +468,24 @@
 			"powiat opolski (Opolskie)"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Prudnik, its administrative seat.",
+				"Beethoven visited Count Oppersdorff at Głogówek in 1806.",
+				"Prudnik preserves a medieval castle tower known as Wok’s Tower."
+			],
+			"it": [
+				"Il distretto prende il nome da Prudnik, la sua sede amministrativa.",
+				"Beethoven visitò il conte Oppersdorff a Głogówek nel 1806.",
+				"Prudnik conserva una torre medievale del castello nota come Torre di Wok."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Prudnik benannt.",
+				"Beethoven besuchte 1806 Graf Oppersdorff in Głogówek.",
+				"Prudnik bewahrt einen mittelalterlichen Burgturm namens Wokturm."
+			]
+		}
 	},
 	"powiat-miechowski": {
 		"kind": "region",
@@ -224,7 +496,24 @@
 			"powiat zawierciański"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Miechów, its administrative seat.",
+				"Miechów’s Basilica of the Holy Sepulchre contains a sixteenth-century replica of the tomb in Jerusalem.",
+				"A battle of the January Uprising was fought at Miechów on 17 February 1863."
+			],
+			"it": [
+				"Il distretto prende il nome da Miechów, la sua sede amministrativa.",
+				"La basilica del Santo Sepolcro di Miechów conserva una replica cinquecentesca della tomba di Gerusalemme.",
+				"Una battaglia dell’insurrezione di gennaio fu combattuta a Miechów il 17 febbraio 1863."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Miechów benannt.",
+				"Die Grabeskirche in Miechów besitzt eine Nachbildung des Jerusalemer Grabes aus dem 16. Jahrhundert.",
+				"Am 17. Februar 1863 fand in Miechów eine Schlacht des Januaraufstands statt."
+			]
+		}
 	},
 	"powiat-bedzinski": {
 		"kind": "region",
@@ -241,7 +530,24 @@
 			"Sosnowiec"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Będzin, its administrative seat.",
+				"Casimir the Great enlarged Będzin Castle in the fourteenth century.",
+				"Będzin’s Mieroszewski Palace at Gzichów was built in the first half of the eighteenth century."
+			],
+			"it": [
+				"Il distretto prende il nome da Będzin, la sua sede amministrativa.",
+				"Casimiro il Grande ampliò il castello di Będzin nel Trecento.",
+				"Il palazzo Mieroszewski di Będzin, a Gzichów, fu costruito nella prima metà del Settecento."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Będzin benannt.",
+				"Kasimir der Große ließ die Burg Będzin im 14. Jahrhundert erweitern.",
+				"Das Mieroszewski-Palais im Będziner Stadtteil Gzichów entstand in der ersten Hälfte des 18. Jahrhunderts."
+			]
+		}
 	},
 	"piekary-slaskie": {
 		"kind": "region",
@@ -253,7 +559,24 @@
 			"Siemianowice Śląskie"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Piekary was recorded as Pecare in a document of 1277.",
+				"The Liberation Mound was built between 1932 and 1937.",
+				"The Marian pilgrimage tradition in Piekary developed around an image venerated since 1659."
+			],
+			"it": [
+				"Piekary fu registrata come Pecare in un documento del 1277.",
+				"Il Tumulo della Liberazione fu costruito tra il 1932 e il 1937.",
+				"La tradizione dei pellegrinaggi mariani a Piekary si sviluppò intorno a un’immagine venerata dal 1659."
+			],
+			"de": [
+				"Piekary wurde 1277 in einer Urkunde als Pecare erwähnt.",
+				"Der Befreiungshügel wurde zwischen 1932 und 1937 errichtet.",
+				"Die Marienwallfahrt in Piekary entwickelte sich um ein seit 1659 verehrtes Bild."
+			]
+		}
 	},
 	"bytom": {
 		"kind": "region",
@@ -294,7 +617,24 @@
 			"Sosnowiec"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Dąbrowa means an oak grove, while Górnicza refers to mining.",
+				"The Sztygarka Museum occupies the former mining school founded in 1889.",
+				"The Pogoria lakes fill former sand quarries worked for the mining industry."
+			],
+			"it": [
+				"Dąbrowa significa querceto, mentre Górnicza richiama l’attività mineraria.",
+				"Il Museo Sztygarka occupa l’antica scuola mineraria fondata nel 1889.",
+				"I laghi Pogoria occupano antiche cave di sabbia sfruttate per l’industria mineraria."
+			],
+			"de": [
+				"Dąbrowa bedeutet Eichenhain, während Górnicza auf den Bergbau verweist.",
+				"Das Sztygarka-Museum befindet sich in der ehemaligen, 1889 gegründeten Bergbauschule.",
+				"Die Pogoria-Seen füllen ehemalige Sandgruben der Bergbauindustrie."
+			]
+		}
 	},
 	"powiat-gliwicki": {
 		"kind": "region",
@@ -311,7 +651,24 @@
 			"Zabrze"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Gliwice, its administrative seat, which forms a separate city county.",
+				"The Ballestrem family built Pławniowice Palace between 1882 and 1885.",
+				"Toszek Castle was partly rebuilt in 1958–1963 after the devastating fire of 1811."
+			],
+			"it": [
+				"Il distretto prende il nome da Gliwice, la sua sede amministrativa, che costituisce un distretto urbano separato.",
+				"La famiglia Ballestrem costruì il palazzo di Pławniowice tra il 1882 e il 1885.",
+				"Il castello di Toszek fu parzialmente ricostruito nel 1958–1963 dopo il devastante incendio del 1811."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Gliwice benannt, der einen eigenständigen Stadtkreis bildet.",
+				"Die Familie Ballestrem ließ das Schloss Pławniowice zwischen 1882 und 1885 erbauen.",
+				"Die Burg Toszek wurde nach dem verheerenden Brand von 1811 in den Jahren 1958–1963 teilweise wiederaufgebaut."
+			]
+		}
 	},
 	"powiat-olkuski": {
 		"kind": "region",
@@ -325,7 +682,24 @@
 			"powiat zawierciański"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Olkusz, its administrative seat.",
+				"The ruins of Rabsztyn Castle stand on the limestone uplands near Olkusz.",
+				"The Błędów Desert near Klucze is an area of inland sands and dunes rather than a climatic desert."
+			],
+			"it": [
+				"Il distretto prende il nome da Olkusz, la sua sede amministrativa.",
+				"Le rovine del castello di Rabsztyn sorgono sulle alture calcaree presso Olkusz.",
+				"Il deserto di Błędów presso Klucze è un’area di sabbie e dune interne, anziché un deserto climatico."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Olkusz benannt.",
+				"Die Ruinen der Burg Rabsztyn stehen auf den Kalkhöhen bei Olkusz.",
+				"Die Błędów-Wüste bei Klucze ist ein Gebiet mit Binnensanden und Dünen und keine klimatische Wüste."
+			]
+		}
 	},
 	"siemianowice-slaskie": {
 		"kind": "region",
@@ -336,7 +710,24 @@
 			"powiat będziński"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The name Siemianowice Śląskie was adopted when Siemianowice and Huta Laury merged in 1924.",
+				"Park Tradycji preserves the engine house and headframe of the former Michał coal mine.",
+				"Fitzner Villa, once an industrialist’s residence, became a cultural venue after restoration in 2010."
+			],
+			"it": [
+				"Il nome Siemianowice Śląskie fu adottato quando Siemianowice e Huta Laury si unirono nel 1924.",
+				"Il Park Tradycji conserva la sala macchine e il castelletto dell’antica miniera di carbone Michał.",
+				"La villa Fitzner, un tempo residenza di un industriale, divenne un centro culturale dopo il restauro del 2010."
+			],
+			"de": [
+				"Der Name Siemianowice Śląskie wurde bei der Vereinigung von Siemianowice und Huta Laury im Jahr 1924 angenommen.",
+				"Der Park Tradycji bewahrt das Maschinenhaus und den Förderturm der ehemaligen Zeche Michał.",
+				"Die einstige Industriellenresidenz Villa Fitzner wurde nach ihrer Restaurierung 2010 zu einem Kulturort."
+			]
+		}
 	},
 	"zabrze": {
 		"kind": "region",
@@ -348,7 +739,24 @@
 			"Ruda Śląska"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Zabrze bore the official name Hindenburg from 1915 to 1945.",
+				"The Guido coal mine was founded in 1855 and now preserves underground mining heritage.",
+				"The Queen Louise Adit includes a reconstructed underground coal port beneath Zabrze."
+			],
+			"it": [
+				"Zabrze portò il nome ufficiale Hindenburg dal 1915 al 1945.",
+				"La miniera di carbone Guido fu fondata nel 1855 e oggi conserva il patrimonio minerario sotterraneo.",
+				"La galleria mineraria Regina Luisa comprende un porto carbonifero sotterraneo ricostruito sotto Zabrze."
+			],
+			"de": [
+				"Zabrze trug von 1915 bis 1945 den amtlichen Namen Hindenburg.",
+				"Die 1855 gegründete Zeche Guido bewahrt heute das unterirdische Bergbauerbe.",
+				"Der Königin-Luise-Stollen umfasst einen rekonstruierten unterirdischen Kohlehafen unter Zabrze."
+			]
+		}
 	},
 	"gliwice": {
 		"kind": "region",
@@ -385,7 +793,24 @@
 			"Ruda Śląska"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Świętochłowice was historically known in German as Schwientochlowitz.",
+				"The Silesian Uprisings Museum opened in Świętochłowice in 2014.",
+				"Two restored headframes survive at the former Polska coal mine in the Zgoda district."
+			],
+			"it": [
+				"Świętochłowice era storicamente conosciuta in tedesco come Schwientochlowitz.",
+				"Il Museo delle Insurrezioni della Slesia aprì a Świętochłowice nel 2014.",
+				"Due castelletti restaurati sopravvivono nell’antica miniera di carbone Polska, nel quartiere Zgoda."
+			],
+			"de": [
+				"Świętochłowice war historisch unter dem deutschen Namen Schwientochlowitz bekannt.",
+				"Das Museum der Schlesischen Aufstände wurde 2014 in Świętochłowice eröffnet.",
+				"Zwei restaurierte Fördertürme sind auf dem Gelände der ehemaligen Zeche Polska im Stadtteil Zgoda erhalten."
+			]
+		}
 	},
 	"powiat-kedzierzynsko-kozielski": {
 		"kind": "region",
@@ -398,7 +823,24 @@
 			"powiat strzelecki"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Kędzierzyn-Koźle, its administrative seat.",
+				"Fragments of the eighteenth-century Koźle fortress survive in Kędzierzyn-Koźle.",
+				"The historic Kłodnica Canal preserves chamber locks along its Kędzierzyn-Koźle section."
+			],
+			"it": [
+				"Il distretto prende il nome da Kędzierzyn-Koźle, la sua sede amministrativa.",
+				"A Kędzierzyn-Koźle sopravvivono parti della fortezza settecentesca di Koźle.",
+				"Lo storico canale Kłodnica conserva chiuse a conca nel tratto di Kędzierzyn-Koźle."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Kędzierzyn-Koźle benannt.",
+				"In Kędzierzyn-Koźle sind Teile der Festung Koźle aus dem 18. Jahrhundert erhalten.",
+				"Der historische Klodnitzkanal bewahrt auf seinem Abschnitt in Kędzierzyn-Koźle Kammerschleusen."
+			]
+		}
 	},
 	"chorzow": {
 		"kind": "region",
@@ -411,7 +853,24 @@
 			"Świętochłowice"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The modern city took the name of the older settlement of Chorzów during the municipal amalgamations of the 1930s.",
+				"Construction of Silesian Park began in 1951 on land heavily damaged by industry.",
+				"The Silesian Planetarium opened in Chorzów in 1955."
+			],
+			"it": [
+				"La città moderna prese il nome dell’antico insediamento di Chorzów durante le fusioni comunali degli anni Trenta.",
+				"La costruzione del Parco della Slesia iniziò nel 1951 su terreni gravemente danneggiati dall’industria.",
+				"Il Planetario della Slesia aprì a Chorzów nel 1955."
+			],
+			"de": [
+				"Die moderne Stadt übernahm bei den Gemeindezusammenschlüssen der 1930er Jahre den Namen der älteren Siedlung Chorzów.",
+				"Der Bau des Schlesischen Parks begann 1951 auf stark durch die Industrie geschädigten Flächen.",
+				"Das Schlesische Planetarium wurde 1955 in Chorzów eröffnet."
+			]
+		}
 	},
 	"sosnowiec": {
 		"kind": "region",
@@ -423,7 +882,24 @@
 			"powiat będziński"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Sosnowiec developed from a village formerly called Sosnowice.",
+				"Sielecki Castle gained four masonry wings with corner towers in 1620.",
+				"The Schoen Palace at Chemiczna Street houses the city’s museum."
+			],
+			"it": [
+				"Sosnowiec si sviluppò da un villaggio anticamente chiamato Sosnowice.",
+				"Nel 1620 il castello Sielecki fu dotato di quattro ali in muratura con torri angolari.",
+				"Il palazzo Schoen in via Chemiczna ospita il museo cittadino."
+			],
+			"de": [
+				"Sosnowiec entwickelte sich aus einem Dorf, das früher Sosnowice hieß.",
+				"Die Burg Sielecki erhielt 1620 vier gemauerte Flügel mit Ecktürmen.",
+				"Das Schloss Schoen an der Chemiczna-Straße beherbergt das Stadtmuseum."
+			]
+		}
 	},
 	"ruda-slaska": {
 		"kind": "region",
@@ -437,7 +913,24 @@
 			"Zabrze"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Ruda Śląska received its present name when Ruda and Nowy Bytom merged in 1959.",
+				"The Ficinus workers’ colony was built in 1867 with sandstone houses for miners.",
+				"The Kaufhaus department store, built in 1904, gave its name to the surrounding workers’ estate."
+			],
+			"it": [
+				"Ruda Śląska ricevette il nome attuale quando Ruda e Nowy Bytom si unirono nel 1959.",
+				"Il villaggio operaio Ficinus fu costruito nel 1867 con case in arenaria destinate ai minatori.",
+				"Il grande magazzino Kaufhaus, costruito nel 1904, diede il nome al quartiere operaio circostante."
+			],
+			"de": [
+				"Ruda Śląska erhielt seinen heutigen Namen bei der Vereinigung von Ruda und Nowy Bytom im Jahr 1959.",
+				"Die Arbeitersiedlung Ficinus wurde 1867 mit Sandsteinhäusern für Bergleute errichtet.",
+				"Das 1904 erbaute Kaufhaus gab der umliegenden Arbeitersiedlung ihren Namen."
+			]
+		}
 	},
 	"powiat-dabrowski": {
 		"kind": "region",
@@ -445,7 +938,24 @@
 			"powiat tarnowski"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Dąbrowa Tarnowska, its administrative seat.",
+				"Zalipie preserves a tradition of painting colourful flowers on houses and household objects.",
+				"The nineteenth-century synagogue in Dąbrowa Tarnowska was designed by Abraham Goldstein."
+			],
+			"it": [
+				"Il distretto prende il nome da Dąbrowa Tarnowska, la sua sede amministrativa.",
+				"Zalipie conserva la tradizione di dipingere fiori colorati sulle case e sugli oggetti domestici.",
+				"La sinagoga ottocentesca di Dąbrowa Tarnowska fu progettata da Abraham Goldstein."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Dąbrowa Tarnowska benannt.",
+				"Zalipie bewahrt die Tradition, Häuser und Haushaltsgegenstände mit bunten Blumen zu bemalen.",
+				"Die Synagoge aus dem 19. Jahrhundert in Dąbrowa Tarnowska wurde von Abraham Goldstein entworfen."
+			]
+		}
 	},
 	"powiat-proszowicki": {
 		"kind": "region",
@@ -458,7 +968,24 @@
 			"powiat tarnowski"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Proszowice, its administrative seat.",
+				"The former Premonstratensian abbey at Hebdów has medieval origins and later Baroque buildings.",
+				"St Adalbert’s Church in Kościelec preserves Romanesque arcades from its thirteenth-century construction."
+			],
+			"it": [
+				"Il distretto prende il nome da Proszowice, la sua sede amministrativa.",
+				"L’antica abbazia premostratense di Hebdów ha origini medievali ed edifici successivi in stile barocco.",
+				"La chiesa di Sant’Adalberto a Kościelec conserva arcate romaniche della costruzione duecentesca."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Proszowice benannt.",
+				"Die ehemalige Prämonstratenserabtei Hebdów hat mittelalterliche Ursprünge und spätere Barockbauten.",
+				"Die Adalbertkirche in Kościelec bewahrt romanische Arkaden aus ihrer Bauzeit im 13. Jahrhundert."
+			]
+		}
 	},
 	"katowice": {
 		"kind": "region",
@@ -502,7 +1029,24 @@
 			"Sosnowiec"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Mysłowice was historically known in German as Myslowitz.",
+				"The Central Museum of Firefighting displays historic fire engines and horse-drawn pumps.",
+				"The Mysłowice City Museum grew from the city-history department of the firefighting museum in 2006."
+			],
+			"it": [
+				"Mysłowice era storicamente conosciuta in tedesco come Myslowitz.",
+				"Il Museo Centrale dei Vigili del Fuoco espone autopompe storiche e pompe trainate da cavalli.",
+				"Il Museo Civico di Mysłowice nacque nel 2006 dal dipartimento di storia cittadina del museo dei vigili del fuoco."
+			],
+			"de": [
+				"Mysłowice war historisch unter dem deutschen Namen Myslowitz bekannt.",
+				"Das Zentrale Feuerwehrmuseum zeigt historische Löschfahrzeuge und von Pferden gezogene Pumpen.",
+				"Das Stadtmuseum Mysłowice ging 2006 aus der stadtgeschichtlichen Abteilung des Feuerwehrmuseums hervor."
+			]
+		}
 	},
 	"jaworzno": {
 		"kind": "region",
@@ -516,7 +1060,24 @@
 			"Sosnowiec"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Medieval records used the Latinized name Iavorno for Jaworzno.",
+				"GEOsfera occupies a former Triassic limestone quarry where fossils of marine animals were exposed.",
+				"The Jaworzno City Museum began its collection with old mining maps and plans."
+			],
+			"it": [
+				"I documenti medievali usavano il nome latinizzato Iavorno per Jaworzno.",
+				"GEOsfera occupa un’antica cava di calcare triassico in cui furono rinvenuti fossili di animali marini.",
+				"Il Museo Civico di Jaworzno iniziò la propria collezione con antiche carte e piante minerarie."
+			],
+			"de": [
+				"Mittelalterliche Urkunden verwendeten für Jaworzno den latinisierten Namen Iavorno.",
+				"GEOsfera liegt in einem ehemaligen Trias-Kalksteinbruch, in dem Fossilien von Meerestieren freigelegt wurden.",
+				"Die Sammlung des Stadtmuseums Jaworzno begann mit alten Bergbaukarten und Plänen."
+			]
+		}
 	},
 	"powiat-miko-owski": {
 		"kind": "region",
@@ -530,7 +1091,24 @@
 			"Żory"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Mikołów, its administrative seat.",
+				"The Silesian Botanical Garden in Mikołów preserves old varieties of fruit trees.",
+				"The Hegenscheidt family gave Ornontowice Palace its present form through rebuilding in the late nineteenth century."
+			],
+			"it": [
+				"Il distretto prende il nome da Mikołów, la sua sede amministrativa.",
+				"L’Orto Botanico della Slesia a Mikołów conserva antiche varietà di alberi da frutto.",
+				"La famiglia Hegenscheidt diede al palazzo di Ornontowice la forma attuale con i lavori di fine Ottocento."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Mikołów benannt.",
+				"Der Schlesische Botanische Garten in Mikołów bewahrt alte Obstbaumsorten.",
+				"Die Familie Hegenscheidt gab dem Schloss Ornontowice durch Umbauten im späten 19. Jahrhundert seine heutige Gestalt."
+			]
+		}
 	},
 	"powiat-g-ubczycki": {
 		"kind": "region",
@@ -540,7 +1118,24 @@
 			"powiat raciborski"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Głubczyce, its administrative seat.",
+				"The wooden cemetery church of St Joseph in Baborów dates from 1700–1702.",
+				"Głubczyce Town Hall reopened in 2008 after reconstruction following wartime destruction."
+			],
+			"it": [
+				"Il distretto prende il nome da Głubczyce, la sua sede amministrativa.",
+				"La chiesa cimiteriale lignea di San Giuseppe a Baborów risale al 1700–1702.",
+				"Il municipio di Głubczyce riaprì nel 2008 dopo la ricostruzione seguita alle distruzioni belliche."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Głubczyce benannt.",
+				"Die hölzerne Friedhofskirche St. Josef in Baborów stammt aus den Jahren 1700–1702.",
+				"Das Rathaus Głubczyce wurde nach dem Wiederaufbau infolge der Kriegszerstörungen 2008 wiedereröffnet."
+			]
+		}
 	},
 	"tychy": {
 		"kind": "region",
@@ -551,7 +1146,24 @@
 			"powiat pszczyński"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Tychy was historically known in German as Tichau.",
+				"The ducal brewery in Tychy traces its history to 1629.",
+				"A government decision in 1950 launched the construction of the planned city of Nowe Tychy."
+			],
+			"it": [
+				"Tychy era storicamente conosciuta in tedesco come Tichau.",
+				"La storia del birrificio ducale di Tychy risale al 1629.",
+				"Una decisione governativa del 1950 avviò la costruzione della città pianificata di Nowe Tychy."
+			],
+			"de": [
+				"Tychy war historisch unter dem deutschen Namen Tichau bekannt.",
+				"Die Geschichte der herzoglichen Brauerei in Tychy reicht bis 1629 zurück.",
+				"Ein Regierungsbeschluss von 1950 leitete den Bau der Planstadt Nowe Tychy ein."
+			]
+		}
 	},
 	"powiat-chrzanowski": {
 		"kind": "region",
@@ -563,7 +1175,24 @@
 			"powiat wadowicki"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Chrzanów, its administrative seat.",
+				"The open-air museum at Wygiełzów preserves the traditional buildings of western Krakowiak communities.",
+				"Lipowiec Castle survives as a medieval ruin above Wygiełzów."
+			],
+			"it": [
+				"Il distretto prende il nome da Chrzanów, la sua sede amministrativa.",
+				"Il museo all’aperto di Wygiełzów conserva gli edifici tradizionali delle comunità dei Cracoviani occidentali.",
+				"Il castello di Lipowiec sopravvive come rovina medievale sopra Wygiełzów."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Chrzanów benannt.",
+				"Das Freilichtmuseum Wygiełzów bewahrt die traditionellen Bauten der westlichen Krakowiaken.",
+				"Die Burg Lipowiec ist als mittelalterliche Ruine oberhalb von Wygiełzów erhalten."
+			]
+		}
 	},
 	"rybnik": {
 		"kind": "region",
@@ -575,7 +1204,24 @@
 			"Żory"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The name Rybnik comes from an old Polish word meaning a fishpond.",
+				"St Anthony’s Basilica was built in the Gothic Revival style between 1903 and 1906.",
+				"The historic Ignacy coal mine began in 1792 under the name Hoym."
+			],
+			"it": [
+				"Il nome Rybnik deriva da un’antica parola polacca che significa stagno per l’allevamento dei pesci.",
+				"La basilica di Sant’Antonio fu costruita in stile neogotico tra il 1903 e il 1906.",
+				"La storica miniera di carbone Ignacy nacque nel 1792 con il nome Hoym."
+			],
+			"de": [
+				"Der Name Rybnik stammt von einem altpolnischen Wort für Fischteich.",
+				"Die Antoniusbasilika wurde zwischen 1903 und 1906 im neugotischen Stil errichtet.",
+				"Die historische Zeche Ignacy wurde 1792 unter dem Namen Hoym gegründet."
+			]
+		}
 	},
 	"powiat-rybnicki": {
 		"kind": "region",
@@ -589,7 +1235,24 @@
 			"Żory"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Rybnik, its administrative seat, which forms a separate city county.",
+				"Czerwionka preserves a red-brick workers’ estate built for employees of the Dębieńsko coal mine.",
+				"The wooden Holy Trinity Church was moved from Leszczyny to Palowice in 1981."
+			],
+			"it": [
+				"Il distretto prende il nome da Rybnik, la sua sede amministrativa, che costituisce un distretto urbano separato.",
+				"Czerwionka conserva un quartiere operaio in mattoni rossi costruito per i dipendenti della miniera di carbone Dębieńsko.",
+				"La chiesa lignea della Santissima Trinità fu trasferita da Leszczyny a Palowice nel 1981."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Rybnik benannt, der einen eigenständigen Stadtkreis bildet.",
+				"Czerwionka bewahrt eine Backsteinsiedlung, die für die Beschäftigten der Zeche Dębieńsko gebaut wurde.",
+				"Die hölzerne Dreifaltigkeitskirche wurde 1981 von Leszczyny nach Palowice versetzt."
+			]
+		}
 	},
 	"powiat-krakowski": {
 		"kind": "region",
@@ -605,7 +1268,24 @@
 			"powiat wielicki"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Kraków, its administrative seat, which forms a separate city county.",
+				"Ojców National Park protects limestone rock formations and caves in the Prądnik valley.",
+				"The Szafraniec family transformed Pieskowa Skała Castle into a Renaissance residence with an arcaded courtyard."
+			],
+			"it": [
+				"Il distretto prende il nome da Kraków, la sua sede amministrativa, che costituisce un distretto urbano separato.",
+				"Il Parco Nazionale di Ojców protegge formazioni calcaree e grotte nella valle del Prądnik.",
+				"La famiglia Szafraniec trasformò il castello di Pieskowa Skała in una residenza rinascimentale con cortile ad arcate."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Kraków benannt, der einen eigenständigen Stadtkreis bildet.",
+				"Der Nationalpark Ojców schützt Kalksteinformationen und Höhlen im Prądnik-Tal.",
+				"Die Familie Szafraniec verwandelte die Burg Pieskowa Skała in eine Renaissanceresidenz mit Arkadenhof."
+			]
+		}
 	},
 	"powiat-bierunsko-ledzinski": {
 		"kind": "region",
@@ -618,7 +1298,24 @@
 			"Tychy"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Bieruń-Lędziny County was formerly called Tychy County and adopted its current name in 2002.",
+				"Bieruń’s wooden St Valentine’s Church was first mentioned in writing in 1628.",
+				"The Baroque St Clement’s Church on Klimont Hill in Lędziny was built in 1769–1772."
+			],
+			"it": [
+				"Il distretto di Bieruń-Lędziny era anticamente chiamato distretto di Tychy e adottò il nome attuale nel 2002.",
+				"La chiesa lignea di San Valentino a Bieruń fu menzionata per la prima volta per iscritto nel 1628.",
+				"La chiesa barocca di San Clemente sul colle Klimont a Lędziny fu costruita nel 1769–1772."
+			],
+			"de": [
+				"Der Kreis Bieruń-Lędziny hieß früher Kreis Tychy und nahm 2002 seinen heutigen Namen an.",
+				"Die hölzerne Valentinskirche in Bieruń wurde 1628 erstmals schriftlich erwähnt.",
+				"Die barocke Clemenskirche auf dem Klimont-Hügel in Lędziny wurde 1769–1772 erbaut."
+			]
+		}
 	},
 	"powiat-raciborski": {
 		"kind": "region",
@@ -631,7 +1328,24 @@
 			"Rybnik"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Racibórz, its administrative seat.",
+				"Cistercian monks from Jędrzejów established their abbey at Rudy in the thirteenth century.",
+				"The Łężczok reserve protects old fishponds, tree-lined embankments and floodplain woodland."
+			],
+			"it": [
+				"Il distretto prende il nome da Racibórz, la sua sede amministrativa.",
+				"I monaci cistercensi di Jędrzejów fondarono la loro abbazia a Rudy nel XIII secolo.",
+				"La riserva di Łężczok protegge antichi stagni per l’allevamento dei pesci, argini alberati e boschi ripariali."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Racibórz benannt.",
+				"Zisterzienser aus Jędrzejów gründeten im 13. Jahrhundert ihre Abtei in Rudy.",
+				"Das Reservat Łężczok schützt alte Fischteiche, baumbestandene Dämme und Auenwald."
+			]
+		}
 	},
 	"krakow": {
 		"kind": "region",
@@ -670,7 +1384,24 @@
 			"Rybnik"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Żory was historically known in German as Sohrau.",
+				"The Fire Museum in Żory occupies a copper-clad building shaped to suggest flames.",
+				"Żory’s Fire Festival grew from the tradition of seeking protection after the great fire of 1702."
+			],
+			"it": [
+				"Żory era storicamente conosciuta in tedesco come Sohrau.",
+				"Il Museo del Fuoco di Żory occupa un edificio rivestito di rame la cui forma richiama le fiamme.",
+				"La Festa del Fuoco di Żory nacque dalla tradizione di invocare protezione dopo il grande incendio del 1702."
+			],
+			"de": [
+				"Żory war historisch unter dem deutschen Namen Sohrau bekannt.",
+				"Das Feuermuseum in Żory befindet sich in einem kupferverkleideten Gebäude, dessen Form an Flammen erinnert.",
+				"Das Feuerfest von Żory entstand aus der Tradition, nach dem großen Brand von 1702 um Schutz zu bitten."
+			]
+		}
 	},
 	"tarnow": {
 		"kind": "region",
@@ -678,7 +1409,24 @@
 			"powiat tarnowski"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Tarnów developed within the medieval village known as Tarnów Wielki.",
+				"Tarnów Town Hall retains a Renaissance attic decorated with carved masks.",
+				"The surviving bimah marks the site of Tarnów’s Old Synagogue, burned by the Nazis in 1939."
+			],
+			"it": [
+				"Tarnów si sviluppò nel villaggio medievale noto come Tarnów Wielki.",
+				"Il municipio di Tarnów conserva un attico rinascimentale decorato con mascheroni scolpiti.",
+				"La bimah superstite segna il luogo dell’antica sinagoga di Tarnów, incendiata dai nazisti nel 1939."
+			],
+			"de": [
+				"Tarnów entstand im mittelalterlichen Dorf Tarnów Wielki.",
+				"Das Rathaus von Tarnów bewahrt eine Renaissanceattika mit steinernen Masken.",
+				"Die erhaltene Bima erinnert an den Standort der Alten Synagoge von Tarnów, die 1939 von den Nationalsozialisten niedergebrannt wurde."
+			]
+		}
 	},
 	"powiat-pszczynski": {
 		"kind": "region",
@@ -693,7 +1441,24 @@
 			"Żory"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Pszczyna, its administrative seat.",
+				"Pszczyna Castle preserves much of its original furnishings from around 1900.",
+				"The demonstration bison enclosure occupies part of Pszczyna’s historic park."
+			],
+			"it": [
+				"Il distretto prende il nome da Pszczyna, la sua sede amministrativa.",
+				"Il castello di Pszczyna conserva gran parte degli arredi originali risalenti al 1900 circa.",
+				"Il recinto dimostrativo dei bisonti occupa parte del parco storico di Pszczyna."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Pszczyna benannt.",
+				"Das Schloss Pszczyna bewahrt einen großen Teil seiner Originalausstattung aus der Zeit um 1900.",
+				"Das Schaureservat für Wisente liegt in einem Teil des historischen Parks von Pszczyna."
+			]
+		}
 	},
 	"powiat-wodzis-awski": {
 		"kind": "region",
@@ -704,7 +1469,24 @@
 			"Rybnik"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The county takes its name from Wodzisław Śląski, its administrative seat.",
+				"The palace complex at Gorzyce includes a main palace and a hunting palace set in an English-style landscape park.",
+				"The wooden All Saints’ Church in Łaziska dates from the sixteenth century."
+			],
+			"it": [
+				"Il distretto prende il nome da Wodzisław Śląski, la sua sede amministrativa.",
+				"Il complesso di Gorzyce comprende un palazzo principale e un palazzo di caccia in un parco paesaggistico all’inglese.",
+				"La chiesa lignea di Ognissanti a Łaziska risale al XVI secolo."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Wodzisław Śląski benannt.",
+				"Der Schlosskomplex Gorzyce umfasst ein Hauptschloss und ein Jagdschloss in einem englischen Landschaftspark.",
+				"Die hölzerne Allerheiligenkirche in Łaziska stammt aus dem 16. Jahrhundert."
+			]
+		}
 	},
 	"powiat-oswiecimski": {
 		"kind": "region",
@@ -717,7 +1499,24 @@
 			"powiat wadowicki"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Oświęcim, its administrative seat.",
+				"The Auschwitz-Birkenau Memorial preserves the former Nazi German concentration and extermination camp sites in Oświęcim and Brzezinka.",
+				"Zator belongs to the Carp Valley, a landscape shaped by fishponds and a long carp-farming tradition."
+			],
+			"it": [
+				"Il distretto prende il nome da Oświęcim, la sua sede amministrativa.",
+				"Il Memoriale di Auschwitz-Birkenau conserva i siti dell’antico campo di concentramento e sterminio nazista tedesco a Oświęcim e Brzezinka.",
+				"Zator appartiene alla Valle della Carpa, un paesaggio segnato dagli stagni e da una lunga tradizione di allevamento delle carpe."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Oświęcim benannt.",
+				"Die Gedenkstätte Auschwitz-Birkenau bewahrt die ehemaligen nationalsozialistischen deutschen Konzentrations- und Vernichtungslagerstätten in Oświęcim und Brzezinka.",
+				"Zator gehört zum Karpfental, dessen Landschaft durch Fischteiche und eine lange Tradition der Karpfenzucht geprägt ist."
+			]
+		}
 	},
 	"powiat-tarnowski": {
 		"kind": "region",
@@ -731,7 +1530,24 @@
 			"Tarnów"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Tarnów, its administrative seat, which forms a separate city county.",
+				"The Skamieniałe Miasto reserve in Ciężkowice protects sandstone formations sculpted by erosion.",
+				"Ignacy Jan Paderewski owned the manor at Kąśna Dolna from 1897 to 1903."
+			],
+			"it": [
+				"Il distretto prende il nome da Tarnów, la sua sede amministrativa, che costituisce un distretto urbano separato.",
+				"La riserva Skamieniałe Miasto a Ciężkowice protegge formazioni di arenaria modellate dall’erosione.",
+				"Ignacy Jan Paderewski possedette la residenza di Kąśna Dolna dal 1897 al 1903."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Tarnów benannt, der einen eigenständigen Stadtkreis bildet.",
+				"Das Reservat Skamieniałe Miasto in Ciężkowice schützt durch Erosion geformte Sandsteinfelsen.",
+				"Ignacy Jan Paderewski besaß das Herrenhaus Kąśna Dolna von 1897 bis 1903."
+			]
+		}
 	},
 	"powiat-wielicki": {
 		"kind": "region",
@@ -742,7 +1558,24 @@
 			"powiat myślenicki"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Wieliczka, its administrative seat.",
+				"Rock-salt mining at Wieliczka began in the thirteenth century.",
+				"Wieliczka’s medieval Saltworks Castle administered the royal salt-mining enterprise."
+			],
+			"it": [
+				"Il distretto prende il nome da Wieliczka, la sua sede amministrativa.",
+				"L’estrazione del salgemma a Wieliczka iniziò nel XIII secolo.",
+				"Il medievale Castello delle Saline di Wieliczka amministrava l’impresa mineraria reale del sale."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Wieliczka benannt.",
+				"Der Steinsalzabbau in Wieliczka begann im 13. Jahrhundert.",
+				"Das mittelalterliche Salzgrafenschloss in Wieliczka verwaltete das königliche Salzbergwerkunternehmen."
+			]
+		}
 	},
 	"powiat-brzeski-ma-opolskie": {
 		"kind": "region",
@@ -754,7 +1587,24 @@
 			"powiat tarnowski"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Brzesko, its administrative seat.",
+				"Jakub of Dębno built Dębno Castle in 1470–1480.",
+				"The Okocim brewery at Brzesko was founded in 1845."
+			],
+			"it": [
+				"Il distretto prende il nome da Brzesko, la sua sede amministrativa.",
+				"Jakub di Dębno costruì il castello di Dębno nel 1470–1480.",
+				"Il birrificio Okocim a Brzesko fu fondato nel 1845."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Brzesko benannt.",
+				"Jakub von Dębno ließ das Schloss Dębno 1470–1480 erbauen.",
+				"Die Okocim-Brauerei in Brzesko wurde 1845 gegründet."
+			]
+		}
 	},
 	"jastrzebie-zdroj": {
 		"kind": "region",
@@ -766,7 +1616,24 @@
 			"Żory"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Jastrzębie-Zdrój formerly bore the spa name Bad Königsdorff-Jastrzemb.",
+				"Healing brine was discovered in Jastrzębie in 1859 during a search for coal.",
+				"The Jastrzębie Agreement of 3 September 1980 secured concessions for striking miners."
+			],
+			"it": [
+				"Jastrzębie-Zdrój portò in passato il nome termale Bad Königsdorff-Jastrzemb.",
+				"La salamoia curativa fu scoperta a Jastrzębie nel 1859 durante ricerche di carbone.",
+				"L’Accordo di Jastrzębie del 3 settembre 1980 ottenne concessioni per i minatori in sciopero."
+			],
+			"de": [
+				"Jastrzębie-Zdrój trug früher den Kurortnamen Bad Königsdorff-Jastrzemb.",
+				"Heilsole wurde 1859 bei der Suche nach Kohle in Jastrzębie entdeckt.",
+				"Das Abkommen von Jastrzębie vom 3. September 1980 sicherte den streikenden Bergleuten Zugeständnisse."
+			]
+		}
 	},
 	"powiat-bochenski": {
 		"kind": "region",
@@ -779,7 +1646,24 @@
 			"powiat wielicki"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Bochnia, its administrative seat.",
+				"Bochnia’s salt mine forms part of the UNESCO-listed royal saltworks.",
+				"The Koryznówka manor near Wiśnicz preserves memorabilia of the painter Jan Matejko."
+			],
+			"it": [
+				"Il distretto prende il nome da Bochnia, la sua sede amministrativa.",
+				"La miniera di sale di Bochnia fa parte delle saline reali iscritte nella lista UNESCO.",
+				"La residenza Koryznówka presso Wiśnicz conserva ricordi del pittore Jan Matejko."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Bochnia benannt.",
+				"Das Salzbergwerk Bochnia gehört zu den königlichen Salzbergwerken auf der UNESCO-Welterbeliste.",
+				"Das Herrenhaus Koryznówka bei Wiśnicz bewahrt Erinnerungsstücke an den Maler Jan Matejko."
+			]
+		}
 	},
 	"powiat-wadowicki": {
 		"kind": "region",
@@ -793,7 +1677,24 @@
 			"powiat żywiecki"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from Wadowice, its administrative seat.",
+				"John Paul II’s family home in Wadowice is now a museum devoted to his life.",
+				"The pilgrimage landscape at Kalwaria Zebrzydowska symbolically recreates Jerusalem through chapels and paths."
+			],
+			"it": [
+				"Il distretto prende il nome da Wadowice, la sua sede amministrativa.",
+				"La casa natale di Giovanni Paolo II a Wadowice è oggi un museo dedicato alla sua vita.",
+				"Il paesaggio di pellegrinaggio di Kalwaria Zebrzydowska ricrea simbolicamente Gerusalemme attraverso cappelle e sentieri."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Wadowice benannt.",
+				"Das Elternhaus von Johannes Paul II. in Wadowice ist heute ein Museum über sein Leben.",
+				"Die Wallfahrtslandschaft Kalwaria Zebrzydowska bildet Jerusalem symbolisch mit Kapellen und Wegen nach."
+			]
+		}
 	},
 	"powiat-bielski-slaskie": {
 		"kind": "region",
@@ -806,7 +1707,24 @@
 			"powiat żywiecki"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The county takes its name from Bielsko-Biała, its administrative seat, which forms a separate city county.",
+				"The Fałatówka museum in Bystra occupies the villa where painter Julian Fałat lived and worked.",
+				"The Museum of Wilamowice Culture supports the preservation and teaching of the local Wymysorys language."
+			],
+			"it": [
+				"Il distretto prende il nome da Bielsko-Biała, la sua sede amministrativa, che costituisce un distretto urbano separato.",
+				"Il museo Fałatówka a Bystra occupa la villa in cui il pittore Julian Fałat visse e lavorò.",
+				"Il Museo della Cultura di Wilamowice sostiene la conservazione e l’insegnamento della lingua locale wymysorys."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Bielsko-Biała benannt, der einen eigenständigen Stadtkreis bildet.",
+				"Das Fałatówka-Museum in Bystra befindet sich in der Villa, in der der Maler Julian Fałat lebte und arbeitete.",
+				"Das Museum der Wilamowicer Kultur unterstützt den Erhalt und Unterricht der örtlichen Sprache Wymysorys."
+			]
+		}
 	},
 	"bielsko-bia-a": {
 		"kind": "region",
@@ -815,7 +1733,24 @@
 			"powiat cieszyński"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Bielsko-Biała combines the names of Bielsko and Biała, united into one city in 1951.",
+				"The Historical Museum occupies the Castle of the Sułkowski Princes.",
+				"The Old Factory museum occupies former textile-factory buildings of the Büttner family."
+			],
+			"it": [
+				"Bielsko-Biała unisce i nomi di Bielsko e Biała, riunite in un’unica città nel 1951.",
+				"Il Museo Storico occupa il castello dei principi Sułkowski.",
+				"Il museo Antica Fabbrica occupa gli edifici dell’antico stabilimento tessile della famiglia Büttner."
+			],
+			"de": [
+				"Bielsko-Biała verbindet die Namen der 1951 vereinigten Städte Bielsko und Biała.",
+				"Das Historische Museum befindet sich im Schloss der Fürsten Sułkowski.",
+				"Das Museum Alte Fabrik befindet sich in früheren Textilfabrikgebäuden der Familie Büttner."
+			]
+		}
 	},
 	"powiat-myslenicki": {
 		"kind": "region",
@@ -829,7 +1764,24 @@
 			"powiat wielicki"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The county takes its name from Myślenice, its administrative seat.",
+				"The Regional Museum at Dobczyce was founded in 1963 and includes the castle.",
+				"The open-air museum at Dobczyce preserves a former inn moved from Krzyszkowice."
+			],
+			"it": [
+				"Il distretto prende il nome da Myślenice, la sua sede amministrativa.",
+				"Il Museo Regionale di Dobczyce fu fondato nel 1963 e comprende il castello.",
+				"Il museo all’aperto di Dobczyce conserva un’antica locanda trasferita da Krzyszkowice."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Myślenice benannt.",
+				"Das 1963 gegründete Regionalmuseum Dobczyce umfasst auch die Burg.",
+				"Das Freilichtmuseum Dobczyce bewahrt ein ehemaliges Gasthaus, das aus Krzyszkowice versetzt wurde."
+			]
+		}
 	},
 	"powiat-cieszynski": {
 		"kind": "region",
@@ -841,7 +1793,24 @@
 			"powiat żywiecki"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The county takes its name from Cieszyn, its administrative seat.",
+				"The Romanesque rotunda in Cieszyn was built from limestone in the eleventh or twelfth century.",
+				"The Skiing Museum in Wisła preserves old skis and equipment associated with Adam Małysz."
+			],
+			"it": [
+				"Il distretto prende il nome da Cieszyn, la sua sede amministrativa.",
+				"La rotonda romanica di Cieszyn fu costruita in calcare nell’XI o XII secolo.",
+				"Il Museo dello Sci di Wisła conserva antichi sci e attrezzature legate ad Adam Małysz."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Cieszyn benannt.",
+				"Die romanische Rotunde in Cieszyn wurde im 11. oder 12. Jahrhundert aus Kalkstein erbaut.",
+				"Das Skimuseum in Wisła bewahrt alte Skier und Ausrüstung mit Bezug zu Adam Małysz."
+			]
+		}
 	},
 	"powiat-suski": {
 		"kind": "region",
@@ -852,7 +1821,24 @@
 			"powiat żywiecki"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The county takes its name from Sucha Beskidzka, its administrative seat.",
+				"Piotr Komorowski enlarged Sucha Beskidzka Castle into a Renaissance residence in 1608–1614.",
+				"Babia Góra has distinct vegetation belts, from mountain forests to dwarf pine and alpine grassland."
+			],
+			"it": [
+				"Il distretto prende il nome da Sucha Beskidzka, la sua sede amministrativa.",
+				"Piotr Komorowski ampliò il castello di Sucha Beskidzka trasformandolo in una residenza rinascimentale nel 1608–1614.",
+				"Babia Góra presenta fasce di vegetazione distinte, dalle foreste montane al pino mugo e alle praterie alpine."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Sucha Beskidzka benannt.",
+				"Piotr Komorowski erweiterte das Schloss Sucha Beskidzka 1608–1614 zu einer Renaissanceresidenz.",
+				"Babia Góra weist ausgeprägte Vegetationsstufen auf, vom Bergwald über Latschen bis zu alpinen Grasfluren."
+			]
+		}
 	},
 	"powiat-limanowski": {
 		"kind": "region",
@@ -864,7 +1850,24 @@
 			"powiat nowotarski"
 		],
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Limanowa, its administrative seat.",
+				"The Cistercian abbey at Szczyrzyc has maintained monastic life since the Middle Ages.",
+				"The Na Jędrzejkówce open-air museum in Laskowa preserves a watermill with a wooden drive mechanism."
+			],
+			"it": [
+				"Il distretto prende il nome da Limanowa, la sua sede amministrativa.",
+				"L’abbazia cistercense di Szczyrzyc mantiene la vita monastica dal Medioevo.",
+				"Il museo all’aperto Na Jędrzejkówce a Laskowa conserva un mulino ad acqua con meccanismo di trasmissione in legno."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Limanowa benannt.",
+				"Die Zisterzienserabtei Szczyrzyc bewahrt seit dem Mittelalter klösterliches Leben.",
+				"Das Freilichtmuseum Na Jędrzejkówce in Laskowa bewahrt eine Wassermühle mit hölzernem Antriebsmechanismus."
+			]
+		}
 	},
 	"powiat-jasielski": {
 		"kind": "region",
@@ -873,7 +1876,24 @@
 			"powiat tarnowski"
 		],
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Jasło, its administrative seat.",
+				"The Carpathian Troy archaeological park at Trzcinica presents Bronze Age fortifications and an early medieval stronghold.",
+				"Trzcinica preserves a historic wooden church on the region’s Wooden Architecture Route."
+			],
+			"it": [
+				"Il distretto prende il nome da Jasło, la sua sede amministrativa.",
+				"Il parco archeologico Troia dei Carpazi a Trzcinica presenta fortificazioni dell’età del bronzo e un insediamento fortificato altomedievale.",
+				"Trzcinica conserva una chiesa lignea storica sull’Itinerario dell’Architettura in Legno della regione."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Jasło benannt.",
+				"Der archäologische Park Karpathisches Troja in Trzcinica zeigt bronzezeitliche Befestigungen und einen frühmittelalterlichen Burgwall.",
+				"Trzcinica bewahrt eine historische Holzkirche an der regionalen Holzarchitekturroute."
+			]
+		}
 	},
 	"powiat-zywiecki": {
 		"kind": "region",
@@ -884,7 +1904,24 @@
 			"powiat wadowicki"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The county takes its name from Żywiec, its administrative seat.",
+				"Archduke Albrecht Habsburg founded the Żywiec brewery in 1856.",
+				"The Old Castle in Żywiec preserves a Renaissance courtyard with arcaded galleries."
+			],
+			"it": [
+				"Il distretto prende il nome da Żywiec, la sua sede amministrativa.",
+				"L’arciduca Albrecht d’Asburgo fondò il birrificio di Żywiec nel 1856.",
+				"Il Castello Vecchio di Żywiec conserva un cortile rinascimentale con gallerie ad arcate."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Żywiec benannt.",
+				"Erzherzog Albrecht von Habsburg gründete 1856 die Brauerei Żywiec.",
+				"Das Alte Schloss in Żywiec bewahrt einen Renaissancehof mit Arkadengängen."
+			]
+		}
 	},
 	"nowy-sacz": {
 		"kind": "region",
@@ -892,7 +1929,24 @@
 			"powiat nowosądecki"
 		],
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Nowy Sącz adopted the name of the older Sącz settlement, adding Nowy to distinguish the new town.",
+				"The Sądecki Ethnographic Park preserves wooden buildings of the region’s varied cultural communities.",
+				"The Galician Town museum recreates a small market square with a town hall and burghers’ houses."
+			],
+			"it": [
+				"Nowy Sącz adottò il nome dell’insediamento più antico di Sącz, aggiungendo Nowy per distinguere la città nuova.",
+				"Il Parco Etnografico di Sącz conserva edifici lignei delle diverse comunità culturali della regione.",
+				"Il museo Cittadina Galiziana ricrea una piccola piazza del mercato con municipio e case borghesi."
+			],
+			"de": [
+				"Nowy Sącz übernahm den Namen der älteren Siedlung Sącz und ergänzte Nowy zur Unterscheidung der neuen Stadt.",
+				"Der Ethnografische Park Sącz bewahrt Holzbauten der verschiedenen kulturellen Gemeinschaften der Region.",
+				"Das Museum Galizisches Städtchen rekonstruiert einen kleinen Marktplatz mit Rathaus und Bürgerhäusern."
+			]
+		}
 	},
 	"powiat-gorlicki": {
 		"kind": "region",
@@ -902,7 +1956,24 @@
 			"powiat tarnowski"
 		],
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Gorlice, its administrative seat.",
+				"The wooden church at Binarowa preserves sixteenth- and seventeenth-century wall paintings.",
+				"The timber church at Sękowa was built in 1520 and later gained broad covered galleries."
+			],
+			"it": [
+				"Il distretto prende il nome da Gorlice, la sua sede amministrativa.",
+				"La chiesa lignea di Binarowa conserva pitture murali del XVI e XVII secolo.",
+				"La chiesa lignea di Sękowa fu costruita nel 1520 e in seguito dotata di ampie gallerie coperte."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Gorlice benannt.",
+				"Die Holzkirche in Binarowa bewahrt Wandmalereien aus dem 16. und 17. Jahrhundert.",
+				"Die Holzkirche Sękowa wurde 1520 erbaut und später um breite überdachte Umgänge ergänzt."
+			]
+		}
 	},
 	"powiat-nowosadecki": {
 		"kind": "region",
@@ -915,7 +1986,24 @@
 			"powiat tarnowski"
 		],
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Nowy Sącz, its administrative seat, which forms a separate city county.",
+				"Princess Kinga founded the Poor Clares’ convent in Stary Sącz in 1280.",
+				"The Nikifor Museum in Krynica-Zdrój occupies the wooden Romanówka villa."
+			],
+			"it": [
+				"Il distretto prende il nome da Nowy Sącz, la sua sede amministrativa, che costituisce un distretto urbano separato.",
+				"La principessa Kinga fondò il convento delle clarisse a Stary Sącz nel 1280.",
+				"Il Museo Nikifor a Krynica-Zdrój occupa la villa lignea Romanówka."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Nowy Sącz benannt, der einen eigenständigen Stadtkreis bildet.",
+				"Fürstin Kinga gründete 1280 das Klarissenkloster in Stary Sącz.",
+				"Das Nikifor-Museum in Krynica-Zdrój befindet sich in der Holzvilla Romanówka."
+			]
+		}
 	},
 	"powiat-nowotarski": {
 		"kind": "region",
@@ -927,7 +2015,24 @@
 			"powiat tatrzański"
 		],
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The county takes its name from Nowy Targ, its administrative seat.",
+				"St Michael’s wooden church in Dębno preserves patterned wall paintings from the fifteenth and sixteenth centuries.",
+				"The castle complex at Niedzica includes a historic carriage collection and an eighteenth-century wooden granary."
+			],
+			"it": [
+				"Il distretto prende il nome da Nowy Targ, la sua sede amministrativa.",
+				"La chiesa lignea di San Michele a Dębno conserva pitture murali a motivi ornamentali del XV e XVI secolo.",
+				"Il complesso del castello di Niedzica comprende una collezione di carrozze storiche e un granaio ligneo settecentesco."
+			],
+			"de": [
+				"Der Kreis ist nach seinem Verwaltungssitz Nowy Targ benannt.",
+				"Die hölzerne Michaelskirche in Dębno bewahrt ornamentale Wandmalereien aus dem 15. und 16. Jahrhundert.",
+				"Der Schlosskomplex Niedzica umfasst eine historische Kutschensammlung und einen hölzernen Speicher aus dem 18. Jahrhundert."
+			]
+		}
 	},
 	"powiat-tatrzanski": {
 		"kind": "region",
@@ -935,6 +2040,23 @@
 			"powiat nowotarski"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Tatra County takes its name from the Tatra mountain range.",
+				"Villa Koliba in Zakopane was the first house built in Stanisław Witkiewicz’s Zakopane style.",
+				"Composer Karol Szymanowski lived in Zakopane’s Atma villa from 1930 to 1935."
+			],
+			"it": [
+				"Il distretto dei Tatra prende il nome dalla catena montuosa dei Tatra.",
+				"La villa Koliba a Zakopane fu la prima casa costruita nello stile di Zakopane ideato da Stanisław Witkiewicz.",
+				"Il compositore Karol Szymanowski visse nella villa Atma di Zakopane dal 1930 al 1935."
+			],
+			"de": [
+				"Der Kreis Tatra ist nach dem Tatra-Gebirge benannt.",
+				"Die Villa Koliba in Zakopane war das erste Haus im Zakopane-Stil von Stanisław Witkiewicz.",
+				"Der Komponist Karol Szymanowski lebte von 1930 bis 1935 in der Villa Atma in Zakopane."
+			]
+		}
 	}
 }

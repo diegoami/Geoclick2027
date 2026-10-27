@@ -11,7 +11,7 @@
 	// right tool for it.
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
+	import { resolve } from '$lib/appPaths';
 	import type { Snippet } from 'svelte';
 	import { t } from './i18n.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';

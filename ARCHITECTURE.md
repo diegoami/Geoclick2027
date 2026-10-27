@@ -25,6 +25,16 @@ written once.
 **Framework: Svelte** (SvelteKit for the app shell). Lighter than React,
 pairs well with a canvas/map-heavy UI.
 
+The portable HTML5 export uses the same browser core with a separate hash-router
+build (`VITE_GEOCLICK_HTML5=1`). `scripts/prepare-html5.mjs` creates disposable
+routes without changing authored pages; `appPaths.ts` preserves the physical
+`index.html` URL beneath nested hosting directories. `mapResource.ts` loads one
+metadata bundle per map, reducing the export to 743 files for 217 maps.
+`scripts/package-html5.mjs` validates the archive and records source provenance;
+`release-assets.mjs` verifies its tag, coverage and checksums before publication.
+PMTiles require HTTP byte-range support. Fonts may still use external glyph
+services, so the portable browser ZIP does not promise offline operation.
+
 ## Map rendering: MapLibre GL JS + PMTiles
 
 - **MapLibre GL JS** — open-source WebGL vector-tile renderer. Gives custom
@@ -544,3 +554,29 @@ contested areas remain land context. `audit-v1-country-facts.ts` checks the
 and tour mode all confirmed working against the live Netlify URL (not
 just a successful build). See ROADMAP.md's Iteration 3.5 for the full
 story, Cloudflare included.
+
+### Localized manual and full authored-coverage audit (v1.0 preparation)
+
+`docs/USER_MANUAL.md` is English; `docs/USER_MANUAL.de.md` and
+`docs/USER_MANUAL.it.md` are the localized editions. `app/scripts/build-manual.mjs`
+bundles all three HTML fragments and shares the existing English screenshot
+files once. Each translation discloses the image language. `/manual` follows
+`getLanguage()` and aborts superseded fetches so an older response cannot
+replace the current language. Build/content tests enforce anchors, current
+version/counts, all 22 topics, the fourteen tutorial steps and actual UI labels.
+
+`data/scripts/audit-authored-facts.ts` derives its scope from the catalogue
+index and the existing authored resolver. It deduplicates by normalized fact
+filename, target ID and city/region kind; country targets resolve through
+world.json. --maps narrows a working batch; --strict applies the requested
+sentence floor. The separate v1 expansion audit still protects its 735 targets.
+
+
+The v1.0 source adapters are in data/scripts/fetch-serbia-towns.ts (pinned
+RZS census/GeoNames inputs; read-serbia-census.py uses only Python's standard
+library), fetch-backlog-boundaries.ts (current Kartverket counties and detailed
+Danish coastline), and prepare-known-boundary-updates.ts (the approved Dutch
+merger/German split and Leipzig disambiguation). The map builders read each
+snapshot's actual provider attribution through placeSourceAttribution.ts.
+The strict authored audit rejects empty/unknown selectors instead of reporting
+a misleading 0/0 pass; its map count reflects the actual filtered coverage.

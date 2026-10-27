@@ -5,7 +5,24 @@
 		"populationRank": 10,
 		"region": "Rajshahi",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Saidpur is also written Syedpur in English accounts of the town.",
+				"Saidpur grew around a railway workshop established in 1870.",
+				"Saidpur’s Chini Mosque, also called the Glass Mosque, was established in 1883."
+			],
+			"it": [
+				"Nei resoconti in inglese il nome di Saidpur compare anche come Syedpur.",
+				"Saidpur si sviluppò intorno a un’officina ferroviaria fondata nel 1870.",
+				"La moschea Chini di Saidpur, detta anche moschea di vetro, fu fondata nel 1883."
+			],
+			"de": [
+				"In englischsprachigen Darstellungen wird Saidpur auch Syedpur geschrieben.",
+				"Saidpur wuchs um eine 1870 gegründete Eisenbahnwerkstatt.",
+				"Die Chini-Moschee von Saidpur, auch Gläserne Moschee genannt, wurde 1883 gegründet."
+			]
+		}
 	},
 	"rangpur": {
 		"kind": "city",
@@ -13,14 +30,48 @@
 		"populationRank": 7,
 		"region": "Rajshahi",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Rangpur appears under the historical English spelling Rungpore on an 1830 map preserved by the British Library.",
+				"Rangpur’s Carmichael College was established in 1916 and named after the governor of Bengal.",
+				"Tajhat Palace in Rangpur was built for Maharaja Kumar Gopal Lal Roy in the early twentieth century and later became a museum."
+			],
+			"it": [
+				"Rangpur compare con la grafia inglese storica Rungpore su una carta del 1830 conservata dalla British Library.",
+				"Il Carmichael College di Rangpur fu fondato nel 1916 e intitolato al governatore del Bengala.",
+				"Il palazzo Tajhat di Rangpur fu costruito per il maharaja Kumar Gopal Lal Roy all’inizio del Novecento e in seguito divenne un museo."
+			],
+			"de": [
+				"Rangpur erscheint auf einer in der British Library aufbewahrten Karte von 1830 unter der historischen englischen Schreibweise Rungpore.",
+				"Das Carmichael College in Rangpur wurde 1916 gegründet und nach dem Gouverneur von Bengalen benannt.",
+				"Der Tajhat-Palast in Rangpur wurde Anfang des 20. Jahrhunderts für Maharadscha Kumar Gopal Lal Roy errichtet und später zum Museum."
+			]
+		}
 	},
 	"sylhet": {
 		"kind": "city",
 		"population": 237000,
 		"populationRank": 9,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Sylhet was historically known as Srihatta, a name whose origin has several competing explanations.",
+				"The shrine of Shah Jalal in Sylhet commemorates the Sufi saint traditionally associated with the arrival of 360 companions in 1303.",
+				"Sylhet’s Keane Bridge opened in 1936 and was named after Assam governor Michael Keane."
+			],
+			"it": [
+				"Sylhet era storicamente conosciuta come Srihatta, un nome sulla cui origine esistono diverse spiegazioni.",
+				"Il santuario di Shah Jalal a Sylhet ricorda il santo sufi tradizionalmente associato all’arrivo di 360 compagni nel 1303.",
+				"Il ponte Keane di Sylhet fu inaugurato nel 1936 e intitolato al governatore dell’Assam Michael Keane."
+			],
+			"de": [
+				"Sylhet war historisch als Srihatta bekannt, dessen Namensursprung unterschiedlich erklärt wird.",
+				"Der Schrein von Shah Jalal in Sylhet erinnert an den Sufi-Heiligen, dessen Ankunft mit 360 Gefährten im Jahr 1303 überliefert wird.",
+				"Die Keane-Brücke in Sylhet wurde 1936 eröffnet und nach Assams Gouverneur Michael Keane benannt."
+			]
+		}
 	},
 	"jamalpur": {
 		"kind": "city",
@@ -28,7 +79,24 @@
 		"populationRank": 14,
 		"region": "Dhaka",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Jamalpur’s earlier name was Sinhajani, according to the district administration’s historical account.",
+				"The shrine of the Sufi saint Shah Jamal stands in Jamalpur town and preserves the memory behind the district’s name.",
+				"Jamalpur’s Doyamoyee Temple near Zero Point attracts pilgrims during its annual Ashtami celebrations."
+			],
+			"it": [
+				"Secondo la ricostruzione storica dell’amministrazione distrettuale, Jamalpur si chiamava in precedenza Sinhajani.",
+				"Il santuario del santo sufi Shah Jamal sorge nella città di Jamalpur e conserva la memoria della figura che diede il nome al distretto.",
+				"Il tempio Doyamoyee di Jamalpur, vicino allo Zero Point, richiama pellegrini durante le celebrazioni annuali di Ashtami."
+			],
+			"de": [
+				"Laut der historischen Darstellung der Bezirksverwaltung hieß Jamalpur früher Sinhajani.",
+				"Der Schrein des Sufi-Heiligen Shah Jamal steht in der Stadt Jamalpur und erinnert an den Namensgeber des Bezirks.",
+				"Der Doyamoyee-Tempel nahe dem Zero Point in Jamalpur zieht während der jährlichen Ashtami-Feierlichkeiten Pilger an."
+			]
+		}
 	},
 	"mymensingh": {
 		"kind": "city",
@@ -36,7 +104,24 @@
 		"populationRank": 6,
 		"region": "Dhaka",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Mymensingh town was formerly known as Nasirabad.",
+				"Mymensingh’s Shashi Lodge was rebuilt in 1905–1911 after the original palace was destroyed by the earthquake of 1897.",
+				"The Zainul Abedin art gallery in Mymensingh opened to the public on 15 April 1975."
+			],
+			"it": [
+				"La città di Mymensingh era anticamente conosciuta come Nasirabad.",
+				"Lo Shashi Lodge di Mymensingh fu ricostruito nel 1905–1911 dopo che il palazzo originario era stato distrutto dal terremoto del 1897.",
+				"La galleria d’arte Zainul Abedin di Mymensingh aprì al pubblico il 15 aprile 1975."
+			],
+			"de": [
+				"Die Stadt Mymensingh war früher als Nasirabad bekannt.",
+				"Die Shashi Lodge in Mymensingh wurde 1905–1911 wiederaufgebaut, nachdem der ursprüngliche Palast beim Erdbeben von 1897 zerstört worden war.",
+				"Die Zainul-Abedin-Kunstgalerie in Mymensingh wurde am 15. April 1975 für das Publikum eröffnet."
+			]
+		}
 	},
 	"nawabganj": {
 		"kind": "city",
@@ -44,7 +129,24 @@
 		"populationRank": 15,
 		"region": "Rajshahi",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Chapai Nawabganj was recorded simply as Nawabganj in the 1911 Encyclopaedia Britannica.",
+				"A 1911 encyclopaedia described Nawabganj as a centre of river trade on the Mahananda.",
+				"Harimohan Government High School in Chapai Nawabganj was established in 1895."
+			],
+			"it": [
+				"Chapai Nawabganj era registrata semplicemente come Nawabganj nell’Encyclopaedia Britannica del 1911.",
+				"Un’enciclopedia del 1911 descriveva Nawabganj come un centro di commercio fluviale sul Mahananda.",
+				"La scuola superiore statale Harimohan di Chapai Nawabganj fu fondata nel 1895."
+			],
+			"de": [
+				"Chapai Nawabganj wurde in der Encyclopaedia Britannica von 1911 schlicht als Nawabganj verzeichnet.",
+				"Eine Enzyklopädie von 1911 beschrieb Nawabganj als Zentrum des Flusshandels am Mahananda.",
+				"Die staatliche Harimohan-Oberschule in Chapai Nawabganj wurde 1895 gegründet."
+			]
+		}
 	},
 	"rajshahi": {
 		"kind": "city",
@@ -52,7 +154,24 @@
 		"populationRank": 4,
 		"population1950": 39000,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Rajshahi town was historically known as Rampur Boalia.",
+				"Rajshahi’s Varendra Research Museum was founded in 1910 to collect and study the region’s archaeological heritage.",
+				"Rajshahi’s silk-weaving tradition includes both handloom and machine production of cloth used for saris and other textiles."
+			],
+			"it": [
+				"La città di Rajshahi era storicamente conosciuta come Rampur Boalia.",
+				"Il Museo di ricerca Varendra di Rajshahi fu fondato nel 1910 per raccogliere e studiare il patrimonio archeologico della regione.",
+				"La tradizione della tessitura della seta di Rajshahi comprende la produzione a mano e a macchina di stoffe per sari e altri tessuti."
+			],
+			"de": [
+				"Die Stadt Rajshahi war historisch als Rampur Boalia bekannt.",
+				"Das Varendra-Forschungsmuseum in Rajshahi wurde 1910 zur Sammlung und Erforschung des archäologischen Erbes der Region gegründet.",
+				"Rajshahis Tradition der Seidenweberei umfasst handgewebte und maschinell gefertigte Stoffe für Saris und andere Textilien."
+			]
+		}
 	},
 	"tangail": {
 		"kind": "city",
@@ -60,7 +179,24 @@
 		"populationRank": 13,
 		"region": "Dhaka",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Tangail’s name became widely established when the subdivision headquarters moved there from Atia in 1870; its etymology remains disputed.",
+				"Political leader Maulana Abdul Hamid Khan Bhashani is buried at Santosh in Tangail.",
+				"The Bhashani Memorial Museum at Santosh in Tangail was established in 1986 to preserve the political leader’s legacy."
+			],
+			"it": [
+				"Il nome Tangail si affermò quando la sede della suddivisione vi fu trasferita da Atia nel 1870; la sua etimologia rimane discussa.",
+				"Il leader politico Maulana Abdul Hamid Khan Bhashani è sepolto a Santosh, a Tangail.",
+				"Il Museo memoriale Bhashani a Santosh, a Tangail, fu istituito nel 1986 per conservare l’eredità del leader politico."
+			],
+			"de": [
+				"Der Name Tangail setzte sich durch, als der Verwaltungssitz der Unterabteilung 1870 von Atia dorthin verlegt wurde; seine Herkunft ist umstritten.",
+				"Der Politiker Maulana Abdul Hamid Khan Bhashani ist in Santosh in Tangail begraben.",
+				"Das Bhashani-Gedenkmuseum in Santosh in Tangail wurde 1986 zur Bewahrung des Vermächtnisses des Politikers eingerichtet."
+			]
+		}
 	},
 	"pabna": {
 		"kind": "city",
@@ -68,7 +204,24 @@
 		"populationRank": 16,
 		"region": "Rajshahi",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Pabna also appears under the historical English spelling Pubna.",
+				"Gopal Chandra Lahiri founded the institution now called Government Edward College in Pabna in 1898.",
+				"Actress Suchitra Sen spent her childhood in a family house in Pabna’s Gopalpur neighbourhood."
+			],
+			"it": [
+				"Pabna compare anche con la grafia inglese storica Pubna.",
+				"Nel 1898 Gopal Chandra Lahiri fondò a Pabna l’istituto oggi chiamato Government Edward College.",
+				"L’attrice Suchitra Sen trascorse l’infanzia in una casa di famiglia nel quartiere Gopalpur di Pabna."
+			],
+			"de": [
+				"Pabna erscheint auch unter der historischen englischen Schreibweise Pubna.",
+				"Gopal Chandra Lahiri gründete 1898 in Pabna die heute als Government Edward College bekannte Einrichtung.",
+				"Die Schauspielerin Suchitra Sen verbrachte ihre Kindheit im Haus ihrer Familie im Viertel Gopalpur von Pabna."
+			]
+		}
 	},
 	"dhaka": {
 		"kind": "city",
@@ -102,7 +255,24 @@
 		"populationRank": 11,
 		"region": "Dhaka",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Narayanganj’s name is traditionally linked to markets endowed for the worship of the Hindu god Narayan.",
+				"Steamer services from Narayanganj began in 1862, linking its trading port to wider transport networks.",
+				"Narayanganj’s Victoria Hospital was built in 1882 with help from Harakanta Banerjee."
+			],
+			"it": [
+				"Il nome Narayanganj è tradizionalmente legato a mercati destinati a finanziare il culto del dio indù Narayan.",
+				"I servizi di battelli a vapore da Narayanganj iniziarono nel 1862, collegando il porto commerciale a reti di trasporto più ampie.",
+				"Il Victoria Hospital di Narayanganj fu costruito nel 1882 con l’aiuto di Harakanta Banerjee."
+			],
+			"de": [
+				"Der Name Narayanganj wird traditionell mit Märkten verbunden, deren Erträge der Verehrung des Hindu-Gottes Narayan gewidmet wurden.",
+				"1862 begannen Dampfschiffverbindungen von Narayanganj, die den Handelshafen an weitere Verkehrsnetze anschlossen.",
+				"Das Victoria Hospital in Narayanganj wurde 1882 mit Unterstützung von Harakanta Banerjee erbaut."
+			]
+		}
 	},
 	"comilla": {
 		"kind": "city",
@@ -110,7 +280,24 @@
 		"populationRank": 5,
 		"region": "Chittagong",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Comilla’s official English spelling was changed to Cumilla in 2018.",
+				"Comilla’s Dharmasagar reservoir was excavated by a ruler of Tripura in the fifteenth century.",
+				"Comilla Victoria College was founded by Ananda Chandra Roy in 1899 and named after Queen Victoria."
+			],
+			"it": [
+				"Nel 2018 la grafia inglese ufficiale di Comilla fu cambiata in Cumilla.",
+				"Il bacino Dharmasagar di Comilla fu scavato da un sovrano di Tripura nel Quattrocento.",
+				"Il Victoria College di Comilla fu fondato da Ananda Chandra Roy nel 1899 e intitolato alla regina Vittoria."
+			],
+			"de": [
+				"Die amtliche englische Schreibweise von Comilla wurde 2018 in Cumilla geändert.",
+				"Das Dharmasagar-Wasserbecken in Comilla wurde im 15. Jahrhundert von einem Herrscher von Tripura angelegt.",
+				"Das Victoria College in Comilla wurde 1899 von Ananda Chandra Roy gegründet und nach Königin Victoria benannt."
+			]
+		}
 	},
 	"jashore": {
 		"kind": "city",
@@ -118,7 +305,24 @@
 		"populationRank": 8,
 		"region": "Khulna",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Jashore was officially written Jessore in English before a spelling change in 2018.",
+				"Jashore’s Institute Public Library developed from a nineteenth-century library and became a centre of the town’s cultural life.",
+				"Jashore’s Christ Church opened in 1843, financed by subscriptions and built partly with prison labour."
+			],
+			"it": [
+				"Prima del cambiamento di grafia del 2018, Jashore si scriveva ufficialmente Jessore in inglese.",
+				"La biblioteca pubblica dell’Istituto di Jashore nacque da una biblioteca ottocentesca e divenne un centro della vita culturale cittadina.",
+				"La Christ Church di Jashore aprì nel 1843, finanziata da sottoscrizioni e costruita in parte con il lavoro dei detenuti."
+			],
+			"de": [
+				"Vor einer Änderung der Schreibweise im Jahr 2018 wurde Jashore auf Englisch amtlich Jessore geschrieben.",
+				"Die öffentliche Bibliothek des Jashore Institute ging aus einer Bibliothek des 19. Jahrhunderts hervor und wurde zu einem Zentrum des städtischen Kulturlebens.",
+				"Die Christ Church in Jashore wurde 1843 eröffnet, durch Spenden finanziert und teilweise mit Gefängnisarbeit erbaut."
+			]
+		}
 	},
 	"khulna": {
 		"kind": "city",
@@ -126,7 +330,24 @@
 		"populationRank": 3,
 		"population1950": 41000,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Khulna appears in older British-period records under spellings such as Culnea.",
+				"Brajalal College at Daulatpur in Khulna was founded in 1902 as the Hindu Academy.",
+				"Khulna’s Divisional Museum presents archaeological collections in an octagonal building near Shibbari intersection."
+			],
+			"it": [
+				"Nei documenti più antichi del periodo britannico Khulna compare con grafie come Culnea.",
+				"Il Brajalal College di Daulatpur, a Khulna, fu fondato nel 1902 come Hindu Academy.",
+				"Il Museo divisionale di Khulna presenta collezioni archeologiche in un edificio ottagonale vicino all’incrocio Shibbari."
+			],
+			"de": [
+				"In älteren Unterlagen aus der britischen Zeit erscheint Khulna unter Schreibweisen wie Culnea.",
+				"Das Brajalal College in Daulatpur in Khulna wurde 1902 als Hindu Academy gegründet.",
+				"Das Divisionsmuseum in Khulna zeigt archäologische Sammlungen in einem achteckigen Gebäude nahe der Shibbari-Kreuzung."
+			]
+		}
 	},
 	"barishal": {
 		"kind": "city",
@@ -134,7 +355,24 @@
 		"populationRank": 12,
 		"region": "Barisal",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Barishal was officially written Barisal in English before the spelling was revised in 2018.",
+				"The Bengali poet Jibanananda Das was born in Barishal in 1899.",
+				"Ashwini Kumar Dutta founded Brajamohan College in Barishal in 1889 and named it after his father."
+			],
+			"it": [
+				"Prima della revisione del 2018, Barishal si scriveva ufficialmente Barisal in inglese.",
+				"Il poeta bengalese Jibanananda Das nacque a Barishal nel 1899.",
+				"Nel 1889 Ashwini Kumar Dutta fondò a Barishal il Brajamohan College, intitolandolo al padre."
+			],
+			"de": [
+				"Vor der Überarbeitung der Schreibweise im Jahr 2018 wurde Barishal auf Englisch amtlich Barisal geschrieben.",
+				"Der bengalische Dichter Jibanananda Das wurde 1899 in Barishal geboren.",
+				"Ashwini Kumar Dutta gründete 1889 das Brajamohan College in Barishal und benannte es nach seinem Vater."
+			]
+		}
 	},
 	"chattogram": {
 		"kind": "city",
@@ -143,6 +381,23 @@
 		"population1950": 289000,
 		"region": "Chittagong",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Chattogram was officially written Chittagong in English before a spelling change in 2018.",
+				"Chattogram’s Central Railway Building was completed in 1872.",
+				"Chattogram’s Ethnological Museum was established in 1965 and opened to the public in 1974 to present the heritage of the country’s ethnic communities."
+			],
+			"it": [
+				"Prima del cambiamento di grafia del 2018, Chattogram si scriveva ufficialmente Chittagong in inglese.",
+				"L’edificio ferroviario centrale di Chattogram fu completato nel 1872.",
+				"Il Museo etnologico di Chattogram fu istituito nel 1965 e aperto al pubblico nel 1974 per presentare il patrimonio delle comunità etniche del paese."
+			],
+			"de": [
+				"Vor einer Änderung der Schreibweise im Jahr 2018 wurde Chattogram auf Englisch amtlich Chittagong geschrieben.",
+				"Das zentrale Eisenbahnverwaltungsgebäude in Chattogram wurde 1872 fertiggestellt.",
+				"Das Ethnologische Museum in Chattogram wurde 1965 gegründet und 1974 eröffnet, um das Erbe der ethnischen Gemeinschaften des Landes zu zeigen."
+			]
+		}
 	}
 }

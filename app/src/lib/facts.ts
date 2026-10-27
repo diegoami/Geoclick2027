@@ -12,7 +12,7 @@
 // fact that could not be computed is simply absent from the data, so
 // nothing here guesses.
 
-import { asset } from '$app/paths';
+import { fetchMapResource } from './mapResource';
 import { getLanguage, t, type Language, type TranslationKey } from './i18n.svelte';
 
 export type CompassPosition =
@@ -67,7 +67,7 @@ export type Facts = Record<string, Fact>;
  */
 export async function fetchFacts(mapId: string): Promise<Facts> {
 	try {
-		const res = await fetch(asset(`/maps/${mapId}/facts.json`));
+		const res = await fetchMapResource(mapId, 'facts.json');
 		if (!res.ok) return {};
 		return (await res.json()) as Facts;
 	} catch {

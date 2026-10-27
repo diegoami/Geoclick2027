@@ -2,7 +2,7 @@
 	// One map as a card: its name, how well it is known and the last round,
 	// with its favourite star. Favourites (FT-16) and Recent (FT-15) list
 	// them, on My maps since the start screen's toolbar (FT-82).
-	import { resolve } from '$app/paths';
+	import { resolve } from '$lib/appPaths';
 	import { handSize } from './difficulty';
 	import FavouriteStar from './FavouriteStar.svelte';
 	import type { Mastery } from './homeProgress';

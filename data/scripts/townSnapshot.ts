@@ -40,3 +40,29 @@ export function newestTownRows(
 	}
 	return [...newest.values()].map((entry) => entry.row);
 }
+
+/** A replacement point never inherits the unrelated source point's accuracy. */
+export function townCoordinate(
+	row: TownBinding,
+	override?: [number, number]
+): {
+	coordinates: [number, number];
+	precision: number;
+} {
+	const match = /^Point\((-?[\d.]+) (-?[\d.]+)\)$/.exec(row.coord?.value ?? '');
+	if (!match) throw new Error('Missing or invalid coordinate for ' + row.item?.value);
+	const coordinates: [number, number] = override
+		? [...override]
+		: [Number(match[1]), Number(match[2])];
+	if (
+		!coordinates.every(Number.isFinite) ||
+		Math.abs(coordinates[0]) > 180 ||
+		Math.abs(coordinates[1]) > 90
+	)
+		throw new Error('Coordinate outside Earth bounds for ' + row.item?.value);
+	const rawPrecision = Number(row.precision?.value ?? 0);
+	return {
+		coordinates,
+		precision: !override && Number.isFinite(rawPrecision) && rawPrecision > 0 ? rawPrecision : 0
+	};
+}

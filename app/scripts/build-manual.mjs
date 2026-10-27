@@ -24,12 +24,23 @@ const args = Object.fromEntries(
 		.filter((a) => a.startsWith('--'))
 		.map((a) => a.slice(2).split('='))
 );
-const src = resolve(args.src ?? join(repoDir, 'docs', 'USER_MANUAL.md'));
+const languages = args.src ? [args.lang ?? 'en'] : ['en', 'de', 'it'];
+if (languages.some((language) => !['en', 'de', 'it'].includes(language)))
+	throw new Error('Unsupported manual language');
+const manuals = languages.map((language) => ({
+	language,
+	src: resolve(
+		args.src ?? join(repoDir, 'docs', `USER_MANUAL${language === 'en' ? '' : '.' + language}.md`)
+	)
+}));
+for (const manual of manuals) {
+	if (!existsSync(manual.src)) throw new Error(`Missing ${manual.language} manual: ${manual.src}`);
+}
 const outDir = resolve(args.out ?? join(here, '..', 'static', 'manual'));
 const imagesDir = resolve(args.images ?? join(repoDir, 'docs'));
 
 const GITHUB_BLOB = 'https://github.com/diegoami/Geoclick2027/blob/main/';
-const srcRepoPath = posix.relative(repoDir.split('\\').join('/'), src.split('\\').join('/'));
+let srcRepoPath = '';
 
 /** GitHub's heading id: lower case, punctuation dropped, spaces to hyphens. */
 export function slug(text) {
@@ -81,11 +92,12 @@ const marked = new Marked({
 	}
 });
 
-const html = marked.parse(readFileSync(src, 'utf8'));
-
 rmSync(outDir, { recursive: true, force: true });
 mkdirSync(join(outDir, 'img'), { recursive: true });
-writeFileSync(join(outDir, 'en.html'), html);
+for (const { language, src } of manuals) {
+	srcRepoPath = posix.relative(repoDir.split('\\').join('/'), src.split('\\').join('/'));
+	writeFileSync(join(outDir, language + '.html'), marked.parse(readFileSync(src, 'utf8')));
+}
 let copied = 0;
 for (const href of images) {
 	const from = join(imagesDir, href);
@@ -96,4 +108,4 @@ for (const href of images) {
 	copyFileSync(from, join(outDir, 'img', basename(href)));
 	copied++;
 }
-console.log(`manual: ${src} -> ${join(outDir, 'en.html')} (${copied} images)`);
+console.log(`manual: ${languages.join('/')} -> ${outDir} (${copied} shared images)`);

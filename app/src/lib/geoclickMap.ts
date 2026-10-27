@@ -3,7 +3,8 @@
 
 import * as maplibregl from 'maplibre-gl';
 import type { StyleSpecification } from 'maplibre-gl';
-import { asset } from '$app/paths';
+import { asset } from '$lib/appPaths';
+import { fetchMapResource } from './mapResource';
 import { enableLabelMagnify } from './labelMagnify';
 import { enableLabelCollision } from './labelCollision';
 import { isNativeShell } from './platform';
@@ -25,7 +26,7 @@ export async function fetchMapDefAndStyle(
 	// asset() prefixes kit.paths.base (or paths.assets) - a bare "/maps/..."
 	// 404s as soon as the app is served under a subpath (e.g. GitHub Pages).
 	const [mapDefRes, baseStyleRes] = await Promise.all([
-		fetch(asset(`/maps/${mapId}/map.json`)),
+		fetchMapResource(mapId, 'map.json'),
 		fetch(asset('/styles/base.json'))
 	]);
 	if (!mapDefRes.ok || !baseStyleRes.ok) {

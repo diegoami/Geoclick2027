@@ -3,7 +3,8 @@
 		"Name-facts for Norway (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the eleven counties of 2020-23 (the set the map shows), each as a \"region\" entry (en, it, de); Oslo sits beside the city of the same id. Facts about the 2020 mergers say that Viken, Troms og Finnmark and Vestfold og Telemark were split again in 2024."
+		"v0.19 added the eleven counties of 2020-23 (the set the map shows), each as a \"region\" entry (en, it, de); Oslo sits beside the city of the same id. Facts about the 2020 mergers say that Viken, Troms og Finnmark and Vestfold og Telemark were split again in 2024.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"bergen": {
 		"city": {
@@ -27,26 +28,38 @@
 	"drammen": {
 		"city": {
 			"en": [
-				"Its road tunnel, the Spiral, climbs in six loops inside a hill to a lookout above the town."
+				"Its name preserves Drafn, an old name for the local waterway.",
+				"Bragernes and Strømsø united as one town in 1811.",
+				"The Spiralen road tunnel climbs through a hill in six turns."
 			],
 			"it": [
-				"La sua galleria stradale, la Spirale, sale in sei giri dentro una collina fino a un belvedere sopra la città."
+				"Il nome conserva Drafn, un’antica denominazione del corso d’acqua locale.",
+				"Bragernes e Strømsø si unirono in un’unica città nel 1811.",
+				"Il tunnel stradale Spiralen sale all’interno di una collina con sei giri."
 			],
 			"de": [
-				"Ihr Straßentunnel Spiralen führt in sechs Kehren durch einen Hügel zu einem Aussichtspunkt über der Stadt hinauf."
+				"Der Name bewahrt Drafn, eine alte Bezeichnung des örtlichen Gewässers.",
+				"Bragernes und Strømsø wurden 1811 zu einer Stadt vereinigt.",
+				"Der Straßentunnel Spiralen steigt in sechs Windungen durch einen Berg."
 			]
 		}
 	},
 	"kristiansand": {
 		"city": {
 			"en": [
-				"Founded in 1641 by the Danish king Christian IV and named for him."
+				"Christian IV founded it in 1641 and gave it his name.",
+				"The centre’s grid plan is known as Kvadraturen.",
+				"Posebyen preserves a historic neighbourhood of wooden houses."
 			],
 			"it": [
-				"Fondata nel 1641 dal re danese Cristiano IV, che le diede il suo nome."
+				"Cristiano IV la fondò nel 1641 e le diede il proprio nome.",
+				"La pianta a griglia del centro è nota come Kvadraturen.",
+				"Posebyen conserva uno storico quartiere di case in legno."
 			],
 			"de": [
-				"1641 vom dänischen König Christian IV. gegründet und nach ihm benannt."
+				"Christian IV. gründete die Stadt 1641 und gab ihr seinen Namen.",
+				"Der schachbrettartige Stadtgrundriss ist als Kvadraturen bekannt.",
+				"Posebyen bewahrt ein historisches Viertel mit Holzhäusern."
 			]
 		}
 	},
@@ -89,80 +102,93 @@
 	"skien": {
 		"city": {
 			"en": [
-				"Henrik Ibsen was born here in 1828."
+				"Its medieval name Skiða was also a river name.",
+				"Henrik Ibsen was born here in 1828.",
+				"The nearby Fossum ironworks began in 1539."
 			],
 			"it": [
-				"Qui nacque Henrik Ibsen, nel 1828."
+				"Il nome medievale Skiða era anche il nome di un fiume.",
+				"Henrik Ibsen nacque qui nel 1828.",
+				"La vicina ferriera di Fossum ebbe inizio nel 1539."
 			],
 			"de": [
-				"Henrik Ibsen wurde 1828 hier geboren."
+				"Der mittelalterliche Name Skiða war auch ein Flussname.",
+				"Henrik Ibsen wurde hier 1828 geboren.",
+				"Das nahe Eisenwerk Fossum wurde 1539 gegründet."
 			]
 		}
 	},
 	"stavanger": {
 		"city": {
 			"en": [
-				"Norway’s oil capital since the 1970s.",
-				"Preikestolen, a flat rock 600 m above a fjord, is close by."
+				"Its old name Stafangr contains angr, an old word for a bay.",
+				"Offshore oil development transformed the city in the 1970s.",
+				"Gamle Stavanger preserves rows of old wooden houses."
 			],
 			"it": [
-				"La capitale norvegese del petrolio dagli anni Settanta.",
-				"Qui vicino si trova Preikestolen, una roccia piatta a 600 m sopra un fiordo."
+				"L’antico nome Stafangr contiene angr, un’antica parola che indica una baia.",
+				"Lo sviluppo del petrolio offshore trasformò la città negli anni Settanta.",
+				"Gamle Stavanger conserva file di antiche case in legno."
 			],
 			"de": [
-				"Norwegens Ölhauptstadt seit den 1970er-Jahren.",
-				"Der Preikestolen, ein flacher Felsen 600 m über einem Fjord, liegt ganz in der Nähe."
+				"Der alte Name Stafangr enthält angr, ein altes Wort für eine Bucht.",
+				"Die Erschließung von Offshore-Erdöl veränderte die Stadt in den 1970er-Jahren.",
+				"Gamle Stavanger bewahrt Reihen alter Holzhäuser."
 			]
 		}
 	},
 	"troms": {
-		"city": {
+		"region": {
 			"en": [
-				"Called the Paris of the North, and the starting point of many Arctic expeditions.",
-				"In 1928 Roald Amundsen flew from here on his last flight, and never came back."
+				"The county was formerly known as Tromsø amt.",
+				"Trondenes Church near Harstad preserves medieval stone architecture.",
+				"The Sámi cultural festival Riddu Riđđu began in 1991."
 			],
 			"it": [
-				"Chiamata la Parigi del Nord, e punto di partenza di molte spedizioni artiche.",
-				"Nel 1928 Roald Amundsen partì da qui per il suo ultimo volo, e non tornò più."
+				"La contea era precedentemente chiamata Tromsø amt.",
+				"La chiesa di Trondenes, presso Harstad, conserva un’architettura medievale in pietra.",
+				"Il festival culturale sami Riddu Riđđu nacque nel 1991."
 			],
 			"de": [
-				"Als Paris des Nordens bezeichnet und Ausgangspunkt vieler Arktisexpeditionen.",
-				"1928 startete Roald Amundsen von hier zu seinem letzten Flug und kehrte nie zurück."
+				"Die frühere Amtsbezeichnung lautete Tromsø amt.",
+				"Die Kirche von Trondenes bei Harstad bewahrt mittelalterliche Steinarchitektur.",
+				"Das samische Kulturfestival Riddu Riđđu begann 1991."
+			]
+		},
+		"city": {
+			"en": [
+				"The city takes its name from the island Tromsøya.",
+				"Its cultural reputation earned it the nickname Paris of the North.",
+				"Roald Amundsen departed from here on his fatal rescue flight in 1928."
+			],
+			"it": [
+				"La città prende il nome dall’isola di Tromsøya.",
+				"La sua fama culturale le valse il soprannome di Parigi del Nord.",
+				"Roald Amundsen partì da qui per il fatale volo di soccorso del 1928."
+			],
+			"de": [
+				"Die Stadt ist nach der Insel Tromsøya benannt.",
+				"Ihr kultureller Ruf brachte ihr den Beinamen Paris des Nordens ein.",
+				"Roald Amundsen startete hier 1928 zu seinem tödlich endenden Rettungsflug."
 			]
 		}
 	},
 	"trondheim": {
 		"city": {
 			"en": [
-				"As Nidaros it was Norway’s capital in Viking times.",
-				"Its cathedral stands over the grave of Saint Olav, and is the northernmost medieval cathedral in the world."
+				"Its medieval name Nidaros means mouth of the Nid river.",
+				"It was a royal centre and capital in medieval Norway.",
+				"Nidaros Cathedral grew around the shrine of Saint Olaf."
 			],
 			"it": [
-				"Come Nidaros fu la capitale della Norvegia ai tempi dei vichinghi.",
-				"La sua cattedrale sorge sulla tomba di sant’Olav, ed è la cattedrale medievale più a nord del mondo."
+				"Il nome medievale Nidaros significa foce del fiume Nid.",
+				"Fu un centro reale e una capitale della Norvegia medievale.",
+				"La cattedrale di Nidaros si sviluppò intorno al santuario di sant’Olav."
 			],
 			"de": [
-				"Als Nidaros war sie in der Wikingerzeit die Hauptstadt Norwegens.",
-				"Ihre Kathedrale steht über dem Grab des heiligen Olav und ist die nördlichste mittelalterliche Kathedrale der Welt."
-			]
-		}
-	},
-	"troms-og-finnmark": {
-		"region": {
-			"en": [
-				"Two counties, Troms and Finnmark, joined in 2020 and separated again in 2024; Finnmark means \"the Sámi march\".",
-				"The North Cape, on the island of Magerøya, is often called Europe’s northernmost point (nearby Knivskjellodden reaches a little farther north).",
-				"In winter the northern lights are seen here on many clear nights."
-			],
-			"it": [
-				"Due contee, Troms e Finnmark, unite nel 2020 e di nuovo separate nel 2024; Finnmark significa \"la marca dei Sami\".",
-				"Capo Nord, sull’isola di Magerøya, è spesso detto il punto più settentrionale d’Europa (il vicino Knivskjellodden arriva un po’ più a nord).",
-				"In inverno l’aurora boreale si vede qui in molte notti serene."
-			],
-			"de": [
-				"Zwei Provinzen, Troms und Finnmark, wurden 2020 vereint und 2024 wieder getrennt; Finnmark bedeutet „Mark der Samen“.",
-				"Das Nordkap auf der Insel Magerøya gilt oft als nördlichster Punkt Europas (das nahe Knivskjellodden reicht etwas weiter nach Norden).",
-				"Im Winter sind hier in vielen klaren Nächten Polarlichter zu sehen."
+				"Der mittelalterliche Name Nidaros bedeutet Mündung des Flusses Nid.",
+				"Die Stadt war ein königliches Zentrum und eine Hauptstadt des mittelalterlichen Norwegens.",
+				"Der Nidarosdom entstand um das Heiligtum des heiligen Olav."
 			]
 		}
 	},
@@ -261,44 +287,6 @@
 			]
 		}
 	},
-	"viken": {
-		"region": {
-			"en": [
-				"Viken means \"the bay\" or \"the inlet\", the shore of the Oslofjord; one theory ties it to the word Viking.",
-				"It was formed in 2020 from Akershus, Buskerud and Østfold, and split into them again in 2024.",
-				"It surrounds Oslo, which is a county of its own."
-			],
-			"it": [
-				"Viken significa \"la baia\" o \"l’insenatura\", la riva dell’Oslofjord; una teoria lo collega alla parola Vichingo.",
-				"Fu creata nel 2020 da Akershus, Buskerud e Østfold e divisa di nuovo in esse nel 2024.",
-				"Circonda Oslo, che è una contea a sé."
-			],
-			"de": [
-				"Viken bedeutet „die Bucht“, das Ufer des Oslofjords; eine Theorie bringt es mit dem Wort Wikinger in Verbindung.",
-				"Es wurde 2020 aus Akershus, Buskerud und Østfold gebildet und 2024 wieder in sie geteilt.",
-				"Es umschließt Oslo, das eine eigene Provinz ist."
-			]
-		}
-	},
-	"vestfold-og-telemark": {
-		"region": {
-			"en": [
-				"Two counties, Vestfold and Telemark, joined in 2020 and separated again in 2024.",
-				"The telemark turn, a skiing technique with the heel free, is named for Telemark, where it was developed.",
-				"The Gokstad ship, a Viking ship from about the year 900, was found in a burial mound near Sandefjord in 1880."
-			],
-			"it": [
-				"Due contee, Vestfold e Telemark, unite nel 2020 e separate di nuovo nel 2024.",
-				"Il telemark, una tecnica di sci a tallone libero, prende il nome dal Telemark, dove fu sviluppata.",
-				"La nave di Gokstad, una nave vichinga del 900 circa, fu trovata nel 1880 in un tumulo funerario vicino a Sandefjord."
-			],
-			"de": [
-				"Zwei Provinzen, Vestfold und Telemark, wurden 2020 vereint und 2024 wieder getrennt.",
-				"Der Telemark-Schwung, eine Skitechnik mit freier Ferse, ist nach Telemark benannt, wo er entwickelt wurde.",
-				"Das Gokstad-Schiff, ein Wikingerschiff aus der Zeit um 900, wurde 1880 in einem Grabhügel bei Sandefjord gefunden."
-			]
-		}
-	},
 	"rogaland": {
 		"region": {
 			"en": [
@@ -335,6 +323,528 @@
 				"Lindesnes mit Norwegens ältestem Leuchtturm, 1655 erstmals entzündet, ist der südlichste Punkt des norwegischen Festlands.",
 				"Die Küste des Sørlandet ist für ihre weißen Holzstädtchen und Schären bekannt."
 			]
+		}
+	},
+	"_sources": {
+		"finnmark:region": [
+			"https://en.wikipedia.org/wiki/Finnmark",
+			"https://whc.unesco.org/en/list/352/",
+			"https://en.wikipedia.org/wiki/Vardøhus_Fortress"
+		],
+		"troms:region": [
+			"https://en.wikipedia.org/wiki/Troms",
+			"https://en.wikipedia.org/wiki/Trondenes_Church",
+			"https://en.wikipedia.org/wiki/Riddu_Riđđu"
+		],
+		"buskerud:region": [
+			"https://www.kommunal-rapport.no/politikk/stadig-hendelsesrikt-i-buskerud/102189",
+			"https://en.wikipedia.org/wiki/Kongsberg_Silver_Mines",
+			"https://en.wikipedia.org/wiki/Blaafarveværket"
+		],
+		"akershus:region": [
+			"https://en.wikipedia.org/wiki/Akershus",
+			"https://en.wikipedia.org/wiki/Eidsvollsbygningen",
+			"https://en.wikipedia.org/wiki/Raknehaugen"
+		],
+		"telemark:region": [
+			"https://en.wikipedia.org/wiki/Telemark",
+			"https://whc.unesco.org/en/list/1486/",
+			"https://www.visittelemark.com/products/heddal-stave-church"
+		],
+		"stfold:region": [
+			"https://en.wikipedia.org/wiki/Østfold",
+			"https://en.wikipedia.org/wiki/Fredriksten",
+			"https://en.wikipedia.org/wiki/Rock_carvings_at_Begby"
+		],
+		"vestfold:region": [
+			"https://en.wikipedia.org/wiki/Vestfold",
+			"https://en.wikipedia.org/wiki/Borre_mound_cemetery",
+			"https://en.wikipedia.org/wiki/Oseberg_Ship"
+		],
+		"troms:city": [
+			"https://en.wikipedia.org/wiki/Tromsø",
+			"https://en.wikipedia.org/wiki/Roald_Amundsen"
+		],
+		"narvik:city": [
+			"https://www.kvenskestedsnavn.no/stedsnavn/view/9265",
+			"https://en.wikipedia.org/wiki/Narvik",
+			"https://en.wikipedia.org/wiki/Ofoten_Line"
+		],
+		"bod:city": [
+			"https://sprakradet.no/stedsnavn-og-navn-pa-statsorgan/navnelister-norsk-skrivemate/hva-betyr-bynavnet/",
+			"https://snl.no/Bod%C3%B8",
+			"https://en.wikipedia.org/wiki/Bodø"
+		],
+		"mo-i-rana:city": [
+			"https://en.wikipedia.org/wiki/Mo_i_Rana",
+			"https://en.wikipedia.org/wiki/Norsk_Jernverk",
+			"https://en.wikipedia.org/wiki/Havmannen"
+		],
+		"trondheim:city": [
+			"https://en.wikipedia.org/wiki/Trondheim",
+			"https://www.nidarosdomen.no/en/"
+		],
+		"alesund:city": [
+			"https://en.wikipedia.org/wiki/Ålesund",
+			"https://en.wikipedia.org/wiki/Ålesund_Fire"
+		],
+		"lillehammer:city": [
+			"https://en.wikipedia.org/wiki/Lillehammer",
+			"https://olympics.com/en/olympic-games/lillehammer-1994",
+			"https://maihaugen.no/en/"
+		],
+		"hamar:city": [
+			"https://www.norskstadnamnleksikon.no/grunnord.aspx?grunnordCode=hamar",
+			"https://en.wikipedia.org/wiki/Hamar",
+			"https://en.wikipedia.org/wiki/Vikingskipet"
+		],
+		"gj-vik:city": [
+			"https://www.gjovik.kommune.no/om-gjovik/",
+			"https://en.wikipedia.org/wiki/Skibladner"
+		],
+		"drammen:city": [
+			"https://byleksikon.drmk.no/drammen/",
+			"https://en.wikipedia.org/wiki/Spiralen_(Drammen)"
+		],
+		"moss:city": [
+			"https://mosshistorielag.no/strandsitteren/artikler/306-navnet-moss",
+			"https://snl.no/Mossekonvensjonen",
+			"https://snl.no/Moss_Jernverk"
+		],
+		"haugesund:city": [
+			"https://sprakradet.no/stedsnavn-og-navn-pa-statsorgan/navnelister-norsk-skrivemate/hva-betyr-bynavnet/",
+			"https://en.wikipedia.org/wiki/Haugesund",
+			"https://en.wikipedia.org/wiki/Haraldshaugen"
+		],
+		"t-nsberg:city": [
+			"https://sprakradet.no/stedsnavn-og-navn-pa-statsorgan/navnelister-norsk-skrivemate/hva-betyr-bynavnet/",
+			"https://en.wikipedia.org/wiki/Tønsberg",
+			"https://en.wikipedia.org/wiki/Saga_Oseberg"
+		],
+		"skien:city": [
+			"https://www.battleofthenorth.eu/wp-content/uploads/2023/08/Tourist-guide-2023_english.pdf",
+			"https://en.wikipedia.org/wiki/Skien",
+			"https://en.wikipedia.org/wiki/Fossum_Ironworks"
+		],
+		"stavanger:city": [
+			"https://byhistoriskforening.org/byhistorien_oversikt/forord/",
+			"https://en.wikipedia.org/wiki/Stavanger",
+			"https://en.wikipedia.org/wiki/Gamle_Stavanger"
+		],
+		"sandnes:city": [
+			"https://snl.no/Sandnes",
+			"https://www.sandnes.kommune.no/globalassets/nytt-sidetre/bolig-og-byutvikling/sandnesloftet/kunnskapsgrunnlag/leirvareindustrien-i-sandnes--kulturhistorisk-kunnskapsgrunnlag.pdf"
+		],
+		"arendal:city": [
+			"https://sprakradet.no/stedsnavn-og-navn-pa-statsorgan/navnelister-norsk-skrivemate/hva-betyr-bynavnet/",
+			"https://en.wikipedia.org/wiki/Arendal",
+			"https://en.wikipedia.org/wiki/Trinity_Church_(Arendal)"
+		],
+		"kristiansand:city": [
+			"https://en.wikipedia.org/wiki/Kristiansand",
+			"https://en.wikipedia.org/wiki/Kvadraturen_(Kristiansand)",
+			"https://en.wikipedia.org/wiki/Posebyen"
+		]
+	},
+	"finnmark": {
+		"region": {
+			"en": [
+				"Its name originally referred to the Sámi people.",
+				"Alta’s prehistoric rock carvings became a UNESCO World Heritage Site in 1985.",
+				"The star-shaped Vardøhus fortress dates from the eighteenth century."
+			],
+			"it": [
+				"Il nome si riferiva in origine al popolo sami.",
+				"Le incisioni rupestri preistoriche di Alta divennero patrimonio mondiale UNESCO nel 1985.",
+				"La fortezza stellata di Vardøhus risale al Settecento."
+			],
+			"de": [
+				"Der Name bezog sich ursprünglich auf die Sámi.",
+				"Altas prähistorische Felsritzungen wurden 1985 UNESCO-Welterbe.",
+				"Die sternförmige Festung Vardøhus stammt aus dem achtzehnten Jahrhundert."
+			]
+		}
+	},
+	"buskerud": {
+		"region": {
+			"en": [
+				"Its name comes from a farm formerly called Biskopsrud, meaning bishop’s clearing.",
+				"Silver mining shaped Kongsberg from the seventeenth century.",
+				"Blaafarveværket preserves the history of cobalt production."
+			],
+			"it": [
+				"Il nome deriva da una fattoria già chiamata Biskopsrud, cioè radura del vescovo.",
+				"L’estrazione dell’argento plasmò Kongsberg dal Seicento.",
+				"Blaafarveværket conserva la storia della produzione di cobalto."
+			],
+			"de": [
+				"Der Name stammt von einem früher Biskopsrud genannten Hof, der Rodung des Bischofs.",
+				"Silberbergbau prägte Kongsberg seit dem siebzehnten Jahrhundert.",
+				"Blaafarveværket bewahrt die Geschichte der Kobaltproduktion."
+			]
+		}
+	},
+	"akershus": {
+		"region": {
+			"en": [
+				"It is named after Akershus fortress in neighbouring Oslo.",
+				"Norway’s constitution was drawn up at Eidsvoll in 1814.",
+				"Raknehaugen is a monumental Iron Age burial mound."
+			],
+			"it": [
+				"Prende il nome dalla fortezza di Akershus nella vicina Oslo.",
+				"La costituzione norvegese fu redatta a Eidsvoll nel 1814.",
+				"Raknehaugen è un monumentale tumulo funerario dell’età del ferro."
+			],
+			"de": [
+				"Die Provinz ist nach der Festung Akershus im benachbarten Oslo benannt.",
+				"Norwegens Verfassung wurde 1814 in Eidsvoll ausgearbeitet.",
+				"Raknehaugen ist ein monumentaler Grabhügel aus der Eisenzeit."
+			]
+		}
+	},
+	"telemark": {
+		"region": {
+			"en": [
+				"The county was called Bratsberg until 1919.",
+				"Rjukan and Notodden preserve UNESCO-listed industrial heritage.",
+				"Heddal’s great wooden stave church dates from the thirteenth century."
+			],
+			"it": [
+				"La contea si chiamava Bratsberg fino al 1919.",
+				"Rjukan e Notodden conservano un patrimonio industriale riconosciuto dall’UNESCO.",
+				"La grande stavkirke in legno di Heddal risale al Duecento."
+			],
+			"de": [
+				"Die Provinz hieß bis 1919 Bratsberg.",
+				"Rjukan und Notodden bewahren UNESCO-geschütztes Industrieerbe.",
+				"Heddals große hölzerne Stabkirche stammt aus dem dreizehnten Jahrhundert."
+			]
+		}
+	},
+	"stfold": {
+		"region": {
+			"en": [
+				"Its name means eastern Fold, using an old name for the Oslofjord.",
+				"Fredriksten fortress overlooks Halden.",
+				"Bronze Age rock carvings survive around Fredrikstad and Sarpsborg."
+			],
+			"it": [
+				"Il nome significa Fold orientale, usando un antico nome dell’Oslofjord.",
+				"La fortezza di Fredriksten domina Halden.",
+				"Incisioni rupestri dell’età del bronzo sopravvivono presso Fredrikstad e Sarpsborg."
+			],
+			"de": [
+				"Der Name bedeutet östliches Fold, nach einer alten Bezeichnung des Oslofjords.",
+				"Die Festung Fredriksten überragt Halden.",
+				"Bei Fredrikstad und Sarpsborg sind bronzezeitliche Felsritzungen erhalten."
+			]
+		}
+	},
+	"vestfold": {
+		"region": {
+			"en": [
+				"Its name means western Fold, using an old name for the Oslofjord.",
+				"Borre preserves a major Viking Age burial-ground complex.",
+				"The Oseberg ship was excavated near Tønsberg in 1904."
+			],
+			"it": [
+				"Il nome significa Fold occidentale, usando un antico nome dell’Oslofjord.",
+				"Borre conserva un importante complesso funerario dell’epoca vichinga.",
+				"La nave di Oseberg fu scavata presso Tønsberg nel 1904."
+			],
+			"de": [
+				"Der Name bedeutet westliches Fold, nach einer alten Bezeichnung des Oslofjords.",
+				"Borre bewahrt eine bedeutende Grabhügelanlage aus der Wikingerzeit.",
+				"Das Oseberg-Schiff wurde 1904 bei Tønsberg ausgegraben."
+			]
+		}
+	},
+	"narvik": {
+		"city": {
+			"en": [
+				"The port was once called Victoriahavn.",
+				"The Ofoten railway connects its harbour with Sweden’s iron-ore fields.",
+				"Its strategic port was fought over during the battles of 1940."
+			],
+			"it": [
+				"Il porto si chiamava un tempo Victoriahavn.",
+				"La ferrovia dell’Ofoten collega il porto ai giacimenti di ferro svedesi.",
+				"Il porto strategico fu conteso nelle battaglie del 1940."
+			],
+			"de": [
+				"Der Hafen hieß einst Victoriahavn.",
+				"Die Ofotbahn verbindet den Hafen mit Schwedens Eisenerzgebieten.",
+				"Um den strategischen Hafen wurde in den Kämpfen von 1940 gerungen."
+			]
+		}
+	},
+	"bod": {
+		"city": {
+			"en": [
+				"Its old form Boðin contains a name element meaning meadow.",
+				"The town received trading-town privileges in 1816.",
+				"German bombing devastated it in 1940."
+			],
+			"it": [
+				"L’antica forma Boðin contiene un elemento del nome che significa prato.",
+				"La città ricevette privilegi commerciali urbani nel 1816.",
+				"I bombardamenti tedeschi la devastarono nel 1940."
+			],
+			"de": [
+				"Die alte Form Boðin enthält ein Namenselement für Wiese.",
+				"Der Ort erhielt 1816 die Rechte einer Handelsstadt.",
+				"Deutsche Bombenangriffe verwüsteten ihn 1940."
+			]
+		}
+	},
+	"mo-i-rana": {
+		"city": {
+			"en": [
+				"Mo is an old word for a sandy plain.",
+				"The Norsk Jernverk steelworks drove its postwar industrial growth.",
+				"Antony Gormley’s sculpture Havmannen stands in the Ranfjord."
+			],
+			"it": [
+				"Mo è un’antica parola che indica una pianura sabbiosa.",
+				"L’acciaieria Norsk Jernverk ne trainò la crescita industriale del dopoguerra.",
+				"La scultura Havmannen di Antony Gormley si trova nel Ranfjord."
+			],
+			"de": [
+				"Mo ist ein altes Wort für eine sandige Ebene.",
+				"Das Stahlwerk Norsk Jernverk trieb das industrielle Wachstum nach dem Krieg an.",
+				"Antony Gormleys Skulptur Havmannen steht im Ranfjord."
+			]
+		}
+	},
+	"alesund": {
+		"city": {
+			"en": [
+				"Older spellings include Aalesund.",
+				"A devastating fire destroyed much of the town in 1904.",
+				"Its reconstruction created a celebrated concentration of Art Nouveau architecture."
+			],
+			"it": [
+				"Tra le grafie precedenti compare Aalesund.",
+				"Un devastante incendio distrusse gran parte della città nel 1904.",
+				"La ricostruzione creò una celebre concentrazione di architettura liberty."
+			],
+			"de": [
+				"Zu den älteren Schreibweisen gehört Aalesund.",
+				"Ein verheerender Brand zerstörte 1904 große Teile der Stadt.",
+				"Der Wiederaufbau schuf ein bekanntes Ensemble von Jugendstilarchitektur."
+			]
+		}
+	},
+	"lillehammer": {
+		"city": {
+			"en": [
+				"Its name distinguishes the little Hamar from the larger Storhamar.",
+				"It hosted the 1994 Winter Olympics.",
+				"Maihaugen preserves historic buildings in an open-air museum."
+			],
+			"it": [
+				"Il nome distingue il piccolo Hamar dal più grande Storhamar.",
+				"Ospitò i Giochi olimpici invernali del 1994.",
+				"Maihaugen conserva edifici storici in un museo all’aperto."
+			],
+			"de": [
+				"Der Name unterscheidet das kleine Hamar vom größeren Storhamar.",
+				"Die Stadt richtete 1994 die Olympischen Winterspiele aus.",
+				"Maihaugen bewahrt historische Gebäude in einem Freilichtmuseum."
+			]
+		}
+	},
+	"hamar": {
+		"city": {
+			"en": [
+				"Its name comes from the old word hamarr, meaning a rocky crag.",
+				"Medieval cathedral ruins are protected beneath a modern glass structure at Domkirkeodden.",
+				"The Vikingskipet arena was built for Olympic speed skating in 1994."
+			],
+			"it": [
+				"Il nome deriva dall’antica parola hamarr, che indica una rupe.",
+				"A Domkirkeodden una moderna struttura in vetro protegge le rovine della cattedrale medievale.",
+				"L’arena Vikingskipet fu costruita per il pattinaggio di velocità olimpico del 1994."
+			],
+			"de": [
+				"Der Name stammt vom alten Wort hamarr für einen Felsvorsprung.",
+				"In Domkirkeodden schützt ein moderner Glasbau die Ruinen des mittelalterlichen Doms.",
+				"Die Arena Vikingskipet wurde für den olympischen Eisschnelllauf von 1994 gebaut."
+			]
+		}
+	},
+	"gj-vik": {
+		"city": {
+			"en": [
+				"Its name developed from the farm name Djupvik.",
+				"Glassmaking began here in 1807.",
+				"The paddle steamer Skibladner has its home port here."
+			],
+			"it": [
+				"Il nome si sviluppò dal nome della fattoria Djupvik.",
+				"La produzione del vetro iniziò qui nel 1807.",
+				"Il battello a ruote Skibladner ha qui il suo porto di base."
+			],
+			"de": [
+				"Der Name entwickelte sich aus dem Hofnamen Djupvik.",
+				"Die Glasherstellung begann hier 1807.",
+				"Der Raddampfer Skibladner hat hier seinen Heimathafen."
+			]
+		}
+	},
+	"moss": {
+		"city": {
+			"en": [
+				"Medieval records used the spelling Mos.",
+				"Negotiations here produced the Convention of Moss in 1814.",
+				"An ironworks founded in 1704 shaped its industrial growth."
+			],
+			"it": [
+				"I documenti medievali usavano la grafia Mos.",
+				"Le trattative svolte qui produssero la convenzione di Moss nel 1814.",
+				"Una ferriera fondata nel 1704 ne plasmò la crescita industriale."
+			],
+			"de": [
+				"Mittelalterliche Urkunden verwendeten die Schreibweise Mos.",
+				"Hier geführte Verhandlungen führten 1814 zur Konvention von Moss.",
+				"Ein 1704 gegründetes Eisenwerk prägte das industrielle Wachstum."
+			]
+		}
+	},
+	"haugesund": {
+		"city": {
+			"en": [
+				"Its name combines words for a mound and a strait.",
+				"Nineteenth-century herring fisheries drove its growth.",
+				"The Haraldshaugen national monument was unveiled in 1872."
+			],
+			"it": [
+				"Il nome combina parole che indicano un rilievo e uno stretto.",
+				"La pesca delle aringhe ne trainò la crescita nell’Ottocento.",
+				"Il monumento nazionale di Haraldshaugen fu inaugurato nel 1872."
+			],
+			"de": [
+				"Der Name verbindet Wörter für einen Hügel und eine Meerenge.",
+				"Die Heringsfischerei trieb im neunzehnten Jahrhundert das Wachstum an.",
+				"Das Nationaldenkmal Haraldshaugen wurde 1872 eingeweiht."
+			]
+		}
+	},
+	"t-nsberg": {
+		"city": {
+			"en": [
+				"Its Norse name Túnsberg combines an enclosure and a hill.",
+				"Slottsfjellet preserves the ruins of a medieval fortress.",
+				"The reconstructed Viking ship Saga Oseberg was launched here in 2012."
+			],
+			"it": [
+				"Il nome norreno Túnsberg combina un recinto e una collina.",
+				"Slottsfjellet conserva le rovine di una fortezza medievale.",
+				"La nave vichinga ricostruita Saga Oseberg fu varata qui nel 2012."
+			],
+			"de": [
+				"Der altnordische Name Túnsberg verbindet eine Einfriedung mit einem Berg.",
+				"Slottsfjellet bewahrt die Ruinen einer mittelalterlichen Festung.",
+				"Das nachgebaute Wikingerschiff Saga Oseberg wurde hier 2012 vom Stapel gelassen."
+			]
+		}
+	},
+	"sandnes": {
+		"city": {
+			"en": [
+				"Its name combines the Norse words for sand and headland.",
+				"Pottery and brickmaking shaped its industrial history.",
+				"Its coat of arms shows a clay cuckoo whistle."
+			],
+			"it": [
+				"Il nome unisce parole norrene che indicano sabbia e promontorio.",
+				"Ceramiche e mattoni ne plasmarono la storia industriale.",
+				"Lo stemma raffigura un fischietto di terracotta a forma di cuculo."
+			],
+			"de": [
+				"Der Name verbindet altnordische Wörter für Sand und Landzunge.",
+				"Töpferei und Ziegelherstellung prägten die Industriegeschichte.",
+				"Das Stadtwappen zeigt eine tönerne Kuckuckspfeife."
+			]
+		}
+	},
+	"arendal": {
+		"city": {
+			"en": [
+				"Its final name element means valley; the first element is uncertain.",
+				"Tyholmen preserves historic wooden merchant houses.",
+				"Its Trinity Church was completed in 1888."
+			],
+			"it": [
+				"L’ultimo elemento del nome significa valle; il primo è incerto.",
+				"Tyholmen conserva storiche case mercantili in legno.",
+				"La chiesa della Trinità fu completata nel 1888."
+			],
+			"de": [
+				"Der letzte Namensbestandteil bedeutet Tal; der erste ist ungeklärt.",
+				"Tyholmen bewahrt historische Kaufmannshäuser aus Holz.",
+				"Die Dreifaltigkeitskirche wurde 1888 fertiggestellt."
+			]
+		}
+	},
+	"_historicalCounties": {
+		"viken": {
+			"region": {
+				"en": [
+					"Viken means \"the bay\" or \"the inlet\", the shore of the Oslofjord; one theory ties it to the word Viking.",
+					"It was formed in 2020 from Akershus, Buskerud and Østfold, and split into them again in 2024.",
+					"It surrounds Oslo, which is a county of its own."
+				],
+				"it": [
+					"Viken significa \"la baia\" o \"l’insenatura\", la riva dell’Oslofjord; una teoria lo collega alla parola Vichingo.",
+					"Fu creata nel 2020 da Akershus, Buskerud e Østfold e divisa di nuovo in esse nel 2024.",
+					"Circonda Oslo, che è una contea a sé."
+				],
+				"de": [
+					"Viken bedeutet „die Bucht“, das Ufer des Oslofjords; eine Theorie bringt es mit dem Wort Wikinger in Verbindung.",
+					"Es wurde 2020 aus Akershus, Buskerud und Østfold gebildet und 2024 wieder in sie geteilt.",
+					"Es umschließt Oslo, das eine eigene Provinz ist."
+				]
+			}
+		},
+		"vestfold-og-telemark": {
+			"region": {
+				"en": [
+					"Two counties, Vestfold and Telemark, joined in 2020 and separated again in 2024.",
+					"The telemark turn, a skiing technique with the heel free, is named for Telemark, where it was developed.",
+					"The Gokstad ship, a Viking ship from about the year 900, was found in a burial mound near Sandefjord in 1880."
+				],
+				"it": [
+					"Due contee, Vestfold e Telemark, unite nel 2020 e separate di nuovo nel 2024.",
+					"Il telemark, una tecnica di sci a tallone libero, prende il nome dal Telemark, dove fu sviluppata.",
+					"La nave di Gokstad, una nave vichinga del 900 circa, fu trovata nel 1880 in un tumulo funerario vicino a Sandefjord."
+				],
+				"de": [
+					"Zwei Provinzen, Vestfold und Telemark, wurden 2020 vereint und 2024 wieder getrennt.",
+					"Der Telemark-Schwung, eine Skitechnik mit freier Ferse, ist nach Telemark benannt, wo er entwickelt wurde.",
+					"Das Gokstad-Schiff, ein Wikingerschiff aus der Zeit um 900, wurde 1880 in einem Grabhügel bei Sandefjord gefunden."
+				]
+			}
+		},
+		"troms-og-finnmark": {
+			"region": {
+				"en": [
+					"Two counties, Troms and Finnmark, joined in 2020 and separated again in 2024; Finnmark means \"the Sámi march\".",
+					"The North Cape, on the island of Magerøya, is often called Europe’s northernmost point (nearby Knivskjellodden reaches a little farther north).",
+					"In winter the northern lights are seen here on many clear nights."
+				],
+				"it": [
+					"Due contee, Troms e Finnmark, unite nel 2020 e di nuovo separate nel 2024; Finnmark significa \"la marca dei Sami\".",
+					"Capo Nord, sull’isola di Magerøya, è spesso detto il punto più settentrionale d’Europa (il vicino Knivskjellodden arriva un po’ più a nord).",
+					"In inverno l’aurora boreale si vede qui in molte notti serene."
+				],
+				"de": [
+					"Zwei Provinzen, Troms und Finnmark, wurden 2020 vereint und 2024 wieder getrennt; Finnmark bedeutet „Mark der Samen“.",
+					"Das Nordkap auf der Insel Magerøya gilt oft als nördlichster Punkt Europas (das nahe Knivskjellodden reicht etwas weiter nach Norden).",
+					"Im Winter sind hier in vielen klaren Nächten Polarlichter zu sehen."
+				]
+			}
 		}
 	}
 }

@@ -3,7 +3,8 @@
 		"Name-facts for Kazakhstan (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the 16 regions of 2017 (the set the map shows), each as a \"region\" entry (en, it, de); Astana sits beside the city of the same id. South Kazakhstan was renamed Turkistan Region in 2018."
+		"v0.19 added the 16 regions of 2017 (the set the map shows), each as a \"region\" entry (en, it, de); Astana sits beside the city of the same id. South Kazakhstan was renamed Turkistan Region in 2018.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"astana": {
 		"city": {
@@ -77,6 +78,23 @@
 				"Der Irtysch fließt vom Altai nach Sibirien durch die Region.",
 				"In Ekibastus hat ein Kraftwerk einen der höchsten Schornsteine der Welt, etwa 420 m."
 			]
+		},
+		"city": {
+			"en": [
+				"Pavlodar was formerly Koryakovskaya and received its present name when it became a town in 1861.",
+				"Pavlodar’s Potanin Regional History Museum occupies a former trading house from the late nineteenth century.",
+				"Pavlodar’s Pavel Vasilyev house-museum opened in 1994 and preserves manuscripts, photographs and personal objects of the poet."
+			],
+			"it": [
+				"Pavlodar si chiamava in precedenza Koryakovskaya e ricevette il nome attuale quando ottenne lo status di città nel 1861.",
+				"Il Museo regionale di storia Potanin di Pavlodar occupa un ex edificio commerciale della fine dell’Ottocento.",
+				"La casa-museo Pavel Vasil’ev di Pavlodar aprì nel 1994 e conserva manoscritti, fotografie e oggetti personali del poeta."
+			],
+			"de": [
+				"Pavlodar hieß früher Korjakowskaja und erhielt seinen heutigen Namen mit der Erhebung zur Stadt im Jahr 1861.",
+				"Pavlodars Regionalgeschichtsmuseum Potanin befindet sich in einem ehemaligen Handelshaus aus dem späten 19. Jahrhundert.",
+				"Pavlodars Hausmuseum des Dichters Pawel Wassiljew wurde 1994 eröffnet und bewahrt seine Manuskripte, Fotografien und persönlichen Gegenstände."
+			]
 		}
 	},
 	"akmola": {
@@ -114,6 +132,23 @@
 				"Die Stadt wurde 1879 als russische Siedlung gegründet und heißt seit 1895 Kostanai (Kustanai).",
 				"Rudny in der Region ist eine Bergbaustadt auf einer riesigen Eisenerzlagerstätte.",
 				"Das Naturreservat Naurzum gehört zusammen mit Korgalschyn zu einem Welterbe aus Steppe und Seen."
+			]
+		},
+		"city": {
+			"en": [
+				"Kostanay was briefly called Nikolaevsk before the name Kustanai was restored in 1895.",
+				"Construction of Kostanay began in 1879 as a new administrative settlement under the Russian Empire.",
+				"Kostanay’s former Yaushev trading house sheltered evacuated collections from Moscow’s State Historical Museum during the Second World War."
+			],
+			"it": [
+				"Kostanay fu chiamata per breve tempo Nikolaevsk prima che il nome Kustanai fosse ripristinato nel 1895.",
+				"La costruzione di Kostanay iniziò nel 1879 come nuovo insediamento amministrativo dell’Impero russo.",
+				"L’ex edificio commerciale Jaušev di Kostanay ospitò collezioni evacuate dal Museo storico di Stato di Mosca durante la seconda guerra mondiale."
+			],
+			"de": [
+				"Kostanay hieß vorübergehend Nikolajewsk, bevor 1895 der Name Kustanai wiederhergestellt wurde.",
+				"Der Bau von Kostanay begann 1879 als neue Verwaltungssiedlung des Russischen Reiches.",
+				"Kostanays ehemaliges Handelshaus Jauschew beherbergte im Zweiten Weltkrieg evakuierte Sammlungen des Staatlichen Historischen Museums in Moskau."
 			]
 		}
 	},
@@ -153,6 +188,23 @@
 				"Sein Kohlerevier machte die Stadt zu einem Zentrum des sowjetischen Bergbaus und der Schwerindustrie.",
 				"Das Karlag, eines der größten Lager des Gulag, hielt einst Zehntausende Häftlinge in seiner Steppe fest."
 			]
+		},
+		"city": {
+			"en": [
+				"Karaganda takes its name from the caragana shrub, often called yellow acacia.",
+				"Karaganda’s Miners’ Palace of Culture was completed in 1952 after construction began in 1940.",
+				"Karaganda’s Miners’ Glory monument, unveiled in 1974, depicts two miners raising a lump of coal above their heads."
+			],
+			"it": [
+				"Karaganda prende il nome dall’arbusto caragana, spesso chiamato acacia gialla.",
+				"Il Palazzo della cultura dei minatori di Karaganda fu completato nel 1952, dopo l’inizio dei lavori nel 1940.",
+				"Il monumento Gloria dei Minatori di Karaganda, inaugurato nel 1974, raffigura due minatori che sollevano un blocco di carbone sopra le teste."
+			],
+			"de": [
+				"Karaganda ist nach dem Karaganastrauch benannt, der oft als gelbe Akazie bezeichnet wird.",
+				"Karagandas Kulturpalast der Bergleute wurde 1952 fertiggestellt, nachdem der Bau 1940 begonnen hatte.",
+				"Karagandas 1974 eingeweihtes Denkmal Ruhm der Bergleute zeigt zwei Bergleute, die einen Kohlebrocken über ihre Köpfe heben."
+			]
 		}
 	},
 	"east-kazakhstan": {
@@ -191,6 +243,23 @@
 				"Die Region hat eine der großen Chromitlagerstätten der Welt; Chromit wird für rostfreien Stahl gebraucht.",
 				"Sie liegt im Westen des Landes; die Mugodscharberge, das südliche Ende des Urals, durchziehen sie."
 			]
+		},
+		"city": {
+			"en": [
+				"Aktobe’s Kazakh name means white hill.",
+				"Aktobe’s Aliya Moldagulova Memorial Museum opened in 1985 and commemorates the Kazakh sniper who served in the Second World War.",
+				"Aktobe’s regional planetarium was established in January 1967 to present astronomy through projections of the night sky."
+			],
+			"it": [
+				"Il nome kazako Aktobe significa collina bianca.",
+				"Il Museo memoriale Aliya Moldagulova di Aktobe aprì nel 1985 e ricorda la tiratrice scelta kazaka che combatté nella seconda guerra mondiale.",
+				"Il planetario regionale di Aktobe fu istituito nel gennaio 1967 per presentare l’astronomia attraverso proiezioni del cielo notturno."
+			],
+			"de": [
+				"Aktobes kasachischer Name bedeutet weißer Hügel.",
+				"Aktobes Gedenkmuseum Aliya Moldagulova wurde 1985 eröffnet und erinnert an die kasachische Scharfschützin, die im Zweiten Weltkrieg kämpfte.",
+				"Aktobes regionales Planetarium wurde im Januar 1967 eingerichtet, um Astronomie durch Projektionen des Nachthimmels zu vermitteln."
+			]
 		}
 	},
 	"atyrau": {
@@ -209,6 +278,23 @@
 				"Atyrau kommt vom kasachischen atyrau, „Flussmündung“: Die Stadt liegt dort, wo der Ural das Kaspische Meer erreicht.",
 				"Das Feld Tengis ist eines der größten Ölfelder der Welt.",
 				"Die Stadt Atyrau liegt zu beiden Seiten des Ural und damit teils in Europa, teils in Asien."
+			]
+		},
+		"city": {
+			"en": [
+				"Atyrau was formerly known as Guryev.",
+				"Atyrau’s regional art museum opened in 1992 and was named for the Kazakh painter Shaymardan Sariev in 2005.",
+				"Atyrau’s Isatay–Makhambet memorial honours Isatay Taimanuly and the poet Makhambet Utemisuly, leaders of the uprising of 1836–1838."
+			],
+			"it": [
+				"Atyrau era un tempo conosciuta come Guryev.",
+				"Il museo regionale d’arte di Atyrau aprì nel 1992 e nel 2005 fu intitolato al pittore kazako Shaymardan Sariev.",
+				"Il memoriale Isatay–Makhambet di Atyrau ricorda Isatay Taimanuly e il poeta Makhambet Utemisuly, capi della rivolta del 1836–1838."
+			],
+			"de": [
+				"Atyrau war früher als Gurjew bekannt.",
+				"Atyraus regionales Kunstmuseum wurde 1992 eröffnet und 2005 nach dem kasachischen Maler Shaymardan Sariev benannt.",
+				"Atyraus Isatay–Makhambet-Gedenkstätte erinnert an Isatay Taimanuly und den Dichter Makhambet Utemisuly, die Anführer des Aufstands von 1836–1838."
 			]
 		}
 	},
@@ -323,6 +409,367 @@
 				"Almaty ist eine Stadt mit dem Status einer eigenen Region; ihr Name wird meist als „Ort der Äpfel“ erklärt.",
 				"Es war bis 1997 die Hauptstadt Kasachstans, dann zog die Hauptstadt nach Astana.",
 				"Die Eisbahn von Medeo, hoch in den Bergen über der Stadt, gehört zu den höchstgelegenen der Welt."
+			]
+		},
+		"city": {
+			"en": [
+				"Almaty was formerly known as Verny and Alma-Ata.",
+				"Almaty’s wooden Ascension Cathedral was completed in 1907 and survived the earthquake of 1911.",
+				"Almaty’s Ykhlas Museum of Folk Musical Instruments displays traditional Kazakh instruments, including the dombra and kobyz."
+			],
+			"it": [
+				"Almaty era precedentemente conosciuta come Verny e Alma-Ata.",
+				"La cattedrale lignea dell’Ascensione di Almaty fu completata nel 1907 e resistette al terremoto del 1911.",
+				"Il Museo degli strumenti musicali popolari Ykhlas di Almaty espone strumenti tradizionali kazaki, tra cui la dombra e il kobyz."
+			],
+			"de": [
+				"Almaty war früher als Werny und Alma-Ata bekannt.",
+				"Almatys hölzerne Christi-Himmelfahrts-Kathedrale wurde 1907 fertiggestellt und überstand das Erdbeben von 1911.",
+				"Almatys Ykhlas-Museum für Volksmusikinstrumente zeigt traditionelle kasachische Instrumente, darunter Dombra und Kobys."
+			]
+		}
+	},
+	"_sources": {
+		"petropavl:city": [
+			"https://oq.gov.kz/en/abai/abylay-khan-rezidentsiyasy",
+			"https://e-museum.kz/ru/museum/68da37991b650f90c-ru/"
+		],
+		"kokshetau:city": [
+			"https://www.gov.kz/org/aqmola-madeniet/activities/5605?lang=ru",
+			"https://www.gov.kz/org/aqmola-madeniet/activities/67925?parentId=5604",
+			"https://www.gov.kz/memleket/entities/aqmola-madeniet/press/article/details/194757"
+		],
+		"kostanay:city": [
+			"https://www.gov.kz/org/kostanai-kalasy-akimat/press/article/details/215731?lang=en",
+			"https://www.gov.kz/org/kostanai-kalasy-akimat/press/article/details/31852?lang=ru"
+		],
+		"rudny:city": [
+			"https://lisakovsk-museum.gov.kz/wp-content/uploads/2024/04/1-1-4.pdf",
+			"https://www.rii.edu.kz/en/institute-history/"
+		],
+		"pavlodar:city": [
+			"https://www.gov.kz/uploads/2022/4/13/f2798d55c2f9f24f5dad86825839205d_original.1826220.pdf",
+			"https://kazakhstan.travel/ru/attractions/327",
+			"https://dmpv-pav.kz/ru/index.html"
+		],
+		"ekibastuz:city": [
+			"https://el.kz/content-12469_8020/",
+			"https://www.solzhenitsyn.ru/upload/books/Odin_den_Ivana_Denisovicha_kommentarii.pdf",
+			"https://pavlkraimuz.kz/ru/filialy/ekibastuzskij-istoriko-kraevedcheskij-muzej.html"
+		],
+		"oral:city": [
+			"https://wkr.invest.gov.kz/ru/doing-business-here/intro/",
+			"https://kazakhstan.travel/en/attractions/611",
+			"https://kazakhstan.travel/en/attractions/614"
+		],
+		"semey:city": [
+			"https://old.adilet.zan.kz/rus/docs/U070000351_",
+			"https://kazakhstan.travel/en/attractions/567",
+			"https://abai-museum.kz/about-us/?lang=en"
+		],
+		"aktobe:city": [
+			"https://www.gov.kz/memleket/entities/aktobe-akt?lang=ru",
+			"https://aliya-museum.kz/ru/about-the-museum/muzej-t-rikhy",
+			"https://visitaktobe.kz/en/guide/page/aktyubinskij-oblastnoj-memorialnyj-muzej-moldagulovoj",
+			"https://www.visitaktobe.kz/ru/guide/page/aktyubinskij-oblastnoj-planetarij-gkkp-aktyubinskij-oblastnoj-planetarij"
+		],
+		"temirtau:city": [
+			"https://parkhistory.kz/?p=about",
+			"https://temirtau-museum.kz/blog-rukovoditelya/gos-zakupki/11-infotsentr/smi-o-nas/975-rasskazyvayut-raritety.html",
+			"https://www.gov.kz/org/karaganda/press/news/details/1253077",
+			"https://temirtau-museum.kz/en/news/1368-the-first-exhibit.html"
+		],
+		"oskemen:city": [
+			"https://oskemen.info/5979-arhivnye-dokumenty-17191720-godov-o-vybore-mesta-i-osnovanii-ust-kamenogorskoy-kreposti.html",
+			"https://gmirk.kz/images/pdf/kasteevskie-chteniya-2018.pdf",
+			"https://vkoem.kz/index.php/kz/museumhistory/istoriya-muzeya",
+			"https://www.vkoem.kz/index.php/kz/museumhistory/istoriya-muzeya/64-states"
+		],
+		"karaganda:city": [
+			"https://lib.kstu.kz/en/the-history-of-karaganda/",
+			"https://www.gov.kz/memleket/entities/karaganda/press/news/details/473208?lang=en",
+			"https://www.visitkaraganda.kz/en/services/792"
+		],
+		"zhezkazgan:city": [
+			"https://gtg.webhost.uoradea.ro/PDF/GTG-2-2017/249_Aliaskarov.pdf",
+			"https://www.kazakhmys.kz/en/about/history",
+			"https://museum-karaganda.kz/index.php/ru/muzei/jezkazgansk-muzey"
+		],
+		"atyrau:city": [
+			"https://mitropolia.kz/archbishop/worship/9538-mitropolit-aleksandr-sovershil-liturgiyu-v-uspenskom-kafedralnom-sobore-goroda-atyrau.html",
+			"https://kazakhstan.travel/en/attractions/125",
+			"https://www.gov.kz/uploads/2024/12/17/148a062fd29a0cbc1c895e00bcb7cbe2_original.18425835.pdf"
+		],
+		"qyzylorda:city": [
+			"https://docs.historyrussia.org/ru/nodes/394971-postanovlenie-prezidiuma-tsentralnogo-ispolnitelnogo-komiteta-o-pereimenovanii-gor-ak-mechet-v-g-kzyl-orda-24-iyulya-1925-g",
+			"https://e-history.kz/storage/upload/library_ru_files/iblock/77c/77c5ae0e3376c427fefdd015a6d289d5.pdf",
+			"https://www.gov.kz/memleket/entities/mam/press/news/details/1107708?lang=ru"
+		],
+		"aktau:city": [
+			"https://bigenc.ru/c/aktau-031f57?ya_src=serp300",
+			"https://www.gov.kz/org/akimat-goroda-aktau/press/news/details/762966",
+			"https://www-pub.iaea.org/MTCD/Publications/PDF/te_1326_web.pdf"
+		],
+		"almaty:city": [
+			"https://nta.visitalmaty.kz/en/guides/almaty-culture-and-history-day",
+			"https://cathedral.kz/ru/news/mitropolit-aleksandr-provel-rabochee-soveshchanie-po-voprosam-osvyashcheniya-voznesenskogo-kafedralnogo-sobora-alma-aty",
+			"https://almatymuseums.kz/en/vnutrennyaya-muzeya-yhlasa"
+		],
+		"taraz:city": [
+			"https://adilet.zan.kz/rus/docs/U970003315A",
+			"https://ezhelgi-taraz.kz/en/page/arakhan-kesenesi-khi-khii",
+			"https://ezhelgi-taraz.kz/en/page/history"
+		],
+		"shymkent:city": [
+			"https://www.gov.kz/uploads/2020/10/20/ca5b45529fe47b2f1abdccd9fb789641_original.7669485.pdf",
+			"https://oq.gov.kz/en/abai/shymkent-qalashyghy",
+			"https://www.shymkentmuseums.kz/en/museum-departments/department-museum-of-victims-of-political-repression.html"
+		]
+	},
+	"petropavl": {
+		"city": {
+			"en": [
+				"Petropavl grew from the Fort of Saint Peter, established in 1752.",
+				"Petropavl’s Abylai Khan Residence museum complex opened in 2008 to explore the khan’s life and era.",
+				"Petropavl’s regional history museum occupies nineteenth-century buildings formerly owned by the merchant Strelov and the entrepreneur Arkel."
+			],
+			"it": [
+				"Petropavl si sviluppò dal forte di San Pietro, fondato nel 1752.",
+				"Il complesso museale Residenza di Abylai Khan a Petropavl aprì nel 2008 per raccontare la vita e l’epoca del khan.",
+				"Il museo regionale di storia di Petropavl occupa edifici ottocenteschi un tempo appartenuti al mercante Strelov e all’imprenditore Arkel."
+			],
+			"de": [
+				"Petropavl entwickelte sich aus dem 1752 gegründeten Fort Sankt Peter.",
+				"Petropavls Museumskomplex Residenz Abylai Khans wurde 2008 eröffnet und behandelt das Leben und die Epoche des Khans.",
+				"Petropavls regionales Geschichtsmuseum befindet sich in Gebäuden des 19. Jahrhunderts, die einst dem Kaufmann Strelow und dem Unternehmer Arkel gehörten."
+			]
+		}
+	},
+	"kokshetau": {
+		"city": {
+			"en": [
+				"Kokshetau’s Kazakh name means blue mountain.",
+				"Kokshetau’s City History Museum occupies a wooden house where the family of Soviet statesman Valerian Kuibyshev lived from 1889 to 1905.",
+				"Kokshetau’s Malik Gabdullin Museum opened in 1995 to honour the writer, scholar and decorated wartime soldier."
+			],
+			"it": [
+				"Il nome kazako Kokshetau significa montagna azzurra.",
+				"Il Museo di storia della città di Kokshetau occupa una casa in legno dove la famiglia dello statista sovietico Valerian Kujbyšev visse dal 1889 al 1905.",
+				"Il Museo Malik Gabdullin di Kokshetau aprì nel 1995 per ricordare lo scrittore, studioso e soldato decorato durante la guerra."
+			],
+			"de": [
+				"Kokshetaus kasachischer Name bedeutet blauer Berg.",
+				"Kokshetaus Stadtgeschichtsmuseum befindet sich in einem Holzhaus, in dem die Familie des sowjetischen Staatsmanns Walerian Kuibyschew von 1889 bis 1905 lebte.",
+				"Kokshetaus Malik-Gabdullin-Museum wurde 1995 zu Ehren des Schriftstellers, Wissenschaftlers und ausgezeichneten Kriegsteilnehmers eröffnet."
+			]
+		}
+	},
+	"rudny": {
+		"city": {
+			"en": [
+				"Rudny’s name refers to the iron ore deposits that prompted its construction.",
+				"A Soviet decision in 1954 launched construction of Rudny and the Sokolov–Sarbai mining and processing plant.",
+				"Higher technical education began in Rudny in 1959 with an external faculty training engineers and technicians for the mining industry."
+			],
+			"it": [
+				"Il nome Rudny richiama i giacimenti di minerale di ferro che ne determinarono la costruzione.",
+				"Una decisione sovietica del 1954 avviò la costruzione di Rudny e del complesso minerario e di arricchimento Sokolov–Sarbai.",
+				"L’istruzione tecnica superiore iniziò a Rudny nel 1959 con una facoltà per studenti lavoratori che formava ingegneri e tecnici per l’industria mineraria."
+			],
+			"de": [
+				"Rudnys Name bezieht sich auf die Eisenerzlagerstätten, die den Anlass für den Bau der Stadt gaben.",
+				"Ein sowjetischer Beschluss von 1954 leitete den Bau von Rudny und des Bergbau- und Aufbereitungskombinats Sokolow–Sarbai ein.",
+				"Die technische Hochschulausbildung begann in Rudny 1959 mit einer Fakultät für berufsbegleitendes Studium zur Ausbildung von Ingenieuren und Technikern für den Bergbau."
+			]
+		}
+	},
+	"ekibastuz": {
+		"city": {
+			"en": [
+				"Ekibastuz’s Kazakh name is commonly translated as two heads of salt, although several legends explain its origin.",
+				"The writer Aleksandr Solzhenitsyn was imprisoned in the Ekibastuz labour camp from 1950 to 1953.",
+				"Ekibastuz’s local history museum began as a museum department in 1987 and opened its exhibition to visitors in 1997."
+			],
+			"it": [
+				"Il nome kazako Ekibastuz è comunemente tradotto come due teste di sale, ma diverse leggende ne spiegano l’origine.",
+				"Lo scrittore Aleksandr Solženicyn fu prigioniero nel campo di lavoro di Ekibastuz dal 1950 al 1953.",
+				"Il museo di storia locale di Ekibastuz nacque come sezione museale nel 1987 e aprì la sua esposizione ai visitatori nel 1997."
+			],
+			"de": [
+				"Ekibastuz’ kasachischer Name wird gewöhnlich mit zwei Köpfe Salz übersetzt, doch mehrere Legenden erklären seine Herkunft.",
+				"Der Schriftsteller Alexander Solschenizyn war von 1950 bis 1953 im Arbeitslager von Ekibastuz inhaftiert.",
+				"Ekibastuz’ Heimatmuseum entstand 1987 als Museumsabteilung und öffnete seine Ausstellung 1997 für Besucher."
+			]
+		}
+	},
+	"oral": {
+		"city": {
+			"en": [
+				"Oral is also known as Uralsk, the Russian name adopted in 1775 in place of Yaitsky Gorodok.",
+				"Alexander Pushkin visited Oral in 1833 while researching the Pugachev rebellion.",
+				"Oral’s Pugachev House-Museum occupies an eighteenth-century Cossack house associated with the rebel leader’s marriage in 1774."
+			],
+			"it": [
+				"Oral è conosciuta anche come Uralsk, nome russo adottato nel 1775 al posto di Yaitsky Gorodok.",
+				"Aleksandr Puškin visitò Oral nel 1833 per svolgere ricerche sulla rivolta di Pugačëv.",
+				"La casa-museo Pugačëv di Oral occupa una casa cosacca del Settecento legata al matrimonio del capo ribelle nel 1774."
+			],
+			"de": [
+				"Oral ist auch als Uralsk bekannt, dem 1775 anstelle von Jaizki Gorodok eingeführten russischen Namen.",
+				"Alexander Puschkin besuchte Oral 1833 bei seinen Recherchen zum Pugatschow-Aufstand.",
+				"Orals Pugatschow-Hausmuseum befindet sich in einem Kosakenhaus des 18. Jahrhunderts, das mit der Hochzeit des Rebellenführers 1774 verbunden ist."
+			]
+		}
+	},
+	"semey": {
+		"city": {
+			"en": [
+				"Semey was officially renamed from Semipalatinsk by a presidential decree of 21 June 2007.",
+				"Semey’s Dostoevsky Museum occupies a house where the writer lived from 1857 to 1859.",
+				"Semey’s Abai Museum opened to visitors in 1940 and preserves the legacy of the Kazakh poet and thinker."
+			],
+			"it": [
+				"Semey assunse ufficialmente questo nome al posto di Semipalatinsk con un decreto presidenziale del 21 giugno 2007.",
+				"Il Museo Dostoevskij di Semey occupa una casa dove lo scrittore visse dal 1857 al 1859.",
+				"Il Museo Abai di Semey aprì ai visitatori nel 1940 e conserva l’eredità del poeta e pensatore kazako."
+			],
+			"de": [
+				"Semey wurde durch einen Präsidialerlass vom 21. Juni 2007 offiziell von Semipalatinsk in Semey umbenannt.",
+				"Semeys Dostojewski-Museum befindet sich in einem Haus, in dem der Schriftsteller von 1857 bis 1859 lebte.",
+				"Semeys Abai-Museum wurde 1940 für Besucher eröffnet und bewahrt das Erbe des kasachischen Dichters und Denkers."
+			]
+		}
+	},
+	"temirtau": {
+		"city": {
+			"en": [
+				"Temirtau’s Kazakh name means iron mountain, and replaced Samarkandsky when the settlement became a city in 1945.",
+				"Temirtau’s first blast furnace produced pig iron on 3 July 1960, a milestone in the development of its metallurgical combine.",
+				"Temirtau’s local history museum opened to visitors on 6 November 1973 in a building originally intended as a shopping centre."
+			],
+			"it": [
+				"Il nome kazako Temirtau significa montagna di ferro e sostituì Samarkandsky quando l’insediamento divenne città nel 1945.",
+				"Il primo altoforno di Temirtau produsse ghisa il 3 luglio 1960, una tappa nello sviluppo del suo complesso metallurgico.",
+				"Il museo di storia locale di Temirtau aprì ai visitatori il 6 novembre 1973 in un edificio originariamente destinato a centro commerciale."
+			],
+			"de": [
+				"Temirtaus kasachischer Name bedeutet Eisenberg und ersetzte Samarkandski, als die Siedlung 1945 Stadt wurde.",
+				"Temirtaus erster Hochofen erzeugte am 3. Juli 1960 Roheisen, einen Meilenstein in der Entwicklung des Metallurgiekombinats.",
+				"Temirtaus Heimatmuseum wurde am 6. November 1973 in einem ursprünglich als Einkaufszentrum vorgesehenen Gebäude für Besucher eröffnet."
+			]
+		}
+	},
+	"oskemen": {
+		"city": {
+			"en": [
+				"Oskemen grew from the Ust-Kamenogorsk fortress founded in 1720.",
+				"Oskemen’s East Kazakhstan Museum of Arts was established in 1990 to preserve visual art, literature and music.",
+				"The ethnographic museum now based in Oskemen began in a village school at Butakovo in 1968 and moved to the city in 1983."
+			],
+			"it": [
+				"Oskemen si sviluppò dalla fortezza di Ust-Kamenogorsk fondata nel 1720.",
+				"Il Museo delle arti del Kazakistan orientale a Oskemen fu istituito nel 1990 per conservare arti visive, letteratura e musica.",
+				"Il museo etnografico oggi con sede a Oskemen nacque in una scuola del villaggio di Butakovo nel 1968 e si trasferì in città nel 1983."
+			],
+			"de": [
+				"Oskemen entwickelte sich aus der 1720 gegründeten Festung Ust-Kamenogorsk.",
+				"Oskemens Ostkasachisches Kunstmuseum wurde 1990 zur Bewahrung von bildender Kunst, Literatur und Musik eingerichtet.",
+				"Das heute in Oskemen ansässige ethnografische Museum entstand 1968 in einer Dorfschule in Butakowo und zog 1983 in die Stadt."
+			]
+		}
+	},
+	"zhezkazgan": {
+		"city": {
+			"en": [
+				"Zhezkazgan’s name combines the Kazakh words for copper and digging.",
+				"Zhezkazgan’s copper smelter produced its first cathode copper on 23 February 1971.",
+				"Zhezkazgan’s History and Archaeology Museum was established in 1978 from the mining and metallurgical combine’s historical collection."
+			],
+			"it": [
+				"Il nome Zhezkazgan unisce le parole kazake per rame e scavo.",
+				"La fonderia di rame di Zhezkazgan produsse il suo primo rame catodico il 23 febbraio 1971.",
+				"Il Museo di storia e archeologia di Zhezkazgan fu istituito nel 1978 a partire dalla collezione storica del complesso minerario e metallurgico."
+			],
+			"de": [
+				"Zhezkazgans Name verbindet die kasachischen Wörter für Kupfer und Graben.",
+				"Zhezkazgans Kupferhütte erzeugte am 23. Februar 1971 ihr erstes Kathodenkupfer.",
+				"Zhezkazgans Geschichts- und Archäologiemuseum entstand 1978 aus der historischen Sammlung des Bergbau- und Metallurgiekombinats."
+			]
+		}
+	},
+	"qyzylorda": {
+		"city": {
+			"en": [
+				"Qyzylorda was formerly Ak-Mechet and received the name Kzyl-Orda in 1925.",
+				"Qyzylorda served as the capital of the Kazakh Autonomous Soviet Socialist Republic from 1925 to 1929.",
+				"The professional Kazakh theatre that later became the Mukhtar Auezov National Theatre opened in Qyzylorda on 13 January 1926."
+			],
+			"it": [
+				"Qyzylorda si chiamava in precedenza Ak-Mechet e ricevette il nome Kzyl-Orda nel 1925.",
+				"Qyzylorda fu capitale della Repubblica socialista sovietica autonoma kazaka dal 1925 al 1929.",
+				"Il teatro professionale kazako poi divenuto Teatro nazionale Mukhtar Auezov aprì a Qyzylorda il 13 gennaio 1926."
+			],
+			"de": [
+				"Qyzylorda hieß früher Ak-Metschet und erhielt 1925 den Namen Ksyl-Orda.",
+				"Qyzylorda war von 1925 bis 1929 Hauptstadt der Kasachischen Autonomen Sozialistischen Sowjetrepublik.",
+				"Das professionelle kasachische Theater, aus dem später das Nationaltheater Mukhtar Auezov hervorging, wurde am 13. Januar 1926 in Qyzylorda eröffnet."
+			]
+		}
+	},
+	"aktau": {
+		"city": {
+			"en": [
+				"Aktau was called Shevchenko from 1964 to 1991 in honour of the Ukrainian poet Taras Shevchenko.",
+				"Aktau’s Melovoy Lighthouse was installed on the roof of a residential building in 1974.",
+				"The BN-350 reactor near Aktau supplied energy for electricity and seawater desalination from 1973 until its shutdown in 1999."
+			],
+			"it": [
+				"Aktau si chiamò Shevchenko dal 1964 al 1991 in onore del poeta ucraino Taras Ševčenko.",
+				"Il faro Melovoy di Aktau fu installato sul tetto di un edificio residenziale nel 1974.",
+				"Il reattore BN-350 presso Aktau fornì energia per la produzione di elettricità e la desalinizzazione dell’acqua marina dal 1973 fino alla chiusura nel 1999."
+			],
+			"de": [
+				"Aktau hieß von 1964 bis 1991 zu Ehren des ukrainischen Dichters Taras Schewtschenko Schewtschenko.",
+				"Aktaus Leuchtturm Melovoy wurde 1974 auf dem Dach eines Wohnhauses installiert.",
+				"Der Reaktor BN-350 bei Aktau lieferte von 1973 bis zu seiner Stilllegung 1999 Energie zur Stromerzeugung und Meerwasserentsalzung."
+			]
+		}
+	},
+	"taraz": {
+		"city": {
+			"en": [
+				"Taraz recovered its historic name in 1997, replacing Zhambyl by presidential decree.",
+				"Taraz’s Karakhan Mausoleum was rebuilt in 1906 on the site of a medieval tomb.",
+				"Taraz’s archaeological park preserves tenth- to twelfth-century urban remains, including a hammam, caravanserais and a water-supply system."
+			],
+			"it": [
+				"Taraz recuperò il nome storico nel 1997, sostituendo Zhambyl con un decreto presidenziale.",
+				"Il mausoleo Karakhan di Taraz fu ricostruito nel 1906 sul sito di una tomba medievale.",
+				"Il parco archeologico di Taraz conserva resti urbani dal X al XII secolo, tra cui un hammam, caravanserragli e un sistema di approvvigionamento idrico."
+			],
+			"de": [
+				"Taraz erhielt 1997 durch einen Präsidialerlass anstelle von Zhambyl seinen historischen Namen zurück.",
+				"Taraz’ Karakhan-Mausoleum wurde 1906 an der Stelle eines mittelalterlichen Grabmals neu errichtet.",
+				"Taraz’ archäologischer Park bewahrt städtische Überreste aus dem 10. bis 12. Jahrhundert, darunter ein Hammam, Karawansereien und eine Wasserversorgung."
+			]
+		}
+	},
+	"shymkent": {
+		"city": {
+			"en": [
+				"Shymkent was formerly officially called Chimkent, a name form used until 1992.",
+				"Shymkent’s Shym Kala historical complex opened in 2021 around the excavated remains of the old settlement.",
+				"Shymkent’s Museum of Victims of Political Repression opened on 2 November 2001 to document Soviet persecution."
+			],
+			"it": [
+				"Shymkent era ufficialmente chiamata Chimkent, forma del nome usata fino al 1992.",
+				"Il complesso storico Shym Kala di Shymkent aprì nel 2021 attorno ai resti scavati dell’antico insediamento.",
+				"Il Museo delle vittime della repressione politica di Shymkent aprì il 2 novembre 2001 per documentare le persecuzioni sovietiche."
+			],
+			"de": [
+				"Shymkent hieß früher amtlich Chimkent, eine bis 1992 verwendete Namensform.",
+				"Shymkents historischer Komplex Shym Kala wurde 2021 rund um die ausgegrabenen Überreste der alten Siedlung eröffnet.",
+				"Shymkents Museum der Opfer politischer Repression wurde am 2. November 2001 zur Dokumentation sowjetischer Verfolgung eröffnet."
 			]
 		}
 	}

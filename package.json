@@ -2,7 +2,7 @@
 	"name": "geoclick",
 	"author": "Diego Amicabile",
 	"private": true,
-	"version": "0.20.0",
+	"version": "1.0.0",
 	"type": "module",
 	"workspaces": [
 		"app",
@@ -13,7 +13,7 @@
 	"scripts": {
 		"dev": "npm run dev --workspace=app",
 		"build": "npm run build --workspaces --if-present",
-		"test": "node --test scripts/migrate-releases.test.mjs && npm run test --workspaces --if-present",
+		"test": "node --test scripts/migrate-releases.test.mjs scripts/html5.test.mjs scripts/release-assets.test.mjs && npm run test --workspaces --if-present",
 		"check": "npm run check --workspaces --if-present && tsc -p data/tsconfig.json",
 		"lint": "npm run lint --workspace=app && prettier --config app/prettier.config.js --check data/scripts && eslint --config app/eslint.config.js data/scripts",
 		"format": "npm run format --workspace=app && prettier --config app/prettier.config.js --write data/scripts",

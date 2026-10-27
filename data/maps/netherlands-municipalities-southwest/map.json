@@ -2,8 +2,9 @@
 	"id": "netherlands-municipalities-southwest",
 	"name": "Netherlands — Municipalities — South-West",
 	"country": "Netherlands",
-	"attribution": "Kadaster / CBS via geoBoundaries (CC0); Natural Earth (public domain), https://www.naturalearthdata.com",
-	"boundarySource": "data/source/geoboundaries/NLD-ADM2.geojson",
+	"attribution": "Kadaster / CBS via geoBoundaries (CC0); Voorne aan Zee merger reconstructed by dissolving its three predecessors; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/boundaries/netherlands-municipalities-2026.geojson",
+	"boundaryFacts": true,
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{
@@ -22,7 +23,7 @@
 				4.6117,
 				52.3136
 			],
-			"colorIndex": 3,
+			"colorIndex": 1,
 			"spine": {
 				"curve": [
 					[
@@ -57,7 +58,7 @@
 				4.5637,
 				52.3325
 			],
-			"colorIndex": 1,
+			"colorIndex": 5,
 			"spine": {
 				"curve": [
 					[
@@ -92,7 +93,7 @@
 				4.5727,
 				52.2866
 			],
-			"colorIndex": 2,
+			"colorIndex": 0,
 			"spine": {
 				"curve": [
 					[
@@ -127,7 +128,7 @@
 				4.5584,
 				52.255
 			],
-			"colorIndex": 5,
+			"colorIndex": 3,
 			"spine": {
 				"curve": [
 					[
@@ -197,7 +198,7 @@
 				4.4641,
 				52.2252
 			],
-			"colorIndex": 0,
+			"colorIndex": 4,
 			"spine": {
 				"curve": [
 					[
@@ -232,7 +233,7 @@
 				4.4976,
 				52.2002
 			],
-			"colorIndex": 1,
+			"colorIndex": 5,
 			"spine": {
 				"curve": [
 					[
@@ -267,7 +268,7 @@
 				4.8922,
 				52.2267
 			],
-			"colorIndex": 3,
+			"colorIndex": 0,
 			"spine": {
 				"curve": [
 					[
@@ -337,7 +338,7 @@
 				4.524,
 				52.184
 			],
-			"colorIndex": 4,
+			"colorIndex": 2,
 			"spine": {
 				"curve": [
 					[
@@ -372,7 +373,7 @@
 				4.443,
 				52.1927
 			],
-			"colorIndex": 3,
+			"colorIndex": 1,
 			"spine": {
 				"curve": [
 					[
@@ -407,7 +408,7 @@
 				4.4645,
 				52.1453
 			],
-			"colorIndex": 5,
+			"colorIndex": 3,
 			"spine": {
 				"curve": [
 					[
@@ -512,7 +513,7 @@
 				4.4922,
 				52.1273
 			],
-			"colorIndex": 2,
+			"colorIndex": 0,
 			"spine": {
 				"curve": [
 					[
@@ -1037,7 +1038,7 @@
 				4.417,
 				51.9634
 			],
-			"colorIndex": 3,
+			"colorIndex": 0,
 			"spine": {
 				"curve": [
 					[
@@ -1072,7 +1073,7 @@
 				5.1802,
 				51.9999
 			],
-			"colorIndex": 4,
+			"colorIndex": 2,
 			"spine": {
 				"curve": [
 					[
@@ -1204,13 +1205,13 @@
 			"aliases": [],
 			"centroid": [
 				4.5838,
-				51.917
+				51.91705
 			],
 			"bbox": [
 				4.5499,
 				51.903,
 				4.6177,
-				51.931
+				51.9311
 			],
 			"colorIndex": 3,
 			"spine": {
@@ -1247,7 +1248,7 @@
 				5.0269,
 				51.9509
 			],
-			"colorIndex": 3,
+			"colorIndex": 1,
 			"spine": {
 				"curve": [
 					[
@@ -1264,76 +1265,6 @@
 					]
 				],
 				"aspect": 2.33
-			}
-		},
-		{
-			"id": "brielle",
-			"name": "Brielle",
-			"type": "region",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				4.1874,
-				51.89055
-			],
-			"bbox": [
-				4.1354,
-				51.8497,
-				4.2394,
-				51.9314
-			],
-			"colorIndex": 2,
-			"spine": {
-				"curve": [
-					[
-						4.1514,
-						51.9143
-					],
-					[
-						4.186,
-						51.8925
-					],
-					[
-						4.2093,
-						51.8659
-					]
-				],
-				"aspect": 1.61
-			}
-		},
-		{
-			"id": "westvoorne",
-			"name": "Westvoorne",
-			"type": "region",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				4.05545,
-				51.8877
-			],
-			"bbox": [
-				3.9556,
-				51.8421,
-				4.1553,
-				51.9333
-			],
-			"colorIndex": 0,
-			"spine": {
-				"curve": [
-					[
-						3.9814,
-						51.886
-					],
-					[
-						4.0553,
-						51.8879
-					],
-					[
-						4.1293,
-						51.896
-					]
-				],
-				"aspect": 1.28
 			}
 		},
 		{
@@ -1372,6 +1303,41 @@
 			}
 		},
 		{
+			"id": "voorne-aan-zee",
+			"name": "Voorne aan Zee",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.0975,
+				51.8622
+			],
+			"bbox": [
+				3.9556,
+				51.7911,
+				4.2394,
+				51.9333
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						3.992,
+						51.8902
+					],
+					[
+						4.0935,
+						51.8704
+					],
+					[
+						4.1949,
+						51.8601
+					]
+				],
+				"aspect": 1.09
+			}
+		},
+		{
 			"id": "alblasserdam",
 			"name": "Alblasserdam",
 			"type": "region",
@@ -1387,7 +1353,7 @@
 				4.6832,
 				51.8807
 			],
-			"colorIndex": 1,
+			"colorIndex": 0,
 			"spine": {
 				"curve": [
 					[
@@ -1422,7 +1388,7 @@
 				4.4891,
 				51.8723
 			],
-			"colorIndex": 2,
+			"colorIndex": 4,
 			"spine": {
 				"curve": [
 					[
@@ -1492,7 +1458,7 @@
 				4.6726,
 				51.8697
 			],
-			"colorIndex": 0,
+			"colorIndex": 3,
 			"spine": {
 				"curve": [
 					[
@@ -1527,7 +1493,7 @@
 				5.0264,
 				51.8636
 			],
-			"colorIndex": 5,
+			"colorIndex": 3,
 			"spine": {
 				"curve": [
 					[
@@ -1547,41 +1513,6 @@
 			}
 		},
 		{
-			"id": "hellevoetsluis",
-			"name": "Hellevoetsluis",
-			"type": "region",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				4.13105,
-				51.836349999999996
-			],
-			"bbox": [
-				4.0398,
-				51.7911,
-				4.2223,
-				51.8816
-			],
-			"colorIndex": 1,
-			"spine": {
-				"curve": [
-					[
-						4.0702,
-						51.8334
-					],
-					[
-						4.1342,
-						51.847
-					],
-					[
-						4.1982,
-						51.8227
-					]
-				],
-				"aspect": 1.59
-			}
-		},
-		{
 			"id": "papendrecht",
 			"name": "Papendrecht",
 			"type": "region",
@@ -1597,7 +1528,7 @@
 				4.7428,
 				51.8485
 			],
-			"colorIndex": 4,
+			"colorIndex": 2,
 			"spine": {
 				"curve": [
 					[
@@ -1667,7 +1598,7 @@
 				4.927,
 				51.8464
 			],
-			"colorIndex": 4,
+			"colorIndex": 2,
 			"spine": {
 				"curve": [
 					[
@@ -1693,32 +1624,32 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				4.3088999999999995,
+				4.31255,
 				51.82915
 			],
 			"bbox": [
-				4.1853,
+				4.1926,
 				51.7853,
 				4.4325,
 				51.873
 			],
-			"colorIndex": 3,
+			"colorIndex": 2,
 			"spine": {
 				"curve": [
 					[
-						4.2167,
-						51.8226
+						4.2149,
+						51.8195
 					],
 					[
-						4.2832,
-						51.8529
+						4.2792,
+						51.8534
 					],
 					[
-						4.3617,
-						51.84
+						4.3588,
+						51.8442
 					]
 				],
-				"aspect": 1.71
+				"aspect": 1.69
 			}
 		},
 		{
@@ -1737,7 +1668,7 @@
 				4.6717,
 				51.8471
 			],
-			"colorIndex": 1,
+			"colorIndex": 4,
 			"spine": {
 				"curve": [
 					[
@@ -1772,7 +1703,7 @@
 				4.8846,
 				51.8222
 			],
-			"colorIndex": 0,
+			"colorIndex": 1,
 			"spine": {
 				"curve": [
 					[
@@ -1833,29 +1764,29 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				4.098599999999999,
+				4.09865,
 				51.7512
 			],
 			"bbox": [
 				3.7737,
 				51.6438,
-				4.4235,
+				4.4236,
 				51.8586
 			],
-			"colorIndex": 4,
+			"colorIndex": 1,
 			"spine": {
 				"curve": [
 					[
 						3.87,
-						51.8115
+						51.8114
 					],
 					[
-						4.119,
-						51.7719
+						4.1193,
+						51.7722
 					],
 					[
 						4.3231,
-						51.6733
+						51.6734
 					]
 				],
 				"aspect": 3.31
@@ -1877,7 +1808,7 @@
 				4.2027,
 				51.7815
 			],
-			"colorIndex": 1,
+			"colorIndex": 5,
 			"spine": {
 				"curve": [
 					[
@@ -1912,7 +1843,7 @@
 				4.2428,
 				51.6608
 			],
-			"colorIndex": 0,
+			"colorIndex": 4,
 			"spine": {
 				"curve": [
 					[
@@ -1947,7 +1878,7 @@
 				3.961,
 				51.6079
 			],
-			"colorIndex": 2,
+			"colorIndex": 0,
 			"spine": {
 				"curve": [
 					[
@@ -1982,7 +1913,7 @@
 				3.7489,
 				51.6504
 			],
-			"colorIndex": 3,
+			"colorIndex": 1,
 			"spine": {
 				"curve": [
 					[
@@ -2017,7 +1948,7 @@
 				3.9652,
 				51.5534
 			],
-			"colorIndex": 0,
+			"colorIndex": 4,
 			"spine": {
 				"curve": [
 					[
@@ -2052,7 +1983,7 @@
 				3.7136,
 				51.5352
 			],
-			"colorIndex": 4,
+			"colorIndex": 2,
 			"spine": {
 				"curve": [
 					[
@@ -2087,7 +2018,7 @@
 				4.0131,
 				51.5515
 			],
-			"colorIndex": 5,
+			"colorIndex": 3,
 			"spine": {
 				"curve": [
 					[
@@ -2122,7 +2053,7 @@
 				3.738,
 				51.6164
 			],
-			"colorIndex": 2,
+			"colorIndex": 0,
 			"spine": {
 				"curve": [
 					[
@@ -2192,7 +2123,7 @@
 				3.9632,
 				51.5025
 			],
-			"colorIndex": 1,
+			"colorIndex": 5,
 			"spine": {
 				"curve": [
 					[
@@ -2227,7 +2158,7 @@
 				4.2368,
 				51.422
 			],
-			"colorIndex": 5,
+			"colorIndex": 3,
 			"spine": {
 				"curve": [
 					[
@@ -2262,7 +2193,7 @@
 				3.7124,
 				51.409
 			],
-			"colorIndex": 0,
+			"colorIndex": 4,
 			"spine": {
 				"curve": [
 					[
@@ -2297,7 +2228,7 @@
 				4.0057,
 				51.3976
 			],
-			"colorIndex": 4,
+			"colorIndex": 1,
 			"spine": {
 				"curve": [
 					[
@@ -2354,15 +2285,13 @@
 		"vlaardingen",
 		"krimpen-aan-den-ijssel",
 		"molenlanden",
-		"brielle",
-		"westvoorne",
 		"ridderkerk",
+		"voorne-aan-zee",
 		"alblasserdam",
 		"albrandswaard",
 		"barendrecht",
 		"hendrik-ido-ambacht",
 		"gorinchem",
-		"hellevoetsluis",
 		"papendrecht",
 		"sliedrecht",
 		"hardinxveld-giessendam",

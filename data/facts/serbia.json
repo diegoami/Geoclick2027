@@ -3,7 +3,9 @@
 		"Name-facts for Serbia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the 25 districts, each as a \"region\" entry (en, it, de); Belgrade sits beside the city of the same id."
+		"v0.19 added the 25 districts, each as a \"region\" entry (en, it, de); Belgrade sits beside the city of the same id.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"belgrade": {
 		"city": {
@@ -44,61 +46,76 @@
 	"cacak": {
 		"city": {
 			"en": [
-				"A town on the Western Morava, in the region known for the Guča trumpet festival."
+				"Its medieval predecessor was known as Gradac.",
+				"Nearby Guča became famous for its trumpet festival.",
+				"Roman bath remains survive in the town centre."
 			],
 			"it": [
-				"Una città sulla Morava occidentale, nella regione famosa per il festival delle trombe di Guča."
+				"Il predecessore medievale era noto come Gradac.",
+				"La vicina Guča divenne famosa per il festival delle trombe.",
+				"Resti di terme romane sopravvivono nel centro cittadino."
 			],
 			"de": [
-				"Eine Stadt an der Westlichen Morava, in der Region, die für das Trompetenfestival von Guča bekannt ist."
+				"Der mittelalterliche Vorgänger war als Gradac bekannt.",
+				"Das nahe Guča wurde durch sein Trompetenfestival bekannt.",
+				"Im Stadtzentrum sind Reste römischer Bäder erhalten."
 			]
 		}
 	},
 	"kragujevac": {
 		"city": {
 			"en": [
-				"The first capital of modern Serbia, from 1818 to 1841.",
-				"The Zastava works here made the Yugo car."
+				"Tradition links its name to kraguj, an old word for a bird of prey.",
+				"It was modern Serbia’s capital from 1818 to 1841.",
+				"The Zastava factories produced the Yugo car."
 			],
 			"it": [
-				"La prima capitale della Serbia moderna, dal 1818 al 1841.",
-				"Qui le officine Zastava producevano l’automobile Yugo."
+				"La tradizione collega il nome a kraguj, un antico termine per un rapace.",
+				"Fu la capitale della Serbia moderna dal 1818 al 1841.",
+				"Le fabbriche Zastava produssero l’automobile Yugo."
 			],
 			"de": [
-				"Die erste Hauptstadt des modernen Serbiens, von 1818 bis 1841.",
-				"Die Zastava-Werke hier bauten das Auto Yugo."
+				"Die Überlieferung verbindet den Namen mit kraguj, einem alten Wort für einen Greifvogel.",
+				"Die Stadt war von 1818 bis 1841 Hauptstadt des modernen Serbien.",
+				"Die Zastava-Werke stellten das Auto Yugo her."
 			]
 		}
 	},
 	"nis": {
 		"city": {
 			"en": [
-				"The emperor Constantine the Great was born here.",
-				"Its Skull Tower was built by the Ottomans in 1809 from the skulls of Serbian rebels."
+				"The Roman city was called Naissus.",
+				"Constantine the Great was born here.",
+				"Skull Tower dates from the aftermath of the Battle of Čegar in 1809."
 			],
 			"it": [
-				"Qui nacque l’imperatore Costantino il Grande.",
-				"La sua Torre dei teschi fu costruita dagli Ottomani nel 1809 con i crani di ribelli serbi."
+				"La città romana si chiamava Naissus.",
+				"Costantino il Grande nacque qui.",
+				"La Torre dei teschi risale alle conseguenze della battaglia di Čegar del 1809."
 			],
 			"de": [
-				"Kaiser Konstantin der Große wurde hier geboren.",
-				"Ihr Schädelturm wurde 1809 von den Osmanen aus den Schädeln serbischer Aufständischer gebaut."
+				"Die römische Stadt hieß Naissus.",
+				"Konstantin der Große wurde hier geboren.",
+				"Der Schädelturm entstand nach der Schlacht von Čegar im Jahr 1809."
 			]
 		}
 	},
 	"novi-sad": {
 		"city": {
 			"en": [
-				"\"New plantation\".",
-				"The EXIT music festival has been held in its Petrovaradin fortress since 2001."
+				"Its name means new plantation or new garden.",
+				"The EXIT festival moved to Petrovaradin Fortress in 2001.",
+				"The Matica Srpska cultural institution moved here in 1864."
 			],
 			"it": [
-				"\"Nuova piantagione\".",
-				"Il festival musicale EXIT si tiene dal 2001 nella sua fortezza di Petrovaradin."
+				"Il nome significa nuova piantagione o nuovo giardino.",
+				"Il festival EXIT si trasferì nella fortezza di Petrovaradin nel 2001.",
+				"L’istituzione culturale Matica Srpska si trasferì qui nel 1864."
 			],
 			"de": [
-				"„Neue Pflanzung“.",
-				"Das Musikfestival EXIT findet seit 2001 in ihrer Festung Petrovaradin statt."
+				"Der Name bedeutet neue Pflanzung oder neuer Garten.",
+				"Das EXIT-Festival zog 2001 in die Festung Petrovaradin.",
+				"Die Kulturinstitution Matica Srpska zog 1864 hierher."
 			]
 		}
 	},
@@ -314,19 +331,36 @@
 	"bor": {
 		"region": {
 			"en": [
-				"Bor means \"pine\" in Serbian.",
-				"Copper has been mined at Bor since 1904, and its mine is among the largest in Europe.",
-				"The district borders both Romania and Bulgaria."
+				"Bor District takes its name from its administrative seat, the town of Bor.",
+				"Lepenski Vir in Bor District preserves prehistoric trapezoidal house foundations and monumental stone sculptures.",
+				"Composer Stevan Stojanović Mokranjac was born in Negotin, in present-day Bor District, in 1856."
 			],
 			"it": [
-				"Bor significa \"pino\" in serbo.",
-				"A Bor si estrae rame dal 1904 e la sua miniera è tra le più grandi d’Europa.",
-				"Il distretto confina sia con la Romania sia con la Bulgaria."
+				"Il distretto di Bor prende il nome dalla propria sede amministrativa, la città di Bor.",
+				"Lepenski Vir, nel distretto di Bor, conserva fondamenta preistoriche di case trapezoidali e sculture monumentali in pietra.",
+				"Il compositore Stevan Stojanović Mokranjac nacque nel 1856 a Negotin, nell’attuale distretto di Bor."
 			],
 			"de": [
-				"Bor bedeutet auf Serbisch „Kiefer“.",
-				"In Bor wird seit 1904 Kupfer abgebaut, und die Mine gehört zu den größten Europas.",
-				"Der Bezirk grenzt sowohl an Rumänien als auch an Bulgarien."
+				"Der Bezirk Bor ist nach seinem Verwaltungssitz, der Stadt Bor, benannt.",
+				"Lepenski Vir im Bezirk Bor bewahrt prähistorische trapezförmige Hausfundamente und monumentale Steinskulpturen.",
+				"Der Komponist Stevan Stojanović Mokranjac wurde 1856 in Negotin im heutigen Bezirk Bor geboren."
+			]
+		},
+		"city": {
+			"en": [
+				"Bor means pine in Serbian.",
+				"Bor’s copper mine opened in 1903 and drove the settlement’s industrial development.",
+				"Bor’s Museum of Mining and Metallurgy preserves the history of mining and metalworking from prehistory to the modern industrial period."
+			],
+			"it": [
+				"Bor significa pino in serbo.",
+				"La miniera di rame di Bor aprì nel 1903 e determinò lo sviluppo industriale dell’insediamento.",
+				"Il Museo minerario e metallurgico di Bor conserva la storia dell’estrazione e della lavorazione dei metalli dalla preistoria al periodo industriale moderno."
+			],
+			"de": [
+				"Bor bedeutet auf Serbisch Kiefer.",
+				"Bors Kupfermine wurde 1903 eröffnet und trieb die industrielle Entwicklung der Siedlung voran.",
+				"Bors Museum für Bergbau und Metallurgie bewahrt die Geschichte des Bergbaus und der Metallverarbeitung von der Vorgeschichte bis zum modernen Industriezeitalter."
 			]
 		}
 	},
@@ -403,6 +437,23 @@
 				"Zaječar kommt wahrscheinlich von zec, „Hase“.",
 				"Felix Romuliana, der Palast, den Kaiser Galerius um 300 bei Gamzigrad erbauen ließ, ist Welterbe.",
 				"Die Stara Planina, das Balkangebirge, erhebt sich entlang der Grenze zu Bulgarien."
+			]
+		},
+		"city": {
+			"en": [
+				"Zaječar appears by name in an Ottoman population register from 1466.",
+				"Zaječar’s Gitarijada rock festival developed as a competition for emerging bands.",
+				"Zaječar’s National Museum preserves a porphyry portrait head of Emperor Galerius found at nearby Felix Romuliana."
+			],
+			"it": [
+				"Il nome Zaječar compare in un registro della popolazione ottomano del 1466.",
+				"Il festival rock Gitarijada di Zaječar si sviluppò come concorso per gruppi emergenti.",
+				"Il Museo nazionale di Zaječar conserva una testa-ritratto in porfido dell’imperatore Galerio, rinvenuta nella vicina Felix Romuliana."
+			],
+			"de": [
+				"Der Name Zaječar erscheint in einem osmanischen Bevölkerungsregister von 1466.",
+				"Zaječars Rockfestival Gitarijada entwickelte sich als Wettbewerb für Nachwuchsbands.",
+				"Das Nationalmuseum in Zaječar bewahrt einen Porträtkopf von Kaiser Galerius aus Porphyr, der im nahe gelegenen Felix Romuliana gefunden wurde."
 			]
 		}
 	},
@@ -518,6 +569,23 @@
 				"Die Kelims von Pirot, gewebte Teppiche mit kräftigen geometrischen Mustern, stehen auf der UNESCO-Liste des immateriellen Kulturerbes.",
 				"Der Bezirk liegt an der Grenze zu Bulgarien, an der Strecke nach Sofia."
 			]
+		},
+		"city": {
+			"en": [
+				"Pirot occupies the site traditionally identified with Turres, a station named in Roman road itineraries.",
+				"Pirot’s kilim-weaving tradition makes patterned woollen rugs on vertical looms and is recorded in Serbia’s national intangible heritage register.",
+				"Pirot’s Museum of Ponišavlje occupies the house of merchant Hrista Jovanović, known as Mali Rista, completed in 1848."
+			],
+			"it": [
+				"Pirot occupa il sito tradizionalmente identificato con Turres, una stazione menzionata negli itinerari stradali romani.",
+				"La tradizione dei kilim di Pirot produce tappeti di lana decorati su telai verticali ed è iscritta nel registro nazionale serbo del patrimonio immateriale.",
+				"Il Museo del Ponišavlje di Pirot occupa la casa del mercante Hrista Jovanović, detto Mali Rista, completata nel 1848."
+			],
+			"de": [
+				"Pirot liegt am Ort, der traditionell mit Turres identifiziert wird, einer in römischen Straßenverzeichnissen genannten Station.",
+				"Pirots Kilimweberei fertigt gemusterte Wollteppiche auf senkrechten Webstühlen und ist in Serbiens nationalem Register des immateriellen Erbes verzeichnet.",
+				"Das Ponišavlje-Museum in Pirot befindet sich im 1848 vollendeten Haus des Kaufmanns Hrista Jovanović, genannt Mali Rista."
+			]
 		}
 	},
 	"jablanica": {
@@ -555,6 +623,623 @@
 				"Benannt nach dem Fluss Pčinja.",
 				"Vranje, der Verwaltungssitz, ist die Heimatstadt des Schriftstellers Bora Stanković, dessen Erzählungen das alte Vranje beschwören.",
 				"Der Bezirk grenzt an Nordmazedonien, im äußersten Süden Serbiens."
+			]
+		}
+	},
+	"_sources": {
+		"novi-sad:city": [
+			"https://en.wikipedia.org/wiki/Novi_Sad",
+			"https://en.wikipedia.org/wiki/Exit_(festival)",
+			"https://en.wikipedia.org/wiki/Matica_srpska"
+		],
+		"kragujevac:city": [
+			"https://arhiva.kragujevac.rs/en/discovering-kragujevac/history/",
+			"https://en.wikipedia.org/wiki/Zastava_Automobiles"
+		],
+		"cacak:city": [
+			"https://en.wikipedia.org/wiki/Čačak",
+			"https://en.wikipedia.org/wiki/Guča_Trumpet_Festival"
+		],
+		"nis:city": [
+			"https://en.wikipedia.org/wiki/Niš",
+			"https://en.wikipedia.org/wiki/Skull_Tower"
+		],
+		"subotica:city": [
+			"https://en.wikipedia.org/wiki/Subotica",
+			"https://en.wikipedia.org/wiki/Subotica_City_Hall",
+			"https://en.wikipedia.org/wiki/Subotica_Synagogue"
+		],
+		"kikinda:city": [
+			"https://en.wikipedia.org/wiki/Kikinda",
+			"https://en.wikipedia.org/wiki/Suvača",
+			"https://muzejkikinda.org.rs/en/kikindski-mamut/"
+		],
+		"zrenjanin:city": [
+			"https://en.wikipedia.org/wiki/Zrenjanin"
+		],
+		"vrsac:city": [
+			"https://en.wikipedia.org/wiki/Vršac",
+			"https://en.wikipedia.org/wiki/Vršac_Castle",
+			"https://sfus.rs/wp-content/uploads/2021/01/arhiva-za-farmaciju-2018-003.pdf"
+		],
+		"pancevo:city": [
+			"https://en.wikipedia.org/wiki/Pančevo",
+			"https://en.wikipedia.org/wiki/Konstantin_Danil"
+		],
+		"valjevo:city": [
+			"https://en.wikipedia.org/wiki/Valjevo",
+			"https://en.wikipedia.org/wiki/Tešnjar",
+			"https://en.wikipedia.org/wiki/Muselim%27s_Konak"
+		],
+		"bor:city": [
+			"https://digitalna.ff.uns.ac.rs/sites/default/files/db/books/978-86-6065-172-5.pdf",
+			"https://glosbe.com/en/sr/pine",
+			"https://bor.rs/istorijski-razvoj/",
+			"https://irmbor.co.rs/o-nama/istorijat/",
+			"https://muzejkrajine.org.rs/wp-content/uploads/2016/12/MDS-Vodic-kroz-muzeje-Srbije-1.pdf",
+			"https://www.bor030.net/muzej-rudarstva-i-metalurgije"
+		],
+		"jagodina:city": [
+			"https://en.wikipedia.org/wiki/Jagodina",
+			"https://en.wikipedia.org/wiki/Museum_of_Naïve_and_Marginal_Art"
+		],
+		"uzice:city": [
+			"https://en.wikipedia.org/wiki/Užice",
+			"https://en.wikipedia.org/wiki/Pod_Gradom_hydroelectric_power_plant"
+		],
+		"kraljevo:city": [
+			"https://en.wikipedia.org/wiki/Kraljevo",
+			"https://en.wikipedia.org/wiki/Žiča",
+			"https://whc.unesco.org/en/list/389/"
+		],
+		"krusevac:city": [
+			"https://symposium.ikbks.com/Travelling%20and%20other%20usefull%20information%20about%20Krusevac.pdf",
+			"https://en.wikipedia.org/wiki/Lazarica_Church"
+		],
+		"prijepolje:city": [
+			"https://en.wikipedia.org/wiki/Prijepolje",
+			"https://en.wikipedia.org/wiki/Mileševa_Monastery"
+		],
+		"novi-pazar:city": [
+			"https://en.wikipedia.org/wiki/Novi_Pazar",
+			"https://whc.unesco.org/en/list/96/",
+			"https://en.wikipedia.org/wiki/Altun-Alem_Mosque"
+		],
+		"leskovac:city": [
+			"https://en.wikipedia.org/wiki/Leskovac",
+			"https://en.wikipedia.org/wiki/Roštiljijada"
+		],
+		"vranje:city": [
+			"https://en.wikipedia.org/wiki/Vranje",
+			"https://en.wikipedia.org/wiki/Borisav_Stanković"
+		],
+		"sombor:city": [
+			"https://enciklopedija.hr/clanak/sombor",
+			"https://www.puma.vojvodina.gov.rs/dokumenti/projekat/Koliko_se_poznajemo_2017/Vojvodjanski_mozaik_RUM.pdf",
+			"https://www.researchgate.net/publication/365597145_BATTLE_OF_ZENTA_-_THE_PAINTING_OF_GLORIOUS_HISTORY",
+			"https://visitsombor.org/ponuda/id56/culture/art-studios-and-ateliers/gallery-milan-konjovic.html"
+		],
+		"backa-palanka:city": [
+			"https://pzzp.rs/sr/component/jdownloads/finish/18/1059.html",
+			"https://eparhijabacka.info/crkvena-opstina-backa-palanka/",
+			"https://toobap.rs/2021/10/20/kulturna-dobra-u-backoj-palanci/"
+		],
+		"ruma:city": [
+			"https://www.suboticasinagoga.rs/sites/default/files/2021-04/Delovanje%20-%20tematske%20publikacije%20-%20Panonska%20urbana%20kultura_1.pdf",
+			"https://zkvh.org.rs/aktualnosti-post/default/zavicajni-muzej-u-rumi",
+			"https://www.zkvh.org.rs/aktualnosti-post/vijesti/60-godina-zavicajnog-muzeja-ruma"
+		],
+		"sremska-mitrovica:city": [
+			"https://vojvodina.travel/en/destinations/sremska-mitrovica/",
+			"https://vojvodina.travel/en/experiences/imperial-palace-sremska-mitrovica/",
+			"https://tosmomi.rs/en/istorijat/"
+		],
+		"borca:city": [
+			"https://www.borca.rs/o-naselju/",
+			"https://old.palilula.org.rs/palilula.php?lng=srb&pID=172",
+			"https://osradedrainac.edu.rs/wp-content/uploads/2023/02/Monografija-compressed.pdf"
+		],
+		"sabac:city": [
+			"https://wydawnictwo.us.edu.pl/sites/wydawnictwo.us.edu.pl/files/wus_2020_od_mobilnosti_do_interakcije_ebook.pdf",
+			"https://www.rts.rs/lat/vesti/srbija-danas/2933368/sta-o-istoriji-sabacke-gimnazije-kazu-njeni-ucenici.html",
+			"https://galis.rs/lat/skola/sabacka-gimnazija-sabac/"
+		],
+		"smederevo:city": [
+			"https://islamansiklopedisi.org.tr/semendire",
+			"https://whc.unesco.org/en/tentativelists/5538/",
+			"https://www.arhiva.serbia.gov.rs/ntos/cul_smed.htm",
+			"https://doiserbia.nb.rs/img/doi/0584-9888/2013/0584-98881302835C.pdf"
+		],
+		"pozarevac:city": [
+			"https://arhivpozarevac.org.rs/Dokumenta/Casopis%20ZAPISI%2012%20web.pdf",
+			"https://www.jstor.org/stable/10.2307/j.ctt6wq7kw",
+			"https://galerijampb.rs/en/o-nama/"
+		],
+		"lazarevac:city": [
+			"https://lazarevac.rs/o-opstini/istorijat.html",
+			"https://www.politika.rs/sr/articles/amp/65704",
+			"https://digitalna.ff.uns.ac.rs/sites/default/files/db/books/GFF-39-1.pdf",
+			"https://www.czklazarevac.rs/moderna-galerija/"
+		],
+		"zajecar:city": [
+			"https://rts.rs/lat/tv/rts-zivot/5548345/.html?print=true",
+			"https://books.google.com/books/about/Zaje%C4%8Dar.html?id=Q4AUtAEACAAJ",
+			"https://gitarijada.rs/istorijat/",
+			"https://felixromuliana.rs/o-feliks-romulijani/"
+		],
+		"prokuplje:city": [
+			"https://prokuplje.org.rs/pocetna/staro-istorija-prokuplja/?sr-pismo=lat",
+			"https://www.eparhijaniska.rs/parohije/toplicko-namesnistvo/4157-%D0%BF%D1%80%D0%BE%D0%BA%D1%83%D0%BF%D1%99%D0%B5",
+			"https://www.prokuplje.org.rs/images/content/file/Prokuplje%20-%20LED%20SP_%20Ser_%20-%20final.pdf",
+			"https://digitalizacija-zzsknis.rs/zzsk/prokuplje/"
+		],
+		"pirot:city": [
+			"https://www.pirot.co.rs/index.php/sr/o-pirotu/kratka-istorija",
+			"https://islamansiklopedisi.org.tr/sehirkoy",
+			"https://nkns.rs/en/popis-nkns/rug-making-pirot",
+			"https://etnografskimuzej.rs/en/intangible-cultural-heritage/",
+			"https://www.muzejpirot.com/o-nama/istorijat?locale=sr"
+		],
+		"bor:region": [
+			"https://borski.okrug.gov.rs/borski-upravni-okrug/",
+			"https://www.narodnimuzej.rs/o-muzeju/izlozbeni-prostori/muzej-lepenski-vir/",
+			"https://en.negotin.rs/museums.htm",
+			"https://www.mokranjcevazaduzbina.org/eng/o_stevanu_st_mokranjcu.html"
+		]
+	},
+	"subotica": {
+		"city": {
+			"en": [
+				"It was once called Maria-Theresiopolis in honour of Maria Theresa.",
+				"Its city hall is a major example of Hungarian Art Nouveau.",
+				"The synagogue completed in 1902 became an architectural landmark."
+			],
+			"it": [
+				"Fu chiamata Maria-Theresiopolis in onore di Maria Teresa.",
+				"Il municipio è un importante esempio di liberty ungherese.",
+				"La sinagoga completata nel 1902 divenne un simbolo architettonico."
+			],
+			"de": [
+				"Die Stadt hieß zu Ehren Maria Theresias zeitweise Maria-Theresiopolis.",
+				"Das Rathaus ist ein bedeutendes Beispiel des ungarischen Jugendstils.",
+				"Die 1902 fertiggestellte Synagoge wurde zum architektonischen Wahrzeichen."
+			]
+		}
+	},
+	"kikinda": {
+		"city": {
+			"en": [
+				"It was officially called Velika Kikinda, Great Kikinda, until 1947.",
+				"The Suvača dry mill was driven by horses.",
+				"The mammoth remains known as Kika were found in a clay pit in 1996."
+			],
+			"it": [
+				"Il nome ufficiale fu Velika Kikinda, Grande Kikinda, fino al 1947.",
+				"Il mulino a secco Suvača era azionato da cavalli.",
+				"I resti di mammut noti come Kika furono scoperti in una cava d’argilla nel 1996."
+			],
+			"de": [
+				"Der offizielle Name lautete bis 1947 Velika Kikinda, Groß-Kikinda.",
+				"Die Trockenmühle Suvača wurde von Pferden angetrieben.",
+				"Die Mammutreste namens Kika wurden 1996 in einer Tongrube gefunden."
+			]
+		}
+	},
+	"zrenjanin": {
+		"city": {
+			"en": [
+				"Formerly Veliki Bečkerek and Petrovgrad, it was renamed after Žarko Zrenjanin.",
+				"Its central square preserves an ensemble of Habsburg-era buildings.",
+				"Its theatre building has hosted performances since 1839."
+			],
+			"it": [
+				"Già Veliki Bečkerek e Petrovgrad, fu rinominata in onore di Žarko Zrenjanin.",
+				"La piazza centrale conserva un insieme di edifici dell’epoca asburgica.",
+				"L’edificio del teatro ospita spettacoli dal 1839."
+			],
+			"de": [
+				"Früher Veliki Bečkerek und Petrovgrad, wurde die Stadt nach Žarko Zrenjanin benannt.",
+				"Der zentrale Platz bewahrt ein Ensemble von Bauten aus der Habsburgerzeit.",
+				"Im Theatergebäude finden seit 1839 Aufführungen statt."
+			]
+		}
+	},
+	"vrsac": {
+		"city": {
+			"en": [
+				"Its name is generally linked to the word for a peak.",
+				"Vršac Tower preserves part of a medieval hilltop fortress.",
+				"The Pharmacy on the Stairs began as an apothecary in 1784."
+			],
+			"it": [
+				"Il nome è generalmente collegato alla parola che indica una cima.",
+				"La torre di Vršac conserva parte di una fortezza medievale sulla collina.",
+				"La Farmacia sulle scale nacque come farmacia nel 1784."
+			],
+			"de": [
+				"Der Name wird gewöhnlich mit dem Wort für einen Gipfel verbunden.",
+				"Der Turm von Vršac bewahrt einen Teil einer mittelalterlichen Höhenburg.",
+				"Die Apotheke an der Treppe wurde 1784 als Apotheke gegründet."
+			]
+		}
+	},
+	"pancevo": {
+		"city": {
+			"en": [
+				"Its historical German name was Pantschowa.",
+				"A brewery established here in 1722 later became the Weifert brewery.",
+				"Konstantin Danil painted the iconostasis of the Dormition Church."
+			],
+			"it": [
+				"Il nome storico tedesco era Pantschowa.",
+				"Una birreria fondata qui nel 1722 divenne in seguito la birreria Weifert.",
+				"Konstantin Danil dipinse l’iconostasi della chiesa della Dormizione."
+			],
+			"de": [
+				"Der historische deutsche Name lautete Pantschowa.",
+				"Eine 1722 gegründete Brauerei wurde später zur Weifert-Brauerei.",
+				"Konstantin Danil malte die Ikonostase der Mariä-Entschlafens-Kirche."
+			]
+		}
+	},
+	"valjevo": {
+		"city": {
+			"en": [
+				"Its name appears in Dubrovnik’s trading records from 1393.",
+				"Tešnjar preserves a historic Balkan market quarter.",
+				"The Muselim’s Konak museum tells the story of the 1804 uprising."
+			],
+			"it": [
+				"Il nome compare nei registri commerciali di Ragusa del 1393.",
+				"Tešnjar conserva uno storico quartiere mercantile balcanico.",
+				"Il museo del Muselimov konak racconta la rivolta del 1804."
+			],
+			"de": [
+				"Der Name erscheint 1393 in Handelsaufzeichnungen aus Dubrovnik.",
+				"Tešnjar bewahrt ein historisches balkanisches Handelsviertel.",
+				"Das Museum im Muselimov konak erzählt vom Aufstand von 1804."
+			]
+		}
+	},
+	"jagodina": {
+		"city": {
+			"en": [
+				"Its name comes from jagoda, the Serbian word for strawberry.",
+				"It was called Svetozarevo from 1946 to 1992.",
+				"Its museum of naïve and marginal art grew from a gallery founded in 1960."
+			],
+			"it": [
+				"Il nome deriva da jagoda, la parola serba per fragola.",
+				"Si chiamò Svetozarevo dal 1946 al 1992.",
+				"Il museo d’arte naïf e marginale si sviluppò da una galleria fondata nel 1960."
+			],
+			"de": [
+				"Der Name stammt von jagoda, dem serbischen Wort für Erdbeere.",
+				"Die Stadt hieß von 1946 bis 1992 Svetozarevo.",
+				"Das Museum für naive und marginale Kunst ging aus einer 1960 gegründeten Galerie hervor."
+			]
+		}
+	},
+	"uzice": {
+		"city": {
+			"en": [
+				"Medieval records mention its name in 1329.",
+				"It was called Titovo Užice from 1946 to 1992.",
+				"A hydroelectric station on the Đetinja began operating in 1900."
+			],
+			"it": [
+				"Documenti medievali ne menzionano il nome nel 1329.",
+				"Si chiamò Titovo Užice dal 1946 al 1992.",
+				"Una centrale idroelettrica sulla Đetinja entrò in funzione nel 1900."
+			],
+			"de": [
+				"Mittelalterliche Urkunden nennen den Ort 1329.",
+				"Die Stadt hieß von 1946 bis 1992 Titovo Užice.",
+				"Ein Wasserkraftwerk an der Đetinja nahm 1900 den Betrieb auf."
+			]
+		}
+	},
+	"kraljevo": {
+		"city": {
+			"en": [
+				"Karanovac was renamed Kraljevo, royal city, in 1882.",
+				"Nearby Žiča Monastery was a coronation church of medieval Serbian kings.",
+				"The wider municipality includes UNESCO-listed Studenica Monastery."
+			],
+			"it": [
+				"Karanovac fu rinominata Kraljevo, città reale, nel 1882.",
+				"Il vicino monastero di Žiča fu una chiesa d’incoronazione dei re serbi medievali.",
+				"Il territorio comunale più ampio comprende il monastero di Studenica, patrimonio UNESCO."
+			],
+			"de": [
+				"Karanovac wurde 1882 in Kraljevo, Königsstadt, umbenannt.",
+				"Das nahe Kloster Žiča war Krönungskirche mittelalterlicher serbischer Könige.",
+				"Zum weiteren Gemeindegebiet gehört das UNESCO-geschützte Kloster Studenica."
+			]
+		}
+	},
+	"krusevac": {
+		"city": {
+			"en": [
+				"Local tradition links its name to river stones called krušac.",
+				"Prince Lazar established his court here in the fourteenth century.",
+				"Lazarica Church is a landmark of the Morava architectural style."
+			],
+			"it": [
+				"La tradizione locale collega il nome a pietre di fiume chiamate krušac.",
+				"Il principe Lazar stabilì qui la propria corte nel Trecento.",
+				"La chiesa Lazarica è un simbolo dello stile architettonico della Morava."
+			],
+			"de": [
+				"Die örtliche Überlieferung verbindet den Namen mit Flusssteinen namens krušac.",
+				"Fürst Lazar richtete hier im vierzehnten Jahrhundert seinen Hof ein.",
+				"Die Lazarica-Kirche ist ein Wahrzeichen des Morava-Baustils."
+			]
+		}
+	},
+	"prijepolje": {
+		"city": {
+			"en": [
+				"Its name appears in Dubrovnik’s medieval trading records.",
+				"Nearby Mileševa Monastery preserves the White Angel fresco.",
+				"Its Sahat Kula clock tower reflects Ottoman urban heritage."
+			],
+			"it": [
+				"Il nome compare nei registri commerciali medievali di Ragusa.",
+				"Il vicino monastero di Mileševa conserva l’affresco dell’Angelo bianco.",
+				"La torre dell’orologio Sahat Kula testimonia il patrimonio urbano ottomano."
+			],
+			"de": [
+				"Der Name erscheint in mittelalterlichen Handelsaufzeichnungen aus Dubrovnik.",
+				"Das nahe Kloster Mileševa bewahrt das Fresko des Weißen Engels.",
+				"Der Uhrturm Sahat Kula zeugt vom osmanischen Stadterbe."
+			]
+		}
+	},
+	"novi-pazar": {
+		"city": {
+			"en": [
+				"Its name means new market.",
+				"Nearby Sopoćani Monastery preserves celebrated medieval frescoes.",
+				"The Altun-Alem Mosque is a landmark of sixteenth-century Ottoman architecture."
+			],
+			"it": [
+				"Il nome significa nuovo mercato.",
+				"Il vicino monastero di Sopoćani conserva celebri affreschi medievali.",
+				"La moschea Altun-Alem è un simbolo dell’architettura ottomana del Cinquecento."
+			],
+			"de": [
+				"Der Name bedeutet neuer Markt.",
+				"Das nahe Kloster Sopoćani bewahrt berühmte mittelalterliche Fresken.",
+				"Die Altun-Alem-Moschee ist ein Wahrzeichen osmanischer Architektur des sechzehnten Jahrhunderts."
+			]
+		}
+	},
+	"leskovac": {
+		"city": {
+			"en": [
+				"Its name is traditionally linked to leska, the hazel tree.",
+				"The Roštiljijada festival celebrates its grilled-food tradition.",
+				"Textile mills earned it the nickname Serbian Manchester."
+			],
+			"it": [
+				"Il nome è tradizionalmente collegato a leska, il nocciolo.",
+				"Il festival Roštiljijada celebra la tradizione dei cibi alla griglia.",
+				"Le fabbriche tessili le valsero il soprannome di Manchester serba."
+			],
+			"de": [
+				"Der Name wird traditionell mit leska, der Hasel, verbunden.",
+				"Das Festival Roštiljijada feiert die örtliche Grilltradition.",
+				"Textilfabriken brachten der Stadt den Beinamen serbisches Manchester ein."
+			]
+		}
+	},
+	"vranje": {
+		"city": {
+			"en": [
+				"Anna Komnene mentions it in her account of events in 1093.",
+				"Writer Bora Stanković drew on local life in his fiction.",
+				"Pašin Konak preserves an eighteenth-century Ottoman residential complex."
+			],
+			"it": [
+				"Anna Comnena la menziona nel racconto degli avvenimenti del 1093.",
+				"Lo scrittore Bora Stanković attinse alla vita locale nelle sue opere.",
+				"Pašin konak conserva un complesso residenziale ottomano del Settecento."
+			],
+			"de": [
+				"Anna Komnene erwähnt den Ort in ihrem Bericht über Ereignisse von 1093.",
+				"Der Schriftsteller Bora Stanković schöpfte in seinen Werken aus dem örtlichen Leben.",
+				"Pašin konak bewahrt einen osmanischen Wohnkomplex aus dem achtzehnten Jahrhundert."
+			]
+		}
+	},
+	"sombor": {
+		"city": {
+			"en": [
+				"Sombor has also been known by the Hungarian name Zombor.",
+				"Sombor’s County Hall displays Ferenc Eisenhut’s Battle of Zenta, painted for the Hungarian millennium celebrations of 1896.",
+				"Sombor’s Milan Konjović Gallery opened in 1966 with a collection donated by the painter to his home town."
+			],
+			"it": [
+				"Sombor è stata conosciuta anche con il nome ungherese Zombor.",
+				"Il palazzo della Contea di Sombor espone La battaglia di Zenta di Ferenc Eisenhut, dipinta per le celebrazioni del millennio ungherese del 1896.",
+				"La Galleria Milan Konjović di Sombor aprì nel 1966 con una collezione donata dal pittore alla città natale."
+			],
+			"de": [
+				"Sombor war auch unter dem ungarischen Namen Zombor bekannt.",
+				"Im Komitatshaus von Sombor hängt Ferenc Eisenhuts Schlacht bei Zenta, gemalt für die ungarischen Millenniumsfeiern von 1896.",
+				"Die Milan-Konjović-Galerie in Sombor wurde 1966 mit einer Sammlung eröffnet, die der Maler seiner Heimatstadt schenkte."
+			]
+		}
+	},
+	"backa-palanka": {
+		"city": {
+			"en": [
+				"Bačka Palanka developed on the site of an earlier settlement recorded as Pešt in sixteenth-century sources.",
+				"Bačka Palanka’s Church of the Nativity of Saint John the Baptist was built between 1784 and 1801.",
+				"Bačka Palanka’s Roman Catholic church was built in Baroque style in 1782–1784."
+			],
+			"it": [
+				"Bačka Palanka si sviluppò sul sito di un insediamento precedente indicato come Pešt nelle fonti cinquecentesche.",
+				"La chiesa della Natività di san Giovanni Battista di Bačka Palanka fu costruita fra il 1784 e il 1801.",
+				"La chiesa cattolica di Bačka Palanka fu costruita in stile barocco nel 1782–1784."
+			],
+			"de": [
+				"Bačka Palanka entwickelte sich am Ort einer älteren Siedlung, die in Quellen des 16. Jahrhunderts als Pešt erscheint.",
+				"Die Kirche der Geburt Johannes des Täufers in Bačka Palanka wurde zwischen 1784 und 1801 erbaut.",
+				"Die römisch-katholische Kirche in Bačka Palanka wurde 1782–1784 im Barockstil errichtet."
+			]
+		}
+	},
+	"ruma": {
+		"city": {
+			"en": [
+				"The name Ruma is recorded in an Ottoman census of 1546.",
+				"The planned town of New Ruma developed beside the older village in the 1740s under Marko Pejačević.",
+				"Ruma’s local history museum occupies a former school building completed in 1772 with a Pejačević family endowment."
+			],
+			"it": [
+				"Il nome Ruma è attestato in un censimento ottomano del 1546.",
+				"La città pianificata di Nuova Ruma si sviluppò accanto al villaggio più antico negli anni Quaranta del Settecento sotto Marko Pejačević.",
+				"Il museo di storia locale di Ruma occupa un’ex scuola completata nel 1772 grazie a una fondazione della famiglia Pejačević."
+			],
+			"de": [
+				"Der Name Ruma ist in einer osmanischen Zählung von 1546 belegt.",
+				"Die planmäßig angelegte Stadt Neu-Ruma entstand in den 1740er-Jahren unter Marko Pejačević neben dem älteren Dorf.",
+				"Das Heimatmuseum von Ruma befindet sich in einem 1772 fertiggestellten ehemaligen Schulgebäude aus einer Stiftung der Familie Pejačević."
+			]
+		}
+	},
+	"sremska-mitrovica": {
+		"city": {
+			"en": [
+				"Sremska Mitrovica occupies the site of the Roman city of Sirmium.",
+				"Sremska Mitrovica’s imperial palace site preserves Roman floor mosaics and an underfloor heating system.",
+				"The name Mitrovica developed from the medieval dedication of the city to Saint Demetrius."
+			],
+			"it": [
+				"Sremska Mitrovica occupa il sito della città romana di Sirmium.",
+				"Il sito del palazzo imperiale di Sremska Mitrovica conserva mosaici pavimentali romani e un sistema di riscaldamento sotto il pavimento.",
+				"Il nome Mitrovica si sviluppò dalla dedica medievale della città a san Demetrio."
+			],
+			"de": [
+				"Sremska Mitrovica liegt am Ort der römischen Stadt Sirmium.",
+				"Die Ausgrabungsstätte des Kaiserpalasts in Sremska Mitrovica bewahrt römische Bodenmosaike und eine Fußbodenheizung.",
+				"Der Name Mitrovica entwickelte sich aus der mittelalterlichen Benennung der Stadt nach dem heiligen Demetrius."
+			]
+		}
+	},
+	"borca": {
+		"city": {
+			"en": [
+				"Borča appears in historical sources under the name Barcsa, although the name’s origin is uncertain.",
+				"Borča’s Saint Nicholas Church was built in 1798 and reconstructed in 1967 after a fire.",
+				"An embankment built in 1933 protected Borča from flooding by the Danube and Tamiš."
+			],
+			"it": [
+				"Borča compare nelle fonti storiche con il nome Barcsa, anche se l’origine del nome è incerta.",
+				"La chiesa di San Nicola di Borča fu costruita nel 1798 e ricostruita nel 1967 dopo un incendio.",
+				"Un argine costruito nel 1933 protesse Borča dalle inondazioni del Danubio e del Tamiš."
+			],
+			"de": [
+				"Borča erscheint in historischen Quellen unter dem Namen Barcsa, dessen Ursprung jedoch ungewiss ist.",
+				"Die Nikolauskirche in Borča wurde 1798 erbaut und nach einem Brand 1967 wiederaufgebaut.",
+				"Ein 1933 errichteter Deich schützte Borča vor Überschwemmungen durch Donau und Tamiš."
+			]
+		}
+	},
+	"sabac": {
+		"city": {
+			"en": [
+				"Šabac grew from a medieval settlement known as Zaslon.",
+				"Šabac underwent substantial urban and cultural development under Jevrem Obrenović in 1816–1831.",
+				"Šabac’s grammar school began teaching in 1837."
+			],
+			"it": [
+				"Šabac si sviluppò da un insediamento medievale conosciuto come Zaslon.",
+				"Šabac conobbe un notevole sviluppo urbano e culturale sotto Jevrem Obrenović nel 1816–1831.",
+				"Il ginnasio di Šabac iniziò le lezioni nel 1837."
+			],
+			"de": [
+				"Šabac entwickelte sich aus einer mittelalterlichen Siedlung namens Zaslon.",
+				"Unter Jevrem Obrenović erlebte Šabac 1816–1831 einen bedeutenden städtebaulichen und kulturellen Aufschwung.",
+				"Das Gymnasium von Šabac nahm 1837 den Unterricht auf."
+			]
+		}
+	},
+	"smederevo": {
+		"city": {
+			"en": [
+				"Smederevo was known in Ottoman sources as Semendire.",
+				"The castle forming the core of Smederevo Fortress was built in 1428–1430 as the court of Despot Đurađ Branković.",
+				"An ammunition depot explosion inside Smederevo Fortress severely damaged its towers and walls in 1941."
+			],
+			"it": [
+				"Nelle fonti ottomane Smederevo era conosciuta come Semendire.",
+				"Il castello che costituisce il nucleo della fortezza di Smederevo fu costruito nel 1428–1430 come corte del despota Đurađ Branković.",
+				"L’esplosione di un deposito di munizioni all’interno della fortezza di Smederevo danneggiò gravemente torri e mura nel 1941."
+			],
+			"de": [
+				"In osmanischen Quellen war Smederevo als Semendire bekannt.",
+				"Die Burg im Kern der Festung Smederevo wurde 1428–1430 als Hof des Despoten Đurađ Branković erbaut.",
+				"Die Explosion eines Munitionslagers in der Festung Smederevo beschädigte 1941 ihre Türme und Mauern schwer."
+			]
+		}
+	},
+	"pozarevac": {
+		"city": {
+			"en": [
+				"Požarevac appears in older European accounts under the name Passarowitz.",
+				"The peace negotiations at Požarevac in 1718 brought together representatives of the Habsburg emperor, Ottoman sultan and Venetian Republic.",
+				"Požarevac’s Milena Pavlović Barilli Gallery opened in the artist’s family home in 1962."
+			],
+			"it": [
+				"Nei resoconti europei più antichi Požarevac compare con il nome Passarowitz.",
+				"I negoziati di pace di Požarevac del 1718 riunirono rappresentanti dell’imperatore asburgico, del sultano ottomano e della Repubblica di Venezia.",
+				"La Galleria Milena Pavlović Barilli di Požarevac aprì nella casa di famiglia dell’artista nel 1962."
+			],
+			"de": [
+				"In älteren europäischen Darstellungen erscheint Požarevac unter dem Namen Passarowitz.",
+				"Die Friedensverhandlungen in Požarevac von 1718 brachten Vertreter des Habsburgerkaisers, des osmanischen Sultans und der Republik Venedig zusammen.",
+				"Die Milena-Pavlović-Barilli-Galerie in Požarevac wurde 1962 im Familienhaus der Künstlerin eröffnet."
+			]
+		}
+	},
+	"lazarevac": {
+		"city": {
+			"en": [
+				"Lazarevac received its name in honour of Prince Lazar in 1889.",
+				"Lazarevac’s Saint Demetrius Church houses an ossuary of Serbian and Austro-Hungarian soldiers killed in the Battle of Kolubara in 1914.",
+				"Lazarevac’s Modern Gallery opened in 2002 to preserve and exhibit the art collection donated by Lepa Perović."
+			],
+			"it": [
+				"Lazarevac ricevette il nome in onore del principe Lazar nel 1889.",
+				"La chiesa di San Demetrio di Lazarevac ospita un ossario di soldati serbi e austro-ungarici caduti nella battaglia della Kolubara del 1914.",
+				"La Galleria moderna di Lazarevac aprì nel 2002 per conservare ed esporre la collezione d’arte donata da Lepa Perović."
+			],
+			"de": [
+				"Lazarevac erhielt seinen Namen 1889 zu Ehren von Fürst Lazar.",
+				"Die Demetriuskirche in Lazarevac beherbergt ein Beinhaus für serbische und österreichisch-ungarische Soldaten, die 1914 in der Schlacht an der Kolubara fielen.",
+				"Die Moderne Galerie in Lazarevac wurde 2002 eröffnet, um die von Lepa Perović gestiftete Kunstsammlung zu bewahren und zu zeigen."
+			]
+		}
+	},
+	"prokuplje": {
+		"city": {
+			"en": [
+				"Prokuplje takes its name from Saint Procopius, whose name appears in the town’s designation in a charter of 1395.",
+				"Prokuplje’s Church of Saint Procopius has its origins in the ninth–tenth centuries.",
+				"Prokuplje’s Toplica Museum preserves a Roman statue of Hercules from the local archaeological heritage."
+			],
+			"it": [
+				"Prokuplje prende il nome da san Procopio, il cui nome compare nella denominazione cittadina in una carta del 1395.",
+				"La chiesa di San Procopio di Prokuplje ha origini nel IX–X secolo.",
+				"Il Museo della Toplica di Prokuplje conserva una statua romana di Ercole proveniente dal patrimonio archeologico locale."
+			],
+			"de": [
+				"Prokuplje ist nach dem heiligen Prokopius benannt, dessen Name in der Stadtbezeichnung einer Urkunde von 1395 erscheint.",
+				"Die Prokopiuskirche in Prokuplje hat ihre Ursprünge im 9.–10. Jahrhundert.",
+				"Das Toplica-Museum in Prokuplje bewahrt eine römische Herkulesstatue aus dem örtlichen archäologischen Erbe."
 			]
 		}
 	}

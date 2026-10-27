@@ -3,50 +3,63 @@
 		"Name-facts for Thailand (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"FT-73 added the seventy-six provinces and Bangkok (\"region\") and the towns of thailand-towns-100k (\"city\"); where a province and its town share an id, each has its own sentences. Many names are Pali or Sanskrit: buri and thani are \"town\", nakhon is \"city\"."
+		"FT-73 added the seventy-six provinces and Bangkok (\"region\") and the towns of thailand-towns-100k (\"city\"); where a province and its town share an id, each has its own sentences. Many names are Pali or Sanskrit: buri and thani are \"town\", nakhon is \"city\".",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"amnat-charoen": {
 		"region": {
 			"en": [
-				"It was split from Ubon Ratchathani in 1993."
+				"The name Amnat Charoen was bestowed on Ban Kho Yai in 1858; a separate province took the name in 1993.",
+				"Phu Thai communities in Amnat Charoen’s Chanuman district specialise in patterned khit weaving.",
+				"Phra Mongkhon Ming Mueang, created in 1965, is a reinforced-concrete Buddha image covered in golden mosaic."
 			],
 			"it": [
-				"Fu separata da Ubon Ratchathani nel 1993."
+				"Il nome Amnat Charoen fu conferito a Ban Kho Yai nel 1858; una provincia separata assunse il nome nel 1993.",
+				"Le comunità phu thai del distretto di Chanuman, nella provincia di Amnat Charoen, sono specializzate nella tessitura khit a motivi decorativi.",
+				"Phra Mongkhon Ming Mueang, creato nel 1965, è un’immagine del Buddha in cemento armato rivestita di mosaico dorato."
 			],
 			"de": [
-				"Sie wurde 1993 von Ubon Ratchathani abgetrennt."
+				"Der Name Amnat Charoen wurde Ban Kho Yai 1858 verliehen; 1993 übernahm eine eigenständige Provinz diesen Namen.",
+				"Die Phu-Thai-Gemeinschaften in Amnat Charoens Bezirk Chanuman sind auf gemusterte Khit-Weberei spezialisiert.",
+				"Phra Mongkhon Ming Mueang, 1965 geschaffen, ist eine mit goldfarbenem Mosaik bedeckte Buddhafigur aus Stahlbeton."
 			]
 		}
 	},
 	"ang-thong": {
 		"region": {
 			"en": [
-				"\"The golden bowl\".",
-				"The seated Buddha of Wat Muang, about 92 m high, is one of the tallest statues in the world."
+				"Ang Thong means golden bowl and succeeded the older provincial centre of Wiset Chai Chan.",
+				"Wat Muang’s seated Buddha is about ninety-two metres tall and was completed in 2008.",
+				"The drum makers of Ekkarat in Pa Mok traditionally use rain-tree wood and cowhide."
 			],
 			"it": [
-				"\"La ciotola d’oro\".",
-				"Il Buddha seduto di Wat Muang, alto circa 92 m, è una delle statue più alte del mondo."
+				"Ang Thong significa ciotola d’oro e succedette all’antico centro provinciale di Wiset Chai Chan.",
+				"Il Buddha seduto di Wat Muang è alto circa novantadue metri e fu completato nel 2008.",
+				"I fabbricanti di tamburi di Ekkarat a Pa Mok utilizzano tradizionalmente legno dell’albero della pioggia e pelle bovina."
 			],
 			"de": [
-				"„Die goldene Schale“.",
-				"Der sitzende Buddha von Wat Muang, etwa 92 m hoch, ist eine der höchsten Statuen der Welt."
+				"Ang Thong bedeutet goldene Schale und folgte auf das ältere Provinzzentrum Wiset Chai Chan.",
+				"Wat Muangs sitzender Buddha ist etwa zweiundneunzig Meter hoch und wurde 2008 vollendet.",
+				"Die Trommelbauer von Ekkarat in Pa Mok verwenden traditionell Regenbaumholz und Rinderhaut."
 			]
 		}
 	},
 	"ayutthaya": {
 		"city": {
 			"en": [
-				"Its temples are a UNESCO site.",
-				"At Wat Mahathat, the head of a Buddha statue has been gripped by the roots of a fig tree."
+				"Ayutthaya’s name echoes Ayodhya, the city associated with Rama in the Ramayana.",
+				"Ayutthaya’s historic ruins are a UNESCO World Heritage Site, preserving remains of the Siamese capital destroyed in 1767.",
+				"At Wat Mahathat, tree roots surround the head of a damaged Buddha statue."
 			],
 			"it": [
-				"I suoi templi sono un sito UNESCO.",
-				"A Wat Mahathat la testa di una statua del Buddha è stata avvolta dalle radici di un fico."
+				"Il nome Ayutthaya richiama Ayodhya, la città associata a Rama nel Ramayana.",
+				"Le rovine storiche di Ayutthaya sono patrimonio mondiale UNESCO e conservano resti della capitale siamese distrutta nel 1767.",
+				"Al Wat Mahathat, le radici di un albero circondano la testa di una statua del Buddha danneggiata."
 			],
 			"de": [
-				"Seine Tempel sind ein UNESCO-Welterbe.",
-				"Im Wat Mahathat ist der Kopf einer Buddha-Statue von den Wurzeln eines Feigenbaums umschlungen."
+				"Ayutthayas Name erinnert an Ayodhya, die mit Rama verbundene Stadt im Ramayana.",
+				"Ayutthayas historische Ruinen sind UNESCO-Welterbe und bewahren Überreste der 1767 zerstörten siamesischen Hauptstadt.",
+				"Im Wat Mahathat umschließen Baumwurzeln den Kopf einer beschädigten Buddha-Statue."
 			]
 		}
 	},
@@ -89,16 +102,19 @@
 	"bueng-kan": {
 		"region": {
 			"en": [
-				"Thailand’s newest province, split from Nong Khai in 2011.",
-				"At Wat Phu Tok, wooden walkways climb around a sandstone mountain to shrines on its sides."
+				"Bueng Kan became the name of a separate province in 2011 after its division from Nong Khai.",
+				"At Wat Phu Tok, monks and villagers built wooden stairways and walkways around a steep sandstone mountain.",
+				"Hin Sam Wan, the Three Whales Rock, is named for the whale-like shapes of its three massive sandstone formations."
 			],
 			"it": [
-				"La provincia più giovane della Thailandia, separata da Nong Khai nel 2011.",
-				"A Wat Phu Tok passerelle di legno salgono attorno a una montagna di arenaria fino ai santuari sui suoi fianchi."
+				"Bueng Kan divenne il nome di una provincia separata nel 2011 dopo la divisione da Nong Khai.",
+				"A Wat Phu Tok monaci e abitanti costruirono scale e passerelle di legno intorno a una ripida montagna di arenaria.",
+				"Hin Sam Wan, la Roccia delle Tre Balene, prende il nome dalle forme simili a balene delle sue tre imponenti formazioni di arenaria."
 			],
 			"de": [
-				"Thailands neueste Provinz, 2011 von Nong Khai abgetrennt.",
-				"Im Wat Phu Tok führen hölzerne Stege rund um einen Sandsteinberg hinauf zu Schreinen an seinen Flanken."
+				"Bueng Kan wurde 2011 nach der Abtrennung von Nong Khai zum Namen einer eigenen Provinz.",
+				"Am Wat Phu Tok bauten Mönche und Dorfbewohner Holztreppen und Stege um einen steilen Sandsteinberg.",
+				"Hin Sam Wan, der Drei-Wale-Felsen, ist nach den walähnlichen Formen seiner drei gewaltigen Sandsteinformationen benannt."
 			]
 		}
 	},
@@ -124,48 +140,57 @@
 	"chachoengsao": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Wat Sothon Wararam keeps Luang Pho Sothon, one of the most revered Buddha images in Thailand."
+				"Chachoengsao is also traditionally known as Paet Riu.",
+				"Wat Sothon Wararam houses the deeply revered Luang Pho Sothon Buddha image.",
+				"Bang Khla Floating Market was established by the local municipality in 2007 to sell local food and products."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Il Wat Sothon Wararam custodisce il Luang Pho Sothon, una delle immagini del Buddha più venerate della Thailandia."
+				"Chachoengsao è tradizionalmente conosciuta anche come Paet Riu.",
+				"Wat Sothon Wararam custodisce la veneratissima immagine del Buddha Luang Pho Sothon.",
+				"Il mercato galleggiante di Bang Khla fu istituito dal comune nel 2007 per vendere cibi e prodotti locali."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Wat Sothon Wararam bewahrt Luang Pho Sothon, eines der am meisten verehrten Buddha-Bilder Thailands."
+				"Chachoengsao ist traditionell auch unter dem Namen Paet Riu bekannt.",
+				"Wat Sothon Wararam beherbergt das hochverehrte Buddha-Bildnis Luang Pho Sothon.",
+				"Der schwimmende Markt von Bang Khla wurde 2007 von der Gemeinde zum Verkauf örtlicher Lebensmittel und Erzeugnisse eingerichtet."
 			]
 		}
 	},
 	"chai-nat": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"The Chao Phraya Dam, finished in 1957, waters the rice fields of the central plain."
+				"Chai Nat’s name means place of victory.",
+				"The Chao Phraya Dam opened in 1957 to divert water to rice fields on the central plain.",
+				"Chai Nat Muni National Museum preserves a Dvaravati stone panel showing the Buddha between a Dharma wheel and a stupa."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"La diga del Chao Phraya, terminata nel 1957, irriga le risaie della pianura centrale."
+				"Il nome Chai Nat significa luogo della vittoria.",
+				"La diga del Chao Phraya fu aperta nel 1957 per deviare l’acqua verso le risaie della pianura centrale.",
+				"Il Chai Nat Muni National Museum conserva un pannello di pietra dvaravati che raffigura il Buddha tra una ruota del Dharma e uno stupa."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Der Chao-Phraya-Damm, 1957 fertiggestellt, bewässert die Reisfelder der Zentralebene."
+				"Chai Nats Name bedeutet Ort des Sieges.",
+				"Der Chao-Phraya-Damm wurde 1957 eröffnet, um Wasser zu den Reisfeldern der Zentralebene abzuleiten.",
+				"Das Chai Nat Muni National Museum bewahrt eine Dvaravati-Steinplatte mit Buddha zwischen einem Dharmarad und einer Stupa."
 			]
 		}
 	},
 	"chaiyaphum": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Fields of Siam tulips, a pink wild flower, bloom here in the rainy season."
+				"Chaiyaphum means land of victory, from Sanskrit-derived words for victory and land.",
+				"The rainy-season Siam tulips at Pa Hin Ngam and Sai Thong national parks are flowering relatives of ginger, rather than true tulips.",
+				"Mo Hin Khao in Phu Laenkha National Park features five prominent sandstone pillars shaped by erosion."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Nella stagione delle piogge qui fioriscono campi di tulipani del Siam, un fiore selvatico rosa."
+				"Chaiyaphum significa terra della vittoria, da parole derivate dal sanscrito per vittoria e terra.",
+				"I tulipani del Siam che fioriscono nella stagione delle piogge nei parchi nazionali Pa Hin Ngam e Sai Thong sono parenti dello zenzero, anziché veri tulipani.",
+				"Mo Hin Khao nel Parco Nazionale Phu Laenkha presenta cinque imponenti pilastri di arenaria modellati dall’erosione."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Felder mit Siam-Tulpen, einer rosa Wildblume, blühen hier in der Regenzeit."
+				"Chaiyaphum bedeutet Land des Sieges, aus Sanskritwörtern für Sieg und Land.",
+				"Die zur Regenzeit blühenden Siam-Tulpen in den Nationalparks Pa Hin Ngam und Sai Thong sind Ingwerverwandte und keine echten Tulpen.",
+				"Mo Hin Khao im Nationalpark Phu Laenkha weist fünf markante, durch Erosion geformte Sandsteinsäulen auf."
 			]
 		}
 	},
@@ -191,16 +216,19 @@
 	"chiang-mai": {
 		"region": {
 			"en": [
-				"Named for its city, the heart of Lanna, the northern kingdom that Siam absorbed only in the late 19th century.",
-				"At the Yi Peng festival, in November, thousands of paper lanterns are released into the sky."
+				"Chiang Mai means new city, reflecting King Mangrai’s foundation of the Lanna capital in 1296.",
+				"Chiang Mai’s historic centre preserves a square inner enclosure surrounded by walls and a moat.",
+				"During Chiang Mai’s Yi Peng festival, paper lanterns are released into the night sky."
 			],
 			"it": [
-				"Prende il nome dalla sua città, il cuore del Lanna, il regno del nord che il Siam assorbì solo alla fine dell’Ottocento.",
-				"Durante la festa di Yi Peng, a novembre, migliaia di lanterne di carta vengono liberate nel cielo."
+				"Chiang Mai significa città nuova e ricorda la fondazione della capitale del Lanna da parte del re Mangrai nel 1296.",
+				"Il centro storico di Chiang Mai conserva un recinto interno quadrato circondato da mura e fossato.",
+				"Durante la festa di Yi Peng a Chiang Mai vengono liberate nel cielo notturno lanterne di carta."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, dem Herzen von Lanna, dem nördlichen Königreich, das Siam erst im späten 19. Jahrhundert aufnahm.",
-				"Beim Yi-Peng-Fest im November werden Tausende Papierlaternen in den Himmel gelassen."
+				"Chiang Mai bedeutet neue Stadt und erinnert an die Gründung der Lanna-Hauptstadt durch König Mangrai 1296.",
+				"Chiang Mais historischer Kern bewahrt eine quadratische innere Anlage mit Mauern und einem Graben.",
+				"Beim Yi-Peng-Fest in Chiang Mai werden Papierlaternen in den Nachthimmel entlassen."
 			]
 		},
 		"city": {
@@ -224,118 +252,148 @@
 	"chiang-rai": {
 		"region": {
 			"en": [
-				"\"The city of Mengrai\", the king who founded it in 1262.",
-				"In 2018 twelve boys of a football team and their coach were rescued after more than two weeks trapped in the flooded Tham Luang cave."
+				"Chiang Rai takes its name from King Mangrai, who founded the city in 1262.",
+				"In 2018, twelve young footballers and their coach were rescued from Chiang Rai’s flooded Tham Luang cave.",
+				"The artist Chalermchai Kositpipat began rebuilding Wat Rong Khun, the White Temple, in 1997."
 			],
 			"it": [
-				"\"La città di Mengrai\", il re che la fondò nel 1262.",
-				"Nel 2018 dodici ragazzi di una squadra di calcio e il loro allenatore furono salvati dopo più di due settimane intrappolati nella grotta allagata di Tham Luang."
+				"Chiang Rai prende il nome dal re Mangrai, che fondò la città nel 1262.",
+				"Nel 2018 dodici giovani calciatori e il loro allenatore furono salvati dalla grotta allagata Tham Luang, nella provincia di Chiang Rai.",
+				"L’artista Chalermchai Kositpipat iniziò a ricostruire Wat Rong Khun, il Tempio Bianco, nel 1997."
 			],
 			"de": [
-				"„Die Stadt des Mengrai“, des Königs, der sie 1262 gründete.",
-				"2018 wurden zwölf Jungen einer Fußballmannschaft und ihr Trainer nach über zwei Wochen gerettet, in denen sie in der überfluteten Höhle Tham Luang festsaßen."
+				"Chiang Rai ist nach König Mangrai benannt, der die Stadt 1262 gründete.",
+				"2018 wurden zwölf junge Fußballer und ihr Trainer aus Chiang Rais überfluteter Höhle Tham Luang gerettet.",
+				"Der Künstler Chalermchai Kositpipat begann 1997 mit dem Wiederaufbau von Wat Rong Khun, dem Weißen Tempel."
 			]
 		},
 		"city": {
 			"en": [
-				"The Emerald Buddha, Thailand’s most sacred image, was found here in 1434 when lightning split a stupa.",
-				"The White Temple, Wat Rong Khun, was begun by the artist Chalermchai Kositpipat in 1997."
+				"Chiang Rai takes its name from King Mangrai, who founded the city in 1262.",
+				"According to temple tradition, lightning exposed the Emerald Buddha inside Wat Phra Kaew’s stupa in 1434.",
+				"Chiang Rai’s ornate golden clock tower was designed by the artist Chalermchai Kositpipat."
 			],
 			"it": [
-				"Il Buddha di smeraldo, l’immagine più sacra della Thailandia, fu trovato qui nel 1434 quando un fulmine spaccò uno stupa.",
-				"Il Tempio bianco, Wat Rong Khun, fu iniziato dall’artista Chalermchai Kositpipat nel 1997."
+				"Chiang Rai prende il nome da Mangrai, il re che fondò la città nel 1262.",
+				"Secondo la tradizione del tempio, nel 1434 un fulmine rivelò il Buddha di smeraldo nello stupa del Wat Phra Kaew.",
+				"L’elaborata torre dorata dell’orologio di Chiang Rai fu progettata dall’artista Chalermchai Kositpipat."
 			],
 			"de": [
-				"Der Smaragd-Buddha, Thailands heiligstes Bildnis, wurde hier 1434 gefunden, als ein Blitz einen Stupa spaltete.",
-				"Der Weiße Tempel, Wat Rong Khun, wurde 1997 vom Künstler Chalermchai Kositpipat begonnen."
+				"Chiang Rai ist nach König Mangrai benannt, der die Stadt 1262 gründete.",
+				"Der Tempelüberlieferung zufolge legte ein Blitz 1434 den Smaragd-Buddha im Stupa des Wat Phra Kaew frei.",
+				"Chiang Rais kunstvoller goldener Uhrturm wurde vom Künstler Chalermchai Kositpipat entworfen."
 			]
 		}
 	},
 	"chon-buri": {
 		"region": {
 			"en": [
-				"\"The town of water\".",
-				"Pattaya grew from a fishing village into a resort after American servicemen began to take leave there in the 1960s."
+				"Chon Buri’s name means water city, combining Sanskrit-derived words for water and city.",
+				"Pattaya’s resort industry expanded during the Vietnam War as American servicemen visited on leave.",
+				"Chon Buri’s buffalo-racing festival honours farm animals and is traditionally held around the end of Buddhist Lent."
 			],
 			"it": [
-				"\"La città dell’acqua\".",
-				"Pattaya passò da villaggio di pescatori a località turistica dopo che, negli anni Sessanta, i militari americani cominciarono a trascorrervi le licenze."
+				"Il nome Chon Buri significa città dell’acqua e unisce parole di origine sanscrita per acqua e città.",
+				"L’attività turistica di Pattaya si ampliò durante la guerra del Vietnam, con le visite dei militari statunitensi in licenza.",
+				"La festa delle corse dei bufali di Chon Buri rende omaggio agli animali da lavoro e si tiene tradizionalmente verso la fine della quaresima buddhista."
 			],
 			"de": [
-				"„Die Stadt des Wassers“.",
-				"Pattaya wuchs von einem Fischerdorf zu einem Badeort, nachdem amerikanische Soldaten in den 1960er-Jahren dort Urlaub zu machen begannen."
+				"Chon Buri bedeutet Wasserstadt und verbindet aus dem Sanskrit stammende Wörter für Wasser und Stadt.",
+				"Pattayas Tourismus wuchs während des Vietnamkriegs, als amerikanische Soldaten ihren Urlaub dort verbrachten.",
+				"Chon Buris Büffelrennen ehrt die Arbeitstiere der Landwirtschaft und findet traditionell gegen Ende der buddhistischen Regenzeitklausur statt."
 			]
 		},
 		"city": {
 			"en": [
-				"Every October it holds buffalo races."
+				"Chon Buri means water city, combining Sanskrit-derived words for water and city.",
+				"Chon Buri’s buffalo-racing festival traditionally takes place around the end of Buddhist Lent.",
+				"Wat Yai Intharam preserves mural paintings depicting Buddhist stories."
 			],
 			"it": [
-				"Ogni ottobre ospita corse di bufali."
+				"Chon Buri significa città dell’acqua e unisce parole di origine sanscrita per acqua e città.",
+				"La festa delle corse dei bufali di Chon Buri si tiene tradizionalmente verso la fine della quaresima buddhista.",
+				"Wat Yai Intharam conserva pitture murali che raffigurano storie buddhiste."
 			],
 			"de": [
-				"Jeden Oktober finden hier Büffelrennen statt."
+				"Chon Buri bedeutet Wasserstadt und verbindet aus dem Sanskrit stammende Wörter für Wasser und Stadt.",
+				"Chon Buris Büffelrennen findet traditionell gegen Ende der buddhistischen Regenzeitklausur statt.",
+				"Wat Yai Intharam bewahrt Wandmalereien mit buddhistischen Erzählungen."
 			]
 		}
 	},
 	"chumphon": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Typhoon Gay struck it in November 1989, one of the worst storms in Thailand’s history."
+				"Chumphon is named among the southern towns in Ayutthaya-era laws dated 1454.",
+				"Typhoon Gay struck Chumphon on 4 November 1989, causing widespread destruction.",
+				"Researchers at Khao Dinsor have used satellite tags to trace migrating birds of prey to wintering grounds in Indonesia."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Il tifone Gay la colpì nel novembre 1989, una delle peggiori tempeste della storia thailandese."
+				"Chumphon è citata tra le città meridionali in leggi dell’epoca di Ayutthaya datate 1454.",
+				"Il tifone Gay colpì Chumphon il 4 novembre 1989, causando vaste distruzioni.",
+				"I ricercatori a Khao Dinsor hanno usato trasmettitori satellitari per seguire rapaci migratori fino alle aree di svernamento in Indonesia."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Der Taifun Gay traf sie im November 1989, einer der schlimmsten Stürme in Thailands Geschichte."
+				"Chumphon wird in Gesetzen aus der Ayutthaya-Zeit mit der Datierung 1454 unter den südlichen Städten genannt.",
+				"Taifun Gay traf Chumphon am 4. November 1989 und verursachte weitreichende Zerstörungen.",
+				"Forscher am Khao Dinsor haben mit Satellitensendern wandernde Greifvögel bis zu ihren Winterquartieren in Indonesien verfolgt."
 			]
 		}
 	},
 	"hat-yai": {
 		"city": {
 			"en": [
-				"It grew in the 20th century around a railway junction."
+				"Hat Yai grew from the villages of Khok Samet Chun and Ban Hat Yai, whose names appear in the municipality’s history.",
+				"The relocation of a flood-prone railway junction to Hat Yai drew settlers and helped the town expand.",
+				"Kim Yong Market is known for both imported goods and local food."
 			],
 			"it": [
-				"Crebbe nel Novecento intorno a un nodo ferroviario."
+				"Hat Yai si sviluppò dai villaggi di Khok Samet Chun e Ban Hat Yai, i cui nomi compaiono nella storia comunale.",
+				"Il trasferimento a Hat Yai di un nodo ferroviario soggetto ad allagamenti attirò nuovi abitanti e favorì l’espansione cittadina.",
+				"Il mercato Kim Yong è conosciuto sia per le merci importate sia per i cibi locali."
 			],
 			"de": [
-				"Sie wuchs im 20. Jahrhundert um einen Eisenbahnknotenpunkt."
+				"Hat Yai entstand aus den Dörfern Khok Samet Chun und Ban Hat Yai, deren Namen in der Stadtgeschichte überliefert sind.",
+				"Die Verlegung eines überschwemmungsgefährdeten Bahnknotens nach Hat Yai zog Siedler an und förderte das Stadtwachstum.",
+				"Der Kim-Yong-Markt ist für Importwaren und örtliche Speisen bekannt."
 			]
 		}
 	},
 	"kalasin": {
 		"region": {
 			"en": [
-				"Often read as \"black water\", from Pali; the derivation is uncertain.",
-				"Dinosaur bones found at Phu Kum Khao are shown in a museum on the site."
+				"Kalasin means black water; King Rama I bestowed the name on Ban Kaeng Samrong in 1793.",
+				"The Sirindhorn Museum at Phu Kum Khao preserves a dinosaur excavation site where bones of several sauropods were found.",
+				"Wat Phuttha Nimit’s wooden ordination hall was built with timber recovered from the Lam Pao Dam area."
 			],
 			"it": [
-				"Spesso interpretato come \"acqua nera\", dal pali; l’etimologia è incerta.",
-				"Le ossa di dinosauro trovate a Phu Kum Khao sono esposte in un museo sul posto."
+				"Kalasin significa acqua nera; il re Rama I conferì il nome a Ban Kaeng Samrong nel 1793.",
+				"Il Sirindhorn Museum a Phu Kum Khao conserva un sito di scavo dove furono trovate ossa di diversi dinosauri sauropodi.",
+				"La sala delle ordinazioni in legno di Wat Phuttha Nimit fu costruita con legname recuperato nell’area della diga Lam Pao."
 			],
 			"de": [
-				"Oft als „schwarzes Wasser“ gedeutet, aus dem Pali; die Herkunft ist ungewiss.",
-				"Dinosaurierknochen, die in Phu Kum Khao gefunden wurden, werden in einem Museum vor Ort gezeigt."
+				"Kalasin bedeutet schwarzes Wasser; König Rama I. verlieh Ban Kaeng Samrong den Namen 1793.",
+				"Das Sirindhorn Museum am Phu Kum Khao bewahrt eine Dinosauriergrabung, an der Knochen mehrerer Sauropoden gefunden wurden.",
+				"Wat Phuttha Nimits hölzerne Ordinationshalle wurde aus Holz errichtet, das aus dem Gebiet des Lam-Pao-Damms geborgen wurde."
 			]
 		}
 	},
 	"kamphaeng-phet": {
 		"region": {
 			"en": [
-				"\"The diamond wall\", for the walls of its old town.",
-				"The ruins of the old town are part of a UNESCO site with Sukhothai."
+				"Kamphaeng Phet means diamond wall, referring to its historic fortifications.",
+				"Kamphaeng Phet’s historic town forms part of the UNESCO World Heritage property shared with Sukhothai and Si Satchanalai.",
+				"Wat Chang Rop’s raised stupa platform is surrounded by sixty-eight sculpted elephant forequarters."
 			],
 			"it": [
-				"\"Il muro di diamante\", per le mura della sua città antica.",
-				"Le rovine della città antica fanno parte di un sito UNESCO insieme a Sukhothai."
+				"Kamphaeng Phet significa muro di diamante e richiama le fortificazioni storiche.",
+				"La città storica di Kamphaeng Phet fa parte del sito UNESCO condiviso con Sukhothai e Si Satchanalai.",
+				"La piattaforma rialzata dello stupa di Wat Chang Rop è circondata da sessantotto sculture delle parti anteriori di elefanti."
 			],
 			"de": [
-				"„Die Diamantmauer“, nach den Mauern ihrer Altstadt.",
-				"Die Ruinen der Altstadt sind zusammen mit Sukhothai Teil eines UNESCO-Welterbes."
+				"Kamphaeng Phet bedeutet Diamantmauer und verweist auf die historischen Befestigungen.",
+				"Kamphaeng Phets historische Stadt gehört zur UNESCO-Welterbestätte mit Sukhothai und Si Satchanalai.",
+				"Die erhöhte Stupaplattform von Wat Chang Rop ist von achtundsechzig plastischen Elefantenvorderkörpern umgeben."
 			]
 		}
 	},
@@ -361,43 +419,55 @@
 	"khon-kaen": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"The first dinosaur bones found in Thailand were dug up at Phu Wiang, in 1976."
+				"Khon Kaen developed from Ban Bueng Bon, which became an officially recognised town under King Rama I in 1797.",
+				"In 1976, a geologist prospecting for uranium found a sauropod thigh-bone fragment at Phu Wiang.",
+				"Khon Kaen University was founded in 1964 to expand higher education in northeastern Thailand."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Le prime ossa di dinosauro trovate in Thailandia furono dissotterrate a Phu Wiang, nel 1976."
+				"Khon Kaen si sviluppò da Ban Bueng Bon, che divenne una città ufficialmente riconosciuta sotto il re Rama I nel 1797.",
+				"Nel 1976 un geologo in cerca di uranio trovò a Phu Wiang un frammento di femore di un dinosauro sauropode.",
+				"L’Università di Khon Kaen fu fondata nel 1964 per ampliare l’istruzione superiore nella Thailandia nordorientale."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Die ersten in Thailand gefundenen Dinosaurierknochen wurden 1976 in Phu Wiang ausgegraben."
+				"Khon Kaen entwickelte sich aus Ban Bueng Bon, das 1797 unter König Rama I. als Stadt offiziell anerkannt wurde.",
+				"1976 fand ein nach Uran suchender Geologe am Phu Wiang das Fragment eines Sauropoden-Oberschenkelknochens.",
+				"Die Khon Kaen University wurde 1964 zur Erweiterung der Hochschulbildung in Nordostthailand gegründet."
 			]
 		},
 		"city": {
 			"en": [
-				"Its university, founded in 1964, was the first in the northeast."
+				"Khon Kaen developed from Ban Bueng Bon, which became an officially recognised town under King Rama I in 1797.",
+				"Khon Kaen University was founded in 1964 to expand higher education in northeastern Thailand.",
+				"Phra Mahathat Kaen Nakhon is the nine-storey stupa at Wat Nong Waeng beside the city’s Kaen Nakhon lake."
 			],
 			"it": [
-				"La sua università, fondata nel 1964, fu la prima del nord-est."
+				"Khon Kaen si sviluppò da Ban Bueng Bon, riconosciuta ufficialmente come città sotto Rama I nel 1797.",
+				"L’Università di Khon Kaen fu fondata nel 1964 per ampliare l’istruzione superiore nella Thailandia nordorientale.",
+				"Phra Mahathat Kaen Nakhon è lo stupa di nove piani del Wat Nong Waeng, accanto al lago cittadino Kaen Nakhon."
 			],
 			"de": [
-				"Ihre 1964 gegründete Universität war die erste im Nordosten."
+				"Khon Kaen entstand aus Ban Bueng Bon, das 1797 unter König Rama I. offiziell als Stadt anerkannt wurde.",
+				"Die Universität Khon Kaen wurde 1964 gegründet, um die Hochschulbildung im Nordosten Thailands auszubauen.",
+				"Phra Mahathat Kaen Nakhon ist der neunstöckige Stupa des Wat Nong Waeng am städtischen Kaen-Nakhon-See."
 			]
 		}
 	},
 	"krabi": {
 		"region": {
 			"en": [
-				"The name means \"sword\", after a legend of old swords found near the town.",
-				"Maya Bay, on Ko Phi Phi Le, was the setting of the film The Beach, in 2000."
+				"Krabi means sword, a meaning reflected in the crossed swords on the provincial seal.",
+				"Maya Bay on Ko Phi Phi Le was a setting for the film The Beach, released in 2000.",
+				"Tham Phi Hua To preserves prehistoric rock paintings inside a limestone cave."
 			],
 			"it": [
-				"Il nome significa \"spada\", da una leggenda di antiche spade trovate vicino alla città.",
-				"Maya Bay, su Ko Phi Phi Le, fu il set del film The Beach, nel 2000."
+				"Krabi significa spada, un significato richiamato dalle spade incrociate sullo stemma provinciale.",
+				"Maya Bay, sull’isola di Ko Phi Phi Le, fu una delle ambientazioni del film The Beach, uscito nel 2000.",
+				"Tham Phi Hua To conserva pitture rupestri preistoriche all’interno di una grotta calcarea."
 			],
 			"de": [
-				"Der Name bedeutet „Schwert“, nach einer Legende von alten Schwertern, die nahe der Stadt gefunden wurden.",
-				"Die Maya Bay auf Ko Phi Phi Le war im Jahr 2000 Schauplatz des Films „The Beach“."
+				"Krabi bedeutet Schwert, was die gekreuzten Schwerter im Provinzwappen aufgreifen.",
+				"Maya Bay auf Ko Phi Phi Le war ein Schauplatz des im Jahr 2000 erschienenen Films The Beach.",
+				"Tham Phi Hua To bewahrt prähistorische Felsmalereien in einer Kalksteinhöhle."
 			]
 		}
 	},
@@ -421,29 +491,38 @@
 		},
 		"city": {
 			"en": [
-				"Horse-drawn carriages still carry people around the town."
+				"Lampang was historically known as Khelang Nakhon, a name preserved in inscriptions and chronicles.",
+				"Horse-drawn carriages remain a distinctive way to travel around Lampang.",
+				"The conservation of Wat Pong Sanuk received a UNESCO Asia-Pacific heritage Award of Merit in 2008."
 			],
 			"it": [
-				"Carrozze trainate da cavalli portano ancora la gente in giro per la città."
+				"Lampang era storicamente conosciuta come Khelang Nakhon, un nome conservato in iscrizioni e cronache.",
+				"Le carrozze trainate da cavalli restano un caratteristico mezzo per visitare Lampang.",
+				"Il restauro del Wat Pong Sanuk ricevette nel 2008 un Premio al merito del programma UNESCO per il patrimonio dell’Asia e del Pacifico."
 			],
 			"de": [
-				"Pferdekutschen befördern noch immer Menschen durch die Stadt."
+				"Lampang war historisch als Khelang Nakhon bekannt, ein in Inschriften und Chroniken überlieferter Name.",
+				"Pferdekutschen sind weiterhin ein charakteristisches Verkehrsmittel für Besichtigungen in Lampang.",
+				"Die Erhaltung des Wat Pong Sanuk erhielt 2008 einen Award of Merit des UNESCO-Programms für das Kulturerbe im Asien-Pazifik-Raum."
 			]
 		}
 	},
 	"lamphun": {
 		"region": {
 			"en": [
-				"The old town was Hariphunchai, a Mon kingdom said to have been founded by Queen Chamadevi.",
-				"Its longans are among the most famous in Thailand."
+				"Lamphun was formerly known as Hariphunchai, the Mon royal city traditionally associated with Queen Chamadevi.",
+				"Lamphun’s Biaokhiao longans have firm, sweet white flesh and are protected by a geographical indication.",
+				"Wat Cham Thewi’s stepped square stupa contains sixty standing Buddha images arranged in tiers."
 			],
 			"it": [
-				"L’antica città era Hariphunchai, un regno mon che si dice fondato dalla regina Chamadevi.",
-				"I suoi longan sono tra i più famosi della Thailandia."
+				"Lamphun era conosciuta come Hariphunchai, la città reale mon tradizionalmente associata alla regina Chamadevi.",
+				"I longan Biaokhiao di Lamphun hanno polpa bianca, soda e dolce e sono tutelati da un’indicazione geografica.",
+				"Lo stupa quadrato a gradoni di Wat Cham Thewi contiene sessanta immagini del Buddha in piedi disposte su più livelli."
 			],
 			"de": [
-				"Die alte Stadt war Hariphunchai, ein Mon-Königreich, das Königin Chamadevi gegründet haben soll.",
-				"Ihre Longan gehören zu den berühmtesten Thailands."
+				"Lamphun hieß früher Hariphunchai, die traditionell mit Königin Chamadevi verbundene monische Königsstadt.",
+				"Lamphuns Biaokhiao-Longans haben festes, süßes weißes Fruchtfleisch und sind durch eine geografische Angabe geschützt.",
+				"Wat Cham Thewis quadratische Stufenstupa enthält sechzig in Ebenen angeordnete stehende Buddhafiguren."
 			]
 		}
 	},
@@ -488,85 +567,112 @@
 	"mae-hong-son": {
 		"region": {
 			"en": [
-				"The name is often said to recall a camp where elephants were trained; the derivation is uncertain.",
-				"The road to it from Chiang Mai is famous for its hundreds of bends."
+				"Mae Hong Son’s name recalls the elephant-training camps established here by Chiang Mai’s rulers.",
+				"At Mae Hong Son’s Poy Sang Long festival, Shan boys dress as princes and are carried on adults’ shoulders before novice ordination.",
+				"Tham Lod cave in Pang Mapha contains ancient wooden log coffins in its upper chambers."
 			],
 			"it": [
-				"Si dice spesso che il nome ricordi un campo dove si addestravano gli elefanti; l’etimologia è incerta.",
-				"La strada che vi arriva da Chiang Mai è famosa per le sue centinaia di curve."
+				"Il nome Mae Hong Son ricorda gli accampamenti per l’addestramento degli elefanti creati qui dai governanti di Chiang Mai.",
+				"Alla festa Poy Sang Long di Mae Hong Son i ragazzi shan si vestono da principi e vengono portati sulle spalle degli adulti prima dell’ordinazione come novizi.",
+				"La grotta Tham Lod a Pang Mapha contiene antiche bare ricavate da tronchi nelle camere superiori."
 			],
 			"de": [
-				"Oft heißt es, der Name erinnere an ein Lager, in dem Elefanten abgerichtet wurden; die Herkunft ist ungewiss.",
-				"Die Straße von Chiang Mai dorthin ist für ihre Hunderte von Kurven berühmt."
+				"Mae Hong Sons Name erinnert an die hier von Chiang Mais Herrschern eingerichteten Elefanten-Ausbildungslager.",
+				"Beim Poy-Sang-Long-Fest in Mae Hong Son kleiden sich Shan-Jungen als Prinzen und werden vor der Novizenweihe auf den Schultern Erwachsener getragen.",
+				"Die Höhle Tham Lod in Pang Mapha enthält alte Holzsärge aus Baumstämmen in ihren oberen Kammern."
 			]
 		}
 	},
 	"maha-sarakham": {
 		"region": {
 			"en": [
-				"Its universities earned it the nickname \"the Taxila of Isan\", after the ancient seat of learning in India."
+				"Maha Sarakham was established under that name in 1865 as a satellite town of Roi Et.",
+				"Maha Sarakham’s educational institutions earned it the nickname Taxila of Isan, after the ancient South Asian centre of learning.",
+				"Wat Mahachai was formerly called Wat Nua and received its present name in 1929."
 			],
 			"it": [
-				"Le sue università le hanno valso il soprannome di \"Taxila dell’Isan\", dall’antico centro di studi dell’India."
+				"Maha Sarakham fu fondata con questo nome nel 1865 come città satellite di Roi Et.",
+				"Gli istituti d’istruzione di Maha Sarakham le valsero il soprannome Taxila dell’Isan, dall’antico centro di studi dell’Asia meridionale.",
+				"Wat Mahachai si chiamava anticamente Wat Nua e ricevette il nome attuale nel 1929."
 			],
 			"de": [
-				"Wegen ihrer Universitäten bekam sie den Beinamen „das Taxila von Isan“, nach dem antiken Bildungssitz in Indien."
+				"Maha Sarakham wurde 1865 unter diesem Namen als Satellitenstadt von Roi Et gegründet.",
+				"Maha Sarakhams Bildungseinrichtungen brachten ihm den Beinamen Taxila des Isan ein, nach dem antiken südasiatischen Bildungszentrum.",
+				"Wat Mahachai hieß früher Wat Nua und erhielt 1929 seinen heutigen Namen."
 			]
 		}
 	},
 	"mukdahan": {
 		"region": {
 			"en": [
-				"\"Pearl\", after a legend of a pearl found in the Mekong.",
-				"The rocks of Phu Pha Thoep have been worn into strange mushroom shapes."
+				"Mukdahan’s name is linked to a local legend about a glowing jewel called Kaeo Mukdahan.",
+				"Phu Pha Thoep’s unusual sandstone formations were sculpted by erosion acting differently on harder and softer rock layers.",
+				"Ho Kaeo Tower, opened in 1996, houses exhibitions about Mukdahan’s history and ethnic communities."
 			],
 			"it": [
-				"\"Perla\", da una leggenda di una perla trovata nel Mekong.",
-				"Le rocce del Phu Pha Thoep sono state erose in strane forme di funghi."
+				"Il nome Mukdahan è legato a una leggenda locale su un gioiello luminoso chiamato Kaeo Mukdahan.",
+				"Le insolite formazioni di arenaria di Phu Pha Thoep furono scolpite dall’erosione che agisce diversamente sugli strati di roccia più duri e più teneri.",
+				"La torre Ho Kaeo, aperta nel 1996, ospita esposizioni sulla storia e sulle comunità etniche di Mukdahan."
 			],
 			"de": [
-				"„Perle“, nach einer Legende von einer im Mekong gefundenen Perle.",
-				"Die Felsen von Phu Pha Thoep sind zu seltsamen Pilzformen abgetragen."
+				"Mukdahans Name ist mit einer örtlichen Legende über ein leuchtendes Juwel namens Kaeo Mukdahan verbunden.",
+				"Phu Pha Thoeps ungewöhnliche Sandsteinformationen entstanden durch die unterschiedlich starke Abtragung härterer und weicherer Gesteinsschichten.",
+				"Der 1996 eröffnete Ho-Kaeo-Turm beherbergt Ausstellungen über Mukdahans Geschichte und ethnische Gemeinschaften."
 			]
 		}
 	},
 	"nakhon-nayok": {
 		"region": {
 			"en": [
-				"Part of the Khao Yai National Park lies in its hills."
+				"One explanation links Nakhon Nayok’s name to a historical exemption from rice-field taxes.",
+				"Haew Narok waterfall in Khao Yai tumbles through three tiers.",
+				"Dong Lakhon preserves the moats and earthworks of an ancient Dvaravati community."
 			],
 			"it": [
-				"Parte del Parco nazionale Khao Yai si trova sulle sue colline."
+				"Una spiegazione collega il nome Nakhon Nayok a una storica esenzione dalle tasse sulle risaie.",
+				"La cascata Haew Narok nel Khao Yai scende su tre livelli.",
+				"Dong Lakhon conserva i fossati e i terrapieni di un’antica comunità dvaravati."
 			],
 			"de": [
-				"Ein Teil des Khao-Yai-Nationalparks liegt in ihren Hügeln."
+				"Eine Erklärung verbindet Nakhon Nayoks Namen mit einer historischen Befreiung von Reisfeldsteuern.",
+				"Der Wasserfall Haew Narok im Khao Yai fällt über drei Stufen.",
+				"Dong Lakhon bewahrt die Gräben und Erdwälle einer alten Dvaravati-Gemeinschaft."
 			]
 		}
 	},
 	"nakhon-pathom": {
 		"region": {
 			"en": [
-				"\"The first city\", for its claim to be the oldest town in Thailand.",
-				"It was a centre of Dvaravati, the Mon culture that flourished here from the 6th century."
+				"Nakhon Pathom means first city; the province previously bore the name Nakhon Chai Si.",
+				"Nakhon Pathom was an important centre of the Buddhist Dvaravati culture from around the sixth century.",
+				"King Mongkut’s nineteenth-century rebuilding of Phra Pathom Chedi enclosed an older stupa inside the new monument."
 			],
 			"it": [
-				"\"La prima città\", per la sua pretesa di essere la più antica della Thailandia.",
-				"Fu un centro del Dvaravati, la cultura mon che vi fiorì dal VI secolo."
+				"Nakhon Pathom significa prima città; la provincia portava in precedenza il nome Nakhon Chai Si.",
+				"Nakhon Pathom fu un importante centro della cultura buddhista Dvaravati a partire dal VI secolo circa.",
+				"La ricostruzione ottocentesca del Phra Pathom Chedi voluta da Mongkut inglobò uno stupa più antico nel nuovo monumento."
 			],
 			"de": [
-				"„Die erste Stadt“, nach ihrem Anspruch, die älteste Stadt Thailands zu sein.",
-				"Sie war ein Zentrum von Dvaravati, der Mon-Kultur, die hier ab dem 6. Jahrhundert blühte."
+				"Nakhon Pathom bedeutet erste Stadt; die Provinz trug zuvor den Namen Nakhon Chai Si.",
+				"Nakhon Pathom war etwa seit dem sechsten Jahrhundert ein wichtiges Zentrum der buddhistischen Dvaravati-Kultur.",
+				"Beim Wiederaufbau des Phra Pathom Chedi unter König Mongkut im 19. Jahrhundert wurde ein älterer Stupa vom neuen Bau umschlossen."
 			]
 		},
 		"city": {
 			"en": [
-				"Its Phra Pathommachedi, about 120 m high, is one of the tallest stupas in the world."
+				"Nakhon Pathom means first city, reflecting its long historical importance.",
+				"Phra Pathom Chedi’s nineteenth-century rebuilding under King Mongkut enclosed an older stupa.",
+				"Sanam Chandra Palace began in 1907 as a residence for the future King Rama VI."
 			],
 			"it": [
-				"Il suo Phra Pathommachedi, alto circa 120 m, è uno degli stupa più alti del mondo."
+				"Nakhon Pathom significa prima città, un richiamo alla sua lunga importanza storica.",
+				"La ricostruzione ottocentesca del Phra Pathom Chedi sotto Mongkut inglobò uno stupa più antico.",
+				"Il palazzo Sanam Chandra nacque nel 1907 come residenza del futuro Rama VI."
 			],
 			"de": [
-				"Ihr Phra Pathommachedi, etwa 120 m hoch, ist einer der höchsten Stupas der Welt."
+				"Nakhon Pathom bedeutet erste Stadt und verweist auf seine lange historische Bedeutung.",
+				"Beim Wiederaufbau des Phra Pathom Chedi unter König Mongkut im 19. Jahrhundert wurde ein älterer Stupa umschlossen.",
+				"Der Bau des Sanam-Chandra-Palasts begann 1907 als Residenz für den späteren König Rama VI."
 			]
 		}
 	},
@@ -609,13 +715,19 @@
 		},
 		"city": {
 			"en": [
-				"Often called Korat; a statue in the town remembers Thao Suranari, who led its resistance to a Lao army in 1826."
+				"Nakhon Ratchasima is widely known by its older name Korat.",
+				"The Thao Suranari monument honours the woman traditionally credited with leading resistance to a Lao army in 1826.",
+				"Chumphon Gate is the surviving original gate of the old walled city; the other three gates were reconstructed."
 			],
 			"it": [
-				"Spesso chiamata Korat; una statua in città ricorda Thao Suranari, che guidò la resistenza contro un esercito lao nel 1826."
+				"Nakhon Ratchasima è comunemente conosciuta con il suo antico nome Korat.",
+				"Il monumento a Thao Suranari onora la donna cui la tradizione attribuisce la guida della resistenza a un esercito laotiano nel 1826.",
+				"La porta Chumphon è l’unica porta originale superstite dell’antica città murata; le altre tre furono ricostruite."
 			],
 			"de": [
-				"Oft Korat genannt; eine Statue in der Stadt erinnert an Thao Suranari, die 1826 den Widerstand der Stadt gegen ein laotisches Heer anführte."
+				"Nakhon Ratchasima ist weithin unter seinem älteren Namen Korat bekannt.",
+				"Das Thao-Suranari-Denkmal ehrt die Frau, der traditionell die Führung des Widerstands gegen eine laotische Armee 1826 zugeschrieben wird.",
+				"Das Chumphon-Tor ist das erhaltene Originaltor der alten befestigten Stadt; die drei anderen Tore wurden rekonstruiert."
 			]
 		}
 	},
@@ -639,40 +751,55 @@
 		},
 		"city": {
 			"en": [
-				"Its Chinese New Year parade, with dragons and lion dances, is one of the largest in Thailand."
+				"Nakhon Sawan is also traditionally known as Pak Nam Pho.",
+				"Nakhon Sawan’s Chinese New Year processions feature dragon performances and the carrying of revered deity images.",
+				"At Nakhon Sawan, the Ping and Nan rivers meet to form the Chao Phraya."
 			],
 			"it": [
-				"La sua sfilata del capodanno cinese, con draghi e danze del leone, è una delle più grandi della Thailandia."
+				"Nakhon Sawan è tradizionalmente conosciuta anche come Pak Nam Pho.",
+				"Le processioni del Capodanno cinese di Nakhon Sawan comprendono danze del drago e il trasporto di venerate immagini divine.",
+				"A Nakhon Sawan i fiumi Ping e Nan si uniscono formando il Chao Phraya."
 			],
 			"de": [
-				"Ihr chinesischer Neujahrsumzug mit Drachen und Löwentänzen ist einer der größten Thailands."
+				"Nakhon Sawan ist traditionell auch als Pak Nam Pho bekannt.",
+				"Zu Nakhon Sawans chinesischen Neujahrsprozessionen gehören Drachenvorführungen und das Tragen verehrter Gottheitenbilder.",
+				"Bei Nakhon Sawan vereinigen sich Ping und Nan zum Chao Phraya."
 			]
 		}
 	},
 	"nakhon-si-thammarat": {
 		"region": {
 			"en": [
-				"\"The glorious city of the dharma king\".",
-				"It is the home of Thai shadow puppetry and of nielloware."
+				"Nakhon Si Thammarat means majestic city of the virtuous king, invoking the Buddhist ideal of a ruler guided by Dharma.",
+				"The shadow-puppet museum founded by Suchart Subsin preserves carved leather puppets and the performing tradition of nang talung.",
+				"Nakhon Si Thammarat’s nielloware contrasts silver designs with dark metal inlay."
 			],
 			"it": [
-				"\"La gloriosa città del re del dharma\".",
-				"È la patria del teatro delle ombre thailandese e dell’argento niellato."
+				"Nakhon Si Thammarat significa maestosa città del re virtuoso e richiama l’ideale buddhista di un sovrano guidato dal Dharma.",
+				"Il museo delle marionette d’ombra fondato da Suchart Subsin conserva figure di cuoio intagliato e la tradizione teatrale del nang talung.",
+				"Gli oggetti niellati di Nakhon Si Thammarat accostano motivi in argento a intarsi di metallo scuro."
 			],
 			"de": [
-				"„Die glorreiche Stadt des Dharma-Königs“.",
-				"Sie ist die Heimat des thailändischen Schattenspiels und der Niello-Arbeiten."
+				"Nakhon Si Thammarat bedeutet majestätische Stadt des tugendhaften Königs und verweist auf das buddhistische Ideal eines vom Dharma geleiteten Herrschers.",
+				"Das von Suchart Subsin gegründete Schattenspielmuseum bewahrt geschnitzte Lederfiguren und die Nang-Talung-Aufführungstradition.",
+				"Die Nielloarbeiten aus Nakhon Si Thammarat verbinden silberne Muster mit dunklen Metalleinlagen."
 			]
 		},
 		"city": {
 			"en": [
-				"Its stupa, Wat Phra Mahathat, is one of the most revered in southern Thailand."
+				"Nakhon Si Thammarat means majestic city of the virtuous king, invoking a Buddhist ideal of kingship.",
+				"Wat Phra Mahathat Woramahawihan became a UNESCO World Heritage Site in 2026.",
+				"At Wat Phra Mahathat, the annual cloth-wrapping ceremony honours the monastery’s Great Reliquary."
 			],
 			"it": [
-				"Il suo stupa, Wat Phra Mahathat, è uno dei più venerati della Thailandia meridionale."
+				"Nakhon Si Thammarat significa maestosa città del re virtuoso e richiama un ideale buddhista della regalità.",
+				"Wat Phra Mahathat Woramahawihan divenne patrimonio mondiale UNESCO nel 2026.",
+				"Al Wat Phra Mahathat, la cerimonia annuale di avvolgimento con teli rende omaggio al grande reliquiario del monastero."
 			],
 			"de": [
-				"Ihr Stupa, Wat Phra Mahathat, ist einer der am meisten verehrten Südthailands."
+				"Nakhon Si Thammarat bedeutet majestätische Stadt des tugendhaften Königs und verweist auf ein buddhistisches Herrscherideal.",
+				"Wat Phra Mahathat Woramahawihan wurde 2026 UNESCO-Welterbe.",
+				"Im Wat Phra Mahathat ehrt die jährliche Zeremonie des Einhüllens mit Tüchern das große Reliquiar des Klosters."
 			]
 		}
 	},
@@ -698,140 +825,182 @@
 	"narathiwat": {
 		"region": {
 			"en": [
-				"Named for its town, a name given in the 20th century.",
-				"Most of its people are Malay-speaking Muslims."
+				"King Rama VI renamed Bang Nara as Narathiwat in 1915.",
+				"The fishing community of Ban Thon is known for building colourful ko lae wooden boats.",
+				"The Sirindhorn peat-swamp forest preserves a distinctive ecosystem of trees rooted in waterlogged peat."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome dato nel Novecento.",
-				"La maggior parte dei suoi abitanti è costituita da musulmani di lingua malese."
+				"Rama VI ribattezzò Bang Nara con il nome Narathiwat nel 1915.",
+				"La comunità di pescatori di Ban Thon è conosciuta per la costruzione di colorate barche di legno ko lae.",
+				"La foresta paludosa di Sirindhorn conserva un particolare ecosistema di alberi radicati nella torba impregnata d’acqua."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name aus dem 20. Jahrhundert.",
-				"Die meisten ihrer Einwohner sind malaiischsprachige Muslime."
+				"König Rama VI. benannte Bang Nara 1915 in Narathiwat um.",
+				"Die Fischergemeinschaft Ban Thon ist für den Bau farbenfroher hölzerner Ko-Lae-Boote bekannt.",
+				"Der Sirindhorn-Torfsumpfwald bewahrt ein besonderes Ökosystem mit Bäumen, die in wassergesättigtem Torf wurzeln."
 			]
 		}
 	},
 	"nong-bua-lam-phu": {
 		"region": {
 			"en": [
-				"Nong Bua means \"lotus pond\"; the province was split from Udon Thani in 1993."
+				"Nong Bua Lam Phu’s older name was Lum Phu; it became a separate province in 1993.",
+				"Ban Huai Duea’s Shell Fossil Museum displays mollusc fossils estimated to be 140–150 million years old.",
+				"Ban Khong Sawan’s craftspeople make pottery and decorative sculptures for gardens."
 			],
 			"it": [
-				"Nong Bua significa \"stagno dei loti\"; la provincia fu separata da Udon Thani nel 1993."
+				"Il nome antico di Nong Bua Lam Phu era Lum Phu; divenne una provincia separata nel 1993.",
+				"Il Museo dei Fossili di Conchiglie di Ban Huai Duea espone fossili di molluschi stimati tra 140 e 150 milioni di anni.",
+				"Gli artigiani di Ban Khong Sawan realizzano ceramiche e sculture decorative per giardini."
 			],
 			"de": [
-				"Nong Bua bedeutet „Lotusteich“; die Provinz wurde 1993 von Udon Thani abgetrennt."
+				"Nong Bua Lam Phus älterer Name war Lum Phu; 1993 wurde es zu einer eigenen Provinz.",
+				"Das Muschelfossilienmuseum in Ban Huai Duea zeigt auf 140–150 Millionen Jahre geschätzte Weichtierfossilien.",
+				"Die Handwerker von Ban Khong Sawan fertigen Töpferwaren und dekorative Gartenskulpturen."
 			]
 		}
 	},
 	"nong-khai": {
 		"region": {
 			"en": [
-				"Nong means \"pond\" or \"marsh\", a word found in many place names of the region.",
-				"At the end of Buddhist Lent, crowds gather on the Mekong to watch for the Naga fireballs, glowing balls said to rise from the river."
+				"Nong Khai took its name from a large pond near the town established in 1827.",
+				"At the end of Buddhist Lent, Nong Khai’s Naga-fireball celebrations centre on lights said to rise from the Mekong.",
+				"Sala Keoku contains giant concrete sculptures combining Buddhist and Hindu imagery, created under Bunleua Sulilat’s direction."
 			],
 			"it": [
-				"Nong significa \"stagno\" o \"palude\", una parola che compare in molti toponimi della regione.",
-				"Alla fine della Quaresima buddista la folla si raduna sul Mekong per vedere le palle di fuoco del Naga, sfere luminose che si dice salgano dal fiume."
+				"Nong Khai prese il nome da un grande stagno presso la città fondata nel 1827.",
+				"Alla fine della Quaresima buddista le celebrazioni delle palle di fuoco del Naga a Nong Khai ruotano intorno a luci che si dice salgano dal Mekong.",
+				"Sala Keoku contiene gigantesche sculture in cemento che uniscono immagini buddiste e induiste, create sotto la direzione di Bunleua Sulilat."
 			],
 			"de": [
-				"Nong bedeutet „Teich“ oder „Sumpf“, ein Wort, das in vielen Ortsnamen der Region vorkommt.",
-				"Am Ende der buddhistischen Fastenzeit versammeln sich Menschenmengen am Mekong, um nach den Naga-Feuerbällen Ausschau zu halten, glühenden Kugeln, die aus dem Fluss aufsteigen sollen."
+				"Nong Khai erhielt seinen Namen von einem großen Teich bei der 1827 gegründeten Stadt.",
+				"Am Ende der buddhistischen Fastenzeit stehen bei Nong Khais Naga-Feuerballfeiern Lichter im Mittelpunkt, die aus dem Mekong aufsteigen sollen.",
+				"Sala Keoku enthält riesige Betonskulpturen mit buddhistischen und hinduistischen Motiven, die unter Bunleua Sulilats Leitung entstanden."
 			]
 		},
 		"city": {
 			"en": [
-				"The first Thai-Lao Friendship Bridge across the Mekong opened here in 1994.",
-				"Sala Keoku is a garden of giant concrete sculptures of gods and demons."
+				"Nong Khai took its name from a large pond near the town established in 1827.",
+				"The first Thai-Lao Friendship Bridge near Nong Khai opened across the Mekong in 1994.",
+				"Sala Keoku near Nong Khai contains giant concrete sculptures combining Buddhist and Hindu imagery."
 			],
 			"it": [
-				"Qui fu aperto nel 1994 il primo Ponte dell’amicizia thai-lao sul Mekong.",
-				"Sala Keoku è un giardino di gigantesche sculture di cemento di dei e demoni."
+				"Nong Khai prese il nome da un grande stagno presso la città fondata nel 1827.",
+				"Il primo Ponte dell’amicizia tra Thailandia e Laos, presso Nong Khai, aprì sul Mekong nel 1994.",
+				"Sala Keoku, presso Nong Khai, ospita gigantesche sculture in cemento che combinano immagini buddhiste e induiste."
 			],
 			"de": [
-				"Die erste Thailändisch-Laotische Freundschaftsbrücke über den Mekong wurde hier 1994 eröffnet.",
-				"Sala Keoku ist ein Garten mit riesigen Betonskulpturen von Göttern und Dämonen."
+				"Nong Khai erhielt seinen Namen von einem großen Teich nahe der 1827 gegründeten Stadt.",
+				"Die erste Thailändisch-Laotische Freundschaftsbrücke bei Nong Khai wurde 1994 über den Mekong eröffnet.",
+				"Sala Keoku bei Nong Khai enthält riesige Betonskulpturen, die buddhistische und hinduistische Bildwelten verbinden."
 			]
 		}
 	},
 	"nonthaburi": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Its durians were long thought the finest in Thailand."
+				"Nonthaburi developed from Ban Talat Khwan, which King Maha Chakkraphat elevated to a town in 1549.",
+				"Growers of Nonthaburi’s Nont durian traditionally use Thong Lang tree leaves as fertiliser.",
+				"Ko Kret is renowned for terracotta pottery and has a museum displaying pottery-making tools."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"I suoi durian furono a lungo considerati i migliori della Thailandia."
+				"Nonthaburi si sviluppò da Ban Talat Khwan, che il re Maha Chakkraphat elevò al rango di città nel 1549.",
+				"I coltivatori del durian Nont di Nonthaburi usano tradizionalmente foglie dell’albero Thong Lang come fertilizzante.",
+				"Ko Kret è rinomata per la ceramica in terracotta e ospita un museo con strumenti per la sua lavorazione."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Ihre Durian galten lange als die besten Thailands."
+				"Nonthaburi entstand aus Ban Talat Khwan, das König Maha Chakkraphat 1549 zur Stadt erhob.",
+				"Die Anbauer der Nont-Durian aus Nonthaburi verwenden traditionell Blätter des Thong-Lang-Baums als Dünger.",
+				"Ko Kret ist für Terrakottatöpferei bekannt und besitzt ein Museum mit Werkzeugen zur Keramikherstellung."
 			]
 		},
 		"city": {
 			"en": [
-				"Thailand’s Ministry of Public Health has its seat here."
+				"Nonthaburi developed from Ban Talat Khwan, which King Maha Chakkraphat elevated to a town in 1549.",
+				"Nonthaburi’s museum occupies the former provincial hall, a building erected by the Ministry of Justice in 1910.",
+				"Bang Kwang prison received its first prisoners in 1931 after years of planning and construction."
 			],
 			"it": [
-				"Qui ha sede il Ministero della Salute pubblica thailandese."
+				"Nonthaburi si sviluppò da Ban Talat Khwan, che il re Maha Chakkraphat elevò al rango di città nel 1549.",
+				"Il museo di Nonthaburi occupa l’ex sede provinciale, costruita dal Ministero della giustizia nel 1910.",
+				"Il carcere di Bang Kwang accolse i primi detenuti nel 1931, dopo anni di progettazione e costruzione."
 			],
 			"de": [
-				"Das thailändische Gesundheitsministerium hat hier seinen Sitz."
+				"Nonthaburi entstand aus Ban Talat Khwan, das König Maha Chakkraphat 1549 zur Stadt erhob.",
+				"Nonthaburis Museum befindet sich im ehemaligen Provinzverwaltungsgebäude, das 1910 vom Justizministerium errichtet wurde.",
+				"Das Gefängnis Bang Kwang nahm 1931 nach jahrelanger Planung und Bauzeit seine ersten Gefangenen auf."
 			]
 		}
 	},
 	"pathum-thani": {
 		"region": {
 			"en": [
-				"\"The lotus city\".",
-				"The Rangsit canals, dug in the 1890s, turned its marshes into rice fields."
+				"Pathum Thani was formerly called Sam Khok; King Rama II gave it its present name, meaning lotus city, in 1815.",
+				"The Rangsit canal project, begun in 1890, transformed wetlands into irrigated rice fields.",
+				"Mon communities from what is now Myanmar established settlements around Sam Khok more than three centuries ago."
 			],
 			"it": [
-				"\"La città del loto\".",
-				"I canali di Rangsit, scavati negli anni Novanta dell’Ottocento, trasformarono le sue paludi in risaie."
+				"Pathum Thani si chiamava Sam Khok; nel 1815 Rama II le diede il nome attuale, che significa città del loto.",
+				"Il progetto dei canali di Rangsit, iniziato nel 1890, trasformò zone umide in risaie irrigate.",
+				"Comunità mon provenienti dall’odierno Myanmar fondarono insediamenti intorno a Sam Khok oltre tre secoli fa."
 			],
 			"de": [
-				"„Die Lotusstadt“.",
-				"Die Rangsit-Kanäle, in den 1890er-Jahren gegraben, verwandelten ihre Sümpfe in Reisfelder."
+				"Pathum Thani hieß früher Sam Khok; König Rama II. gab dem Ort 1815 seinen heutigen Namen, der Lotusstadt bedeutet.",
+				"Das 1890 begonnene Rangsit-Kanalprojekt verwandelte Feuchtgebiete in bewässerte Reisfelder.",
+				"Mon-Gemeinschaften aus dem heutigen Myanmar gründeten vor mehr als drei Jahrhunderten Siedlungen um Sam Khok."
 			]
 		},
 		"city": {
 			"en": [
-				"Mon refugees from Burma settled here in the 17th and 18th centuries."
+				"Pathum Thani’s name, meaning lotus city, was bestowed by King Rama II in 1815.",
+				"Wat Hong Pathummawat, on the riverbank in Pathum Thani town, was established by Mon immigrants.",
+				"Pathum Thani’s former provincial hall was built in 1917 and now houses exhibitions about local history."
 			],
 			"it": [
-				"Rifugiati mon dalla Birmania si stabilirono qui nel Seicento e nel Settecento."
+				"Il nome Pathum Thani, che significa città del loto, fu conferito da Rama II nel 1815.",
+				"Wat Hong Pathummawat, sulla riva del fiume nella città di Pathum Thani, fu fondato da immigrati mon.",
+				"L’ex sede provinciale di Pathum Thani fu costruita nel 1917 e oggi ospita mostre sulla storia locale."
 			],
 			"de": [
-				"Mon-Flüchtlinge aus Birma ließen sich hier im 17. und 18. Jahrhundert nieder."
+				"Pathum Thani erhielt seinen Namen, der Lotusstadt bedeutet, 1815 von König Rama II.",
+				"Wat Hong Pathummawat am Flussufer in der Stadt Pathum Thani wurde von Mon-Einwanderern gegründet.",
+				"Pathum Thanis ehemaliges Provinzverwaltungsgebäude wurde 1917 errichtet und beherbergt heute Ausstellungen zur Ortsgeschichte."
 			]
 		}
 	},
 	"pattani": {
 		"region": {
 			"en": [
-				"Named for its town, once the seat of the Sultanate of Patani, which Siam brought under its rule in the late 18th century.",
-				"Since 2004 an armed insurgency has been fought in it and its neighbouring provinces."
+				"Pattani preserves the name of the Malay sultanate of Patani, which Siam conquered in 1786.",
+				"Pattani and neighbouring provinces have experienced a renewed armed insurgency since 2004.",
+				"Pattani Central Mosque opened in 1963 after nine years of construction."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un tempo sede del sultanato di Patani, che il Siam sottomise alla fine del Settecento.",
-				"Dal 2004 vi si combatte un’insurrezione armata, qui e nelle province vicine."
+				"Pattani conserva il nome del sultanato malese di Patani, conquistato dal Siam nel 1786.",
+				"Pattani e le province vicine sono teatro di una rinnovata insurrezione armata dal 2004.",
+				"La Moschea centrale di Pattani aprì nel 1963 dopo nove anni di lavori."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, einst Sitz des Sultanats Patani, das Siam im späten 18. Jahrhundert unter seine Herrschaft brachte.",
-				"Seit 2004 wird in ihr und den Nachbarprovinzen ein bewaffneter Aufstand geführt."
+				"Pattani bewahrt den Namen des malaiischen Sultanats Patani, das Siam 1786 eroberte.",
+				"Pattani und benachbarte Provinzen erleben seit 2004 einen erneut aufgeflammten bewaffneten Aufstand.",
+				"Die Zentralmoschee von Pattani wurde 1963 nach neun Jahren Bauzeit eröffnet."
 			]
 		},
 		"city": {
 			"en": [
-				"The Krue Se mosque, of brick, is said to have been left unfinished because of a curse."
+				"Pattani preserves the name of the Malay sultanate of Patani, conquered by Siam in 1786.",
+				"Pattani Central Mosque opened in 1963 after nine years of construction.",
+				"Near Pattani, the unfinished Krue Se Mosque is associated with a local legend about Lim Ko Niao’s curse."
 			],
 			"it": [
-				"Si dice che la moschea di Krue Se, in mattoni, sia rimasta incompiuta a causa di una maledizione."
+				"Pattani conserva il nome del sultanato malese di Patani, conquistato dal Siam nel 1786.",
+				"La Moschea centrale di Pattani aprì nel 1963 dopo nove anni di lavori.",
+				"Presso Pattani, la moschea incompiuta di Krue Se è legata a una leggenda locale sulla maledizione di Lim Ko Niao."
 			],
 			"de": [
-				"Die Krue-Se-Moschee aus Backstein soll wegen eines Fluchs unvollendet geblieben sein."
+				"Pattani bewahrt den Namen des malaiischen Sultanats Patani, das Siam 1786 eroberte.",
+				"Die Zentralmoschee von Pattani wurde 1963 nach neun Jahren Bauzeit eröffnet.",
+				"Nahe Pattani ist die unvollendete Krue-Se-Moschee mit einer örtlichen Legende über den Fluch Lim Ko Niaos verbunden."
 			]
 		}
 	},
@@ -857,48 +1026,57 @@
 	"phatthalung": {
 		"region": {
 			"en": [
-				"The Thai shadow play, nang talung, takes its name from Phatthalung.",
-				"Thale Noi, a lake of lotus and waterbirds, is one of the country’s great wetlands."
+				"In 1924, King Rama VI ordered Phatthalung’s administrative centre moved to its present site at Khuha Sawan.",
+				"Phatthalung is closely associated with nang talung, the southern Thai tradition of leather shadow puppetry.",
+				"At Thale Noi, water buffalo husbandry has shaped a wetland landscape rich in waterbirds and aquatic plants."
 			],
 			"it": [
-				"Il teatro delle ombre thailandese, il nang talung, prende il nome da Phatthalung.",
-				"Il Thale Noi, un lago di loti e uccelli acquatici, è una delle grandi zone umide del paese."
+				"Nel 1924 Rama VI ordinò il trasferimento del centro amministrativo di Phatthalung nell’attuale sede di Khuha Sawan.",
+				"Phatthalung è strettamente legata al nang talung, la tradizione thailandese meridionale del teatro d’ombre con figure di cuoio.",
+				"A Thale Noi, l’allevamento dei bufali ha modellato un paesaggio umido ricco di uccelli acquatici e piante d’acqua."
 			],
 			"de": [
-				"Das thailändische Schattenspiel, nang talung, ist nach Phatthalung benannt.",
-				"Thale Noi, ein See voller Lotus und Wasservögel, ist eines der großen Feuchtgebiete des Landes."
+				"1924 ordnete König Rama VI. die Verlegung von Phatthalungs Verwaltungszentrum an den heutigen Standort Khuha Sawan an.",
+				"Phatthalung ist eng mit Nang Talung verbunden, der südthailändischen Schattenspieltradition mit Lederfiguren.",
+				"Am Thale Noi hat die Wasserbüffelhaltung eine Feuchtlandschaft geprägt, die reich an Wasservögeln und Wasserpflanzen ist."
 			]
 		}
 	},
 	"phayao": {
 		"region": {
 			"en": [
-				"It was split from Chiang Rai province in 1977.",
-				"Kwan Phayao, a broad lake, lies beside its town."
+				"Phayao developed from a town known by the older name Phu Kam Yao.",
+				"Phayao became a separate province in 1977 after its division from Chiang Rai.",
+				"Wat Tilok Aram was submerged when a water gate raised Kwan Phayao’s water level in 1939."
 			],
 			"it": [
-				"Fu separata dalla provincia di Chiang Rai nel 1977.",
-				"Il Kwan Phayao, un ampio lago, si stende accanto al suo capoluogo."
+				"Phayao si sviluppò da una città conosciuta con il nome antico Phu Kam Yao.",
+				"Phayao divenne una provincia separata nel 1977 dopo la divisione da Chiang Rai.",
+				"Wat Tilok Aram fu sommerso quando una chiusa innalzò il livello del Kwan Phayao nel 1939."
 			],
 			"de": [
-				"Sie wurde 1977 von der Provinz Chiang Rai abgetrennt.",
-				"Kwan Phayao, ein weiter See, liegt neben der Stadt."
+				"Phayao entwickelte sich aus einer unter dem älteren Namen Phu Kam Yao bekannten Stadt.",
+				"Phayao wurde 1977 durch die Abtrennung von Chiang Rai zu einer eigenen Provinz.",
+				"Wat Tilok Aram wurde überflutet, als eine Schleuse 1939 den Wasserspiegel des Kwan Phayao anhob."
 			]
 		}
 	},
 	"phetchabun": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"The ancient town of Si Thep became a UNESCO site in 2023."
+				"Phetchabun’s name is commonly translated as abundance of diamonds.",
+				"Si Thep’s ancient town and Dvaravati monuments joined UNESCO’s World Heritage List in 2023.",
+				"Phetchabun’s Intrachai Archaeology Hall occupies the former provincial hall, built in 1962."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"L’antica città di Si Thep è diventata un sito UNESCO nel 2023."
+				"Il nome Phetchabun viene comunemente tradotto come abbondanza di diamanti.",
+				"L’antica città di Si Thep e i suoi monumenti dvaravati entrarono nella Lista del Patrimonio Mondiale UNESCO nel 2023.",
+				"L’Intrachai Archaeology Hall di Phetchabun occupa l’ex sede provinciale, costruita nel 1962."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Die antike Stadt Si Thep wurde 2023 ein UNESCO-Welterbe."
+				"Phetchabuns Name wird gewöhnlich als Überfluss an Diamanten übersetzt.",
+				"Si Theps antike Stadt und ihre Dvaravati-Monumente wurden 2023 in die UNESCO-Welterbeliste aufgenommen.",
+				"Phetchabuns Intrachai Archaeology Hall nutzt das 1962 gebaute ehemalige Provinzverwaltungsgebäude."
 			]
 		}
 	},
@@ -924,59 +1102,74 @@
 	"phichit": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"It is the setting of Krai Thong, a folk tale of a hero who slays a crocodile king."
+				"Phichit’s older town was known as Sa Luang during the Sukhothai period.",
+				"Phichit is the setting of Krai Thong, a folktale about a hero who defeats a crocodile king.",
+				"Phichit’s long-boat racing tradition includes races on the Nan River beside Wat Tha Luang."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"È lo scenario di Krai Thong, una fiaba popolare di un eroe che uccide un re coccodrillo."
+				"L’antica città di Phichit era conosciuta come Sa Luang durante il periodo di Sukhothai.",
+				"Phichit è lo scenario di Krai Thong, un racconto popolare su un eroe che sconfigge un re coccodrillo.",
+				"La tradizione delle gare di lunghe imbarcazioni a remi di Phichit comprende corse sul fiume Nan presso Wat Tha Luang."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Sie ist der Schauplatz von Krai Thong, einem Volksmärchen von einem Helden, der einen Krokodilkönig tötet."
+				"Phichits ältere Stadt war während der Sukhothai-Zeit als Sa Luang bekannt.",
+				"Phichit ist Schauplatz von Krai Thong, einer Volkserzählung über einen Helden, der einen Krokodilkönig besiegt.",
+				"Zu Phichits Langbootrenntradition gehören Rennen auf dem Nan neben Wat Tha Luang."
 			]
 		}
 	},
 	"phitsanulok": {
 		"region": {
 			"en": [
-				"\"Vishnu’s world\", from the Sanskrit names of the god and of the world.",
-				"King Naresuan, who freed Ayutthaya from Burmese rule, was born here in 1555."
+				"Phitsanulok’s name means Vishnu’s world, combining Sanskrit-derived words for the god and the world.",
+				"King Naresuan was born at Chan Palace in Phitsanulok in 1555.",
+				"Phitsanulok’s bronze Phra Phuttha Chinnarat Buddha image is distinguished by its flame-shaped halo."
 			],
 			"it": [
-				"\"Il mondo di Visnù\", dai nomi sanscriti del dio e del mondo.",
-				"Qui nacque nel 1555 il re Naresuan, che liberò Ayutthaya dal dominio birmano."
+				"Il nome Phitsanulok significa mondo di Visnù e unisce parole derivate dal sanscrito per il dio e per il mondo.",
+				"Il re Naresuan nacque nel palazzo Chan a Phitsanulok nel 1555.",
+				"L’immagine bronzea del Buddha Phra Phuttha Chinnarat di Phitsanulok si distingue per l’aureola a forma di fiamma."
 			],
 			"de": [
-				"„Vishnus Welt“, aus den Sanskrit-Namen des Gottes und der Welt.",
-				"König Naresuan, der Ayutthaya von der birmanischen Herrschaft befreite, wurde hier 1555 geboren."
+				"Phitsanuloks Name bedeutet Vishnus Welt und verbindet aus dem Sanskrit stammende Wörter für den Gott und die Welt.",
+				"König Naresuan wurde 1555 im Chan-Palast in Phitsanulok geboren.",
+				"Phitsanuloks bronzene Buddhafigur Phra Phuttha Chinnarat zeichnet sich durch ihren flammenförmigen Strahlenkranz aus."
 			]
 		},
 		"city": {
 			"en": [
-				"Its Phra Phuttha Chinnarat is often called the most beautiful Buddha image in Thailand."
+				"Phitsanulok’s name means Vishnu’s world, combining Sanskrit-derived words for the god and the world.",
+				"King Naresuan was born at Chan Palace in Phitsanulok in 1555.",
+				"The bronze Phra Phuttha Chinnarat Buddha image at Wat Phra Si Rattana Mahathat has a distinctive flame-shaped halo."
 			],
 			"it": [
-				"Il suo Phra Phuttha Chinnarat è spesso considerato l’immagine del Buddha più bella della Thailandia."
+				"Il nome Phitsanulok significa mondo di Vishnu e unisce parole di origine sanscrita per il dio e il mondo.",
+				"Naresuan nacque nel palazzo Chan di Phitsanulok nel 1555.",
+				"L’immagine bronzea del Buddha Phra Phuttha Chinnarat, nel Wat Phra Si Rattana Mahathat, presenta una caratteristica aureola a forma di fiamma."
 			],
 			"de": [
-				"Ihr Phra Phuttha Chinnarat wird oft das schönste Buddha-Bildnis Thailands genannt."
+				"Phitsanulok bedeutet Vishnus Welt und verbindet aus dem Sanskrit stammende Wörter für den Gott und die Welt.",
+				"König Naresuan wurde 1555 im Chan-Palast in Phitsanulok geboren.",
+				"Das bronzene Buddha-Bildnis Phra Phuttha Chinnarat im Wat Phra Si Rattana Mahathat besitzt einen charakteristischen flammenförmigen Strahlenkranz."
 			]
 		}
 	},
 	"phra-nakhon-si-ayutthaya": {
 		"region": {
 			"en": [
-				"Named after Ayodhya, the city of Rama in the Ramayana.",
-				"Ayutthaya was the capital of Siam from 1351 until the Burmese destroyed it in 1767."
+				"Ayutthaya takes its name from Ayodhya, Rama’s city in the Ramayana.",
+				"Ayutthaya served as Siam’s capital until a Burmese army destroyed the city in 1767.",
+				"Wat Niwet Thammaprawat in Bang Pa-In is a Buddhist temple built to resemble a Gothic Christian church."
 			],
 			"it": [
-				"Prende il nome da Ayodhya, la città di Rama nel Ramayana.",
-				"Ayutthaya fu la capitale del Siam dal 1351 finché i Birmani non la distrussero nel 1767."
+				"Ayutthaya prende il nome da Ayodhya, la città di Rama nel Ramayana.",
+				"Ayutthaya fu la capitale del Siam fino alla distruzione della città da parte di un esercito birmano nel 1767.",
+				"Wat Niwet Thammaprawat a Bang Pa-In è un tempio buddista costruito per assomigliare a una chiesa cristiana gotica."
 			],
 			"de": [
-				"Nach Ayodhya benannt, der Stadt des Rama im Ramayana.",
-				"Ayutthaya war von 1351 bis zu seiner Zerstörung durch die Birmanen 1767 die Hauptstadt Siams."
+				"Ayutthaya ist nach Ayodhya, Ramas Stadt im Ramayana, benannt.",
+				"Ayutthaya war Siams Hauptstadt, bis ein birmanisches Heer die Stadt 1767 zerstörte.",
+				"Wat Niwet Thammaprawat in Bang Pa-In ist ein buddhistischer Tempel, der einer gotischen christlichen Kirche nachempfunden wurde."
 			]
 		}
 	},
@@ -1002,62 +1195,74 @@
 	"phuket": {
 		"region": {
 			"en": [
-				"Probably from Malay bukit, \"hill\".",
-				"Thailand’s largest island, which grew rich on tin mining before tourism."
+				"Phuket appeared on older European maps under the name Jungceylon.",
+				"Phuket’s tin-mining economy drew Chinese migrants whose legacy includes the Sino-Portuguese shophouses of the old town.",
+				"During Phuket’s Vegetarian Festival, some spirit mediums practise ritual body piercing in public processions."
 			],
 			"it": [
-				"Probabilmente dal malese bukit, \"collina\".",
-				"La più grande isola della Thailandia, che si arricchì con l’estrazione dello stagno prima del turismo."
+				"Phuket compariva sulle antiche carte europee con il nome Jungceylon.",
+				"Le miniere di stagno di Phuket attirarono migranti cinesi, la cui eredità comprende le case-bottega sino-portoghesi della città vecchia.",
+				"Durante la Festa vegetariana di Phuket, alcuni medium praticano perforazioni rituali del corpo nelle processioni pubbliche."
 			],
 			"de": [
-				"Wahrscheinlich vom Malaiischen bukit, „Hügel“.",
-				"Thailands größte Insel, die vor dem Tourismus durch den Zinnbergbau reich wurde."
+				"Phuket erschien auf älteren europäischen Karten unter dem Namen Jungceylon.",
+				"Phukets Zinnbergbau zog chinesische Einwanderer an, deren Erbe die sinoportugiesischen Geschäftshäuser der Altstadt umfasst.",
+				"Während Phukets Vegetarierfest führen einige spirituelle Medien bei öffentlichen Prozessionen rituelle Körperpiercings durch."
 			]
 		},
 		"city": {
 			"en": [
-				"Its old town keeps rows of Sino-Portuguese shophouses built in the tin boom.",
-				"Its vegetarian festival, held by the Chinese community every autumn, includes feats of self-piercing."
+				"Phuket’s historic town developed from the mining settlement of Tongkah around 1850.",
+				"The tin boom and Chinese migration left Phuket old town with rows of Sino-Portuguese shophouses.",
+				"Phuket’s Chinese shrines host Vegetarian Festival processions that include ritual piercing by some spirit mediums."
 			],
 			"it": [
-				"La sua città vecchia conserva file di case-bottega sino-portoghesi costruite nel boom dello stagno.",
-				"La sua festa vegetariana, celebrata ogni autunno dalla comunità cinese, comprende prove di autoperforazione."
+				"Il centro storico di Phuket si sviluppò dall’insediamento minerario di Tongkah intorno al 1850.",
+				"Il boom dello stagno e l’immigrazione cinese lasciarono nella città vecchia di Phuket file di case-bottega sino-portoghesi.",
+				"I santuari cinesi di Phuket ospitano le processioni della Festa vegetariana, che comprendono perforazioni rituali praticate da alcuni medium."
 			],
 			"de": [
-				"Ihre Altstadt bewahrt Reihen sinoportugiesischer Geschäftshäuser, die im Zinnboom gebaut wurden.",
-				"Ihr vegetarisches Fest, das die chinesische Gemeinde jeden Herbst feiert, umfasst Rituale, bei denen sich Teilnehmer den Körper durchstechen."
+				"Phukets historischer Stadtkern entwickelte sich um 1850 aus der Bergbausiedlung Tongkah.",
+				"Der Zinnboom und chinesische Einwanderung hinterließen in Phukets Altstadt Reihen sinoportugiesischer Geschäftshäuser.",
+				"Phukets chinesische Schreine veranstalten Prozessionen des Vegetarierfests, bei denen einige spirituelle Medien rituelle Piercings ausführen."
 			]
 		}
 	},
 	"prachin-buri": {
 		"region": {
 			"en": [
-				"\"The eastern town\".",
-				"Part of the Khao Yai National Park lies in its north."
+				"Prachin Buri means eastern city, combining a word for east with buri, meaning city.",
+				"The Abhaibhubejhr mansion was built in 1909 to accommodate King Rama V, who died before he could stay there.",
+				"Wat Kaeo Phichit combines Thai, Chinese, European and Cambodian architectural influences."
 			],
 			"it": [
-				"\"La città dell’est\".",
-				"Parte del Parco nazionale Khao Yai si trova nel suo nord."
+				"Prachin Buri significa città orientale, unendo una parola per est a buri, che significa città.",
+				"La dimora Abhaibhubejhr fu costruita nel 1909 per ospitare Rama V, che morì prima di potervi soggiornare.",
+				"Wat Kaeo Phichit combina influenze architettoniche thailandesi, cinesi, europee e cambogiane."
 			],
 			"de": [
-				"„Die östliche Stadt“.",
-				"Ein Teil des Khao-Yai-Nationalparks liegt in ihrem Norden."
+				"Prachin Buri bedeutet östliche Stadt und verbindet ein Wort für Osten mit buri, dem Wort für Stadt.",
+				"Das Abhaibhubejhr-Herrenhaus wurde 1909 für König Rama V. gebaut, der jedoch vor einem möglichen Aufenthalt starb.",
+				"Wat Kaeo Phichit verbindet thailändische, chinesische, europäische und kambodschanische Architektureinflüsse."
 			]
 		}
 	},
 	"prachuap-khiri-khan": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Hua Hin became the royal family’s seaside resort in the 1920s, with the Klai Kangwon palace."
+				"King Rama IV gave Prachuap Khiri Khan its present name when he combined Bang Nang Rom with neighbouring towns.",
+				"King Rama VII commissioned Klai Kangwon Palace in Hua Hin in 1926 as a gift for Queen Rambai Barni.",
+				"Phraya Nakhon Cave contains the Kuha Kharuehat pavilion, built for King Chulalongkorn’s visit in 1890."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Hua Hin divenne negli anni Venti la località di mare della famiglia reale, con il palazzo di Klai Kangwon."
+				"Rama IV diede a Prachuap Khiri Khan il nome attuale quando unì Bang Nang Rom ad alcune città vicine.",
+				"Rama VII commissionò il palazzo Klai Kangwon a Hua Hin nel 1926 come dono per la regina Rambai Barni.",
+				"La grotta Phraya Nakhon contiene il padiglione Kuha Kharuehat, costruito per la visita di Chulalongkorn nel 1890."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Hua Hin wurde in den 1920er-Jahren mit dem Palast Klai Kangwon zum Seebad der Königsfamilie."
+				"König Rama IV. gab Prachuap Khiri Khan seinen heutigen Namen, als er Bang Nang Rom mit benachbarten Städten zusammenlegte.",
+				"König Rama VII. ließ 1926 den Klai-Kangwon-Palast in Hua Hin als Geschenk für Königin Rambai Barni errichten.",
+				"In der Phraya-Nakhon-Höhle steht der Kuha-Kharuehat-Pavillon, der 1890 für einen Besuch König Chulalongkorns gebaut wurde."
 			]
 		}
 	},
@@ -1083,27 +1288,36 @@
 	"ratchaburi": {
 		"region": {
 			"en": [
-				"\"The royal town\".",
-				"Damnoen Saduak is one of the best-known floating markets in Thailand."
+				"Ratchaburi’s name means city of the king or royal town.",
+				"At Damnoen Saduak Floating Market, vendors paddle boats carrying fruit, flowers and hot noodles.",
+				"Ratchaburi’s Tao Hong Tai ceramics factory developed from traditional jar-making into contemporary ceramic art."
 			],
 			"it": [
-				"\"La città reale\".",
-				"Damnoen Saduak è uno dei mercati galleggianti più noti della Thailandia."
+				"Il nome Ratchaburi significa città del re o città reale.",
+				"Al mercato galleggiante di Damnoen Saduak, i venditori remano su barche cariche di frutta, fiori e zuppe di pasta calde.",
+				"La fabbrica di ceramiche Tao Hong Tai di Ratchaburi passò dalla tradizionale produzione di giare all’arte ceramica contemporanea."
 			],
 			"de": [
-				"„Die königliche Stadt“.",
-				"Damnoen Saduak ist einer der bekanntesten schwimmenden Märkte Thailands."
+				"Ratchaburi bedeutet Stadt des Königs oder königliche Stadt.",
+				"Auf dem schwimmenden Markt von Damnoen Saduak paddeln Händler Boote mit Obst, Blumen und heißen Nudelsuppen.",
+				"Ratchaburis Keramikfabrik Tao Hong Tai entwickelte sich von der traditionellen Krugherstellung zur zeitgenössischen Keramikkunst."
 			]
 		},
 		"city": {
 			"en": [
-				"It is known for its glazed dragon jars."
+				"Ratchaburi’s name means city of the king or royal town.",
+				"Ratchaburi is known for its glazed earthenware jars decorated with dragons.",
+				"Ratchaburi National Museum occupies the former city hall, built in 1922."
 			],
 			"it": [
-				"È nota per le sue giare smaltate con i draghi."
+				"Il nome Ratchaburi significa città del re o città reale.",
+				"Ratchaburi è conosciuta per le giare di terracotta smaltata decorate con draghi.",
+				"Il Museo nazionale di Ratchaburi occupa l’ex palazzo amministrativo cittadino, costruito nel 1922."
 			],
 			"de": [
-				"Sie ist für ihre glasierten Drachenkrüge bekannt."
+				"Ratchaburi bedeutet Stadt des Königs oder königliche Stadt.",
+				"Ratchaburi ist für glasierte, mit Drachen verzierte Tonkrüge bekannt.",
+				"Das Nationalmuseum Ratchaburi befindet sich im ehemaligen Verwaltungsgebäude der Stadt von 1922."
 			]
 		}
 	},
@@ -1129,91 +1343,112 @@
 	"roi-et": {
 		"region": {
 			"en": [
-				"\"One hundred and one\", perhaps a misreading of an older name for the town’s eleven gates."
+				"Roi Et means one hundred and one in Thai.",
+				"Roi Et’s Bun Phawet festival retells the story of the Buddha’s previous life as Prince Vessantara in thirteen sermons.",
+				"Phra Maha Chedi Chai Mongkhon has a white stupa decorated with golden motifs and surrounded by smaller stupas at eight compass points."
 			],
 			"it": [
-				"\"Centouno\", forse per un errore di lettura di un nome più antico, legato alle undici porte della città."
+				"Roi Et significa centouno in thailandese.",
+				"La festa Bun Phawet di Roi Et racconta la storia della vita precedente del Buddha come principe Vessantara in tredici sermoni.",
+				"Phra Maha Chedi Chai Mongkhon ha uno stupa bianco decorato con motivi dorati e circondato da stupa minori negli otto punti della bussola."
 			],
 			"de": [
-				"„Einhundertundeins“, vielleicht eine Fehllesung eines älteren Namens für die elf Tore der Stadt."
+				"Roi Et bedeutet auf Thai einhunderteins.",
+				"Roi Ets Bun-Phawet-Fest erzählt in dreizehn Predigten die Geschichte von Buddhas früherem Leben als Prinz Vessantara.",
+				"Phra Maha Chedi Chai Mongkhon besitzt eine weiße, mit goldenen Motiven verzierte Stupa, die an acht Himmelsrichtungen von kleineren Stupas umgeben ist."
 			]
 		}
 	},
 	"sa-kaeo": {
 		"region": {
 			"en": [
-				"Named for its town; the province was split from Prachin Buri in 1993.",
-				"Sdok Kok Thom, an 11th-century Khmer temple, is here."
+				"Sa Kaeo takes its name from historic ponds associated with water used in royal ceremonies.",
+				"The Khmer temple Sdok Kok Thom produced a 1053 inscription recording generations of service to the kings of Angkor.",
+				"At Lalu, ground subsidence and erosion have shaped the soil into pillars and miniature canyon walls."
 			],
 			"it": [
-				"Prende il nome dalla sua città; la provincia fu separata da Prachin Buri nel 1993.",
-				"Qui si trova lo Sdok Kok Thom, un tempio khmer dell’XI secolo."
+				"Sa Kaeo prende il nome da antichi stagni legati all’acqua usata nelle cerimonie reali.",
+				"Dal tempio khmer Sdok Kok Thom proviene un’iscrizione del 1053 che racconta generazioni di servizio ai sovrani di Angkor.",
+				"A Lalu, cedimenti del terreno ed erosione hanno modellato il suolo in pilastri e pareti simili a piccoli canyon."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt; die Provinz wurde 1993 von Prachin Buri abgetrennt.",
-				"Sdok Kok Thom, ein Khmer-Tempel aus dem 11. Jahrhundert, steht hier."
+				"Sa Kaeo ist nach historischen Teichen benannt, deren Wasser mit königlichen Zeremonien verbunden ist.",
+				"Aus dem Khmer-Tempel Sdok Kok Thom stammt eine Inschrift von 1053, die den Dienst mehrerer Generationen für die Könige von Angkor beschreibt.",
+				"Bei Lalu haben Bodensenkungen und Erosion den Boden zu Säulen und kleinen Schluchtwänden geformt."
 			]
 		}
 	},
 	"sakon-nakhon": {
 		"region": {
 			"en": [
-				"Named for its town; nakhon is \"city\".",
-				"Nong Han, beside the town, is the largest natural lake in the northeast."
+				"Sakon Nakhon’s provincial town was formerly called Sakon Thawapi and received its present name in 1830.",
+				"Phra That Dum preserves a laterite Khmer sanctuary with carved images of deities and animals.",
+				"Sakon Nakhon’s Wax Castle Procession features elaborate wax models of temples at the end of Buddhist Lent."
 			],
 			"it": [
-				"Prende il nome dalla sua città; nakhon significa \"città\".",
-				"Il Nong Han, accanto alla città, è il più grande lago naturale del nord-est."
+				"Il capoluogo di Sakon Nakhon si chiamava anticamente Sakon Thawapi e ricevette il nome attuale nel 1830.",
+				"Phra That Dum conserva un santuario khmer in laterite con immagini scolpite di divinità e animali.",
+				"La Processione dei Castelli di Cera di Sakon Nakhon presenta elaborati modelli in cera di templi alla fine della Quaresima buddista."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt; nakhon bedeutet „Stadt“.",
-				"Nong Han neben der Stadt ist der größte natürliche See im Nordosten."
+				"Sakon Nakhons Provinzhauptstadt hieß früher Sakon Thawapi und erhielt 1830 ihren heutigen Namen.",
+				"Phra That Dum bewahrt ein Khmer-Heiligtum aus Laterit mit geschnitzten Darstellungen von Gottheiten und Tieren.",
+				"Sakon Nakhons Wachsschlossprozession zeigt am Ende der buddhistischen Fastenzeit aufwendige Tempelmodelle aus Wachs."
 			]
 		}
 	},
 	"samut-prakan": {
 		"region": {
 			"en": [
-				"Samut is \"sea\"; the town was a fortress at the river mouth, guarding the way to Bangkok.",
-				"Bangkok’s main airport, Suvarnabhumi, lies in this province."
+				"Samut Prakan’s name means coastal wall, reflecting its historical role as a defensive outpost.",
+				"Suvarnabhumi Airport opened in 2006 in Bang Phli district, within Samut Prakan province.",
+				"The Erawan Museum is crowned by a gigantic three-headed elephant whose outer skin is made of copper sheets."
 			],
 			"it": [
-				"Samut significa \"mare\"; la città era una fortezza alla foce del fiume, a guardia della via per Bangkok.",
-				"Il principale aeroporto di Bangkok, Suvarnabhumi, si trova in questa provincia."
+				"Il nome Samut Prakan significa muro costiero e riflette il suo storico ruolo difensivo.",
+				"L’aeroporto di Suvarnabhumi aprì nel 2006 nel distretto di Bang Phli, nella provincia di Samut Prakan.",
+				"Il Museo Erawan è sormontato da un gigantesco elefante a tre teste rivestito di lastre di rame."
 			],
 			"de": [
-				"Samut bedeutet „Meer“; die Stadt war eine Festung an der Flussmündung, die den Weg nach Bangkok bewachte.",
-				"Bangkoks Hauptflughafen Suvarnabhumi liegt in dieser Provinz."
+				"Samut Prakan bedeutet Küstenmauer und verweist auf die historische Funktion als Verteidigungsposten.",
+				"Der Flughafen Suvarnabhumi wurde 2006 im Bezirk Bang Phli in der Provinz Samut Prakan eröffnet.",
+				"Das Erawan-Museum wird von einem riesigen dreiköpfigen Elefanten gekrönt, dessen Außenhaut aus Kupferblechen besteht."
 			]
 		},
 		"city": {
 			"en": [
-				"In 1893 French gunboats forced their way past its forts, in the Paknam incident.",
-				"The Erawan Museum is topped by a giant three-headed elephant."
+				"Samut Prakan was also known as Pak Nam, a name recorded on nineteenth-century European maps.",
+				"In the Paknam Incident of July 1893, French warships forced their way past the forts defending the approach to Bangkok.",
+				"The nearby Erawan Museum is topped by a gigantic three-headed elephant clad in copper sheets."
 			],
 			"it": [
-				"Nel 1893 cannoniere francesi forzarono il passaggio davanti ai suoi forti, nell’incidente di Paknam.",
-				"L’Erawan Museum è sormontato da un gigantesco elefante a tre teste."
+				"Samut Prakan era conosciuta anche come Pak Nam, nome riportato su carte europee ottocentesche.",
+				"Nell’incidente di Paknam del luglio 1893, navi da guerra francesi forzarono il passaggio davanti ai forti che difendevano l’accesso a Bangkok.",
+				"Il vicino Museo Erawan è sormontato da un gigantesco elefante a tre teste rivestito di lastre di rame."
 			],
 			"de": [
-				"1893 erzwangen sich französische Kanonenboote im Paknam-Zwischenfall die Durchfahrt an den Forts der Stadt vorbei.",
-				"Das Erawan-Museum wird von einem riesigen dreiköpfigen Elefanten gekrönt."
+				"Samut Prakan war auch als Pak Nam bekannt, ein auf europäischen Karten des 19. Jahrhunderts verzeichneter Name.",
+				"Beim Paknam-Zwischenfall im Juli 1893 erzwangen französische Kriegsschiffe die Durchfahrt an den Forts zur Verteidigung Bangkoks.",
+				"Das nahe Erawan-Museum wird von einem riesigen dreiköpfigen Elefanten mit einer Verkleidung aus Kupferblechen gekrönt."
 			]
 		}
 	},
 	"samut-sakhon": {
 		"region": {
 			"en": [
-				"Samut is \"sea\", as in its neighbours’ names.",
-				"It is a great fishing and seafood-processing centre, worked largely by migrants from Myanmar."
+				"Samut Sakhon’s older name Tha Chin means Chinese landing, recalling a trading settlement used by Chinese merchants.",
+				"Workers from Myanmar have long played an important role in Samut Sakhon’s fishing and seafood-processing industries.",
+				"Ban Phaeo aromatic coconuts are prized for sweet water with a pandan-like fragrance."
 			],
 			"it": [
-				"Samut significa \"mare\", come nei nomi delle province vicine.",
-				"È un grande centro di pesca e di lavorazione del pesce, dove lavorano in gran parte migranti birmani."
+				"L’antico nome di Samut Sakhon, Tha Chin, significa approdo cinese e ricorda un insediamento commerciale frequentato da mercanti cinesi.",
+				"I lavoratori provenienti dal Myanmar svolgono da tempo un ruolo importante nella pesca e nella lavorazione dei prodotti ittici di Samut Sakhon.",
+				"Le noci di cocco aromatiche di Ban Phaeo sono apprezzate per l’acqua dolce dal profumo simile al pandano."
 			],
 			"de": [
-				"Samut bedeutet „Meer“, wie in den Namen ihrer Nachbarn.",
-				"Sie ist ein großes Zentrum der Fischerei und Meeresfrüchteverarbeitung, in dem vor allem Migranten aus Myanmar arbeiten."
+				"Samut Sakhons früherer Name Tha Chin bedeutet chinesischer Anlegeplatz und erinnert an eine Handelssiedlung chinesischer Kaufleute.",
+				"Arbeitskräfte aus Myanmar spielen seit Langem eine wichtige Rolle in Samut Sakhons Fischerei und Meeresfrüchteverarbeitung.",
+				"Die aromatischen Kokosnüsse aus Ban Phaeo sind für ihr süßes Wasser mit pandanähnlichem Duft geschätzt."
 			]
 		}
 	},
@@ -1239,16 +1474,19 @@
 	"saraburi": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Wat Phra Phutthabat keeps a footprint of the Buddha, and draws pilgrims every year."
+				"Saraburi combines sara, meaning pond, with buri, meaning city.",
+				"Wat Phra Phutthabat was built in the seventeenth century around a rock impression revered as the Buddha’s footprint.",
+				"Namtok Chet Sao Noi descends over seven low waterfall tiers on the Muak Lek stream."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Il Wat Phra Phutthabat custodisce un’impronta del Buddha, e attira pellegrini ogni anno."
+				"Saraburi unisce sara, che significa stagno, a buri, che significa città.",
+				"Wat Phra Phutthabat fu costruito nel Seicento intorno a un’impronta nella roccia venerata come impronta del Buddha.",
+				"Namtok Chet Sao Noi scende su sette bassi livelli di cascata lungo il corso d’acqua Muak Lek."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Wat Phra Phutthabat bewahrt einen Fußabdruck des Buddha und zieht jedes Jahr Pilger an."
+				"Saraburi verbindet sara, das Wort für Teich, mit buri, dem Wort für Stadt.",
+				"Wat Phra Phutthabat wurde im 17. Jahrhundert um eine als Fußabdruck Buddhas verehrte Felsvertiefung gebaut.",
+				"Namtok Chet Sao Noi fällt am Bach Muak Lek über sieben niedrige Wasserfallstufen."
 			]
 		}
 	},
@@ -1274,61 +1512,76 @@
 	"si-racha": {
 		"city": {
 			"en": [
-				"The hot sauce sriracha takes its name from the town."
+				"Si Racha developed as a timber port in the late nineteenth century, with a sawmill and railway founded by Chaophraya Surasak Montri.",
+				"Sriracha chilli sauce takes its name from Si Racha; the Sriraja Panich recipe was developed there by Thanom Chakkapak.",
+				"Wat Ko Loi stands on an island linked to Si Racha by a causeway and combines Thai Buddhist and Chinese devotional imagery."
 			],
 			"it": [
-				"La salsa piccante sriracha prende il nome dalla città."
+				"Si Racha si sviluppò come porto del legname alla fine dell’Ottocento, con una segheria e una ferrovia fondate da Chaophraya Surasak Montri.",
+				"La salsa piccante sriracha prende il nome da Si Racha; qui Thanom Chakkapak sviluppò la ricetta Sriraja Panich.",
+				"Wat Ko Loi sorge su un’isola collegata a Si Racha da una strada rialzata e combina immagini devozionali buddhiste thailandesi e cinesi."
 			],
 			"de": [
-				"Die scharfe Sauce Sriracha ist nach der Stadt benannt."
+				"Si Racha entwickelte sich im späten 19. Jahrhundert als Holzhafen mit einem von Chaophraya Surasak Montri gegründeten Sägewerk und einer Bahnstrecke.",
+				"Die Sriracha-Chilisauce ist nach Si Racha benannt; Thanom Chakkapak entwickelte dort das Rezept von Sriraja Panich.",
+				"Wat Ko Loi liegt auf einer durch einen Damm mit Si Racha verbundenen Insel und vereint thailändisch-buddhistische und chinesische Andachtsbilder."
 			]
 		}
 	},
 	"si-sa-ket": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Wat Pa Maha Chedi Kaeo is built from about a million and a half glass bottles."
+				"Si Sa Ket province received its present name in 1938, replacing Khukhan.",
+				"Wat Pa Maha Chedi Kaeo incorporates more than a million donated glass bottles into its buildings.",
+				"Prasat Sa Kamphaeng Yai’s Khmer complex has six main structures enclosed by a rectangular gallery."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Il Wat Pa Maha Chedi Kaeo è costruito con circa un milione e mezzo di bottiglie di vetro."
+				"La provincia di Si Sa Ket ricevette il nome attuale nel 1938, sostituendo Khukhan.",
+				"Wat Pa Maha Chedi Kaeo incorpora nei suoi edifici oltre un milione di bottiglie di vetro donate.",
+				"Il complesso khmer di Prasat Sa Kamphaeng Yai ha sei strutture principali racchiuse da una galleria rettangolare."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Wat Pa Maha Chedi Kaeo ist aus etwa anderthalb Millionen Glasflaschen gebaut."
+				"Die Provinz Si Sa Ket erhielt 1938 anstelle von Khukhan ihren heutigen Namen.",
+				"Wat Pa Maha Chedi Kaeo verwendet in seinen Gebäuden mehr als eine Million gespendete Glasflaschen.",
+				"Der Khmer-Komplex Prasat Sa Kamphaeng Yai besitzt sechs Hauptbauten innerhalb einer rechteckigen Galerie."
 			]
 		}
 	},
 	"sing-buri": {
 		"region": {
 			"en": [
-				"\"The lion town\".",
-				"The villagers of Bang Rachan held off the Burmese army for months in 1765 and 1766."
+				"Sing Buri means lion city, from Sanskrit-derived words for lion and town.",
+				"The Bang Rachan memorial honours villagers remembered for resisting the Burmese invasion before Ayutthaya fell in 1767.",
+				"The Mae Nam Noi kilns produced pottery and clay pipes during the Ayutthaya period."
 			],
 			"it": [
-				"\"La città del leone\".",
-				"Gli abitanti del villaggio di Bang Rachan tennero testa all’esercito birmano per mesi nel 1765 e nel 1766."
+				"Sing Buri significa città del leone, da parole derivate dal sanscrito per leone e città.",
+				"Il memoriale di Bang Rachan onora gli abitanti ricordati per la resistenza all’invasione birmana prima della caduta di Ayutthaya nel 1767.",
+				"Le fornaci del Mae Nam Noi producevano ceramiche e tubi d’argilla durante il periodo di Ayutthaya."
 			],
 			"de": [
-				"„Die Löwenstadt“.",
-				"Die Dorfbewohner von Bang Rachan hielten 1765 und 1766 monatelang das birmanische Heer auf."
+				"Sing Buri bedeutet Löwenstadt, aus Sanskritwörtern für Löwe und Stadt.",
+				"Das Denkmal von Bang Rachan ehrt Dorfbewohner, an deren Widerstand gegen die birmanische Invasion vor Ayutthayas Fall 1767 erinnert wird.",
+				"Die Brennöfen am Mae Nam Noi stellten während der Ayutthaya-Zeit Keramik und Tonrohre her."
 			]
 		}
 	},
 	"songkhla": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"The lake named after it is the largest natural lake in Thailand."
+				"Songkhla was known to European traders as Singora, a name still recorded on a local gravestone dated 1909.",
+				"Songkhla Lake is a lagoon where river water mixes with seawater, creating fresh and brackish habitats.",
+				"Songkhla National Museum occupies a mansion built in 1878 for the deputy governor’s family."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Il lago che porta il suo nome è il più grande lago naturale della Thailandia."
+				"Songkhla era nota ai mercanti europei come Singora, un nome ancora inciso su una lapide locale datata 1909.",
+				"Il lago di Songkhla è una laguna in cui l’acqua dei fiumi si mescola a quella marina, creando habitat dolci e salmastri.",
+				"Il Museo nazionale di Songkhla occupa una dimora costruita nel 1878 per la famiglia del vicegovernatore."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Der nach ihr benannte See ist der größte natürliche See Thailands."
+				"Europäische Händler kannten Songkhla als Singora; dieser Name ist noch auf einem örtlichen Grabstein von 1909 verzeichnet.",
+				"Der Songkhla-See ist eine Lagune, in der sich Fluss- und Meerwasser mischen und Süß- sowie Brackwasserlebensräume bilden.",
+				"Das Nationalmuseum Songkhla befindet sich in einem 1878 für die Familie des Vizegouverneurs erbauten Herrenhaus."
 			]
 		}
 	},
@@ -1354,16 +1607,19 @@
 	"suphan-buri": {
 		"region": {
 			"en": [
-				"\"The city of gold\", like Kanchanaburi, from another word for gold.",
-				"By tradition King Naresuan killed the Burmese crown prince in a duel on elephants at Don Chedi, in 1593."
+				"Suphan Buri means city of gold, from Sanskrit-derived words for gold and city.",
+				"Don Chedi commemorates the traditional story of King Naresuan’s victory in an elephant duel against the Burmese crown prince.",
+				"Beads recovered at ancient U Thong include Roman glass and finely worked gold, reflecting early international trade."
 			],
 			"it": [
-				"\"La città d’oro\", come Kanchanaburi, da un’altra parola per l’oro.",
-				"Secondo la tradizione, a Don Chedi, nel 1593, il re Naresuan uccise il principe ereditario birmano in un duello a dorso d’elefante."
+				"Suphan Buri significa città d’oro, da parole derivate dal sanscrito per oro e città.",
+				"Don Chedi commemora il racconto tradizionale della vittoria del re Naresuan in un duello su elefanti contro il principe ereditario birmano.",
+				"Le perline recuperate nell’antica U Thong comprendono vetro romano e oro finemente lavorato, testimonianze di antichi commerci internazionali."
 			],
 			"de": [
-				"„Die Stadt des Goldes“, wie Kanchanaburi, aus einem anderen Wort für Gold.",
-				"Der Überlieferung nach tötete König Naresuan 1593 bei Don Chedi den birmanischen Kronprinzen in einem Duell auf Elefanten."
+				"Suphan Buri bedeutet Stadt des Goldes, aus Sanskritwörtern für Gold und Stadt.",
+				"Don Chedi erinnert an die Überlieferung von König Naresuans Sieg in einem Elefantenduell gegen den birmanischen Kronprinzen.",
+				"Zu den im antiken U Thong geborgenen Perlen gehören römisches Glas und fein gearbeitetes Gold als Zeugnisse frühen internationalen Handels."
 			]
 		}
 	},
@@ -1387,29 +1643,38 @@
 		},
 		"city": {
 			"en": [
-				"Its river, the Tapi, was named by King Vajiravudh after the Tapti of India."
+				"King Rama VI gave Surat Thani its name, meaning city of good people, in 1915.",
+				"The Tapi River at Surat Thani was named by King Rama VI after the river at Surat in India.",
+				"Surat Thani’s Chak Phra festival marks the end of Buddhist Lent with decorated floats carrying Buddha images by river and road."
 			],
 			"it": [
-				"Il suo fiume, il Tapi, fu chiamato così dal re Vajiravudh come il Tapti dell’India."
+				"Rama VI diede a Surat Thani il nome attuale, che significa città della brava gente, nel 1915.",
+				"Il fiume Tapi di Surat Thani fu chiamato così da Rama VI in riferimento al fiume della città indiana di Surat.",
+				"La festa Chak Phra di Surat Thani segna la fine della quaresima buddhista con carri decorati che trasportano immagini del Buddha sul fiume e sulle strade."
 			],
 			"de": [
-				"Ihr Fluss, der Tapi, wurde von König Vajiravudh nach dem Tapti in Indien benannt."
+				"König Rama VI. gab Surat Thani 1915 seinen Namen, der Stadt der guten Menschen bedeutet.",
+				"Der Tapi bei Surat Thani wurde von König Rama VI. nach dem Fluss im indischen Surat benannt.",
+				"Surat Thanis Chak-Phra-Fest markiert das Ende der buddhistischen Regenzeitklausur mit geschmückten Festwagen und Booten, die Buddha-Bildnisse tragen."
 			]
 		}
 	},
 	"surin": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Every November the town holds an elephant festival, drawing on the Kuy people’s long tradition of taming elephants."
+				"Surin’s town was renamed from Prathai Saman in 1786 in honour of its governor, Phraya Surin Phakdi.",
+				"Surin’s elephant festival celebrates Kuy traditions of elephant keeping and training.",
+				"Ban Tha Sawang’s weavers produced gold-brocaded silk for the shirts of twenty-one APEC leaders in 2003."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Ogni novembre la città ospita una festa degli elefanti, erede della lunga tradizione dei Kuy nell’addomesticarli."
+				"La città di Surin fu rinominata da Prathai Saman nel 1786 in onore del governatore Phraya Surin Phakdi.",
+				"La festa degli elefanti di Surin celebra le tradizioni kuy di allevamento e addestramento degli elefanti.",
+				"I tessitori di Ban Tha Sawang produssero broccato di seta dorato per le camicie di ventuno leader APEC nel 2003."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Jeden November veranstaltet die Stadt ein Elefantenfest, das auf die lange Tradition der Kuy beim Zähmen von Elefanten zurückgeht."
+				"Surins Stadt wurde 1786 zu Ehren ihres Gouverneurs Phraya Surin Phakdi von Prathai Saman umbenannt.",
+				"Surins Elefantenfest würdigt die Kuy-Traditionen der Elefantenhaltung und des Trainings.",
+				"Die Weber von Ban Tha Sawang fertigten 2003 Goldbrokatseide für die Hemden von einundzwanzig APEC-Staats- und Regierungschefs."
 			]
 		}
 	},
@@ -1435,70 +1700,91 @@
 	"trang": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Every February couples marry underwater off its coast."
+				"Trang’s present capital was formerly called Thap Thiang; the provincial seat moved there from Kantang in 1915.",
+				"Trang is known for underwater wedding ceremonies in which couples celebrate beneath the sea.",
+				"Phraya Ratsadanupradit helped introduce rubber cultivation to Trang, laying the foundation for an important regional industry."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Ogni febbraio al largo della sua costa si celebrano matrimoni sott’acqua."
+				"L’attuale capoluogo di Trang si chiamava Thap Thiang; la sede provinciale vi fu trasferita da Kantang nel 1915.",
+				"Trang è conosciuta per le cerimonie nuziali subacquee, durante le quali le coppie festeggiano sotto il mare.",
+				"Phraya Ratsadanupradit contribuì a introdurre la coltivazione della gomma a Trang, gettando le basi di un’importante attività regionale."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Jeden Februar heiraten Paare vor ihrer Küste unter Wasser."
+				"Trangs heutige Hauptstadt hieß früher Thap Thiang; der Provinzsitz wurde 1915 von Kantang dorthin verlegt.",
+				"Trang ist für Unterwasser-Hochzeitszeremonien bekannt, bei denen Paare unter der Meeresoberfläche feiern.",
+				"Phraya Ratsadanupradit half, den Kautschukanbau in Trang einzuführen, und legte damit den Grundstein für einen wichtigen regionalen Wirtschaftszweig."
 			]
 		},
 		"city": {
 			"en": [
-				"Thailand’s first rubber trees were planted near here, around 1899."
+				"Trang’s present town was formerly called Thap Thiang and became the provincial capital in 1915, replacing Kantang.",
+				"Trang’s breakfast tradition combines roast pork, dim sum and Chinese tea.",
+				"Trang’s distinctive frog-headed tuk-tuks developed from Japanese mini-trucks."
 			],
 			"it": [
-				"I primi alberi della gomma della Thailandia furono piantati qui vicino, intorno al 1899."
+				"L’attuale città di Trang si chiamava Thap Thiang e divenne capoluogo provinciale nel 1915, sostituendo Kantang.",
+				"La tradizione della colazione di Trang combina maiale arrosto, dim sum e tè cinese.",
+				"I caratteristici tuk-tuk di Trang dalla forma di testa di rana derivarono da piccoli autocarri giapponesi."
 			],
 			"de": [
-				"Thailands erste Kautschukbäume wurden um 1899 in der Nähe gepflanzt."
+				"Die heutige Stadt Trang hieß früher Thap Thiang und löste Kantang 1915 als Provinzhauptstadt ab.",
+				"Trangs Frühstückstradition verbindet Schweinebraten, Dim Sum und chinesischen Tee.",
+				"Trangs charakteristische Tuk-Tuks mit Froschkopf-Form wurden aus japanischen Kleinlastwagen entwickelt."
 			]
 		}
 	},
 	"trat": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Siam gave it to France in 1904 and got it back in 1907, in exchange for Battambang and Siem Reap."
+				"Trat appears as Trat or Thung Yai in Siamese administrative law dated 1636.",
+				"France controlled Trat from 1904 to 1907, returning it through an agreement involving Cambodian territories including Battambang and Siem Reap.",
+				"Craftspeople at Ban Nam Chiao make ngop hats by hand from palm leaves."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Il Siam la cedette alla Francia nel 1904 e la riebbe nel 1907, in cambio di Battambang e Siem Reap."
+				"Trat compare come Trat o Thung Yai in una legge amministrativa siamese del 1636.",
+				"La Francia controllò Trat dal 1904 al 1907 e la restituì con un accordo che coinvolgeva territori cambogiani, tra cui Battambang e Siem Reap.",
+				"Gli artigiani di Ban Nam Chiao realizzano a mano cappelli ngop con foglie di palma."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Siam trat sie 1904 an Frankreich ab und erhielt sie 1907 im Austausch gegen Battambang und Siem Reap zurück."
+				"Trat erscheint in einem siamesischen Verwaltungsgesetz von 1636 als Trat oder Thung Yai.",
+				"Frankreich kontrollierte Trat von 1904 bis 1907 und gab es durch ein Abkommen zurück, das kambodschanische Gebiete einschließlich Battambang und Siem Reap betraf.",
+				"Handwerker in Ban Nam Chiao fertigen Ngop-Hüte von Hand aus Palmblättern."
 			]
 		}
 	},
 	"ubon-ratchathani": {
 		"region": {
 			"en": [
-				"\"The royal city of the lotus\".",
-				"The cliff paintings of Pha Taem, some 3,000 years old, look out over the Mekong."
+				"Ubon Ratchathani’s name refers to lotuses, which also appear in its provincial emblem.",
+				"Pha Taem’s prehistoric cliff paintings, around 3,000 years old, depict people, animals and fishing equipment.",
+				"At the start of Buddhist Lent, Ubon Ratchathani’s Candle Procession parades giant carved candles."
 			],
 			"it": [
-				"\"La città reale del loto\".",
-				"Le pitture rupestri di Pha Taem, di circa 3.000 anni fa, guardano il Mekong."
+				"Il nome Ubon Ratchathani si riferisce ai loti, presenti anche nell’emblema provinciale.",
+				"Le pitture rupestri preistoriche di Pha Taem, risalenti a circa 3.000 anni fa, raffigurano persone, animali e attrezzi da pesca.",
+				"All’inizio della Quaresima buddista la Processione delle Candele di Ubon Ratchathani fa sfilare enormi candele intagliate."
 			],
 			"de": [
-				"„Die königliche Stadt des Lotus“.",
-				"Die rund 3.000 Jahre alten Felsmalereien von Pha Taem blicken über den Mekong."
+				"Ubon Ratchathanis Name bezieht sich auf Lotusblumen, die auch im Provinzwappen erscheinen.",
+				"Pha Taems etwa 3.000 Jahre alte vorgeschichtliche Felsmalereien zeigen Menschen, Tiere und Fischfanggeräte.",
+				"Zu Beginn der buddhistischen Fastenzeit führt Ubon Ratchathanis Kerzenprozession riesige geschnitzte Kerzen vor."
 			]
 		},
 		"city": {
 			"en": [
-				"At the start of Buddhist Lent it holds a festival of giant carved candles."
+				"Ubon Ratchathani’s name refers to lotuses, a flower celebrated in the city’s identity.",
+				"At the start of Buddhist Lent, Ubon Ratchathani’s Candle Procession parades giant carved candles.",
+				"Wat Thung Si Mueang’s wooden scripture library stands above a pond to help protect manuscripts from ants and termites."
 			],
 			"it": [
-				"All’inizio della Quaresima buddista ospita una festa di enormi candele scolpite."
+				"Il nome Ubon Ratchathani richiama i loti, fiori celebrati nell’identità cittadina.",
+				"All’inizio della quaresima buddhista, la Processione delle candele di Ubon Ratchathani porta in sfilata gigantesche candele scolpite.",
+				"La biblioteca lignea delle scritture del Wat Thung Si Mueang sorge sopra uno stagno per proteggere i manoscritti da formiche e termiti."
 			],
 			"de": [
-				"Zu Beginn der buddhistischen Fastenzeit findet hier ein Fest riesiger geschnitzter Kerzen statt."
+				"Ubon Ratchathanis Name verweist auf Lotusblumen, die zur Identität der Stadt gehören.",
+				"Zu Beginn der buddhistischen Regenzeitklausur werden bei Ubon Ratchathanis Kerzenprozession riesige geschnitzte Kerzen durch die Stadt geführt.",
+				"Die hölzerne Schriftenbibliothek des Wat Thung Si Mueang steht über einem Teich, um Manuskripte vor Ameisen und Termiten zu schützen."
 			]
 		}
 	},
@@ -1522,89 +1808,526 @@
 		},
 		"city": {
 			"en": [
-				"The United States flew from an air base here during the Vietnam War."
+				"Prince Prachaksinlapakhom founded Udon Thani in 1893.",
+				"During the Vietnam War, American aircraft operated from the air base at Udon Thani.",
+				"Nong Prachak park centres on a pond once called Nong Na Klue, or salt pond, renamed in honour of the city’s founder."
 			],
 			"it": [
-				"Durante la guerra del Vietnam gli Stati Uniti operavano da una base aerea qui."
+				"Il principe Prachaksinlapakhom fondò Udon Thani nel 1893.",
+				"Durante la guerra del Vietnam, aerei statunitensi operarono dalla base aerea di Udon Thani.",
+				"Il parco Nong Prachak si sviluppa intorno a uno stagno un tempo chiamato Nong Na Klue, o stagno del sale, ribattezzato in onore del fondatore della città."
 			],
 			"de": [
-				"Die Vereinigten Staaten flogen im Vietnamkrieg von einem Luftwaffenstützpunkt hier aus."
+				"Prinz Prachaksinlapakhom gründete Udon Thani 1893.",
+				"Während des Vietnamkriegs operierten amerikanische Flugzeuge vom Luftwaffenstützpunkt Udon Thani aus.",
+				"Der Nong-Prachak-Park umgibt einen früher Nong Na Klue, also Salzteich, genannten Teich, der nach dem Stadtgründer umbenannt wurde."
 			]
 		}
 	},
 	"uthai-thani": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"The Huai Kha Khaeng wildlife sanctuary, home to tigers, is part of a UNESCO site."
+				"Uthai Thani’s older provincial seat was at Uthai Kao in today’s Nong Chang district.",
+				"Huai Kha Khaeng, partly in Uthai Thani, belongs to a UNESCO forest complex that protects tigers and elephants.",
+				"Sakae Krang’s raft-house communities combine wooden homes on bamboo floats with fish farming."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Il santuario faunistico di Huai Kha Khaeng, dove vivono le tigri, fa parte di un sito UNESCO."
+				"L’antica sede provinciale di Uthai Thani si trovava a Uthai Kao, nell’attuale distretto di Nong Chang.",
+				"Huai Kha Khaeng, situato in parte a Uthai Thani, appartiene a un complesso forestale UNESCO che protegge tigri ed elefanti.",
+				"Le comunità di case galleggianti del Sakae Krang uniscono abitazioni di legno su zattere di bambù all’allevamento di pesci."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Das Wildschutzgebiet Huai Kha Khaeng, Heimat von Tigern, ist Teil eines UNESCO-Welterbes."
+				"Uthai Thanis älterer Provinzsitz lag in Uthai Kao im heutigen Bezirk Nong Chang.",
+				"Huai Kha Khaeng, teilweise in Uthai Thani gelegen, gehört zu einem UNESCO-Waldkomplex, der Tiger und Elefanten schützt.",
+				"Die Hausbootgemeinschaften am Sakae Krang verbinden Holzhäuser auf Bambusflößen mit Fischzucht."
 			]
 		}
 	},
 	"uttaradit": {
 		"region": {
 			"en": [
-				"\"The northern landing\", for its river port.",
-				"Its hero is Phraya Phichai Dap Hak, \"Phichai of the broken sword\", who fought on after his sword snapped."
+				"Uttaradit means northern landing, recalling the town’s trading port on the Nan River.",
+				"According to tradition, Uttaradit’s hero Phraya Phichai Dap Hak fought on after a sword broke in battle in 1773.",
+				"Sirikit Dam in Uttaradit was completed in 1972 to help manage water, irrigation and flooding in the Nan River basin."
 			],
 			"it": [
-				"\"L’approdo del nord\", per il suo porto fluviale.",
-				"Il suo eroe è Phraya Phichai Dap Hak, \"Phichai dalla spada spezzata\", che continuò a combattere dopo che la spada gli si era rotta."
+				"Uttaradit significa approdo settentrionale e ricorda il porto commerciale della città sul fiume Nan.",
+				"Secondo la tradizione, l’eroe di Uttaradit Phraya Phichai Dap Hak continuò a combattere dopo che una spada si spezzò in battaglia nel 1773.",
+				"La diga Sirikit nella provincia di Uttaradit fu completata nel 1972 per contribuire alla gestione idrica, all’irrigazione e al controllo delle piene nel bacino del Nan."
 			],
 			"de": [
-				"„Die nördliche Anlegestelle“, nach ihrem Flusshafen.",
-				"Ihr Held ist Phraya Phichai Dap Hak, „Phichai vom zerbrochenen Schwert“, der weiterkämpfte, nachdem ihm die Klinge abgebrochen war."
+				"Uttaradit bedeutet nördliche Anlegestelle und erinnert an den Handelshafen der Stadt am Nan.",
+				"Uttaradits Held Phraya Phichai Dap Hak kämpfte einer Überlieferung zufolge 1773 nach dem Zerbrechen eines Schwertes weiter.",
+				"Der Sirikit-Damm in Uttaradit wurde 1972 zur Wasserbewirtschaftung, Bewässerung und Hochwasserregulierung im Nan-Becken fertiggestellt."
 			]
 		}
 	},
 	"yala": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Betong, in its far south, has the Piyamit Tunnel, dug by communist guerrillas who hid in these hills until 1989."
+				"Yala’s name comes from the Malay word jala, meaning net.",
+				"The Piyamit Tunnel near Betong was built in 1976 by Malayan communist guerrillas as a shelter and supply store.",
+				"Wat Khuha Phimuk’s cave contains a reclining Buddha built around an older sacred image."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Betong, nel suo estremo sud, ha il tunnel di Piyamit, scavato dai guerriglieri comunisti che si nascosero su queste colline fino al 1989."
+				"Il nome Yala deriva dalla parola malese jala, che significa rete.",
+				"Il tunnel Piyamit, presso Betong, fu costruito nel 1976 dai guerriglieri comunisti malesi come rifugio e deposito di rifornimenti.",
+				"La grotta del Wat Khuha Phimuk contiene un Buddha reclinato costruito intorno a una più antica immagine sacra."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Betong im äußersten Süden hat den Piyamit-Tunnel, der von kommunistischen Guerillas gegraben wurde, die sich bis 1989 in diesen Hügeln versteckten."
+				"Yalas Name stammt vom malaiischen Wort jala für Netz.",
+				"Der Piyamit-Tunnel bei Betong wurde 1976 von malaiischen kommunistischen Guerillas als Schutzraum und Vorratslager gebaut.",
+				"Die Höhle des Wat Khuha Phimuk enthält einen liegenden Buddha, der um ein älteres heiliges Bildnis gebaut wurde."
 			]
 		},
 		"city": {
 			"en": [
-				"A planned town, laid out in the 20th century."
+				"Yala’s name comes from the Malay word jala, meaning net.",
+				"Yala’s twentieth-century plan arranged concentric roads around the City Pillar Shrine.",
+				"At Khwan Mueang Park, Yala holds a regional competition that judges the singing of zebra doves."
 			],
 			"it": [
-				"Una città pianificata, tracciata nel Novecento."
+				"Il nome Yala deriva dalla parola malese jala, che significa rete.",
+				"Il piano novecentesco di Yala dispose strade concentriche intorno al Santuario del pilastro cittadino.",
+				"Nel parco Khwan Mueang, Yala ospita una gara regionale che valuta il canto delle tortore zebrate."
 			],
 			"de": [
-				"Eine geplante Stadt, im 20. Jahrhundert angelegt."
+				"Yalas Name stammt vom malaiischen Wort jala für Netz.",
+				"Yalas Stadtplanung des 20. Jahrhunderts ordnete konzentrische Straßen um den Stadtpfeilerschrein an.",
+				"Im Khwan-Mueang-Park veranstaltet Yala einen regionalen Wettbewerb, bei dem der Gesang von Sperbertäubchen bewertet wird."
 			]
 		}
 	},
 	"yasothon": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Its rocket festival, Bun Bang Fai, sends home-made rockets up to ask the sky for rain."
+				"Yasothon’s town was previously called Ban Sing Tha and received the name Mueang Yasothon from King Rama II in 1814.",
+				"Yasothon’s Bun Bang Fai festival launches homemade rockets as traditional offerings seeking rain.",
+				"The village of Ban Si Than is known for its triangular khit-patterned pillows."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"La sua festa dei razzi, il Bun Bang Fai, lancia razzi fatti in casa per chiedere la pioggia al cielo."
+				"La città di Yasothon si chiamava precedentemente Ban Sing Tha e ricevette il nome Mueang Yasothon dal re Rama II nel 1814.",
+				"La festa Bun Bang Fai di Yasothon lancia razzi fatti in casa come offerte tradizionali per chiedere la pioggia.",
+				"Il villaggio di Ban Si Than è conosciuto per i cuscini triangolari con motivi khit."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Bei ihrem Raketenfest Bun Bang Fai steigen selbstgebaute Raketen auf, um den Himmel um Regen zu bitten."
+				"Yasothons Stadt hieß früher Ban Sing Tha und erhielt 1814 von König Rama II. den Namen Mueang Yasothon.",
+				"Beim Bun-Bang-Fai-Fest in Yasothon werden selbstgebaute Raketen als traditionelle Opfergaben mit der Bitte um Regen gestartet.",
+				"Das Dorf Ban Si Than ist für seine dreieckigen Kissen mit Khit-Mustern bekannt."
 			]
 		}
+	},
+	"_sources": {
+		"chiang-rai:region": [
+			"https://asset.library.wisc.edu/1711.dl/35FLOGMDITUA68J/R/file-23f61.pdf",
+			"https://www.tatnews.org/2019/03/thai-tourism-minister-weerasak-kowsurat-speech-at-itb-berlin-2019/",
+			"https://www.tatnews.org/2018/07/tham-luang-cave-survivors-ordained-into-monkhood-nnt/",
+			"https://image.mfa.go.th/mfa/0/uK8Kxy2oDV/E_Brochure_TAT_2024_English_Version.pdf"
+		],
+		"phayao:region": [
+			"https://pinkanakorn.or.th/wp-content/uploads/2017/03/Information-8-province.pdf",
+			"https://so03.tci-thaijo.org/index.php/jhnu/article/download/226226/173343/967821",
+			"https://www.tourismthailand.org/Articles/10-things-to-do-in-phayao"
+		],
+		"chiang-mai:region": [
+			"https://whc.unesco.org/en/tentativelists/6003/",
+			"https://www.tatnews.org/2014/11/loi-krathong-2014-delightful-colours-of-the-river/"
+		],
+		"mae-hong-son:region": [
+			"https://www.tourismthailand.org/Destinations/Provinces/Mae-Hong-Son/106",
+			"https://www.tourismthailand.org/Articles/mae-hong-son-pai-a-summary-escape-to-the-valley-of-ethnic-groups-2",
+			"https://www.imb.org/2018/04/06/making-buddhist-monk/",
+			"https://pure.mpg.de/pubman/item/item_3559203_3/component/file_3559209/Carlhoff_Genomic_NatComm_2023_Suppl.pdf"
+		],
+		"bueng-kan:region": [
+			"https://patricklepetit.jalbum.net/BUENG%20KAN/LIBRARY/Bueng%20Khan%20TAT%202020.pdf",
+			"https://www.tourismthailand.org/Articles/it-is-finally-that-time-of-the-year-let-s-go-travel-this-winter"
+		],
+		"lamphun:region": [
+			"https://www.tourismthailand.org/Articles/tiny-lamphun-and-its-big-history",
+			"https://www.tatnews.org/2019/02/discovering-ancient-lamphun-and-the-hariphunchai-kingdom/",
+			"https://ipthailand.go.th/images/gibook/GI_Book_79.pdf",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/3410"
+		],
+		"nong-khai:region": [
+			"https://tourismthailand.my/ebook/Provincial%20eBook%20Nongkhai_%28en%29_Hyperlink_OK.pdf",
+			"https://www.tourismthailand.org/Destinations/Provinces/Nong-Khai/582",
+			"https://tourismproduct.tourismthailand.org/wp-content/uploads/2023/01/ASEAN-HT_3_Mekong_Online-Spread144.pdf"
+		],
+		"uttaradit:region": [
+			"https://dspace.library.uvic.ca/bitstream/handle/1828/9543/Potter_Kritchada_PhD_1991.pdf",
+			"https://www2.uttaradit.go.th/content/history_en",
+			"https://www.egat.co.th/home/en/sirikit-dm-about/"
+		],
+		"sakon-nakhon:region": [
+			"https://patricklepetit.jalbum.net/SAKON%20NAKHON/LIBRARY/Sakon%20Nakhon-1.pdf",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/1166",
+			"https://www.tourismthailand.org/Destinations/Provinces/Sakon%20Nakhon/584",
+			"https://www.tatnews.org/2026/09/october-event-and-calendar/"
+		],
+		"nong-bua-lam-phu:region": [
+			"https://www.prd.go.th/th/content/category/detail/id/39/iid/238241",
+			"https://www.turismotailandes.com/donde-ir/nong-bua-lam-phu/",
+			"https://www.js100.com/tourismthailand/en/site/location_detail/index/63",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/1210"
+		],
+		"phitsanulok:region": [
+			"https://dspace.library.uvic.ca/bitstream/handle/1828/9543/Potter_Kritchada_PhD_1991.pdf",
+			"https://veconac.org/uploads/files/2020%20VECONAC_/Historical%20Sites/Thailand_-_Rajabhakti_Park_-_Eng_pdf.pdf",
+			"https://www.finearts.go.th/storage/contents/2022/03/file/0WbdZ5chWua0bdUO8K0IlswjmyZMAKcxkQaAQUrd.pdf",
+			"https://www.finearts.go.th/storage/contents/2020/08/file/TYR5TfsThv60HdBVJv3faNBiKKL2bb7wFgSs8HZ2.pdf"
+		],
+		"kalasin:region": [
+			"https://ewecbiz.mekonginstitute.org/business-profiles/provincial-profiles/thailand/kalasin",
+			"https://library.dmr.go.th/elib/cgi-bin/opacexe.exe?bid=25982&db=Main&mmid=237&op=mmvw&sid=undefined&skin=u&usid=undefined",
+			"https://www.tourismthailand.org/Articles/10-things-to-do-in-kalasin"
+		],
+		"mukdahan:region": [
+			"https://so02.tci-thaijo.org/index.php/easttu/article/download/51135/42358/118468",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/1101",
+			"https://tourismproduct.tourismthailand.org/wp-content/uploads/2023/01/ASEAN-HT_3_Mekong_Online-Spread144.pdf"
+		],
+		"khon-kaen:region": [
+			"https://libdcms.nida.ac.th/thesis6/2020/b212203e.pdf",
+			"https://app.gs.kku.ac.th/gs/th/publicationfile/item/study-life-kku/around-khon-kaen/around-khon-kaen.pdf",
+			"https://library.dmr.go.th/elib/cgi-bin/opacexe.exe?bid=785&db=Main&mmid=3622&op=mmvw&skin=S",
+			"https://th.kku.ac.th/en/about/history/"
+		],
+		"kamphaeng-phet:region": [
+			"https://www.wisdomlib.org/history/compilation/discovery-of-sanskrit-treasures/ocr/1527671/204",
+			"https://whc.unesco.org/en/list/574",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/5087"
+		],
+		"phichit:region": [
+			"https://patricklepetit.jalbum.net/PHICHIT/LIBRARY/Guide%20TAT%20%20Phichit%202019.pdf",
+			"https://www.tourismthailand.org/Destinations/Provinces/Phichit/111",
+			"https://www.tatnews.org/2023/09/experience-the-thrill-of-thailands-famous-long-boat-racing-this-september-november-2023/"
+		],
+		"phetchabun:region": [
+			"https://townsend-thai.mit.edu/data/Phetchabun%20updated%20Nov%202012.pdf",
+			"https://whc.unesco.org/en/list/1662/",
+			"https://www.tourismthailand.org/Attraction/phetchabun-intrachai-archaeology-hall"
+		],
+		"maha-sarakham:region": [
+			"https://nachuakpit.ac.th/client-upload/np/uploads/files/3_3%20Presentation.pdf",
+			"https://www.tourismthailand.org/Destinations/Provinces/Maha%20Sarakham/577",
+			"https://www.bangkokbank.com/en/About-Us/News-and-Media/News-Detail?ID=%7BD64BA1DD-2D1A-4ABE-8428-365B241969A2%7D"
+		],
+		"chaiyaphum:region": [
+			"https://www.zobodat.at/pdf/Zoosystematics-Evolution_97_0097-0109.pdf",
+			"https://www.tatnews.org/2017/06/thailand-invites-world-enjoy-glorious-tulips-chaiyaphum/",
+			"https://www.tourismthailand.org/Attraction/mo-hin-khao"
+		],
+		"roi-et:region": [
+			"https://gtg.webhost.uoradea.ro/PDF/GTG-3-2024/gtg.55310-1282.pdf",
+			"https://www.tatnews.org/2023/02/march-2023s-many-festivals-and-events-offer-fun-culture-and-tradition/",
+			"https://www.tourismthailand.org/Attraction/pha-nam-yoi-isan-buddist-park"
+		],
+		"amnat-charoen:region": [
+			"https://amnatcharoen.moc.go.th/th/content/page/index/id/1055",
+			"https://www.thai.fyi/2024/11/10/137/amnat-charoen-mekong-river",
+			"https://www.tourismthailand.org/Destinations/Provinces/Amnat-Charoen/571",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/3018"
+		],
+		"yasothon:region": [
+			"https://www.cgd.go.th/cs/yst/yst/History.html",
+			"https://www.tourismthailand.org/Destinations/Provinces/Yasothon/589"
+		],
+		"uthai-thani:region": [
+			"https://patricklepetit.jalbum.net/UTHAI%20THANI/LIBRARY/TAT%20uthai.pdf",
+			"https://ithesis-ir.su.ac.th/dspace/bitstream/123456789/4798/1/60056952.pdf",
+			"https://whc.unesco.org/en/list/591"
+		],
+		"chai-nat:region": [
+			"https://www.tatnews.org/2020/07/chai-nat-takes-visitors-on-a-journey-back-in-time/",
+			"https://www.finearts.go.th/storage/contents/2024/01/file/01sb4xTcSwsVGZ2fRvQiH76sPzDyOyZmmCdFB2yG.pdf",
+			"https://www.finearts.go.th/chainatmunimuseum/view/26320-%E0%B9%81%E0%B8%9C%E0%B9%88%E0%B8%99%E0%B8%AB%E0%B8%B4%E0%B8%99%E0%B8%88%E0%B8%B3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B8%A3%E0%B8%B9%E0%B8%9B-%E0%B9%83%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%97%E0%B8%A7%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%94%E0%B8%B5"
+		],
+		"ubon-ratchathani:region": [
+			"https://www.ide.go.jp/library/English/Publish/Reports/Brc/pdf/11_06.pdf",
+			"https://www.cityub.go.th/2022/images/file/e-book/tourism/63.pdf",
+			"https://www.tourismthailand.org/Attraction/pha-taem-national-park",
+			"https://www.tatnews.org/2026/07/tat-elevates-125th-ubon-ratchathani-candle-procession-as-signature-thailand-event/"
+		],
+		"si-sa-ket:region": [
+			"https://so06.tci-thaijo.org/index.php/husocjournal/article/download/242493/168902",
+			"https://bsac.chemcu.org/wp-content/uploads/2022/04/IQPISSP2-Smart-City-Final-Report.pdf",
+			"https://www.tourismthailand.org/Attraction/wat-pa-maha-chedi-kaeo-or-wat-lan-khuat",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/1152"
+		],
+		"sing-buri:region": [
+			"https://en.wikipedia.org/wiki/Sing_Buri_province",
+			"https://www.dla.go.th/work/province_logo.pdf",
+			"https://www.singburipao.go.th/index/?page=article1932",
+			"https://www.finearts.go.th/storage/contents/file/qXZu6os6UIV0h79JXasocZTA2ZDzsbivm8XJRLMM.pdf"
+		],
+		"surin:region": [
+			"https://patricklepetit.jalbum.net/SURIN/LIBRARY/E-Brochure%20Surin%20%28En%29.pdf",
+			"https://www.tourismthailand.org/Articles/10-things-to-do-in-surin"
+		],
+		"ang-thong:region": [
+			"https://www.angthong-local.go.th/public/history/data/index/menu/22",
+			"https://www.atlasobscura.com/places/thailands-biggest-buddha",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/1652",
+			"https://angthong.prd.go.th/th/content/category/detail/id/38/iid/271393",
+			"https://angthong.mots.go.th/news/581"
+		],
+		"suphan-buri:region": [
+			"https://en.wikipedia.org/wiki/Suphan_Buri_province",
+			"https://ww1.suphanburi.go.th/content/history",
+			"https://www.tatnews.org/2023/01/don-chedi-memorial-day-2023/",
+			"https://www.thailandtravel.or.jp/don-chedi-monument/",
+			"https://www.finearts.go.th/storage/contents/2023/02/file/82lGXPXOjegXPBYU63bLmyAmHFDXwUKpvdShKbKH.pdf"
+		],
+		"saraburi:region": [
+			"https://tmsbr.go.th/travel/detail/8",
+			"https://www.tourismthailand.org/Destinations/Provinces/Saraburi/237",
+			"https://www.tourismthailand.org/Attraction/namtok-chet-sao-noi-national-park"
+		],
+		"phra-nakhon-si-ayutthaya:region": [
+			"https://thesiamsociety.org/wp-content/uploads/1982/03/JSS_070_0g_Singaravelu_RamaStoryInThaiCulturalTradition.pdf",
+			"https://doi.nrct.go.th/ListDoi/Download/478088?Resolve_DOI=10.14457%2FCU.the.2007.2106",
+			"https://whc.unesco.org/en/list/576",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/2561"
+		],
+		"nakhon-nayok:region": [
+			"https://ww2.nakhonnayok.go.th/content/history",
+			"https://www.khaoyainationalpark.com/en/plan-your-visit/place-to-go"
+		],
+		"pathum-thani:region": [
+			"https://www.tourismthailand.org/Destinations/Provinces/Pathum%20Thani/227",
+			"https://icid-ciid.org/icid_data_web/WHISCompendium-ePublication.pdf"
+		],
+		"prachin-buri:region": [
+			"https://www.thailex.info/THAILEX/THAILEXENG/LEXICON/Thailand%20Lexicon%20-%20Prachinburi%20%28%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5%29.htm",
+			"https://patricklepetit.jalbum.net/PRACHINBURI/LIBRARY/PrachinBuri.pdf",
+			"https://www.tourismthailand.org/Trip-Planner/Suggestion-Detail/prachin-buri-sa-kaeo-3-days"
+		],
+		"nonthaburi:region": [
+			"https://ww2.nonthaburi.go.th/content/history_en",
+			"https://ipthailand.go.th/images/gibook/GI_Book_79.pdf",
+			"https://www.tourismthailand.org/Articles/places-to-go-just-with-a-quick-drive"
+		],
+		"nakhon-pathom:region": [
+			"https://so04.tci-thaijo.org/index.php/jasu/article/download/239309/169781/885545",
+			"https://jlupub.ub.uni-giessen.de/bitstreams/a9666eca-743f-4faa-a688-47dd8d8a636c/download",
+			"https://www.lib.kmutt.ac.th/unveiling-siam-through-architecture-tracing-landmark-sites-from-the-reign-of-king-rama-iv/"
+		],
+		"sa-kaeo:region": [
+			"https://www.ide.go.jp/library/English/Publish/Reports/Brc/pdf/08_chapter7.pdf",
+			"https://sakaeo.prd.go.th/th/content/category/detail/id/391/iid/99254",
+			"https://thesiamsociety.org/th/activity/khmerjourney2022/",
+			"https://www.tourismthailand.org/Destinations/Provinces/SaKaeo/233"
+		],
+		"samut-prakan:region": [
+			"https://www.samutprakan.go.th/",
+			"https://www.airportthai.co.th/en/history-of-aot/",
+			"https://www.airportthai.co.th/en/contact-and-complaints/",
+			"https://www.erawanmuseum.com/en/founder/"
+		],
+		"samut-sakhon:region": [
+			"https://www.turismotailandes.com/donde-ir/samut-sakhon/",
+			"https://www.tdh-newsletter.de/fileadmin/user_upload/inhalte/04_Was_wir_tun/Themen/Kinderarbeit/Report_2015_-_Shrimps/Report_on_Migrant_Child_Labourers_and_Seafood_Processing_in_Thailands_Fishing_Industry.pdf",
+			"https://www.ilo.org/resource/news/new-public-mural-bangkok-highlights-relationship-between-migrant-workers",
+			"https://ipthailand.go.th/images/gibook/GI_Book_111.pdf"
+		],
+		"chachoengsao:region": [
+			"https://secretary.mots.go.th/develop/images/download/article/article_20241018104151.pdf",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/626"
+		],
+		"ratchaburi:region": [
+			"https://en.wikipedia.org/wiki/Ratchaburi_province",
+			"https://www.tourismthailand.org/Articles/floating-market-en",
+			"https://www.tourismthailand.org/Articles/10-things-to-do-in-ratchaburi"
+		],
+		"chon-buri:region": [
+			"https://en.wikipedia.org/wiki/Chonburi_province",
+			"https://www.pattayamail.com/news/pattayas-old-american-connection-returns-but-the-city-has-moved-on-564212",
+			"https://www.chonburipr.net/18205400/buffalo-racing-festival-history"
+		],
+		"trat:region": [
+			"https://www.finearts.go.th/storage/contents/file/VhAqMw7RiYB6SUmeOwCmP9fddkU54fkbDX2zjZ6L.pdf",
+			"https://www.turismotailandes.com/wp-content/uploads/2015/07/Trat.pdf"
+		],
+		"prachuap-khiri-khan:region": [
+			"https://www.turismotailandes.org.pt/WebRoot/Store/Shops/1032-180719/MediaGallery/Nova_pasta1/Nova_pasta/E-Brochure_Prachuap_khirikhan_En..pdf",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/1433",
+			"https://www.dmr.go.th/wp-content/uploads/2022/10/article_20170622105315-1.pdf"
+		],
+		"chumphon:region": [
+			"https://www.cgd.go.th/cs/cpn/cpn/History.html",
+			"https://www.finearts.go.th/chumphonmuseum/view/37000-พายุไต้ฝุ่นเกย์ที่จังหวัดชุมพร-เมื่อ-พ-ศ--2532",
+			"https://www.nstda.or.th/en/news/news-years-2019/study-of-raptors%E2%80%99-migration-route-helps-promote-species-conservation-and-eco-tourism-2.html"
+		],
+		"nakhon-si-thammarat:region": [
+			"https://image.mfa.go.th/mfa/0/uK8Kxy2oDV/Nakhon_Si_Thammarat_2020.pdf",
+			"https://www.tatnews.org/2017/07/seeking-out-the-awesome-in-nakhon-si-thammarat/",
+			"https://awmc.royalrain.go.th/awm2019/pdf/thailand/Thainess.pdf"
+		],
+		"krabi:region": [
+			"https://en.wikipedia.org/wiki/Krabi_province",
+			"https://www.tatnews.org/2025/09/coming-soon-to-a-theater-near-you-thailands-blockbuster-lineup-of-film-locations/",
+			"https://www.rte.ie/news/environment/2018/1002/1000429-thai-beach/",
+			"https://ci.nii.ac.jp/ncid/BB13557886"
+		],
+		"phuket:region": [
+			"https://www.phuket.go.th/eng/The%20History%20of%20Phuket.php",
+			"https://www.tatnews.org/2018/05/european-architectural-influence-in-thailand-southern-thai-charms/",
+			"https://www.tatnews.org/2015/10/chinese-thainess-celebrated-across-phuket-during-the-annual-vegetarian-festival/"
+		],
+		"trang:region": [
+			"https://api.tat.or.th/upload/live/multimedia/9361/ETrang.pdf",
+			"https://www.tatnews.org/2025/02/love-wins-in-trang-thailands-iconic-underwater-wedding-celebrates-equality/",
+			"https://www.tourismthailand.org/Trip-Planner/Suggestion-Detail/trang-2-days"
+		],
+		"phatthalung:region": [
+			"https://en.wikipedia.org/wiki/Phatthalung_province",
+			"https://www.tourismthailand.org/Destinations/Provinces/Phatthalung/349",
+			"https://www.fao.org/giahs/around-the-world/detail/thailand-thale-noi/"
+		],
+		"songkhla:region": [
+			"https://www.finearts.go.th/fad11/view/53407-%E0%B8%AA%E0%B8%B8%E0%B8%AA%E0%B8%B2%E0%B8%99-%E0%B9%80%E0%B8%88--%E0%B8%A7%E0%B8%B5--%E0%B8%A5%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B8%99",
+			"https://www.thailand.go.th/issue-focus-detail/009_088?hl=en",
+			"https://songkhla.mots.go.th/news/528"
+		],
+		"pattani:region": [
+			"https://www.tandfonline.com/doi/pdf/10.1080/00927678.2018.1555924",
+			"https://thaipolitics.leeds.ac.uk/projects/southern-thai-insurgency-2/southern-thai-insurgency/",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/1917"
+		],
+		"narathiwat:region": [
+			"https://tourismthailand.my/ebook/E-Brochure%20Naratiwat%20%28En%29%20new.pdf",
+			"https://www.tourismthailand.org/Destinations/Provinces/Narathiwat/346"
+		],
+		"yala:region": [
+			"https://en.wiktionary.org/wiki/%E0%B8%A2%E0%B8%B0%E0%B8%A5%E0%B8%B2",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/2014",
+			"https://yala.mots.go.th/download/article/article_20180310143426.pdf"
+		],
+		"chiang-rai:city": [
+			"https://asset.library.wisc.edu/1711.dl/35FLOGMDITUA68J/R/file-23f61.pdf",
+			"https://conf.mfu.ac.th/archive/icaai2014/sites/default/files/uploads/Post%20conference%20excursion%20detail%20for%20brochure.pdf",
+			"https://www.tourismchiangrai-phayao.com/en/2022/05/11/chiang-rai-clock-tower/"
+		],
+		"lampang:city": [
+			"https://www.tourismlampang-lamphun.com/wp-content/uploads/2020/06/Lampang2562.pdf",
+			"https://www.tourismthailand.org/Articles/10-things-to-do-in-lampang",
+			"https://api-tourismproduct.tourismthailand.org/uploads/2025/11/ebook/RR_MAP_for_Printing_2510/file/1003975f-91bb-40a5-bdfa-3545b2d0c679.pdf?test=1"
+		],
+		"nong-khai:city": [
+			"https://tourismthailand.my/ebook/Provincial%20eBook%20Nongkhai_%28en%29_Hyperlink_OK.pdf",
+			"https://www.tourismthailand.org/Destinations/Provinces/Nong-Khai/582",
+			"https://tourismproduct.tourismthailand.org/wp-content/uploads/2023/01/ASEAN-HT_3_Mekong_Online-Spread144.pdf",
+			"https://www.thailand.go.th/issue-focus-detail/001_08_035?hl=en"
+		],
+		"udon-thani:city": [
+			"https://www.thailandtourismus.de/fileadmin/user_upload/E_Broschueren/Destinationen/Udon_Thani.pdf",
+			"https://www.afsoc.af.mil/Portals/86/documents/history/AFD-131112-025.pdf"
+		],
+		"phitsanulok:city": [
+			"https://dspace.library.uvic.ca/bitstream/handle/1828/9543/Potter_Kritchada_PhD_1991.pdf",
+			"https://veconac.org/uploads/files/2020%20VECONAC_/Historical%20Sites/Thailand_-_Rajabhakti_Park_-_Eng_pdf.pdf",
+			"https://www.finearts.go.th/storage/contents/2022/03/file/0WbdZ5chWua0bdUO8K0IlswjmyZMAKcxkQaAQUrd.pdf",
+			"https://www.finearts.go.th/storage/contents/2020/08/file/TYR5TfsThv60HdBVJv3faNBiKKL2bb7wFgSs8HZ2.pdf"
+		],
+		"khon-kaen:city": [
+			"https://libdcms.nida.ac.th/thesis6/2020/b212203e.pdf",
+			"https://app.gs.kku.ac.th/gs/th/publicationfile/item/study-life-kku/around-khon-kaen/around-khon-kaen.pdf",
+			"https://th.kku.ac.th/en/about/history/",
+			"https://www.kkpao.go.th/kkpao/uploads/journal/54b61f7948834.pdf"
+		],
+		"nakhon-sawan:city": [
+			"https://rituals.sac.or.th/detail.php?id=57&lang=en",
+			"https://www.tourismthailand.org/Articles/4-must-see-attraction-in-the-city-of-4-rivers"
+		],
+		"ubon-ratchathani:city": [
+			"https://www.ide.go.jp/library/English/Publish/Reports/Brc/pdf/11_06.pdf",
+			"https://www.cityub.go.th/2022/images/file/e-book/tourism/63.pdf",
+			"https://www.tatnews.org/2026/07/tat-elevates-125th-ubon-ratchathani-candle-procession-as-signature-thailand-event/",
+			"https://www.tourismthailand.org/Attraction/wat-thung-si-mueang"
+		],
+		"nakhon-ratchasima:city": [
+			"https://visitkorat.com/en/attractions/thao-suranari-monument",
+			"https://www.tourismthailand.org/Attraction/pratu-chumphon"
+		],
+		"ayutthaya:city": [
+			"https://thesiamsociety.org/wp-content/uploads/1982/03/JSS_070_0g_Singaravelu_RamaStoryInThaiCulturalTradition.pdf",
+			"https://doi.nrct.go.th/ListDoi/Download/478088?Resolve_DOI=10.14457%2FCU.the.2007.2106",
+			"https://whc.unesco.org/en/list/576",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/2561",
+			"https://www.tourismthailand.org/Articles/discover-9-sacred-mahathat-temples-for-blessings"
+		],
+		"pathum-thani:city": [
+			"https://www.thailandtourismus.de/fileadmin/user_upload/Ayutthaya.pdf",
+			"https://fliphtml5.com/cehdi/yqoj/%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%9B%E0%B8%97%E0%B8%B8%E0%B8%A1_/"
+		],
+		"nonthaburi:city": [
+			"https://ww2.nonthaburi.go.th/content/history_en",
+			"https://infocenter.oic.go.th/upload/cms/1737596671_5395.pdf",
+			"https://en.wikipedia.org/wiki/Bang_Kwang_Central_Prison",
+			"https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118845387.wbeoc093"
+		],
+		"nakhon-pathom:city": [
+			"https://so04.tci-thaijo.org/index.php/jasu/article/download/239309/169781/885545",
+			"https://jlupub.ub.uni-giessen.de/bitstreams/a9666eca-743f-4faa-a688-47dd8d8a636c/download",
+			"https://www.lib.kmutt.ac.th/unveiling-siam-through-architecture-tracing-landmark-sites-from-the-reign-of-king-rama-iv/",
+			"https://patricklepetit.jalbum.net/NAKHON%20PATHOM/LIBRARY/Sanam%20Chandra%20Palace.pdf"
+		],
+		"samut-prakan:city": [
+			"https://thesiamsociety.org/wp-content/uploads/1993/03/JSS_081_2b_Sternstein_LondonCompanysEnvoysPlotSiam.pdf",
+			"https://legacy.orst.go.th/wp-content/uploads/royin-ebook/95/FileUpload/331_8559.pdf",
+			"https://www.erawanmuseum.com/en/founder/"
+		],
+		"ratchaburi:city": [
+			"https://en.wikipedia.org/wiki/Ratchaburi_province",
+			"https://www.tourismthailand.org/Articles/10-things-to-do-in-ratchaburi",
+			"https://www.finearts.go.th/storage/contents/2024/05/file/XACX7TygEzkH3OB0ttHyk2WKwgKpRdGXs41e1FLU.pdf",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/1509"
+		],
+		"chon-buri:city": [
+			"https://en.wikipedia.org/wiki/Chonburi_province",
+			"https://www.chonburipr.net/18205400/buffalo-racing-festival-history",
+			"https://www.chonburimots.go.th/en/travel-chonburi/tourism-attractions/chonburi-tourism/mueang-chonburi/377-wat-yai-intharam-royal-monastery.html",
+			"https://library.khmerstudies.org/bib/10008"
+		],
+		"si-racha:city": [
+			"https://storage.googleapis.com/wzukusers/user-17060495/documents/5672ca2123737iQSzRP9/Thai_Steam_Today_2013_-_part_1_of_2.pdf",
+			"https://www.srirajapanich.co.th/heritage.php?lang=_en",
+			"https://www.tshe.org/wp-content/uploads/2013/01/FactaboutSiRacha.pdf"
+		],
+		"surat-thani:city": [
+			"https://www.mea.gov.in/Portal/CountryNews/4774_PRESS_RELEASE_on_Trade_Expo_in_Surat_Thani%3B_22_July_2015.pdf",
+			"https://timesofindia.indiatimes.com/a-surat-in-oz-thailand/articleshow/2252083.cms",
+			"https://www.tatnews.org/2019/01/experience-thai-traditions-and-cultural-values-in-thailands-annual-events-and-festivals/",
+			"https://rueaphra.com/en/schedule/2026"
+		],
+		"nakhon-si-thammarat:city": [
+			"https://image.mfa.go.th/mfa/0/uK8Kxy2oDV/Nakhon_Si_Thammarat_2020.pdf",
+			"https://whc.unesco.org/en/list/1761/"
+		],
+		"phuket:city": [
+			"https://lib.ncdd.gov.kh/storage/app/public/library_backend/CAT_20965_1/2011-DELGOSEA-BestPractices-FiscalManagement-1.pdf",
+			"https://www.tatnews.org/2018/05/european-architectural-influence-in-thailand-southern-thai-charms/",
+			"https://www.tatnews.org/2015/10/chinese-thainess-celebrated-across-phuket-during-the-annual-vegetarian-festival/"
+		],
+		"trang:city": [
+			"https://api.tat.or.th/upload/live/multimedia/9361/ETrang.pdf",
+			"https://www.tatnews.org/2015/11/trang-offers-tasty-thai-treats-for-food-lovers/",
+			"https://awmc.royalrain.go.th/awmc2024/pdf/thailand/THE_LINK.pdf"
+		],
+		"hat-yai:city": [
+			"https://hatyaicity.go.th/content/history",
+			"https://www.tourismthailand.org/Destinations/Provinces/Hat-Yai/362"
+		],
+		"pattani:city": [
+			"https://www.tandfonline.com/doi/pdf/10.1080/00927678.2018.1555924",
+			"https://www.thailandtourismdirectory.go.th/en/attraction/1917",
+			"https://www.thailand.go.th/public/issue-focus-detail/009_075"
+		],
+		"yala:city": [
+			"https://en.wiktionary.org/wiki/%E0%B8%A2%E0%B8%B0%E0%B8%A5%E0%B8%B2",
+			"https://thailandlearningcityplatform.com/town/show/46/en",
+			"https://www.sbpac.go.th/home/?p=162232"
+		]
 	}
 }

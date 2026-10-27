@@ -1,3 +1,5 @@
+import { createHash } from 'node:crypto';
+import { validateTownBindingsCache, type TownBindingsCache } from './townBindings.js';
 import { canonicalRegionAtPoint, type NamedRegion } from './boundaryRegions.js';
 // Snapshot towns for the v1.0 batch where Natural Earth is incomplete.
 // Run in WSL with GDAL and Natural Earth inputs (Lithuanian county fallback).
@@ -8,7 +10,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { REPO_ROOT, ADMIN1_SHP, parseArgs } from './mapBuildUtils.js';
 import { pointInPolygon, type AnyGeometry } from './factGeometry.js';
-import { newestTownRows, type TownBinding } from './townSnapshot.js';
+import { newestTownRows, townCoordinate, type TownBinding } from './townSnapshot.js';
 
 interface Country {
 	id: string;
@@ -20,8 +22,23 @@ interface Country {
 	boundarySource?: string;
 	minimumYear?: number;
 	clipToBoundary?: boolean;
+	// A sourced representative centre when a detailed island is absent at map scale.
+	coordinateOverrides?: Record<string, [number, number]>;
+	excludedItems?: Record<string, string>;
 }
 const countries: Country[] = [
+	{
+		id: 'denmark',
+		name: 'Denmark',
+		iso: 'DNK',
+		language: 'en',
+		population: 1000,
+		minimumYear: 2011,
+		boundarySource: 'data/boundaries/denmark-regions-gb-9469f09.geojson',
+		clipToBoundary: true,
+		// Natural Earth Copenhagen centre, preserving the existing map's position.
+		coordinateOverrides: { Q1748: [12.5615399, 55.68051] }
+	},
 	{
 		id: 'hungary',
 		name: 'Hungary',
@@ -130,6 +147,8 @@ const countries: Country[] = [
 	}
 ];
 const args = parseArgs(process.argv.slice(2));
+if (Object.hasOwn(args, 'bindings') && (!args.bindings?.trim() || !args.country?.trim()))
+	throw new Error('--bindings requires one explicit --country and a cache file');
 const selected = args.country
 	? countries.filter((country) => country.id === args.country)
 	: countries;
@@ -140,7 +159,14 @@ for (const country of selected) {
 		// Keep country-first traversal; the planner otherwise expands global paths.
 		'  hint:Query hint:optimizer "None" .',
 		'  ?country wdt:P298 "' + country.iso + '"; wdt:P36 ?capitalCity .',
-		'  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .',
+		'  ?item wdt:P17 ?country .',
+		// Admit candidate ITEMS using any recorded count, then retrieve ALL their
+		// observations below. A newer low count still defeats an older high one.
+		// This avoids expanding every Norwegian settlement's class hierarchy.
+		'  FILTER EXISTS { ?item p:P1082/ps:P1082 ?candidatePopulation . FILTER(?candidatePopulation >= ' +
+			country.population +
+			') }',
+		'  ?item wdt:P31 ?kind; p:P625 ?coordinateStatement .',
 		'  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .',
 		'  FILTER(?coordinateRank != wikibase:DeprecatedRank)',
 		'  ?coordinateValue wikibase:geoPrecision ?precision .',
@@ -175,17 +201,41 @@ for (const country of selected) {
 	].join('\n');
 	const url = new URL('https://query.wikidata.org/sparql');
 	url.search = new URLSearchParams({ query, format: 'json' }).toString();
-	const response = await fetch(url, {
-		headers: {
-			Accept: 'application/sparql-results+json',
-			'User-Agent': 'GeoclickMapBuild/1.0 (https://github.com/diegoami/Geoclick2027)'
-		},
-		signal: AbortSignal.timeout(90_000)
-	});
-	if (!response.ok) throw new Error(country.name + ': Wikidata HTTP ' + response.status);
-	const raw = (await response.json()) as { results: { bindings: TownBinding[] } };
-	if (raw.results.bindings.length === 10000)
-		throw new Error('Query limit reached; refusing partial snapshot');
+	// --bindings reprocesses an explicitly supplied saved SPARQL response.
+	const rawDir = path.join(REPO_ROOT, 'data/source/v1-town-bindings');
+	let raw: TownBindingsCache;
+	let bindingBytes: Buffer;
+	if (args.bindings) {
+		bindingBytes = readFileSync(path.resolve(REPO_ROOT, args.bindings));
+		raw = validateTownBindingsCache(JSON.parse(bindingBytes.toString('utf8')), country.id, query);
+	} else {
+		const response = await fetch(url, {
+			headers: {
+				Accept: 'application/sparql-results+json',
+				'User-Agent': 'GeoclickMapBuild/1.0 (https://github.com/diegoami/Geoclick2027)'
+			},
+			signal: AbortSignal.timeout(90_000)
+		});
+		if (!response.ok) throw new Error(country.name + ': Wikidata HTTP ' + response.status);
+		const reply = (await response.json()) as { results: { bindings: TownBinding[] } };
+		raw = validateTownBindingsCache(
+			{
+				...reply,
+				countryId: country.id,
+				fetchedAt: new Date().toISOString(),
+				query,
+				querySha256: createHash('sha256').update(query).digest('hex')
+			},
+			country.id,
+			query
+		);
+		bindingBytes = Buffer.from(JSON.stringify(raw));
+		mkdirSync(rawDir, { recursive: true });
+		writeFileSync(path.join(rawDir, country.id + '.json'), bindingBytes);
+	}
+	const fetchedAt = raw.fetchedAt;
+	const bindingsSha256 = createHash('sha256').update(bindingBytes).digest('hex');
+	const reprocessedAt = args.bindings ? new Date().toISOString() : undefined;
 	const capitalIds = new Set(
 		raw.results.bindings
 			.filter((row) => row.capital?.value === 'true')
@@ -199,19 +249,17 @@ for (const country of selected) {
 		: undefined;
 	const boundaryNames = new Set(boundary?.features.map((f) => String(f.properties.name)) ?? []);
 	const excluded: { item: string | undefined; name: string; reason: string }[] = [];
-	const fetchedAt = new Date().toISOString();
+	const pointOverride = (row: TownBinding) =>
+		country.coordinateOverrides?.[row.item?.value?.split('/').pop() ?? ''];
 	const newest = newestTownRows(raw.results.bindings, fetchedAt, (row) => {
 		if (!boundary) return true;
-		const match = /^Point\((-?[\d.]+) (-?[\d.]+)\)$/.exec(row.coord?.value ?? '');
-		return (
-			!!match &&
-			!!canonicalRegionAtPoint(
-				[Number(match[1]), Number(match[2])],
-				boundary.features,
-				country.name,
-				boundaryNames,
-				Number(row.precision?.value ?? 0)
-			)
+		const { coordinates, precision } = townCoordinate(row, pointOverride(row));
+		return !!canonicalRegionAtPoint(
+			coordinates,
+			boundary.features,
+			country.name,
+			boundaryNames,
+			precision
 		);
 	});
 	// Do not let population-row ordering choose between conflicting regions.
@@ -269,16 +317,15 @@ for (const country of selected) {
 	const features = newest
 		.filter((row) => Number(row.population?.value) >= country.population)
 		.map((row) => {
-			const coordinate = /^Point\((-?[\d.]+) (-?[\d.]+)\)$/.exec(row.coord?.value ?? '');
 			const name = row.name?.value ?? row.en?.value ?? row.defaultName?.value;
-			if (!coordinate || !name) throw new Error('Missing coordinates/name for ' + row.item?.value);
-			const coordinates = [Number(coordinate[1]), Number(coordinate[2])];
-			if (
-				!coordinates.every(Number.isFinite) ||
-				Math.abs(coordinates[0]) > 180 ||
-				Math.abs(coordinates[1]) > 90
-			)
-				throw new Error('Invalid coordinates for ' + name);
+			if (!name) throw new Error('Missing name for ' + row.item?.value);
+			const exclusion = country.excludedItems?.[row.item?.value?.split('/').pop() ?? ''];
+			if (exclusion) {
+				excluded.push({ item: row.item?.value, name, reason: exclusion });
+				return undefined;
+			}
+			const override = pointOverride(row);
+			const { coordinates, precision } = townCoordinate(row, override);
 			let regionName = row.regionName?.value;
 			if (!regionName && country.id === 'hungary' && row.capital?.value === 'true')
 				regionName = name; // Budapest itself is the county-equivalent capital.
@@ -288,7 +335,7 @@ for (const country of selected) {
 					boundary.features,
 					country.name,
 					boundaryNames,
-					Number(row.precision?.value ?? 0)
+					precision
 				);
 			if (!regionName && countyRows.length) {
 				const matches = countyRows.filter((f) =>
@@ -325,7 +372,10 @@ for (const country of selected) {
 					NAME_DE: row.de?.value ?? name,
 					ADM0NAME: country.name,
 					ADM1NAME: regionName,
-					coordinatePrecision: Number(row.precision?.value ?? 0),
+					coordinatePrecision: precision,
+					...(override
+						? { coordinateSource: 'Natural Earth (public domain), representative city centre' }
+						: {}),
 					ADM0CAP: capitalIds.has(row.item?.value) ? 1 : 0,
 					POP_MAX: Number(row.population?.value),
 					POP1950: 0,
@@ -353,7 +403,17 @@ for (const country of selected) {
 						? 'Wikidata (CC0); missing county labels from Natural Earth (public domain), matched by point-in-polygon'
 						: 'Wikidata (CC0)',
 				fetchedAt,
-				query,
+				...(reprocessedAt ? { reprocessedAt } : {}),
+				bindingsSha256,
+				querySha256: raw.querySha256,
+				query: raw.query,
+				...(country.coordinateOverrides
+					? {
+							coordinateOverrides: country.coordinateOverrides,
+							coordinateOverrideSource:
+								'Natural Earth (public domain); same representative centres as the existing maps'
+						}
+					: {}),
 				...(excluded.length ? { excluded } : {}),
 				features
 			},

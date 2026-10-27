@@ -1,3 +1,4 @@
+import { combineAttributions, placeSourceAttribution } from './placeSourceAttribution.js';
 import { appendNeutralBoundaryContext } from './neutralBoundaryContext.js';
 // Builds one demo map package from the Natural Earth admin-1 dataset:
 // filters by country, simplifies geometry, builds a PMTiles tileset, and
@@ -523,10 +524,13 @@ async function main() {
 		console.error(`Unknown --clean-names "${args['clean-names']}".`);
 		process.exit(1);
 	}
-	let attribution = args.attribution
-		? `${args.attribution}; Natural Earth (public domain), https://www.naturalearthdata.com`
-		: 'Natural Earth (public domain), https://www.naturalearthdata.com';
-	if (args['places-source']) attribution += '; Wikidata (CC0), https://www.wikidata.org';
+	const attribution = combineAttributions(
+		args.attribution ?? '',
+		'Natural Earth (public domain), https://www.naturalearthdata.com',
+		args['places-source']
+			? placeSourceAttribution(path.resolve(REPO_ROOT, args['places-source']))
+			: ''
+	);
 	// --within=Bayern,Hessen keeps the targets whose interior point lies
 	// inside those admin-1 areas of --country, from Natural Earth - a
 	// register's districts carry no state, and a slice by state is how
@@ -677,6 +681,8 @@ async function main() {
 		fc.features = fc.features
 			.map((feature) => {
 				const raw = String(feature.properties[sourceNameField] ?? '');
+				if (!raw.trim())
+					throw new Error('External boundary has no nonempty ' + sourceNameField + ' field');
 				// Only the name travels on; the register's own ids and codes
 				// would only bloat the tiles.
 				feature.properties = { name: cleanName ? cleanName(raw) : raw };

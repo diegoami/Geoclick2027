@@ -3,7 +3,8 @@
 		"Name-facts for Algeria (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the 48 wilayas of the map (the pre-2019 set), each as a \"region\" entry (en, it, de); Algeria has 69 wilayas since 2025."
+		"v0.19 added the 48 wilayas of the map (the pre-2019 set), each as a \"region\" entry (en, it, de); Algeria has 69 wilayas since 2025.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"algiers": {
 		"city": {
@@ -58,6 +59,23 @@
 				"Der heilige Augustinus war Bischof von Hippo Regius, der römischen Stadt, deren Ruinen neben Annaba liegen.",
 				"Sein Stahlwerk in El Hadjar gehört zu den größten Afrikas."
 			]
+		},
+		"city": {
+			"en": [
+				"The town now called Annaba was known in the Middle Ages as Bouna.",
+				"Augustine served as bishop of Hippo Regius, whose archaeological remains lie beside modern Annaba.",
+				"Annaba’s Sidi Bou Merouane Mosque dates to 1033, during the Zirid period."
+			],
+			"it": [
+				"La città oggi chiamata Annaba era conosciuta nel Medioevo come Bouna.",
+				"Agostino fu vescovo di Ippona, i cui resti archeologici si trovano accanto alla moderna Annaba.",
+				"La moschea Sidi Bou Merouane di Annaba risale al 1033, durante il periodo ziride."
+			],
+			"de": [
+				"Die heute Annaba genannte Stadt hieß im Mittelalter Bouna.",
+				"Augustinus war Bischof von Hippo Regius, dessen archäologische Überreste neben dem heutigen Annaba liegen.",
+				"Die Sidi-Bou-Merouane-Moschee in Annaba stammt aus dem Jahr 1033 und damit aus der Zeit der Ziriden."
+			]
 		}
 	},
 	"skikda": {
@@ -76,6 +94,23 @@
 				"Skikda hieß bis zur Unabhängigkeit Algeriens 1962 Philippeville, nach dem französischen König Louis-Philippe.",
 				"Die Römer nannten die Stadt Rusicade, und eines ihrer Theater steht noch.",
 				"Sein Hafen ist ein Knotenpunkt für Gas und Öl, mit einer der wichtigsten Flüssiggasanlagen des Landes."
+			]
+		},
+		"city": {
+			"en": [
+				"Skikda was known in Roman times as Rusicada and in the French colonial period as Philippeville.",
+				"The Roman theatre at Skikda is one of the surviving remnants of the ancient town beneath the modern streets.",
+				"Skikda’s modern regional theatre opened in 1932 after building work begun in 1912 was interrupted by the First World War."
+			],
+			"it": [
+				"Skikda era conosciuta in epoca romana come Rusicada e durante il periodo coloniale francese come Philippeville.",
+				"Il teatro romano di Skikda è uno dei resti superstiti della città antica sotto le strade moderne.",
+				"Il moderno teatro regionale di Skikda aprì nel 1932, dopo che i lavori iniziati nel 1912 erano stati interrotti dalla Prima guerra mondiale."
+			],
+			"de": [
+				"Skikda hieß in römischer Zeit Rusicada und während der französischen Kolonialzeit Philippeville.",
+				"Das römische Theater in Skikda gehört zu den erhaltenen Resten der antiken Stadt unter den modernen Straßen.",
+				"Skikdas modernes Regionaltheater wurde 1932 eröffnet, nachdem der Erste Weltkrieg die 1912 begonnenen Bauarbeiten unterbrochen hatte."
 			]
 		}
 	},
@@ -115,6 +150,23 @@
 				"Der Nationalpark Taza mit Klippen, Höhlen und Wald über dem Meer liegt in der Provinz.",
 				"Die Küste von Jijel gehört zu den schönsten Algeriens."
 			]
+		},
+		"city": {
+			"en": [
+				"Jijel was known in antiquity as Igilgili and was later written Djidjelli in French.",
+				"The corsair Arudj defended Jijel in 1514, during the struggle for control of the North African coast.",
+				"Earthquakes and a tsunami devastated Jijel in August 1856, forcing extensive rebuilding of the town."
+			],
+			"it": [
+				"Jijel era conosciuta nell’antichità come Igilgili e fu poi scritta Djidjelli in francese.",
+				"Il corsaro Arudj difese Jijel nel 1514, durante la lotta per il controllo della costa nordafricana.",
+				"Terremoti e uno tsunami devastarono Jijel nell’agosto 1856, imponendo un’ampia ricostruzione della città."
+			],
+			"de": [
+				"Jijel hieß in der Antike Igilgili und wurde später auf Französisch Djidjelli geschrieben.",
+				"Der Korsar Arudj verteidigte Jijel 1514 während des Kampfes um die Kontrolle der nordafrikanischen Küste.",
+				"Erdbeben und ein Tsunami verwüsteten Jijel im August 1856 und machten einen umfassenden Wiederaufbau nötig."
+			]
 		}
 	},
 	"el-tarf": {
@@ -152,6 +204,23 @@
 				"Tizi Ouzou kommt aus dem Berberischen: tizi bedeutet „Pass“ und ouzou „Ginster“, die Pflanze.",
 				"Es ist das Herz der Kabylei, wo viele Kabylisch sprechen, eine Berbersprache.",
 				"Das Djurdjura-Gebirge erhebt sich an seinem Südrand auf über 2.300 m."
+			]
+		},
+		"city": {
+			"en": [
+				"Tizi Ouzou’s Kabyle name means the pass of the broom shrubs.",
+				"Tizi Ouzou developed around an Ottoman fort that was strengthened in the early eighteenth century.",
+				"The university in Tizi Ouzou grew from a centre opened in 1977–1978 and adopted writer Mouloud Mammeri’s name in 1990."
+			],
+			"it": [
+				"Il nome cabilo Tizi Ouzou significa passo delle ginestre.",
+				"Tizi Ouzou si sviluppò intorno a un forte ottomano rafforzato all’inizio del Settecento.",
+				"L’università di Tizi Ouzou nacque da un centro aperto nel 1977–1978 e assunse il nome dello scrittore Mouloud Mammeri nel 1990."
+			],
+			"de": [
+				"Tizi Ouzous kabylischer Name bedeutet Pass der Ginstersträucher.",
+				"Tizi Ouzou entwickelte sich um ein osmanisches Fort, das im frühen 18. Jahrhundert verstärkt wurde.",
+				"Die Universität in Tizi Ouzou ging aus einem 1977–1978 eröffneten Zentrum hervor und erhielt 1990 den Namen des Schriftstellers Mouloud Mammeri."
 			]
 		}
 	},
@@ -191,6 +260,23 @@
 				"Im 11. Jahrhundert war es die Hauptstadt der Hammadiden und ein bedeutender Hafen.",
 				"Der Nationalpark Gouraya liegt auf den Klippen über der Stadt."
 			]
+		},
+		"city": {
+			"en": [
+				"Béjaïa was known to the Romans as Saldae and later in European sources as Bougie.",
+				"Béjaïa became a Hammadid royal centre when al-Nasir began rebuilding the town in 1067.",
+				"The mathematician Fibonacci studied mathematics in Béjaïa while his father represented Pisan merchants there."
+			],
+			"it": [
+				"Béjaïa era conosciuta dai Romani come Saldae e poi nelle fonti europee come Bougie.",
+				"Béjaïa divenne un centro reale hammadide quando al-Nasir iniziò a ricostruire la città nel 1067.",
+				"Il matematico Fibonacci studiò matematica a Béjaïa mentre suo padre vi rappresentava i mercanti pisani."
+			],
+			"de": [
+				"Béjaïa hieß bei den Römern Saldae und später in europäischen Quellen Bougie.",
+				"Béjaïa wurde zu einem königlichen Zentrum der Hammadiden, als al-Nasir 1067 mit dem Wiederaufbau begann.",
+				"Der Mathematiker Fibonacci lernte in Béjaïa Mathematik, während sein Vater dort pisanische Kaufleute vertrat."
+			]
 		}
 	},
 	"blida": {
@@ -209,6 +295,23 @@
 				"Blida kommt von boulaïda, „Städtchen“; es ist als Stadt der Rosen bekannt.",
 				"Der Nationalpark Chréa im Blida-Atlas über der Stadt hat Zedernwälder und ein Skigebiet.",
 				"Es liegt in der fruchtbaren Mitidja-Ebene südwestlich von Algier."
+			]
+		},
+		"city": {
+			"en": [
+				"Blida’s name comes from an Arabic diminutive meaning little town.",
+				"Blida developed in the sixteenth century with the settlement of migrants from Andalusia.",
+				"A destructive earthquake struck Blida on 2 March 1825 and was followed by a series of aftershocks."
+			],
+			"it": [
+				"Il nome Blida deriva da un diminutivo arabo che significa piccola città.",
+				"Blida si sviluppò nel Cinquecento con l’insediamento di immigrati provenienti dall’Andalusia.",
+				"Un terremoto distruttivo colpì Blida il 2 marzo 1825 e fu seguito da una serie di scosse di assestamento."
+			],
+			"de": [
+				"Blidas Name stammt von einer arabischen Verkleinerungsform für kleine Stadt.",
+				"Blida entwickelte sich im 16. Jahrhundert durch die Ansiedlung von Migranten aus Andalusien.",
+				"Ein zerstörerisches Erdbeben traf Blida am 2. März 1825 und wurde von einer Reihe von Nachbeben gefolgt."
 			]
 		}
 	},
@@ -229,6 +332,23 @@
 				"Sein römisches Theater mit Platz für einige tausend Zuschauer wird noch für Aufführungen genutzt.",
 				"Hammam Debagh in der Nähe hat einige der heißesten Quellen der Welt, fast kochend."
 			]
+		},
+		"city": {
+			"en": [
+				"Guelma occupies the site of the ancient city of Calama.",
+				"Guelma’s Roman theatre was extensively reconstructed in the early twentieth century and hosted a modern performance in 1908.",
+				"Guelma’s separate Mahmoud Triki Regional Theatre was built in 1880 using reused Roman stones."
+			],
+			"it": [
+				"Guelma occupa il sito dell’antica città di Calama.",
+				"Il teatro romano di Guelma fu ampiamente ricostruito all’inizio del Novecento e ospitò una rappresentazione moderna nel 1908.",
+				"Il distinto Teatro regionale Mahmoud Triki di Guelma fu costruito nel 1880 riutilizzando pietre romane."
+			],
+			"de": [
+				"Guelma liegt an der Stelle der antiken Stadt Calama.",
+				"Guelmas römisches Theater wurde im frühen 20. Jahrhundert weitgehend rekonstruiert und beherbergte 1908 eine moderne Aufführung.",
+				"Das davon getrennte Regionaltheater Mahmoud Triki in Guelma wurde 1880 unter Wiederverwendung römischer Steine erbaut."
+			]
 		}
 	},
 	"constantine": {
@@ -248,6 +368,23 @@
 				"Constantine heißt die Stadt der Brücken, wegen der vielen Brücken über ihre Schlucht.",
 				"Die Altstadt steht auf einem Felsplateau, fast ganz von der tiefen Schlucht des Rhumel umgeben."
 			]
+		},
+		"city": {
+			"en": [
+				"Constantine was ancient Cirta and received its later name in honour of the emperor Constantine, who restored the city in the fourth century.",
+				"Constantine’s Ahmed Bey Palace was completed in 1835, shortly before the French conquest of the city.",
+				"Constantine’s First World War memorial takes the form of a triumphal arch inspired by the Roman arch at Timgad."
+			],
+			"it": [
+				"Costantina era l’antica Cirta e ricevette il nome successivo in onore dell’imperatore Costantino, che restaurò la città nel IV secolo.",
+				"Il Palazzo Ahmed Bey di Costantina fu completato nel 1835, poco prima della conquista francese della città.",
+				"Il monumento ai caduti della Prima guerra mondiale di Costantina ha la forma di un arco di trionfo ispirato all’arco romano di Timgad."
+			],
+			"de": [
+				"Constantine war das antike Cirta und erhielt seinen späteren Namen zu Ehren Kaiser Konstantins, der die Stadt im 4. Jahrhundert wiederherstellte.",
+				"Der Ahmed-Bey-Palast in Constantine wurde 1835 fertiggestellt, kurz vor der französischen Eroberung der Stadt.",
+				"Constantines Denkmal für die Gefallenen des Ersten Weltkriegs hat die Form eines Triumphbogens nach dem Vorbild des römischen Bogens von Timgad."
+			]
 		}
 	},
 	"bouira": {
@@ -266,6 +403,23 @@
 				"Die Herkunft des Namens ist ungewiss; eine Erklärung ist das arabische Wort für „kleiner Brunnen“.",
 				"Es liegt südlich des Djurdjura-Gebirges, dessen hohe Hänge ein Skigebiet sind.",
 				"Die Provinz verbindet die Kabylei mit den Hochebenen im Süden."
+			]
+		},
+		"city": {
+			"en": [
+				"Bouira was historically known as Souk Hamza, the market of Hamza.",
+				"Bouira’s Bordj Hamza was an Ottoman garrison that controlled caravan passage and collected taxes.",
+				"The star-shaped Bordj Hamza in Bouira used channels and filters to collect rainwater in an underground cistern."
+			],
+			"it": [
+				"Bouira era storicamente conosciuta come Souk Hamza, il mercato di Hamza.",
+				"Il Bordj Hamza di Bouira era una guarnigione ottomana che controllava il passaggio delle carovane e riscuoteva imposte.",
+				"Il Bordj Hamza a pianta stellare di Bouira usava canali e filtri per raccogliere l’acqua piovana in una cisterna sotterranea."
+			],
+			"de": [
+				"Bouira war historisch als Souk Hamza, Markt des Hamza, bekannt.",
+				"Der Bordj Hamza in Bouira war eine osmanische Garnison, die Karawanenwege kontrollierte und Steuern einzog.",
+				"Der sternförmige Bordj Hamza in Bouira sammelte über Kanäle und Filter Regenwasser in einer unterirdischen Zisterne."
 			]
 		}
 	},
@@ -305,6 +459,23 @@
 				"Die Stadt hieß unter den Franzosen Orléansville und von 1962 bis 1981 El Asnam.",
 				"Ein starkes Erdbeben zerstörte 1980 einen großen Teil der Stadt."
 			]
+		},
+		"city": {
+			"en": [
+				"Chlef was previously known as Orléansville and then El Asnam.",
+				"A major earthquake devastated Chlef on 10 October 1980.",
+				"An inscription dates Chlef’s ancient Christian basilica to AD 324; its labyrinth mosaic was later moved to Algiers."
+			],
+			"it": [
+				"Chlef era conosciuta in precedenza come Orléansville e poi El Asnam.",
+				"Un forte terremoto devastò Chlef il 10 ottobre 1980.",
+				"Un’iscrizione data la basilica cristiana antica di Chlef al 324 d.C.; il suo mosaico a labirinto fu poi trasferito ad Algeri."
+			],
+			"de": [
+				"Chlef hieß früher Orléansville und danach El Asnam.",
+				"Ein schweres Erdbeben verwüstete Chlef am 10. Oktober 1980.",
+				"Eine Inschrift datiert Chlefs antike christliche Basilika auf 324 n. Chr.; ihr Labyrinthmosaik wurde später nach Algier gebracht."
+			]
 		}
 	},
 	"souk-ahras": {
@@ -323,6 +494,23 @@
 				"Souk Ahras wird meist als „Markt der Löwen“ erklärt, doch die Herkunft ist umstritten.",
 				"Der heilige Augustinus wurde 354 in Thagaste geboren, der römischen Stadt am Ort des heutigen Souk Ahras.",
 				"Die Provinz grenzt an Tunesien."
+			]
+		},
+		"city": {
+			"en": [
+				"Souk Ahras occupies the site of ancient Thagaste.",
+				"Augustine was born in Thagaste, today’s Souk Ahras, in AD 354.",
+				"The regional theatre in Souk Ahras was established in 2008."
+			],
+			"it": [
+				"Souk Ahras occupa il sito dell’antica Tagaste.",
+				"Agostino nacque a Tagaste, l’odierna Souk Ahras, nel 354 d.C.",
+				"Il teatro regionale di Souk Ahras fu istituito nel 2008."
+			],
+			"de": [
+				"Souk Ahras liegt an der Stelle des antiken Thagaste.",
+				"Augustinus wurde 354 n. Chr. in Thagaste, dem heutigen Souk Ahras, geboren.",
+				"Das Regionaltheater in Souk Ahras wurde 2008 gegründet."
 			]
 		}
 	},
@@ -362,6 +550,23 @@
 				"Der Brunnen von Aïn el Fouara mitten in der Stadt ist ihr bekanntestes Denkmal.",
 				"Sie liegt auf der Hochebene, auf etwa 1.100 m, einem Bauernland für Weizen und Gerste."
 			]
+		},
+		"city": {
+			"en": [
+				"Sétif was known in antiquity as Sitifis, a Roman colony founded for army veterans under Emperor Nerva.",
+				"Sétif’s Aïn el Fouara fountain features a sculpture by Francis de Saint-Vidal.",
+				"Sétif’s museum displays a Dionysus mosaic discovered in the ancient town after heavy rain in 1970."
+			],
+			"it": [
+				"Sétif era conosciuta nell’antichità come Sitifis, colonia romana fondata per veterani dell’esercito sotto l’imperatore Nerva.",
+				"La fontana Aïn el Fouara di Sétif presenta una scultura di Francis de Saint-Vidal.",
+				"Il museo di Sétif espone un mosaico di Dioniso scoperto nella città antica dopo forti piogge nel 1970."
+			],
+			"de": [
+				"Sétif hieß in der Antike Sitifis und war eine unter Kaiser Nerva gegründete römische Veteranenkolonie.",
+				"Sétifs Brunnen Aïn el Fouara trägt eine Skulptur von Francis de Saint-Vidal.",
+				"Sétifs Museum zeigt ein Dionysos-Mosaik, das 1970 nach starken Regenfällen in der antiken Stadt entdeckt wurde."
+			]
 		}
 	},
 	"bordj-bou-arreridj": {
@@ -380,6 +585,23 @@
 				"Bordj bedeutet „Fort“: Die Stadt wuchs um das osmanische Fort von Bou Arréridj.",
 				"Hier hat Condor seinen Sitz, einer der größten Elektronikhersteller Algeriens.",
 				"Die Provinz liegt auf der Hochebene zwischen der Kabylei und Sétif."
+			]
+		},
+		"city": {
+			"en": [
+				"Bordj Bou Arréridj takes the first part of its name from bordj, a fort around which the town developed.",
+				"Bordj El Mokrani in Bordj Bou Arréridj was besieged during the uprising of 1871.",
+				"Bordj El Mokrani in Bordj Bou Arréridj was classified as protected cultural heritage in 2010."
+			],
+			"it": [
+				"Bordj Bou Arréridj prende la prima parte del nome da bordj, il forte intorno al quale si sviluppò la città.",
+				"Il Bordj El Mokrani di Bordj Bou Arréridj fu assediato durante l’insurrezione del 1871.",
+				"Il Bordj El Mokrani di Bordj Bou Arréridj fu classificato come patrimonio culturale tutelato nel 2010."
+			],
+			"de": [
+				"Bordj Bou Arréridj erhält den ersten Teil seines Namens von bordj, dem Fort, um das sich die Stadt entwickelte.",
+				"Der Bordj El Mokrani in Bordj Bou Arréridj wurde während des Aufstands von 1871 belagert.",
+				"Der Bordj El Mokrani in Bordj Bou Arréridj wurde 2010 als geschütztes Kulturerbe eingestuft."
 			]
 		}
 	},
@@ -400,6 +622,23 @@
 				"Mostaganem liegt an der Mittelmeerküste östlich von Oran, mit Stränden wie Salamandre.",
 				"Die Provinz ist ein Bauernland, das für Zitrusfrüchte und Gemüse bekannt ist."
 			]
+		},
+		"city": {
+			"en": [
+				"Mostaganem appears in medieval Arabic geographical writing as Mustaghanim, a name whose origin remains uncertain.",
+				"Mostaganem’s Great Mosque was built under the Marinid dynasty in the fourteenth century.",
+				"The National Cultural Festival of Amateur Theatre in Mostaganem was formally instituted in 2004."
+			],
+			"it": [
+				"Mostaganem compare nella geografia araba medievale come Mustaghanim, nome di origine ancora incerta.",
+				"La Grande Moschea di Mostaganem fu costruita sotto la dinastia merinide nel Trecento.",
+				"Il Festival culturale nazionale del teatro amatoriale di Mostaganem fu formalmente istituito nel 2004."
+			],
+			"de": [
+				"Mostaganem erscheint in mittelalterlichen arabischen geographischen Schriften als Mustaghanim, ein Name weiterhin ungewisser Herkunft.",
+				"Mostaganems Große Moschee wurde im 14. Jahrhundert unter den Meriniden erbaut.",
+				"Das Nationale Kulturfestival des Amateurtheaters in Mostaganem wurde 2004 offiziell eingerichtet."
+			]
 		}
 	},
 	"medea": {
@@ -418,6 +657,23 @@
 				"Die Herkunft des Namens ist ungewiss; die Römer nannten die Stadt Lambdia.",
 				"Médéa liegt auf etwa 900 m auf einer Hochfläche des Tellatlas, südlich von Algier.",
 				"Die Provinz ist ein Obstanbaugebiet, bekannt für Trauben und Äpfel."
+			]
+		},
+		"city": {
+			"en": [
+				"Médéa also appears in historical writing under the name Lemdia.",
+				"Dar El Bey in Médéa, also called Dar El Emir Abdelkader, was classified as a historic monument in 1993.",
+				"Médéa’s National Cultural Festival of Comic Theatre was formally instituted in 2006."
+			],
+			"it": [
+				"Médéa compare nella storiografia anche con il nome Lemdia.",
+				"Il Dar El Bey di Médéa, chiamato anche Dar El Emir Abdelkader, fu classificato come monumento storico nel 1993.",
+				"Il Festival culturale nazionale del teatro comico di Médéa fu formalmente istituito nel 2006."
+			],
+			"de": [
+				"Médéa erscheint in historischen Darstellungen auch unter dem Namen Lemdia.",
+				"Dar El Bey in Médéa, auch Dar El Emir Abdelkader genannt, wurde 1993 als historisches Denkmal eingestuft.",
+				"Médéas Nationales Kulturfestival des komischen Theaters wurde 2006 offiziell eingerichtet."
 			]
 		}
 	},
@@ -457,6 +713,23 @@
 				"Es liegt auf der Hochebene, einem Land aus Weizen und Salzseen.",
 				"Der Salzsee Garaet Ezzemoul in der Provinz ist ein Feuchtgebiet für Flamingos und andere Vögel."
 			]
+		},
+		"city": {
+			"en": [
+				"Oum El Bouaghi was known during French colonial rule as Canrobert, after a French marshal.",
+				"Oum El Bouaghi became a provincial administrative seat in 1974, transforming the earlier small settlement.",
+				"Oum El Bouaghi’s university originated as a teacher-training school in 1983 and received university status in 2009."
+			],
+			"it": [
+				"Oum El Bouaghi era conosciuta durante il dominio coloniale francese come Canrobert, dal nome di un maresciallo francese.",
+				"Oum El Bouaghi divenne sede amministrativa provinciale nel 1974, trasformando il precedente piccolo insediamento.",
+				"L’università di Oum El Bouaghi nacque come scuola di formazione degli insegnanti nel 1983 e ricevette lo status universitario nel 2009."
+			],
+			"de": [
+				"Oum El Bouaghi hieß während der französischen Kolonialherrschaft nach einem französischen Marschall Canrobert.",
+				"Oum El Bouaghi wurde 1974 zum Verwaltungssitz einer Provinz, was die frühere kleine Siedlung veränderte.",
+				"Die Universität in Oum El Bouaghi entstand 1983 als Lehrerbildungsanstalt und erhielt 2009 Universitätsstatus."
+			]
 		}
 	},
 	"tissemsilt": {
@@ -495,6 +768,23 @@
 				"Oran ist die Heimat des Raï, einer Popmusik, die vom Alltag singt.",
 				"Das Fort Santa Cruz steht auf dem Berg über der Stadt, ein Erbe der spanischen Herrschaft."
 			]
+		},
+		"city": {
+			"en": [
+				"Oran is known in Arabic as Wahran, a name traditionally associated with lions.",
+				"A national festival established in Oran helped promote raï, Algeria’s popular song tradition.",
+				"Oran’s Santa Cruz Fort formed part of the city’s defensive system during Spanish rule."
+			],
+			"it": [
+				"Orano è conosciuta in arabo come Wahran, nome tradizionalmente associato ai leoni.",
+				"Un festival nazionale istituito a Orano contribuì a promuovere il raï, tradizione canora popolare algerina.",
+				"Il Forte Santa Cruz di Orano faceva parte del sistema difensivo della città durante il dominio spagnolo."
+			],
+			"de": [
+				"Oran heißt auf Arabisch Wahran, ein Name, der traditionell mit Löwen verbunden wird.",
+				"Ein in Oran gegründetes nationales Festival half bei der Förderung des Raï, Algeriens populärer Gesangstradition.",
+				"Orans Fort Santa Cruz gehörte während der spanischen Herrschaft zum Verteidigungssystem der Stadt."
+			]
 		}
 	},
 	"mascara": {
@@ -513,6 +803,23 @@
 				"Mascara wird meist als „Mutter der Soldaten“ auf Arabisch erklärt, doch die Herkunft ist umstritten.",
 				"Emir Abd el-Kader, der den Widerstand gegen die französische Eroberung anführte, wurde 1808 bei Mascara geboren.",
 				"Die Hügel um die Stadt liefern Rotwein."
+			]
+		},
+		"city": {
+			"en": [
+				"Mascara’s name is often linked to Arabic m’asker, a military camp, although its origin is debated.",
+				"Mascara served as Emir Abdelkader’s capital during resistance to the French conquest.",
+				"The building identified as Emir Abdelkader’s tribunal in Mascara was classified as protected heritage in 1999."
+			],
+			"it": [
+				"Il nome Mascara è spesso collegato all’arabo m’asker, accampamento militare, sebbene l’origine sia discussa.",
+				"Mascara fu capitale dell’emiro Abd el-Kader durante la resistenza alla conquista francese.",
+				"L’edificio identificato come tribunale dell’emiro Abd el-Kader a Mascara fu classificato come patrimonio tutelato nel 1999."
+			],
+			"de": [
+				"Mascaras Name wird oft mit dem arabischen m’asker, Militärlager, verbunden, doch seine Herkunft ist umstritten.",
+				"Mascara war während des Widerstands gegen die französische Eroberung die Hauptstadt Emir Abd el-Kaders.",
+				"Das als Gericht Emir Abd el-Kaders identifizierte Gebäude in Mascara wurde 1999 als geschütztes Kulturerbe eingestuft."
 			]
 		}
 	},
@@ -552,6 +859,23 @@
 				"Die römische Stadt Timgad, um das Jahr 100 schachbrettartig angelegt, ist Welterbe.",
 				"In der Provinz erheben sich die Aurès-Berge, die Heimat der Chaoui-Berber."
 			]
+		},
+		"city": {
+			"en": [
+				"Batna briefly carried the colonial name Nouvelle Lambèse in 1848–1849.",
+				"Modern Batna grew around a French military camp established in 1844.",
+				"Batna’s theatre was designated a regional theatre in 1985."
+			],
+			"it": [
+				"Batna portò brevemente il nome coloniale Nouvelle Lambèse nel 1848–1849.",
+				"La moderna Batna si sviluppò intorno a un accampamento militare francese fondato nel 1844.",
+				"Il teatro di Batna fu designato teatro regionale nel 1985."
+			],
+			"de": [
+				"Batna trug 1848–1849 kurzzeitig den Kolonialnamen Nouvelle Lambèse.",
+				"Das moderne Batna entwickelte sich um ein 1844 gegründetes französisches Militärlager.",
+				"Batnas Theater wurde 1985 zum Regionaltheater erklärt."
+			]
 		}
 	},
 	"m-sila": {
@@ -571,6 +895,23 @@
 				"Qal’at Bani Hammad, die Ruinenhauptstadt der Hammadiden, ist Welterbe.",
 				"Der Chott el Hodna, ein riesiger Salzsee, liegt in der Provinz."
 			]
+		},
+		"city": {
+			"en": [
+				"The medieval Fatimid settlement at M’Sila was called Mohammedia.",
+				"M’Sila’s Hodna Museum opened on 18 May 1993 to preserve the province’s archaeological heritage.",
+				"The Hodna Museum in M’Sila holds ceramics and carved stucco from the tenth-century Fatimid town of Mohammedia."
+			],
+			"it": [
+				"L’insediamento fatimide medievale di M’Sila si chiamava Mohammedia.",
+				"Il Museo dell’Hodna di M’Sila aprì il 18 maggio 1993 per conservare il patrimonio archeologico della provincia.",
+				"Il Museo dell’Hodna a M’Sila conserva ceramiche e stucchi scolpiti della città fatimide di Mohammedia del X secolo."
+			],
+			"de": [
+				"Die mittelalterliche fatimidische Siedlung bei M’Sila hieß Mohammedia.",
+				"Das Hodna-Museum in M’Sila wurde am 18. Mai 1993 eröffnet, um das archäologische Erbe der Provinz zu bewahren.",
+				"Das Hodna-Museum in M’Sila besitzt Keramik und geschnitzten Stuck aus der fatimidischen Stadt Mohammedia des 10. Jahrhunderts."
+			]
 		}
 	},
 	"tebessa": {
@@ -589,6 +930,23 @@
 				"Tébessa kommt vom römischen Namen der Stadt, Theveste.",
 				"Sein römischer Bogen, für Kaiser Caracalla errichtet, steht noch an einem der Stadttore.",
 				"Die Provinz grenzt an Tunesien und hat Phosphatminen."
+			]
+		},
+		"city": {
+			"en": [
+				"Tébessa was known in Roman times as Theveste.",
+				"Tébessa’s four-sided Arch of Caracalla was erected in AD 214.",
+				"The Roman temple conventionally called the Temple of Minerva stands within Tébessa’s Byzantine walls."
+			],
+			"it": [
+				"Tébessa era conosciuta in epoca romana come Theveste.",
+				"L’Arco di Caracalla a quattro facce di Tébessa fu eretto nel 214 d.C.",
+				"Il tempio romano convenzionalmente chiamato Tempio di Minerva sorge all’interno delle mura bizantine di Tébessa."
+			],
+			"de": [
+				"Tébessa hieß in römischer Zeit Theveste.",
+				"Tébessas vierseitiger Caracallabogen wurde 214 n. Chr. errichtet.",
+				"Der üblicherweise Minervatempel genannte römische Tempel steht innerhalb von Tébessas byzantinischen Mauern."
 			]
 		}
 	},
@@ -628,6 +986,23 @@
 				"Tiaret ist für sein Gestüt bekannt, in dem Araber-Berber-Pferde gezüchtet werden.",
 				"Es liegt auf der Hochebene, auf etwa 1.000 m, wo es im Winter kalt ist."
 			]
+		},
+		"city": {
+			"en": [
+				"Tiaret’s name is also recorded in the historical forms Tihert and Tahert.",
+				"The Chaouchaoua stud in Tiaret was founded in 1874 as a horse-breeding centre.",
+				"Tiaret’s Chaouchaoua national stud was classified as a historic monument in 1999."
+			],
+			"it": [
+				"Il nome Tiaret è attestato anche nelle forme storiche Tihert e Tahert.",
+				"L’allevamento Chaouchaoua di Tiaret fu fondato nel 1874 come centro di riproduzione equina.",
+				"L’allevamento nazionale Chaouchaoua di Tiaret fu classificato come monumento storico nel 1999."
+			],
+			"de": [
+				"Der Name Tiaret ist auch in den historischen Formen Tihert und Tahert überliefert.",
+				"Das Gestüt Chaouchaoua in Tiaret wurde 1874 als Pferdezuchtzentrum gegründet.",
+				"Tiarets Nationalgestüt Chaouchaoua wurde 1999 als historisches Denkmal eingestuft."
+			]
 		}
 	},
 	"sidi-bel-abbes": {
@@ -646,6 +1021,23 @@
 				"Benannt nach Sidi Bel Abbès, einem muslimischen Heiligen, dessen Grab in der Stadt steht.",
 				"Die französische Fremdenlegion hatte hier bis 1962 ihr Hauptquartier.",
 				"Die Stadt wurde von den Franzosen in einem regelmäßigen Raster mit Mauern und Toren angelegt."
+			]
+		},
+		"city": {
+			"en": [
+				"Sidi Bel Abbès takes its name from a Muslim holy man whose mausoleum preceded the modern town.",
+				"The French Foreign Legion’s headquarters moved from Sidi Bel Abbès to Aubagne in 1962.",
+				"Sidi Bel Abbès was planned in the nineteenth century with a regular street grid and separate civilian and military quarters."
+			],
+			"it": [
+				"Sidi Bel Abbès prende il nome da un santo musulmano il cui mausoleo precedeva la città moderna.",
+				"Il quartier generale della Legione straniera francese fu trasferito da Sidi Bel Abbès ad Aubagne nel 1962.",
+				"Sidi Bel Abbès fu pianificata nell’Ottocento con una griglia regolare di strade e quartieri civili e militari separati."
+			],
+			"de": [
+				"Sidi Bel Abbès ist nach einem muslimischen Heiligen benannt, dessen Mausoleum älter als die moderne Stadt war.",
+				"Das Hauptquartier der französischen Fremdenlegion zog 1962 von Sidi Bel Abbès nach Aubagne um.",
+				"Sidi Bel Abbès wurde im 19. Jahrhundert mit einem regelmäßigen Straßenraster und getrennten zivilen und militärischen Vierteln geplant."
 			]
 		}
 	},
@@ -666,6 +1058,23 @@
 				"Die Große Moschee, 1082 von den Almoraviden gegründet, ist eine der ältesten Algeriens.",
 				"Tlemcen ist für seine andalusische Musik bekannt, die Flüchtlinge aus Spanien brachten."
 			]
+		},
+		"city": {
+			"en": [
+				"Tlemcen’s Agadir quarter occupies the site of the Roman settlement of Pomaria.",
+				"Tlemcen’s Great Mosque was enlarged and richly decorated under the Almoravid ruler Ali ibn Yusuf in 1136.",
+				"Tlemcen’s Mechouar citadel served as the royal residence and council place of the Zayyanid rulers."
+			],
+			"it": [
+				"Il quartiere Agadir di Tlemcen occupa il sito dell’insediamento romano di Pomaria.",
+				"La Grande Moschea di Tlemcen fu ampliata e riccamente decorata sotto il sovrano almoravide Ali ibn Yusuf nel 1136.",
+				"La cittadella Mechouar di Tlemcen servì da residenza reale e luogo di consiglio dei sovrani zayyanidi."
+			],
+			"de": [
+				"Tlemcens Viertel Agadir liegt an der Stelle der römischen Siedlung Pomaria.",
+				"Tlemcens Große Moschee wurde 1136 unter dem Almoravidenherrscher Ali ibn Yusuf erweitert und reich ausgestattet.",
+				"Tlemcens Mechouar-Zitadelle diente den Zayyanidenherrschern als königliche Residenz und Beratungsort."
+			]
 		}
 	},
 	"saida": {
@@ -684,6 +1093,23 @@
 				"Saïda kommt wahrscheinlich vom arabischen saïd, „glücklich“; die Herkunft ist ungewiss.",
 				"Die Provinz liegt auf der Hochebene, wo wild das Alfagras wächst, das für Papier genutzt wird.",
 				"Hammam Rabbi in der Provinz ist ein Kurort mit heißen Quellen."
+			]
+		},
+		"city": {
+			"en": [
+				"Saïda’s name is commonly interpreted as happy or fortunate in Arabic, although local traditions offer different accounts of its origin.",
+				"Saïda’s El Atik Mosque was built in 1885 with contributions from local Muslim families and leaders.",
+				"The song Saïda Baïda was composed by Cheikh Mohammed Zeroual and later performed by Cheb Mami."
+			],
+			"it": [
+				"Il nome di Saïda viene comunemente interpretato come felice o fortunata in arabo, anche se le tradizioni locali ne raccontano diversamente l’origine.",
+				"La moschea El Atik di Saïda fu costruita nel 1885 con i contributi di famiglie e capi musulmani locali.",
+				"La canzone Saïda Baïda fu composta da Cheikh Mohammed Zeroual e in seguito interpretata da Cheb Mami."
+			],
+			"de": [
+				"Saïdas Name wird im Arabischen gewöhnlich als glücklich oder vom Glück begünstigt gedeutet, doch örtliche Überlieferungen erklären seinen Ursprung unterschiedlich.",
+				"Saïdas El-Atik-Moschee wurde 1885 mit Beiträgen örtlicher muslimischer Familien und Würdenträger erbaut.",
+				"Das Lied Saïda Baïda wurde von Cheikh Mohammed Zeroual komponiert und später von Cheb Mami interpretiert."
 			]
 		}
 	},
@@ -704,6 +1130,23 @@
 				"Es wird das Tor zur Sahara und die Königin der Ziban genannt, der Palmenoasen der Region.",
 				"Seine Dattelpalmen liefern Deglet Nour, eine begehrte Dattel, die in die ganze Welt exportiert wird."
 			]
+		},
+		"city": {
+			"en": [
+				"Biskra was known in antiquity as Vescera.",
+				"Biskra’s Landon Garden was created by Count Albert Landon de Langeville in 1872.",
+				"André Gide stayed in Biskra from November 1893 to March 1894, during a formative journey to North Africa."
+			],
+			"it": [
+				"Nell’antichità Biskra era conosciuta come Vescera.",
+				"Il giardino Landon di Biskra fu creato dal conte Albert Landon de Langeville nel 1872.",
+				"André Gide soggiornò a Biskra dal novembre 1893 al marzo 1894, durante un viaggio formativo nell’Africa settentrionale."
+			],
+			"de": [
+				"Biskra war in der Antike als Vescera bekannt.",
+				"Der Landon-Garten in Biskra wurde 1872 von Graf Albert Landon de Langeville angelegt.",
+				"André Gide hielt sich von November 1893 bis März 1894 während einer prägenden Nordafrikareise in Biskra auf."
+			]
 		}
 	},
 	"djelfa": {
@@ -722,6 +1165,23 @@
 				"Die Herkunft des Namens ist ungewiss.",
 				"Djelfa ist eines der wichtigsten Schafzuchtgebiete Algeriens, in der Steppe der Hochebene.",
 				"Die Ouled Naïl, ein Stamm der Region, sind für ihren traditionellen Tanz und ihre Tracht bekannt."
+			]
+		},
+		"city": {
+			"en": [
+				"The name Djelfa appears in the French imperial decree of 10 January 1861 establishing a population centre there.",
+				"The writer Max Aub was imprisoned in the Djelfa internment camp in 1941–1942.",
+				"Max Aub’s poetry collection Diario de Djelfa, drawing on his imprisonment at Djelfa, was first published in Mexico in 1944."
+			],
+			"it": [
+				"Il nome Djelfa compare nel decreto imperiale francese del 10 gennaio 1861 che vi istituiva un centro abitato.",
+				"Lo scrittore Max Aub fu imprigionato nel campo d’internamento di Djelfa nel 1941–1942.",
+				"La raccolta poetica Diario de Djelfa di Max Aub, ispirata alla sua prigionia a Djelfa, fu pubblicata per la prima volta in Messico nel 1944."
+			],
+			"de": [
+				"Der Name Djelfa erscheint im französischen kaiserlichen Dekret vom 10. Januar 1861 zur Gründung eines Siedlungszentrums an diesem Ort.",
+				"Der Schriftsteller Max Aub war 1941–1942 im Internierungslager Djelfa inhaftiert.",
+				"Max Aubs Gedichtsammlung Diario de Djelfa über seine Haft in Djelfa erschien erstmals 1944 in Mexiko."
 			]
 		}
 	},
@@ -742,6 +1202,23 @@
 				"Es ist als Tor zur Sahara bekannt, mit Palmenhainen rund um die Stadt.",
 				"Die Franzosen nahmen es 1852 nach einer Belagerung ein."
 			]
+		},
+		"city": {
+			"en": [
+				"Laghouat also appears in older travel writing under the spelling El-aghouat.",
+				"French forces captured Laghouat on 4 December 1852 after a siege.",
+				"Laghouat’s municipal museum occupies a former church in the historic town."
+			],
+			"it": [
+				"Nei resoconti di viaggio più antichi Laghouat compare anche con la grafia El-aghouat.",
+				"Le forze francesi conquistarono Laghouat il 4 dicembre 1852 dopo un assedio.",
+				"Il museo municipale di Laghouat occupa un’ex chiesa nella città storica."
+			],
+			"de": [
+				"In älteren Reiseberichten erscheint Laghouat auch unter der Schreibweise El-aghouat.",
+				"Französische Truppen eroberten Laghouat nach einer Belagerung am 4. Dezember 1852.",
+				"Das Stadtmuseum von Laghouat befindet sich in einer ehemaligen Kirche in der historischen Stadt."
+			]
 		}
 	},
 	"el-oued": {
@@ -760,6 +1237,23 @@
 				"El Oued bedeutet auf Arabisch „das Tal“ (wadi).",
 				"Es heißt die Stadt der tausend Kuppeln, nach den Kuppeldächern seiner sandfarbenen Häuser.",
 				"Es liegt in der Region Souf im Großen Östlichen Erg, einem Dünenmeer, in dem Dattelpalmen in Gruben wachsen."
+			]
+		},
+		"city": {
+			"en": [
+				"El Oued takes its name from the Arabic word for a river or watercourse.",
+				"El Oued’s traditional domed roofs gave the town its nickname, the City of a Thousand Domes.",
+				"El Oued’s old El Acheche-Massaâba quarter became a legally protected heritage sector in 2011."
+			],
+			"it": [
+				"El Oued prende il nome dalla parola araba che indica un fiume o corso d’acqua.",
+				"I tradizionali tetti a cupola di El Oued valsero alla città il soprannome di città delle mille cupole.",
+				"L’antico quartiere El Acheche-Massaâba di El Oued divenne un settore tutelato per legge nel 2011."
+			],
+			"de": [
+				"El Oued ist nach dem arabischen Wort für einen Fluss oder Wasserlauf benannt.",
+				"Die traditionellen Kuppeldächer von El Oued brachten der Stadt den Beinamen Stadt der tausend Kuppeln ein.",
+				"Das alte Viertel El Acheche-Massaâba in El Oued wurde 2011 als geschützter Denkmalbereich ausgewiesen."
 			]
 		}
 	},
@@ -818,6 +1312,23 @@
 				"Das M’zab-Tal mit seinen fünf befestigten, ab dem 11. Jahrhundert erbauten Städten ist Welterbe.",
 				"Die dort lebenden Mozabiten gehören dem ibaditischen Zweig des Islam an und sprechen eine Berbersprache."
 			]
+		},
+		"city": {
+			"en": [
+				"Ghardaïa is also known by the Amazigh name Taghardaït.",
+				"Ghardaïa’s fortified old town was founded in 1048, according to the M’zab heritage preservation office.",
+				"Ghardaïa’s Great Mosque was the first building of the fortified settlement and occupies its highest point."
+			],
+			"it": [
+				"Ghardaïa è conosciuta anche con il nome amazigh Taghardaït.",
+				"La città antica fortificata di Ghardaïa fu fondata nel 1048, secondo l’ufficio per la tutela del patrimonio dello M’zab.",
+				"La Grande Moschea di Ghardaïa fu il primo edificio dell’insediamento fortificato e ne occupa il punto più alto."
+			],
+			"de": [
+				"Ghardaïa ist auch unter dem Amazigh-Namen Taghardaït bekannt.",
+				"Die befestigte Altstadt von Ghardaïa wurde laut dem Amt für die Erhaltung des M’zab-Erbes 1048 gegründet.",
+				"Die Große Moschee von Ghardaïa war das erste Gebäude der befestigten Siedlung und steht an deren höchstem Punkt."
+			]
 		}
 	},
 	"ouargla": {
@@ -837,6 +1348,23 @@
 				"Das 1956 entdeckte Ölfeld Hassi Messaoud ist eines der größten Afrikas.",
 				"Die Stadt ist eine Oase aus Palmenhainen in der nördlichen Sahara."
 			]
+		},
+		"city": {
+			"en": [
+				"Ouargla is known in its local Berber language as Wargren.",
+				"Ouargla’s old ksar is divided into the historic quarters of Beni Sissine, Beni Ouaguine and Beni Brahim.",
+				"Ouargla’s Saharan Museum displays archaeological objects and records of everyday life among Saharan communities."
+			],
+			"it": [
+				"Nella lingua berbera locale Ouargla è conosciuta come Wargren.",
+				"L’antico ksar di Ouargla è suddiviso nei quartieri storici di Beni Sissine, Beni Ouaguine e Beni Brahim.",
+				"Il Museo sahariano di Ouargla espone reperti archeologici e testimonianze della vita quotidiana delle comunità sahariane."
+			],
+			"de": [
+				"In der örtlichen Berbersprache ist Ouargla als Wargren bekannt.",
+				"Der alte Ksar von Ouargla gliedert sich in die historischen Viertel Beni Sissine, Beni Ouaguine und Beni Brahim.",
+				"Das Sahara-Museum von Ouargla zeigt archäologische Objekte und Zeugnisse des Alltagslebens saharischer Gemeinschaften."
+			]
 		}
 	},
 	"bechar": {
@@ -855,6 +1383,23 @@
 				"Die Franzosen nannten die Stadt bis 1962 Colomb-Béchar.",
 				"Taghit in der Provinz liegt neben den hohen Dünen des Großen Westlichen Erg.",
 				"Béchar ist ein Hauptort der südwestlichen Sahara, nahe der marokkanischen Grenze."
+			]
+		},
+		"city": {
+			"en": [
+				"Béchar was known as Colomb-Béchar during French colonial rule.",
+				"Béchar’s Ennasr stadium has hosted performances of the national Diwan music festival.",
+				"The ensemble Gaâda Diwane de Béchar combines mystical chants and Arab-Berber rhythms with blues influences."
+			],
+			"it": [
+				"Durante il dominio coloniale francese Béchar era conosciuta come Colomb-Béchar.",
+				"Lo stadio Ennasr di Béchar ha ospitato spettacoli del festival nazionale di musica diwan.",
+				"Il gruppo Gaâda Diwane de Béchar unisce canti mistici e ritmi arabo-berberi a influenze blues."
+			],
+			"de": [
+				"Während der französischen Kolonialherrschaft war Béchar als Colomb-Béchar bekannt.",
+				"Im Ennasr-Stadion von Béchar fanden Auftritte des nationalen Diwan-Musikfestivals statt.",
+				"Das Ensemble Gaâda Diwane de Béchar verbindet mystische Gesänge und arabisch-berberische Rhythmen mit Blues-Einflüssen."
 			]
 		}
 	},
@@ -931,6 +1476,184 @@
 				"Die Herkunft des Namens ist ungewiss; Tamanrasset ist ein Tuareg-Name.",
 				"Der Tahat, 2.908 m, der höchste Punkt Algeriens, erhebt sich im Hoggar-Gebirge.",
 				"Der Einsiedler Charles de Foucauld lebte im Hoggar und wurde 1916 getötet."
+			]
+		}
+	},
+	"_sources": {
+		"annaba:city": [
+			"https://www.directionlalgerie.com/actus/annaba-sidi-bou-boumerouane",
+			"https://visitalgeria.dz/en/destinations/annaba-hippo-regius",
+			"https://islamicart.museumwnf.org/database_item.php?id=monument%3BISL%3Bdz%3BMon01%3B19%3Bfr"
+		],
+		"skikda:city": [
+			"https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0006%3Aentry%3Drusicada",
+			"https://www.skikda.net/apercu-historique/",
+			"https://lematindalgerie.com/le-theatre-regional-de-skikda-entierement-rehabilite/"
+		],
+		"jijel:city": [
+			"https://journals.openedition.org/encyclopedieberbere/2193",
+			"https://islamicart.museumwnf.org/hcr_result.php?begin=45&country=dz&end_date=1900&start_date=400",
+			"https://www.imarabe.org/fr/magazine/eurekoi-repond-vos-questions-meme-ete",
+			"https://asjp.cerist.dz/en/article/949"
+		],
+		"bejaia:city": [
+			"https://journals.openedition.org/encyclopedieberbere/pdf/1507",
+			"https://mathshistory.st-andrews.ac.uk/Biographies/Fibonacci/"
+		],
+		"tizi-ouzou:city": [
+			"https://insaniyat.crasc.dz/en/article/tizi-ouzou-historique-dun-col-et-son-urbanisation",
+			"https://www.ummto.dz/wp-content/uploads/2025/10/Recueil-des-resumes-du-congres-CNMA-EES-2025-UMMO.pdf",
+			"https://dspace.ummto.dz/server/api/core/bitstreams/3d2b8903-00e0-49e5-99c1-a61b506bae6d/content"
+		],
+		"guelma:city": [
+			"https://wilaya-guelma.dz/fr/histoire-de-la-ville/",
+			"https://curate.nd.edu/articles/figure/Roman_ruins_at_Guelma_Overall_view_of_theater/24737529",
+			"https://guelma.mta.gov.dz/en/the-mahmoud-triki-regional-theatre/"
+		],
+		"blida:city": [
+			"https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Blida",
+			"https://islamicart.museumwnf.org/hcr_result.php?begin=45&country=dz&end_date=1900&start_date=400",
+			"https://naget.ictp.it/PUBLICATIONS/resources/Blida18250302.pdf"
+		],
+		"bouira:city": [
+			"https://bouira.mta.gov.dz/wp-content/uploads/sites/20/2022/01/Apercu-Historique-de-la-Wilaya-de-Bouira.pdf",
+			"https://cartes.patrimoineculturelalgerien.org/fr/lieu/10-bouira/440"
+		],
+		"constantine:city": [
+			"https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0006%3Aentry%3Dcirta",
+			"https://ont.dz/ar/news/fb-97a3b0ac3236cefe60dc4d61/"
+		],
+		"souk-ahras:city": [
+			"https://apnews.com/article/aaa23d7ec2ec6f280d7f8e6e2ee6a916",
+			"https://www.m-culture.gov.dz/index.php/fr/arts-vivants-et-spectacles/etablissements-sous-tutelletablissements-sous-tutelle/theatres-regionaux"
+		],
+		"medea:city": [
+			"https://alger-roi.fr/Alger/titteri/textes/9_titteri_medea.htm",
+			"https://www.m-culture.gov.dz/images/DCRPC/LBCP_PDF/26-Medea.pdf",
+			"https://www.m-culture.gov.dz/index.php/fr/diffusion-des-activites-culturelles/festivals/nationaux"
+		],
+		"setif:city": [
+			"https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0006%3Aentry%3Dsitifis",
+			"https://cartes.patrimoineculturelalgerien.org/fr/node/1450",
+			"https://www.persee.fr/doc/efr_0223-5099_2005_act_352_1_8270"
+		],
+		"chlef:city": [
+			"https://iris.uniss.it/retrieve/7a5e47da-4e38-4541-a0dc-37f9e34366af/Akerraz_A_Africa_romana_2006_3.pdf",
+			"https://www.imarabe.org/fr/magazine/eurekoi-repond-vos-questions-meme-ete",
+			"https://sacrecoeur-alger.org/mosaique_fr/"
+		],
+		"bordj-bou-arreridj:city": [
+			"https://www.univ-bba.dz/images/Relation%20exterieur/stud%20int/booklet%20.pdf",
+			"https://dspace.univ-bba.dz/bitstreams/13098215-7cae-496b-b47e-a09effe2c0cd/download",
+			"https://www.m-culture.gov.dz/images/DCRPC/LBCP_PDF/34-Bordj-Bou-Arrridj.pdf"
+		],
+		"mostaganem:city": [
+			"https://e-biblio.univ-mosta.dz/server/api/core/bitstreams/a10bfb4e-399f-4eb3-a3d8-6efea74085fd/content",
+			"https://wilaya-mostaganem.dz/histoire/",
+			"https://islamansiklopedisi.org.tr/musteganim",
+			"https://www.m-culture.gov.dz/index.php/fr/diffusion-des-activites-culturelles/festivals/nationaux"
+		],
+		"oum-el-bouaghi:city": [
+			"https://www.univ-oeb.dz/webtv/wp-content/uploads/2022/02/Livre-janvier-2022.pdf",
+			"https://www.univ-oeb.dz/siteweb/en/presentation-of-university/"
+		],
+		"oran:city": [
+			"https://islamansiklopedisi.org.tr/vehran",
+			"https://ich.unesco.org/en/d%C3%A9cisions/17.COM/7.B.38",
+			"https://m-culture.gov.dz/images/2022/buletin/francais/1-2022-fr.pdf"
+		],
+		"m-sila:city": [
+			"https://cartes.patrimoineculturelalgerien.org/fr/lieu/28-msila/1503",
+			"https://www.alger-roi.fr/Alger/m_sila/textes/2_m_sila_1900_algerianiste_141_mars_2013.htm"
+		],
+		"batna:city": [
+			"https://dspace.univ-batna.dz/bitstreams/2cb21d76-ebc3-48bc-8e25-299d4f6aadf4/download",
+			"https://dspace.cu-barika.dz/jspui/handle/123456789/736",
+			"https://m-culture.gov.dz/index.php/fr/th%C3%A9%C3%A2tre"
+		],
+		"tebessa:city": [
+			"https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0006%3Aentry%3Dthevestis",
+			"https://m-culture.gov.dz/index.php/fr/liste-des-musee-de-site-23"
+		],
+		"mascara:city": [
+			"https://asjp.cerist.dz/en/downArticle/144/9/1/55008",
+			"https://www.m-culture.gov.dz/images/DCRPC/LBCP_PDF/29-Mascara.pdf"
+		],
+		"tiaret:city": [
+			"https://islamansiklopedisi.org.tr/tahert",
+			"https://tiaret.mta.gov.dz/fr/centre-delevage-de-chevaux-a-chaoucha/",
+			"https://m-culture.gov.dz/index.php/fr/liste-des-biens-culturels"
+		],
+		"sidi-bel-abbes:city": [
+			"https://dspace.univ-temouchent.edu.dz/server/api/core/bitstreams/69e8044b-29cd-4558-b581-e782b2c2fa86/content",
+			"https://www.legion-etrangere.com/mdl_media/doc/1/DP-14-juillet-A4-web.pdf",
+			"https://www.persee.fr/doc/remmm_0997-1327_1994_num_73_1_1679?pageId=T1_230"
+		],
+		"tlemcen:city": [
+			"https://cinumedpub.mmsh.fr/RevueAfricaine/Pdf/1913_288_003.pdf",
+			"https://www.office-tourisme-tlemcen.dz/monuments.html",
+			"https://www.qantara-med.org/public/show_document.php?do_id=462&lang=fr"
+		],
+		"biskra:city": [
+			"https://www.persee.fr/doc/medit_0025-8296_2002_num_99_3_3264?pageId=T1_79",
+			"https://www.image-est.fr/fiche-documentaire-jardin-landon-beskra-1284-24452-2-0.html",
+			"https://www.dhi.ac.uk/gide-les-caves-du-vatican/data/sommaire/genesis-1.htm"
+		],
+		"saida:city": [
+			"https://www.univ-oran2.dz/images/these_memoires/FSTU/Doctorat/TDSTU-2/THESE_BELOUADI.pdf",
+			"https://officetourisme-saida.dz/OTS/fr/saida-baaida/origine-de-lappellation",
+			"https://officetourisme-saida.dz/OTS/fr/patrimoine-et-culture/sites-et-monuments-historiques/monuments-historiques",
+			"https://officetourisme-saida.dz/OTS/fr/home-fr-fr/mot-du-president"
+		],
+		"djelfa:city": [
+			"https://djelfa.mta.gov.dz/wp-content/uploads/sites/26/2022/02/SDAT-Djelfa-Phase-02.pdf",
+			"https://argel.cervantes.es/es/biblioteca_espanol/biblioteca_espanol.htm",
+			"https://cvc.cervantes.es/literatura/escritores/max_aub/exposicion/expo_3_03.htm"
+		],
+		"laghouat:city": [
+			"https://readingroo.ms/7/0/2/8/70287/70287-h/70287-h.htm",
+			"https://www.nature.com/articles/s40494-024-01272-8",
+			"https://cartes.patrimoineculturelalgerien.org/ar/lieu/03-laghouat/376"
+		],
+		"el-oued:city": [
+			"https://esas-eloued.dz/wp-content/uploads/2024/01/esas-39-handbook.pdf",
+			"https://maximilien-bruggmann.ch/fr/PhotoSearchDetail/?id=2942&kw=El+Oued&name=SAH-103",
+			"https://www.m-culture.gov.dz/images/DCRPC/LBCP_PDF/39-El-Oued.pdf"
+		],
+		"touggourt:city": [
+			"https://cinumedpub.mmsh.fr/RevueAfricaine/Pdf/1880-142_002.pdf",
+			"https://dspace.epau.edu.dz/bitstreams/e4fd5cf4-9b0d-4c22-b003-832ea04f4a63/download"
+		],
+		"ghardaia:city": [
+			"https://www.opvm.dz/en/10_Articles/15_THE_CONSERVED_AREA/83_THE_KSAR_OF_GHARDA%C3%8FA/i"
+		],
+		"ouargla:city": [
+			"https://www.centrederechercheberbere.fr/bibliographie-berbere-generale.html?bb_biblio_recherche=OUARGLA",
+			"https://di.univ-blida.dz/jspui/bitstream/123456789/14217/1/4.720.1639.pdf",
+			"https://collections.musees.strasbourg.eu/en/document/le-musee-saharien-a-ouargla/66719041f885d74b1ac1004a?auteur%5B0%5D=Roger+Jouanneau-Irriera+%281884-1957%29&pos=10&v=list"
+		],
+		"bechar:city": [
+			"https://www.persee.fr/doc/medit_0025-8296_1962_num_3_1_1026",
+			"https://radioalgerie.dz/news/fr/node/43645",
+			"https://africultures.com/evenements/?no=11964"
+		]
+	},
+	"touggourt": {
+		"city": {
+			"en": [
+				"Touggourt appears under the spelling Tougourt in nineteenth-century historical studies of its sultans.",
+				"Touggourt’s Great Mosque was completed in 1805 under Sultan Ibrahim Ben Djellab, according to its commemorative inscription.",
+				"The tombs of the Ben Djellab rulers preserve the memory of Touggourt’s former sultanate."
+			],
+			"it": [
+				"Touggourt compare con la grafia Tougourt negli studi ottocenteschi sulla storia dei suoi sultani.",
+				"La Grande Moschea di Touggourt fu completata nel 1805 sotto il sultano Ibrahim Ben Djellab, secondo l’iscrizione commemorativa.",
+				"Le tombe dei sovrani Ben Djellab conservano la memoria dell’antico sultanato di Touggourt."
+			],
+			"de": [
+				"In historischen Studien des 19. Jahrhunderts über seine Sultane erscheint Touggourt unter der Schreibweise Tougourt.",
+				"Die Große Moschee von Touggourt wurde laut ihrer Gedenkinschrift 1805 unter Sultan Ibrahim Ben Djellab vollendet.",
+				"Die Gräber der Ben-Djellab-Herrscher erinnern an das ehemalige Sultanat von Touggourt."
 			]
 		}
 	}

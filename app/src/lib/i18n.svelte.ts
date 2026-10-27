@@ -41,7 +41,6 @@ export type TranslationKey =
 	| 'about.sourceLink'
 	| 'about.releasesLink'
 	| 'about.manual'
-	| 'manual.englishOnly'
 	| 'manual.loadFailed'
 	| 'home.viewLabel'
 	| 'home.viewMap'
@@ -235,7 +234,6 @@ const en: Dictionary = {
 	'about.sourceLink': 'Source code',
 	'about.releasesLink': 'Releases',
 	'about.manual': 'User manual',
-	'manual.englishOnly': 'The manual is only in English for now.',
 	'manual.loadFailed': 'The manual could not be loaded.',
 	'home.viewLabel': 'Show the maps as',
 	'home.viewMap': 'Map',
@@ -446,7 +444,6 @@ const de: Dictionary = {
 	'about.sourceLink': 'Quellcode',
 	'about.releasesLink': 'Veröffentlichungen',
 	'about.manual': 'Handbuch',
-	'manual.englishOnly': 'Das Handbuch gibt es vorerst nur auf Englisch.',
 	'manual.loadFailed': 'Das Handbuch konnte nicht geladen werden.',
 	'home.viewLabel': 'Karten zeigen als',
 	'home.viewMap': 'Karte',
@@ -661,7 +658,6 @@ const it: Dictionary = {
 	'about.sourceLink': 'Codice sorgente',
 	'about.releasesLink': 'Versioni',
 	'about.manual': 'Manuale',
-	'manual.englishOnly': 'Per ora il manuale è solo in inglese.',
 	'manual.loadFailed': 'Impossibile caricare il manuale.',
 	'home.viewLabel': 'Mostra le mappe come',
 	'home.viewMap': 'Mappa',

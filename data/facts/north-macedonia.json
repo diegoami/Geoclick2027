@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for North Macedonia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"skopje": {
 		"city": {
@@ -26,14 +27,28 @@
 	"tetovo": {
 		"city": {
 			"en": [
-				"Its Painted Mosque, of the 15th century, is covered inside and out with painted decoration."
+				"Tetovo was known as Kalkandelen during Ottoman rule.",
+				"Tetovo’s Painted Mosque has fifteenth-century origins, while its elaborate interior and exterior paintings date from Abdurrahman Pasha’s rebuilding in 1833–1834.",
+				"Tetovo’s Arabati Baba Tekke is a historic religious complex built for Bektashi Sufi dervishes."
 			],
 			"it": [
-				"La sua Moschea dipinta, del XV secolo, è decorata dentro e fuori con pitture."
+				"Tetovo era conosciuta come Kalkandelen durante il dominio ottomano.",
+				"La Moschea dipinta di Tetovo ha origini quattrocentesche, mentre le elaborate pitture interne ed esterne risalgono alla ricostruzione di Abdurrahman Pascià nel 1833–1834.",
+				"L’Arabati Baba Tekke di Tetovo è uno storico complesso religioso costruito per i dervisci sufi bektashi."
 			],
 			"de": [
-				"Ihre Bunte Moschee aus dem 15. Jahrhundert ist innen und außen mit bemaltem Dekor bedeckt."
+				"Tetovo war während der osmanischen Herrschaft als Kalkandelen bekannt.",
+				"Tetovos Bunte Moschee hat Ursprünge im 15. Jahrhundert, während ihre aufwendigen Innen- und Außenmalereien auf Abdurrahman Paschas Neubau von 1833–1834 zurückgehen.",
+				"Tetovos Arabati-Baba-Tekke ist ein historischer religiöser Komplex, der für Bektaschi-Sufi-Derwische errichtet wurde."
 			]
 		}
+	},
+	"_sources": {
+		"tetovo:city": [
+			"https://dergipark.org.tr/tr/pub/rumeli/article/662238",
+			"https://old.tetova.gov.mk/getartm.aspx?aid=326&lan=3&men=17&sub=111",
+			"https://uzkn.gov.mk/mk/wp-content/uploads/2023/02/Painted-mosque-Tetovo.pdf",
+			"https://tetovo.gov.mk/visit_arabati"
+		]
 	}
 }

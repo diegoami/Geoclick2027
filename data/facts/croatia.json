@@ -3,7 +3,8 @@
 		"Name-facts for Croatia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"FT-73 added the twenty counties and the City of Zagreb, each as a \"region\" entry. Most counties are named for a town and a historic land; the Italian uses the Italian names of the Adriatic towns where Italians use them (Pola, Parenzo, Zara, Sebenico)."
+		"FT-73 added the twenty counties and the City of Zagreb, each as a \"region\" entry. Most counties are named for a town and a historic land; the Italian uses the Italian names of the Adriatic towns where Italians use them (Pola, Parenzo, Zara, Sebenico).",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"bjelovarsko-bilogorska": {
 		"region": {
@@ -369,16 +370,19 @@
 	"viroviticko-podravska": {
 		"region": {
 			"en": [
-				"Named for Virovitica and for Podravina, \"the land along the Drava\".",
-				"Ružica grad, above Orahovica, is one of the largest medieval castles in Slavonia."
+				"Virovitičko-podravska County is named after Virovitica and Podravina, the historical region along the Drava.",
+				"Ružica grad in Virovitičko-podravska County was recorded as royal property in 1357.",
+				"Virovitica’s Pejačević Palace, built in 1800–1804, houses the city museum."
 			],
 			"it": [
-				"Prende il nome da Virovitica e dalla Podravina, \"la terra lungo la Drava\".",
-				"Ružica grad, sopra Orahovica, è uno dei più grandi castelli medievali della Slavonia."
+				"La contea Virovitičko-podravska prende il nome da Virovitica e dalla Podravina, il territorio storico lungo la Drava.",
+				"Ružica grad, nella contea Virovitičko-podravska, fu registrata come proprietà reale nel 1357.",
+				"Il palazzo Pejačević di Virovitica, costruito nel 1800–1804, ospita il museo cittadino."
 			],
 			"de": [
-				"Nach Virovitica und nach der Podravina benannt, „dem Land an der Drau“.",
-				"Ružica grad über Orahovica ist eine der größten mittelalterlichen Burgen Slawoniens."
+				"Die Gespanschaft Virovitica-Podravina ist nach Virovitica und der historischen Region Podravina an der Drau benannt.",
+				"Ružica grad in der Gespanschaft Virovitica-Podravina wurde 1357 als königlicher Besitz erwähnt.",
+				"Das 1800–1804 erbaute Pejačević-Schloss in Virovitica beherbergt das Stadtmuseum."
 			]
 		}
 	},
@@ -455,6 +459,186 @@
 				"Nach Zagreb benannt, obwohl die Stadt selbst eine Gespanschaft für sich ist und nicht zu ihr gehört.",
 				"Samobor ist in ganz Kroatien für seine Cremeschnitte bekannt, die kremšnita.",
 				"Das Turopolje-Schwein, eine seltene gefleckte Rasse, die auf Eichenwaldweiden gehalten wird, ist nach der hiesigen Turopolje-Ebene benannt."
+			]
+		}
+	},
+	"_sources": {
+		"viroviticko-podravska:region": [
+			"https://www.enciklopedija.hr/clanak/podravina",
+			"https://enciklopedija.hr/clanak/virovitica",
+			"https://www.tzgorahovica.hr/2022/01/ruzica-grad/",
+			"https://www.vpz.hr/2020/04/sibale-su-je-oluje-snijeg-i-vjetrovi-grijalo-ju-je-sunce-rusili-tirani-no-ona-jos-uvijek-stoji-promatrajuci-ponosnu-slavonsku-ravnicu-ovo-je-ruzica-grad-jedan-od-najvecih-utvrdenih-gradova-u-hrva/"
+		],
+		"osijek:city": [
+			"https://whc.unesco.org/en/tentativelists/161/",
+			"https://www.unios.hr/wp-content/uploads/2024/01/UNIOS-Erasmus-Student-Guide-2024.pdf",
+			"https://www.interreg-central.eu/wp-content/uploads/2025/10/VOL.6_D1.2.1-Preparatory-phase.pdf"
+		],
+		"karlovac:city": [
+			"https://arhiva.karlovac.hr/UserDocsImages/2017/dokumenti/Brosura%20Karlovac-EN-2017_DP_2111.pdf",
+			"https://visitkarlovac.hr/en/the-karlovac-of-yore/",
+			"https://www.visitkarlovaccounty.hr/en/details/the-story-of-beer%2C111.html"
+		],
+		"slavonski-brod:city": [
+			"https://enciklopedija.hr/clanak/slavonski-brod",
+			"https://www.tzgsb.hr/index.php?lang=en&page=tvrdjava_brod",
+			"https://tzbpz.hr/otvorena-kuca-brlic-dom-slavne-spisateljice-ivane-brlic-mazuranic/",
+			"https://www.tzgsb.hr/index.php?lang=en&page=kuca_brlicevih"
+		],
+		"pula:city": [
+			"https://www.arenapula.hr/en/",
+			"https://pulainfo.hr/hr/where/james-joyce/",
+			"https://istra.lzmk.hr/clanak/joyce-james-augustin-aloysius"
+		],
+		"zadar:city": [
+			"https://enciklopedija.hr/clanak/zadar",
+			"https://www.zadar.hr/en/experience/explore/music-in-zadar",
+			"https://www.publicspace.org/works/-/project/d078-morske-orgulje",
+			"https://zadar.travel/attractions/attractions/organo-marino"
+		],
+		"sibenik:city": [
+			"https://www.sibenik.hr/stranice/960-obljetnica-prvog-spomena-grada-sibenika/270.html",
+			"https://whc.unesco.org/en/list/963",
+			"https://tvrdjava-kulture.hr/en/st-michaels-fortress/history/"
+		],
+		"dubrovnik:city": [
+			"https://www.hrz.hr/en/spotlight/news-and-events/state-archives-in-dubrovnik-documents-from-the-republic-of-ragusa/",
+			"https://dergipark.org.tr/en/download/issue-full-file/73618",
+			"https://wwwnc.cdc.gov/eid/article/8/1/AC-0801_article",
+			"https://arhiv.jas-center.eu/index.php/acta-gallica-french-administration",
+			"https://hrcak.srce.hr/file/61247"
+		]
+	},
+	"osijek": {
+		"city": {
+			"en": [
+				"The Roman city of Mursa stood in the area of present-day Osijek.",
+				"Osijek’s Baroque Tvrđa district grew around a Habsburg fortress built in the early eighteenth century.",
+				"The Holy Trinity column in Osijek’s Tvrđa was erected in 1729 as a plague monument."
+			],
+			"it": [
+				"La città romana di Mursa sorgeva nell’area dell’odierna Osijek.",
+				"Il quartiere barocco Tvrđa di Osijek si sviluppò intorno a una fortezza asburgica costruita all’inizio del Settecento.",
+				"La colonna della Santissima Trinità nella Tvrđa di Osijek fu eretta nel 1729 come monumento legato alla peste."
+			],
+			"de": [
+				"Die römische Stadt Mursa lag im Gebiet des heutigen Osijek.",
+				"Osijeks barockes Viertel Tvrđa entstand um eine Anfang des 18. Jahrhunderts erbaute Habsburgerfestung.",
+				"Die Dreifaltigkeitssäule in Osijeks Tvrđa wurde 1729 als Pestsäule errichtet."
+			]
+		}
+	},
+	"karlovac": {
+		"city": {
+			"en": [
+				"Karlovac is named after the Habsburg archduke Charles II.",
+				"Karlovac’s original fortress was laid out as a six-pointed star beginning in 1579.",
+				"Karlovac’s brewery tradition includes the brewery established by Nikola Vranyczany in 1854."
+			],
+			"it": [
+				"Karlovac prende il nome dall’arciduca asburgico Carlo II.",
+				"La fortezza originaria di Karlovac fu progettata come una stella a sei punte a partire dal 1579.",
+				"La tradizione birraria di Karlovac comprende il birrificio fondato da Nikola Vranyczany nel 1854."
+			],
+			"de": [
+				"Karlovac ist nach dem Habsburger Erzherzog Karl II. benannt.",
+				"Die ursprüngliche Festung von Karlovac wurde ab 1579 als sechszackiger Stern angelegt.",
+				"Zu Karlovacs Brautradition gehört die 1854 von Nikola Vranyczany gegründete Brauerei."
+			]
+		}
+	},
+	"slavonski-brod": {
+		"city": {
+			"en": [
+				"Slavonski Brod occupies the area of the Roman settlement Marsonia.",
+				"Slavonski Brod’s fortress was built in stages from 1715 to 1780 as part of the Habsburg defensive system.",
+				"Ivana Brlić-Mažuranić moved into Slavonski Brod’s Brlić House in 1892 and later wrote her children’s stories there."
+			],
+			"it": [
+				"Slavonski Brod occupa l’area dell’insediamento romano di Marsonia.",
+				"La fortezza di Slavonski Brod fu costruita per fasi dal 1715 al 1780 come parte del sistema difensivo asburgico.",
+				"Ivana Brlić-Mažuranić si trasferì nella casa Brlić di Slavonski Brod nel 1892 e in seguito vi scrisse i suoi racconti per bambini."
+			],
+			"de": [
+				"Slavonski Brod liegt im Gebiet der römischen Siedlung Marsonia.",
+				"Die Festung von Slavonski Brod wurde 1715–1780 in mehreren Phasen als Teil des habsburgischen Verteidigungssystems erbaut.",
+				"Ivana Brlić-Mažuranić zog 1892 in das Brlić-Haus in Slavonski Brod und schrieb dort später ihre Kindergeschichten."
+			]
+		}
+	},
+	"pula": {
+		"city": {
+			"en": [
+				"Pula was known in Roman times as Colonia Pietas Iulia Pola.",
+				"Pula’s Arena amphitheatre was built in the first century AD.",
+				"James Joyce taught English at Pula’s Berlitz School in 1904–1905."
+			],
+			"it": [
+				"In epoca romana Pula era conosciuta come Colonia Pietas Iulia Pola.",
+				"L’anfiteatro Arena di Pula fu costruito nel I secolo d.C.",
+				"James Joyce insegnò inglese alla scuola Berlitz di Pula nel 1904–1905."
+			],
+			"de": [
+				"In römischer Zeit war Pula als Colonia Pietas Iulia Pola bekannt.",
+				"Das Amphitheater Arena in Pula wurde im 1. Jahrhundert n. Chr. erbaut.",
+				"James Joyce unterrichtete 1904–1905 Englisch an der Berlitz-Schule in Pula."
+			]
+		}
+	},
+	"zadar": {
+		"city": {
+			"en": [
+				"Zadar was known in Roman times as Iader.",
+				"Zadar’s circular Church of Saint Donatus dates from the ninth century.",
+				"Zadar’s Sea Organ, completed in 2005, turns wave movement into music through pipes beneath the waterfront steps."
+			],
+			"it": [
+				"In epoca romana Zadar era conosciuta come Iader.",
+				"La chiesa circolare di San Donato di Zadar risale al IX secolo.",
+				"L’Organo marino di Zadar, completato nel 2005, trasforma il movimento delle onde in musica attraverso tubi sotto i gradini del lungomare."
+			],
+			"de": [
+				"In römischer Zeit war Zadar als Iader bekannt.",
+				"Die runde Donatuskirche in Zadar stammt aus dem 9. Jahrhundert.",
+				"Zadars 2005 fertiggestellte Meeresorgel verwandelt Wellenbewegungen durch Rohre unter den Uferstufen in Musik."
+			]
+		}
+	},
+	"sibenik": {
+		"city": {
+			"en": [
+				"Šibenik’s name is recorded in a charter issued by King Petar Krešimir IV in 1066.",
+				"Šibenik’s Cathedral of Saint James was built entirely of stone during the fifteenth and sixteenth centuries.",
+				"Šibenik’s Saint Michael’s Fortress reopened in 2014 with an open-air stage for cultural and musical events."
+			],
+			"it": [
+				"Il nome Šibenik è attestato in una carta emanata dal re Petar Krešimir IV nel 1066.",
+				"La cattedrale di San Giacomo di Šibenik fu costruita interamente in pietra nel Quattrocento e nel Cinquecento.",
+				"La fortezza di San Michele di Šibenik riaprì nel 2014 con un palcoscenico all’aperto per eventi culturali e musicali."
+			],
+			"de": [
+				"Šibeniks Name ist in einer 1066 von König Petar Krešimir IV. ausgestellten Urkunde belegt.",
+				"Šibeniks Kathedrale des heiligen Jakob wurde im 15. und 16. Jahrhundert vollständig aus Stein erbaut.",
+				"Die Michaelsfestung in Šibenik wurde 2014 mit einer Freilichtbühne für Kultur- und Musikveranstaltungen wiedereröffnet."
+			]
+		}
+	},
+	"dubrovnik": {
+		"city": {
+			"en": [
+				"Dubrovnik was long known internationally as Ragusa.",
+				"Dubrovnik’s Great Council introduced quarantine rules in 1377 to protect the city from plague while maintaining trade.",
+				"French authorities abolished the Republic of Dubrovnik in 1808."
+			],
+			"it": [
+				"Dubrovnik fu a lungo conosciuta internazionalmente come Ragusa.",
+				"Il Maggior Consiglio di Dubrovnik introdusse norme di quarantena nel 1377 per proteggere la città dalla peste mantenendo i commerci.",
+				"Le autorità francesi abolirono la Repubblica di Dubrovnik nel 1808."
+			],
+			"de": [
+				"Dubrovnik war international lange als Ragusa bekannt.",
+				"Dubrovniks Großer Rat führte 1377 Quarantäneregeln ein, um die Stadt vor der Pest zu schützen und den Handel aufrechtzuerhalten.",
+				"Die französischen Behörden schafften die Republik Dubrovnik 1808 ab."
 			]
 		}
 	}

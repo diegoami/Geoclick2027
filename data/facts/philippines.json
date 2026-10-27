@@ -3,7 +3,8 @@
 		"Name-facts for Philippines (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the 17 regions, each as a \"region\" entry (en, it, de)."
+		"v0.19 added the 17 regions, each as a \"region\" entry (en, it, de).",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"manila": {
 		"city": {
@@ -344,6 +345,2777 @@
 				"Kurzform für die Autonome Region Bangsamoro im muslimischen Mindanao; Bangsamoro bedeutet „Moro-Nation“.",
 				"Sie wurde 2019 nach einer Abstimmung geschaffen und löste die ältere Autonome Region im muslimischen Mindanao ab.",
 				"Tawi-Tawi, die Inselkette nahe Borneo, ist die südlichste Provinz der Philippinen."
+			]
+		}
+	},
+	"_sources": {
+		"batanes:region": [
+			"https://en.wikipedia.org/wiki/Batanes",
+			"https://whc.unesco.org/document/8815"
+		],
+		"cagayan:region": [
+			"https://cagayan.gov.ph/history/",
+			"https://www.nature.com/articles/s41586-019-1067-9"
+		],
+		"ilocos-norte:region": [
+			"https://museoilocosnorte.com/the-museum/collection/historical-glimpse-of-ilocos-norte/",
+			"https://whc.unesco.org/en/list/677"
+		],
+		"apayao:region": [
+			"https://philsacra.ust.edu.ph/admin/downloadarticle?id=080799795F8699BF345D0191BAA72E17",
+			"https://elibrary.judiciary.gov.ph//thebookshelf//showdocs/2/2825",
+			"https://articles.unesco.org/sites/default/files/medias/fichiers/2024/07/PR_UNESCO_designates_11_new_biosphere_reserves_en.pdf"
+		],
+		"abra:region": [
+			"https://en.wikipedia.org/wiki/List_of_provincial_name_etymologies_of_the_Philippines",
+			"https://car.dilg.gov.ph/wp-content/uploads/2024/02/DILG-CAR-LFPs-Coffee-Table-Book-2019-C.pdf",
+			"https://ncca.gov.ph/about-culture-and-arts/in-focus/the-restoration-of-26-philippine-churches/"
+		],
+		"kalinga:region": [
+			"https://ncca.gov.ph/about-ncca-3/subcommissions/subcommission-on-cultural-communities-and-traditional-arts-sccta/northern-cultural-communities/the-kalinga/",
+			"https://pna.gov.ph/article/kalinga-tribes-restore-bodong-end-decades-long-conflict",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/heneral-emilio-aguinaldo-lubuagan-kalinga/"
+		],
+		"ilocos-sur:region": [
+			"https://museoilocosnorte.com/the-museum/collection/historical-glimpse-of-ilocos-norte/",
+			"https://repository.mainlib.upd.edu.ph/omekas/files/original/74367af9228fda8fbef1d25165354a98b1ef0db9.pdf",
+			"https://whc.unesco.org/en/list/502/",
+			"https://whc.unesco.org/en/list/677"
+		],
+		"mountain-province:region": [
+			"https://mountainprovince.gov.ph/geography/",
+			"https://umali-kayo.sagada.gov.ph/",
+			"https://mountainprovince.gov.ph/press-release/lang-ay-festival-2015-launched/"
+		],
+		"isabela:region": [
+			"https://provinceofisabela.ph/images/2018/History_of_Isabela/2-Governors%20of%20Isabela.pdf",
+			"https://ncca.gov.ph/about-culture-and-arts/in-focus/the-restoration-of-26-philippine-churches/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/marinduque-revolutionary-force/"
+		],
+		"ifugao:region": [
+			"https://ncca.gov.ph/about-ncca-3/subcommissions/subcommission-on-cultural-communities-and-traditional-arts-sccta/northern-cultural-communities/ifugao-in-a-nutshell/",
+			"https://whc.unesco.org/en/list/722",
+			"https://ich.unesco.org/en/lists?RL=00015"
+		],
+		"la-union:region": [
+			"https://launion.gov.ph/la-union-seal/",
+			"https://launion.gov.ph/wp-content/uploads/2023/03/ELA%202023-2025.pdf",
+			"https://launion.gov.ph/la-union-circuits/northern-circuit/north-circuit-bangar-la-union/",
+			"https://launion.gov.ph/municipality-of-naguilian/"
+		],
+		"benguet:region": [
+			"https://latrinidad.gov.ph/wp-content/uploads/2015/09/History-2016.pdf",
+			"https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/kabayan-burial-caves/",
+			"https://bsu.edu.ph/wp-content/uploads/shamag/2023/September-2023.pdf"
+		],
+		"quirino:region": [
+			"https://r2invest.rdc2.gov.ph/?page_id=1868",
+			"https://issuances-library.senate.gov.ph/legislative-issuance/republic-act-no-6394",
+			"https://diffunquirino.gov.ph/tourism/"
+		],
+		"nueva-vizcaya:region": [
+			"https://nuevavizcaya.gov.ph/historical-background/",
+			"https://r2invest.rdc2.gov.ph/?page_id=1926",
+			"https://www.nationalmuseum.gov.ph/wp-content/uploads/2021/07/6.-FY-2017-Annual-Report-Final.pdf"
+		],
+		"pangasinan:region": [
+			"https://www.pangasinan.gov.ph/the-province/history/",
+			"https://www.history.navy.mil/about-us/leadership/director/directors-corner/h-grams/h-gram-040/h-040-3.html"
+		],
+		"aurora:region": [
+			"https://auroraprovince.gov.ph/history-of-aurora/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/siege-of-the-church-of-baler/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/birthplace-of-manuel-luis-quezon/"
+		],
+		"nueva-ecija:region": [
+			"https://www.bswm.da.gov.ph/wp-content/uploads/Nueva-Ecija.pdf",
+			"https://ldr.senate.gov.ph/legislative-issuance/republic-act-no-5100",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/memorare-raid-of-cabanatuan/"
+		],
+		"tarlac:region": [
+			"https://www.tsu.edu.ph/media/cj3lqpcw/may-2023-final.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/capas-concentration-camp-national-shrine/"
+		],
+		"zambales:region": [
+			"https://region3.dilg.gov.ph/zambales/index.php/20-about/who-we-are/1-who-we-are",
+			"https://www.nationalmuseum.gov.ph/wp-content/uploads/2021/07/6.-FY-2017-Annual-Report-Final.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/ramon-magsaysay-1907-1957-2/"
+		],
+		"pampanga:region": [
+			"https://pssc.org.ph/wp-content/pssc-archives/Historical%20Bulletin/PHA%20HB%202015.pdf",
+			"https://dbmp.philrice.gov.ph/soils/province/Pampanga",
+			"https://egallery.nrcp.dost.gov.ph/cluster/preserving-faith-and-culture-through-science-a-transdisciplinary-sdg-driven-and-ethical-assessment-of-religious-artifacts-in-betis-church-pampanga/",
+			"https://www.bacolorpampanga.gov.ph/tourism/"
+		],
+		"bulacan:region": [
+			"https://sep.bulacan.gov.ph/history.php",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-barasoain/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/biak-na-bato/"
+		],
+		"ncr-third-district:region": [
+			"https://psa.gov.ph/system/files/main-publication/13_NCR%2520-%2520Third%2520District.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/bonifacio-national-monument/",
+			"https://valenzuela.gov.ph/history/"
+		],
+		"bataan:region": [
+			"https://bataan.gov.ph/wp-content/uploads/2021/10/Bataan-Socio-Economic-Profile-2021.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/the-death-march-of-filipino-and-american-prisoners-of-war-from-mariveles-and-bagac-to-camp-odonnell-capas-tarlac-april-1942/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/tomas-pinpin-2/"
+		],
+		"ncr-second-district:region": [
+			"https://rssoncr.psa.gov.ph/sites/default/files/vital%20stat_NCR_2009.pdf",
+			"https://www.marikina.gov.ph/our-city",
+			"https://quezoncity.gov.ph/place/quezon-memorial-shrine-museo-ni-manuel-quezon/"
+		],
+		"ncr-city-of-manila-first-district:region": [
+			"https://psa.gov.ph/system/files/main-publication/2022%2520NDHS%2520Final%2520Report.pdf",
+			"https://psa.gov.ph/classification/psgc/cities/1300000000",
+			"https://whc.unesco.org/en/list/677",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/rizals-execution-site/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/jose-rizal-1861-1896-8/"
+		],
+		"rizal:region": [
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/jose-rizal-1861-1896-8/",
+			"https://www.nationalmuseum.gov.ph/wp-content/uploads/2021/09/pbd-a_compressed.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-morong/"
+		],
+		"ncr-fourth-district:region": [
+			"https://rssoncr.psa.gov.ph/sites/default/files/vital%20stat_NCR_2009.pdf",
+			"https://laspinascity.gov.ph/lifestyle/18/index",
+			"https://cms-bmco.dmtlph.com/destination/national-capital-region/pateros/"
+		],
+		"laguna:region": [
+			"https://en.wikipedia.org/wiki/Laguna_(province)",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/jose-rizal-1861-1896-9/",
+			"https://www.paete.org/literary/PaeteMemorabilia.pdf"
+		],
+		"cavite:region": [
+			"https://cavite.gov.ph/home/wp-content/uploads/2017/02/7.-Chapter1General-Information.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/emilio-aguinaldo-y-famy-1869-1964-kawit/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/labanan-sa-zapote/"
+		],
+		"quezon:region": [
+			"https://quezon.gov.ph/wp-content/uploads/2026/04/Citizens-Charter-2026-1st-Edition.pdf",
+			"https://artstudiesjournal.upd.edu.ph/wp-content/uploads/2022/12/VOL1_ISS1_ARTICLE-5_PUNONGBAYAN-TAN-PEARL_THE-PAHIYAS-IN-LUCBAN.pdf",
+			"https://nhcphistoricsites.blogspot.com/2011/10/tulay-ng-malagonlong.html"
+		],
+		"camarines-norte:region": [
+			"https://psa.gov.ph/system/files/main-publication/Camarines%2520Norte_0.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/first-rizal-monument-in-the-philippines/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/jose-ma-panganiban-y-enverga-1863-1890-2/"
+		],
+		"batangas:region": [
+			"https://portal.batangas.gov.ph/about/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/taal-church-historical-landmark/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/marcela-agoncillo-historical-landmark/"
+		],
+		"catanduanes:region": [
+			"https://papers.iafor.org/wp-content/uploads/papers/acss2015/ACSS2015_16415.pdf?t=8",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-bato/",
+			"https://elibrary.judiciary.gov.ph//thebookshelf//showdocs/2/95080"
+		],
+		"camarines-sur:region": [
+			"https://psa.gov.ph/system/files/main-publication/Camarines%2520Norte_0.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-nabua/",
+			"https://repository.seafdec.org.ph/bitstream/10862/829/1/cemplrfa_p113-122.pdf"
+		],
+		"marinduque:region": [
+			"https://dev.gutenberg.org/cache/epub/47927/pg47927-images.html",
+			"https://www.nationalmuseum.gov.ph/exhibitions/nm-marinduque-romblon-area-museum/moryonan/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/marinduque-revolutionary-force/"
+		],
+		"albay:region": [
+			"https://luxveritatis.ust-legazpi.edu.ph/wp-content/uploads/2022/03/Lux-Revised-Asuncion.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-cagsaua/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-daraga/"
+		],
+		"occidental-mindoro:region": [
+			"https://ldr.senate.gov.ph/legislative-issuance/republic-act-no-505",
+			"https://whc.unesco.org/fr/listesindicatives/5033/%26fbclid%3DIwAR2l7gaSnI5Prz7UGR4-82jM1DoPlXlnmygVjE3cyaifALPtu6wWcwHARpI",
+			"https://denr.gov.ph/wp-content/uploads/2023/05/Enhanced_Biodiversity_Conservation.pdf"
+		],
+		"oriental-mindoro:region": [
+			"https://ldr.senate.gov.ph/legislative-issuance/republic-act-no-505",
+			"https://www.unesco.org/en/mab/puerto-galera",
+			"https://ncca.gov.ph/about-culture-and-arts/culture-profile/gamaba/national-living-treasures-ginaw-bilog/"
+		],
+		"sorsogon:region": [
+			"https://sorsogoncity.gov.ph/wp-content/uploads/2025/10/SORSOGON-CITY-LPTRP-2022-2027.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-barcelona/",
+			"https://support.wwf.org.ph/get-involved/join-us/careers/donsol-volunteer-program/",
+			"https://archive.wwf.org.ph/resource-center/story-archives-2019/rcl-continued-partnership/"
+		],
+		"romblon:region": [
+			"https://dev.gutenberg.org/cache/epub/47927/pg47927-images.html",
+			"https://epa.culturalcenter.gov.ph/3/82/2141/",
+			"https://pia.gov.ph/news/dost-to-introduce-robotics-automation-to-modernize-romblon-marble-industry/"
+		],
+		"masbate:region": [
+			"https://www.asj.upd.edu.ph/mediabox/archive/ASJ_56_1_2020/Pulahanes_Masbate_Philippines_Pelorina2.pdf",
+			"https://rodeomasbate.ph/",
+			"https://www.nationalmuseum.gov.ph/our-collections/archaeology/earthenware/"
+		],
+		"northern-samar:region": [
+			"https://ldr.senate.gov.ph/legislative-issuance/republic-act-no-4221",
+			"https://www.nationalmuseum.gov.ph/2021/10/29/abaknon-and-their-view-of-the-world/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/agustin-sumuroy/"
+		],
+		"samar:region": [
+			"https://psa.gov.ph/system/files/main-publication/Samar%2520%2528Western%2520Samar%2529.pdf",
+			"https://pia.gov.ph/news/first-lady-liza-marcos-inaugurates-programs-to-empower-samars-women-weavers-msmes/",
+			"https://region8.mgb.gov.ph/images/History-Nov-16-2012.pdf"
+		],
+		"biliran:region": [
+			"https://biliran.gov.ph/history-of-biliran/",
+			"https://www.biliranisland.com/about-biliran-province/"
+		],
+		"aklan:region": [
+			"https://nlpdl.nlp.gov.ph/CC01/monographs/1994/NLP00VM052mcd/v1/v3.pdf",
+			"https://ich.unesco.org/en/RL/aklan-pina-handloom-weaving-01564",
+			"https://aklan.gov.ph/tourism/kalibo/"
+		],
+		"eastern-samar:region": [
+			"https://ldr.senate.gov.ph/legislative-issuance/republic-act-no-4221",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/homonhon-ruta-ng-ekspedisyon-magallanes-elcano-sa-pilipinas/",
+			"https://2012-2025.eca.state.gov/highlight/historic-church-bells-return-philippines.html"
+		],
+		"capiz:region": [
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/manuel-acuna-roxas-1892-1948/",
+			"https://epa.culturalcenter.gov.ph/3/82/2258/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/birthplace-of-manuel-acuna-roxas/"
+		],
+		"antique:region": [
+			"https://www.researchgate.net/publication/387367958_1521_Revisited_The_Quincentennial_Commemorations_in_the_Philippines_Volume_4",
+			"https://msmehub.dti.gov.ph/wp-content/uploads/2025/02/Fashion-Accessories-3.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/evelio-b-javier/"
+		],
+		"iloilo:region": [
+			"https://iloilo.gov.ph/index.php/en/about-iloilo",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/miagao-church/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-san-joaquin/"
+		],
+		"leyte:region": [
+			"https://leyteprovince.gov.ph/about-us/",
+			"https://www.vsu.edu.ph/images/transparency/Quality%20Manual.pdf"
+		],
+		"guimaras:region": [
+			"https://elibrary.judiciary.gov.ph/assets/dtSearch/dtSearch_system_files/dtisapi6.dll?DocId=34848&Index=%2A4aeb4dbdcceeda9b59b85ae3fb22cec0&cmd=getdoc",
+			"https://pemsea.org/sites/default/files/2023-12/2020_Guimaras_Coastal_Strategy_compressed.pdf",
+			"https://www.pcaarrd.dost.gov.ph/index.php/quick-information-dispatch-qid-articles/guimaras-mango-stakeholders-adhere-to-regulatory-measures"
+		],
+		"cebu:region": [
+			"https://www.cebu.gov.ph/about/",
+			"https://nhcphistoricsites.blogspot.com/2011/10/boljoon-church.html"
+		],
+		"southern-leyte:region": [
+			"https://southernleyte.gov.ph/history/"
+		],
+		"negros-occidental:region": [
+			"https://www.negros-occ.gov.ph/the-history-geography/",
+			"https://silaycity.gov.ph/history-of-silay/"
+		],
+		"dinagat-islands:region": [
+			"https://elibrary.judiciary.gov.ph//thebookshelf//showdocs/2/6300",
+			"https://www.history.navy.mil/content/history/nhhc/research/histories/ship-histories/danfs/c/california-v.html"
+		],
+		"palawan:region": [
+			"https://whc.unesco.org/en/tentativelists/1860",
+			"https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/tabon-cave-complex/",
+			"https://whc.unesco.org/en/list/653/"
+		],
+		"bohol:region": [
+			"https://elibrary.judiciary.gov.ph//thebookshelf//showdocs/2/2187",
+			"https://ncca.gov.ph/about-ncca-3/subcommissions/subcommission-on-cultural-heritagesch/monuments-and-sites/bohol-churches/"
+		],
+		"negros-oriental:region": [
+			"https://www.negor.gov.ph/history/",
+			"https://www.nara.accu.or.jp/img/dissemination/14th.pdf",
+			"https://www.nationalmuseum.gov.ph/our-collections/archaeology/burial-jars/"
+		],
+		"surigao-del-norte:region": [
+			"https://surigaodelnorte.gov.ph/history/",
+			"https://caraga.dswd.gov.ph/2020/05/sap-aids-crippled-tourism-communities-in-countrys-surfing-capital/"
+		],
+		"siquijor:region": [
+			"https://psa.gov.ph/system/files/main-publication/Siquijor.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-lazi/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-siquijor/"
+		],
+		"camiguin:region": [
+			"https://volcano.si.edu/volcano.cfm?vn=271080",
+			"https://www.phivolcs.dost.gov.ph/press-release-from-hibok-hibok-to-phivolcs-commemorating-the-1951-eruption/"
+		],
+		"agusan-del-norte:region": [
+			"https://surigaodelnorte.gov.ph/history/",
+			"https://agusandelnorte.gov.ph/government/provincial-profile",
+			"https://rtradn.gov.ph/tourism-activities/"
+		],
+		"surigao-del-sur:region": [
+			"https://surigaodelnorte.gov.ph/history/",
+			"https://bislig.gov.ph/tourist-spots/tinuyanfalls/",
+			"https://caraga.emb.gov.ph/caragas-enchanted-river-receives-recreational-aqua-management-merit-of-excellence-at-water-summit-2026/"
+		],
+		"misamis-oriental:region": [
+			"https://www.bswm.da.gov.ph/wp-content/uploads/Misamis-Occidental.pdf",
+			"https://www.xu.edu.ph/images/Kinaadman_Research_Center/doc/kj37_The_Archaeology_of_Karaang_Jasaan.pdf",
+			"https://salaymisor.gov.ph/history-of-salay/brief-history-of-salay/"
+		],
+		"agusan-del-sur:region": [
+			"https://surigaodelnorte.gov.ph/history/",
+			"https://tourism.agusandelsur.gov.ph/agusan-marsh-wildlife-santuary-tour/",
+			"https://sites.google.com/a/tesda.gov.ph/tesdaads/about-us/profile-of-the-province/tourism"
+		],
+		"misamis-occidental:region": [
+			"https://www.bswm.da.gov.ph/wp-content/uploads/Misamis-Occidental.pdf",
+			"https://misocc.gov.ph/heritage-town-of-misamis-occidental/",
+			"https://lgujimenez.gov.ph/"
+		],
+		"lanao-del-norte:region": [
+			"https://lanaodelnorte.gov.ph/history/",
+			"https://www.bsp.gov.ph/Pages/IRG/irg-files/CDO%202025/DPWH.pdf"
+		],
+		"bukidnon:region": [
+			"https://nlpdl.nlp.gov.ph/CC01/monographs/1994/NLP00VM052mcd/v1/v11.pdf",
+			"https://bukidnon.gov.ph/kaamulan-festival/"
+		],
+		"zamboanga-del-norte:region": [
+			"https://issuances-library.senate.gov.ph/legislative-issuance/republic-act-no-711",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/liwasan-ng-dapitan/"
+		],
+		"lanao-del-sur:region": [
+			"https://lanaodelnorte.gov.ph/history/",
+			"https://ich.unesco.org/en/RL/darangen-epic-of-the-maranao-people-of-lake-lanao-00159",
+			"https://www.nationalmuseum.gov.ph/our-collections/ethnology/architecture-and-furniture/"
+		],
+		"zamboanga-sibugay:region": [
+			"https://elibrary.judiciary.gov.ph//thebookshelf//showdocs/2/5842",
+			"https://pia.gov.ph/news/zambo-sibugay-celebrates-25-years-of-growth-success-from-humble-beginnings/",
+			"https://cda.gov.ph/region-9/goodyear-agrarian-reform-beneficiaries-multi-purpose-cooperative-story-and-its-impact-on-peoples-lives/"
+		],
+		"zamboanga-del-sur:region": [
+			"https://issuances-library.senate.gov.ph/legislative-issuance/republic-act-no-711",
+			"https://archive.unesco-ichcap.org/eng/ek/sub3/pdf_file/domain3/082_Buklog_Rites.pdf",
+			"https://ich.unesco.org/en/USL/buklog-thanksgiving-ritual-system-of-the-subanen-01495?USL=01495&lang=en"
+		],
+		"compostela-valley:region": [
+			"https://psa.gov.ph/content/psgc-4th-quarter-2019-updates-compostela-valley-now-davao-de-oro",
+			"https://davaodeoro.gov.ph/history/"
+		],
+		"davao-del-norte:region": [
+			"https://dro11.depdev.gov.ph/davao-region/davao-del-norte/",
+			"https://issuances-library.senate.gov.ph/legislative-issuance/republic-act-no-6430",
+			"https://davaodeoro.gov.ph/history/",
+			"https://depeddavnor.ph/index.php/ourdivision",
+			"https://lawphil.net/statutes/repacts/ra1998/pdf/ra_8471_1998.pdf"
+		],
+		"cotabato-city:region": [
+			"https://bangsamoro.gov.ph/news/latest-news/barmm-inaugurates-newly-rehabilitated-sultan-haji-hassanal-bolkiah-mosque/",
+			"https://pubfiles.pagasa.dost.gov.ph/pagasaweb/files/cad/CLIMATOLOGICAL%20PUBLICATIONS/Mindanao%20PRSD.pdf"
+		],
+		"cotabato:region": [
+			"https://cotabatoprov.gov.ph/about/our-province/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/fort-pikit/",
+			"https://www.alamada.gov.ph/about-the-municipality/history/"
+		],
+		"davao-oriental:region": [
+			"https://davaodelsur.gov.ph/history/",
+			"https://whc.unesco.org/en/decisions/6093",
+			"https://legacy.senate.gov.ph/press_release/2014/1114_legarda1.asp"
+		],
+		"maguindanao:region": [
+			"https://legacy.senate.gov.ph/press_release/2022/0919_tolentino1.asp",
+			"https://bcpch.bangsamoro.gov.ph/inaul-of-maguindanao/"
+		],
+		"davao-del-sur:region": [
+			"https://davaodelsur.gov.ph/history/",
+			"https://www.nationalmuseum.gov.ph/2021/12/12/manlilikha-ng-bayan-salinta-monon/"
+		],
+		"city-of-isabela:region": [
+			"https://isabelacity.gov.ph/wp-content/uploads/2025/08/CDP-Strategic-Plan-CY-2020-2022-CDP-StratPlan.pdf",
+			"https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/5805"
+		],
+		"basilan:region": [
+			"https://issuances-library.senate.gov.ph/legislative%2Bissuances/Presidential%20Decree%20No.%20356%2C%20s.%201973",
+			"https://ncca.gov.ph/about-culture-and-arts/culture-profile/gamaba/ambalang-ausalin/"
+		],
+		"sultan-kudarat:region": [
+			"https://rsso12.psa.gov.ph/system/files/2025-05/The%20Countryside%20in%20Figures%20Sultan%20Kudarat%20Province%2C%202018%20Edition.pdf",
+			"https://www.nationalmuseum.gov.ph/2024/05/07/gift-to-the-nation-nmp-presents-donated-limestone-burial-jars-in-new-gifted-repatriated-exhibition/"
+		],
+		"south-cotabato:region": [
+			"https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/26192",
+			"https://www.nationalmuseum.gov.ph/wp-content/uploads/2021/09/Lumad-Mindanao.pdf",
+			"https://www.nationalmuseum.gov.ph/2022/08/03/manlilikha-ng-bayan-lang-dulay/"
+		],
+		"sarangani:region": [
+			"https://psa.gov.ph/system/files/main-publication/Sarangani.pdf",
+			"https://epa.culturalcenter.gov.ph/3/82/2224/",
+			"https://lawphil.net/executive/proc/proc1996/proc_756_1996.html"
+		],
+		"davao-occidental:region": [
+			"https://saad.da.gov.ph/phase-2/davao-occidental/",
+			"https://www.usep.edu.ph/ilca/wp-content/uploads/sites/50/2024/10/Final-Content-Full-Book-ISBN.pdf"
+		],
+		"sulu:region": [
+			"https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/sulu-archipelago/",
+			"https://ncca.gov.ph/about-culture-and-arts/culture-profile/gamaba/national-living-treasures-darhata-sawabi/",
+			"https://bcpch.bangsamoro.gov.ph/saruk-kambigasan-of-sulu/"
+		],
+		"tawi-tawi:region": [
+			"https://psa.gov.ph/system/files/main-publication/Tawi-Tawi.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/sheik-makhdum-mosque/",
+			"https://ncca.gov.ph/about-culture-and-arts/culture-profile/gamaba/national-living-treasures-haja-amina-appi/"
+		],
+		"laoag:city": [
+			"https://www.pna.gov.ph/articles/1195955",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-laoag/",
+			"https://museoilocosnorte.com/category/the-museum/about-the-museum/"
+		],
+		"tuguegarao:city": [
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/katedral-ng-tuguegarao/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/kapilya-ng-san-jacinto/"
+		],
+		"baguio:city": [
+			"https://cids.up.edu.ph/wp-content/uploads/2025/06/Baguios-Biodiversity-Greenprint_Rethinking-Policy-and-Environmental-Governance-for-Urban-Biodiversity-and-Sustainability.pdf",
+			"https://ncca.gov.ph/wp-content/uploads/2025/04/BMH-PETITION-TO-DECLARE-AS-A-NATIONAL-CULTURAL-TREASURE-THE-MANSION-HOUSE-IN-BAGUIO-CITY.pdf",
+			"https://pia.gov.ph/news/30th-panagbenga-festival-2026-launched-embodies-baguios-enduring-spirit/"
+		],
+		"dagupan:city": [
+			"https://www.dagupan.gov.ph/the-city/history/"
+		],
+		"cabanatuan:city": [
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/death-place-of-general-antonio-luna/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/memorare-raid-of-cabanatuan/"
+		],
+		"tarlac:city": [
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/kabisera-ng-republika-ng-pilipinas-tarlac-tarlac/",
+			"https://www.tsu.edu.ph/about/history"
+		],
+		"angeles:city": [
+			"https://psa.gov.ph/statistics/population-and-housing/node/2271",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/mansyong-pamintuan/",
+			"https://tourism.angelescity.gov.ph/built-heritage/"
+		],
+		"olongapo:city": [
+			"https://olongapocity.gov.ph/barangays/"
+		],
+		"quezon-city:city": [
+			"https://quezoncity.gov.ph/about-the-city-government/history/",
+			"https://quezoncity.gov.ph/87th-quezon-city-founding-anniversary/",
+			"https://quezoncity.gov.ph/place/quezon-memorial-shrine-museo-ni-manuel-quezon/"
+		],
+		"pasay:city": [
+			"https://jses.depedpasay.ph/school-history/",
+			"https://issuances-library.senate.gov.ph/legislative-issuances/republic-acts?field_date_of_approval_value=All&items_per_page=50&page=234",
+			"https://artsandculture.google.com/asset/cultural-center-of-the-philippines-0004/1gGpoRQ2WpPY1g",
+			"https://www.picc.gov.ph/wp-content/uploads/2024/07/Philippine-International-Convention-Center-Inc._CC_20241st-Edition.pdf"
+		],
+		"san-pablo:city": [
+			"https://sites.google.com/up.edu.ph/smalllakegovernance/home",
+			"https://pcaarrd.dost.gov.ph/index.php/quick-information-dispatch-qid-articles/decision-support-system-for-san-pablo-lakes-management-being-developed",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/mansiyong-fule-malvar/"
+		],
+		"batangas:city": [
+			"https://batangascity.gov.ph/web/images/SEPPP/SEPPP2023.pdf",
+			"https://www.batangascity.gov.ph/web/itsd-citizen-charter/22-tourism/744-cultural-halls"
+		],
+		"naga:city": [
+			"https://www2.naga.gov.ph/naga-citys-panoramic-development-from-a-glorious-past-to-a-towering-future/",
+			"https://tourism.naga.gov.ph/religious-and-historic-sites/"
+		],
+		"legazpi:city": [
+			"https://lcp.org.ph/99/legazpi-city",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/labanan-sa-legazpi/",
+			"https://legazpi.gov.ph/legazpi-city-tourist-attractions/",
+			"https://www.nationalmuseum.gov.ph/2022/08/17/ibalong-festival-sa-bikol/"
+		],
+		"roxas-city:city": [
+			"https://roxascity.gov.ph/roxas-city/",
+			"https://roxascity.gov.ph/wp-content/uploads/2023/10/Roxas-City-Citizen-Charter-4th-Edition-2023.pdf"
+		],
+		"tacloban:city": [
+			"https://new.tacloban.gov.ph/wp-content/uploads/2025/02/2023-ECOLOGICAL-PROFILE.pdf",
+			"https://www.pna.gov.ph/articles/1083560",
+			"https://santarita.gov.ph/history/",
+			"https://www.dpwh.gov.ph/dpwh/sites/default/files/webform/civil_works/advertisement/23i00274_-_bidding_documents.pdf"
+		],
+		"ormoc:city": [
+			"https://www.ormoc.gov.ph/pages/history.php"
+		],
+		"cadiz:city": [
+			"https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/20806",
+			"https://cmpg.upv.edu.ph/heritage-location/negros-occidental/cadiz/"
+		],
+		"iloilo:city": [
+			"https://iloilocity.gov.ph/main/wp-content/uploads/2023/05/CDP2023-2028_4-13_Final-Document.pdf",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/kampanaryo-ng-jaro/",
+			"https://cids.up.edu.ph/protecting-la-paz-batchoy-pathways-geographical-indication/"
+		],
+		"bacolod:city": [
+			"https://bacolodcity.gov.ph/wp-content/uploads/2024/04/A.-Bacolod-City-DRRM-Plan-2023-2025-Preliminary-Pages-Chapter-I-Chapter-II.pdf",
+			"https://cmpg.upv.edu.ph/heritage/masskara-festival/"
+		],
+		"cebu:city": [
+			"https://ncca.gov.ph/about-culture-and-arts/in-focus/philippines-gateway-to-the-orient-from-legazpi-to-malaspina/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/fort-san-pedro/",
+			"https://santoninodecebubasilica.org/basilica-minore-del-santo-nino/"
+		],
+		"puerto-princesa:city": [
+			"https://citytourism.puertoprincesa.ph/history/",
+			"https://whc.unesco.org/en/decisions/2544/",
+			"https://philhistoricsites.nhcp.gov.ph/registry_database/iwahig-penal-colony/"
+		],
+		"butuan:city": [
+			"https://epa.culturalcenter.gov.ph/3/82/2135/",
+			"https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/the_butuan_archaeological_finds_profound_implications_for_philippines_and_southeast_asian_prehistory.pdf"
+		],
+		"cagayan-de-oro:city": [
+			"https://www.cagayandeoro.gov.ph/index.php/item/303-history-of-cagayan-de-oro-city.html",
+			"https://admin.cagayandeoro.gov.ph/index.php/transparency-report/transparency-reports.html?download=910%3Acdo-cdp-2020-2025&start=10"
+		],
+		"iligan:city": [
+			"https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps0445.pdf",
+			"https://openjicareport.jica.go.jp/pdf/10456564.pdf",
+			"https://philippines.travel/destinations/iligan-city/index",
+			"https://www.congress.gov.ph/index.php/committees/committee/view/0538"
+		],
+		"pagadian:city": [
+			"https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/7104",
+			"https://saad.da.gov.ph/phase-2/zamboanga-del-sur/",
+			"https://tourism.pagadian.city/sites.php",
+			"https://multidisciplinaryjournal.com/pdf/Employability-of-Technical-Vocational-Livelihood-SeniorHigh-School-Student-Graduates-A-Case-Study.pdf"
+		],
+		"cotabato:city": [
+			"https://pubfiles.pagasa.dost.gov.ph/pagasaweb/files/cad/CLIMATOLOGICAL%20PUBLICATIONS/Mindanao%20PRSD.pdf",
+			"https://bangsamoro.gov.ph/news/latest-news/barmm-inaugurates-newly-rehabilitated-sultan-haji-hassanal-bolkiah-mosque/"
+		],
+		"davao:city": [
+			"https://tourism.davaocity.gov.ph/the-city/about-the-city/a-quick-look-back/",
+			"https://davaocity.gov.ph/tourism/kadayawan-festival-2025-opens/",
+			"https://www.davaocity.gov.ph/wp-content/uploads/2022/06/EO-21-2022.pdf",
+			"https://www.davao.ph.emb-japan.go.jp/itpr_ja/11_000001_00467.html"
+		],
+		"zamboanga:city": [
+			"https://zamboangacity.gov.ph/history-of-the-city/",
+			"https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/western-southern-mindanao/",
+			"https://kwfwikaatkultura.ph/chabacano/",
+			"https://www.sciencedirect.com/science/article/pii/S0024384118303024"
+		],
+		"general-santos:city": [
+			"https://choappointment.gensantos.gov.ph/History",
+			"https://rhu-fatima.gensantos.gov.ph/index.php?page=history"
+		]
+	},
+	"batanes": {
+		"region": {
+			"en": [
+				"Batanes is the Spanish plural form of Batan, the name of an island in the group.",
+				"Traditional Ivatan houses in Batanes combine local building traditions with stone masonry introduced during Spanish rule.",
+				"Batanes preserves ijangs, fortified hilltop settlements used before Spanish colonial resettlement."
+			],
+			"it": [
+				"Batanes è il plurale spagnolo di Batan, nome di un’isola dell’arcipelago.",
+				"Le case tradizionali ivatan di Batanes combinano tecniche locali con la muratura in pietra introdotta durante il dominio spagnolo.",
+				"Batanes conserva gli ijang, insediamenti fortificati sulle alture usati prima dei trasferimenti coloniali spagnoli."
+			],
+			"de": [
+				"Batanes ist die spanische Mehrzahl von Batan, dem Namen einer Insel der Gruppe.",
+				"Traditionelle Ivatan-Häuser auf Batanes verbinden örtliche Bautraditionen mit dem unter spanischer Herrschaft eingeführten Steinmauerwerk.",
+				"Auf Batanes sind Ijangs erhalten, befestigte Höhensiedlungen aus der Zeit vor den spanischen kolonialen Umsiedlungen."
+			]
+		}
+	},
+	"cagayan": {
+		"region": {
+			"en": [
+				"The Spanish colonial title La Provincia de Cagayan once referred to a much larger territory than today’s province.",
+				"Fossils from Callao Cave in Peñablanca were assigned to the newly described human species Homo luzonensis in 2019.",
+				"Lal-lo, formerly Nueva Segovia, was Cagayan’s early provincial capital and the original seat of the Diocese of Nueva Segovia."
+			],
+			"it": [
+				"Il nome coloniale spagnolo La Provincia de Cagayan indicava un territorio molto più vasto della provincia attuale.",
+				"Fossili della grotta di Callao a Peñablanca furono attribuiti alla nuova specie umana Homo luzonensis nel 2019.",
+				"Lal-lo, un tempo Nueva Segovia, fu l’antica capitale provinciale di Cagayan e la sede originaria della diocesi di Nueva Segovia."
+			],
+			"de": [
+				"Die spanische Kolonialbezeichnung La Provincia de Cagayan bezog sich einst auf ein wesentlich größeres Gebiet als die heutige Provinz.",
+				"Fossilien aus der Callao-Höhle in Peñablanca wurden 2019 der neu beschriebenen Menschenart Homo luzonensis zugeordnet.",
+				"Lal-lo, früher Nueva Segovia, war Cagayans frühe Provinzhauptstadt und der ursprüngliche Sitz des Bistums Nueva Segovia."
+			]
+		}
+	},
+	"ilocos-norte": {
+		"region": {
+			"en": [
+				"Ilocos Norte means northern Ilocos, the name given to one of the two provinces formed from Ilocos in 1818.",
+				"San Agustin Church in Paoay became part of UNESCO’s Baroque Churches of the Philippines World Heritage site in 1993.",
+				"The Basi Revolt began in Piddig in 1807 in opposition to the colonial monopoly on sugarcane wine."
+			],
+			"it": [
+				"Ilocos Norte significa Ilocos settentrionale, nome dato a una delle due province formate dalla divisione di Ilocos nel 1818.",
+				"La chiesa di San Agustin a Paoay entrò nel sito UNESCO delle Chiese barocche delle Filippine nel 1993.",
+				"La rivolta del basi iniziò a Piddig nel 1807 contro il monopolio coloniale sul vino di canna da zucchero."
+			],
+			"de": [
+				"Ilocos Norte bedeutet nördliches Ilocos und bezeichnet eine der beiden 1818 aus Ilocos gebildeten Provinzen.",
+				"Die Kirche San Agustin in Paoay wurde 1993 Teil der UNESCO-Welterbestätte Barockkirchen der Philippinen.",
+				"Der Basi-Aufstand begann 1807 in Piddig als Widerstand gegen das koloniale Monopol auf Zuckerrohrwein."
+			]
+		}
+	},
+	"apayao": {
+		"region": {
+			"en": [
+				"Apayao takes its name from the river also known downstream as the Abulug.",
+				"Apayao became a separate province under legislation passed in 1995, ending its union with Kalinga.",
+				"Isnag communities in Apayao use the lapat system to regulate natural-resource use and protect the environment."
+			],
+			"it": [
+				"Apayao prende il nome dal fiume noto a valle anche come Abulug.",
+				"Apayao divenne una provincia separata in base a una legge del 1995, ponendo fine all’unione con Kalinga.",
+				"Le comunità isnag di Apayao utilizzano il sistema lapat per regolare l’uso delle risorse naturali e proteggere l’ambiente."
+			],
+			"de": [
+				"Apayao ist nach dem Fluss benannt, der flussabwärts auch Abulug heißt.",
+				"Apayao wurde durch ein 1995 verabschiedetes Gesetz eine eigene Provinz und beendete damit die Verbindung mit Kalinga.",
+				"Isnag-Gemeinschaften in Apayao regeln mit dem Lapat-System die Nutzung natürlicher Ressourcen und schützen die Umwelt."
+			]
+		}
+	},
+	"abra": {
+		"region": {
+			"en": [
+				"Abra’s name comes from the Spanish word for a gap or opening.",
+				"Abra was restored as a separate province in 1917 after twelve years as part of Ilocos Sur.",
+				"The Santa Catalina de Alejandria Church in Tayum was built in the nineteenth century for the local Christianized Tinguian community."
+			],
+			"it": [
+				"Il nome Abra deriva dalla parola spagnola che significa varco o apertura.",
+				"Abra tornò a essere una provincia separata nel 1917, dopo dodici anni come parte di Ilocos Sur.",
+				"La chiesa di Santa Catalina de Alejandria a Tayum fu costruita nell’Ottocento per la comunità locale tinguián cristianizzata."
+			],
+			"de": [
+				"Abras Name stammt vom spanischen Wort für einen Durchlass oder eine Öffnung.",
+				"Abra wurde 1917 nach zwölf Jahren als Teil von Ilocos Sur wieder eine eigene Provinz.",
+				"Die Kirche Santa Catalina de Alejandria in Tayum entstand im 19. Jahrhundert für die örtliche christianisierte Tinguian-Gemeinschaft."
+			]
+		}
+	},
+	"kalinga": {
+		"region": {
+			"en": [
+				"Kalinga’s name is probably derived from a Gaddang term used by neighbouring lowland peoples.",
+				"Kalinga’s bodong tradition establishes peace agreements between communities through recognised elders and customary rules.",
+				"Emilio Aguinaldo maintained his headquarters in Lubuagan from March to May 1900."
+			],
+			"it": [
+				"Il nome Kalinga deriva probabilmente da un termine gaddang usato dai vicini popoli delle pianure.",
+				"La tradizione bodong di Kalinga stabilisce accordi di pace tra comunità attraverso anziani riconosciuti e norme consuetudinarie.",
+				"Emilio Aguinaldo mantenne il proprio quartier generale a Lubuagan da marzo a maggio del 1900."
+			],
+			"de": [
+				"Kalingas Name geht wahrscheinlich auf einen Gaddang-Ausdruck benachbarter Tieflandbevölkerungen zurück.",
+				"Die Bodong-Tradition in Kalinga begründet Friedensabkommen zwischen Gemeinschaften durch anerkannte Älteste und überlieferte Regeln.",
+				"Emilio Aguinaldo unterhielt von März bis Mai 1900 sein Hauptquartier in Lubuagan."
+			]
+		}
+	},
+	"ilocos-sur": {
+		"region": {
+			"en": [
+				"Ilocos Sur means southern Ilocos, the name used after the division of Ilocos in 1818.",
+				"Vigan’s historic centre combines a Spanish colonial street plan with architectural influences from China and the Philippines.",
+				"The bell tower of Santa Maria Church stands separately from the main church building."
+			],
+			"it": [
+				"Ilocos Sur significa Ilocos meridionale, nome usato dopo la divisione di Ilocos nel 1818.",
+				"Il centro storico di Vigan combina un impianto stradale coloniale spagnolo con influenze architettoniche cinesi e filippine.",
+				"Il campanile della chiesa di Santa Maria è separato dall’edificio principale della chiesa."
+			],
+			"de": [
+				"Ilocos Sur bedeutet südliches Ilocos, die nach der Teilung von Ilocos im Jahr 1818 verwendete Bezeichnung.",
+				"Vigans Altstadt verbindet einen spanischen kolonialen Straßengrundriss mit architektonischen Einflüssen aus China und den Philippinen.",
+				"Der Glockenturm der Kirche von Santa Maria steht getrennt vom eigentlichen Kirchengebäude."
+			]
+		}
+	},
+	"mountain-province": {
+		"region": {
+			"en": [
+				"Mountain Province is named for the Cordillera mountain landscape in which it was established.",
+				"Sagada preserves a burial tradition in which coffins are suspended against cliff faces.",
+				"Mountain Province’s Lang-ay Festival was first held in 2005 to celebrate and sustain local cultural traditions."
+			],
+			"it": [
+				"Mountain Province prende il nome dal paesaggio montuoso della Cordillera in cui fu costituita.",
+				"Sagada conserva una tradizione funeraria in cui le bare vengono sospese contro le pareti rocciose.",
+				"Il festival Lang-ay di Mountain Province si tenne per la prima volta nel 2005 per celebrare e mantenere le tradizioni culturali locali."
+			],
+			"de": [
+				"Mountain Province ist nach der Gebirgslandschaft der Kordilleren benannt, in der die Provinz entstand.",
+				"In Sagada ist eine Bestattungstradition erhalten, bei der Särge an Felswänden aufgehängt werden.",
+				"Das Lang-ay-Festival der Mountain Province fand erstmals 2005 statt, um örtliche Kulturtraditionen zu feiern und zu bewahren."
+			]
+		}
+	},
+	"isabela": {
+		"region": {
+			"en": [
+				"Isabela was named Isabela de Luzon in honour of Queen Isabella II of Spain when the province was created in 1856.",
+				"Tumauini’s San Matias Church is distinguished by its elaborate brickwork and rounded, tiered bell tower.",
+				"Emilio Aguinaldo was captured at Palanan in March 1901 during the Philippine–American War."
+			],
+			"it": [
+				"Isabela fu chiamata Isabela de Luzon in onore della regina Isabella II di Spagna quando la provincia fu creata nel 1856.",
+				"La chiesa di San Matias a Tumauini si distingue per l’elaborata muratura in mattoni e il campanile arrotondato a più livelli.",
+				"Emilio Aguinaldo fu catturato a Palanan nel marzo del 1901 durante la guerra filippino-americana."
+			],
+			"de": [
+				"Isabela erhielt bei der Provinzgründung 1856 zu Ehren von Königin Isabella II. von Spanien den Namen Isabela de Luzon.",
+				"Die Kirche San Matias in Tumauini zeichnet sich durch aufwendiges Ziegelmauerwerk und einen runden, mehrstufigen Glockenturm aus.",
+				"Emilio Aguinaldo wurde im März 1901 während des Philippinisch-Amerikanischen Krieges in Palanan gefangen genommen."
+			]
+		}
+	},
+	"ifugao": {
+		"region": {
+			"en": [
+				"Ifugao province is named after the Ifugao ethnolinguistic people.",
+				"The UNESCO-listed rice terraces in Ifugao comprise five clusters in Kiangan, Hungduan, Mayoyao and Banaue.",
+				"Ifugao hudhud narrative chants accompany rice cultivation and harvesting as well as funeral wakes and rituals."
+			],
+			"it": [
+				"La provincia di Ifugao prende il nome dal popolo etnolinguistico ifugao.",
+				"Le risaie terrazzate di Ifugao iscritte dall’UNESCO comprendono cinque gruppi a Kiangan, Hungduan, Mayoyao e Banaue.",
+				"I canti narrativi hudhud degli Ifugao accompagnano la coltivazione e il raccolto del riso, oltre alle veglie e ai riti funebri."
+			],
+			"de": [
+				"Die Provinz Ifugao ist nach der ethnolinguistischen Bevölkerungsgruppe der Ifugao benannt.",
+				"Die UNESCO-gelisteten Reisterrassen in Ifugao umfassen fünf Gruppen in Kiangan, Hungduan, Mayoyao und Banaue.",
+				"Die erzählenden Hudhud-Gesänge der Ifugao begleiten Reisanbau und Ernte sowie Totenwachen und Bestattungsrituale."
+			]
+		}
+	},
+	"la-union": {
+		"region": {
+			"en": [
+				"La Union’s name recalls the union of territory from Ilocos Sur, Pangasinan and Benguet when the province was formed in 1850.",
+				"Bangar’s inabel weavers preserve a tradition of making cloth on wooden handlooms.",
+				"Naguilian produces basi, a traditional wine made by fermenting sugarcane juice."
+			],
+			"it": [
+				"Il nome La Union ricorda l’unione di territori di Ilocos Sur, Pangasinan e Benguet quando la provincia fu formata nel 1850.",
+				"I tessitori di inabel di Bangar conservano la tradizione di produrre stoffe su telai manuali di legno.",
+				"Naguilian produce il basi, vino tradizionale ottenuto dalla fermentazione del succo di canna da zucchero."
+			],
+			"de": [
+				"La Unions Name erinnert an die Vereinigung von Gebieten aus Ilocos Sur, Pangasinan und Benguet bei der Provinzgründung 1850.",
+				"Die Inabel-Weber von Bangar bewahren die Herstellung von Stoffen auf hölzernen Handwebstühlen.",
+				"In Naguilian wird Basi hergestellt, ein traditioneller Wein aus vergorenem Zuckerrohrsaft."
+			]
+		}
+	},
+	"benguet": {
+		"region": {
+			"en": [
+				"Benguet’s name originally referred to the swampy basin of present-day La Trinidad.",
+				"Kabayan’s burial caves preserve mummified human remains associated with Ibaloy mortuary traditions.",
+				"Benguet State University in La Trinidad began as a farm school in 1916."
+			],
+			"it": [
+				"Il nome Benguet indicava originariamente la conca paludosa dell’attuale La Trinidad.",
+				"Le grotte funerarie di Kabayan conservano resti umani mummificati associati alle tradizioni mortuarie ibaloy.",
+				"La Benguet State University a La Trinidad iniziò come scuola agraria nel 1916."
+			],
+			"de": [
+				"Der Name Benguet bezeichnete ursprünglich das sumpfige Becken des heutigen La Trinidad.",
+				"Die Bestattungshöhlen von Kabayan bewahren mumifizierte menschliche Überreste, die mit den Bestattungstraditionen der Ibaloy verbunden sind.",
+				"Die Benguet State University in La Trinidad begann 1916 als Landwirtschaftsschule."
+			]
+		}
+	},
+	"quirino": {
+		"region": {
+			"en": [
+				"Quirino province is named in honour of former Philippine president Elpidio Quirino.",
+				"Legislation enacted in 1971 separated Quirino from Nueva Vizcaya and established it as a regular province.",
+				"Nagbukel in Diffun is a limestone formation containing caves and developed as a nature park."
+			],
+			"it": [
+				"La provincia di Quirino prende il nome dall’ex presidente filippino Elpidio Quirino.",
+				"Una legge del 1971 separò Quirino da Nueva Vizcaya e la costituì in provincia ordinaria.",
+				"Nagbukel a Diffun è una formazione calcarea con grotte, valorizzata come parco naturale."
+			],
+			"de": [
+				"Die Provinz Quirino ist nach dem früheren philippinischen Präsidenten Elpidio Quirino benannt.",
+				"Ein 1971 verabschiedetes Gesetz trennte Quirino von Nueva Vizcaya und machte es zu einer regulären Provinz.",
+				"Nagbukel in Diffun ist eine Kalksteinformation mit Höhlen, die als Naturpark erschlossen wurde."
+			]
+		}
+	},
+	"nueva-vizcaya": {
+		"region": {
+			"en": [
+				"Nueva Vizcaya’s name refers to Biscay in Spain.",
+				"San Vicente Ferrer Church in Dupax del Sur dates from 1776 and is recognised as a National Cultural Treasure.",
+				"Dampol Bridge in Dupax del Sur was built in 1818."
+			],
+			"it": [
+				"Il nome Nueva Vizcaya richiama la Biscaglia in Spagna.",
+				"La chiesa di San Vicente Ferrer a Dupax del Sur risale al 1776 ed è riconosciuta come Tesoro culturale nazionale.",
+				"Il ponte Dampol a Dupax del Sur fu costruito nel 1818."
+			],
+			"de": [
+				"Der Name Nueva Vizcaya verweist auf das spanische Biskaya.",
+				"Die Kirche San Vicente Ferrer in Dupax del Sur stammt von 1776 und ist als nationaler Kulturschatz anerkannt.",
+				"Die Dampol-Brücke in Dupax del Sur wurde 1818 erbaut."
+			]
+		}
+	},
+	"pangasinan": {
+		"region": {
+			"en": [
+				"Pangasinan means a place where salt is made, reflecting a traditional local industry.",
+				"Juan de la Cruz Palaris led a revolt against Spanish colonial rule in Pangasinan beginning in 1762.",
+				"Allied forces landed at Lingayen on 9 January 1945 during the campaign to recapture Luzon."
+			],
+			"it": [
+				"Pangasinan significa luogo dove si produce il sale, richiamando un’industria tradizionale locale.",
+				"Juan de la Cruz Palaris guidò una rivolta contro il dominio coloniale spagnolo a Pangasinan a partire dal 1762.",
+				"Le forze alleate sbarcarono a Lingayen il 9 gennaio 1945 durante la campagna per riconquistare Luzon."
+			],
+			"de": [
+				"Pangasinan bedeutet Ort der Salzherstellung und verweist auf ein traditionelles örtliches Gewerbe.",
+				"Juan de la Cruz Palaris führte ab 1762 einen Aufstand gegen die spanische Kolonialherrschaft in Pangasinan an.",
+				"Alliierte Streitkräfte landeten am 9. Januar 1945 bei Lingayen während des Feldzugs zur Rückeroberung Luzons."
+			]
+		}
+	},
+	"aurora": {
+		"region": {
+			"en": [
+				"Aurora province is named after Aurora Aragon Quezon, wife of Commonwealth president Manuel L. Quezon.",
+				"A Spanish garrison held out in Baler Church during a siege lasting from June 1898 to June 1899.",
+				"Manuel Luis Quezon was born in Baler on 19 August 1878."
+			],
+			"it": [
+				"La provincia di Aurora prende il nome da Aurora Aragon Quezon, moglie del presidente del Commonwealth Manuel L. Quezon.",
+				"Una guarnigione spagnola resistette nella chiesa di Baler durante un assedio durato dal giugno 1898 al giugno 1899.",
+				"Manuel Luis Quezon nacque a Baler il 19 agosto 1878."
+			],
+			"de": [
+				"Die Provinz Aurora ist nach Aurora Aragon Quezon benannt, der Ehefrau des Commonwealth-Präsidenten Manuel L. Quezon.",
+				"Eine spanische Garnison hielt während einer Belagerung von Juni 1898 bis Juni 1899 in der Kirche von Baler aus.",
+				"Manuel Luis Quezon wurde am 19. August 1878 in Baler geboren."
+			]
+		}
+	},
+	"nueva-ecija": {
+		"region": {
+			"en": [
+				"Nueva Ecija was named after Écija in Spain, with nueva meaning new.",
+				"Minalungao National Park was established in Nueva Ecija by legislation passed in 1967.",
+				"Filipino guerrillas and US troops rescued Allied prisoners from the Pangatian camp at Cabanatuan on 30 January 1945."
+			],
+			"it": [
+				"Nueva Ecija prende il nome da Écija in Spagna, con nueva che significa nuova.",
+				"Il parco nazionale di Minalungao fu istituito a Nueva Ecija da una legge del 1967.",
+				"Guerriglieri filippini e truppe statunitensi liberarono prigionieri alleati dal campo di Pangatian a Cabanatuan il 30 gennaio 1945."
+			],
+			"de": [
+				"Nueva Ecija ist nach Écija in Spanien benannt, wobei nueva neu bedeutet.",
+				"Der Minalungao-Nationalpark in Nueva Ecija wurde durch ein 1967 verabschiedetes Gesetz gegründet.",
+				"Philippinische Guerillas und US-Truppen befreiten am 30. Januar 1945 alliierte Gefangene aus dem Lager Pangatian bei Cabanatuan."
+			]
+		}
+	},
+	"tarlac": {
+		"region": {
+			"en": [
+				"The name Tarlac appeared in the title of a military commandancy authorised in 1858, before the province was founded in 1873.",
+				"The Capas National Shrine commemorates prisoners held at Camp O’Donnell after the Bataan Death March in 1942.",
+				"One of the eight rays on the Philippine flag’s sun represents Tarlac’s role in the 1896 revolution."
+			],
+			"it": [
+				"Il nome Tarlac compariva nel titolo di un comando militare autorizzato nel 1858, prima della fondazione della provincia nel 1873.",
+				"Il Capas National Shrine commemora i prigionieri detenuti a Camp O’Donnell dopo la marcia della morte di Bataan nel 1942.",
+				"Uno degli otto raggi del sole sulla bandiera filippina rappresenta il ruolo di Tarlac nella rivoluzione del 1896."
+			],
+			"de": [
+				"Der Name Tarlac erschien im Titel einer 1858 genehmigten Militärkommandantur, bevor 1873 die Provinz gegründet wurde.",
+				"Das Capas National Shrine erinnert an die Gefangenen, die nach dem Todesmarsch von Bataan 1942 im Camp O’Donnell festgehalten wurden.",
+				"Einer der acht Sonnenstrahlen auf der philippinischen Flagge steht für Tarlacs Rolle in der Revolution von 1896."
+			]
+		},
+		"city": {
+			"en": [
+				"Tarlac was a temporary capital of the First Philippine Republic in 1899.",
+				"Emilio Aguinaldo established a paper-currency bureau while based in Tarlac in June 1899.",
+				"Tarlac State University traces its vocational teaching to a carpentry school opened in 1906."
+			],
+			"it": [
+				"Tarlac fu una capitale temporanea della Prima Repubblica filippina nel 1899.",
+				"Emilio Aguinaldo istituì un ufficio per la cartamoneta mentre aveva sede a Tarlac nel giugno 1899.",
+				"La Tarlac State University fa risalire l’insegnamento professionale a una scuola di falegnameria aperta nel 1906."
+			],
+			"de": [
+				"Tarlac war 1899 eine vorübergehende Hauptstadt der Ersten Philippinischen Republik.",
+				"Emilio Aguinaldo gründete im Juni 1899 während seines Aufenthalts in Tarlac ein Amt für Papiergeld.",
+				"Die Tarlac State University führt ihre berufliche Ausbildung auf eine 1906 eröffnete Tischlereischule zurück."
+			]
+		}
+	},
+	"zambales": {
+		"region": {
+			"en": [
+				"Zambales is a Spanish form of the name of the Sambal people.",
+				"San Andres Church in Masinloc was declared a National Cultural Treasure in 2001.",
+				"Philippine president Ramon Magsaysay was born in Iba, Zambales, in 1907."
+			],
+			"it": [
+				"Zambales è una forma spagnola del nome del popolo sambal.",
+				"La chiesa di San Andres a Masinloc fu dichiarata Tesoro culturale nazionale nel 2001.",
+				"Il presidente filippino Ramon Magsaysay nacque a Iba, Zambales, nel 1907."
+			],
+			"de": [
+				"Zambales ist eine spanische Form des Namens der Sambal-Bevölkerung.",
+				"Die Kirche San Andres in Masinloc wurde 2001 zum nationalen Kulturschatz erklärt.",
+				"Der philippinische Präsident Ramon Magsaysay wurde 1907 in Iba, Zambales, geboren."
+			]
+		}
+	},
+	"pampanga": {
+		"region": {
+			"en": [
+				"Pampanga’s name derives from pampang, a word referring to a riverbank.",
+				"Betis Church in Guagua is known for its elaborate ceiling paintings and is recognised as a National Cultural Treasure.",
+				"Lahar from Mount Pinatubo partly buried San Guillermo Church in Bacolor in 1995."
+			],
+			"it": [
+				"Il nome Pampanga deriva da pampang, parola che indica una riva fluviale.",
+				"La chiesa di Betis a Guagua è nota per gli elaborati dipinti sul soffitto ed è riconosciuta come Tesoro culturale nazionale.",
+				"Le colate di fango vulcanico del Pinatubo seppellirono parzialmente la chiesa di San Guillermo a Bacolor nel 1995."
+			],
+			"de": [
+				"Pampangas Name leitet sich von pampang ab, einem Wort für ein Flussufer.",
+				"Die Kirche von Betis in Guagua ist für ihre aufwendigen Deckenmalereien bekannt und als nationaler Kulturschatz anerkannt.",
+				"Lahar-Ströme vom Pinatubo verschütteten 1995 die Kirche San Guillermo in Bacolor teilweise."
+			]
+		}
+	},
+	"bulacan": {
+		"region": {
+			"en": [
+				"Bulacan’s name is traditionally linked to bulak, cotton, although another explanation connects it with burak, clay.",
+				"Barasoain Church in Malolos hosted the revolutionary congress that convened in 1898 and drafted the Malolos Constitution.",
+				"Revolutionaries established the Republic of Biak-na-Bato in San Miguel, Bulacan, in 1897."
+			],
+			"it": [
+				"Il nome Bulacan è tradizionalmente collegato a bulak, cotone, ma un’altra spiegazione lo associa a burak, argilla.",
+				"La chiesa di Barasoain a Malolos ospitò il congresso rivoluzionario che si riunì nel 1898 e redasse la Costituzione di Malolos.",
+				"I rivoluzionari istituirono la Repubblica di Biak-na-Bato a San Miguel, Bulacan, nel 1897."
+			],
+			"de": [
+				"Bulacans Name wird traditionell mit bulak, Baumwolle, verbunden; eine andere Erklärung führt ihn auf burak, Lehm, zurück.",
+				"Die Barasoain-Kirche in Malolos beherbergte den 1898 einberufenen Revolutionskongress, der die Verfassung von Malolos ausarbeitete.",
+				"Revolutionäre gründeten 1897 in San Miguel, Bulacan, die Republik Biak-na-Bato."
+			]
+		}
+	},
+	"ncr-third-district": {
+		"region": {
+			"en": [
+				"NCR’s Third District is the statistical name used in the 2015 census for Caloocan, Malabon, Navotas and Valenzuela.",
+				"The Bonifacio Monument in Caloocan was designed by Guillermo Tolentino and inaugurated in 1933.",
+				"Valenzuela’s name honours the physician and revolutionary Pio Valenzuela."
+			],
+			"it": [
+				"Third District di NCR è il nome statistico usato nel censimento del 2015 per Caloocan, Malabon, Navotas e Valenzuela.",
+				"Il monumento a Bonifacio a Caloocan fu progettato da Guillermo Tolentino e inaugurato nel 1933.",
+				"Il nome di Valenzuela onora il medico e rivoluzionario Pio Valenzuela."
+			],
+			"de": [
+				"NCRs Third District ist die im Zensus von 2015 verwendete statistische Bezeichnung für Caloocan, Malabon, Navotas und Valenzuela.",
+				"Das Bonifacio-Denkmal in Caloocan wurde von Guillermo Tolentino entworfen und 1933 eingeweiht.",
+				"Valenzuelas Name ehrt den Arzt und Revolutionär Pio Valenzuela."
+			]
+		}
+	},
+	"bataan": {
+		"region": {
+			"en": [
+				"Bataan was formerly known as Vatan in accounts of its early history.",
+				"Filipino and American forces on Bataan surrendered to the Japanese army in April 1942, before the Bataan Death March.",
+				"Tomas Pinpin of Abucay published his own book teaching Tagalog speakers Spanish in 1610."
+			],
+			"it": [
+				"Bataan era chiamata Vatan nei resoconti della sua storia antica.",
+				"Le forze filippine e statunitensi a Bataan si arresero all’esercito giapponese nell’aprile 1942, prima della marcia della morte di Bataan.",
+				"Tomas Pinpin di Abucay pubblicò nel 1610 un proprio libro per insegnare lo spagnolo ai parlanti tagalog."
+			],
+			"de": [
+				"Bataan wurde in Darstellungen seiner frühen Geschichte als Vatan bezeichnet.",
+				"Philippinische und amerikanische Truppen auf Bataan kapitulierten im April 1942 vor der japanischen Armee, bevor der Todesmarsch von Bataan begann.",
+				"Tomas Pinpin aus Abucay veröffentlichte 1610 ein eigenes Lehrbuch des Spanischen für Tagalogsprecher."
+			]
+		}
+	},
+	"ncr-second-district": {
+		"region": {
+			"en": [
+				"NCR’s Second District was the statistical label used in 2009 for Mandaluyong, Marikina, Pasig, Quezon City and San Juan.",
+				"Marikina’s shoemaking industry began in 1887 through the pioneering work of Laureano Guevarra, known as Kapitan Moy.",
+				"The three mourning angels atop the Quezon Memorial Shrine represent Luzon, the Visayas and Mindanao."
+			],
+			"it": [
+				"Second District di NCR era il nome statistico usato nel 2009 per Mandaluyong, Marikina, Pasig, Quezon City e San Juan.",
+				"L’industria calzaturiera di Marikina iniziò nel 1887 grazie all’opera pionieristica di Laureano Guevarra, noto come Kapitan Moy.",
+				"I tre angeli in lutto sulla sommità del Quezon Memorial Shrine rappresentano Luzon, Visayas e Mindanao."
+			],
+			"de": [
+				"NCRs Second District war die 2009 verwendete statistische Bezeichnung für Mandaluyong, Marikina, Pasig, Quezon City und San Juan.",
+				"Marikinas Schuhindustrie begann 1887 durch die Pionierarbeit von Laureano Guevarra, bekannt als Kapitan Moy.",
+				"Die drei trauernden Engel auf dem Quezon Memorial Shrine stehen für Luzon, die Visayas und Mindanao."
+			]
+		}
+	},
+	"ncr-city-of-manila-first-district": {
+		"region": {
+			"en": [
+				"The statistical label NCR, City of Manila, First District refers to Manila as a whole rather than its first congressional district.",
+				"San Agustin Church in Intramuros forms part of the UNESCO World Heritage site of the Baroque Churches of the Philippines.",
+				"José Rizal was executed at Bagumbayan, now Rizal Park in Manila, on 30 December 1896."
+			],
+			"it": [
+				"Il nome statistico NCR, City of Manila, First District indica l’intera Manila anziché il suo primo distretto congressuale.",
+				"La chiesa di San Agustin a Intramuros fa parte del sito del Patrimonio mondiale UNESCO delle Chiese barocche delle Filippine.",
+				"José Rizal fu giustiziato a Bagumbayan, oggi Rizal Park a Manila, il 30 dicembre 1896."
+			],
+			"de": [
+				"Die statistische Bezeichnung NCR, City of Manila, First District meint ganz Manila und nicht dessen ersten Kongresswahlkreis.",
+				"Die Kirche San Agustin in Intramuros gehört zur UNESCO-Welterbestätte Barockkirchen der Philippinen.",
+				"José Rizal wurde am 30. Dezember 1896 in Bagumbayan, dem heutigen Rizal Park in Manila, hingerichtet."
+			]
+		}
+	},
+	"rizal": {
+		"region": {
+			"en": [
+				"Rizal province was named in honour of José Rizal when it was created in 1901.",
+				"Carlos Botong Francisco brought the Angono-Binangonan petroglyphs to attention after finding the rock shelter in 1965.",
+				"Morong Church’s ornate front and bell tower were built by Bartolome Palatino between 1850 and 1853."
+			],
+			"it": [
+				"La provincia di Rizal fu chiamata in onore di José Rizal quando fu creata nel 1901.",
+				"Carlos Botong Francisco portò all’attenzione i petroglifi di Angono-Binangonan dopo aver trovato il riparo roccioso nel 1965.",
+				"La facciata ornata e il campanile della chiesa di Morong furono costruiti da Bartolome Palatino tra il 1850 e il 1853."
+			],
+			"de": [
+				"Die Provinz Rizal wurde bei ihrer Gründung 1901 zu Ehren von José Rizal benannt.",
+				"Carlos Botong Francisco machte auf die Petroglyphen von Angono-Binangonan aufmerksam, nachdem er den Felsunterstand 1965 gefunden hatte.",
+				"Die reich verzierte Fassade und der Glockenturm der Kirche von Morong wurden zwischen 1850 und 1853 von Bartolome Palatino errichtet."
+			]
+		}
+	},
+	"ncr-fourth-district": {
+		"region": {
+			"en": [
+				"NCR’s Fourth District was the statistical label used in 2009 for Las Piñas, Makati, Muntinlupa, Parañaque, Pasay, Taguig and Pateros.",
+				"Father Diego Cera completed the Bamboo Organ in Las Piñas in 1824.",
+				"Pateros preserves a culinary tradition of balut, boiled fertilised duck eggs."
+			],
+			"it": [
+				"Fourth District di NCR era il nome statistico usato nel 2009 per Las Piñas, Makati, Muntinlupa, Parañaque, Pasay, Taguig e Pateros.",
+				"Padre Diego Cera completò l’organo di bambù di Las Piñas nel 1824.",
+				"Pateros conserva la tradizione gastronomica del balut, uova fecondate di anatra bollite."
+			],
+			"de": [
+				"NCRs Fourth District war die 2009 verwendete statistische Bezeichnung für Las Piñas, Makati, Muntinlupa, Parañaque, Pasay, Taguig und Pateros.",
+				"Pater Diego Cera vollendete 1824 die Bambusorgel von Las Piñas.",
+				"Pateros bewahrt die kulinarische Tradition des Balut, gekochter befruchteter Enteneier."
+			]
+		}
+	},
+	"laguna": {
+		"region": {
+			"en": [
+				"Laguna’s name comes from the Spanish word for a lagoon or lake and refers to Laguna de Bay.",
+				"José Rizal was born in Calamba, Laguna, on 19 June 1861.",
+				"Paete’s woodcarvers produce religious images and architectural ornamentation, continuing a long local craft tradition."
+			],
+			"it": [
+				"Il nome Laguna deriva dalla parola spagnola per laguna o lago e si riferisce alla Laguna de Bay.",
+				"José Rizal nacque a Calamba, Laguna, il 19 giugno 1861.",
+				"Gli intagliatori di Paete realizzano immagini religiose e decorazioni architettoniche, continuando una lunga tradizione artigianale locale."
+			],
+			"de": [
+				"Lagunas Name stammt vom spanischen Wort für eine Lagune oder einen See und bezieht sich auf die Laguna de Bay.",
+				"José Rizal wurde am 19. Juni 1861 in Calamba, Laguna, geboren.",
+				"Die Holzschnitzer von Paete fertigen religiöse Figuren und Architekturschmuck und führen damit eine lange örtliche Handwerkstradition fort."
+			]
+		}
+	},
+	"cavite": {
+		"region": {
+			"en": [
+				"Cavite’s name derives from kawit, meaning hook, referring to the shape of the original Cavite peninsula.",
+				"Philippine independence was proclaimed at Emilio Aguinaldo’s house in Kawit on 12 June 1898.",
+				"Filipino revolutionaries defeated Spanish forces at Zapote Bridge in Bacoor in February 1897."
+			],
+			"it": [
+				"Il nome Cavite deriva da kawit, uncino, in riferimento alla forma della penisola originaria di Cavite.",
+				"L’indipendenza filippina fu proclamata nella casa di Emilio Aguinaldo a Kawit il 12 giugno 1898.",
+				"I rivoluzionari filippini sconfissero le forze spagnole al ponte Zapote a Bacoor nel febbraio 1897."
+			],
+			"de": [
+				"Cavites Name leitet sich von kawit, Haken, ab und bezieht sich auf die Form der ursprünglichen Halbinsel von Cavite.",
+				"Die philippinische Unabhängigkeit wurde am 12. Juni 1898 im Haus Emilio Aguinaldos in Kawit ausgerufen.",
+				"Philippinische Revolutionäre besiegten im Februar 1897 spanische Truppen an der Zapote-Brücke bei Bacoor."
+			]
+		}
+	},
+	"quezon": {
+		"region": {
+			"en": [
+				"Quezon province was formerly called Tayabas and was renamed in 1946 to honour Manuel L. Quezon.",
+				"Lucban’s Pahiyas celebration decorates houses with agricultural produce and colourful leaf-shaped rice wafers called kiping.",
+				"Malagonlong Bridge in Tayabas was built between 1840 and 1850."
+			],
+			"it": [
+				"La provincia di Quezon si chiamava Tayabas e fu rinominata nel 1946 in onore di Manuel L. Quezon.",
+				"La festa Pahiyas di Lucban decora le case con prodotti agricoli e cialde di riso colorate a forma di foglia chiamate kiping.",
+				"Il ponte Malagonlong a Tayabas fu costruito tra il 1840 e il 1850."
+			],
+			"de": [
+				"Die Provinz Quezon hieß früher Tayabas und wurde 1946 zu Ehren von Manuel L. Quezon umbenannt.",
+				"Beim Pahiyas-Fest in Lucban werden Häuser mit landwirtschaftlichen Erzeugnissen und bunten blattförmigen Reiswaffeln namens Kiping geschmückt.",
+				"Die Malagonlong-Brücke in Tayabas wurde zwischen 1840 und 1850 erbaut."
+			]
+		}
+	},
+	"camarines-norte": {
+		"region": {
+			"en": [
+				"Camarines Norte combines the Spanish word norte, north, with camarines, referring to granaries or warehouses.",
+				"Daet’s Rizal monument was unveiled on 30 December 1898, making it the first monument dedicated to José Rizal in the Philippines.",
+				"The reformist writer José Maria Panganiban was born in Mambulao, now Jose Panganiban, in 1863."
+			],
+			"it": [
+				"Camarines Norte combina la parola spagnola norte, nord, con camarines, che indica granai o magazzini.",
+				"Il monumento a Rizal di Daet fu inaugurato il 30 dicembre 1898 e fu il primo monumento dedicato a José Rizal nelle Filippine.",
+				"Lo scrittore riformista José Maria Panganiban nacque a Mambulao, oggi Jose Panganiban, nel 1863."
+			],
+			"de": [
+				"Camarines Norte verbindet das spanische Wort norte, Norden, mit camarines für Kornspeicher oder Lagerhäuser.",
+				"Das Rizal-Denkmal in Daet wurde am 30. Dezember 1898 als erstes Denkmal für José Rizal auf den Philippinen eingeweiht.",
+				"Der reformorientierte Schriftsteller José Maria Panganiban wurde 1863 in Mambulao, dem heutigen Jose Panganiban, geboren."
+			]
+		}
+	},
+	"batangas": {
+		"region": {
+			"en": [
+				"Batangas takes its name from batang, a local word for logs associated with the Calumpang River.",
+				"Construction of the present Taal Basilica began in 1856, and the church was inaugurated in 1865.",
+				"Marcela Mariño Agoncillo, who helped sew the first Philippine flag in Hong Kong, was born in Taal in 1859."
+			],
+			"it": [
+				"Batangas prende il nome da batang, parola locale per tronchi associata al fiume Calumpang.",
+				"La costruzione dell’attuale basilica di Taal iniziò nel 1856 e la chiesa fu inaugurata nel 1865.",
+				"Marcela Mariño Agoncillo, che contribuì a cucire la prima bandiera filippina a Hong Kong, nacque a Taal nel 1859."
+			],
+			"de": [
+				"Batangas ist nach batang benannt, einem örtlichen Wort für Baumstämme, das mit dem Calumpang-Fluss verbunden wird.",
+				"Der Bau der heutigen Basilika von Taal begann 1856; die Kirche wurde 1865 eingeweiht.",
+				"Marcela Mariño Agoncillo, die in Hongkong an der ersten philippinischen Flagge nähte, wurde 1859 in Taal geboren."
+			]
+		},
+		"city": {
+			"en": [
+				"Batangas City’s name is linked to batang, the local word for logs once abundant along the Calumpang River.",
+				"The present Basilica of the Immaculate Conception was blessed in February 1857.",
+				"Plaza Mabini in Batangas City was inaugurated in July 1915."
+			],
+			"it": [
+				"Il nome Batangas City è legato a batang, la parola locale per i tronchi un tempo abbondanti lungo il fiume Calumpang.",
+				"L’attuale basilica dell’Immacolata Concezione fu benedetta nel febbraio 1857.",
+				"Plaza Mabini a Batangas City fu inaugurata nel luglio 1915."
+			],
+			"de": [
+				"Der Name Batangas City wird mit batang verbunden, dem örtlichen Wort für die einst am Calumpang-Fluss häufigen Baumstämme.",
+				"Die heutige Basilika der Unbefleckten Empfängnis wurde im Februar 1857 geweiht.",
+				"Die Plaza Mabini in Batangas City wurde im Juli 1915 eingeweiht."
+			]
+		}
+	},
+	"catanduanes": {
+		"region": {
+			"en": [
+				"The name Catandungan was recorded in a 1738 account of the island now called Catanduanes.",
+				"The present stone church at Bato was begun in 1852, and its facade was completed in 1883.",
+				"Catanduanes was officially designated the Abaca Capital of the Philippines in 2022."
+			],
+			"it": [
+				"Il nome Catandungan fu registrato in un resoconto del 1738 sull’isola oggi chiamata Catanduanes.",
+				"L’attuale chiesa in pietra di Bato fu iniziata nel 1852 e la sua facciata fu completata nel 1883.",
+				"Catanduanes fu ufficialmente designata Capitale dell’abaca delle Filippine nel 2022."
+			],
+			"de": [
+				"Der Name Catandungan ist in einem Bericht von 1738 über die heute Catanduanes genannte Insel überliefert.",
+				"Die heutige Steinkirche von Bato wurde 1852 begonnen; ihre Fassade wurde 1883 vollendet.",
+				"Catanduanes wurde 2022 offiziell zur Abaca-Hauptstadt der Philippinen erklärt."
+			]
+		}
+	},
+	"camarines-sur": {
+		"region": {
+			"en": [
+				"Camarines Sur combines the Spanish word sur, south, with camarines, referring to granaries or warehouses.",
+				"Nabua’s present church was completed in 1700 after several earlier churches were destroyed.",
+				"Lake Buhi was famous for the tiny sinarapan goby, Mistichthys luzonensis, whose fishery collapsed in the late 1970s."
+			],
+			"it": [
+				"Camarines Sur combina la parola spagnola sur, sud, con camarines, che indica granai o magazzini.",
+				"L’attuale chiesa di Nabua fu completata nel 1700, dopo la distruzione di diverse chiese precedenti.",
+				"Il lago Buhi era famoso per il minuscolo ghiozzo sinarapan, Mistichthys luzonensis, la cui pesca crollò alla fine degli anni Settanta."
+			],
+			"de": [
+				"Camarines Sur verbindet das spanische Wort sur, Süden, mit camarines für Kornspeicher oder Lagerhäuser.",
+				"Die heutige Kirche von Nabua wurde 1700 vollendet, nachdem mehrere Vorgängerkirchen zerstört worden waren.",
+				"Der Buhi-See war für die winzige Sinarapan-Grundel Mistichthys luzonensis bekannt, deren Fischerei Ende der 1970er Jahre zusammenbrach."
+			]
+		}
+	},
+	"marinduque": {
+		"region": {
+			"en": [
+				"Marinduque appears as Malinduque in a record of encomiendas assigned in 1571.",
+				"During Marinduque’s Moryonan observances, penitents wear wooden masks and costumes representing Roman soldiers during Holy Week.",
+				"Filipino forces led by Maximo Abad defeated a US detachment at Pulang Lupa in Torrijos in September 1900."
+			],
+			"it": [
+				"Marinduque compare come Malinduque in un elenco di encomiendas assegnate nel 1571.",
+				"Durante le celebrazioni Moryonan di Marinduque, i penitenti indossano maschere di legno e costumi da soldati romani nella Settimana santa.",
+				"Le forze filippine guidate da Maximo Abad sconfissero un reparto statunitense a Pulang Lupa, Torrijos, nel settembre 1900."
+			],
+			"de": [
+				"Marinduque erscheint als Malinduque in einem Verzeichnis der 1571 vergebenen Encomiendas.",
+				"Bei Marinduques Moryonan-Bräuchen tragen Büßer in der Karwoche Holzmasken und Kostüme römischer Soldaten.",
+				"Philippinische Truppen unter Maximo Abad besiegten im September 1900 eine US-Einheit bei Pulang Lupa in Torrijos."
+			]
+		}
+	},
+	"albay": {
+		"region": {
+			"en": [
+				"The territory that became Albay was historically known as the Partido de Ibalon.",
+				"The ruins of Cagsawa Church recall its destruction during Mayon’s eruption on 1 February 1814.",
+				"Franciscan friars built Daraga’s stone church in 1773."
+			],
+			"it": [
+				"Il territorio che divenne Albay era storicamente noto come Partido de Ibalon.",
+				"Le rovine della chiesa di Cagsawa ricordano la sua distruzione durante l’eruzione del Mayon del 1º febbraio 1814.",
+				"I frati francescani costruirono la chiesa in pietra di Daraga nel 1773."
+			],
+			"de": [
+				"Das Gebiet, aus dem Albay hervorging, war historisch als Partido de Ibalon bekannt.",
+				"Die Ruinen der Kirche von Cagsawa erinnern an ihre Zerstörung beim Ausbruch des Mayon am 1. Februar 1814.",
+				"Franziskaner errichteten 1773 die Steinkirche von Daraga."
+			]
+		}
+	},
+	"occidental-mindoro": {
+		"region": {
+			"en": [
+				"Occidental Mindoro means western Mindoro, a provincial name adopted in the island’s division under a 1950 law.",
+				"Apo Reef off Sablayan was proclaimed a natural park in 1996.",
+				"Mounts Iglit-Baco Natural Park protects the tamaraw, a wild buffalo found only on Mindoro."
+			],
+			"it": [
+				"Occidental Mindoro significa Mindoro occidentale, nome provinciale adottato con la divisione dell’isola prevista da una legge del 1950.",
+				"L’Apo Reef al largo di Sablayan fu proclamato parco naturale nel 1996.",
+				"Il parco naturale dei monti Iglit-Baco protegge il tamaraw, bufalo selvatico presente soltanto a Mindoro."
+			],
+			"de": [
+				"Occidental Mindoro bedeutet westliches Mindoro, ein bei der Teilung der Insel durch ein Gesetz von 1950 angenommener Provinzname.",
+				"Das Apo-Riff bei Sablayan wurde 1996 zum Naturpark erklärt.",
+				"Der Naturpark Mounts Iglit-Baco schützt den Tamarau, einen nur auf Mindoro vorkommenden Wildbüffel."
+			]
+		}
+	},
+	"oriental-mindoro": {
+		"region": {
+			"en": [
+				"Oriental Mindoro means eastern Mindoro, a provincial name adopted when Mindoro was divided under a 1950 law.",
+				"Puerto Galera became part of UNESCO’s World Network of Biosphere Reserves in 1977.",
+				"Hanunuo Mangyan poet Ginaw Bilog of Mansalay preserved ambahan verse, composed in seven-syllable lines and often inscribed on bamboo."
+			],
+			"it": [
+				"Oriental Mindoro significa Mindoro orientale, nome provinciale adottato quando Mindoro fu divisa in base a una legge del 1950.",
+				"Puerto Galera entrò nella rete mondiale delle riserve della biosfera UNESCO nel 1977.",
+				"Il poeta hanunuo mangyan Ginaw Bilog di Mansalay conservò la poesia ambahan, composta in versi di sette sillabe e spesso incisa sul bambù."
+			],
+			"de": [
+				"Oriental Mindoro bedeutet östliches Mindoro, ein bei der Teilung Mindoros durch ein Gesetz von 1950 angenommener Provinzname.",
+				"Puerto Galera wurde 1977 Teil des UNESCO-Weltnetzes der Biosphärenreservate.",
+				"Der Hanunuo-Mangyan-Dichter Ginaw Bilog aus Mansalay bewahrte die Ambahan-Dichtung mit siebensilbigen Verszeilen, die häufig in Bambus geritzt werden."
+			]
+		}
+	},
+	"sorsogon": {
+		"region": {
+			"en": [
+				"Sorsogon province adopted the name of its capital town when it was separated from Albay in 1894.",
+				"Barcelona’s neoclassical stone-and-coral church was built in 1874.",
+				"Donsol’s waters support seasonal gatherings of whale sharks, locally known as butanding."
+			],
+			"it": [
+				"La provincia di Sorsogon adottò il nome del suo capoluogo quando fu separata da Albay nel 1894.",
+				"La chiesa neoclassica di Barcelona, in pietra e corallo, fu costruita nel 1874.",
+				"Le acque di Donsol ospitano aggregazioni stagionali di squali balena, chiamati localmente butanding."
+			],
+			"de": [
+				"Die Provinz Sorsogon übernahm bei ihrer Abtrennung von Albay 1894 den Namen ihrer Hauptstadt.",
+				"Die neoklassizistische Kirche von Barcelona aus Stein und Korallenkalk wurde 1874 erbaut.",
+				"In den Gewässern von Donsol versammeln sich saisonal Walhaie, die örtlich Butanding heißen."
+			]
+		}
+	},
+	"romblon": {
+		"region": {
+			"en": [
+				"Romblon appears as Donblón in a record of encomiendas assigned in 1571.",
+				"The precolonial Banton burial cloth, found in 1939, was woven from abaca fibres using the warp-ikat technique.",
+				"Romblon’s marble-working tradition includes carving locally quarried stone into sculptures and decorative objects."
+			],
+			"it": [
+				"Romblon compare come Donblón in un elenco di encomiendas assegnate nel 1571.",
+				"Il tessuto funerario precoloniale di Banton, trovato nel 1939, fu tessuto con fibre di abaca mediante la tecnica ikat sull’ordito.",
+				"La tradizione della lavorazione del marmo di Romblon comprende l’intaglio della pietra estratta localmente per ricavarne sculture e oggetti decorativi."
+			],
+			"de": [
+				"Romblon erscheint als Donblón in einem Verzeichnis der 1571 vergebenen Encomiendas.",
+				"Das 1939 gefundene vorkoloniale Grabtuch von Banton wurde aus Abacafasern in Kettikat-Technik gewebt.",
+				"Zur Tradition der Marmorverarbeitung auf Romblon gehört das Schnitzen von Skulpturen und Ziergegenständen aus örtlich gewonnenem Stein."
+			]
+		}
+	},
+	"masbate": {
+		"region": {
+			"en": [
+				"Masbate Island was historically called Masbat or Masbad.",
+				"Masbate’s rodeo festival began in 1993 to celebrate and promote the province’s cattle-ranching heritage.",
+				"The Kalanay archaeological site in Masbate yielded decorated pottery associated with ancient burials."
+			],
+			"it": [
+				"L’isola di Masbate era storicamente chiamata Masbat o Masbad.",
+				"Il festival del rodeo di Masbate iniziò nel 1993 per celebrare e promuovere il patrimonio provinciale dell’allevamento bovino.",
+				"Il sito archeologico di Kalanay a Masbate ha restituito ceramiche decorate associate a sepolture antiche."
+			],
+			"de": [
+				"Die Insel Masbate wurde historisch Masbat oder Masbad genannt.",
+				"Masbates Rodeofestival begann 1993, um die Tradition der Rinderhaltung in der Provinz zu feiern und zu fördern.",
+				"Die archäologische Fundstätte Kalanay auf Masbate lieferte verzierte Keramik im Zusammenhang mit alten Bestattungen."
+			]
+		}
+	},
+	"northern-samar": {
+		"region": {
+			"en": [
+				"Northern Samar received its provincial name in the 1965 legislation dividing Samar into three provinces.",
+				"The Inabaknon language spoken on Capul belongs to the Sama language group rather than the neighbouring Visayan languages.",
+				"Agustin Sumuroy began a revolt against forced labour and Spanish abuses in Palapag in June 1649."
+			],
+			"it": [
+				"Northern Samar ricevette il proprio nome provinciale con la legge del 1965 che divise Samar in tre province.",
+				"La lingua inabaknon parlata a Capul appartiene al gruppo delle lingue sama anziché alle vicine lingue visayane.",
+				"Agustin Sumuroy iniziò a Palapag nel giugno 1649 una rivolta contro il lavoro forzato e gli abusi spagnoli."
+			],
+			"de": [
+				"Northern Samar erhielt seinen Provinznamen durch das Gesetz von 1965, das Samar in drei Provinzen teilte.",
+				"Die auf Capul gesprochene Sprache Inabaknon gehört zur Sama-Sprachgruppe und nicht zu den benachbarten Visaya-Sprachen.",
+				"Agustin Sumuroy begann im Juni 1649 in Palapag einen Aufstand gegen Zwangsarbeit und spanische Übergriffe."
+			]
+		}
+	},
+	"samar": {
+		"region": {
+			"en": [
+				"Samar province was called Western Samar after the 1965 division and adopted its shorter official name in 1969.",
+				"Basey’s banig makers weave patterned mats from tikog fibres.",
+				"The Sohoton caves and natural bridge in Basey are formed in limestone, with underground rivers and calcite formations."
+			],
+			"it": [
+				"La provincia di Samar fu chiamata Western Samar dopo la divisione del 1965 e adottò il nome ufficiale abbreviato nel 1969.",
+				"Gli artigiani del banig di Basey intrecciano stuoie decorate con fibre di tikog.",
+				"Le grotte e il ponte naturale di Sohoton a Basey si trovano nel calcare, con fiumi sotterranei e concrezioni di calcite."
+			],
+			"de": [
+				"Die Provinz Samar hieß nach der Teilung von 1965 Western Samar und nahm 1969 ihren kürzeren amtlichen Namen an.",
+				"Die Banig-Handwerker von Basey flechten gemusterte Matten aus Tikogfasern.",
+				"Die Sohoton-Höhlen und die Naturbrücke in Basey liegen im Kalkstein, mit unterirdischen Flüssen und Calcitbildungen."
+			]
+		}
+	},
+	"biliran": {
+		"region": {
+			"en": [
+				"Biliran Island was known in early Spanish accounts as Isla de Panamao.",
+				"Biliran served as a shipbuilding site during the Spanish colonial period.",
+				"Biliran became a separate province in 1992 after previously being a subprovince of Leyte."
+			],
+			"it": [
+				"L’isola di Biliran era nota nei primi resoconti spagnoli come Isla de Panamao.",
+				"Biliran fu sede di costruzione navale durante il periodo coloniale spagnolo.",
+				"Biliran divenne una provincia separata nel 1992, dopo essere stata una sottoprovincia di Leyte."
+			],
+			"de": [
+				"Die Insel Biliran war in frühen spanischen Berichten als Isla de Panamao bekannt.",
+				"Biliran diente während der spanischen Kolonialzeit als Schiffbauplatz.",
+				"Biliran wurde 1992 eine eigene Provinz, nachdem es zuvor eine Unterprovinz von Leyte gewesen war."
+			]
+		}
+	},
+	"aklan": {
+		"region": {
+			"en": [
+				"Local tradition links Aklan’s name to Akean, the name of its river.",
+				"Aklan’s piña handloom weavers make fine cloth from pineapple-leaf fibres, a practice inscribed by UNESCO in 2023.",
+				"Kalibo’s Ati-atihan festival honours the Santo Niño with processions, dancing and drum music."
+			],
+			"it": [
+				"La tradizione locale collega il nome Aklan ad Akean, nome del suo fiume.",
+				"I tessitori manuali di piña di Aklan producono stoffe pregiate con fibre di foglie di ananas, pratica iscritta dall’UNESCO nel 2023.",
+				"Il festival Ati-atihan di Kalibo onora il Santo Niño con processioni, danze e musica di tamburi."
+			],
+			"de": [
+				"Die örtliche Überlieferung verbindet Aklans Namen mit Akean, dem Namen seines Flusses.",
+				"Aklans Piña-Handweber stellen feine Stoffe aus Ananasblattfasern her; die UNESCO nahm diese Praxis 2023 in ihre Liste auf.",
+				"Kalibos Ati-atihan-Fest ehrt den Santo Niño mit Prozessionen, Tänzen und Trommelmusik."
+			]
+		}
+	},
+	"eastern-samar": {
+		"region": {
+			"en": [
+				"Eastern Samar received its provincial name in the 1965 legislation dividing Samar into three provinces.",
+				"Magellan’s expedition landed on Homonhon, now part of Guiuan, in March 1521.",
+				"The Balangiga church bells taken by US troops in 1901 were returned to the Philippines in 2018."
+			],
+			"it": [
+				"Eastern Samar ricevette il proprio nome provinciale con la legge del 1965 che divise Samar in tre province.",
+				"La spedizione di Magellano sbarcò a Homonhon, oggi parte di Guiuan, nel marzo 1521.",
+				"Le campane della chiesa di Balangiga, prelevate dalle truppe statunitensi nel 1901, furono restituite alle Filippine nel 2018."
+			],
+			"de": [
+				"Eastern Samar erhielt seinen Provinznamen durch das Gesetz von 1965, das Samar in drei Provinzen teilte.",
+				"Magellans Expedition landete im März 1521 auf Homonhon, das heute zu Guiuan gehört.",
+				"Die 1901 von US-Truppen mitgenommenen Kirchenglocken von Balangiga wurden 2018 an die Philippinen zurückgegeben."
+			]
+		}
+	},
+	"capiz": {
+		"region": {
+			"en": [
+				"Capiz retains a name once shared with its capital, now called Roxas City.",
+				"Juan Reina cast the large bronze bell of Santa Monica Church in Panay in 1878.",
+				"Philippine president Manuel Roxas was born in Capiz, now Roxas City, in 1892."
+			],
+			"it": [
+				"Capiz conserva un nome un tempo condiviso con il suo capoluogo, oggi chiamato Roxas City.",
+				"Juan Reina fuse la grande campana di bronzo della chiesa di Santa Monica a Panay nel 1878.",
+				"Il presidente filippino Manuel Roxas nacque a Capiz, oggi Roxas City, nel 1892."
+			],
+			"de": [
+				"Capiz bewahrt den Namen, den einst auch seine heute Roxas City genannte Hauptstadt trug.",
+				"Juan Reina goss 1878 die große Bronzeglocke der Kirche Santa Monica in Panay.",
+				"Der philippinische Präsident Manuel Roxas wurde 1892 in Capiz, dem heutigen Roxas City, geboren."
+			]
+		}
+	},
+	"antique": {
+		"region": {
+			"en": [
+				"Antique’s name developed from Hamtik, an older place-name associated with a local word for large ants.",
+				"Weavers in Bagtason, Bugasong, produce patadyong cloth on handlooms.",
+				"Former governor Evelio Javier was assassinated in San Jose de Buenavista on 11 February 1986 while monitoring election vote counting."
+			],
+			"it": [
+				"Il nome Antique si sviluppò da Hamtik, antico toponimo associato a una parola locale per grandi formiche.",
+				"I tessitori di Bagtason, Bugasong, producono tessuti patadyong su telai manuali.",
+				"L’ex governatore Evelio Javier fu assassinato a San Jose de Buenavista l’11 febbraio 1986 mentre sorvegliava lo spoglio dei voti elettorali."
+			],
+			"de": [
+				"Antiques Name entwickelte sich aus Hamtik, einem älteren Ortsnamen, der mit einem örtlichen Wort für große Ameisen verbunden ist.",
+				"Weber in Bagtason, Bugasong, fertigen Patadyong-Stoffe auf Handwebstühlen.",
+				"Der frühere Gouverneur Evelio Javier wurde am 11. Februar 1986 in San Jose de Buenavista ermordet, während er die Stimmenauszählung überwachte."
+			]
+		}
+	},
+	"iloilo": {
+		"region": {
+			"en": [
+				"Iloilo’s provincial name derives from Irong-Irong, the old name of its namesake city, associated with a nose-shaped tract of land.",
+				"Miagao Church was built between 1787 and 1797 and also served as a defensive stronghold.",
+				"San Joaquin Church’s pediment depicts a battle between Spanish and Moroccan forces at Tetuan."
+			],
+			"it": [
+				"Il nome della provincia di Iloilo deriva da Irong-Irong, antico nome della città omonima, associato a un terreno a forma di naso.",
+				"La chiesa di Miagao fu costruita tra il 1787 e il 1797 e servì anche come roccaforte difensiva.",
+				"Il frontone della chiesa di San Joaquin raffigura una battaglia tra forze spagnole e marocchine a Tetuan."
+			],
+			"de": [
+				"Der Provinzname Iloilo leitet sich von Irong-Irong ab, dem alten Namen der gleichnamigen Stadt, der mit einer nasenförmigen Landfläche verbunden ist.",
+				"Die Kirche von Miagao wurde zwischen 1787 und 1797 erbaut und diente auch als Verteidigungsstützpunkt.",
+				"Der Giebel der Kirche von San Joaquin zeigt eine Schlacht zwischen spanischen und marokkanischen Truppen bei Tetuan."
+			]
+		},
+		"city": {
+			"en": [
+				"Iloilo’s name is associated with Irong-Irong and the nose-shaped land beside its river.",
+				"Jaro’s brick-and-coral bell tower was first built in 1744 to serve as both a belfry and a watchtower.",
+				"La Paz batchoy is a signature noodle dish of Iloilo City."
+			],
+			"it": [
+				"Il nome Iloilo è associato a Irong-Irong e alla terra a forma di naso accanto al fiume.",
+				"Il campanile di Jaro, in mattoni e corallo, fu costruito per la prima volta nel 1744 per servire anche come torre di avvistamento.",
+				"La Paz batchoy è un piatto di noodles caratteristico di Iloilo City."
+			],
+			"de": [
+				"Iloilos Name wird mit Irong-Irong und dem nasenförmigen Land am Fluss verbunden.",
+				"Jaros Turm aus Ziegeln und Korallenstein wurde 1744 erstmals als Glocken- und Wachturm erbaut.",
+				"La Paz Batchoy ist ein typisches Nudelgericht von Iloilo City."
+			]
+		}
+	},
+	"leyte": {
+		"region": {
+			"en": [
+				"The Spanish navigator Ruy López de Villalobos applied the name Felipina to Leyte in 1543.",
+				"Douglas MacArthur and Philippine president Sergio Osmeña landed at Palo on 20 October 1944 during the liberation campaign.",
+				"Visayas State University in Baybay began as the Baybay Agricultural School in 1924."
+			],
+			"it": [
+				"Il navigatore spagnolo Ruy López de Villalobos diede a Leyte il nome Felipina nel 1543.",
+				"Douglas MacArthur e il presidente filippino Sergio Osmeña sbarcarono a Palo il 20 ottobre 1944 durante la campagna di liberazione.",
+				"La Visayas State University a Baybay iniziò come Baybay Agricultural School nel 1924."
+			],
+			"de": [
+				"Der spanische Seefahrer Ruy López de Villalobos gab Leyte 1543 den Namen Felipina.",
+				"Douglas MacArthur und der philippinische Präsident Sergio Osmeña landeten am 20. Oktober 1944 während des Befreiungsfeldzugs bei Palo.",
+				"Die Visayas State University in Baybay begann 1924 als Baybay Agricultural School."
+			]
+		}
+	},
+	"guimaras": {
+		"region": {
+			"en": [
+				"Guimaras became a province independent of Iloilo in 1992.",
+				"Navalas Church in Buenavista was built between 1880 and 1885.",
+				"Guimaras was declared a special quarantine zone in 1993 to protect its mango crops from destructive weevils."
+			],
+			"it": [
+				"Guimaras divenne una provincia indipendente da Iloilo nel 1992.",
+				"La chiesa di Navalas a Buenavista fu costruita tra il 1880 e il 1885.",
+				"Guimaras fu dichiarata zona speciale di quarantena nel 1993 per proteggere le coltivazioni di mango da punteruoli dannosi."
+			],
+			"de": [
+				"Guimaras wurde 1992 eine von Iloilo unabhängige Provinz.",
+				"Die Navalas-Kirche in Buenavista wurde zwischen 1880 und 1885 erbaut.",
+				"Guimaras wurde 1993 zur besonderen Quarantänezone erklärt, um seine Mangokulturen vor schädlichen Rüsselkäfern zu schützen."
+			]
+		}
+	},
+	"cebu": {
+		"region": {
+			"en": [
+				"Cebu’s provincial name preserves the name of the old trading settlement of Sugbu.",
+				"Construction of the present Boljoon Church began in 1783 after the previous church burned down.",
+				"Malapascua Island in Daanbantayan is known for diving encounters with thresher sharks."
+			],
+			"it": [
+				"Il nome della provincia di Cebu conserva quello del vecchio insediamento commerciale di Sugbu.",
+				"La costruzione della chiesa attuale di Boljoon iniziò nel 1783 dopo un incendio della chiesa precedente.",
+				"L’isola di Malapascua a Daanbantayan è nota per le immersioni con avvistamenti di squali volpe."
+			],
+			"de": [
+				"Der Provinzname Cebu bewahrt den Namen der alten Handelssiedlung Sugbu.",
+				"Der Bau der heutigen Kirche von Boljoon begann 1783 nach einem Brand der Vorgängerkirche.",
+				"Die Insel Malapascua in Daanbantayan ist für Tauchbegegnungen mit Fuchshaien bekannt."
+			]
+		},
+		"city": {
+			"en": [
+				"Cebu became the site of a permanent Spanish settlement in 1565.",
+				"Fort San Pedro is a triangular stone fort with three bastions.",
+				"Cebu’s present Santo Niño church was built in the 1730s and blessed in January 1740."
+			],
+			"it": [
+				"Cebu divenne sede di un insediamento spagnolo permanente nel 1565.",
+				"Fort San Pedro è un forte triangolare in pietra con tre bastioni.",
+				"L’attuale chiesa del Santo Niño di Cebu fu costruita negli anni 1730 e benedetta nel gennaio 1740."
+			],
+			"de": [
+				"Cebu wurde 1565 Standort einer dauerhaften spanischen Siedlung.",
+				"Fort San Pedro ist eine dreieckige Steinfestung mit drei Bastionen.",
+				"Cebus heutige Santo-Niño-Kirche wurde in den 1730er Jahren erbaut und im Januar 1740 geweiht."
+			]
+		}
+	},
+	"southern-leyte": {
+		"region": {
+			"en": [
+				"Southern Leyte was inaugurated as a separate province on 1 July 1960, following a law passed in 1959.",
+				"Magellan’s expedition landed on Limasawa on 28 March 1521.",
+				"Maasin had a court and provincial treasury office serving southern and western Leyte during Spanish rule."
+			],
+			"it": [
+				"Southern Leyte fu inaugurata come provincia separata il 1º luglio 1960, in seguito a una legge approvata nel 1959.",
+				"La spedizione di Magellano sbarcò a Limasawa il 28 marzo 1521.",
+				"Durante il dominio spagnolo Maasin ospitava un tribunale e una tesoreria provinciale al servizio del Leyte meridionale e occidentale."
+			],
+			"de": [
+				"Southern Leyte wurde am 1. Juli 1960 nach einem 1959 verabschiedeten Gesetz als eigene Provinz eingeweiht.",
+				"Magellans Expedition landete am 28. März 1521 auf Limasawa.",
+				"Unter spanischer Herrschaft befanden sich in Maasin ein Gericht und eine Provinzkasse für das südliche und westliche Leyte."
+			]
+		}
+	},
+	"negros-occidental": {
+		"region": {
+			"en": [
+				"Negros Occidental became a separate province in 1890 when Negros was divided into western and eastern provinces.",
+				"Silay’s Spanish garrison surrendered to local revolutionaries on 5 November 1898.",
+				"Sugar production expanded rapidly in nineteenth-century Negros Occidental as steam-powered mills were introduced."
+			],
+			"it": [
+				"Negros Occidental divenne una provincia separata nel 1890, quando Negros fu divisa in province occidentale e orientale.",
+				"La guarnigione spagnola di Silay si arrese ai rivoluzionari locali il 5 novembre 1898.",
+				"La produzione di zucchero crebbe rapidamente nella Negros Occidental ottocentesca con l’introduzione di mulini a vapore."
+			],
+			"de": [
+				"Negros Occidental wurde 1890 eine eigene Provinz, als Negros in eine westliche und eine östliche Provinz geteilt wurde.",
+				"Die spanische Garnison von Silay ergab sich am 5. November 1898 den örtlichen Revolutionären.",
+				"Die Zuckerproduktion in Negros Occidental wuchs im neunzehnten Jahrhundert mit der Einführung dampfbetriebener Mühlen stark an."
+			]
+		}
+	},
+	"dinagat-islands": {
+		"region": {
+			"en": [
+				"Dinagat Islands was created from Surigao del Norte by legislation approved in October 2006.",
+				"The province’s charter designated San Jose as its capital.",
+				"US Army Rangers landed on Dinagat in October 1944 to help secure the entrance to Leyte Gulf."
+			],
+			"it": [
+				"Dinagat Islands fu creata da Surigao del Norte con una legge approvata nell’ottobre 2006.",
+				"La legge istitutiva della provincia designò San Jose come capoluogo.",
+				"I ranger dell’esercito statunitense sbarcarono a Dinagat nell’ottobre 1944 per contribuire a mettere in sicurezza l’ingresso al golfo di Leyte."
+			],
+			"de": [
+				"Dinagat Islands wurde durch ein im Oktober 2006 verabschiedetes Gesetz aus Surigao del Norte geschaffen.",
+				"Das Gründungsgesetz der Provinz bestimmte San Jose zur Hauptstadt.",
+				"Ranger der US-Armee landeten im Oktober 1944 auf Dinagat, um die Zufahrt zum Golf von Leyte zu sichern."
+			]
+		}
+	},
+	"palawan": {
+		"region": {
+			"en": [
+				"Palawan’s Tabon Cave is named after a ground-nesting megapode bird.",
+				"Archaeologists from the National Museum carried out major excavations at the Tabon caves between 1962 and 1965.",
+				"Tubbataha Reefs in Cagayancillo became a UNESCO World Heritage site in 1993."
+			],
+			"it": [
+				"La grotta Tabon di Palawan prende il nome da un megapodio che nidifica nel terreno.",
+				"Gli archeologi del Museo Nazionale condussero importanti scavi nelle grotte Tabon tra il 1962 e il 1965.",
+				"Le barriere coralline di Tubbataha a Cagayancillo divennero patrimonio mondiale dell’UNESCO nel 1993."
+			],
+			"de": [
+				"Palawans Tabon-Höhle ist nach einem bodenbrütenden Großfußhuhn benannt.",
+				"Archäologen des Nationalmuseums führten zwischen 1962 und 1965 bedeutende Ausgrabungen in den Tabon-Höhlen durch.",
+				"Die Tubbataha-Riffe in Cagayancillo wurden 1993 UNESCO-Welterbe."
+			]
+		}
+	},
+	"bohol": {
+		"region": {
+			"en": [
+				"Bohol became a separate politico-military province in 1854 after being administered from Cebu.",
+				"Punta Cruz watchtower in Maribojoc dates from 1796.",
+				"Bohol’s nineteenth-century churches include later porticoes built in front of older stone façades, as at Baclayon and Loboc."
+			],
+			"it": [
+				"Bohol divenne una provincia politico-militare separata nel 1854 dopo essere stata amministrata da Cebu.",
+				"La torre di avvistamento di Punta Cruz a Maribojoc risale al 1796.",
+				"Le chiese ottocentesche di Bohol comprendono portici aggiunti davanti a facciate in pietra più antiche, come a Baclayon e Loboc."
+			],
+			"de": [
+				"Bohol wurde 1854 nach der Verwaltung von Cebu aus eine eigene politisch-militärische Provinz.",
+				"Der Wachturm von Punta Cruz in Maribojoc stammt aus dem Jahr 1796.",
+				"Zu Bohols Kirchen des neunzehnten Jahrhunderts gehören Bauten mit später vor ältere Steinfassaden gesetzten Vorhallen, etwa in Baclayon und Loboc."
+			]
+		}
+	},
+	"negros-oriental": {
+		"region": {
+			"en": [
+				"Negros Oriental was established as a separate province on 1 January 1890.",
+				"Bacong’s Saint Augustine Church contains a pipe organ made by the Roques brothers of Zaragoza in 1894.",
+				"Archaeologists have recovered an unusual rectangular earthenware burial vessel from Bacong."
+			],
+			"it": [
+				"Negros Oriental fu istituita come provincia separata il 1º gennaio 1890.",
+				"La chiesa di Sant’Agostino a Bacong custodisce un organo a canne realizzato dai fratelli Roques di Saragozza nel 1894.",
+				"Gli archeologi hanno recuperato a Bacong un insolito recipiente funerario rettangolare in terracotta."
+			],
+			"de": [
+				"Negros Oriental wurde am 1. Januar 1890 als eigene Provinz eingerichtet.",
+				"Die Kirche des heiligen Augustinus in Bacong besitzt eine 1894 von den Brüdern Roques aus Saragossa gefertigte Pfeifenorgel.",
+				"Archäologen haben in Bacong ein ungewöhnliches rechteckiges Bestattungsgefäß aus Ton geborgen."
+			]
+		}
+	},
+	"surigao-del-norte": {
+		"region": {
+			"en": [
+				"Surigao del Norte received its name when Surigao was divided into northern and southern provinces in 1960.",
+				"Cloud 9, a renowned surfing break, is in General Luna on Siargao Island.",
+				"Siargao’s island-hopping routes visit Daku, Guyam and Naked Island."
+			],
+			"it": [
+				"Surigao del Norte ricevette il proprio nome quando Surigao fu divisa in province settentrionale e meridionale nel 1960.",
+				"Cloud 9, una celebre onda da surf, si trova a General Luna sull’isola di Siargao.",
+				"Gli itinerari tra le isole di Siargao visitano Daku, Guyam e Naked Island."
+			],
+			"de": [
+				"Surigao del Norte erhielt seinen Namen bei der Teilung Surigaos in eine nördliche und eine südliche Provinz im Jahr 1960.",
+				"Cloud 9, eine bekannte Surfwelle, liegt bei General Luna auf der Insel Siargao.",
+				"Inselrundfahrten bei Siargao führen nach Daku, Guyam und Naked Island."
+			]
+		}
+	},
+	"siquijor": {
+		"region": {
+			"en": [
+				"Siquijor became an independent province in 1971 after being part of Negros Oriental.",
+				"Filipino artisans completed Lazi Church in 1884 and its bell tower the following year.",
+				"Siquijor’s Saint Francis of Assisi parish was founded on 1 February 1783."
+			],
+			"it": [
+				"Siquijor divenne una provincia indipendente nel 1971 dopo aver fatto parte di Negros Oriental.",
+				"Artigiani filippini completarono la chiesa di Lazi nel 1884 e il campanile nell’anno successivo.",
+				"La parrocchia di San Francesco d’Assisi a Siquijor fu fondata il 1º febbraio 1783."
+			],
+			"de": [
+				"Siquijor wurde 1971 eine unabhängige Provinz, nachdem es zu Negros Oriental gehört hatte.",
+				"Philippinische Handwerker vollendeten 1884 die Kirche von Lazi und im folgenden Jahr ihren Glockenturm.",
+				"Die Pfarrei des heiligen Franziskus von Assisi in Siquijor wurde am 1. Februar 1783 gegründet."
+			]
+		}
+	},
+	"camiguin": {
+		"region": {
+			"en": [
+				"Camiguin’s Mount Vulcan began to form during an eruption in 1871.",
+				"Hibok-Hibok’s destructive December 1951 eruption helped prompt the creation of the Philippine Commission on Volcanology in 1952.",
+				"Camiguin consists of overlapping volcanic cones and lava domes rather than a single volcano."
+			],
+			"it": [
+				"Il monte Vulcan di Camiguin iniziò a formarsi durante un’eruzione nel 1871.",
+				"La distruttiva eruzione dell’Hibok-Hibok del dicembre 1951 contribuì a promuovere la creazione della Commissione filippina di vulcanologia nel 1952.",
+				"Camiguin è formata da coni vulcanici e duomi di lava sovrapposti, anziché da un solo vulcano."
+			],
+			"de": [
+				"Camiguins Mount Vulcan begann sich während eines Ausbruchs im Jahr 1871 zu bilden.",
+				"Der zerstörerische Ausbruch des Hibok-Hibok im Dezember 1951 trug 1952 zur Gründung der philippinischen Kommission für Vulkanologie bei.",
+				"Camiguin besteht aus überlappenden Vulkankegeln und Lavadomen statt aus einem einzigen Vulkan."
+			]
+		}
+	},
+	"agusan-del-norte": {
+		"region": {
+			"en": [
+				"Agusan del Norte was created when Agusan was divided into two provinces in 1967.",
+				"The settlement of Cabadbaran was previously known as Reunion and Tolosa.",
+				"Humilog Cave in Remedios T. Romualdez has a narrow vertical entrance and shelters bats."
+			],
+			"it": [
+				"Agusan del Norte fu creata quando Agusan fu divisa in due province nel 1967.",
+				"L’insediamento di Cabadbaran era precedentemente conosciuto come Reunion e Tolosa.",
+				"La grotta Humilog a Remedios T. Romualdez ha un ingresso verticale stretto e ospita pipistrelli."
+			],
+			"de": [
+				"Agusan del Norte entstand 1967 bei der Teilung Agusan in zwei Provinzen.",
+				"Die Siedlung Cabadbaran war zuvor als Reunion und Tolosa bekannt.",
+				"Die Humilog-Höhle in Remedios T. Romualdez hat einen engen senkrechten Eingang und beherbergt Fledermäuse."
+			]
+		}
+	},
+	"surigao-del-sur": {
+		"region": {
+			"en": [
+				"Surigao del Sur was created by the 1960 division of Surigao into two provinces.",
+				"Tinuy-an Falls in Bislig spreads across a broad rock face in several cascades.",
+				"Hinatuan’s Enchanted River is known for its deep-blue water and underwater cave system."
+			],
+			"it": [
+				"Surigao del Sur fu creata con la divisione di Surigao in due province nel 1960.",
+				"Le cascate Tinuy-an a Bislig si allargano su un’ampia parete rocciosa in più salti.",
+				"L’Enchanted River di Hinatuan è noto per le acque blu intenso e il sistema di grotte subacquee."
+			],
+			"de": [
+				"Surigao del Sur entstand 1960 bei der Teilung Surigaos in zwei Provinzen.",
+				"Die Tinuy-an-Fälle in Bislig erstrecken sich in mehreren Kaskaden über eine breite Felswand.",
+				"Hinatuans Enchanted River ist für sein tiefblaues Wasser und sein Unterwasserhöhlensystem bekannt."
+			]
+		}
+	},
+	"misamis-oriental": {
+		"region": {
+			"en": [
+				"Misamis Oriental and Misamis Occidental were formed by the division of Misamis in 1929.",
+				"The old settlement of Jasaan preserves ruins of a church complex with a hexagonal bell tower.",
+				"Salay’s residents supported an early campaign for municipal independence by contributing money for every kilo of copra they sold."
+			],
+			"it": [
+				"Misamis Oriental e Misamis Occidental furono formate con la divisione di Misamis nel 1929.",
+				"Il vecchio insediamento di Jasaan conserva rovine di un complesso ecclesiastico con un campanile esagonale.",
+				"Gli abitanti di Salay sostennero una prima campagna per l’indipendenza municipale contribuendo con denaro per ogni chilo di copra venduto."
+			],
+			"de": [
+				"Misamis Oriental und Misamis Occidental entstanden 1929 durch die Teilung von Misamis.",
+				"Die alte Siedlung Jasaan bewahrt die Ruinen eines Kirchenkomplexes mit einem sechseckigen Glockenturm.",
+				"Die Einwohner von Salay unterstützten eine frühe Kampagne für kommunale Selbstständigkeit mit Geld für jedes verkaufte Kilo Kopra."
+			]
+		}
+	},
+	"agusan-del-sur": {
+		"region": {
+			"en": [
+				"Agusan del Sur was created by the 1967 division of the former Agusan province.",
+				"Manobo families at Lake Panlabuhan live in floating houses within the Agusan Marsh.",
+				"The Agusan Marsh provides feeding and nesting habitat for migratory waterbirds."
+			],
+			"it": [
+				"Agusan del Sur fu creata con la divisione della precedente provincia di Agusan nel 1967.",
+				"Famiglie manobo del lago Panlabuhan vivono in case galleggianti nella palude di Agusan.",
+				"La palude di Agusan offre agli uccelli acquatici migratori luoghi per alimentarsi e nidificare."
+			],
+			"de": [
+				"Agusan del Sur entstand 1967 bei der Teilung der früheren Provinz Agusan.",
+				"Manobo-Familien am Panlabuhan-See leben in schwimmenden Häusern im Agusan-Sumpfgebiet.",
+				"Das Agusan-Sumpfgebiet bietet ziehenden Wasservögeln Nahrungs- und Nistplätze."
+			]
+		}
+	},
+	"misamis-occidental": {
+		"region": {
+			"en": [
+				"Misamis Occidental received its name through the division of Misamis in 1929.",
+				"Jimenez’s Saint John the Baptist Church preserves a historic pipe organ and painted interior.",
+				"The Bacarro ancestral house in Jimenez housed a printing press used to produce emergency money during the Japanese occupation."
+			],
+			"it": [
+				"Misamis Occidental ricevette il proprio nome con la divisione di Misamis nel 1929.",
+				"La chiesa di San Giovanni Battista a Jimenez conserva un organo a canne storico e interni dipinti.",
+				"La casa ancestrale Bacarro a Jimenez ospitava una tipografia usata per produrre banconote di emergenza durante l’occupazione giapponese."
+			],
+			"de": [
+				"Misamis Occidental erhielt seinen Namen durch die Teilung von Misamis im Jahr 1929.",
+				"Die Kirche des heiligen Johannes des Täufers in Jimenez bewahrt eine historische Pfeifenorgel und einen ausgemalten Innenraum.",
+				"Das Stammhaus der Familie Bacarro in Jimenez beherbergte eine Druckerei, die während der japanischen Besatzung Notgeld druckte."
+			]
+		}
+	},
+	"lanao-del-norte": {
+		"region": {
+			"en": [
+				"Lanao takes its name from the Maranao word ranao, meaning a lake or body of water.",
+				"Lanao del Norte was inaugurated as a separate province in July 1959.",
+				"The Panguil Bay Bridge, opened in 2024, connects Tubod with Tangub in neighbouring Misamis Occidental."
+			],
+			"it": [
+				"Lanao prende il nome dalla parola maranao ranao, lago o specchio d’acqua.",
+				"Lanao del Norte fu inaugurata come provincia separata nel luglio 1959.",
+				"Il ponte sulla baia di Panguil, aperto nel 2024, collega Tubod con Tangub nella vicina Misamis Occidental."
+			],
+			"de": [
+				"Lanao hat seinen Namen vom Maranao-Wort ranao für einen See oder ein Gewässer.",
+				"Lanao del Norte wurde im Juli 1959 als eigene Provinz eingeweiht.",
+				"Die 2024 eröffnete Brücke über die Panguil-Bucht verbindet Tubod mit Tangub im benachbarten Misamis Occidental."
+			]
+		}
+	},
+	"bukidnon": {
+		"region": {
+			"en": [
+				"Bukidnon’s name means people of the mountains.",
+				"Kaamulan takes its name from the Binukid word amul, meaning to gather.",
+				"The Kaamulan festival brings together the cultural traditions of Bukidnon’s seven indigenous ethnolinguistic groups."
+			],
+			"it": [
+				"Il nome Bukidnon significa gente delle montagne.",
+				"Kaamulan prende il nome dalla parola binukid amul, riunirsi.",
+				"La festa Kaamulan riunisce le tradizioni culturali dei sette gruppi etnolinguistici indigeni di Bukidnon."
+			],
+			"de": [
+				"Der Name Bukidnon bedeutet Menschen der Berge.",
+				"Kaamulan hat seinen Namen vom Binukid-Wort amul für sich versammeln.",
+				"Das Kaamulan-Fest vereint die kulturellen Traditionen der sieben indigenen ethnolinguistischen Gruppen Bukidnons."
+			]
+		}
+	},
+	"zamboanga-del-norte": {
+		"region": {
+			"en": [
+				"Zamboanga del Norte was created when Zamboanga province was divided in 1952.",
+				"José Rizal lived in exile in Dapitan from 1892 to 1896.",
+				"Rizal and his former teacher Francisco de Paula Sanchez helped create a relief map of Mindanao at Dapitan in 1892."
+			],
+			"it": [
+				"Zamboanga del Norte fu creata quando la provincia di Zamboanga fu divisa nel 1952.",
+				"José Rizal visse in esilio a Dapitan dal 1892 al 1896.",
+				"Rizal e il suo ex insegnante Francisco de Paula Sanchez contribuirono a creare una mappa in rilievo di Mindanao a Dapitan nel 1892."
+			],
+			"de": [
+				"Zamboanga del Norte entstand 1952 bei der Teilung der Provinz Zamboanga.",
+				"José Rizal lebte von 1892 bis 1896 im Exil in Dapitan.",
+				"Rizal und sein früherer Lehrer Francisco de Paula Sanchez wirkten 1892 in Dapitan an einer Reliefkarte von Mindanao mit."
+			]
+		}
+	},
+	"lanao-del-sur": {
+		"region": {
+			"en": [
+				"Lanao’s name comes from ranao, a Maranao word for a lake or body of water.",
+				"The Darangen epic of the Lake Lanao region is performed in song and contains seventeen narrative cycles.",
+				"A torogan in Marantao was declared a National Cultural Treasure in 2008 for its traditional Maranao architecture."
+			],
+			"it": [
+				"Il nome Lanao deriva da ranao, parola maranao per lago o specchio d’acqua.",
+				"L’epopea Darangen della regione del lago Lanao è eseguita nel canto e comprende diciassette cicli narrativi.",
+				"Un torogan a Marantao fu dichiarato Tesoro culturale nazionale nel 2008 per la sua architettura tradizionale maranao."
+			],
+			"de": [
+				"Der Name Lanao stammt von ranao, einem Maranao-Wort für einen See oder ein Gewässer.",
+				"Das Darangen-Epos aus der Region des Lanao-Sees wird gesungen und umfasst siebzehn Erzählzyklen.",
+				"Ein Torogan in Marantao wurde 2008 wegen seiner traditionellen Maranao-Architektur zum nationalen Kulturschatz erklärt."
+			]
+		}
+	},
+	"zamboanga-sibugay": {
+		"region": {
+			"en": [
+				"Zamboanga Sibugay’s creation from Zamboanga del Sur was ratified in a plebiscite in February 2001.",
+				"The province includes the island municipalities of Olutanga, Talusan and Mabuhay.",
+				"A rubber plantation in Kabasalan passed to agrarian-reform beneficiaries who organised a cooperative in 1992."
+			],
+			"it": [
+				"La creazione di Zamboanga Sibugay da Zamboanga del Sur fu ratificata con un plebiscito nel febbraio 2001.",
+				"La provincia comprende i comuni insulari di Olutanga, Talusan e Mabuhay.",
+				"Una piantagione di gomma a Kabasalan passò a beneficiari della riforma agraria che organizzarono una cooperativa nel 1992."
+			],
+			"de": [
+				"Die Gründung Zamboanga Sibugays aus Zamboanga del Sur wurde im Februar 2001 durch eine Volksabstimmung bestätigt.",
+				"Die Provinz umfasst die Inselgemeinden Olutanga, Talusan und Mabuhay.",
+				"Eine Kautschukplantage in Kabasalan ging an Begünstigte der Agrarreform über, die 1992 eine Genossenschaft gründeten."
+			]
+		}
+	},
+	"zamboanga-del-sur": {
+		"region": {
+			"en": [
+				"Zamboanga del Sur was created by the 1952 division of the former Zamboanga province.",
+				"Subanen communities in Zamboanga del Sur practise buklog, an elaborate thanksgiving ritual system.",
+				"During buklog, dancers move on a raised wooden platform that produces a resonant sound."
+			],
+			"it": [
+				"Zamboanga del Sur fu creata con la divisione della precedente provincia di Zamboanga nel 1952.",
+				"Le comunità subanen di Zamboanga del Sur praticano il buklog, un elaborato sistema rituale di ringraziamento.",
+				"Durante il buklog, i danzatori si muovono su una piattaforma di legno rialzata che produce un suono risonante."
+			],
+			"de": [
+				"Zamboanga del Sur entstand 1952 bei der Teilung der früheren Provinz Zamboanga.",
+				"Subanen-Gemeinschaften in Zamboanga del Sur pflegen Buklog, ein umfangreiches System von Dankritualen.",
+				"Beim Buklog bewegen sich Tänzer auf einer erhöhten Holzplattform, die einen widerhallenden Klang erzeugt."
+			]
+		}
+	},
+	"compostela-valley": {
+		"region": {
+			"en": [
+				"Compostela Valley, the older name shown here, was renamed Davao de Oro after a December 2019 plebiscite.",
+				"The province’s original Compostela Valley name referred to the fertile plain in its interior.",
+				"Nabunturan was chosen as the provincial capital for its central location."
+			],
+			"it": [
+				"Compostela Valley, il vecchio nome mostrato qui, fu rinominata Davao de Oro dopo un plebiscito del dicembre 2019.",
+				"Il nome originario Compostela Valley della provincia si riferiva alla fertile pianura dell’interno.",
+				"Nabunturan fu scelta come capoluogo provinciale per la sua posizione centrale."
+			],
+			"de": [
+				"Compostela Valley, der hier angezeigte ältere Name, wurde nach einer Volksabstimmung im Dezember 2019 in Davao de Oro umbenannt.",
+				"Der ursprüngliche Provinzname Compostela Valley bezog sich auf die fruchtbare Ebene im Landesinneren.",
+				"Nabunturan wurde wegen seiner zentralen Lage zur Provinzhauptstadt gewählt."
+			]
+		}
+	},
+	"davao-del-norte": {
+		"region": {
+			"en": [
+				"Davao del Norte was one of three provinces created from the former Davao province in 1967.",
+				"The province was officially renamed Davao in 1972 before the Davao del Norte name was restored in 1998.",
+				"The Island Garden City of Samal was formed from the municipalities of Samal, Babak and Kaputian in 1998."
+			],
+			"it": [
+				"Davao del Norte fu una delle tre province create dalla precedente provincia di Davao nel 1967.",
+				"La provincia fu ufficialmente rinominata Davao nel 1972, prima che il nome Davao del Norte fosse ripristinato nel 1998.",
+				"La Island Garden City of Samal fu formata dai comuni di Samal, Babak e Kaputian nel 1998."
+			],
+			"de": [
+				"Davao del Norte war eine von drei Provinzen, die 1967 aus der früheren Provinz Davao geschaffen wurden.",
+				"Die Provinz wurde 1972 offiziell in Davao umbenannt, bevor 1998 der Name Davao del Norte wiederhergestellt wurde.",
+				"Die Island Garden City of Samal entstand 1998 aus den Gemeinden Samal, Babak und Kaputian."
+			]
+		}
+	},
+	"cotabato-city": {
+		"region": {
+			"en": [
+				"Cotabato’s name comes from kuta wato, meaning stone fort.",
+				"The Sultan Haji Hassanal Bolkiah Mosque stands in Barangay Kalanganan II in Cotabato City.",
+				"Cotabato City occupies a delta shaped by the Tamontaka River and the Rio Grande de Mindanao."
+			],
+			"it": [
+				"Il nome Cotabato deriva da kuta wato, forte di pietra.",
+				"La moschea Sultan Haji Hassanal Bolkiah si trova nel barangay Kalanganan II a Cotabato City.",
+				"Cotabato City occupa un delta modellato dal fiume Tamontaka e dal Rio Grande de Mindanao."
+			],
+			"de": [
+				"Der Name Cotabato stammt von kuta wato für Steinfort.",
+				"Die Sultan-Haji-Hassanal-Bolkiah-Moschee steht im Barangay Kalanganan II in Cotabato City.",
+				"Cotabato City liegt in einem vom Tamontaka-Fluss und vom Rio Grande de Mindanao geformten Delta."
+			]
+		}
+	},
+	"cotabato": {
+		"region": {
+			"en": [
+				"Cotabato’s name comes from the Maguindanaon words kuta wato, meaning stone fort.",
+				"Fort Pikit was built by the Spanish colonial government in 1893.",
+				"At Asik-Asik Falls in Alamada, water emerges through cracks in a plant-covered cliff."
+			],
+			"it": [
+				"Il nome Cotabato deriva dalle parole maguindanaon kuta wato, forte di pietra.",
+				"Fort Pikit fu costruito dal governo coloniale spagnolo nel 1893.",
+				"Alle cascate Asik-Asik ad Alamada, l’acqua emerge da fessure in una parete rocciosa ricoperta di piante."
+			],
+			"de": [
+				"Der Name Cotabato stammt von den Maguindanaon-Wörtern kuta wato für Steinfort.",
+				"Fort Pikit wurde 1893 von der spanischen Kolonialregierung errichtet.",
+				"An den Asik-Asik-Fällen in Alamada tritt Wasser aus Spalten einer pflanzenbewachsenen Felswand aus."
+			]
+		},
+		"city": {
+			"en": [
+				"Cotabato’s name comes from the Maguindanaon words kuta wato, meaning stone fort.",
+				"The city’s Grand Mosque is named after Sultan Haji Hassanal Bolkiah.",
+				"Cotabato City occupies a delta shaped by the Tamontaka River and the Rio Grande de Mindanao."
+			],
+			"it": [
+				"Il nome Cotabato deriva dalle parole maguindanaon kuta wato, forte di pietra.",
+				"La Grande Moschea della città porta il nome del sultano Haji Hassanal Bolkiah.",
+				"Cotabato City occupa un delta modellato dal fiume Tamontaka e dal Rio Grande de Mindanao."
+			],
+			"de": [
+				"Cotabatos Name stammt von den Maguindanaon-Wörtern kuta wato für Steinfort.",
+				"Die Große Moschee der Stadt ist nach Sultan Haji Hassanal Bolkiah benannt.",
+				"Cotabato City liegt in einem vom Tamontaka-Fluss und vom Rio Grande de Mindanao geformten Delta."
+			]
+		}
+	},
+	"davao-oriental": {
+		"region": {
+			"en": [
+				"Davao Oriental was one of the three provinces formed by the division of Davao in 1967.",
+				"Mount Hamiguitan’s wildlife sanctuary became a UNESCO World Heritage site in 2014.",
+				"Mandaya artisans in Caraga weave dagmay cloth from dyed abaca fibres."
+			],
+			"it": [
+				"Davao Oriental fu una delle tre province formate con la divisione di Davao nel 1967.",
+				"Il santuario faunistico del monte Hamiguitan divenne patrimonio mondiale dell’UNESCO nel 2014.",
+				"Gli artigiani mandaya a Caraga tessono il dagmay con fibre di abaca tinte."
+			],
+			"de": [
+				"Davao Oriental war eine der drei Provinzen, die 1967 bei der Teilung Davaos entstanden.",
+				"Das Wildschutzgebiet des Mount Hamiguitan wurde 2014 UNESCO-Welterbe.",
+				"Mandaya-Handwerker in Caraga weben Dagmay-Stoff aus gefärbten Abacáfasern."
+			]
+		}
+	},
+	"maguindanao": {
+		"region": {
+			"en": [
+				"The older Maguindanao province shown here was divided into Maguindanao del Norte and Maguindanao del Sur following a 2022 plebiscite.",
+				"Maguindanaon weavers make inaul, handwoven cloth traditionally used for the tubular garment called a malong.",
+				"Inaul is woven on both backstrap looms and fixed horizontal looms with treadles."
+			],
+			"it": [
+				"La vecchia provincia di Maguindanao mostrata qui fu divisa in Maguindanao del Norte e Maguindanao del Sur dopo un plebiscito del 2022.",
+				"I tessitori maguindanaon realizzano l’inaul, tessuto a mano tradizionalmente usato per il malong, un indumento tubolare.",
+				"L’inaul è tessuto sia su telai a cintura sia su telai orizzontali fissi a pedali."
+			],
+			"de": [
+				"Die hier dargestellte frühere Provinz Maguindanao wurde nach einer Volksabstimmung von 2022 in Maguindanao del Norte und Maguindanao del Sur geteilt.",
+				"Maguindanaon-Weber fertigen Inaul, handgewebten Stoff, der traditionell für das schlauchförmige Kleidungsstück Malong verwendet wird.",
+				"Inaul wird sowohl auf Hüftwebstühlen als auch auf feststehenden waagerechten Webstühlen mit Tritten gewebt."
+			]
+		}
+	},
+	"davao-del-sur": {
+		"region": {
+			"en": [
+				"Davao del Sur began functioning as a separate province on 1 July 1967.",
+				"The Bansalan weaver Salinta Monon received the National Living Treasure award in 1998.",
+				"Bagobo inabal cloth is woven from abaca using an ikat dyeing technique."
+			],
+			"it": [
+				"Davao del Sur iniziò a funzionare come provincia separata il 1º luglio 1967.",
+				"La tessitrice di Bansalan Salinta Monon ricevette il premio Tesoro vivente nazionale nel 1998.",
+				"Il tessuto bagobo inabal è realizzato con abaca usando una tecnica di tintura ikat."
+			],
+			"de": [
+				"Davao del Sur nahm am 1. Juli 1967 seine Tätigkeit als eigene Provinz auf.",
+				"Die Weberin Salinta Monon aus Bansalan erhielt 1998 die Auszeichnung als nationaler lebender Schatz.",
+				"Bagobo-Inabal-Stoff wird aus Abacá mit einer Ikat-Färbetechnik gewebt."
+			]
+		}
+	},
+	"city-of-isabela": {
+		"region": {
+			"en": [
+				"Isabela on Basilan preserves the name associated with the Spanish fort Fuerte Reina Isabella Segunda.",
+				"Malamawi Island was used to store coal for steam-powered ships during Spanish rule.",
+				"Isabela’s conversion into a city was approved by law in 2001."
+			],
+			"it": [
+				"Isabela a Basilan conserva il nome associato al forte spagnolo Fuerte Reina Isabella Segunda.",
+				"L’isola di Malamawi fu usata per immagazzinare carbone destinato alle navi a vapore durante il dominio spagnolo.",
+				"La conversione di Isabela in città fu approvata per legge nel 2001."
+			],
+			"de": [
+				"Isabela auf Basilan bewahrt den mit dem spanischen Fort Fuerte Reina Isabella Segunda verbundenen Namen.",
+				"Die Insel Malamawi wurde unter spanischer Herrschaft als Kohlelager für Dampfschiffe genutzt.",
+				"Die Umwandlung Isabelas in eine Stadt wurde 2001 gesetzlich genehmigt."
+			]
+		}
+	},
+	"basilan": {
+		"region": {
+			"en": [
+				"Basilan was created as a province by a decree issued in December 1973.",
+				"Yakan weavers in Basilan create colourful cloth with intricate geometric motifs.",
+				"Ambalang Ausalin of Parangbasak in Lamitan was recognised as a National Living Treasure for textile weaving in 2016."
+			],
+			"it": [
+				"Basilan fu creata come provincia con un decreto emanato nel dicembre 1973.",
+				"I tessitori yakan a Basilan realizzano tessuti colorati con intricati motivi geometrici.",
+				"Ambalang Ausalin di Parangbasak a Lamitan fu riconosciuta come Tesoro vivente nazionale per la tessitura nel 2016."
+			],
+			"de": [
+				"Basilan wurde durch ein im Dezember 1973 erlassenes Dekret als Provinz geschaffen.",
+				"Yakan-Weber auf Basilan fertigen farbenfrohe Stoffe mit aufwendigen geometrischen Mustern.",
+				"Ambalang Ausalin aus Parangbasak in Lamitan wurde 2016 für ihre Webkunst als nationaler lebender Schatz ausgezeichnet."
+			]
+		}
+	},
+	"sultan-kudarat": {
+		"region": {
+			"en": [
+				"Sultan Kudarat province is named after the Maguindanaon ruler Muhammad Dipatuan Kudarat.",
+				"Ancient burial urns from the Kulaman Plateau were carved from limestone rather than moulded from clay.",
+				"Some Kulaman urn lids have human features, while others resemble gabled roofs."
+			],
+			"it": [
+				"La provincia di Sultan Kudarat prende il nome dal sovrano maguindanaon Muhammad Dipatuan Kudarat.",
+				"Antiche urne funerarie dell’altopiano di Kulaman furono scolpite nel calcare anziché modellate nell’argilla.",
+				"Alcuni coperchi delle urne di Kulaman hanno tratti umani, mentre altri ricordano tetti a due falde."
+			],
+			"de": [
+				"Die Provinz Sultan Kudarat ist nach dem Maguindanaon-Herrscher Muhammad Dipatuan Kudarat benannt.",
+				"Alte Bestattungsurnen vom Kulaman-Plateau wurden aus Kalkstein gehauen statt aus Ton geformt.",
+				"Einige Deckel der Kulaman-Urnen haben menschliche Züge, während andere Satteldächern ähneln."
+			]
+		}
+	},
+	"south-cotabato": {
+		"region": {
+			"en": [
+				"The law creating South Cotabato as a separate province was approved in 1966.",
+				"Tboli weavers around Lake Sebu make t’nalak cloth from abaca fibres.",
+				"The master weaver Lang Dulay drew textile designs from clouds, butterflies and other features of the natural world."
+			],
+			"it": [
+				"La legge che creò South Cotabato come provincia separata fu approvata nel 1966.",
+				"I tessitori tboli intorno al lago Sebu realizzano il tessuto t’nalak con fibre di abaca.",
+				"La maestra tessitrice Lang Dulay traeva i disegni tessili da nuvole, farfalle e altri elementi del mondo naturale."
+			],
+			"de": [
+				"Das Gesetz zur Gründung South Cotabatos als eigene Provinz wurde 1966 verabschiedet.",
+				"Tboli-Weber rund um den Sebu-See fertigen T’nalak-Stoff aus Abacáfasern.",
+				"Die Meisterweberin Lang Dulay entnahm ihre Stoffmuster Wolken, Schmetterlingen und anderen Erscheinungen der Natur."
+			]
+		}
+	},
+	"sarangani": {
+		"region": {
+			"en": [
+				"Sarangani became a separate province from South Cotabato in 1992.",
+				"The burial jars found at Ayub Cave in Maitum have lids modelled with individual human faces.",
+				"Sarangani Bay and adjoining coastal waters were declared a protected seascape in 1996."
+			],
+			"it": [
+				"Sarangani divenne una provincia separata da South Cotabato nel 1992.",
+				"Le urne funerarie trovate nella grotta Ayub a Maitum hanno coperchi modellati con volti umani individuali.",
+				"La baia di Sarangani e le acque costiere adiacenti furono dichiarate paesaggio marino protetto nel 1996."
+			],
+			"de": [
+				"Sarangani wurde 1992 eine von South Cotabato getrennte Provinz.",
+				"Die in der Ayub-Höhle in Maitum gefundenen Bestattungsurnen haben Deckel mit individuell gestalteten menschlichen Gesichtern.",
+				"Die Sarangani-Bucht und angrenzende Küstengewässer wurden 1996 als geschützte Meereslandschaft ausgewiesen."
+			]
+		}
+	},
+	"davao-occidental": {
+		"region": {
+			"en": [
+				"Davao Occidental was created from Davao del Sur in 2013.",
+				"Its municipality of Sarangani includes islands and is distinct from the neighbouring province also named Sarangani.",
+				"Manobo communities in Jose Abad Santos live in environments ranging from coastal settlements to mountainous inland areas."
+			],
+			"it": [
+				"Davao Occidental fu creata da Davao del Sur nel 2013.",
+				"Il suo comune di Sarangani comprende isole ed è distinto dalla provincia vicina che porta lo stesso nome.",
+				"Le comunità manobo di Jose Abad Santos vivono in ambienti che vanno dagli insediamenti costieri alle zone montuose dell’interno."
+			],
+			"de": [
+				"Davao Occidental wurde 2013 aus Davao del Sur geschaffen.",
+				"Seine Gemeinde Sarangani umfasst Inseln und ist von der gleichnamigen benachbarten Provinz zu unterscheiden.",
+				"Manobo-Gemeinschaften in Jose Abad Santos leben in unterschiedlichen Umgebungen, von Küstensiedlungen bis zu bergigen Gebieten im Landesinneren."
+			]
+		}
+	},
+	"sulu": {
+		"region": {
+			"en": [
+				"Sulu’s provincial museum in Jolo was inaugurated in 1982 and later transferred to the National Museum.",
+				"Tausug weavers in Parang make pis syabit, a colourful cloth traditionally worn as a head covering.",
+				"The saruk kambigasan is a domed Tausug hat woven from split nito fern stems."
+			],
+			"it": [
+				"Il museo provinciale di Sulu a Jolo fu inaugurato nel 1982 e in seguito trasferito al Museo Nazionale.",
+				"I tessitori tausug a Parang realizzano il pis syabit, un tessuto colorato tradizionalmente indossato come copricapo.",
+				"Il saruk kambigasan è un cappello tausug a cupola intrecciato con steli divisi della felce nito."
+			],
+			"de": [
+				"Sulus Provinzmuseum in Jolo wurde 1982 eingeweiht und später an das Nationalmuseum übertragen.",
+				"Tausug-Weber in Parang fertigen Pis Syabit, einen farbenfrohen Stoff, der traditionell als Kopfbedeckung getragen wird.",
+				"Der Saruk Kambigasan ist ein kuppelförmiger Tausug-Hut aus gespaltenen Stängeln des Nito-Farns."
+			]
+		}
+	},
+	"tawi-tawi": {
+		"region": {
+			"en": [
+				"Tawi-Tawi became a separate province from Sulu in 1973.",
+				"The mosque at Tubig Indangan on Simunul is associated with the missionary Sheikh Karimul Makhdum and the arrival of Islam in 1380.",
+				"The Sama master weaver Haja Amina Appi of Tandubas made mats with complex geometric patterns from pandan leaves."
+			],
+			"it": [
+				"Tawi-Tawi divenne una provincia separata da Sulu nel 1973.",
+				"La moschea di Tubig Indangan a Simunul è associata al missionario Sheikh Karimul Makhdum e all’arrivo dell’Islam nel 1380.",
+				"La maestra tessitrice sama Haja Amina Appi di Tandubas realizzava stuoie con complessi motivi geometrici usando foglie di pandano."
+			],
+			"de": [
+				"Tawi-Tawi wurde 1973 eine von Sulu getrennte Provinz.",
+				"Die Moschee von Tubig Indangan auf Simunul wird mit dem Missionar Sheikh Karimul Makhdum und der Ankunft des Islam im Jahr 1380 verbunden.",
+				"Die Sama-Meisterweberin Haja Amina Appi aus Tandubas fertigte aus Pandanblättern Matten mit komplexen geometrischen Mustern."
+			]
+		}
+	},
+	"laoag": {
+		"city": {
+			"en": [
+				"Laoag’s name means light in Ilocano.",
+				"The foundations of Laoag’s present cathedral were laid in 1612.",
+				"Museo Ilocos Norte occupies a nineteenth-century Tabacalera tobacco warehouse."
+			],
+			"it": [
+				"Il nome Laoag significa luce in ilocano.",
+				"Le fondamenta dell’attuale cattedrale di Laoag furono poste nel 1612.",
+				"Il Museo Ilocos Norte occupa un magazzino ottocentesco di tabacco della Tabacalera."
+			],
+			"de": [
+				"Laoags Name bedeutet Licht auf Ilocano.",
+				"Die Fundamente der heutigen Kathedrale von Laoag wurden 1612 gelegt.",
+				"Das Museo Ilocos Norte befindet sich in einem Tabacalera-Tabaklagerhaus aus dem neunzehnten Jahrhundert."
+			]
+		}
+	},
+	"tuguegarao": {
+		"city": {
+			"en": [
+				"Dominican missionaries began their mission at Tuguegarao in May 1604.",
+				"Tuguegarao’s cathedral and bell tower were built between 1761 and 1767.",
+				"San Jacinto Chapel, originally established in 1604, was rebuilt and inaugurated in 1724."
+			],
+			"it": [
+				"I missionari domenicani iniziarono la loro missione a Tuguegarao nel maggio 1604.",
+				"La cattedrale e il campanile di Tuguegarao furono costruiti tra il 1761 e il 1767.",
+				"La cappella di San Jacinto, originariamente istituita nel 1604, fu ricostruita e inaugurata nel 1724."
+			],
+			"de": [
+				"Dominikanische Missionare begannen ihre Mission in Tuguegarao im Mai 1604.",
+				"Tuguegaraos Kathedrale und Glockenturm wurden zwischen 1761 und 1767 erbaut.",
+				"Die ursprünglich 1604 gegründete San-Jacinto-Kapelle wurde wiederaufgebaut und 1724 eingeweiht."
+			]
+		}
+	},
+	"baguio": {
+		"city": {
+			"en": [
+				"Baguio’s name derives from the Ibaloi word bag-iw, referring to a moss-like plant.",
+				"Daniel Burnham and Pierce Anderson prepared a plan for Baguio in 1905.",
+				"The Panagbenga flower festival was conceived in 1995 as part of the city’s recovery after the 1990 earthquake."
+			],
+			"it": [
+				"Il nome Baguio deriva dalla parola ibaloi bag-iw, riferita a una pianta simile al muschio.",
+				"Daniel Burnham e Pierce Anderson prepararono un piano per Baguio nel 1905.",
+				"La festa dei fiori Panagbenga fu concepita nel 1995 come parte della ripresa della città dopo il terremoto del 1990."
+			],
+			"de": [
+				"Baguio hat seinen Namen vom Ibaloi-Wort bag-iw für eine moosähnliche Pflanze.",
+				"Daniel Burnham und Pierce Anderson erarbeiteten 1905 einen Plan für Baguio.",
+				"Das Blumenfest Panagbenga wurde 1995 als Teil des Wiederaufbaus der Stadt nach dem Erdbeben von 1990 konzipiert."
+			]
+		}
+	},
+	"dagupan": {
+		"city": {
+			"en": [
+				"Dagupan was previously known as Bacnotan and later Nandaragupan, a name associated with people gathering.",
+				"Emilio Aguinaldo travelled by train to Dagupan in 1897 on his way to exile in Hong Kong.",
+				"Ground liquefaction during the 1990 Luzon earthquake severely damaged buildings and roads in Dagupan."
+			],
+			"it": [
+				"Dagupan era precedentemente conosciuta come Bacnotan e poi Nandaragupan, un nome associato al radunarsi delle persone.",
+				"Emilio Aguinaldo viaggiò in treno fino a Dagupan nel 1897 mentre si recava in esilio a Hong Kong.",
+				"La liquefazione del terreno durante il terremoto di Luzon del 1990 danneggiò gravemente edifici e strade a Dagupan."
+			],
+			"de": [
+				"Dagupan hieß früher Bacnotan und später Nandaragupan, ein mit dem Zusammenkommen von Menschen verbundener Name.",
+				"Emilio Aguinaldo reiste 1897 auf seinem Weg ins Exil nach Hongkong mit dem Zug nach Dagupan.",
+				"Bodenverflüssigung während des Luzon-Erdbebens von 1990 beschädigte Gebäude und Straßen in Dagupan schwer."
+			]
+		}
+	},
+	"cabanatuan": {
+		"city": {
+			"en": [
+				"Cabanatuan served as a temporary headquarters of the First Philippine Republic in 1899.",
+				"General Antonio Luna and his aide Francisco Roman were assassinated in Cabanatuan on 5 June 1899.",
+				"Filipino guerrillas and US troops rescued more than five hundred Allied prisoners from the Cabanatuan camp in January 1945."
+			],
+			"it": [
+				"Cabanatuan servì come sede temporanea della Prima Repubblica filippina nel 1899.",
+				"Il generale Antonio Luna e il suo aiutante Francisco Roman furono assassinati a Cabanatuan il 5 giugno 1899.",
+				"Guerriglieri filippini e truppe statunitensi liberarono oltre cinquecento prigionieri alleati dal campo di Cabanatuan nel gennaio 1945."
+			],
+			"de": [
+				"Cabanatuan diente 1899 als vorübergehender Regierungssitz der Ersten Philippinischen Republik.",
+				"General Antonio Luna und sein Adjutant Francisco Roman wurden am 5. Juni 1899 in Cabanatuan ermordet.",
+				"Philippinische Guerillas und US-Truppen befreiten im Januar 1945 mehr als fünfhundert alliierte Gefangene aus dem Lager Cabanatuan."
+			]
+		}
+	},
+	"angeles": {
+		"city": {
+			"en": [
+				"Angeles was formerly called Culiat and was renamed in 1829 in honour of the Holy Guardian Angels and its founder Angel Pantaleon de Miranda.",
+				"The Pamintuan Mansion served as Emilio Aguinaldo’s temporary presidential office in June 1899.",
+				"The Holy Rosary Church was built through the labour of the town’s residents and completed in 1896."
+			],
+			"it": [
+				"Angeles si chiamava Culiat e fu rinominata nel 1829 in onore dei Santi Angeli Custodi e del fondatore Angel Pantaleon de Miranda.",
+				"La villa Pamintuan servì come ufficio presidenziale temporaneo di Emilio Aguinaldo nel giugno 1899.",
+				"La chiesa del Santo Rosario fu costruita con il lavoro degli abitanti e completata nel 1896."
+			],
+			"de": [
+				"Angeles hieß früher Culiat und wurde 1829 zu Ehren der heiligen Schutzengel und seines Gründers Angel Pantaleon de Miranda umbenannt.",
+				"Das Pamintuan-Herrenhaus diente Emilio Aguinaldo im Juni 1899 als vorübergehendes Präsidialbüro.",
+				"Die Rosenkranzkirche wurde durch die Arbeit der Einwohner erbaut und 1896 vollendet."
+			]
+		}
+	},
+	"olongapo": {
+		"city": {
+			"en": [
+				"Olongapo returned from US naval administration to Philippine civil control in 1959.",
+				"The city’s Asinan neighbourhood takes its name from salt deposits left by tidal water.",
+				"Residents of several older coastal barrios were relocated when the Subic Bay naval base expanded after World War II."
+			],
+			"it": [
+				"Olongapo passò dall’amministrazione navale statunitense al controllo civile filippino nel 1959.",
+				"Il quartiere Asinan prende il nome dai depositi di sale lasciati dalle maree.",
+				"Gli abitanti di diversi vecchi quartieri costieri furono trasferiti quando la base navale di Subic Bay si ampliò dopo la Seconda guerra mondiale."
+			],
+			"de": [
+				"Olongapo ging 1959 von der US-Marineverwaltung in philippinische Zivilverwaltung über.",
+				"Der Stadtteil Asinan hat seinen Namen von Salzablagerungen des Gezeitenwassers.",
+				"Die Bewohner mehrerer älterer Küstenviertel wurden umgesiedelt, als der Marinestützpunkt Subic Bay nach dem Zweiten Weltkrieg erweitert wurde."
+			]
+		}
+	},
+	"quezon-city": {
+		"city": {
+			"en": [
+				"Quezon City was founded in 1939 and named after President Manuel L. Quezon.",
+				"Balintawak City was the name initially proposed for the new city.",
+				"The Quezon Memorial Shrine has three sixty-six-metre pylons, their height recalling Quezon’s age at death."
+			],
+			"it": [
+				"Quezon City fu fondata nel 1939 e chiamata in onore del presidente Manuel L. Quezon.",
+				"Balintawak City era il nome inizialmente proposto per la nuova città.",
+				"Il Quezon Memorial Shrine ha tre piloni di sessantasei metri, la cui altezza ricorda l’età di Quezon alla morte."
+			],
+			"de": [
+				"Quezon City wurde 1939 gegründet und nach Präsident Manuel L. Quezon benannt.",
+				"Balintawak City war der ursprünglich vorgeschlagene Name der neuen Stadt.",
+				"Der Quezon Memorial Shrine hat drei sechsundsechzig Meter hohe Pylone, deren Höhe an Quezons Alter bei seinem Tod erinnert."
+			]
+		}
+	},
+	"pasay": {
+		"city": {
+			"en": [
+				"Pasay was called Rizal City after its 1947 charter, before its present name was restored by a 1950 law.",
+				"The Cultural Center of the Philippines in Pasay was designed by Leandro Locsin and inaugurated in 1969.",
+				"Pasay’s Philippine International Convention Center opened in September 1976."
+			],
+			"it": [
+				"Pasay fu chiamata Rizal City dopo la legge istitutiva del 1947, prima che il nome attuale fosse ripristinato con una legge del 1950.",
+				"Il Cultural Center of the Philippines a Pasay fu progettato da Leandro Locsin e inaugurato nel 1969.",
+				"Il Philippine International Convention Center di Pasay aprì nel settembre 1976."
+			],
+			"de": [
+				"Pasay hieß nach seinem Gründungsgesetz von 1947 Rizal City, bevor der heutige Name durch ein Gesetz von 1950 wiederhergestellt wurde.",
+				"Das Cultural Center of the Philippines in Pasay wurde von Leandro Locsin entworfen und 1969 eingeweiht.",
+				"Pasays Philippine International Convention Center wurde im September 1976 eröffnet."
+			]
+		}
+	},
+	"san-pablo": {
+		"city": {
+			"en": [
+				"San Pablo is known as the city of seven lakes, a group of small volcanic crater lakes.",
+				"Sampaloc is the largest of San Pablo’s seven lakes.",
+				"The Fule-Malvar Mansion was built in 1915 for Eusebia Fule and Potenciano Malvar."
+			],
+			"it": [
+				"San Pablo è nota come città dei sette laghi, un gruppo di piccoli laghi craterici vulcanici.",
+				"Sampaloc è il più grande dei sette laghi di San Pablo.",
+				"La villa Fule-Malvar fu costruita nel 1915 per Eusebia Fule e Potenciano Malvar."
+			],
+			"de": [
+				"San Pablo ist als Stadt der sieben Seen bekannt, einer Gruppe kleiner vulkanischer Kraterseen.",
+				"Sampaloc ist der größte der sieben Seen von San Pablo.",
+				"Das Fule-Malvar-Herrenhaus wurde 1915 für Eusebia Fule und Potenciano Malvar erbaut."
+			]
+		}
+	},
+	"naga": {
+		"city": {
+			"en": [
+				"Naga grew from an indigenous river settlement and the Spanish colonial city of Nueva Caceres.",
+				"Naga’s Holy Rosary Seminary was founded in 1785.",
+				"The Porta Mariae arch opened in 2010 to mark three hundred years of devotion to Our Lady of Peñafrancia."
+			],
+			"it": [
+				"Naga si sviluppò da un insediamento fluviale indigeno e dalla città coloniale spagnola di Nueva Caceres.",
+				"Il seminario del Santo Rosario di Naga fu fondato nel 1785.",
+				"L’arco Porta Mariae aprì nel 2010 per segnare trecento anni di devozione a Nostra Signora di Peñafrancia."
+			],
+			"de": [
+				"Naga entwickelte sich aus einer indigenen Flusssiedlung und der spanischen Kolonialstadt Nueva Caceres.",
+				"Nagas Rosenkranzseminar wurde 1785 gegründet.",
+				"Der Bogen Porta Mariae wurde 2010 anlässlich von dreihundert Jahren Verehrung Unserer Lieben Frau von Peñafrancia eröffnet."
+			]
+		}
+	},
+	"legazpi": {
+		"city": {
+			"en": [
+				"Legazpi was named in 1856 after the Spanish expedition leader Miguel López de Legazpi.",
+				"Filipino revolutionaries fought US troops at Legazpi’s San Rafael Bridge in January 1900.",
+				"The Ibalong festival recalls the mythical heroes Baltog, Handyong and Bantong."
+			],
+			"it": [
+				"Legazpi fu chiamata nel 1856 in onore del capo della spedizione spagnola Miguel López de Legazpi.",
+				"I rivoluzionari filippini combatterono contro truppe statunitensi al ponte San Rafael di Legazpi nel gennaio 1900.",
+				"La festa Ibalong rievoca gli eroi mitici Baltog, Handyong e Bantong."
+			],
+			"de": [
+				"Legazpi wurde 1856 nach dem spanischen Expeditionsleiter Miguel López de Legazpi benannt.",
+				"Philippinische Revolutionäre kämpften im Januar 1900 an Legazpis San-Rafael-Brücke gegen US-Truppen.",
+				"Das Ibalong-Fest erinnert an die mythischen Helden Baltog, Handyong und Bantong."
+			]
+		}
+	},
+	"roxas-city": {
+		"city": {
+			"en": [
+				"Roxas City was formerly called Capiz and received its present name in honour of President Manuel Roxas in 1951.",
+				"The Panublion Museum occupies a former water tank.",
+				"Roxas City preserves traditional fishing practices known as surambao, siguin and pukot."
+			],
+			"it": [
+				"Roxas City si chiamava Capiz e ricevette il nome attuale in onore del presidente Manuel Roxas nel 1951.",
+				"Il museo Panublion occupa un vecchio serbatoio d’acqua.",
+				"Roxas City conserva pratiche tradizionali di pesca chiamate surambao, siguin e pukot."
+			],
+			"de": [
+				"Roxas City hieß früher Capiz und erhielt seinen heutigen Namen 1951 zu Ehren von Präsident Manuel Roxas.",
+				"Das Panublion-Museum befindet sich in einem ehemaligen Wassertank.",
+				"Roxas City bewahrt traditionelle Fischereipraktiken namens Surambao, Siguin und Pukot."
+			]
+		}
+	},
+	"tacloban": {
+		"city": {
+			"en": [
+				"Tacloban’s name is associated with taklub, a bamboo device used to catch crabs, shrimp and fish.",
+				"Douglas MacArthur used Tacloban’s Price Mansion as his headquarters during the 1944 liberation campaign.",
+				"The San Juanico Bridge links Tacloban on Leyte with Santa Rita on Samar."
+			],
+			"it": [
+				"Il nome Tacloban è associato al taklub, un attrezzo di bambù usato per catturare granchi, gamberi e pesci.",
+				"Douglas MacArthur usò la villa Price di Tacloban come quartier generale durante la campagna di liberazione del 1944.",
+				"Il ponte San Juanico collega Tacloban a Leyte con Santa Rita a Samar."
+			],
+			"de": [
+				"Taclobans Name wird mit Taklub verbunden, einem Bambusgerät zum Fangen von Krabben, Garnelen und Fischen.",
+				"Douglas MacArthur nutzte Taclobans Price-Herrenhaus während des Befreiungsfeldzugs von 1944 als Hauptquartier.",
+				"Die San-Juanico-Brücke verbindet Tacloban auf Leyte mit Santa Rita auf Samar."
+			]
+		}
+	},
+	"ormoc": {
+		"city": {
+			"en": [
+				"Ormoc was inaugurated as a city in October 1947.",
+				"Tropical Storm Uring caused devastating flash floods in Ormoc in November 1991.",
+				"The Gift of Life memorial, inaugurated in 2011, commemorates the flood victims buried at the city’s public cemetery."
+			],
+			"it": [
+				"Ormoc fu inaugurata come città nell’ottobre 1947.",
+				"La tempesta tropicale Uring causò devastanti inondazioni improvvise a Ormoc nel novembre 1991.",
+				"Il monumento Gift of Life, inaugurato nel 2011, commemora le vittime dell’alluvione sepolte nel cimitero pubblico della città."
+			],
+			"de": [
+				"Ormoc wurde im Oktober 1947 als Stadt eingeweiht.",
+				"Der Tropensturm Uring verursachte im November 1991 verheerende Sturzfluten in Ormoc.",
+				"Das 2011 eingeweihte Denkmal Gift of Life erinnert an die auf dem öffentlichen Friedhof der Stadt begrabenen Flutopfer."
+			]
+		}
+	},
+	"cadiz": {
+		"city": {
+			"en": [
+				"Cadiz in Negros Occidental became a city under a charter approved in 1967.",
+				"Its Dinagsa festival honours Señor Santo Niño.",
+				"The festival includes lamhitanay, in which people playfully smear one another with paint."
+			],
+			"it": [
+				"Cadiz a Negros Occidental divenne città in base a una legge istitutiva approvata nel 1967.",
+				"La festa Dinagsa onora il Señor Santo Niño.",
+				"La festa comprende il lamhitanay, in cui le persone si spalmano scherzosamente di vernice a vicenda."
+			],
+			"de": [
+				"Cadiz in Negros Occidental wurde durch ein 1967 verabschiedetes Gründungsgesetz zur Stadt.",
+				"Sein Dinagsa-Fest ehrt Señor Santo Niño.",
+				"Zum Fest gehört Lamhitanay, bei dem sich Menschen spielerisch gegenseitig mit Farbe bestreichen."
+			]
+		}
+	},
+	"bacolod": {
+		"city": {
+			"en": [
+				"Bacolod’s name comes from bakolod, meaning a stone hill.",
+				"Bacolod served as the revolutionary capital of the provisional Republic of Negros in 1899.",
+				"The MassKara festival began in 1980 during a sugar-industry crisis and a period of mourning after a ferry disaster."
+			],
+			"it": [
+				"Il nome Bacolod deriva da bakolod, collina di pietra.",
+				"Bacolod servì come capitale rivoluzionaria della Repubblica provvisoria di Negros nel 1899.",
+				"La festa MassKara iniziò nel 1980 durante una crisi dell’industria dello zucchero e un periodo di lutto dopo un disastro navale."
+			],
+			"de": [
+				"Bacolods Name stammt von bakolod für einen Steinhügel.",
+				"Bacolod diente 1899 als revolutionäre Hauptstadt der provisorischen Republik Negros.",
+				"Das MassKara-Fest begann 1980 während einer Krise der Zuckerindustrie und einer Trauerzeit nach einem Fährunglück."
+			]
+		}
+	},
+	"puerto-princesa": {
+		"city": {
+			"en": [
+				"The Spanish colonial settlement of Puerto Princesa was founded in March 1872.",
+				"The city’s subterranean river national park became a UNESCO World Heritage site in 1999.",
+				"Iwahig Penal Colony was established in 1904 and later allowed some well-behaved prisoners to farm and live with their families."
+			],
+			"it": [
+				"L’insediamento coloniale spagnolo di Puerto Princesa fu fondato nel marzo 1872.",
+				"Il parco nazionale del fiume sotterraneo della città divenne patrimonio mondiale dell’UNESCO nel 1999.",
+				"La colonia penale di Iwahig fu istituita nel 1904 e in seguito permise ad alcuni detenuti di buona condotta di coltivare la terra e vivere con le famiglie."
+			],
+			"de": [
+				"Die spanische Kolonialsiedlung Puerto Princesa wurde im März 1872 gegründet.",
+				"Der Nationalpark des unterirdischen Flusses der Stadt wurde 1999 UNESCO-Welterbe.",
+				"Die Strafkolonie Iwahig wurde 1904 gegründet und erlaubte später einigen Gefangenen mit guter Führung, Landwirtschaft zu betreiben und mit ihren Familien zu leben."
+			]
+		}
+	},
+	"butuan": {
+		"city": {
+			"en": [
+				"Butuan was an important trading port between the tenth and twelfth centuries.",
+				"Ancient balangay boats were discovered in Butuan in 1976.",
+				"The boats’ wooden planks were joined with pegs and internal lashings, a characteristic Southeast Asian boatbuilding technique."
+			],
+			"it": [
+				"Butuan fu un importante porto commerciale tra il X e il XII secolo.",
+				"Antiche imbarcazioni balangay furono scoperte a Butuan nel 1976.",
+				"Le tavole di legno delle barche erano unite con pioli e legature interne, una tecnica di costruzione navale caratteristica del Sud-est asiatico."
+			],
+			"de": [
+				"Butuan war zwischen dem zehnten und zwölften Jahrhundert ein wichtiger Handelshafen.",
+				"Alte Balangay-Boote wurden 1976 in Butuan entdeckt.",
+				"Die Holzplanken der Boote waren mit Dübeln und inneren Verschnürungen verbunden, einer charakteristischen südostasiatischen Bootsbautechnik."
+			]
+		}
+	},
+	"cagayan-de-oro": {
+		"city": {
+			"en": [
+				"The words de Oro were added to Cagayan’s name in 1950 in recognition of gold mining in its hinterland.",
+				"Filipino forces defeated US troops at Macahambus in June 1900.",
+				"Xavier University began as Ateneo de Cagayan in 1933."
+			],
+			"it": [
+				"Le parole de Oro furono aggiunte al nome Cagayan nel 1950 in riconoscimento dell’estrazione dell’oro nell’entroterra.",
+				"Le forze filippine sconfissero truppe statunitensi a Macahambus nel giugno 1900.",
+				"La Xavier University nacque come Ateneo de Cagayan nel 1933."
+			],
+			"de": [
+				"Die Wörter de Oro wurden Cagayans Namen 1950 als Hinweis auf den Goldbergbau im Hinterland hinzugefügt.",
+				"Philippinische Truppen besiegten im Juni 1900 US-Truppen bei Macahambus.",
+				"Die Xavier University begann 1933 als Ateneo de Cagayan."
+			]
+		}
+	},
+	"iligan": {
+		"city": {
+			"en": [
+				"Iligan became a chartered city in 1950.",
+				"The waters of Maria Cristina Falls drive hydroelectric generation on the Agus River.",
+				"Timoga in Barangay Buru-un is known for its natural cold springs."
+			],
+			"it": [
+				"Iligan divenne una città con propria legge istitutiva nel 1950.",
+				"Le acque delle cascate Maria Cristina alimentano la produzione idroelettrica sul fiume Agus.",
+				"Timoga nel barangay Buru-un è nota per le sorgenti naturali di acqua fredda."
+			],
+			"de": [
+				"Iligan erhielt 1950 sein Stadtrecht.",
+				"Das Wasser der Maria-Cristina-Fälle treibt die Wasserkrafterzeugung am Agus-Fluss an.",
+				"Timoga im Barangay Buru-un ist für seine natürlichen Kaltwasserquellen bekannt."
+			]
+		}
+	},
+	"pagadian": {
+		"city": {
+			"en": [
+				"Pagadian became a city under a charter approved in 1969.",
+				"Pagadian is the capital of Zamboanga del Sur.",
+				"The city is known for traditional inclined tricycles designed for its steep streets."
+			],
+			"it": [
+				"Pagadian divenne città in base a una legge istitutiva approvata nel 1969.",
+				"Pagadian è il capoluogo di Zamboanga del Sur.",
+				"La città è nota per i tricicli tradizionali inclinati progettati per le strade ripide."
+			],
+			"de": [
+				"Pagadian wurde durch ein 1969 verabschiedetes Gründungsgesetz zur Stadt.",
+				"Pagadian ist die Hauptstadt von Zamboanga del Sur.",
+				"Die Stadt ist für traditionelle schräg gebaute Dreiradtaxis bekannt, die für ihre steilen Straßen ausgelegt sind."
+			]
+		}
+	},
+	"davao": {
+		"city": {
+			"en": [
+				"Davao was inaugurated as a chartered city on 1 March 1937.",
+				"Japanese migrants working in the abaca industry helped give pre-war Davao the nickname Little Tokyo.",
+				"The Kadayawan festival celebrates the harvest and the cultures of Davao’s eleven indigenous and Moro ethnolinguistic groups."
+			],
+			"it": [
+				"Davao fu inaugurata come città con propria legge istitutiva il 1º marzo 1937.",
+				"I migranti giapponesi che lavoravano nell’industria dell’abaca contribuirono a dare alla Davao prebellica il soprannome Little Tokyo.",
+				"La festa Kadayawan celebra il raccolto e le culture degli undici gruppi etnolinguistici indigeni e moro di Davao."
+			],
+			"de": [
+				"Davao wurde am 1. März 1937 als Stadt mit eigenem Gründungsgesetz eingeweiht.",
+				"Japanische Migranten in der Abacáindustrie trugen dazu bei, dass Davao vor dem Krieg den Beinamen Little Tokyo erhielt.",
+				"Das Kadayawan-Fest feiert die Ernte und die Kulturen von Davaos elf indigenen und Moro-ethnolinguistischen Gruppen."
+			]
+		}
+	},
+	"zamboanga": {
+		"city": {
+			"en": [
+				"Zamboanga was earlier known as Samboangan.",
+				"Construction of Fort Pilar began in 1635 under the Jesuit engineer Melchor de Vera.",
+				"Zamboangueño Chavacano is a creole language with vocabulary drawn largely from Spanish."
+			],
+			"it": [
+				"Zamboanga era precedentemente conosciuta come Samboangan.",
+				"La costruzione di Fort Pilar iniziò nel 1635 sotto l’ingegnere gesuita Melchor de Vera.",
+				"Lo chavacano zamboangueño è una lingua creola il cui lessico deriva in gran parte dallo spagnolo."
+			],
+			"de": [
+				"Zamboanga war früher als Samboangan bekannt.",
+				"Der Bau von Fort Pilar begann 1635 unter dem Jesuiteningenieur Melchor de Vera.",
+				"Zamboangueño-Chavacano ist eine Kreolsprache, deren Wortschatz überwiegend aus dem Spanischen stammt."
+			]
+		}
+	},
+	"general-santos": {
+		"city": {
+			"en": [
+				"General Santos was named after Paulino Santos, who led a government settlement programme in 1939.",
+				"The city was formerly known as Buayan before its renaming in 1954.",
+				"General Santos is an important export centre for yellowfin tuna."
+			],
+			"it": [
+				"General Santos prende il nome da Paulino Santos, che guidò un programma governativo di insediamento nel 1939.",
+				"La città era precedentemente conosciuta come Buayan prima di essere rinominata nel 1954.",
+				"General Santos è un importante centro di esportazione del tonno pinna gialla."
+			],
+			"de": [
+				"General Santos ist nach Paulino Santos benannt, der 1939 ein staatliches Siedlungsprogramm leitete.",
+				"Die Stadt hieß vor ihrer Umbenennung im Jahr 1954 Buayan.",
+				"General Santos ist ein bedeutendes Exportzentrum für Gelbflossen-Thunfisch."
 			]
 		}
 	}

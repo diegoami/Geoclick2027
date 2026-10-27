@@ -3,7 +3,8 @@
 		"Name-facts for Pakistan (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the 7 provinces and territories of the map, each as a \"region\" entry (en, it, de). Gilgit-Baltistan and Azad Kashmir are shown as administered by Pakistan; the borders in Kashmir are disputed."
+		"v0.19 added the 7 provinces and territories of the map, each as a \"region\" entry (en, it, de). Gilgit-Baltistan and Azad Kashmir are shown as administered by Pakistan; the borders in Kashmir are disputed.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"islamabad": {
 		"city": {
@@ -154,6 +155,831 @@
 				"Islamabad bedeutet „Stadt des Islam“; es wurde in den 1960er-Jahren als neue Hauptstadt Pakistans gegründet.",
 				"Es wurde vom griechischen Architekten Constantinos Doxiadis in einem Raster von Sektoren am Fuß der Margalla-Berge geplant.",
 				"Es löste Karatschi als Hauptstadt ab."
+			]
+		}
+	},
+	"_sources": {
+		"gilgit:city": [
+			"https://ignca.gov.in/Asi_data/25461.pdf",
+			"https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=&place=&subjectid=1083462",
+			"https://media.unesco.org/sites/default/files/webform/mow001/india_gilgit_eng.pdf",
+			"https://visitgilgitbaltistan.gov.pk/pages/news/62"
+		],
+		"saidu-sharif:city": [
+			"https://file.pide.org.pk/pdf/thesis/mphil-development-studies-2017-muhammad-abbas--social-impacts-of-tourism-on-local-community-a-case-study-of-swat.pdf",
+			"https://kparchaeology.gkp.pk/swat-museum/",
+			"https://doam.gov.pk/public/heritage-sites/778",
+			"https://documents1.worldbank.org/curated/en/716131571027446741/pdf/Business-and-Entrepreneurship-Development-through-Tourism-Promotion-in-Punjab-Assessment-and-Improvement-of-Women-Participation-in-Economic-Activities-Around-Selected-Sites.pdf",
+			"https://edizionicafoscari.unive.it/media/pdf/books/978-88-6969-577-3/978-88-6969-577-3-ch-03_VyYnZn1.pdf"
+		],
+		"mardan:city": [
+			"https://commissionermardan.kp.gov.pk/?post=w.69",
+			"https://kparchaeology.gkp.pk/mardan-museum/"
+		],
+		"abbottabad:city": [
+			"https://abbotabad.kp.gov.pk/",
+			"https://www.fibis.org/wp-content/uploads/2018/03/J27.pdf",
+			"https://www.armyburnhall.com/about/introduction",
+			"https://www.abhcg.edu.pk/historic_background.aspx"
+		],
+		"peshawar:city": [
+			"https://www.iranicaonline.org/articles/kidarites/",
+			"https://kparchaeology.gkp.pk/peshawar-museum/",
+			"https://doam.gov.pk/public/sites/4399"
+		],
+		"kohat:city": [
+			"https://smeda.org/index.php?Itemid=1024&download=176%3Adistrictsprofilekohat&id=205%3Aarchive-kpk-district-economic-profiles&option=com_phocadownload&view=category",
+			"https://www.scribd.com/document/894411245/Report-on-the-Settlement-of-the-Kohat",
+			"https://ignca.gov.in/Asi_data/14418.pdf"
+		],
+		"rawalpindi:city": [
+			"https://repository.lahoreschool.edu.pk/xmlui/bitstream/handle/123456789/14672/1961%20District%20Census%20Report%20Rawalpindi.PDF?isAllowed=y&sequence=1",
+			"https://doam.gov.pk/public/sites/9419",
+			"https://rawalpindi.punjab.gov.pk/important_places"
+		],
+		"bannu:city": [
+			"https://pmru.kp.gov.pk/districts/bannu/index.php",
+			"https://www.getty.edu/research/collections/static/pdf/2018.R.25.pdf",
+			"https://doam.gov.pk/public/heritage-sites/784",
+			"https://awkum.edu.pk/news-archives/News_Archive/2_News_2014/01_January_2014/January_Pic_2014/16-01-14--Prof-Dr-Ihsan-Ali.pdf",
+			"https://ignca.gov.in/Asi_data/23275.pdf",
+			"https://www.thenews.com.pk/tns/detail/1076373-you-are-not-michan-ferangi"
+		],
+		"gujrat:city": [
+			"https://gujrat.punjab.gov.pk/geography",
+			"https://doam.gov.pk/public/sites/10119",
+			"https://doam.gov.pk/public/sites/6544"
+		],
+		"sialkot:city": [
+			"https://sialkot.punjab.gov.pk/our_history",
+			"https://sialkot.punjab.gov.pk/important_places",
+			"https://tdap.gov.pk/wp-content/uploads/2022/01/2.1-sports-goods.pdf"
+		],
+		"gujranwala:city": [
+			"https://gujranwala.punjab.gov.pk/important-places",
+			"https://doam.gov.pk/public/sites/10111",
+			"https://doam.gov.pk/public/sites/10110"
+		],
+		"sargodha:city": [
+			"https://urbanunit.gov.pk/Download/publications/Files/8/2021/PCIIP%20Cities%20Profile-Sargodha.pdf",
+			"https://urbanunit.gov.pk/Download/publications/Files/16/2022/10%20Sargodha%20Water%20Supply%20and%20Sanitation%20Plan.pdf",
+			"https://sargodha.punjab.gov.pk/our_history"
+		],
+		"dera-ismail-khan:city": [
+			"https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1908%20Imperial%20Gazetteer%20of%20India--North-West%20Frontier%20Province%20s.pdf",
+			"https://smeda.org/index.php?Itemid=1024&download=174%3Adistrict-profile-dera-ismail-khan-2024&id=1%3Akhyber-pakhtunkhwa-district-economic-profiles&option=com_phocadownload&view=category",
+			"https://kparchaeology.gkp.pk/town-hall-museum/"
+		],
+		"sheikhupura:city": [
+			"https://urbanunit.gov.pk/Download/publications/Files/8/2021/PCIIP%20Cities%20Profile-Siekhupura.pdf",
+			"https://sheikhupura.punjab.gov.pk/imp_places",
+			"https://gurmatveechar.com/books/English_Books/English_Thesis_Papers/Life.and.times.of.Maharani.Jind.Kaur.1817.to.1863.%28GurmatVeechar.com%29.pdf",
+			"https://www.sikhi.io/encyclopedia/jind-kaur-maharani"
+		],
+		"chiniot:city": [
+			"https://chiniot.punjab.gov.pk/our-history",
+			"https://chiniot.punjab.gov.pk/important-places",
+			"https://doam.gov.pk/public/sites/6540"
+		],
+		"lahore:city": [
+			"https://walledcitylahore.gop.pk/monuments/",
+			"https://whc.unesco.org/document/221560",
+			"https://auqaf.punjab.gov.pk/badshahi-mosque"
+		],
+		"faisalabad:city": [
+			"https://ctpfsd.gop.pk/public/AboutFaisalabad",
+			"https://faisalabad.punjab.gov.pk/important-places",
+			"https://doam.gov.pk/public/heritage-sites/790"
+		],
+		"jhang:city": [
+			"https://urbanunit.gov.pk/Download/publications/Files/8/2021/PCIIP%20Cities%20Profile-Jhang.pdf",
+			"https://jhang.punjab.gov.pk/important-places",
+			"https://www.nobelprize.org/laureate/114"
+		],
+		"kasur:city": [
+			"https://www.salampakistan.gov.pk/where-to-go/category/explore-cities/location/kasur",
+			"https://kasur.punjab.gov.pk/important_places",
+			"https://kasur.punjab.gov.pk/important_personalities"
+		],
+		"okara:city": [
+			"https://urbanunit.gov.pk/Download/publications/Files/8/2021/PCIIP%20Cities%20Profile-Okara.pdf",
+			"https://www.sutlejtextiles.com/sutlej-overview.html",
+			"https://www.pcb.com.pk/player/zulfiqar-babar-18509.html"
+		],
+		"sahiwal:city": [
+			"https://urbanunit.gov.pk/Download/publications/Files/19/2024/Sahiwal%20Regional%20Plan_Urban%20Planning_28%20June_%202024%20.pdf",
+			"https://sites.google.com/gpgcs.edu.pk/home/about-ggc",
+			"https://www.rekhta.org/poets/majeed-amjad/profile"
+		],
+		"quetta:city": [
+			"https://www.ndma.gov.pk/public/storage/plans/September2020/UbHEq6ER4zCe9tfjDJxz.pdf",
+			"https://www.pdma.gob.pk/natural-hazards/earthquake",
+			"https://cscquetta.gov.pk/2012/08/11/historical-college-building/",
+			"https://cscquetta.gov.pk/library/"
+		],
+		"multan:city": [
+			"https://bzu.edu.pk/about-multan.php",
+			"https://ignca.gov.in/Asi_data/30688.pdf",
+			"https://whc.unesco.org/en/tentativelists/1884/",
+			"https://www.psic.gop.pk/Download%28psic%29/Crafts-of-Gujrat-1.pdf",
+			"https://www.nigarkhana.org/"
+		],
+		"dera-ghazi-khan:city": [
+			"https://dgkhan.punjab.gov.pk/district_profile",
+			"https://opendata.com.pk/dataset/9841e1f2-3249-4c8c-b3e7-0198ca4571a5/resource/fc14e355-903f-4d75-8756-e6f07fdf8106/download/statutory-annual-report-2018-19.pdf",
+			"https://doam.gov.pk/public/sites/6547"
+		],
+		"bahawalpur:city": [
+			"https://bahawalpur.punjab.gov.pk/our-history",
+			"https://www.pbs.gov.pk/sites/default/files/population/2023/reports/Provincial%20Census%20Report%202023-Punjab.pdf",
+			"https://doam.gov.pk/public/heritage-sites/783"
+		],
+		"rahim-yar-khan:city": [
+			"https://rykhan.punjab.gov.pk/our_history",
+			"https://szmc.edu.pk/2276/introduction-sheikh-zayed-medical-college/"
+		],
+		"sadiqabad:city": [
+			"https://www.punjabpolice.gov.pk/system/files/RY%20Khan21-22.pdf",
+			"https://mcsadiqabad.lgpunjab.org.pk/",
+			"https://rykhan.punjab.gov.pk/Irrigation_Department"
+		],
+		"sukkur:city": [
+			"https://heritage.eftsindh.com/pending.php?id=78%2Fsukkur%2Fbridges-of-sukkur",
+			"https://irrigation.sindh.gov.pk/HIC",
+			"https://antiquities.sindhculture.gov.pk/tour/mir-masums-minar-sukkur/"
+		],
+		"larkana:city": [
+			"https://doam.gov.pk/public/heritage-sites/397",
+			"https://archives.sindhculture.gov.pk/shahnawaz_library/",
+			"https://doam.gov.pk/public/heritage-sites/398"
+		],
+		"nawabshah:city": [
+			"https://tdap.gov.pk/nawabshah-district/",
+			"https://www.quest.edu.pk/history/",
+			"https://www.hec.gov.pk/english/universities/Pages/Sindh/Shaheed-Benazir-Bhutto-University%2C-Shaheed-Benazirabad.aspx"
+		],
+		"turbat:city": [
+			"https://bhc.gov.pk/?params=district-judiciary%2Fturbat%2Fintroduction%2Fhistory"
+		],
+		"mirpur-khas:city": [
+			"https://information.sindh.gov.pk/mirpurkhas",
+			"https://rsusindh.gov.pk/rsusindh.gov.pk/contents/SELECT/ESMP/ESMP%20Mirpurkhas.pdf"
+		],
+		"hyderabad:city": [
+			"https://antiquities.sindhculture.gov.pk/tour/boundary-wall-of-pucca-fort-hyderabad/",
+			"https://smeda.org/phocadownload/Sindh/HYDERABAD_profile.pdf",
+			"https://antiquities.sindhculture.gov.pk/tour/mukhi-house-museum-hyderabad/",
+			"https://doam.gov.pk/public/sites/5700"
+		],
+		"karachi:city": [
+			"https://pakrail.gov.pk/History.aspx",
+			"https://kpt.gov.pk/pages/42/kpt-history",
+			"https://www.qmmb.gov.pk/"
+		]
+	},
+	"gilgit": {
+		"city": {
+			"en": [
+				"Gilgit was recorded as Gilghit and Gilit in nineteenth-century accounts of Dardistan.",
+				"The Gilgit Buddhist manuscripts were first discovered by local cattle grazers in 1931, with many later preserved in India’s National Archives.",
+				"Gilgit’s Shahi Polo Ground hosts regional competitions such as the Jashn-e-Azadi polo tournament."
+			],
+			"it": [
+				"Gilgit fu registrata come Gilghit e Gilit nei resoconti ottocenteschi sul Dardistan.",
+				"I manoscritti buddhisti di Gilgit furono scoperti per la prima volta da pastori locali nel 1931, e molti furono poi conservati negli Archivi nazionali dell’India.",
+				"Il campo Shahi Polo Ground di Gilgit ospita competizioni regionali come il torneo di polo Jashn-e-Azadi."
+			],
+			"de": [
+				"Gilgit wurde in Berichten des 19. Jahrhunderts über Dardistan als Gilghit und Gilit verzeichnet.",
+				"Die buddhistischen Gilgit-Handschriften wurden erstmals 1931 von örtlichen Viehhirten entdeckt; viele wurden später im indischen Nationalarchiv bewahrt.",
+				"Gilgits Shahi Polo Ground ist Austragungsort regionaler Wettbewerbe wie des Poloturniers Jashn-e-Azadi."
+			]
+		}
+	},
+	"saidu-sharif": {
+		"city": {
+			"en": [
+				"Saidu Sharif takes its name from the religious leader Akhund Abdul Ghafur, commonly known as Saidu Baba.",
+				"Swat Museum at Saidu Sharif was formally inaugurated on 10 November 1963 and displays Gandharan Buddhist sculpture.",
+				"Saidu Sharif was the capital of the princely state of Swat until the state was abolished in 1969."
+			],
+			"it": [
+				"Saidu Sharif prende il nome dal leader religioso Akhund Abdul Ghafur, comunemente conosciuto come Saidu Baba.",
+				"Il Museo dello Swat a Saidu Sharif fu inaugurato ufficialmente il 10 novembre 1963 ed espone sculture buddhiste del Gandhara.",
+				"Saidu Sharif fu la capitale dello stato principesco dello Swat fino alla sua abolizione nel 1969."
+			],
+			"de": [
+				"Saidu Sharif ist nach dem religiösen Führer Akhund Abdul Ghafur benannt, der gewöhnlich als Saidu Baba bekannt ist.",
+				"Das Swat-Museum in Saidu Sharif wurde am 10. November 1963 offiziell eingeweiht und zeigt buddhistische Skulpturen aus Gandhara.",
+				"Saidu Sharif war bis zur Auflösung des Fürstenstaates Swat im Jahr 1969 dessen Hauptstadt."
+			]
+		}
+	},
+	"mardan": {
+		"city": {
+			"en": [
+				"Mardan’s name is traditionally associated with the religious figure Pir Mardan Shah.",
+				"Mardan Museum was established in the town hall in 1990.",
+				"Mardan Museum’s Gandharan sculptures illustrate episodes from the Buddha’s life, including his birth and first sermon."
+			],
+			"it": [
+				"Il nome Mardan è tradizionalmente associato alla figura religiosa Pir Mardan Shah.",
+				"Il Museo di Mardan fu istituito nel municipio nel 1990.",
+				"Le sculture del Gandhara del Museo di Mardan illustrano episodi della vita del Buddha, tra cui la nascita e il primo sermone."
+			],
+			"de": [
+				"Mardans Name wird traditionell mit der religiösen Gestalt Pir Mardan Shah verbunden.",
+				"Das Mardan-Museum wurde 1990 im Rathaus eingerichtet.",
+				"Die Gandhara-Skulpturen im Mardan-Museum zeigen Episoden aus dem Leben Buddhas, darunter seine Geburt und erste Predigt."
+			]
+		}
+	},
+	"abbottabad": {
+		"city": {
+			"en": [
+				"Abbottabad was founded in 1853 and named after the British officer James Abbott.",
+				"Abbottabad’s Saint Luke’s Church was completed and consecrated in 1864.",
+				"Burn Hall School was established in Abbottabad in 1948 by missionaries who had previously founded a school in Srinagar."
+			],
+			"it": [
+				"Abbottabad fu fondata nel 1853 e prese il nome dall’ufficiale britannico James Abbott.",
+				"La chiesa di San Luca di Abbottabad fu completata e consacrata nel 1864.",
+				"La scuola Burn Hall fu istituita ad Abbottabad nel 1948 da missionari che avevano precedentemente fondato una scuola a Srinagar."
+			],
+			"de": [
+				"Abbottabad wurde 1853 gegründet und nach dem britischen Offizier James Abbott benannt.",
+				"Abbottabads Lukaskirche wurde 1864 fertiggestellt und geweiht.",
+				"Die Burn-Hall-Schule wurde 1948 in Abbottabad von Missionaren eingerichtet, die zuvor eine Schule in Srinagar gegründet hatten."
+			]
+		}
+	},
+	"peshawar": {
+		"city": {
+			"en": [
+				"Peshawar was known in antiquity as Purushapura.",
+				"Peshawar Museum opened in November 1907 in a hall built in memory of Queen Victoria.",
+				"Peshawar’s Mahabat Khan Mosque was built in 1630 under the Mughal emperor Shah Jahan."
+			],
+			"it": [
+				"Peshawar era conosciuta nell’antichità come Purushapura.",
+				"Il Museo di Peshawar aprì nel novembre 1907 in un edificio costruito in memoria della regina Vittoria.",
+				"La moschea Mahabat Khan di Peshawar fu costruita nel 1630 sotto l’imperatore moghul Shah Jahan."
+			],
+			"de": [
+				"Peshawar war in der Antike als Purushapura bekannt.",
+				"Das Peshawar-Museum wurde im November 1907 in einer zum Gedenken an Königin Victoria errichteten Halle eröffnet.",
+				"Peshawars Mahabat-Khan-Moschee wurde 1630 unter dem Mogulkaiser Shah Jahan erbaut."
+			]
+		}
+	},
+	"kohat": {
+		"city": {
+			"en": [
+				"One tradition says Kohat was named after a ruler called Raja Kohat, although other explanations exist.",
+				"The Mughal ruler Babur visited Kohat in 1505 and described the area in his memoirs.",
+				"Kohat’s Haji Bahadur shrine honours a religious figure who lived during Emperor Aurangzeb’s reign."
+			],
+			"it": [
+				"Una tradizione afferma che Kohat prese il nome da un sovrano chiamato Raja Kohat, ma esistono altre spiegazioni.",
+				"Il sovrano moghul Babur visitò Kohat nel 1505 e descrisse la zona nelle sue memorie.",
+				"Il santuario Haji Bahadur di Kohat ricorda una figura religiosa vissuta durante il regno dell’imperatore Aurangzeb."
+			],
+			"de": [
+				"Einer Überlieferung zufolge wurde Kohat nach einem Herrscher namens Raja Kohat benannt, doch es gibt weitere Erklärungen.",
+				"Der Mogulherrscher Babur besuchte Kohat 1505 und beschrieb die Gegend in seinen Erinnerungen.",
+				"Kohats Haji-Bahadur-Schrein ehrt eine religiöse Gestalt, die während der Herrschaft Kaiser Aurangzebs lebte."
+			]
+		}
+	},
+	"rawalpindi": {
+		"city": {
+			"en": [
+				"Rawalpindi’s name is commonly explained as home of the Rawals, a Jogi community.",
+				"Rawalpindi’s Sujan Singh haveli was built in the late nineteenth century around an open central courtyard.",
+				"The Pakistan Army Museum in Rawalpindi opened on 24 October 1961."
+			],
+			"it": [
+				"Il nome Rawalpindi viene comunemente spiegato come dimora dei Rawal, una comunità jogi.",
+				"La haveli Sujan Singh di Rawalpindi fu costruita alla fine dell’Ottocento attorno a un cortile centrale aperto.",
+				"Il Museo dell’esercito pakistano a Rawalpindi aprì il 24 ottobre 1961."
+			],
+			"de": [
+				"Rawalpindis Name wird gewöhnlich als Wohnstätte der Rawals, einer Jogi-Gemeinschaft, erklärt.",
+				"Rawalpindis Sujan-Singh-Haveli wurde im späten 19. Jahrhundert um einen offenen Innenhof erbaut.",
+				"Das Museum der pakistanischen Armee in Rawalpindi wurde am 24. Oktober 1961 eröffnet."
+			]
+		}
+	},
+	"bannu": {
+		"city": {
+			"en": [
+				"Bannu was known as Edwardesabad before receiving its present official name in 1903.",
+				"Bannu Museum was inaugurated in 2011 to present the archaeology and cultural heritage of the Bannu region.",
+				"Bannu’s Saint George’s Church dates from the nineteenth-century British cantonment and preserves colonial memorial tablets."
+			],
+			"it": [
+				"Bannu era conosciuta come Edwardesabad prima di ricevere il nome ufficiale attuale nel 1903.",
+				"Il Museo di Bannu fu inaugurato nel 2011 per presentare l’archeologia e il patrimonio culturale della regione di Bannu.",
+				"La chiesa di San Giorgio di Bannu risale al quartiere militare britannico ottocentesco e conserva lapidi commemorative coloniali."
+			],
+			"de": [
+				"Bannu war als Edwardesabad bekannt, bevor es 1903 seinen heutigen amtlichen Namen erhielt.",
+				"Das Bannu-Museum wurde 2011 eingeweiht, um die Archäologie und das kulturelle Erbe der Region Bannu zu zeigen.",
+				"Bannus Georgskirche stammt aus dem britischen Garnisonsviertel des 19. Jahrhunderts und bewahrt koloniale Gedenktafeln."
+			]
+		}
+	},
+	"gujrat": {
+		"city": {
+			"en": [
+				"Gujrat was called Gujar Akbarabad after its rebuilding under the Mughal emperor Akbar.",
+				"Akbar had Gujrat fortified with walls and gates in the late sixteenth century.",
+				"Gujrat’s Akbari Baoli is a stepped well with a brick staircase descending beneath arches."
+			],
+			"it": [
+				"Gujrat fu chiamata Gujar Akbarabad dopo la ricostruzione sotto l’imperatore moghul Akbar.",
+				"Akbar fece fortificare Gujrat con mura e porte alla fine del Cinquecento.",
+				"L’Akbari Baoli di Gujrat è un pozzo a gradoni con una scala in mattoni che scende sotto archi."
+			],
+			"de": [
+				"Gujrat wurde nach seinem Wiederaufbau unter dem Mogulkaiser Akbar Gujar Akbarabad genannt.",
+				"Akbar ließ Gujrat im späten 16. Jahrhundert mit Mauern und Toren befestigen.",
+				"Gujrats Akbari Baoli ist ein Stufenbrunnen mit einer unter Bögen hinabführenden Backsteintreppe."
+			]
+		}
+	},
+	"sialkot": {
+		"city": {
+			"en": [
+				"Local tradition connects Sialkot’s name with King Salivahana and kot, meaning fort.",
+				"Iqbal Manzil, the Sialkot birthplace of poet Muhammad Iqbal, opened as a museum in 1977.",
+				"Sialkot’s football makers produce hand-stitched, machine-stitched and heat-bonded balls."
+			],
+			"it": [
+				"La tradizione locale collega il nome Sialkot al re Salivahana e a kot, che significa forte.",
+				"Iqbal Manzil, casa natale del poeta Muhammad Iqbal a Sialkot, aprì come museo nel 1977.",
+				"I fabbricanti di palloni di Sialkot producono modelli cuciti a mano, cuciti a macchina e incollati a caldo."
+			],
+			"de": [
+				"Die örtliche Überlieferung verbindet Sialkots Namen mit König Salivahana und kot für Festung.",
+				"Iqbal Manzil, das Geburtshaus des Dichters Muhammad Iqbal in Sialkot, wurde 1977 als Museum eröffnet.",
+				"Sialkots Fußballhersteller produzieren handgenähte, maschinengenähte und thermisch verklebte Bälle."
+			]
+		}
+	},
+	"gujranwala": {
+		"city": {
+			"en": [
+				"Gujranwala was called Gujraoli after Charat Singh fortified the settlement in 1756.",
+				"Maharaja Ranjit Singh, founder of the Sikh Empire, was born in Gujranwala in 1780.",
+				"Gujranwala’s Mahan Singh Samadhi marks the cremation site of Maharaja Ranjit Singh’s father."
+			],
+			"it": [
+				"Gujranwala fu chiamata Gujraoli dopo che Charat Singh fortificò l’insediamento nel 1756.",
+				"Il maharaja Ranjit Singh, fondatore dell’Impero sikh, nacque a Gujranwala nel 1780.",
+				"Il Mahan Singh Samadhi di Gujranwala segna il luogo di cremazione del padre del maharaja Ranjit Singh."
+			],
+			"de": [
+				"Gujranwala wurde Gujraoli genannt, nachdem Charat Singh die Siedlung 1756 befestigt hatte.",
+				"Maharadscha Ranjit Singh, der Gründer des Sikh-Reiches, wurde 1780 in Gujranwala geboren.",
+				"Gujranwalas Mahan-Singh-Samadhi markiert den Verbrennungsort des Vaters von Maharadscha Ranjit Singh."
+			]
+		}
+	},
+	"sargodha": {
+		"city": {
+			"en": [
+				"One local explanation connects Sargodha’s name with sar, a pond, and Godha, a religious ascetic who lived beside it.",
+				"Sargodha was established in 1903 as a planned town with numbered residential blocks and a civil administrative quarter.",
+				"Sargodha’s municipal water system, begun in 1904, uses canal water and seepage wells because local groundwater is brackish."
+			],
+			"it": [
+				"Una spiegazione locale collega il nome Sargodha a sar, uno stagno, e a Godha, un asceta religioso che viveva accanto ad esso.",
+				"Sargodha fu istituita nel 1903 come città pianificata con isolati residenziali numerati e un quartiere amministrativo civile.",
+				"Il sistema idrico municipale di Sargodha, avviato nel 1904, usa acqua di canale e pozzi alimentati dalle infiltrazioni perché la falda locale è salmastra."
+			],
+			"de": [
+				"Eine örtliche Erklärung verbindet Sargodhas Namen mit sar für Teich und Godha, einem religiösen Asketen, der daneben lebte.",
+				"Sargodha wurde 1903 als Planstadt mit nummerierten Wohnblöcken und einem zivilen Verwaltungsviertel angelegt.",
+				"Sargodhas 1904 begonnenes städtisches Wassersystem nutzt Kanalwasser und Sickerbrunnen, weil das örtliche Grundwasser brackig ist."
+			]
+		}
+	},
+	"dera-ismail-khan": {
+		"city": {
+			"en": [
+				"Dera Ismail Khan was named after Ismail Khan, the Baloch leader who founded the earlier town in the late fifteenth century.",
+				"The original Dera Ismail Khan town was destroyed by an Indus flood in 1823 and was subsequently rebuilt.",
+				"Dera Ismail Khan’s Town Hall Museum occupies a colonial-era civic building and displays archaeology and local crafts."
+			],
+			"it": [
+				"Dera Ismail Khan prende il nome da Ismail Khan, il capo beluci che fondò il precedente insediamento alla fine del Quattrocento.",
+				"Il nucleo originario di Dera Ismail Khan fu distrutto da un’inondazione dell’Indo nel 1823 e fu successivamente ricostruito.",
+				"Il Museo del municipio di Dera Ismail Khan occupa un edificio civico dell’epoca coloniale ed espone reperti archeologici e artigianato locale."
+			],
+			"de": [
+				"Dera Ismail Khan wurde nach Ismail Khan benannt, dem Belutschenführer, der die frühere Stadt im späten 15. Jahrhundert gründete.",
+				"Die ursprüngliche Stadt Dera Ismail Khan wurde 1823 durch eine Indusflut zerstört und anschließend wieder aufgebaut.",
+				"Dera Ismail Khans Rathausmuseum befindet sich in einem städtischen Gebäude aus der Kolonialzeit und zeigt Archäologie und örtliches Handwerk."
+			]
+		}
+	},
+	"sheikhupura": {
+		"city": {
+			"en": [
+				"Sheikhupura takes its name from Sheikhu, a childhood nickname of the Mughal emperor Jahangir.",
+				"Sheikhupura Fort was built during Jahangir’s reign in the early seventeenth century as a royal resting place.",
+				"Maharani Jind Kaur, mother of the Sikh ruler Duleep Singh, was confined in Sheikhupura Fort in 1847."
+			],
+			"it": [
+				"Sheikhupura prende il nome da Sheikhu, soprannome d’infanzia dell’imperatore moghul Jahangir.",
+				"Il forte di Sheikhupura fu costruito durante il regno di Jahangir all’inizio del Seicento come luogo di riposo reale.",
+				"La maharani Jind Kaur, madre del sovrano sikh Duleep Singh, fu confinata nel forte di Sheikhupura nel 1847."
+			],
+			"de": [
+				"Sheikhupura ist nach Sheikhu benannt, einem Kindheitsspitznamen des Mogulkaisers Jahangir.",
+				"Die Festung Sheikhupura wurde während Jahangirs Herrschaft im frühen 17. Jahrhundert als königlicher Ruheort erbaut.",
+				"Maharani Jind Kaur, die Mutter des Sikh-Herrschers Duleep Singh, wurde 1847 in der Festung Sheikhupura festgesetzt."
+			]
+		}
+	},
+	"chiniot": {
+		"city": {
+			"en": [
+				"A local tradition traces Chiniot’s name to a king’s daughter called Chandan.",
+				"Chiniot’s Omar Hayat Mahal, begun in 1923, displays the town’s craftsmanship through lavish woodcarving.",
+				"Chiniot’s Shahi Mosque is a three-domed brick building whose prayer hall was decorated with floral and geometric patterns."
+			],
+			"it": [
+				"Una tradizione locale fa risalire il nome Chiniot a una figlia di re chiamata Chandan.",
+				"L’Omar Hayat Mahal di Chiniot, iniziato nel 1923, mostra l’abilità artigianale cittadina attraverso ricchi intagli in legno.",
+				"La moschea Shahi di Chiniot è un edificio in mattoni con tre cupole, la cui sala di preghiera era decorata con motivi floreali e geometrici."
+			],
+			"de": [
+				"Eine örtliche Überlieferung führt Chiniots Namen auf eine Königstochter namens Chandan zurück.",
+				"Chiniots 1923 begonnener Omar Hayat Mahal zeigt durch aufwendige Holzschnitzereien die Handwerkskunst der Stadt.",
+				"Chiniots Shahi-Moschee ist ein Backsteinbau mit drei Kuppeln, dessen Gebetssaal mit floralen und geometrischen Mustern geschmückt war."
+			]
+		}
+	},
+	"lahore": {
+		"city": {
+			"en": [
+				"Local tradition links Lahore’s name to Lava, a son of Rama in the Ramayana.",
+				"Lahore’s Shalimar Gardens were built in 1641–1642 under the Mughal emperor Shah Jahan.",
+				"Lahore’s Badshahi Mosque was commissioned by Emperor Aurangzeb in 1671 and completed in 1673."
+			],
+			"it": [
+				"La tradizione locale collega il nome Lahore a Lava, figlio di Rama nel Ramayana.",
+				"I Giardini Shalimar di Lahore furono costruiti nel 1641–1642 sotto l’imperatore moghul Shah Jahan.",
+				"La moschea Badshahi di Lahore fu commissionata dall’imperatore Aurangzeb nel 1671 e completata nel 1673."
+			],
+			"de": [
+				"Eine örtliche Überlieferung verbindet Lahores Namen mit Lava, einem Sohn Ramas im Ramayana.",
+				"Lahores Shalimar-Gärten wurden 1641–1642 unter dem Mogulkaiser Shah Jahan angelegt.",
+				"Lahores Badshahi-Moschee wurde 1671 von Kaiser Aurangzeb in Auftrag gegeben und 1673 fertiggestellt."
+			]
+		}
+	},
+	"faisalabad": {
+		"city": {
+			"en": [
+				"Faisalabad was called Lyallpur until 1977, when it was renamed in honour of Saudi Arabia’s King Faisal.",
+				"Faisalabad’s Clock Tower, completed in 1905, stands at the centre of eight bazaars arranged in a radial plan.",
+				"Faisalabad’s Lyallpur Museum, established in 2011, explores regional archaeology, Chenab Colony history and the textile industry."
+			],
+			"it": [
+				"Faisalabad si chiamò Lyallpur fino al 1977, quando fu ribattezzata in onore del re Faisal dell’Arabia Saudita.",
+				"La Torre dell’orologio di Faisalabad, completata nel 1905, sorge al centro di otto bazar disposti secondo una pianta radiale.",
+				"Il Museo Lyallpur di Faisalabad, istituito nel 2011, presenta l’archeologia regionale, la storia della colonia del Chenab e l’industria tessile."
+			],
+			"de": [
+				"Faisalabad hieß bis 1977 Lyallpur und wurde dann zu Ehren des saudi-arabischen Königs Faisal umbenannt.",
+				"Faisalabads 1905 vollendeter Uhrturm steht im Zentrum von acht radial angeordneten Basaren.",
+				"Faisalabads 2011 gegründetes Lyallpur-Museum behandelt regionale Archäologie, die Geschichte der Chenab-Kolonie und die Textilindustrie."
+			]
+		}
+	},
+	"jhang": {
+		"city": {
+			"en": [
+				"One traditional explanation derives Jhang’s name from jhangi, a local word for thick woodland.",
+				"The Tomb of Heer on the edge of Jhang commemorates the heroine of the Punjabi romance Heer Ranjha.",
+				"The physicist Abdus Salam, who shared the 1979 Nobel Prize in Physics, was born in Jhang in 1926."
+			],
+			"it": [
+				"Una spiegazione tradizionale fa derivare il nome Jhang da jhangi, una parola locale che indica un bosco fitto.",
+				"La Tomba di Heer ai margini di Jhang commemora l’eroina del racconto d’amore punjabi Heer Ranjha.",
+				"Il fisico Abdus Salam, che condivise il Premio Nobel per la fisica nel 1979, nacque a Jhang nel 1926."
+			],
+			"de": [
+				"Eine überlieferte Erklärung leitet Jhangs Namen von jhangi ab, einem örtlichen Wort für dichtes Waldland.",
+				"Das Heer-Grabmal am Rand von Jhang erinnert an die Heldin der punjabischen Liebeserzählung Heer Ranjha.",
+				"Der Physiker Abdus Salam, der 1979 den Nobelpreis für Physik mit anderen Forschern teilte, wurde 1926 in Jhang geboren."
+			]
+		}
+	},
+	"kasur": {
+		"city": {
+			"en": [
+				"Kasur’s name is commonly linked to Arabic qusur, meaning palaces or forts.",
+				"Kasur’s central shrine commemorates the Punjabi Sufi poet Bulleh Shah, who lived and was buried in the town.",
+				"The Hindustani classical vocalist Bade Ghulam Ali Khan was born in Kasur in 1902."
+			],
+			"it": [
+				"Il nome Kasur viene comunemente collegato all’arabo qusur, che significa palazzi o forti.",
+				"Il santuario centrale di Kasur commemora il poeta sufi punjabi Bulleh Shah, che visse e fu sepolto nella città.",
+				"Il cantante di musica classica indostana Bade Ghulam Ali Khan nacque a Kasur nel 1902."
+			],
+			"de": [
+				"Kasurs Name wird gewöhnlich mit dem arabischen qusur für Paläste oder Festungen verbunden.",
+				"Kasurs zentraler Schrein erinnert an den punjabischen Sufi-Dichter Bulleh Shah, der in der Stadt lebte und begraben wurde.",
+				"Der Sänger der hindustanischen Klassik Bade Ghulam Ali Khan wurde 1902 in Kasur geboren."
+			]
+		}
+	},
+	"okara": {
+		"city": {
+			"en": [
+				"Local tradition connects Okara’s name to an okaan tree that grew beside a water tank.",
+				"The Sutlej Cotton Mills complex helped Okara’s industrial growth after its establishment in the 1930s.",
+				"The cricketer Zulfiqar Babar was born in Okara on 10 December 1978."
+			],
+			"it": [
+				"La tradizione locale collega il nome Okara a un albero chiamato okaan che cresceva accanto a una cisterna.",
+				"La nascita negli anni Trenta del complesso tessile Sutlej Cotton Mills favorì la crescita industriale di Okara.",
+				"Il giocatore di cricket Zulfiqar Babar nacque a Okara il 10 dicembre 1978."
+			],
+			"de": [
+				"Die örtliche Überlieferung verbindet Okaras Namen mit einem Okaan-Baum, der neben einem Wasserbecken wuchs.",
+				"Das in den 1930er Jahren gegründete Textilwerk Sutlej Cotton Mills förderte Okaras industrielles Wachstum.",
+				"Der Cricketspieler Zulfiqar Babar wurde am 10. Dezember 1978 in Okara geboren."
+			]
+		}
+	},
+	"sahiwal": {
+		"city": {
+			"en": [
+				"Sahiwal’s former name, Montgomery, honoured the British administrator Robert Montgomery.",
+				"Sahiwal’s Government College began in 1942 in a rented building on Circular Road.",
+				"The Urdu poet Majeed Amjad spent much of his life in Sahiwal, where he worked in the food administration."
+			],
+			"it": [
+				"Il precedente nome di Sahiwal, Montgomery, onorava l’amministratore britannico Robert Montgomery.",
+				"L’istituto superiore pubblico di Sahiwal iniziò l’attività nel 1942 in un edificio in affitto su Circular Road.",
+				"Il poeta in lingua urdu Majeed Amjad trascorse gran parte della vita a Sahiwal, dove lavorò come funzionario del servizio alimentare."
+			],
+			"de": [
+				"Sahiwals früherer Name Montgomery ehrte den britischen Verwaltungsbeamten Robert Montgomery.",
+				"Sahiwals Government College nahm 1942 in einem gemieteten Gebäude an der Circular Road den Betrieb auf.",
+				"Der Urdu-Dichter Majeed Amjad verbrachte einen großen Teil seines Lebens in Sahiwal, wo er in der Lebensmittelverwaltung arbeitete."
+			]
+		}
+	},
+	"quetta": {
+		"city": {
+			"en": [
+				"Quetta’s name derives from the Pashto word kwatta, meaning fort.",
+				"Quetta was devastated by an earthquake on 31 May 1935.",
+				"Quetta’s Command and Staff College moved to the city in 1907 after operating temporarily at Deolali from 1905."
+			],
+			"it": [
+				"Il nome Quetta deriva dalla parola pashto kwatta, che significa forte.",
+				"Quetta fu devastata da un terremoto il 31 maggio 1935.",
+				"La scuola di comando e stato maggiore di Quetta si trasferì in città nel 1907 dopo aver operato temporaneamente a Deolali dal 1905."
+			],
+			"de": [
+				"Quettas Name stammt vom Pashto-Wort kwatta für Festung.",
+				"Quetta wurde am 31. Mai 1935 von einem Erdbeben verwüstet.",
+				"Quettas Command and Staff College zog 1907 in die Stadt, nachdem es seit 1905 vorübergehend in Deolali untergebracht gewesen war."
+			]
+		}
+	},
+	"multan": {
+		"city": {
+			"en": [
+				"Multan appears as Mulatana in the eleventh-century account of al-Biruni.",
+				"Multan’s Tomb of Shah Rukn-e-Alam was built between 1320 and 1324 under the Tughluq ruler Ghiyas-ud-Din.",
+				"Multan is known for kashigari, a tradition of blue-glazed pottery and decorative tilework."
+			],
+			"it": [
+				"Multan compare come Mulatana nel resoconto di al-Biruni dell’XI secolo.",
+				"La Tomba di Shah Rukn-e-Alam a Multan fu costruita tra il 1320 e il 1324 sotto il sovrano tughluq Ghiyas-ud-Din.",
+				"Multan è conosciuta per la kashigari, una tradizione di ceramiche smaltate in blu e piastrelle decorative."
+			],
+			"de": [
+				"Multan erscheint im Bericht al-Birunis aus dem 11. Jahrhundert als Mulatana.",
+				"Multans Grabmal des Shah Rukn-e-Alam wurde zwischen 1320 und 1324 unter dem Tughluq-Herrscher Ghiyas-ud-Din erbaut.",
+				"Multan ist für Kashigari bekannt, eine Tradition blau glasierter Keramik und dekorativer Fliesen."
+			]
+		}
+	},
+	"dera-ghazi-khan": {
+		"city": {
+			"en": [
+				"Dera Ghazi Khan was named after Ghazi Khan Mirani, son of the Baloch chief Haji Khan Mirani.",
+				"Dera Ghazi Khan was rebuilt on a grid at a new site around 1910 after destructive Indus flooding.",
+				"Dera Ghazi Khan’s Tomb of Ghazi Khan has an octagonal plan and elaborate tile-mosaic decoration."
+			],
+			"it": [
+				"Dera Ghazi Khan prende il nome da Ghazi Khan Mirani, figlio del capo beluci Haji Khan Mirani.",
+				"Dera Ghazi Khan fu ricostruita con una pianta a griglia in un nuovo sito attorno al 1910 dopo distruttive inondazioni dell’Indo.",
+				"La Tomba di Ghazi Khan a Dera Ghazi Khan ha una pianta ottagonale e un’elaborata decorazione a mosaico di piastrelle."
+			],
+			"de": [
+				"Dera Ghazi Khan wurde nach Ghazi Khan Mirani benannt, dem Sohn des Belutschenführers Haji Khan Mirani.",
+				"Dera Ghazi Khan wurde nach verheerenden Indusfluten um 1910 an einem neuen Standort mit einem rechtwinkligen Straßennetz neu aufgebaut.",
+				"Dera Ghazi Khans Grabmal des Ghazi Khan hat einen achteckigen Grundriss und aufwendigen Fliesenmosaikschmuck."
+			]
+		}
+	},
+	"bahawalpur": {
+		"city": {
+			"en": [
+				"Bahawalpur was founded in 1748 and named after Nawab Bahawal Khan I.",
+				"Bahawalpur’s Noor Mahal palace was built between 1872 and 1875.",
+				"Bahawalpur Museum’s collections include Cholistan art, regional archaeology and Islamic manuscripts."
+			],
+			"it": [
+				"Bahawalpur fu fondata nel 1748 e prese il nome dal nawab Bahawal Khan I.",
+				"Il palazzo Noor Mahal di Bahawalpur fu costruito tra il 1872 e il 1875.",
+				"Le collezioni del Museo di Bahawalpur comprendono arte del Cholistan, archeologia regionale e manoscritti islamici."
+			],
+			"de": [
+				"Bahawalpur wurde 1748 gegründet und nach Nawab Bahawal Khan I. benannt.",
+				"Bahawalpurs Palast Noor Mahal wurde zwischen 1872 und 1875 erbaut.",
+				"Die Sammlungen des Bahawalpur-Museums umfassen Kunst aus Cholistan, regionale Archäologie und islamische Handschriften."
+			]
+		}
+	},
+	"rahim-yar-khan": {
+		"city": {
+			"en": [
+				"Rahim Yar Khan was renamed from Naushera in 1881 to avoid confusion with another railway town.",
+				"The city’s Sheikh Zayed Medical College was established in March 2003.",
+				"Rahim Yar Khan lies on the main railway linking Karachi with Lahore and Peshawar."
+			],
+			"it": [
+				"Rahim Yar Khan cambiò nome da Naushera nel 1881 per evitare confusione con un’altra città ferroviaria.",
+				"Lo Sheikh Zayed Medical College della città fu istituito nel marzo 2003.",
+				"Rahim Yar Khan si trova sulla principale ferrovia che collega Karachi a Lahore e Peshawar."
+			],
+			"de": [
+				"Rahim Yar Khan wurde 1881 von Naushera umbenannt, um Verwechslungen mit einer anderen Eisenbahnstadt zu vermeiden.",
+				"Das Sheikh Zayed Medical College der Stadt wurde im März 2003 gegründet.",
+				"Rahim Yar Khan liegt an der Hauptbahnstrecke, die Karachi mit Lahore und Peschawar verbindet."
+			]
+		}
+	},
+	"sadiqabad": {
+		"city": {
+			"en": [
+				"Sadiqabad takes its name from Nawab Sadiq V of Bahawalpur.",
+				"Sadiqabad’s municipal committee was established in 1959.",
+				"Canal irrigation helped Sadiqabad grow rapidly as surrounding desert land became productive farmland."
+			],
+			"it": [
+				"Sadiqabad prende il nome dal nawab Sadiq V di Bahawalpur.",
+				"Il comitato municipale di Sadiqabad fu istituito nel 1959.",
+				"L’irrigazione mediante canali favorì la rapida crescita di Sadiqabad trasformando il deserto circostante in terreni agricoli produttivi."
+			],
+			"de": [
+				"Sadiqabad ist nach Nawab Sadiq V. von Bahawalpur benannt.",
+				"Der Gemeindeausschuss von Sadiqabad wurde 1959 gegründet.",
+				"Die Kanalbewässerung förderte Sadiqabads rasches Wachstum, indem umliegendes Wüstenland zu ertragreichem Ackerland wurde."
+			]
+		}
+	},
+	"sukkur": {
+		"city": {
+			"en": [
+				"The Lansdowne Bridge linking Sukkur with Rohri opened to railway traffic on 27 March 1889.",
+				"The Sukkur Barrage began operating in 1932 and supplies irrigation canals on both banks of the Indus.",
+				"Sukkur’s brick minaret of Mir Masum stands beside stone canopies sheltering his family’s graves."
+			],
+			"it": [
+				"Il ponte Lansdowne, che collega Sukkur a Rohri, fu aperto al traffico ferroviario il 27 marzo 1889.",
+				"La diga di derivazione di Sukkur entrò in funzione nel 1932 e alimenta canali irrigui sulle due rive dell’Indo.",
+				"Il minareto in mattoni di Mir Masum a Sukkur sorge accanto a baldacchini di pietra che riparano le tombe della sua famiglia."
+			],
+			"de": [
+				"Die Lansdowne-Brücke zwischen Sukkur und Rohri wurde am 27. März 1889 für den Bahnverkehr eröffnet.",
+				"Das Sukkur-Stauwehr nahm 1932 den Betrieb auf und versorgt Bewässerungskanäle auf beiden Seiten des Indus.",
+				"Sukkurs Backsteinminarett des Mir Masum steht neben steinernen Baldachinen über den Gräbern seiner Familie."
+			]
+		}
+	},
+	"larkana": {
+		"city": {
+			"en": [
+				"Larkana’s Tajjar Building stands inside Jinnah Bagh and preserves traces of glazed tiles and floral frescoes.",
+				"The city’s Sir Shahnawaz Bhutto Library includes a reference hall, auditorium and children’s section.",
+				"The octagonal tomb of Shah Baharo commemorates an eighteenth-century military commander of the Kalhora rulers."
+			],
+			"it": [
+				"Il Tajjar Building di Larkana sorge nel Jinnah Bagh e conserva tracce di piastrelle smaltate e affreschi floreali.",
+				"La biblioteca Sir Shahnawaz Bhutto della città comprende una sala di consultazione, un auditorium e una sezione per bambini.",
+				"La tomba ottagonale di Shah Baharo ricorda un comandante militare settecentesco dei sovrani Kalhora."
+			],
+			"de": [
+				"Larkanas Tajjar Building steht im Jinnah Bagh und bewahrt Reste glasierter Fliesen und floraler Fresken.",
+				"Die Sir-Shahnawaz-Bhutto-Bibliothek der Stadt umfasst einen Lesesaal, einen Veranstaltungssaal und eine Kinderabteilung.",
+				"Das achteckige Grabmal des Shah Baharo erinnert an einen Heerführer der Kalhora-Herrscher aus dem 18. Jahrhundert."
+			]
+		}
+	},
+	"nawabshah": {
+		"city": {
+			"en": [
+				"Nawabshah is the headquarters of Shaheed Benazirabad district, formerly called Nawabshah district.",
+				"Engineering classes at Nawabshah’s present QUEST campus began in February 1974.",
+				"The city hosts Shaheed Benazir Bhutto University, a public university chartered by the Sindh government."
+			],
+			"it": [
+				"Nawabshah è il capoluogo del distretto di Shaheed Benazirabad, un tempo chiamato distretto di Nawabshah.",
+				"Le lezioni di ingegneria nell’attuale campus QUEST di Nawabshah iniziarono nel febbraio 1974.",
+				"La città ospita la Shaheed Benazir Bhutto University, un’università pubblica istituita dal governo del Sindh."
+			],
+			"de": [
+				"Nawabshah ist Verwaltungssitz des Bezirks Shaheed Benazirabad, der früher Bezirk Nawabshah hieß.",
+				"Der Ingenieurunterricht am heutigen QUEST-Campus in Nawabshah begann im Februar 1974.",
+				"Die Stadt beherbergt die Shaheed Benazir Bhutto University, eine von der Regierung Sindhs gegründete öffentliche Universität."
+			]
+		}
+	},
+	"turbat": {
+		"city": {
+			"en": [
+				"Turbat stands on the left bank of the Kech River, a tributary of the Dasht.",
+				"Turbat is a market for dates grown in the surrounding Makran region.",
+				"The city’s Koh-e-Murad shrine is a pilgrimage destination for the Zikri community."
+			],
+			"it": [
+				"Turbat sorge sulla riva sinistra del fiume Kech, un affluente del Dasht.",
+				"Turbat è un mercato per i datteri coltivati nella regione circostante del Makran.",
+				"Il santuario cittadino di Koh-e-Murad è meta di pellegrinaggio per la comunità zikri."
+			],
+			"de": [
+				"Turbat liegt am linken Ufer des Kech, eines Nebenflusses des Dasht.",
+				"Turbat ist ein Handelsplatz für Datteln aus der umliegenden Region Makran.",
+				"Das Heiligtum Koh-e-Murad in der Stadt ist ein Pilgerziel der Zikri-Gemeinschaft."
+			]
+		}
+	},
+	"mirpur-khas": {
+		"city": {
+			"en": [
+				"Mirpur Khas was founded in 1806 by Mir Ali Talpur.",
+				"Mirpur Khas became the headquarters of Tharparkar district in 1882.",
+				"Known as the City of Mangoes, Mirpur Khas hosts a national mango and summer-fruit festival."
+			],
+			"it": [
+				"Mirpur Khas fu fondata nel 1806 da Mir Ali Talpur.",
+				"Mirpur Khas divenne il capoluogo del distretto di Tharparkar nel 1882.",
+				"Nota come Città dei manghi, Mirpur Khas ospita un festival nazionale del mango e della frutta estiva."
+			],
+			"de": [
+				"Mirpur Khas wurde 1806 von Mir Ali Talpur gegründet.",
+				"Mirpur Khas wurde 1882 Verwaltungssitz des Bezirks Tharparkar.",
+				"Als Stadt der Mangos bekannt, veranstaltet Mirpur Khas ein nationales Festival für Mangos und Sommerfrüchte."
+			]
+		}
+	},
+	"hyderabad": {
+		"city": {
+			"en": [
+				"Hyderabad and its Pucca Fort were founded in 1768 by Mian Ghulam Shah Kalhoro.",
+				"Hyderabad’s name recalls Ali, the Prophet Muhammad’s son-in-law, also known as Haidar.",
+				"The city’s Mukhi House is an early twentieth-century merchant’s mansion now used as a museum."
+			],
+			"it": [
+				"Hyderabad e il suo forte Pucca furono fondati nel 1768 da Mian Ghulam Shah Kalhoro.",
+				"Il nome Hyderabad ricorda Ali, genero del profeta Maometto, noto anche come Haidar.",
+				"La Mukhi House della città è una residenza mercantile del primo Novecento oggi adibita a museo."
+			],
+			"de": [
+				"Hyderabad und sein Pucca-Fort wurden 1768 von Mian Ghulam Shah Kalhoro gegründet.",
+				"Hyderabads Name erinnert an Ali, den Schwiegersohn des Propheten Mohammed, auch Haidar genannt.",
+				"Das Mukhi House der Stadt ist eine Kaufmannsvilla aus dem frühen 20. Jahrhundert, die heute als Museum dient."
+			]
+		}
+	},
+	"karachi": {
+		"city": {
+			"en": [
+				"The first railway line in what is now Pakistan opened between Karachi City and Kotri on 13 May 1861.",
+				"Karachi’s port headquarters, inaugurated in 1916, later served as a hospital during the First World War.",
+				"Mazar-e-Quaid in Karachi is the burial place of Pakistan’s founder, Muhammad Ali Jinnah."
+			],
+			"it": [
+				"La prima ferrovia nel territorio dell’attuale Pakistan fu aperta tra Karachi City e Kotri il 13 maggio 1861.",
+				"La sede dell’autorità portuale di Karachi, inaugurata nel 1916, fu poi adibita a ospedale durante la Prima guerra mondiale.",
+				"Il Mazar-e-Quaid di Karachi è il luogo di sepoltura del fondatore del Pakistan, Muhammad Ali Jinnah."
+			],
+			"de": [
+				"Die erste Eisenbahnstrecke auf dem Gebiet Pakistans wurde am 13. Mai 1861 zwischen Karachi City und Kotri eröffnet.",
+				"Das 1916 eingeweihte Hauptgebäude der Hafenverwaltung Karachis diente später im Ersten Weltkrieg als Krankenhaus.",
+				"Das Mazar-e-Quaid in Karachi ist die Grabstätte von Pakistans Gründer Muhammad Ali Jinnah."
 			]
 		}
 	}

@@ -5,7 +5,24 @@
 		"populationRank": 15,
 		"region": "Northland",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"One tradition connects Whangārei’s name with its harbour as a gathering place of whales or chiefs.",
+				"Whangārei’s Claphams National Clock Museum opened in 1962 from the collection of engineer Archibald Clapham.",
+				"Whangārei’s Hundertwasser Art Centre with Wairau Māori Art Gallery opened on 20 February 2022."
+			],
+			"it": [
+				"Una tradizione collega il nome Whangārei al suo porto come luogo di raduno di balene o capi.",
+				"Il Museo nazionale degli orologi Claphams di Whangārei aprì nel 1962 a partire dalla collezione dell’ingegnere Archibald Clapham.",
+				"Il Centro d’arte Hundertwasser con la Galleria d’arte māori Wairau di Whangārei aprì il 20 febbraio 2022."
+			],
+			"de": [
+				"Eine Überlieferung verbindet Whangāreis Namen mit seinem Hafen als Versammlungsort von Walen oder Häuptlingen.",
+				"Whangāreis Nationales Uhrenmuseum Claphams wurde 1962 aus der Sammlung des Ingenieurs Archibald Clapham eröffnet.",
+				"Whangāreis Hundertwasser-Kunstzentrum mit der Wairau-Galerie für Māori-Kunst wurde am 20. Februar 2022 eröffnet."
+			]
+		}
 	},
 	"auckland": {
 		"kind": "city",
@@ -13,7 +30,24 @@
 		"populationRank": 1,
 		"population1950": 319000,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Auckland was named in 1840 after George Eden, Earl of Auckland, then governor-general of India.",
+				"Auckland War Memorial Museum’s classical building opened on 28 November 1929.",
+				"Auckland’s Sky Tower opened in 1997."
+			],
+			"it": [
+				"Auckland fu chiamata così nel 1840 in onore di George Eden, conte di Auckland, allora governatore generale dell’India.",
+				"L’edificio in stile classico del Museo commemorativo di guerra di Auckland aprì il 28 novembre 1929.",
+				"La Sky Tower di Auckland aprì nel 1997."
+			],
+			"de": [
+				"Auckland wurde 1840 nach George Eden, Earl of Auckland, dem damaligen Generalgouverneur von Indien, benannt.",
+				"Das klassizistische Gebäude von Aucklands Kriegsgedenkmuseum wurde am 28. November 1929 eröffnet.",
+				"Aucklands Sky Tower wurde 1997 eröffnet."
+			]
+		}
 	},
 	"tauranga": {
 		"kind": "city",
@@ -21,7 +55,24 @@
 		"populationRank": 5,
 		"region": "Bay of Plenty",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Tauranga’s Māori name means sheltered anchorage or landing place for canoes.",
+				"The mission house now called The Elms in Tauranga was completed in 1847.",
+				"At Pukehinahina, or Gate Pā, in modern Tauranga, Māori defenders repelled a British assault on 29 April 1864."
+			],
+			"it": [
+				"Il nome māori Tauranga significa ancoraggio riparato o luogo di approdo per le canoe.",
+				"La casa missionaria oggi chiamata The Elms a Tauranga fu completata nel 1847.",
+				"A Pukehinahina, o Gate Pā, nell’odierna Tauranga, i difensori māori respinsero un assalto britannico il 29 aprile 1864."
+			],
+			"de": [
+				"Taurangas Māori-Name bedeutet geschützter Ankerplatz oder Landeplatz für Kanus.",
+				"Das heute The Elms genannte Missionshaus in Tauranga wurde 1847 fertiggestellt.",
+				"Bei Pukehinahina, auch Gate Pā genannt, im heutigen Tauranga schlugen Māori-Verteidiger am 29. April 1864 einen britischen Angriff zurück."
+			]
+		}
 	},
 	"hamilton": {
 		"kind": "city",
@@ -29,7 +80,24 @@
 		"populationRank": 4,
 		"region": "Waikato",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Hamilton was named in 1864 after Captain John Fane Charles Hamilton, a British officer killed at Gate Pā that year.",
+				"Hamilton Gardens includes land once used as the city’s rubbish dump.",
+				"Hamilton’s Waikato Museum displays Te Winika, a carved war canoe gifted to the city by Māori Queen Te Atairangikaahu in 1973."
+			],
+			"it": [
+				"Hamilton fu chiamata così nel 1864 in onore del capitano John Fane Charles Hamilton, ufficiale britannico morto a Gate Pā nello stesso anno.",
+				"I Giardini di Hamilton comprendono un terreno un tempo utilizzato come discarica cittadina.",
+				"Il Museo del Waikato a Hamilton espone Te Winika, una canoa da guerra intagliata donata alla città dalla regina māori Te Atairangikaahu nel 1973."
+			],
+			"de": [
+				"Hamilton wurde 1864 nach Kapitän John Fane Charles Hamilton benannt, einem britischen Offizier, der im selben Jahr bei Gate Pā fiel.",
+				"Die Hamilton Gardens umfassen Gelände, das einst als städtische Müllkippe genutzt wurde.",
+				"Hamiltons Waikato-Museum zeigt Te Winika, ein geschnitztes Kriegskanu, das Māori-Königin Te Atairangikaahu der Stadt 1973 schenkte."
+			]
+		}
 	},
 	"rotorua": {
 		"kind": "city",
@@ -37,7 +105,24 @@
 		"populationRank": 12,
 		"region": "Auckland",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Rotorua’s name combines the Māori words roto, meaning lake, and rua, meaning two or second.",
+				"At Rotorua’s Whakarewarewa village, geothermal steam and hot pools are used to cook traditional Māori food.",
+				"Rotorua’s Bath House opened in 1908 as part of the government’s spa development."
+			],
+			"it": [
+				"Il nome Rotorua unisce le parole māori roto, che significa lago, e rua, che significa due o secondo.",
+				"Nel villaggio Whakarewarewa di Rotorua, il vapore geotermico e le sorgenti calde vengono usati per cucinare cibi tradizionali māori.",
+				"Lo stabilimento termale Bath House di Rotorua aprì nel 1908 nell’ambito dello sviluppo della stazione termale governativa."
+			],
+			"de": [
+				"Rotoruas Name verbindet die Māori-Wörter roto für See und rua für zwei oder zweiter.",
+				"In Rotoruas Dorf Whakarewarewa werden geothermischer Dampf und heiße Becken zum Kochen traditioneller Māori-Speisen genutzt.",
+				"Rotoruas Bath House wurde 1908 als Teil des staatlichen Kurbadprojekts eröffnet."
+			]
+		}
 	},
 	"new-plymouth": {
 		"kind": "city",
@@ -45,7 +130,24 @@
 		"populationRank": 13,
 		"region": "Taranaki",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"New Plymouth was named after Plymouth in Devon, England, where many of its early European settlers came from.",
+				"New Plymouth’s Govett-Brewster Art Gallery opened in 1970 in a former cinema.",
+				"New Plymouth’s Len Lye Centre opened in 2015 to present the artist’s work and preserve his creative legacy."
+			],
+			"it": [
+				"New Plymouth prende il nome da Plymouth, nel Devon inglese, da cui provenivano molti dei primi coloni europei.",
+				"La Galleria d’arte Govett-Brewster di New Plymouth aprì nel 1970 in un ex cinema.",
+				"Il Centro Len Lye di New Plymouth aprì nel 2015 per presentare le opere dell’artista e conservarne l’eredità creativa."
+			],
+			"de": [
+				"New Plymouth wurde nach Plymouth im englischen Devon benannt, woher viele seiner frühen europäischen Siedler stammten.",
+				"New Plymouths Kunstgalerie Govett-Brewster wurde 1970 in einem ehemaligen Kino eröffnet.",
+				"New Plymouths Len-Lye-Zentrum wurde 2015 eröffnet, um die Werke des Künstlers zu zeigen und sein kreatives Erbe zu bewahren."
+			]
+		}
 	},
 	"napier": {
 		"kind": "city",
@@ -53,7 +155,24 @@
 		"populationRank": 11,
 		"region": "Gisborne",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Napier was named after Sir Charles Napier, the British army commander in India.",
+				"Napier’s commercial centre was rebuilt with distinctive Art Deco architecture after the earthquake and fires of 1931.",
+				"Napier’s bronze Pania of the Reef statue was unveiled in 1954 and depicts a figure from Māori tradition."
+			],
+			"it": [
+				"Napier prende il nome da Sir Charles Napier, comandante dell’esercito britannico in India.",
+				"Il centro commerciale di Napier fu ricostruito con una caratteristica architettura Art Déco dopo il terremoto e gli incendi del 1931.",
+				"La statua in bronzo Pania della Scogliera a Napier fu inaugurata nel 1954 e raffigura un personaggio della tradizione māori."
+			],
+			"de": [
+				"Napier wurde nach Sir Charles Napier benannt, dem britischen Armeebefehlshaber in Indien.",
+				"Napiers Geschäftszentrum wurde nach dem Erdbeben und den Bränden von 1931 mit charakteristischer Art-déco-Architektur wieder aufgebaut.",
+				"Napiers Bronzestatue Pania of the Reef wurde 1954 enthüllt und stellt eine Gestalt der Māori-Überlieferung dar."
+			]
+		}
 	},
 	"hastings": {
 		"kind": "city",
@@ -61,7 +180,24 @@
 		"populationRank": 9,
 		"region": "Gisborne",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Hastings was named after Warren Hastings, the British colonial governor of Bengal.",
+				"Hastings Municipal Theatre opened on 18 October 1915 and later became known as the Hawke’s Bay Opera House.",
+				"Hastings’s Blossom Parade became an annual event in the 1950s, with decorated floats celebrating spring and the orchard season."
+			],
+			"it": [
+				"Hastings prende il nome da Warren Hastings, governatore coloniale britannico del Bengala.",
+				"Il Teatro municipale di Hastings aprì il 18 ottobre 1915 e divenne in seguito noto come Teatro dell’opera di Hawke’s Bay.",
+				"La Sfilata dei Fiori di Hastings divenne un appuntamento annuale negli anni Cinquanta, con carri decorati che celebravano la primavera e la stagione dei frutteti."
+			],
+			"de": [
+				"Hastings wurde nach Warren Hastings benannt, dem britischen Kolonialgouverneur von Bengalen.",
+				"Hastings’ Stadttheater wurde am 18. Oktober 1915 eröffnet und später als Hawke’s Bay Opera House bekannt.",
+				"Hastings’ Blütenparade wurde in den 1950er Jahren zu einem jährlichen Ereignis mit geschmückten Festwagen zur Feier des Frühlings und der Obstgartensaison."
+			]
+		}
 	},
 	"palmerston-north": {
 		"kind": "city",
@@ -69,7 +205,24 @@
 		"populationRank": 8,
 		"region": "Manawatu-Wanganui",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Palmerston North was named in honour of Lord Palmerston, a British prime minister.",
+				"Palmerston North’s New Zealand Rugby Museum opened its first public gallery in 1977 after its museum society was formed in 1969.",
+				"Palmerston North’s Regent Theatre opened on 4 July 1930 as a venue for films and live performances."
+			],
+			"it": [
+				"Palmerston North prende il nome da Lord Palmerston, primo ministro britannico.",
+				"Il Museo del rugby della Nuova Zelanda a Palmerston North aprì la prima galleria pubblica nel 1977, dopo la costituzione dell’associazione museale nel 1969.",
+				"Il Teatro Regent di Palmerston North aprì il 4 luglio 1930 come sede di proiezioni cinematografiche e spettacoli dal vivo."
+			],
+			"de": [
+				"Palmerston North wurde zu Ehren des britischen Premierministers Lord Palmerston benannt.",
+				"Palmerston Norths Neuseeländisches Rugbymuseum eröffnete 1977 seine erste öffentliche Galerie, nachdem der Museumsverein 1969 gegründet worden war.",
+				"Palmerston Norths Regent Theatre wurde am 4. Juli 1930 als Spielstätte für Filme und Liveaufführungen eröffnet."
+			]
+		}
 	},
 	"porirua": {
 		"kind": "city",
@@ -77,7 +230,24 @@
 		"populationRank": 14,
 		"region": "Wellington",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Porirua is a form of the Māori name Pari-rua, describing tides entering both arms of the harbour.",
+				"Porirua’s Pātaka Art and Museum opened in September 1998 after the city museum and Page 90 Art Gallery combined.",
+				"The Royal New Zealand Police College opened at its Porirua site on 1 April 1981."
+			],
+			"it": [
+				"Porirua è una forma del nome māori Pari-rua, che descrive le maree che entrano in entrambi i rami del porto.",
+				"Il Museo e centro d’arte Pātaka di Porirua aprì nel settembre 1998 dopo l’unione del museo cittadino e della Galleria d’arte Page 90.",
+				"Il Collegio reale di polizia della Nuova Zelanda aprì nella sede di Porirua il 1º aprile 1981."
+			],
+			"de": [
+				"Porirua ist eine Form des Māori-Namens Pari-rua, der die in beide Hafenarme einströmenden Gezeiten beschreibt.",
+				"Poriruas Kunstmuseum Pātaka wurde im September 1998 nach dem Zusammenschluss des Stadtmuseums mit der Kunstgalerie Page 90 eröffnet.",
+				"Die Königliche Neuseeländische Polizeihochschule wurde am 1. April 1981 an ihrem Standort in Porirua eröffnet."
+			]
+		}
 	},
 	"lower-hutt": {
 		"kind": "city",
@@ -85,7 +255,24 @@
 		"populationRank": 7,
 		"region": "Wellington",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Lower Hutt takes its name from the river named for William Hutt, a director of the New Zealand Company.",
+				"Lower Hutt’s Dowse Art Museum opened on 31 May 1971.",
+				"The Petone Settlers Museum in Lower Hutt occupies the Wellington Provincial Centennial Memorial, opened in 1940 as a memorial and bathing pavilion."
+			],
+			"it": [
+				"Lower Hutt prende il nome dal fiume intitolato a William Hutt, un dirigente della New Zealand Company.",
+				"Il Museo d’arte Dowse di Lower Hutt aprì il 31 maggio 1971.",
+				"Il Museo dei coloni di Petone a Lower Hutt occupa il Memoriale provinciale del centenario di Wellington, aperto nel 1940 come monumento commemorativo e padiglione balneare."
+			],
+			"de": [
+				"Lower Hutt trägt den Namen des nach William Hutt, einem Direktor der New Zealand Company, benannten Flusses.",
+				"Lower Hutts Kunstmuseum Dowse wurde am 31. Mai 1971 eröffnet.",
+				"Das Petone-Siedlermuseum in Lower Hutt befindet sich im Wellington Provincial Centennial Memorial, das 1940 als Gedenkstätte und Badepavillon eröffnet wurde."
+			]
+		}
 	},
 	"wellington": {
 		"kind": "city",
@@ -118,7 +305,24 @@
 		"population": 60800,
 		"populationRank": 10,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Nelson was named after the British admiral Horatio Nelson.",
+				"Nelson Football Club and Nelson College played a rugby match at the city’s Botanical Reserve on 14 May 1870.",
+				"The World of WearableArt show was held at Nelson’s Trafalgar Centre from 1990 before moving to Wellington in 2005."
+			],
+			"it": [
+				"Nelson prende il nome dall’ammiraglio britannico Horatio Nelson.",
+				"Il Nelson Football Club e il Nelson College disputarono una partita di rugby nella Botanical Reserve della città il 14 maggio 1870.",
+				"Lo spettacolo World of WearableArt si tenne al Trafalgar Centre di Nelson dal 1990 prima di trasferirsi a Wellington nel 2005."
+			],
+			"de": [
+				"Nelson wurde nach dem britischen Admiral Horatio Nelson benannt.",
+				"Der Nelson Football Club und das Nelson College spielten am 14. Mai 1870 im Botanical Reserve der Stadt ein Rugbyspiel.",
+				"Die Schau World of WearableArt fand ab 1990 in Nelsons Trafalgar Centre statt, bevor sie 2005 nach Wellington umzog."
+			]
+		}
 	},
 	"christchurch": {
 		"kind": "city",
@@ -126,7 +330,24 @@
 		"populationRank": 3,
 		"region": "Canterbury",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Christchurch was named after Christ Church, the Oxford college attended by settlement organiser John Robert Godley.",
+				"Christchurch’s transitional Cardboard Cathedral, designed by Shigeru Ban, opened in 2013 and uses large cardboard tubes in its structure.",
+				"Kate Sheppard helped organise the 1893 women’s suffrage petition from her home on Christchurch’s Clyde Road."
+			],
+			"it": [
+				"Christchurch prende il nome da Christ Church, il collegio di Oxford frequentato dall’organizzatore dell’insediamento John Robert Godley.",
+				"La cattedrale provvisoria di cartone di Christchurch, progettata da Shigeru Ban, aprì nel 2013 e utilizza grandi tubi di cartone nella struttura.",
+				"Kate Sheppard contribuì a organizzare la petizione per il suffragio femminile del 1893 dalla sua casa in Clyde Road a Christchurch."
+			],
+			"de": [
+				"Christchurch wurde nach Christ Church benannt, dem Oxford-College, das der Siedlungsorganisator John Robert Godley besucht hatte.",
+				"Christchurchs von Shigeru Ban entworfene provisorische Kartonkathedrale wurde 2013 eröffnet und verwendet große Kartonröhren in ihrer Konstruktion.",
+				"Kate Sheppard half von ihrem Haus an der Clyde Road in Christchurch aus bei der Organisation der Petition für das Frauenwahlrecht von 1893."
+			]
+		}
 	},
 	"dunedin": {
 		"kind": "city",
@@ -134,6 +355,23 @@
 		"populationRank": 6,
 		"region": "Otago",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Dunedin’s name is a Gaelic form of Edinburgh.",
+				"The University of Otago in Dunedin was founded in 1869 and opened for teaching in July 1871.",
+				"Dunedin Railway Station, designed by George Alexander Troup, officially opened in 1906."
+			],
+			"it": [
+				"Il nome Dunedin è una forma gaelica di Edimburgo.",
+				"L’Università di Otago a Dunedin fu fondata nel 1869 e aprì all’insegnamento nel luglio 1871.",
+				"La stazione ferroviaria di Dunedin, progettata da George Alexander Troup, fu inaugurata ufficialmente nel 1906."
+			],
+			"de": [
+				"Dunedins Name ist eine gälische Form von Edinburgh.",
+				"Die Universität Otago in Dunedin wurde 1869 gegründet und nahm im Juli 1871 den Lehrbetrieb auf.",
+				"Dunedins von George Alexander Troup entworfener Bahnhof wurde 1906 offiziell eröffnet."
+			]
+		}
 	}
 }

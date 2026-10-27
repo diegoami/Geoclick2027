@@ -80,4 +80,20 @@ describe('build-manual', () => {
 			.filter((a) => !ids.has(a));
 		expect(broken).toEqual([]);
 	});
+	it('bundles all three real manuals with valid internal links and shared images', () => {
+		const dir = mkdtempSync(join(tmpdir(), 'gc-manual-all-'));
+		dirs.push(dir);
+		execFileSync(process.execPath, [script, `--out=${dir}`], { stdio: 'pipe' });
+		for (const language of ['en', 'de', 'it']) {
+			const html = readFileSync(join(dir, language + '.html'), 'utf8');
+			expect(html.length).toBeGreaterThan(10000);
+			const ids = new Set([...html.matchAll(/ id="([^"]+)"/g)].map((match) => match[1]));
+			const broken = [...html.matchAll(/href="#([^"]+)"/g)]
+				.map((match) => match[1])
+				.filter((id) => !ids.has(id));
+			expect(broken, language).toEqual([]);
+			for (const [, image] of html.matchAll(/src="\/manual\/img\/([^"]+)"/g))
+				expect(existsSync(join(dir, 'img', image))).toBe(true);
+		}
+	});
 });

@@ -1035,7 +1035,8 @@ npx tsx data/scripts/build-map.ts --country=Switzerland --type=region --out=data
 npx tsx data/scripts/build-map.ts --country=Austria --type=state --out=data/maps/austria-states --name="Austria — States"
 npx tsx data/scripts/build-map.ts --country=Romania --type=county --out=data/maps/romania-counties --name="Romania — Counties"
 
-DE=(--country=Germany --type=county --source=data/source/geoboundaries/DEU-ADM3.geojson --clean-names=german-districts --dissolve=name "--attribution=© GeoBasis-DE / BKG 2023, dl-de/by-2-0 (via geoBoundaries)")
+npx tsx data/scripts/prepare-known-boundary-updates.ts
+DE=(--country=Germany --type=county --source=data/boundaries/germany-districts-2026.geojson --source-name-field=name "--attribution=© GeoBasis-DE / BKG 2023, dl-de/by-2-0; HVBG/ZKFG Hessen, dl-de/zero-2-0; modified known borders")
 npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Schleswig-Holstein,Hamburg,Niedersachsen,Bremen,Mecklenburg-Vorpommern" --out=data/maps/germany-districts-north --name="Germany — Districts — North"
 npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Nordrhein-Westfalen" --out=data/maps/germany-districts-west --name="Germany — Districts — West"
 npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Hessen,Rheinland-Pfalz,Saarland" --out=data/maps/germany-districts-center --name="Germany — Districts — Center"
@@ -1043,7 +1044,7 @@ npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Berlin,Brandenburg,Sachse
 npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Baden-Württemberg" --out=data/maps/germany-districts-southwest --name="Germany — Districts — South-West"
 npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Bayern" --out=data/maps/germany-districts-southeast --name="Germany — Districts — South-East"
 
-NL=(--country=Netherlands --type=region --source=data/source/geoboundaries/NLD-ADM2.geojson --dissolve=name "--attribution=Kadaster / CBS via geoBoundaries (CC0)")
+NL=(--country=Netherlands --type=region --source=data/boundaries/netherlands-municipalities-2026.geojson --source-name-field=name "--attribution=Kadaster / CBS via geoBoundaries (CC0); Voorne aan Zee merger reconstructed")
 npx tsx data/scripts/build-map.ts "${NL[@]}" --within="Groningen,Friesland,Drenthe" --out=data/maps/netherlands-municipalities-north --name="Netherlands — Municipalities — North"
 npx tsx data/scripts/build-map.ts "${NL[@]}" --within="Overijssel,Flevoland,Gelderland" --out=data/maps/netherlands-municipalities-east --name="Netherlands — Municipalities — East"
 npx tsx data/scripts/build-map.ts "${NL[@]}" --within="Noord-Holland,Utrecht" --out=data/maps/netherlands-municipalities-west --name="Netherlands — Municipalities — West"
@@ -1057,14 +1058,14 @@ npx tsx data/scripts/build-facts.ts --map=<each of the above>
 |---|---|---|---|
 | france-departments | 96 | germany-districts-north | 71 |
 | france-departments-north | 48 | germany-districts-west | 53 |
-| france-departments-south | 48 | germany-districts-center | 68 |
+| france-departments-south | 48 | germany-districts-center | 69 |
 | spain-provinces | 48 | germany-districts-east | 68 |
 | ireland-counties | 26 | germany-districts-southwest | 44 |
 | switzerland-cantons | 26 | germany-districts-southeast | 96 |
 | austria-states | 9 | netherlands-municipalities-north | 40 |
 | romania-counties | 42 | netherlands-municipalities-east | 82 |
 | | | netherlands-municipalities-west | 69 |
-| | | netherlands-municipalities-southwest | 66 |
+| | | netherlands-municipalities-southwest | 64 |
 | | | netherlands-municipalities-south | 87 |
 
 Germany's six add up to its 400 Kreise and the Netherlands' five to its 344
@@ -1151,10 +1152,11 @@ Denmark, Kazakhstan, Kenya, New Zealand, Norway, the Philippines, Serbia and
 Venezuela. Built in the WSL clone (`PMTILES_BIN=$HOME/.local/bin/pmtiles`).
 geoBoundaries (pinned commit, `fetch-natural-earth.sh`) where Natural Earth is
 out of date or missing: Kenya (47 counties, public domain), Kazakhstan (16
-regions, 2017 borders: no Abai, Jetisu, Ulytau, Turkistan; ODbL), Norway (11
-counties, the 2020-23 set with Viken; CC BY 4.0), Serbia (25 districts, ODbL),
+regions, 2017 borders: no Abai, Jetisu, Ulytau, Turkistan; ODbL), Serbia (25 districts, ODbL),
 the Philippines (17 regions, and 87 provinces as an advanced map; CC BY 3.0
-IGO). Natural Earth for Denmark (5 regions), New Zealand (16 regions, without
+IGO). Norway now uses the fifteen current Kartverket counties; Denmark uses
+the detailed five-region geoBoundaries coastline. See the v1.0 backlog recipe.
+Natural Earth for New Zealand (16 regions, without
 the Chatham Islands, Tokelau and the sub-Antarctic islands) and Venezuela (24
 states, without the Dependencias Federales and the Guayana Esequiba strip,
 `--exclude-field=adm1_code`). Names go through `NAME_FIXUPS` (register nouns
@@ -1164,7 +1166,7 @@ dropped, #182).
 G=data/source/geoboundaries
 npx tsx data/scripts/build-map.ts --country=Kenya --type=county --source=$G/KEN-ADM1.geojson "--attribution=RCMRD GeoPortal, public domain (via geoBoundaries)" --out=data/maps/kenya-counties --name="Kenya — Counties"
 npx tsx data/scripts/build-map.ts --country=Kazakhstan --type=region --source=$G/KAZ-ADM1.geojson "--attribution=© OpenStreetMap contributors, ODbL (via geoBoundaries)" --out=data/maps/kazakhstan-regions --name="Kazakhstan — Regions"
-npx tsx data/scripts/build-map.ts --country=Norway --type=county --source=$G/NOR-ADM1.geojson "--attribution=© Kartverket, CC BY 4.0 (via geoBoundaries)" --out=data/maps/norway-counties --name="Norway — Counties"
+# Norway: use fetch-backlog-boundaries.ts + build-backlog-towns.ts below.
 npx tsx data/scripts/build-map.ts --country=Serbia --type=district --source=$G/SRB-ADM1.geojson "--attribution=© OpenStreetMap contributors, ODbL (via geoBoundaries)" --out=data/maps/serbia-districts --name="Serbia — Districts"
 npx tsx data/scripts/build-map.ts --country=Philippines --type=region --source=$G/PHL-ADM1.geojson "--attribution=NAMRIA, PSA, OCHA Philippines, CC BY 3.0 IGO (via geoBoundaries)" --out=data/maps/philippines-regions --name="Philippines — Regions"
 npx tsx data/scripts/build-map.ts --country=Philippines --type=province --source=$G/PHL-ADM2.geojson "--attribution=NAMRIA, PSA, OCHA Philippines, CC BY 3.0 IGO (via geoBoundaries)" --out=data/maps/philippines-provinces --name="Philippines — Provinces"
@@ -1178,17 +1180,15 @@ npx tsx data/scripts/build-points-map.ts --country=Venezuela --min-population=10
 # Natural Earth lists too few towns over 100 000 in these (4-7), so 50 000:
 npx tsx data/scripts/build-points-map.ts --country=Kenya --min-population=50000 --exclude="Kendu Bay,Sotik" --out=data/maps/kenya-towns-50k --name="Kenya — Towns"
 npx tsx data/scripts/build-points-map.ts --country="New Zealand" --min-population=50000 --exclude="North Shore,Waitakere,Manukau" --out=data/maps/new-zealand-towns-50k --name="New Zealand — Towns"
-npx tsx data/scripts/build-points-map.ts --country=Norway --min-population=50000 --exclude="Bærum" --out=data/maps/norway-towns-50k --name="Norway — Towns"
-npx tsx data/scripts/build-points-map.ts --country=Denmark --min-population=50000 --out=data/maps/denmark-towns-50k --name="Denmark — Towns"
-npx tsx data/scripts/build-points-map.ts --country=Serbia --min-population=50000 --out=data/maps/serbia-towns-50k --name="Serbia — Towns"
+# Norway/Denmark/Serbia: use the v1.0 backlog recipe below (stable existing IDs).
 ```
 
-Targets: kenya-counties 47, kazakhstan-regions 16, norway-counties 11,
+Targets: kenya-counties 47, kazakhstan-regions 16, norway-counties 15,
 serbia-districts 25, philippines-regions 17, philippines-provinces 87,
 new-zealand-regions 16, venezuela-states 24, denmark-regions 5; towns 31
 (Philippines), 20 (Kazakhstan), 31 (Venezuela), 16 (Kenya), 15 (New Zealand),
-8 (Norway), 6 (Denmark), 7 (Serbia). Not done: German/Italian facts for these
-(v0.18), and towns from Wikidata where Natural Earth is thin.
+20 (Norway), 21 (Denmark), 32 (Serbia), after the reviewed v1.0 backlog rebuild.
+All playable Danish, Norwegian and Serbian targets now have complete EN/IT/DE facts.
 
 ### Malaysia and Bangladesh (built 2026-10-04, v0.18, #190, PR #206)
 
@@ -1850,3 +1850,82 @@ map attribution. JSON place snapshots retain coordinatePrecision throughout
 fact generation; regional largest-city selection uses the same bounded resolver
 as town associations. expectedLargest checks guard Cape Coast, Kalemie, Musoma,
 Kigoma and Mekele. Taiwan excludes four Taoyuan boroughs by the owner's decision.
+
+### v1.0 older towns and current Norwegian counties (#236, #244)
+
+Run in the same Linux toolchain as the country expansion:
+
+    node --import tsx data/scripts/fetch-backlog-boundaries.ts
+    node --import tsx data/scripts/fetch-v1-towns.ts --country=denmark
+    node --import tsx data/scripts/fetch-serbia-towns.ts
+    node --import tsx data/scripts/build-backlog-towns.ts
+
+The existing denmark-towns-50k, norway-towns-50k and serbia-towns-50k IDs are
+retained to preserve progress and links. Their old 50k suffix is a legacy ID,
+not the new selection rule. Denmark selects the top twenty eligible dated
+Wikidata settlements above 10k and retains Hillerød (21 towns). Serbia selects
+the top thirty 2022 census urban settlements plus retained Prijepolje and
+Prokuplje (32 towns). Its official RZS workbook supplies settlement populations,
+combining the Belgrade/Niš municipal parts without using administrative totals;
+GeoNames supplies coordinates only. The importer checks the national urban
+total, every qualifying town and all 25 district associations. Population and
+coordinate source downloads are SHA256-pinned; Python's standard library reads
+the workbook, with no spreadsheet service or extra Python package. Census
+oblast headers are retained and cross-walked to the pinned GeoNames district
+codes; the importer rejects every coordinate whose spatial district disagrees
+with the census, preventing homonymous villages from replacing urban towns.
+
+Norway is a curated twenty-town selection from Natural Earth, excluding Bærum
+municipality. It is not a national top-twenty list: the source lacks places
+including Fredrikstad, Sarpsborg and Sandefjord. County largest-city claims are
+disabled because this sample cannot establish national or county rankings.
+
+Norway's 15 counties use the official Kartverket API geometry effective from
+2024, snapshot 2026-10-26, CC BY 4.0. The importer pins a canonical feature
+digest, clips away territorial waters with Natural Earth's terrestrial outline,
+and simplifies shared topology. The result is a learning-map reconstruction,
+not a cadastral survey. All fifteen polygons are valid, nonempty and nonoverlapping.
+Denmark uses the detailed, SHA256-pinned geoBoundaries 9469f09 five-region
+source (Web Vectors Map, CC BY 4.0); Fredericia, Sønderborg and Svendborg
+centres fall within their correct region without coordinate shifts;
+Serbia reuses exactly the existing geoBoundaries 9469f09 ODbL 25-district payload,
+with its SHA256 pinned. External sources explicitly use --source-name-field=name;
+the builder now rejects a missing/blank name field before publishing metadata.
+
+Copenhagen uses the same Natural Earth representative centre as the old map.
+Its provenance remains recorded; containment uses the detailed Danish coastline
+without broadening geographic-association tolerance. To reprocess saved Wikidata
+data, use --country=denmark --bindings=data/source/v1-town-bindings/denmark.json.
+The cache requires the original country, query/digest and fetchedAt. Reprocessing
+records a separate reprocessedAt and input digest; it does not pretend a new
+network fetch occurred. A changed query requires a fresh response.
+Retired Norwegian county texts remain under _historicalCounties in norway.json.
+
+Whole-catalogue authored coverage, respecting aliases and city/region kinds:
+
+    node --import tsx data/scripts/audit-authored-facts.ts --json=rendered/catalogue-facts-audit.json
+    node --import tsx data/scripts/audit-authored-facts.ts --strict
+
+The full strict audit is a 1.0 requirement under proposal #244. It is not yet
+passed: after these rebuilds, 3922/6196 distinct slots meet the three-language
+three-sentence floor; 1956 have no authored facts and 318 have short sets.
+
+### Approved known Dutch/German border corrections before 1.0
+
+    node --import tsx data/scripts/build-known-boundary-updates.ts
+
+This rebuilds only Germany Center/East and Netherlands South-West, preserving
+map IDs and unchanged target IDs. Dutch membership is 342 municipalities:
+Brielle, Hellevoetsluis and Westvoorne dissolve into Voorne aan Zee (2023).
+German membership is 401 districts: Eisenach dissolves into Wartburgkreis
+(2021), Hanau becomes independent (2026), and Leipzig city is distinguished
+from Landkreis Leipzig instead of accidentally dissolving both together.
+
+The prepared inputs retain the pinned geoBoundaries geometry outside these
+known cases. Hanau uses official HVBG/ZKFG Hesse geometry dated 17 June 2026
+(dl-de/zero-2-0), with a canonical geometry digest. Its cut retains 99.74% of
+the official area after intersection with the older coarse Main-Kinzig outline,
+so the two polygons share a boundary without overlaps. Both prepared country
+collections pass GDAL/GEOS validity and nonempty checks. These are learning-map
+reconstructions, not a full audit of small boundary adjustments or cadastral
+products. The importer pins the older inputs and checks the expected counts.

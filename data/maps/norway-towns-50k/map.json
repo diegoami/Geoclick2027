@@ -2,7 +2,8 @@
 	"id": "norway-towns-50k",
 	"name": "Norway — Towns",
 	"country": "Norway",
-	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; Kartverket, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/; Natural Earth terrestrial clipping (public domain)",
+	"regionsMap": "norway-counties",
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{
@@ -21,7 +22,61 @@
 				18.9920252,
 				69.6350762
 			],
-			"colorIndex": 1
+			"colorIndex": 4
+		},
+		{
+			"id": "narvik",
+			"name": "Narvik",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.2899934,
+				68.3831502
+			],
+			"bbox": [
+				17.2899934,
+				68.3831502,
+				17.2899934,
+				68.3831502
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bod",
+			"name": "Bodø",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.4292849,
+				67.2764346
+			],
+			"bbox": [
+				14.4292849,
+				67.2764346,
+				14.4292849,
+				67.2764346
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "mo-i-rana",
+			"name": "Mo i Rana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.1666699,
+				66.3166097
+			],
+			"bbox": [
+				14.1666699,
+				66.3166097,
+				14.1666699,
+				66.3166097
+			],
+			"colorIndex": 3
 		},
 		{
 			"id": "trondheim",
@@ -42,6 +97,78 @@
 			"colorIndex": 0
 		},
 		{
+			"id": "alesund",
+			"name": "Ålesund",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.263280014851641,
+				62.45979913939814
+			],
+			"bbox": [
+				6.263280014851641,
+				62.45979913939814,
+				6.263280014851641,
+				62.45979913939814
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lillehammer",
+			"name": "Lillehammer",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.5000203,
+				61.1332827
+			],
+			"bbox": [
+				10.5000203,
+				61.1332827,
+				10.5000203,
+				61.1332827
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "hamar",
+			"name": "Hamar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.0690016,
+				60.8200021
+			],
+			"bbox": [
+				11.0690016,
+				60.8200021,
+				11.0690016,
+				60.8200021
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "gj-vik",
+			"name": "Gjøvik",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.7000081,
+				60.8000214
+			],
+			"bbox": [
+				10.7000081,
+				60.8000214,
+				10.7000081,
+				60.8000214
+			],
+			"colorIndex": 2
+		},
+		{
 			"id": "bergen",
 			"name": "Bergen",
 			"type": "city",
@@ -57,7 +184,7 @@
 				5.3245223,
 				60.3910024
 			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "oslo",
@@ -75,7 +202,7 @@
 				10.7480333,
 				59.9186361
 			],
-			"colorIndex": 2
+			"colorIndex": 4
 		},
 		{
 			"id": "drammen",
@@ -96,6 +223,60 @@
 			"colorIndex": 3
 		},
 		{
+			"id": "moss",
+			"name": "Moss",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.6691573,
+				59.436978
+			],
+			"bbox": [
+				10.6691573,
+				59.436978,
+				10.6691573,
+				59.436978
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "haugesund",
+			"name": "Haugesund",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.2774967,
+				59.4119149
+			],
+			"bbox": [
+				5.2774967,
+				59.4119149,
+				5.2774967,
+				59.4119149
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "t-nsberg",
+			"name": "Tønsberg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.4210015,
+				59.2640011
+			],
+			"bbox": [
+				10.4210015,
+				59.2640011,
+				10.4210015,
+				59.2640011
+			],
+			"colorIndex": 0
+		},
+		{
 			"id": "skien",
 			"name": "Skien",
 			"type": "city",
@@ -111,7 +292,7 @@
 				9.6000236,
 				59.1999898
 			],
-			"colorIndex": 4
+			"colorIndex": 1
 		},
 		{
 			"id": "stavanger",
@@ -130,6 +311,42 @@
 				58.9700039
 			],
 			"colorIndex": 0
+		},
+		{
+			"id": "sandnes",
+			"name": "Sandnes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.6900297,
+				58.845412
+			],
+			"bbox": [
+				5.6900297,
+				58.845412,
+				5.6900297,
+				58.845412
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "arendal",
+			"name": "Arendal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.7660006,
+				58.4647561
+			],
+			"bbox": [
+				8.7660006,
+				58.4647561,
+				8.7660006,
+				58.4647561
+			],
+			"colorIndex": 2
 		},
 		{
 			"id": "kristiansand",
@@ -152,12 +369,24 @@
 	],
 	"tourOrder": [
 		"troms",
+		"narvik",
+		"bod",
+		"mo-i-rana",
 		"trondheim",
+		"alesund",
+		"lillehammer",
+		"hamar",
+		"gj-vik",
 		"bergen",
 		"oslo",
 		"drammen",
+		"moss",
+		"haugesund",
+		"t-nsberg",
 		"skien",
 		"stavanger",
+		"sandnes",
+		"arendal",
 		"kristiansand"
 	]
 }

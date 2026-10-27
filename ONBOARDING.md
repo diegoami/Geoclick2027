@@ -150,6 +150,16 @@ npm run gates    # all four quality gates in order, stops at the first failure
 npm run gates -- --quiet   # same, but only PASS/FAIL lines (and the tail of a failure)
 ```
 
+### Portable browser export
+
+Run `node scripts/package-html5.mjs --draft` for a development ZIP in
+`dist-release/v<version>/`. For a clean release candidate with complete authored
+facts, use `--allow-untagged`; the default requires the exact version tag.
+Extract and serve over HTTP with byte-range support, including when checking
+nested paths such as `/games/geoclick/index.html`. Open a map, start and reload a
+quiz, and check all three manuals. Use a 1280 × 800 frame. A draft or untagged
+candidate cannot be published with `publish-release.mjs`.
+
 ### The pre-push hook
 
 `npm run setup-hooks` (once per clone) sets `core.hooksPath` to the
@@ -762,3 +772,25 @@ this one, and is read on demand rather than up front.
 - If something in this doc turns out to be wrong, fix it — that's the
   point of it being "running" documentation rather than a one-time
   writeup.
+
+### Manual languages and the 1.0 fact-completion work
+
+Edit docs/USER_MANUAL.md (English), docs/USER_MANUAL.de.md or
+docs/USER_MANUAL.it.md, then run `node app/scripts/build-manual.mjs`.
+The page uses the selected app language. The translations share the existing
+English screenshots and disclose that choice; add no hand-copied HTML to the
+route. Localized content, anchor and language-race tests cover this path.
+
+For fact work, run `node --import tsx data/scripts/audit-authored-facts.ts
+--json=rendered/catalogue-facts-audit.json` to identify actual playable gaps.
+Use --maps=id,id for a working batch and --strict to verify it. The full
+strict audit is required before 1.0; the 735-target expansion audit alone does
+not cover the older detailed maps. Edit data/facts inputs and refresh hooks,
+never generated map facts by hand. Proposal #244 records the owner's scope.
+
+
+Rebuild the approved known European border changes in Linux with
+`node --import tsx data/scripts/build-known-boundary-updates.ts`;
+`build-backlog-towns.ts` covers Denmark/Norway/Serbia. These recipes preserve
+existing map IDs. See MAPS.md for source licences, pinned editions, the Python
+standard-library census parser and the limits of the curated Norwegian towns.

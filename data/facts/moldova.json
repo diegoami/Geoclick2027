@@ -2,18 +2,25 @@
 	"_note": [
 		"Name-facts for Moldova (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"balti": {
 		"city": {
 			"en": [
-				"From Romanian bălți, \"marshes\", for the wet ground where it grew."
+				"Bălți takes its name from the Romanian word bălți, meaning pools or marshes, recalling the wet ground on which it developed.",
+				"Bălți’s Saint Nicholas church was completed in 1795 after construction began in 1791.",
+				"The company that became Bălți’s Vasile Alecsandri Theatre presented its first production, Chirița în Iași, in 1957."
 			],
 			"it": [
-				"Dal romeno bălți, \"paludi\", per il terreno umido dove sorse."
+				"Bălți prende il nome dalla parola romena bălți, che significa stagni o paludi, ricordando il terreno umido su cui si sviluppò.",
+				"La chiesa di San Nicola di Bălți fu completata nel 1795 dopo l’inizio dei lavori nel 1791.",
+				"La compagnia poi divenuta Teatro Vasile Alecsandri di Bălți presentò il primo spettacolo, Chirița în Iași, nel 1957."
 			],
 			"de": [
-				"Vom rumänischen bălți, „Sümpfe“, nach dem nassen Boden, auf dem sie wuchs."
+				"Bălți ist nach dem rumänischen Wort bălți für Teiche oder Sümpfe benannt, das an den feuchten Boden seiner Entstehung erinnert.",
+				"Bălțis Nikolauskirche wurde 1795 fertiggestellt, nachdem der Bau 1791 begonnen hatte.",
+				"Die Truppe, aus der Bălțis Vasile-Alecsandri-Theater hervorging, zeigte 1957 ihre erste Inszenierung, Chirița în Iași."
 			]
 		}
 	},
@@ -39,17 +46,34 @@
 	"tiraspol": {
 		"city": {
 			"en": [
-				"\"Town on the Tyras\", the Greek name of the Dniester, founded as a fortress in 1792.",
-				"The capital of Transnistria, a breakaway region that no member of the United Nations recognises."
+				"Founded in 1792, Tiraspol takes its name from Tyras, the ancient Greek name of the Dniester, and polis, meaning city.",
+				"Tiraspol serves as the de facto administrative centre of Transnistria, which is internationally recognised as part of Moldova.",
+				"Tiraspol’s KVINT distillery traces its origins to a wine-processing establishment opened in 1897."
 			],
 			"it": [
-				"\"Città sul Tyras\", il nome greco del Dnestr, fondata come fortezza nel 1792.",
-				"La capitale della Transnistria, una regione separatista che nessun membro delle Nazioni Unite riconosce."
+				"Fondata nel 1792, Tiraspol prende il nome da Tyras, antico nome greco del Dnestr, e da polis, che significa città.",
+				"Tiraspol è il centro amministrativo di fatto della Transnistria, internazionalmente riconosciuta come parte della Moldova.",
+				"La distilleria KVINT di Tiraspol trae origine da uno stabilimento per la lavorazione del vino aperto nel 1897."
 			],
 			"de": [
-				"„Stadt am Tyras“, dem griechischen Namen des Dnjestr, 1792 als Festung gegründet.",
-				"Die Hauptstadt Transnistriens, einer abtrünnigen Region, die kein Mitglied der Vereinten Nationen anerkennt."
+				"Das 1792 gegründete Tiraspol ist nach Tyras, dem antiken griechischen Namen des Dnjestr, und polis für Stadt benannt.",
+				"Tiraspol dient als faktisches Verwaltungszentrum Transnistriens, das international als Teil Moldovas anerkannt ist.",
+				"Tiraspols Brennerei KVINT geht auf einen 1897 eröffneten Betrieb zur Weinverarbeitung zurück."
 			]
 		}
+	},
+	"_sources": {
+		"balti:city": [
+			"https://dialogica.asm.md/articolePDF/Dialogica_15_42.pdf",
+			"https://balti.md/despre-municipiu/istoria/",
+			"https://tnb.md/despre-noi/"
+		],
+		"tiraspol:city": [
+			"https://utm.md/wp-content/uploads/2019/03/Teza_final_Tronciu-Sergiu-site.pdf",
+			"https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/tiraspol",
+			"https://moldova.osce.org/mission-to-moldova/105897",
+			"https://president.gospmr.org/press-sluzhba/novosti/-tiraspoljskomu-vinno-konjyachnomu-zavodu-kvint-120-let.html",
+			"https://kvint-market.com/catalog"
+		]
 	}
 }

@@ -300,15 +300,27 @@ There is no CI (FEATURE_PLAN.md, decision 2).
    - an Android signing key is configured (ONBOARDING.md, "Release (signed)
      APK").
 
-   It builds the desktop installers and a release APK. It refuses an APK
+   It builds the desktop installers, a release APK and a portable HTML5 ZIP.
+   It refuses an APK
    whose signature doesn't verify. The output goes to `dist-release/vX.Y.Z/`
    (gitignored):
    - `Geoclick-X.Y.Z-windows-x64.msi`
    - `Geoclick-X.Y.Z-windows-x64-setup.exe`
    - `Geoclick-X.Y.Z-android.apk`
-   - `SHA256SUMS.txt`
+   - `Geoclick-X.Y.Z-html5.zip`
+   - `Geoclick-X.Y.Z-html5.zip.sha256`
+   - `html5-report.json` (tag, commit, clean-source and complete-facts provenance)
+   - `SHA256SUMS.txt` (all six artifacts)
 
-   `--allow-untagged` does a dry run on any clean commit.
+   `--allow-untagged` packages a clean candidate for local testing; the publisher
+   rejects candidate and draft HTML5 reports. For browser-only development exports,
+   use `node scripts/package-html5.mjs --draft`. This allows unfinished content
+   and marks the report and included README as drafts.
+
+   Extract the browser ZIP and serve it over HTTP with byte-range support.
+   Test from a nested directory: open a map, start a quiz, reload it, and open
+   each translated manual. Recommended browser frame: 1280 × 800. The owner
+   uploads the ZIP and promotional assets to itch.io; do not navigate there.
 
    **The Android signing key changed on 2026-09-19.** Everything from
    v0.3.0 to the first v0.7.0 upload was signed with a key whose SHA-256

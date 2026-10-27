@@ -108,3 +108,53 @@ describe('the user manual: what it says about the app (#204)', () => {
 		expect(files.filter((f) => !shown.has(f))).toEqual([]);
 	});
 });
+
+// Every shipped translation must stay usable when UI labels or releases change.
+describe('localized manuals', () => {
+	it.each(['de', 'it'] as const)(
+		'%s covers the current version, catalogue, buttons and tutorial',
+		(language) => {
+			const text = readFileSync(repo('docs/USER_MANUAL.' + language + '.md'), 'utf8');
+			const version = JSON.parse(readFileSync(repo('package.json'), 'utf8')).version;
+			expect(text).toContain(`**Geoclick v${version}**`);
+			const counts =
+				language === 'de' ? /\*\*(\d+) Karten in (\d+) Ländern/ : /\*\*(\d+) mappe in (\d+) paesi/;
+			const match = text.match(counts);
+			expect(match).not.toBeNull();
+			const index = JSON.parse(readFileSync(repo('data/maps/index.json'), 'utf8'));
+			expect(Number(match?.[1])).toBe(index.length);
+			expect(Number(match?.[2])).toBe(
+				mapGroups.filter(
+					(group) =>
+						!['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania'].includes(
+							group.country
+						)
+				).length
+			);
+			const keys: TranslationKey[] = [
+				'nav.maps',
+				'nav.explore',
+				'nav.overview',
+				'nav.quiz',
+				'nav.tour',
+				'nav.terrain',
+				'nav.detailedMaps',
+				'home.myMaps',
+				'known.clear',
+				'known.chosen',
+				'quiz.done',
+				'quiz.playAgain',
+				'tutorial.start',
+				'tutorial.resume',
+				'tutorial.end',
+				'tutorial.finish',
+				'tutorial.replay'
+			];
+			expect(keys.filter((key) => !text.includes(tForLanguage(key, language)))).toEqual([]);
+			const section = text.slice(text.indexOf('## 15.'), text.indexOf('## 16.'));
+			const steps = [...section.matchAll(/^\|\s*(\d+)\s*\|/gm)].map((match) => Number(match[1]));
+			expect(steps).toEqual(Array.from({ length: NUMBERED_STEPS }, (_, index) => index + 1));
+			expect((text.match(/^## \d+\./gm) ?? []).length).toBe(22);
+		}
+	);
+});

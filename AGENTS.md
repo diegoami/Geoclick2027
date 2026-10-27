@@ -9,14 +9,15 @@ Capacitor (Android); local-first SQLite; Natural Earth map data.
 
 ## 0. Context budget — read this first
 
-This repo is ~150 hand-written source files wrapped in ~650 tracked files,
-27 MB of generated map data, and ~160k tokens of prose. Reading it
+This repo has hundreds of hand-written source files, over a thousand tracked
+files, substantial generated map data, and extensive prose. Reading it
 indiscriminately exhausts the context window before any work starts.
 
 **Canonical source. Work here:**
 
     app/src/{lib,routes}/       packages/{srs,quiz-engine}/src/
     data/scripts/*.ts           scripts/*.mjs
+    data/scripts/read-serbia-census.py  <- authored standard-library source adapter
     data/facts/*.json           data/styles/base.json      <- AUTHORED, see below
     desktop/src-tauri/src/      mobile/android/app/src/main/{java,res/values}/
     root configs: package.json, netlify.toml, app/vite.config.*, app/eslint.config.js
@@ -33,7 +34,7 @@ indiscriminately exhausts the context window before any work starts.
 | `app/static/maps`, `app/static/styles` | **prepared at build time** from `data/` (gitignored) — address the `data/` path |
 | `mobile/android/app/src/main/assets/public/` | `cap sync` copy of `app/build` |
 | `mobile/.../assets/capacitor.*.json`, `res/xml/config.xml` | generated — edit `mobile/capacitor.config.ts` |
-| `data/maps/**` | 64 dirs, 126 binaries + ~330k tokens of generated JSON |
+| `data/maps/**` | Hundreds of map packages, binaries and large generated JSON |
 | `data/source/` | gitignored raw Natural Earth downloads |
 | `data/places/*.geojson` | committed Wikidata snapshots (~1 000 towns each), written by `fetch-wikidata-places.ts` or `fetch-v1-towns.ts` — grep one town at most |
 | `data/boundaries/*.geojson` | committed boundary sources rebuilt by their fetch scripts; inspect provenance/names only unless a specific file is needed |
@@ -45,8 +46,9 @@ indiscriminately exhausts the context window before any work starts.
 
 **`data/facts/` is INPUT; `data/maps/*/facts.json` is output.** They are easy
 to confuse and the cost of confusing them is high. `data/facts/<country>.json`
-is 28 hand-authored files — 1 814 places, 5 448 sentences, the most laborious
-content in the project and the subject of `docs/PLAN_V0.10.md`.
+contains the hand-authored country files, among the most laborious content
+in the project. The original work is in `docs/PLAN_V0.10.md`; whole-catalogue
+completion for 1.0 is tracked in `docs/PLAN_V1.0.md` and proposal #244.
 `build-facts.ts` **reads** them and **writes** `data/maps/<id>/facts.json`.
 Edit the authored file and rebuild; never hand-edit the generated one.
 

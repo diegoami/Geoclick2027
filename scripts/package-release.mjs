@@ -1,19 +1,29 @@
-// Builds the installers for a tagged release into dist-release/vX.Y.Z/ (FT-07).
+// Builds the installers and portable HTML5 ZIP for a tagged release into dist-release/vX.Y.Z/ (FT-07).
 // Local only - no CI (FEATURE_PLAN.md, decision 2).
 //
 //   node scripts/package-release.mjs                  # HEAD must be at vX.Y.Z
 //   node scripts/package-release.mjs --allow-untagged # dry run on any clean commit
 //
 // Produces Geoclick-X.Y.Z-windows-x64.msi (stable releases only), -windows-x64-setup.exe and
-// -android.apk (release-signed), plus SHA256SUMS.txt. Publishing them is a
+// -android.apk (release-signed), -html5.zip and its provenance/checksum, plus SHA256SUMS.txt. Publishing them is a
 // separate, deliberate step - see docs/RELEASES.md.
 
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import {
+	copyFileSync,
+	existsSync,
+	mkdirSync,
+	readdirSync,
+	readFileSync,
+	rmSync,
+	statSync,
+	writeFileSync
+} from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { releaseAssets, verifyHtml5Provenance, verifyReleaseChecksums } from './release-assets.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ALLOW_UNTAGGED = process.argv.includes('--allow-untagged');
@@ -63,7 +73,9 @@ if (run('cargo', ['--version']).status !== 0)
 const sdk =
 	process.env.ANDROID_HOME ||
 	process.env.ANDROID_SDK_ROOT ||
-	(WIN ? path.join(process.env.LOCALAPPDATA ?? '', 'Android', 'Sdk') : path.join(os.homedir(), 'Android', 'Sdk'));
+	(WIN
+		? path.join(process.env.LOCALAPPDATA ?? '', 'Android', 'Sdk')
+		: path.join(os.homedir(), 'Android', 'Sdk'));
 if (!existsSync(path.join(sdk, 'platform-tools')))
 	fail(`Android SDK not found (looked in ${sdk}). Install Android Studio or set ANDROID_HOME.`);
 
@@ -95,16 +107,25 @@ rmSync(apkDir, { recursive: true, force: true });
 // A pre-release (X.Y.Z-alpha.N / -beta.N) ships the -setup.exe only: the MSI
 // format's version field is purely numeric, so WiX can't take "alpha".
 step(
-	PRERELEASE ? 'desktop (tauri build: web app + -setup.exe; pre-release, no .msi)' : 'desktop (tauri build: web app + .msi + -setup.exe)',
+	PRERELEASE
+		? 'desktop (tauri build: web app + -setup.exe; pre-release, no .msi)'
+		: 'desktop (tauri build: web app + .msi + -setup.exe)',
 	'npm',
 	['run', 'build', '--workspace=desktop', ...(PRERELEASE ? ['--', '--bundles', 'nsis'] : [])]
 );
-step('android: copy the web build in (cap sync)', 'npm', ['run', 'sync'], { cwd: path.join(ROOT, 'mobile') });
-const androidDir = path.join(ROOT, 'mobile', 'android');
-step('android: release APK', path.join(androidDir, WIN ? 'gradlew.bat' : 'gradlew'), ['assembleRelease'], {
-	cwd: androidDir,
-	env: { ...process.env, JAVA_HOME: javaHome }
+step('android: copy the web build in (cap sync)', 'npm', ['run', 'sync'], {
+	cwd: path.join(ROOT, 'mobile')
 });
+const androidDir = path.join(ROOT, 'mobile', 'android');
+step(
+	'android: release APK',
+	path.join(androidDir, WIN ? 'gradlew.bat' : 'gradlew'),
+	['assembleRelease'],
+	{
+		cwd: androidDir,
+		env: { ...process.env, JAVA_HOME: javaHome }
+	}
+);
 
 // --- collect ---
 if (existsSync(path.join(apkDir, 'app-release-unsigned.apk')))
@@ -113,11 +134,20 @@ const apkOut = path.join(apkDir, 'app-release.apk');
 const artefacts = [
 	...(PRERELEASE
 		? []
-		: [[path.join(bundle, 'msi', `Geoclick_${version}_x64_en-US.msi`), `Geoclick-${version}-windows-x64.msi`]]),
-	[path.join(bundle, 'nsis', `Geoclick_${version}_x64-setup.exe`), `Geoclick-${version}-windows-x64-setup.exe`],
+		: [
+				[
+					path.join(bundle, 'msi', `Geoclick_${version}_x64_en-US.msi`),
+					`Geoclick-${version}-windows-x64.msi`
+				]
+			]),
+	[
+		path.join(bundle, 'nsis', `Geoclick_${version}_x64-setup.exe`),
+		`Geoclick-${version}-windows-x64-setup.exe`
+	],
 	[apkOut, `Geoclick-${version}-android.apk`]
 ];
-for (const [from] of artefacts) if (!existsSync(from)) fail(`expected build output missing: ${from}`);
+for (const [from] of artefacts)
+	if (!existsSync(from)) fail(`expected build output missing: ${from}`);
 
 // Refuse to ship an APK whose signature doesn't verify.
 const buildTools = path.join(sdk, 'build-tools');
@@ -130,26 +160,43 @@ const apksigner = existsSync(buildTools)
 	: undefined;
 let signer = '(not checked: apksigner not found)';
 if (apksigner) {
-	const res = run(apksigner, ['verify', '--print-certs', apkOut], { env: { ...process.env, JAVA_HOME: javaHome } });
+	const res = run(apksigner, ['verify', '--print-certs', apkOut], {
+		env: { ...process.env, JAVA_HOME: javaHome }
+	});
 	if (res.status !== 0) fail(`the APK does not verify:\n${res.stdout}${res.stderr}`);
 	signer = /certificate DN: (.*)/.exec(res.stdout)?.[1] ?? 'verified';
 }
 
 rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
-const sums = [];
 for (const [from, name] of artefacts) {
 	const to = path.join(outDir, name);
 	copyFileSync(from, to);
-	sums.push(`${createHash('sha256').update(readFileSync(to)).digest('hex')}  ${name}`);
 }
+step('portable HTML5 browser ZIP', 'node', [
+	'scripts/package-html5.mjs',
+	...(ALLOW_UNTAGGED ? ['--allow-untagged'] : [])
+]);
+verifyHtml5Provenance(outDir, version, head, { allowUntagged: ALLOW_UNTAGGED });
+const files = releaseAssets(version);
+const sums = files.map(
+	(name) =>
+		`${createHash('sha256')
+			.update(readFileSync(path.join(outDir, name)))
+			.digest('hex')}  ${name}`
+);
 writeFileSync(path.join(outDir, 'SHA256SUMS.txt'), sums.join('\n') + '\n');
+verifyReleaseChecksums(outDir, version);
 
-console.log(`\nPackaged ${tag}${tagged === head ? '' : ` (UNTAGGED dry run at ${head.slice(0, 7)})`} -> ${path.relative(ROOT, outDir)}`);
-for (const [, name] of artefacts) {
+console.log(
+	`\nPackaged ${tag}${tagged === head ? '' : ` (UNTAGGED dry run at ${head.slice(0, 7)})`} -> ${path.relative(ROOT, outDir)}`
+);
+for (const name of files) {
 	const mb = (statSync(path.join(outDir, name)).size / 1024 / 1024).toFixed(1);
 	console.log(`  ${name.padEnd(42)} ${mb.padStart(6)} MB`);
 }
 console.log(`  SHA256SUMS.txt`);
 console.log(`APK signed by: ${signer}`);
-console.log('Unsigned Windows installers - SmartScreen will warn "unknown publisher" (see FEATURE_PLAN.md, out of scope).');
+console.log(
+	'Unsigned Windows installers - SmartScreen will warn "unknown publisher" (see FEATURE_PLAN.md, out of scope).'
+);

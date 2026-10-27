@@ -32,7 +32,24 @@
 		"region": "Wien",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The Roman legionary camp in today’s central Vienna was called Vindobona.",
+				"Vienna’s Ringstrasse boulevard was officially opened by Emperor Franz Joseph on 1 May 1865.",
+				"The Vienna State Opera opened on 25 May 1869 with Mozart’s Don Giovanni."
+			],
+			"it": [
+				"Il campo legionario romano nel centro dell’odierna Vienna si chiamava Vindobona.",
+				"Il viale Ringstrasse di Vienna fu inaugurato ufficialmente dall’imperatore Francesco Giuseppe il 1º maggio 1865.",
+				"L’Opera di Stato di Vienna fu inaugurata il 25 maggio 1869 con il Don Giovanni di Mozart."
+			],
+			"de": [
+				"Das römische Legionslager im Gebiet der heutigen Wiener Innenstadt hieß Vindobona.",
+				"Die Wiener Ringstraße wurde am 1. Mai 1865 von Kaiser Franz Joseph offiziell eröffnet.",
+				"Die Wiener Staatsoper wurde am 25. Mai 1869 mit Mozarts Don Giovanni eröffnet."
+			]
+		}
 	},
 	"eisenstadt": {
 		"kind": "city",
@@ -40,7 +57,24 @@
 		"populationRank": 9,
 		"region": "Burgenland",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Eisenstadt is documented under the historical spelling Eysenstat in 1373.",
+				"Joseph Haydn entered the service of the Esterházy princes in Eisenstadt in 1761.",
+				"Joseph Haydn bought the house now preserved as Eisenstadt’s Haydn House in 1766 and lived there with his wife."
+			],
+			"it": [
+				"Eisenstadt è documentata con la grafia storica Eysenstat nel 1373.",
+				"Joseph Haydn entrò al servizio dei principi Esterházy a Eisenstadt nel 1761.",
+				"Joseph Haydn acquistò nel 1766 la casa oggi conservata come Casa di Haydn a Eisenstadt e vi abitò con la moglie."
+			],
+			"de": [
+				"Eisenstadt ist 1373 unter der historischen Schreibweise Eysenstat belegt.",
+				"Joseph Haydn trat 1761 in Eisenstadt in den Dienst der Fürsten Esterházy.",
+				"Joseph Haydn kaufte 1766 das heutige Haydn-Haus in Eisenstadt und bewohnte es mit seiner Frau."
+			]
+		}
 	},
 	"wiener-neustadt": {
 		"kind": "city",
@@ -48,7 +82,24 @@
 		"populationRank": 7,
 		"region": "Niederösterreich",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Wiener Neustadt appears as Neuenstat, meaning new town, in accounts of its medieval foundation.",
+				"Part of the ransom paid for Richard the Lionheart helped finance the construction of Wiener Neustadt.",
+				"Maria Theresa ordered the establishment of a military academy in Wiener Neustadt’s castle in 1751, and teaching began in 1752."
+			],
+			"it": [
+				"Wiener Neustadt compare come Neuenstat, cioè città nuova, nei resoconti della sua fondazione medievale.",
+				"Parte del riscatto pagato per Riccardo Cuor di Leone contribuì a finanziare la costruzione di Wiener Neustadt.",
+				"Nel 1751 Maria Teresa ordinò l’istituzione di un’accademia militare nel castello di Wiener Neustadt, dove le lezioni iniziarono nel 1752."
+			],
+			"de": [
+				"Wiener Neustadt erscheint in Darstellungen seiner mittelalterlichen Gründung als Neuenstat, also neue Stadt.",
+				"Ein Teil des Lösegeldes für Richard Löwenherz half beim Bau von Wiener Neustadt.",
+				"Maria Theresia ordnete 1751 die Einrichtung einer Militärakademie in der Burg von Wiener Neustadt an, an der 1752 der Unterricht begann."
+			]
+		}
 	},
 	"salzburg": {
 		"kind": "city",
@@ -80,7 +131,24 @@
 		"populationRank": 8,
 		"region": "Vorarlberg",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Bregenz was known in Roman times as Brigantium.",
+				"Bregenz’s Martinsturm received its large wooden dome during rebuilding in 1599–1601 and served as a fire lookout.",
+				"The first Bregenz Festival took place in August 1946, with Mozart’s Bastien und Bastienne performed in the harbour."
+			],
+			"it": [
+				"In epoca romana Bregenz era conosciuta come Brigantium.",
+				"La torre Martinsturm di Bregenz ricevette la grande cupola di legno durante i lavori del 1599–1601 e servì come punto di osservazione antincendio.",
+				"Il primo Festival di Bregenz si svolse nell’agosto 1946, con una rappresentazione di Bastien und Bastienne di Mozart nel porto."
+			],
+			"de": [
+				"Bregenz war in römischer Zeit als Brigantium bekannt.",
+				"Der Bregenzer Martinsturm erhielt beim Umbau von 1599–1601 seine große Holzkuppel und diente als Feuerwache.",
+				"Die ersten Bregenzer Festspiele fanden im August 1946 statt, wobei Mozarts Bastien und Bastienne im Gondelhafen aufgeführt wurde."
+			]
+		}
 	},
 	"innsbruck": {
 		"kind": "city",
@@ -138,6 +206,23 @@
 		"populationRank": 6,
 		"region": "Kärnten",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Klagenfurt’s name is recorded in medieval documents from the 1190s in forms such as Chlagenvurth.",
+				"Klagenfurt’s Lindwurm monument was installed on Neuer Platz in 1593, representing the dragon of the city’s founding legend.",
+				"After the fire of 1514, Emperor Maximilian I transferred Klagenfurt to the Carinthian Estates in 1518, enabling its reconstruction."
+			],
+			"it": [
+				"Il nome di Klagenfurt è attestato in documenti medievali degli anni 1190 con forme come Chlagenvurth.",
+				"Il monumento del Lindwurm di Klagenfurt fu collocato sul Neuer Platz nel 1593 e raffigura il drago della leggenda di fondazione della città.",
+				"Dopo l’incendio del 1514, nel 1518 l’imperatore Massimiliano I cedette Klagenfurt agli Stati della Carinzia, permettendone la ricostruzione."
+			],
+			"de": [
+				"Klagenfurts Name ist in mittelalterlichen Urkunden der 1190er-Jahre in Formen wie Chlagenvurth belegt.",
+				"Das Klagenfurter Lindwurmdenkmal wurde 1593 auf dem Neuen Platz aufgestellt und stellt den Drachen der Stadtgründungssage dar.",
+				"Nach dem Brand von 1514 übergab Kaiser Maximilian I. Klagenfurt 1518 an die Kärntner Landstände und ermöglichte damit den Wiederaufbau."
+			]
+		}
 	}
 }

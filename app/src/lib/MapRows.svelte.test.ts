@@ -8,6 +8,7 @@ import { render } from 'vitest-browser-svelte';
 const { gotoMock } = vi.hoisted(() => ({ gotoMock: vi.fn() }));
 vi.mock('$app/navigation', () => ({ goto: gotoMock }));
 vi.mock('$app/paths', () => ({
+	asset: (file: string) => file,
 	resolve: (route: string, params: Record<string, string> = {}) =>
 		Object.entries(params).reduce((path, [key, value]) => path.replace(`[${key}]`, value), route)
 }));

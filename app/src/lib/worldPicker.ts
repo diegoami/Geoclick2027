@@ -6,7 +6,7 @@
 //
 // Which countries have maps, and whether a stored view still exists, are
 // decided here, away from MapLibre, so they can be tested.
-import { asset } from '$app/paths';
+import { asset } from '$lib/appPaths';
 import { mapGroups, pickerIdOf } from './mapCatalog';
 import type { Target } from './mapDefinition';
 import { isNativeShell } from './platform';

@@ -50,3 +50,8 @@ vite.config.ts.timestamp-*
 
 # external reviewer scratch
 rendered/
+
+# Portable HTML5 build cache/output; the release ZIP is under dist-release.
+.svelte-kit-html5/
+build-html5/
+.html5-routes/

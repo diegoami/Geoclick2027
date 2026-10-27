@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 	import { t } from '$lib/i18n.svelte';
 	import PageBar from '$lib/PageBar.svelte';
-	import { resolve } from '$app/paths';
+	import { resolve } from '$lib/appPaths';
 	import {
 		ITCH_URL,
 		RELEASES_REPO_URL,

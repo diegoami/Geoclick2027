@@ -6,6 +6,8 @@ import { playwright } from '@vitest/browser-playwright';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 
+const html5 = process.env.VITE_GEOCLICK_HTML5 === '1';
+
 const pkg = JSON.parse(
 	readFileSync(fileURLToPath(new URL('./package.json', import.meta.url)), 'utf8')
 );
@@ -60,7 +62,12 @@ export default defineConfig({
 			// ids at build time), so they're served via the SPA fallback -
 			// 200.html is the filename Cloudflare Pages (and Netlify) look for
 			// to serve unmatched routes with a 200 instead of a 404.
-			adapter: adapter({ fallback: '200.html' }),
+			adapter: html5
+				? adapter({ pages: 'build-html5', assets: 'build-html5', fallback: 'index.html' })
+				: adapter({ fallback: '200.html' }),
+			outDir: html5 ? '.svelte-kit-html5' : '.svelte-kit',
+			files: { routes: html5 ? '.html5-routes/routes' : 'src/routes' },
+			router: { type: html5 ? 'hash' : 'pathname' },
 
 			// Prerendered/fallback HTML must use absolute asset paths, not
 			// relative ones - the fallback (200.html) gets served for whatever
@@ -69,7 +76,7 @@ export default defineConfig({
 			// against the site root. Confirmed by testing the built output
 			// directly: relative paths broke with "expected a JS module but
 			// got text/html" once served two levels deep.
-			paths: { relative: false }
+			paths: { relative: html5 }
 		})
 	],
 	test: {
