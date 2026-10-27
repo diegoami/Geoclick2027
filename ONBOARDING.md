@@ -150,6 +150,16 @@ npm run gates    # all four quality gates in order, stops at the first failure
 npm run gates -- --quiet   # same, but only PASS/FAIL lines (and the tail of a failure)
 ```
 
+### Portable browser export
+
+Run `node scripts/package-html5.mjs --draft` for a development ZIP in
+`dist-release/v<version>/`. For a clean release candidate with complete authored
+facts, use `--allow-untagged`; the default requires the exact version tag.
+Extract and serve over HTTP with byte-range support, including when checking
+nested paths such as `/games/geoclick/index.html`. Open a map, start and reload a
+quiz, and check all three manuals. Use a 1280 × 800 frame. A draft or untagged
+candidate cannot be published with `publish-release.mjs`.
+
 ### The pre-push hook
 
 `npm run setup-hooks` (once per clone) sets `core.hooksPath` to the

@@ -3,7 +3,8 @@
 		"Name-facts for Peru (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"FT-73 added the twenty-six regions (\"region\") and the towns of peru-towns-100k (\"city\"); eleven ids have both, each with its own sentences."
+		"FT-73 added the twenty-six regions (\"region\") and the towns of peru-towns-100k (\"city\"); eleven ids have both, each with its own sentences.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"amazonas": {
 		"region": {
@@ -118,131 +119,167 @@
 		},
 		"city": {
 			"en": [
-				"Founded as Huamanga in 1540, it is known for its many colonial churches.",
-				"Its Holy Week is one of the most famous in Latin America."
+				"Ayacucho was founded as San Juan de la Frontera de Huamanga in 1540.",
+				"The city is nicknamed the City of Thirty-Three Churches for its colonial religious architecture.",
+				"Its Holy Week celebrations combine Catholic processions with local traditions and were recognised as national cultural heritage in 2022."
 			],
 			"it": [
-				"Fondata come Huamanga nel 1540, è nota per le sue numerose chiese coloniali.",
-				"La sua Settimana santa è una delle più famose dell’America Latina."
+				"Ayacucho fu fondata come San Juan de la Frontera de Huamanga nel 1540.",
+				"La città è soprannominata Città delle trentatré chiese per la sua architettura religiosa coloniale.",
+				"Le celebrazioni della Settimana santa uniscono processioni cattoliche e tradizioni locali e furono riconosciute come patrimonio culturale nazionale nel 2022."
 			],
 			"de": [
-				"Als Huamanga 1540 gegründet, ist sie für ihre vielen Kolonialkirchen bekannt.",
-				"Ihre Karwoche ist eine der berühmtesten Lateinamerikas."
+				"Ayacucho wurde 1540 als San Juan de la Frontera de Huamanga gegründet.",
+				"Wegen ihrer kolonialen Sakralbauten trägt die Stadt den Beinamen Stadt der dreiunddreißig Kirchen.",
+				"Ihre Karwochenfeiern verbinden katholische Prozessionen mit örtlichen Traditionen und wurden 2022 als nationales Kulturerbe anerkannt."
 			]
 		}
 	},
 	"cajamarca": {
 		"region": {
 			"en": [
-				"A Quechua name, often read as \"town of frost\", though the derivation is uncertain.",
-				"Yanacocha, in its highlands, is one of the largest gold mines in South America."
+				"Cumbe Mayo in Cajamarca preserves a pre-Inca aqueduct cut through a landscape of rock formations.",
+				"The Ventanillas de Otuzco are funerary niches carved into volcanic rock.",
+				"The region’s Kuntur Wasi archaeological site preserves evidence of ceremonial architecture and ancient goldworking."
 			],
 			"it": [
-				"Un nome quechua, spesso interpretato come \"città del gelo\", anche se l’etimologia è incerta.",
-				"Yanacocha, sui suoi altipiani, è una delle più grandi miniere d’oro del Sud America."
+				"Cumbe Mayo, nella regione di Cajamarca, conserva un acquedotto preincaico in un paesaggio di formazioni rocciose.",
+				"Le Ventanillas de Otuzco sono nicchie funerarie scavate nella roccia vulcanica.",
+				"Il sito archeologico regionale di Kuntur Wasi conserva testimonianze di architettura cerimoniale e antica oreficeria."
 			],
 			"de": [
-				"Ein Quechua-Name, oft als „Stadt des Frostes“ gedeutet, obwohl die Herleitung ungewiss ist.",
-				"Yanacocha in ihrem Hochland ist eine der größten Goldminen Südamerikas."
+				"Cumbe Mayo in Cajamarca bewahrt ein vorinkaisches Aquädukt in einer Landschaft markanter Felsformationen.",
+				"Die Ventanillas de Otuzco sind in Vulkangestein gehauene Grabnischen.",
+				"Die archäologische Stätte Kuntur Wasi in der Region bewahrt Zeugnisse von Zeremonialarchitektur und alter Goldschmiedekunst."
 			]
 		},
 		"city": {
 			"en": [
-				"Here, in 1532, Pizarro captured the Inca emperor Atahualpa.",
-				"To buy his freedom Atahualpa filled a room with gold and two more with silver, and was killed anyway."
+				"Spanish forces captured the Inca ruler Atahualpa in Cajamarca in November 1532.",
+				"The Cuarto del Rescate recalls Atahualpa’s offer of gold and silver in exchange for his freedom.",
+				"The city’s Belén complex houses an archaeological and ethnographic museum inaugurated in 1986."
 			],
 			"it": [
-				"Qui, nel 1532, Pizarro catturò l’imperatore inca Atahualpa.",
-				"Per riscattare la sua libertà Atahualpa riempì una stanza d’oro e altre due d’argento, e fu ucciso comunque."
+				"Le forze spagnole catturarono il sovrano inca Atahualpa a Cajamarca nel novembre 1532.",
+				"Il Cuarto del Rescate ricorda l’offerta di oro e argento di Atahualpa in cambio della libertà.",
+				"Il complesso cittadino di Belén ospita un museo archeologico ed etnografico inaugurato nel 1986."
 			],
 			"de": [
-				"Hier nahm Pizarro 1532 den Inkakaiser Atahualpa gefangen.",
-				"Um seine Freiheit zu erkaufen, füllte Atahualpa einen Raum mit Gold und zwei weitere mit Silber und wurde trotzdem getötet."
+				"Spanische Truppen nahmen den Inkaherrscher Atahualpa im November 1532 in Cajamarca gefangen.",
+				"Das Cuarto del Rescate erinnert an Atahualpas Angebot von Gold und Silber im Austausch für seine Freiheit.",
+				"Der Belén-Komplex der Stadt beherbergt ein 1986 eröffnetes archäologisches und ethnografisches Museum."
 			]
 		}
 	},
 	"callao": {
 		"region": {
 			"en": [
-				"The smallest region of Peru: the port of Callao and the islands off it.",
-				"Lima’s international airport is in Callao, not in Lima."
+				"Callao received its title of Constitutional Province by a law of 22 April 1857.",
+				"The region includes offshore islands such as San Lorenzo, Cavinzas and the Palomino islets.",
+				"Its protected Cavinzas and Palomino islands shelter sea lions and Humboldt penguins."
 			],
 			"it": [
-				"La regione più piccola del Perù: il porto del Callao e le isole al largo.",
-				"L’aeroporto internazionale di Lima si trova nel Callao, non a Lima."
+				"Il Callao ricevette il titolo di Provincia costituzionale con una legge del 22 aprile 1857.",
+				"La regione comprende isole al largo della costa come San Lorenzo, Cavinzas e gli isolotti Palomino.",
+				"Le sue isole protette Cavinzas e Palomino ospitano leoni marini e pinguini di Humboldt."
 			],
 			"de": [
-				"Die kleinste Region Perus: der Hafen von Callao und die Inseln davor.",
-				"Limas internationaler Flughafen liegt in Callao, nicht in Lima."
+				"Callao erhielt den Titel Verfassungsprovinz durch ein Gesetz vom 22. April 1857.",
+				"Zur Region gehören vorgelagerte Inseln wie San Lorenzo, Cavinzas und die Palomino-Eilande.",
+				"Die geschützten Inseln Cavinzas und Palomino beherbergen Seelöwen und Humboldt-Pinguine."
 			]
 		},
 		"city": {
 			"en": [
-				"The Real Felipe fortress was built in the 18th century to guard the port against pirates and enemy fleets.",
-				"On 2 May 1866 its guns fought off a Spanish squadron."
+				"Callao’s Real Felipe Fortress was begun in 1747 after the devastating earthquake and tsunami of 1746.",
+				"The fortress was named after King Philip V of Spain and built with an irregular pentagonal plan.",
+				"The Real Felipe now houses a museum of the Peruvian Army."
 			],
 			"it": [
-				"La fortezza del Real Felipe fu costruita nel Settecento per difendere il porto da pirati e flotte nemiche.",
-				"Il 2 maggio 1866 i suoi cannoni respinsero una squadra navale spagnola."
+				"La fortezza Real Felipe del Callao fu iniziata nel 1747 dopo il devastante terremoto e maremoto del 1746.",
+				"La fortezza fu intitolata al re Filippo V di Spagna e costruita con una pianta pentagonale irregolare.",
+				"Il Real Felipe ospita oggi un museo dell’Esercito peruviano."
 			],
 			"de": [
-				"Die Festung Real Felipe wurde im 18. Jahrhundert erbaut, um den Hafen gegen Piraten und feindliche Flotten zu schützen.",
-				"Am 2. Mai 1866 wehrten ihre Geschütze ein spanisches Geschwader ab."
+				"Der Bau der Festung Real Felipe in Callao begann 1747 nach dem verheerenden Erdbeben und Tsunami von 1746.",
+				"Die Festung wurde nach König Philipp V. von Spanien benannt und mit unregelmäßig fünfeckigem Grundriss errichtet.",
+				"Das Real Felipe beherbergt heute ein Museum des peruanischen Heeres."
 			]
 		}
 	},
 	"cerro-de-pasco": {
 		"city": {
 			"en": [
-				"At about 4,300 m, one of the highest cities in the world.",
-				"An open-pit silver and zinc mine has eaten into the middle of the town."
+				"Cerro de Pasco stands roughly 4,300 metres above sea level, among the world’s highest cities.",
+				"An enormous open-pit mine near the city centre reflects its long history of metal extraction.",
+				"The bronze fountain in Plaza Chaupimarca has reliefs depicting the work of miners."
 			],
 			"it": [
-				"A circa 4.300 m, una delle città più alte del mondo.",
-				"Una miniera a cielo aperto di argento e zinco si è mangiata il centro della città."
+				"Cerro de Pasco sorge a circa 4.300 metri sul livello del mare, tra le città più alte del mondo.",
+				"Un’enorme miniera a cielo aperto vicino al centro riflette la lunga storia cittadina di estrazione dei metalli.",
+				"La fontana in bronzo di Plaza Chaupimarca presenta rilievi che raffigurano il lavoro dei minatori."
 			],
 			"de": [
-				"Auf etwa 4.300 m eine der höchstgelegenen Städte der Welt.",
-				"Ein Silber- und Zink-Tagebau hat sich in die Mitte der Stadt gefressen."
+				"Cerro de Pasco liegt rund 4.300 Meter über dem Meeresspiegel und zählt zu den höchstgelegenen Städten der Welt.",
+				"Ein riesiger Tagebau nahe dem Stadtzentrum zeugt von der langen Geschichte der Metallgewinnung.",
+				"Der Bronzebrunnen auf der Plaza Chaupimarca trägt Reliefs mit Darstellungen der Arbeit von Bergleuten."
 			]
 		}
 	},
 	"chiclayo": {
 		"city": {
 			"en": [
-				"Robert Prevost, bishop of Chiclayo from 2015 to 2023, became Pope Leo XIV in 2025."
+				"Chiclayo became a city and provincial capital in 1835.",
+				"Santa María Cathedral is one of the landmarks around the city’s central park.",
+				"The Mercado Modelo includes a section selling herbs and other materials used in traditional healing rituals."
 			],
 			"it": [
-				"Robert Prevost, vescovo di Chiclayo dal 2015 al 2023, è diventato papa Leone XIV nel 2025."
+				"Chiclayo divenne città e capoluogo provinciale nel 1835.",
+				"La cattedrale di Santa María è uno dei monumenti intorno al parco centrale della città.",
+				"Il Mercado Modelo comprende una sezione che vende erbe e altri materiali usati nei rituali di cura tradizionali."
 			],
 			"de": [
-				"Robert Prevost, von 2015 bis 2023 Bischof von Chiclayo, wurde 2025 als Leo XIV. Papst."
+				"Chiclayo wurde 1835 zur Stadt und Provinzhauptstadt erhoben.",
+				"Die Kathedrale Santa María gehört zu den Wahrzeichen am zentralen Park der Stadt.",
+				"Der Mercado Modelo umfasst eine Abteilung mit Kräutern und anderen Materialien für traditionelle Heilrituale."
 			]
 		}
 	},
 	"chimbote": {
 		"city": {
 			"en": [
-				"The fishmeal boom of the 1950s and 1960s made it one of the busiest fishing ports in the world."
+				"Chimbote’s development as a major port accelerated with a new pier and customs house in 1872.",
+				"Fishmeal factories helped transform the city’s economy from the 1950s onward.",
+				"The steel industry became another pillar of Chimbote’s growth when its steelworks began operating in 1958."
 			],
 			"it": [
-				"Il boom della farina di pesce negli anni Cinquanta e Sessanta ne fece uno dei porti pescherecci più attivi del mondo."
+				"Lo sviluppo di Chimbote come grande porto accelerò con un nuovo molo e una dogana nel 1872.",
+				"Le fabbriche di farina di pesce contribuirono a trasformare l’economia cittadina a partire dagli anni Cinquanta.",
+				"L’industria siderurgica divenne un altro pilastro della crescita di Chimbote quando l’acciaieria entrò in funzione nel 1958."
 			],
 			"de": [
-				"Der Fischmehl-Boom der 1950er- und 1960er-Jahre machte sie zu einem der geschäftigsten Fischereihäfen der Welt."
+				"Chimbotes Entwicklung zum bedeutenden Hafen beschleunigte sich 1872 mit einem neuen Kai und einem Zollamt.",
+				"Fischmehlfabriken trugen seit den 1950er-Jahren zur Umgestaltung der städtischen Wirtschaft bei.",
+				"Die Stahlindustrie wurde ein weiterer Wachstumspfeiler Chimbotes, als das Stahlwerk 1958 seinen Betrieb aufnahm."
 			]
 		}
 	},
 	"chincha-alta": {
 		"city": {
 			"en": [
-				"The heart of Afro-Peruvian music and dance."
+				"Chincha Alta’s central square occupies the site of a colonial Indigenous settlement established as Santo Domingo El Real in 1571.",
+				"Chincha Alta became the capital of Chincha province when Pisco was separated in 1900.",
+				"The city’s main church is dedicated to Santo Domingo de Guzmán."
 			],
 			"it": [
-				"Il cuore della musica e della danza afroperuviane."
+				"La piazza centrale di Chincha Alta occupa il sito di un insediamento indigeno coloniale istituito come Santo Domingo El Real nel 1571.",
+				"Chincha Alta divenne capoluogo della provincia di Chincha quando Pisco ne fu separata nel 1900.",
+				"La chiesa principale della città è dedicata a Santo Domingo de Guzmán."
 			],
 			"de": [
-				"Das Herz der afroperuanischen Musik und Tanzkunst."
+				"Chincha Altas Hauptplatz liegt am Standort einer kolonialen Indigenensiedlung, die 1571 als Santo Domingo El Real eingerichtet wurde.",
+				"Chincha Alta wurde 1900 nach der Abtrennung Piscos zur Hauptstadt der Provinz Chincha.",
+				"Die Hauptkirche der Stadt ist Santo Domingo de Guzmán geweiht."
 			]
 		}
 	},
@@ -285,59 +322,74 @@
 	"huancavelica": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Its Santa Bárbara mine supplied the mercury used to refine silver across the Spanish empire, and killed many of the forced labourers sent to it."
+				"The Santa Bárbara mine in Huancavelica supplied mercury essential to colonial silver production.",
+				"Huancavelica is one of the Andean regions associated with the acrobatic Scissors Dance.",
+				"The regional capital was founded in 1572 as Villa Rica de Oropesa because of the importance of its mercury deposits."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"La sua miniera di Santa Bárbara forniva il mercurio usato per raffinare l’argento in tutto l’impero spagnolo, e uccise molti dei lavoratori forzati mandati a scavarla."
+				"La miniera di Santa Bárbara, nella regione di Huancavelica, forniva mercurio essenziale alla produzione coloniale d’argento.",
+				"Huancavelica è una delle regioni andine legate all’acrobatica Danza delle forbici.",
+				"Il capoluogo regionale fu fondato nel 1572 come Villa Rica de Oropesa per l’importanza dei suoi giacimenti di mercurio."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, deren Name ungewissen Ursprungs ist.",
-				"Ihre Mine Santa Bárbara lieferte das Quecksilber, mit dem im ganzen spanischen Weltreich Silber raffiniert wurde, und tötete viele der Zwangsarbeiter, die dorthin geschickt wurden."
+				"Die Mine Santa Bárbara in Huancavelica lieferte Quecksilber, das für die koloniale Silbergewinnung unerlässlich war.",
+				"Huancavelica gehört zu den Andenregionen, die mit dem akrobatischen Scherentanz verbunden sind.",
+				"Die Regionalhauptstadt wurde 1572 wegen ihrer bedeutenden Quecksilbervorkommen als Villa Rica de Oropesa gegründet."
 			]
 		}
 	},
 	"huancayo": {
 		"city": {
 			"en": [
-				"The Central Railway from Lima, climbing across the Andes, ends here.",
-				"President Ramón Castilla signed the decree abolishing slavery in Peru here, in 1854."
+				"Ramón Castilla signed Peru’s decree abolishing slavery in Huancayo on 3 December 1854.",
+				"Huancayo is linked to Lima and Callao by the Central Railway across the Andes.",
+				"The city’s Sunday market fills Avenida Huancavelica with crafts, farm produce and food stalls."
 			],
 			"it": [
-				"Qui termina la Ferrovia centrale che da Lima attraversa le Ande.",
-				"Qui il presidente Ramón Castilla firmò il decreto che abolì la schiavitù in Perù, nel 1854."
+				"Ramón Castilla firmò a Huancayo il decreto peruviano che aboliva la schiavitù il 3 dicembre 1854.",
+				"Huancayo è collegata a Lima e al Callao dalla Ferrovia centrale attraverso le Ande.",
+				"Il mercato domenicale della città riempie Avenida Huancavelica di artigianato, prodotti agricoli e bancarelle alimentari."
 			],
 			"de": [
-				"Die Zentralbahn von Lima, die die Anden überquert, endet hier.",
-				"Präsident Ramón Castilla unterzeichnete hier 1854 das Dekret zur Abschaffung der Sklaverei in Peru."
+				"Ramón Castilla unterzeichnete am 3. Dezember 1854 in Huancayo Perus Dekret zur Abschaffung der Sklaverei.",
+				"Huancayo ist durch die Zentralbahn über die Anden mit Lima und Callao verbunden.",
+				"Der Sonntagsmarkt der Stadt füllt die Avenida Huancavelica mit Handwerk, landwirtschaftlichen Produkten und Essensständen."
 			]
 		}
 	},
 	"huanuco": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"At Kotosh, a temple of about 2000 BC is known for a relief of two crossed hands."
+				"Kotosh near Huánuco preserves the Temple of the Crossed Hands, with clay reliefs of paired hands.",
+				"Huánuco Pampa was an Inca administrative centre with hundreds of storage buildings called colcas.",
+				"Tingo María National Park shelters oilbirds in the Cueva de las Lechuzas, despite the cave’s name meaning Cave of the Owls."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"A Kotosh un tempio del 2000 a.C. circa è noto per un rilievo con due mani incrociate."
+				"Kotosh, vicino a Huánuco, conserva il Tempio delle mani incrociate, con rilievi in argilla di coppie di mani.",
+				"Huánuco Pampa era un centro amministrativo inca con centinaia di magazzini chiamati colcas.",
+				"Il Parco nazionale di Tingo María ospita guaciari nella Cueva de las Lechuzas, benché il nome significhi Grotta dei gufi."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, deren Name ungewissen Ursprungs ist.",
-				"In Kotosh ist ein Tempel von etwa 2000 v. Chr. für ein Relief mit zwei gekreuzten Händen bekannt."
+				"Kotosh bei Huánuco bewahrt den Tempel der gekreuzten Hände mit Lehmreliefs paariger Hände.",
+				"Huánuco Pampa war ein Verwaltungszentrum der Inka mit Hunderten von Speicherbauten, den Colcas.",
+				"Im Nationalpark Tingo María leben Fettschwalme in der Cueva de las Lechuzas, obwohl der Höhlenname Höhle der Eulen bedeutet."
 			]
 		},
 		"city": {
 			"en": [
-				"Founded by the Spanish in 1539."
+				"Huánuco’s historic title León de Huánuco recalls the kingdom of León in Spain.",
+				"The city’s Calicanto Bridge crosses the Huallaga River on stone arches built in the late nineteenth century.",
+				"San Sebastián Church has an unusual image of its saint marked with smallpox spots, associated with a local healing tradition."
 			],
 			"it": [
-				"Fondata dagli Spagnoli nel 1539."
+				"Il titolo storico León de Huánuco ricorda il regno di León in Spagna.",
+				"Il ponte cittadino di Calicanto attraversa il fiume Huallaga su archi in pietra costruiti alla fine dell’Ottocento.",
+				"La chiesa di San Sebastián conserva un’insolita immagine del santo con segni di vaiolo, legata a una tradizione locale di guarigione."
 			],
 			"de": [
-				"Von den Spaniern 1539 gegründet."
+				"Huánucos historischer Titel León de Huánuco erinnert an das spanische Königreich León.",
+				"Die Calicanto-Brücke der Stadt überquert den Huallaga auf Steinbögen aus dem späten 19. Jahrhundert.",
+				"Die Kirche San Sebastián besitzt ein ungewöhnliches Heiligenbild mit Pockenmalen, das mit einer örtlichen Heilungstradition verbunden ist."
 			]
 		}
 	},
@@ -361,16 +413,19 @@
 		},
 		"city": {
 			"en": [
-				"The oasis of Huacachina, a lagoon among sand dunes, is on its edge.",
-				"Its vineyards make wine and much of Peru’s pisco."
+				"Huacachina, a lagoon surrounded by sand dunes, lies about five kilometres from Ica.",
+				"The city’s Adolfo Bermúdez Jenkins Regional Museum was created in 1946.",
+				"The museum displays objects from Paracas, Nasca, Wari and Inca cultures, alongside exhibits on ancient burial practices."
 			],
 			"it": [
-				"Alle sue porte si trova l’oasi di Huacachina, una laguna fra le dune di sabbia.",
-				"I suoi vigneti producono vino e buona parte del pisco peruviano."
+				"Huacachina, una laguna circondata da dune di sabbia, si trova a circa cinque chilometri da Ica.",
+				"Il Museo regionale Adolfo Bermúdez Jenkins della città fu istituito nel 1946.",
+				"Il museo espone oggetti delle culture Paracas, Nasca, Wari e inca, insieme a testimonianze delle antiche pratiche funerarie."
 			],
 			"de": [
-				"Die Oase Huacachina, eine Lagune zwischen Sanddünen, liegt an ihrem Rand.",
-				"Ihre Weinberge erzeugen Wein und einen großen Teil von Perus Pisco."
+				"Huacachina, eine von Sanddünen umgebene Lagune, liegt etwa fünf Kilometer von Ica entfernt.",
+				"Das Regionalmuseum Adolfo Bermúdez Jenkins der Stadt wurde 1946 gegründet.",
+				"Das Museum zeigt Objekte der Paracas-, Nasca-, Wari- und Inka-Kulturen sowie Ausstellungen zu alten Bestattungspraktiken."
 			]
 		}
 	},
@@ -396,13 +451,19 @@
 	"juliaca": {
 		"city": {
 			"en": [
-				"A market town of the altiplano, where the railways from Arequipa, Cusco and Puno meet."
+				"Juliaca’s Santa Catalina Church is a landmark of Andean Baroque architecture beside the Plaza de Armas.",
+				"A Franciscan convent stands on the city’s Santa Bárbara hill.",
+				"Juliaca’s carnival brings together traditional dance groups, musicians and offerings to Pachamama."
 			],
 			"it": [
-				"Una città mercato dell’altopiano, dove si incontrano le ferrovie da Arequipa, Cusco e Puno."
+				"La chiesa di Santa Catalina di Juliaca è un esempio di barocco andino accanto alla Plaza de Armas.",
+				"Un convento francescano sorge sul colle cittadino di Santa Bárbara.",
+				"Il carnevale di Juliaca riunisce gruppi di danza tradizionale, musicisti e offerte alla Pachamama."
 			],
 			"de": [
-				"Eine Marktstadt des Altiplano, wo sich die Eisenbahnen von Arequipa, Cusco und Puno treffen."
+				"Juliacas Kirche Santa Catalina ist ein Wahrzeichen des Andenbarocks an der Plaza de Armas.",
+				"Ein Franziskanerkloster steht auf dem städtischen Hügel Santa Bárbara.",
+				"Juliacas Karneval vereint traditionelle Tanzgruppen, Musiker und Opfergaben an Pachamama."
 			]
 		}
 	},
@@ -504,16 +565,19 @@
 	"lima-provincias": {
 		"region": {
 			"en": [
-				"The region around the capital, without it; Lima comes from Rímac, the river, Quechua for \"the one who speaks\".",
-				"Caral, a city built around 2600 BC, is the oldest known in the Americas and a UNESCO site."
+				"Lima Provincias covers nine provinces outside metropolitan Lima’s separate administration.",
+				"Its regional government is based in Huacho, rather than the national capital.",
+				"Caral in the Supe Valley preserves ancient pyramids and sunken circular plazas at a UNESCO World Heritage site."
 			],
 			"it": [
-				"La regione intorno alla capitale, senza la capitale; Lima viene da Rímac, il fiume, in quechua \"colui che parla\".",
-				"Caral, una città costruita intorno al 2600 a.C., è la più antica conosciuta delle Americhe e un sito UNESCO."
+				"Lima Provincias comprende nove province esterne all’amministrazione separata di Lima metropolitana.",
+				"Il suo governo regionale ha sede a Huacho, anziché nella capitale nazionale.",
+				"Caral, nella valle del Supe, conserva antiche piramidi e piazze circolari infossate in un sito del Patrimonio mondiale UNESCO."
 			],
 			"de": [
-				"Die Region um die Hauptstadt, ohne diese; Lima kommt von Rímac, dem Fluss, Quechua für „der Sprechende“.",
-				"Caral, eine um 2600 v. Chr. erbaute Stadt, ist die älteste bekannte Amerikas und ein UNESCO-Welterbe."
+				"Lima Provincias umfasst neun Provinzen außerhalb der gesonderten Verwaltung von Lima Metropolitana.",
+				"Die Regionalregierung hat ihren Sitz in Huacho statt in der Landeshauptstadt.",
+				"Caral im Supe-Tal bewahrt alte Pyramiden und eingetiefte Rundplätze an einer UNESCO-Welterbestätte."
 			]
 		}
 	},
@@ -558,78 +622,93 @@
 	"moquegua": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"The Cuajone copper mine is in its mountains."
+				"Cerro Baúl in Moquegua preserves a Wari settlement on a flat-topped mountain.",
+				"The regional town of Torata is known for traditional mojinete roofs and colonial stone mills.",
+				"Moquegua’s valleys support wine and pisco production, with a tourist route linking local wineries."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"La miniera di rame di Cuajone si trova sui suoi monti."
+				"Cerro Baúl, nella regione di Moquegua, conserva un insediamento wari su una montagna dalla cima piatta.",
+				"La cittadina regionale di Torata è nota per i tradizionali tetti mojinete e i mulini coloniali in pietra.",
+				"Le valli di Moquegua producono vino e pisco, con un itinerario turistico che collega le cantine locali."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, deren Name ungewissen Ursprungs ist.",
-				"Die Kupfermine Cuajone liegt in ihren Bergen."
+				"Cerro Baúl in Moquegua bewahrt eine Wari-Siedlung auf einem Berg mit flachem Gipfel.",
+				"Die Stadt Torata in der Region ist für traditionelle Mojinete-Dächer und koloniale Steinmühlen bekannt.",
+				"In den Tälern von Moquegua werden Wein und Pisco hergestellt; eine touristische Route verbindet örtliche Weingüter."
 			]
 		}
 	},
 	"pasco": {
 		"region": {
 			"en": [
-				"Named for Cerro de Pasco, its mining town.",
-				"Pozuzo was founded in 1859 by settlers from Austria and Germany, whose descendants still keep some of their customs."
+				"Pozuzo in Pasco was settled by Austrian and German immigrants in 1859.",
+				"Huayllay National Sanctuary protects a stone forest of weathered rock formations, many resembling animals.",
+				"Pasco extends from high Andean landscapes into the forests around Oxapampa and Pozuzo."
 			],
 			"it": [
-				"Prende il nome da Cerro de Pasco, la sua città mineraria.",
-				"Pozuzo fu fondata nel 1859 da coloni austriaci e tedeschi, i cui discendenti conservano ancora alcune loro usanze."
+				"Pozuzo, nella regione di Pasco, fu colonizzata da immigrati austriaci e tedeschi nel 1859.",
+				"Il Santuario nazionale di Huayllay protegge una foresta di formazioni rocciose erose, molte simili ad animali.",
+				"Pasco si estende dai paesaggi delle alte Ande alle foreste intorno a Oxapampa e Pozuzo."
 			],
 			"de": [
-				"Nach Cerro de Pasco benannt, ihrer Bergbaustadt.",
-				"Pozuzo wurde 1859 von Siedlern aus Österreich und Deutschland gegründet, deren Nachkommen einige ihrer Bräuche noch pflegen."
+				"Pozuzo in Pasco wurde 1859 von österreichischen und deutschen Einwanderern besiedelt.",
+				"Das nationale Schutzgebiet Huayllay schützt einen Steinwald verwitterter Felsformationen, von denen viele Tieren ähneln.",
+				"Pasco reicht von den Landschaften der Hochanden bis zu den Wäldern um Oxapampa und Pozuzo."
 			]
 		}
 	},
 	"piura": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"The Vicús culture, known for its pottery, flourished here around the turn of the era."
+				"Piura’s northern coast includes the beaches of Máncora, Cabo Blanco and El Ñuro.",
+				"Catacaos is one of the region’s craft centres, with workshops and shops along Calle Comercio.",
+				"The region’s archaeological heritage includes Aypate, an Inca complex in the highlands of Ayabaca."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"La cultura Vicús, nota per le sue ceramiche, fiorì qui intorno all’inizio dell’era cristiana."
+				"La costa settentrionale di Piura comprende le spiagge di Máncora, Cabo Blanco ed El Ñuro.",
+				"Catacaos è uno dei centri artigianali della regione, con botteghe e negozi lungo Calle Comercio.",
+				"Il patrimonio archeologico regionale comprende Aypate, un complesso inca sugli altopiani di Ayabaca."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, deren Name ungewissen Ursprungs ist.",
-				"Die für ihre Keramik bekannte Vicús-Kultur blühte hier um die Zeitenwende."
+				"Zu Piuras Nordküste gehören die Strände von Máncora, Cabo Blanco und El Ñuro.",
+				"Catacaos ist eines der Handwerkszentren der Region mit Werkstätten und Geschäften entlang der Calle Comercio.",
+				"Zum archäologischen Erbe der Region gehört Aypate, eine Inka-Anlage im Hochland von Ayabaca."
 			]
 		},
 		"city": {
 			"en": [
-				"Founded by Pizarro in 1532 as San Miguel, it was the first Spanish city in Peru, later moved to its present site.",
-				"Miguel Grau, Peru’s great naval hero, was born here in 1834."
+				"After several relocations, Piura was established at its present site on 15 August 1588.",
+				"Naval officer Miguel Grau, remembered for the Battle of Angamos, was born in Piura in 1834.",
+				"Piura’s Municipal Vicús Museum displays pre-Hispanic pottery, including vessels from the Vicús culture."
 			],
 			"it": [
-				"Fondata da Pizarro nel 1532 come San Miguel, fu la prima città spagnola del Perù, poi spostata dove si trova oggi.",
-				"Qui nacque nel 1834 Miguel Grau, il grande eroe della marina peruviana."
+				"Dopo vari trasferimenti, Piura fu insediata nella sua posizione attuale il 15 agosto 1588.",
+				"L’ufficiale di marina Miguel Grau, ricordato per la battaglia di Angamos, nacque a Piura nel 1834.",
+				"Il Museo municipale Vicús di Piura espone ceramiche preispaniche, fra cui vasi della cultura Vicús."
 			],
 			"de": [
-				"1532 von Pizarro als San Miguel gegründet, war sie die erste spanische Stadt in Peru und wurde später an ihren heutigen Standort verlegt.",
-				"Miguel Grau, Perus großer Marinesheld, wurde hier 1834 geboren."
+				"Nach mehreren Verlegungen wurde Piura am 15. August 1588 an seinem heutigen Standort angesiedelt.",
+				"Der für die Schlacht von Angamos bekannte Marineoffizier Miguel Grau wurde 1834 in Piura geboren.",
+				"Piuras städtisches Vicús-Museum zeigt vorspanische Keramik, darunter Gefäße der Vicús-Kultur."
 			]
 		}
 	},
 	"pucallpa": {
 		"city": {
 			"en": [
-				"From Quechua puka allpa, \"red earth\".",
-				"A river port on the Ucayali, and the end of the road across the Andes from Lima."
+				"Pucallpa is the capital of Ucayali and a river port on the Ucayali River.",
+				"Its present cathedral, beside the Plaza de Armas, was inaugurated on 8 December 2005.",
+				"The city’s art landmarks include the former home of Amazonian painter Pablo Amaringo, known as Usko Ayar."
 			],
 			"it": [
-				"Dal quechua puka allpa, \"terra rossa\".",
-				"Un porto fluviale sull’Ucayali, e il capolinea della strada che da Lima attraversa le Ande."
+				"Pucallpa è il capoluogo di Ucayali e un porto fluviale sul fiume Ucayali.",
+				"L’attuale cattedrale, accanto alla Plaza de Armas, fu inaugurata l’8 dicembre 2005.",
+				"Tra i luoghi artistici della città figura l’ex casa del pittore amazzonico Pablo Amaringo, nota come Usko Ayar."
 			],
 			"de": [
-				"Vom Quechua puka allpa, „rote Erde“.",
-				"Ein Flusshafen am Ucayali und der Endpunkt der Straße, die von Lima über die Anden führt."
+				"Pucallpa ist die Hauptstadt von Ucayali und ein Flusshafen am Ucayali.",
+				"Die heutige Kathedrale an der Plaza de Armas wurde am 8. Dezember 2005 eingeweiht.",
+				"Zu den Kunststätten der Stadt gehört das ehemalige Haus des Amazonasmalers Pablo Amaringo, bekannt als Usko Ayar."
 			]
 		}
 	},
@@ -653,88 +732,112 @@
 		},
 		"city": {
 			"en": [
-				"Its festival of the Virgen de la Candelaria, every February, is on UNESCO’s list of intangible heritage.",
-				"It is often called Peru’s capital of folklore."
+				"Puno’s February festival of the Virgen de la Candelaria was inscribed on UNESCO’s intangible cultural heritage list in 2014.",
+				"The city’s cathedral has a carved granite façade combining Baroque forms with Andean motifs.",
+				"The Carlos Dreyer Municipal Museum displays archaeological objects, colonial art and documents relating to Puno’s history."
 			],
 			"it": [
-				"La sua festa della Virgen de la Candelaria, ogni febbraio, è nella lista UNESCO del patrimonio immateriale.",
-				"È spesso chiamata la capitale del folklore peruviano."
+				"La festa di febbraio della Virgen de la Candelaria di Puno entrò nella lista UNESCO del patrimonio culturale immateriale nel 2014.",
+				"La cattedrale della città ha una facciata scolpita in granito che unisce forme barocche e motivi andini.",
+				"Il Museo municipale Carlos Dreyer espone oggetti archeologici, arte coloniale e documenti sulla storia di Puno."
 			],
 			"de": [
-				"Ihr Fest der Virgen de la Candelaria, jedes Jahr im Februar, steht auf der UNESCO-Liste des immateriellen Kulturerbes.",
-				"Sie wird oft die Folklorehauptstadt Perus genannt."
+				"Punos Februar-Fest der Virgen de la Candelaria wurde 2014 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen.",
+				"Die Kathedrale der Stadt hat eine geschnitzte Granitfassade, die barocke Formen mit Andenmotiven verbindet.",
+				"Das städtische Carlos-Dreyer-Museum zeigt archäologische Objekte, koloniale Kunst und Dokumente zu Punos Geschichte."
 			]
 		}
 	},
 	"san-martin": {
 		"region": {
 			"en": [
-				"Named for José de San Martín, the Argentine general who proclaimed Peru’s independence in 1821.",
-				"Moyobamba, founded in 1540, is one of the oldest Spanish towns in the Peruvian Amazon, and is known for its orchids."
+				"Moyobamba, the capital of San Martín, is known for its orchid nurseries.",
+				"Río Abiseo National Park is a UNESCO World Heritage site combining cloud forests with archaeological remains.",
+				"The pottery traditions of Chazuta form part of Peru’s recognised cultural heritage."
 			],
 			"it": [
-				"Prende il nome da José de San Martín, il generale argentino che proclamò l’indipendenza del Perù nel 1821.",
-				"Moyobamba, fondata nel 1540, è una delle più antiche città spagnole dell’Amazzonia peruviana, ed è nota per le sue orchidee."
+				"Moyobamba, capoluogo di San Martín, è nota per i suoi vivai di orchidee.",
+				"Il Parco nazionale del Río Abiseo è un sito del Patrimonio mondiale UNESCO che unisce foreste nebulose e resti archeologici.",
+				"Le tradizioni ceramiche di Chazuta fanno parte del patrimonio culturale riconosciuto del Perù."
 			],
 			"de": [
-				"Nach José de San Martín benannt, dem argentinischen General, der 1821 die Unabhängigkeit Perus ausrief.",
-				"Moyobamba, 1540 gegründet, ist eine der ältesten spanischen Städte im peruanischen Amazonasgebiet und für seine Orchideen bekannt."
+				"Moyobamba, die Hauptstadt von San Martín, ist für ihre Orchideengärtnereien bekannt.",
+				"Der Nationalpark Río Abiseo ist UNESCO-Welterbe und vereint Nebelwälder mit archäologischen Überresten.",
+				"Die Töpfertraditionen von Chazuta gehören zum anerkannten Kulturerbe Perus."
 			]
 		}
 	},
 	"sullana": {
 		"city": {
 			"en": [
-				"It lies on the river Chira, and serves as the market town of its valley."
+				"Sullana was founded in 1783 by Bishop Baltasar Jaime Martínez Compañón.",
+				"The city stands on the Chira River and is nicknamed the Pearl of the Chira.",
+				"Its Puente Viejo, officially named Isaías Garrido Ugarte, connects Sullana with Marcavelica."
 			],
 			"it": [
-				"Sorge sul fiume Chira, ed è la città mercato della sua valle."
+				"Sullana fu fondata nel 1783 dal vescovo Baltasar Jaime Martínez Compañón.",
+				"La città sorge sul fiume Chira ed è soprannominata la Perla del Chira.",
+				"Il suo Puente Viejo, ufficialmente intitolato a Isaías Garrido Ugarte, collega Sullana a Marcavelica."
 			],
 			"de": [
-				"Sie liegt am Fluss Chira und dient als Marktstadt ihres Tals."
+				"Sullana wurde 1783 von Bischof Baltasar Jaime Martínez Compañón gegründet.",
+				"Die Stadt liegt am Fluss Chira und trägt den Beinamen Perle des Chira.",
+				"Ihr Puente Viejo, offiziell Isaías Garrido Ugarte genannt, verbindet Sullana mit Marcavelica."
 			]
 		}
 	},
 	"tacna": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Chile held Tacna after the War of the Pacific; a treaty of 1929 gave it back to Peru, and Arica to Chile."
+				"Miculla in Tacna preserves rock engravings showing people, animals and other motifs.",
+				"The Toquepala caves contain prehistoric paintings of hunting scenes.",
+				"The sanctuary of the Señor de Locumba draws pilgrims for its festival on 14 September."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Il Cile tenne Tacna dopo la guerra del Pacifico; un trattato del 1929 la restituì al Perù, e diede Arica al Cile."
+				"Miculla, nella regione di Tacna, conserva incisioni rupestri raffiguranti persone, animali e altri motivi.",
+				"Le grotte di Toquepala contengono pitture preistoriche con scene di caccia.",
+				"Il santuario del Señor de Locumba richiama pellegrini per la sua festa del 14 settembre."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, deren Name ungewissen Ursprungs ist.",
-				"Chile hielt Tacna nach dem Salpeterkrieg besetzt; ein Vertrag von 1929 gab es an Peru zurück und sprach Arica Chile zu."
+				"Miculla in Tacna bewahrt Felsritzungen mit Menschen, Tieren und weiteren Motiven.",
+				"Die Höhlen von Toquepala enthalten vorgeschichtliche Malereien mit Jagdszenen.",
+				"Das Heiligtum des Señor de Locumba zieht zu seinem Fest am 14. September Pilger an."
 			]
 		},
 		"city": {
 			"en": [
-				"Every 28 August, the day it returned to Peru in 1929, a great Peruvian flag is carried through its streets."
+				"Every 28 August, Tacna’s flag procession commemorates the city’s return to Peruvian administration in 1929.",
+				"Tacna Cathedral was built in stages between 1875 and 1954 in a neo-Renaissance style.",
+				"The city’s Paseo Cívico honours naval commander Miguel Grau and army officer Francisco Bolognesi."
 			],
 			"it": [
-				"Ogni 28 agosto, il giorno del suo ritorno al Perù nel 1929, una grande bandiera peruviana viene portata per le sue strade."
+				"Ogni 28 agosto la processione della bandiera di Tacna ricorda il ritorno della città all’amministrazione peruviana nel 1929.",
+				"La cattedrale di Tacna fu costruita in più fasi tra il 1875 e il 1954 in stile neorinascimentale.",
+				"Il Paseo Cívico della città rende omaggio al comandante navale Miguel Grau e all’ufficiale dell’esercito Francisco Bolognesi."
 			],
 			"de": [
-				"Jedes Jahr am 28. August, dem Tag, an dem sie 1929 an Peru zurückkehrte, wird eine große peruanische Flagge durch ihre Straßen getragen."
+				"Alljährlich am 28. August erinnert Tacnas Flaggenprozession an die Rückkehr der Stadt unter peruanische Verwaltung im Jahr 1929.",
+				"Tacnas Kathedrale wurde zwischen 1875 und 1954 in mehreren Etappen im Neorenaissancestil erbaut.",
+				"Der Paseo Cívico der Stadt ehrt den Marinekommandanten Miguel Grau und den Heeresoffizier Francisco Bolognesi."
 			]
 		}
 	},
 	"trujillo": {
 		"city": {
 			"en": [
-				"Founded in 1534 and named after Trujillo in Spain, Pizarro’s home town.",
-				"It holds Peru’s national contest of the marinera, the country’s courtship dance."
+				"Trujillo was named after Francisco Pizarro’s hometown in Extremadura, Spain.",
+				"José Bernardo de Tagle proclaimed the independence of Trujillo on 29 December 1820.",
+				"The city’s Casa de la Emancipación served as a seat of the Constituent Congress in 1823."
 			],
 			"it": [
-				"Fondata nel 1534 e chiamata come Trujillo, in Spagna, la città natale di Pizarro.",
-				"Qui si tiene il concorso nazionale di marinera, la danza di corteggiamento del Perù."
+				"Trujillo prende il nome dalla città natale di Francisco Pizarro in Estremadura, in Spagna.",
+				"José Bernardo de Tagle proclamò l’indipendenza di Trujillo il 29 dicembre 1820.",
+				"La Casa de la Emancipación della città fu sede del Congresso costituente nel 1823."
 			],
 			"de": [
-				"1534 gegründet und nach Trujillo in Spanien benannt, Pizarros Heimatstadt.",
-				"Sie veranstaltet Perus nationalen Wettbewerb der Marinera, des Werbetanzes des Landes."
+				"Trujillo wurde nach Francisco Pizarros Heimatstadt in der spanischen Extremadura benannt.",
+				"José Bernardo de Tagle verkündete am 29. Dezember 1820 Trujillos Unabhängigkeit.",
+				"Die Casa de la Emancipación der Stadt diente 1823 als Sitz des verfassunggebenden Kongresses."
 			]
 		}
 	},
@@ -758,30 +861,172 @@
 		},
 		"city": {
 			"en": [
-				"Pizarro’s men got their first sight of the Inca empire here, in 1528."
+				"Tumbes proclaimed its independence from Spain on 7 January 1821.",
+				"The city’s cathedral is dedicated to San Nicolás de Tolentino.",
+				"The Paseo de la Concordia beside the main square symbolises friendship between Peru and Ecuador."
 			],
 			"it": [
-				"Qui gli uomini di Pizarro videro per la prima volta l’impero inca, nel 1528."
+				"Tumbes proclamò l’indipendenza dalla Spagna il 7 gennaio 1821.",
+				"La cattedrale della città è dedicata a San Nicolás de Tolentino.",
+				"Il Paseo de la Concordia, accanto alla piazza principale, simboleggia l’amicizia tra Perù ed Ecuador."
 			],
 			"de": [
-				"Pizarros Männer bekamen hier 1528 das Inkareich zum ersten Mal zu Gesicht."
+				"Tumbes erklärte am 7. Januar 1821 seine Unabhängigkeit von Spanien.",
+				"Die Kathedrale der Stadt ist San Nicolás de Tolentino geweiht.",
+				"Der Paseo de la Concordia neben dem Hauptplatz symbolisiert die Freundschaft zwischen Peru und Ecuador."
 			]
 		}
 	},
 	"ucayali": {
 		"region": {
 			"en": [
-				"Named for the river Ucayali, one of the two rivers that form the Amazon.",
-				"The Shipibo-Konibo people are known for the geometric patterns they paint and embroider on cloth and pottery."
+				"Ucayali was created as a separate department in 1980 after campaigns for regional autonomy.",
+				"The Shipibo-Konibo people are known for geometric kené designs on textiles and pottery.",
+				"The regional capital, Pucallpa, stands in the Amazonian lowlands beside the Ucayali River."
 			],
 			"it": [
-				"Prende il nome dal fiume Ucayali, uno dei due fiumi che formano il Rio delle Amazzoni.",
-				"Il popolo Shipibo-Konibo è noto per i motivi geometrici che dipinge e ricama su tessuti e ceramiche."
+				"Ucayali fu istituito come dipartimento separato nel 1980 dopo campagne per l’autonomia regionale.",
+				"Il popolo shipibo-konibo è noto per i motivi geometrici kené su tessuti e ceramiche.",
+				"Il capoluogo regionale, Pucallpa, sorge nelle pianure amazzoniche accanto al fiume Ucayali."
 			],
 			"de": [
-				"Nach dem Fluss Ucayali benannt, einem der beiden Flüsse, die den Amazonas bilden.",
-				"Die Shipibo-Konibo sind für die geometrischen Muster bekannt, die sie auf Stoff und Keramik malen und sticken."
+				"Ucayali wurde 1980 nach Kampagnen für regionale Eigenständigkeit als eigener Verwaltungsbezirk geschaffen.",
+				"Die Shipibo-Konibo sind für geometrische Kené-Muster auf Textilien und Keramik bekannt.",
+				"Die Regionalhauptstadt Pucallpa liegt im Amazonastiefland am Fluss Ucayali."
 			]
 		}
+	},
+	"_sources": {
+		"piura:region": [
+			"https://www.gob.pe/institucion/regionpiura/noticias/736404-la-region-piura-tiene-16-atractivos-turisticos-con-sello-safe-travels",
+			"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=374"
+		],
+		"cajamarca:region": [
+			"https://www.regioncajamarca.gob.pe/reservaturistica/cumbemayo/",
+			"https://www.bcrp.gob.pe/docs/Sucursales/Trujillo/Cajamarca-Atractivos.pdf",
+			"https://repositorio.promperu.gob.pe/bitstreams/b0ba1ab6-d51f-4b9f-8e2c-4ba9ec4db98c/download"
+		],
+		"san-martin:region": [
+			"https://cdn.www.gob.pe/uploads/document/file/5567434/4951745-san-martin-gppv-espanol_web_2023.pdf",
+			"https://whc.unesco.org/en/list/548/",
+			"https://www.peru.travel/es/destinos/san-martin"
+		],
+		"ucayali:region": [
+			"https://www3.congreso.gob.pe/biblioteca/demarcacion1904-ucayali-depucayali",
+			"https://sinia.minam.gob.pe/sites/default/files/archivos/public/docs/pdrc-ucayali-2023-2033.pdf",
+			"https://proyectos.inei.gob.pe/web/biblioineipub/bancopub/Est/Lib0256/resum.htm"
+		],
+		"huanuco:region": [
+			"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=683",
+			"https://repositorio.promperu.gob.pe/bitstreams/b0ba1ab6-d51f-4b9f-8e2c-4ba9ec4db98c/download",
+			"https://visitaareasnaturales.sernanp.gob.pe/anps/parque-nacional-de-tingo-maria/"
+		],
+		"pasco:region": [
+			"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=11287",
+			"https://www.gob.pe/institucion/sernanp/informes-publicaciones/1928682-santuario-nacional-de-huayllay",
+			"https://www.gob.pe/institucion/mincetur/noticias/1302912-una-gran-noticia-pozuzo-es-declarado-el-nuevo-pueblo-con-encanto-del-peru"
+		],
+		"lima-provincias:region": [
+			"https://cdn.www.gob.pe/uploads/document/file/5857872/5192552-rcr-lima-region-i-semestre-2023.pdf?v=1707863104",
+			"https://www.gob.pe/institucion/regionlima/sedes",
+			"https://www.peru.travel/attractions/caral"
+		],
+		"callao:region": [
+			"https://prototipo.regioncallao.gob.pe/contenidos/contenidosGRC/DATAINTRANET/tiempo/",
+			"https://cdn.www.gob.pe/uploads/document/file/4499312/Islas%20Palomino%203.pdf",
+			"https://visitaareasnaturales.sernanp.gob.pe/anps/reserva-nacional-siipg-islas-cavinzas-e-islotes-palomino/"
+		],
+		"huancavelica:region": [
+			"https://sinia.minam.gob.pe/sites/default/files/siar-huancavelica/archivos/public/docs/dia-santa-barbara.pdf",
+			"https://www.peru.travel/stories/the-world-is-enthralled-by-peruvian-dances"
+		],
+		"moquegua:region": [
+			"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=335",
+			"https://www.peru.travel/es/atractivos/torata",
+			"https://www.peru.travel/es/destinos/moquegua"
+		],
+		"tacna:region": [
+			"https://proyectos.inei.gob.pe/web/biblioineipub/bancopub/Est/Lib0258/CAP01-01.htm",
+			"https://www.gob.pe/71548-festividad-del-senor-de-locumba"
+		],
+		"tumbes:city": [
+			"https://bicentenario.gob.pe/recursos/pdf/colegios/Anexo%20Actores%20y%20hechos%20destacados%20del%20Bicentenario%20por%20regi%C3%B3n.pdf",
+			"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=781"
+		],
+		"sullana:city": [
+			"https://archivos.unf.edu.pe/uploads/Resoluciones%20de%20Comisiones%202022/RESOLUCIN_N_166-2022-CO.pdf",
+			"https://www.regionpiura.gob.pe/documentos/ceplar/plansullana.pdf",
+			"https://www.gob.pe/institucion/munisullana/noticias/844201-avanza-reparacion-del-puente-puente-viejo"
+		],
+		"piura:city": [
+			"https://cdn.www.gob.pe/uploads/document/file/2220440/phpRaIINM.pdf",
+			"https://archivohistoricodemarina.mil.pe/repo/data/DOCUMENTOS/BIBLIOTECA/HEMEROTECA/4.%20Revista%20El%20Monitor/pdf/El%20Monitor%202007.pdf",
+			"https://www.gob.pe/institucion/cultura/noticias/1052237-ministerio-de-cultura-declaro-patrimonio-cultural-a-220-bienes-culturales-muebles-de-la-municipalidad-provincial-de-piura"
+		],
+		"chiclayo:city": [
+			"https://www.gob.pe/institucion/mincetur/noticias/1166058-chiclayo-invita-al-mundo-descubre-la-region-que-marco-al-papa-leon-xiv",
+			"https://www.peru.travel/es/eventos/aniversario-de-la-fundacion-de-chiclayo",
+			"https://munilambayeque.gob.pe/guiaturisticalambayeque.pdf"
+		],
+		"cajamarca:city": [
+			"https://www.gob.pe/institucion/mincetur/noticias/1294957-mincetur-y-mincul-inspeccionan-mejoras-a-los-servicios-turisticos-del-cuarto-del-rescate-en-cajamarca",
+			"https://museos.cultura.pe/node/309"
+		],
+		"trujillo:city": [
+			"https://www.gob.pe/institucion/munitrujillo/noticias/751175-trujillo-nacio-oficialmente-el-5-de-marzo-de-1535",
+			"https://bicentenario.gob.pe/proclama-independencia-trujillo/",
+			"https://fundacionbbva.pe/nota/casa-de-la-emancipacion-de-trujillo-43-anos-promoviendo-el-arte-y-la-cultura/"
+		],
+		"pucallpa:city": [
+			"https://cdn.www.gob.pe/uploads/document/file/4501451/MP%20Ucayali%208.pdf",
+			"https://vap.org.pe/catedral/"
+		],
+		"chimbote:city": [
+			"https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0425/Libro.pdf",
+			"https://www.minam.gob.pe/wp-content/uploads/2013/05/rm_133-2010-minam.pdf"
+		],
+		"huanuco:city": [
+			"https://proyectos.inei.gob.pe/web/biblioineipub/bancopub/Est/Lib0271/CAP-01.HTM",
+			"https://www1.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0381/Libro.pdf",
+			"https://terra.iiap.gob.pe/assets/files/meso/09_zee_huanuco/13_Potencial_turistico.pdf"
+		],
+		"cerro-de-pasco:city": [
+			"https://science.nasa.gov/earth/earth-observatory/mining-perus-cerro-de-pasco-144481/",
+			"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=14261"
+		],
+		"callao:city": [
+			"https://whc.unesco.org/en/tentativelists/6647",
+			"https://prototipo.regioncallao.gob.pe/contenidos/contenidosGRC/DATAINTRANET/real_felipe/"
+		],
+		"huancayo:city": [
+			"https://cdn.www.gob.pe/uploads/document/file/1052596/om19635.pdf",
+			"https://portal.mtc.gob.pe/transportes/concesiones/ferrovias/ferrocarril_centro.html",
+			"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=793"
+		],
+		"ayacucho:city": [
+			"https://cader.sunarp.gob.pe/ayacucho/",
+			"https://www.gob.pe/institucion/cultura/noticias/663446-ministerio-de-cultura-declara-patrimonio-cultural-de-la-nacion-a-la-semana-santa-de-ayacucho"
+		],
+		"chincha-alta:city": [
+			"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=11612",
+			"https://www.gob.pe/institucion/munichincha/institucional",
+			"https://www.municipalidadchincha.gob.pe/portal_transparencia/Planeamiento/POI-2017.pdf"
+		],
+		"ica:city": [
+			"https://sites.peru.info/en-us/filminperu/film-in-peru/locations/det/huacachina",
+			"https://museos.cultura.pe/sites/default/files/publicaciones/pdf/Guia%20museos%20e%20instituciones%20museales%202023%20web.pdf"
+		],
+		"juliaca:city": [
+			"https://www.bcrp.gob.pe/docs/Sucursales/Puno/puno-atractivos.pdf",
+			"https://www.gob.pe/institucion/munisanroman/noticias/893226-despues-de-tres-anos-el-carnaval-de-juliaca-2024-se-reactiva"
+		],
+		"puno:city": [
+			"https://ich.unesco.org/en/RL/festivity-of-virgen-de-la-candelaria-of-puno-00956",
+			"https://repositorio.promperu.gob.pe/bitstreams/9a74ac76-0be0-4b66-9b64-cfb896ddb6c8/download"
+		],
+		"tacna:city": [
+			"https://spij.minjus.gob.pe/Normas/textos/240809T.pdf",
+			"https://www.munitacna.gob.pe/pagina/sf/tacna/turismo"
+		]
 	}
 }

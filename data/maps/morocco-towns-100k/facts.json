@@ -5,7 +5,24 @@
 		"populationRank": 6,
 		"region": "Tanger - Tétouan",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Tangier was known as Tingis in Roman times.",
+				"Tangier’s Kasbah Museum of Mediterranean Cultures occupies the former sultan’s palace known as Dar al-Makhzen.",
+				"Sultan Moulay Suliman gave Tangier’s American Legation building to the United States in 1821."
+			],
+			"it": [
+				"Tangeri era conosciuta come Tingis in epoca romana.",
+				"Il Museo della Kasbah delle culture mediterranee di Tangeri occupa l’antico palazzo del sultano noto come Dar al-Makhzen.",
+				"Il sultano Moulay Suliman donò agli Stati Uniti l’edificio della Legazione americana di Tangeri nel 1821."
+			],
+			"de": [
+				"Tanger war in römischer Zeit als Tingis bekannt.",
+				"Tangers Kasbah-Museum der mediterranen Kulturen befindet sich im ehemaligen Sultanspalast Dar al-Makhzen.",
+				"Sultan Moulay Suliman schenkte den Vereinigten Staaten 1821 das Gebäude der amerikanischen Gesandtschaft in Tanger."
+			]
+		}
 	},
 	"larache": {
 		"kind": "city",
@@ -13,7 +30,24 @@
 		"populationRank": 17,
 		"region": "Tanger - Tétouan",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Larache is recorded in Arabic as al-ʿArāʾish.",
+				"Sultan Moulay Ismail captured Larache from the Spanish in 1689.",
+				"The French writer Jean Genet, who died in 1986, is buried in Larache’s Spanish cemetery."
+			],
+			"it": [
+				"Larache è documentata in arabo come al-ʿArāʾish.",
+				"Il sultano Moulay Ismail conquistò Larache agli spagnoli nel 1689.",
+				"Lo scrittore francese Jean Genet, morto nel 1986, è sepolto nel cimitero spagnolo di Larache."
+			],
+			"de": [
+				"Larache ist auf Arabisch als al-ʿArāʾish belegt.",
+				"Sultan Moulay Ismail eroberte Larache 1689 von den Spaniern.",
+				"Der 1986 verstorbene französische Schriftsteller Jean Genet ist auf Laraches spanischem Friedhof begraben."
+			]
+		}
 	},
 	"ksar-el-kebir": {
 		"kind": "city",
@@ -21,7 +55,24 @@
 		"populationRank": 11,
 		"region": "Tanger - Tétouan",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The medieval geographer al-Idrisi recorded Ksar el Kebir as Qasr Abd al-Karim.",
+				"The Battle of the Three Kings, fought near Ksar el Kebir in 1578, ended in the defeat of Portugal’s King Sebastian.",
+				"The Almohad ruler Yaqub al-Mansur enclosed Ksar el Kebir with fortified walls in the twelfth century."
+			],
+			"it": [
+				"Il geografo medievale al-Idrisi registrò Ksar el Kebir come Qasr Abd al-Karim.",
+				"La battaglia dei Tre Re, combattuta presso Ksar el Kebir nel 1578, si concluse con la sconfitta del re Sebastiano del Portogallo.",
+				"Il sovrano almohade Yaqub al-Mansur circondò Ksar el Kebir di mura fortificate nel XII secolo."
+			],
+			"de": [
+				"Der mittelalterliche Geograf al-Idrisi verzeichnete Ksar el Kebir als Qasr Abd al-Karim.",
+				"Die 1578 bei Ksar el Kebir ausgetragene Dreikönigsschlacht endete mit der Niederlage des portugiesischen Königs Sebastian.",
+				"Der Almohadenherrscher Yaqub al-Mansur umgab Ksar el Kebir im 12. Jahrhundert mit befestigten Mauern."
+			]
+		}
 	},
 	"oujda": {
 		"kind": "city",
@@ -29,7 +80,24 @@
 		"populationRank": 9,
 		"region": "Oriental",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"One proposed explanation links Oujda’s name to the Arabic verb wajada, meaning to find, but its origin is disputed.",
+				"Ziri ibn Atiya, leader of the Maghrawa, founded Oujda’s medieval city in 994.",
+				"Oujda’s Great Mosque was built in 1296 under the Marinid sultan Abu Yaqub Yusuf."
+			],
+			"it": [
+				"Una spiegazione proposta collega il nome Oujda al verbo arabo wajada, che significa trovare, ma l’origine è discussa.",
+				"Ziri ibn Atiya, capo dei Maghrawa, fondò la città medievale di Oujda nel 994.",
+				"La Grande Moschea di Oujda fu costruita nel 1296 sotto il sultano merinide Abu Yaqub Yusuf."
+			],
+			"de": [
+				"Eine vorgeschlagene Erklärung verbindet Oujdas Namen mit dem arabischen Verb wajada für finden, doch die Herkunft ist umstritten.",
+				"Ziri ibn Atiya, Anführer der Maghrawa, gründete Oujdas mittelalterliche Stadt im Jahr 994.",
+				"Oujdas Große Moschee wurde 1296 unter dem Merinidensultan Abu Yaqub Yusuf erbaut."
+			]
+		}
 	},
 	"kenitra": {
 		"kind": "city",
@@ -37,7 +105,24 @@
 		"populationRank": 8,
 		"region": "Gharb - Chrarda - Béni Hssen",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Kenitra was renamed Port-Lyautey in 1932 during the French Protectorate.",
+				"Kenitra’s river port opened to commercial shipping on 1 January 1913.",
+				"Ibn Tofail University in Kenitra was established in 1989."
+			],
+			"it": [
+				"Kenitra fu ribattezzata Port-Lyautey nel 1932 durante il protettorato francese.",
+				"Il porto fluviale di Kenitra aprì al traffico commerciale il 1º gennaio 1913.",
+				"L’Università Ibn Tofail di Kenitra fu istituita nel 1989."
+			],
+			"de": [
+				"Kenitra wurde 1932 während des französischen Protektorats in Port-Lyautey umbenannt.",
+				"Kenitras Flusshafen wurde am 1. Januar 1913 für den Handelsverkehr geöffnet.",
+				"Die Ibn-Tofail-Universität in Kenitra wurde 1989 gegründet."
+			]
+		}
 	},
 	"taza": {
 		"kind": "city",
@@ -45,7 +130,24 @@
 		"populationRank": 13,
 		"region": "Taza - Al Hoceima - Taounate",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Taza’s name is generally linked to the Amazigh word tizi, meaning a mountain pass.",
+				"Taza’s Great Mosque was founded during the Almohad period in the twelfth century.",
+				"The Marinid sultan Abu Yaqub Yusuf enlarged Taza’s Great Mosque in 1293–1294 and provided its celebrated bronze chandelier."
+			],
+			"it": [
+				"Il nome Taza viene generalmente collegato alla parola amazigh tizi, che significa passo montano.",
+				"La Grande Moschea di Taza fu fondata durante il periodo almohade nel XII secolo.",
+				"Il sultano merinide Abu Yaqub Yusuf ampliò la Grande Moschea di Taza nel 1293–1294 e la dotò del celebre lampadario in bronzo."
+			],
+			"de": [
+				"Tazas Name wird gewöhnlich mit dem Amazigh-Wort tizi für einen Gebirgspass verbunden.",
+				"Tazas Große Moschee wurde während der Almohadenzeit im 12. Jahrhundert gegründet.",
+				"Der Merinidensultan Abu Yaqub Yusuf erweiterte Tazas Große Moschee 1293–1294 und stiftete ihren berühmten Bronzeleuchter."
+			]
+		}
 	},
 	"fez": {
 		"kind": "city",
@@ -54,7 +156,24 @@
 		"population1950": 165000,
 		"region": "Fès - Boulemane",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"One legend explains Fez’s name through a pickaxe found during its foundation, although the name’s origin remains disputed.",
+				"Tradition credits Fatima al-Fihri with founding Fez’s Qarawiyyin Mosque in 859.",
+				"Fez’s Chouara tannery uses numerous vats to process and dye hides for traditional leather production."
+			],
+			"it": [
+				"Una leggenda spiega il nome Fès con un piccone trovato durante la fondazione, ma l’origine del nome resta discussa.",
+				"La tradizione attribuisce a Fatima al-Fihri la fondazione della moschea Qarawiyyin di Fès nel 859.",
+				"La conceria Chouara di Fès utilizza numerose vasche per trattare e tingere le pelli destinate alla produzione artigianale del cuoio."
+			],
+			"de": [
+				"Eine Legende erklärt den Namen Fès durch eine bei der Stadtgründung gefundene Spitzhacke, doch die Herkunft des Namens bleibt umstritten.",
+				"Die Überlieferung schreibt Fatima al-Fihri die Gründung der Qarawiyyin-Moschee in Fès im Jahr 859 zu.",
+				"Die Gerberei Chouara in Fès verwendet zahlreiche Becken zum Bearbeiten und Färben von Häuten für die traditionelle Lederherstellung."
+			]
+		}
 	},
 	"rabat": {
 		"kind": "city",
@@ -89,7 +208,24 @@
 		"populationRank": 7,
 		"region": "Meknès - Tafilalet",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Meknes takes its name from the Amazigh Meknassa tribal group.",
+				"Sultan Moulay Ismail made Meknes his capital and built a new imperial city during his reign from 1672 to 1727.",
+				"Meknes’s Bab Mansour gate was completed in 1732 under Moulay Ismail’s son, Moulay Abdallah."
+			],
+			"it": [
+				"Meknès prende il nome dal gruppo tribale amazigh dei Meknassa.",
+				"Il sultano Moulay Ismail fece di Meknès la sua capitale e costruì una nuova città imperiale durante il regno dal 1672 al 1727.",
+				"La porta Bab Mansour di Meknès fu completata nel 1732 sotto il figlio di Moulay Ismail, Moulay Abdallah."
+			],
+			"de": [
+				"Meknès ist nach der Amazigh-Stammesgruppe der Meknassa benannt.",
+				"Sultan Moulay Ismail machte Meknès zu seiner Hauptstadt und errichtete während seiner Herrschaft von 1672 bis 1727 eine neue Kaiserstadt.",
+				"Meknès’ Tor Bab Mansour wurde 1732 unter Moulay Ismails Sohn Moulay Abdallah vollendet."
+			]
+		}
 	},
 	"casablanca": {
 		"kind": "city",
@@ -98,7 +234,24 @@
 		"population1950": 625000,
 		"region": "Grand Casablanca",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Casablanca was historically known as Anfa, a name that survives in a district of the city.",
+				"Casablanca’s Hassan II Mosque was inaugurated in 1993 after construction began in 1986.",
+				"Casablanca’s Abderrahman Slaoui Museum opened in 2012 with collections including Moroccan jewellery, paintings and vintage travel posters."
+			],
+			"it": [
+				"Casablanca era storicamente conosciuta come Anfa, nome che sopravvive in un quartiere della città.",
+				"La moschea Hassan II di Casablanca fu inaugurata nel 1993 dopo l’inizio dei lavori nel 1986.",
+				"Il Museo Abderrahman Slaoui di Casablanca aprì nel 2012 con collezioni comprendenti gioielli marocchini, dipinti e manifesti turistici d’epoca."
+			],
+			"de": [
+				"Casablanca war historisch als Anfa bekannt, ein Name, der in einem Stadtviertel fortbesteht.",
+				"Casablancas Hassan-II.-Moschee wurde 1993 eingeweiht, nachdem der Bau 1986 begonnen hatte.",
+				"Casablancas Abderrahman-Slaoui-Museum wurde 2012 mit Sammlungen eröffnet, darunter marokkanischer Schmuck, Gemälde und historische Reiseplakate."
+			]
+		}
 	},
 	"el-jadida": {
 		"kind": "city",
@@ -106,7 +259,24 @@
 		"populationRank": 15,
 		"region": "Doukkala - Abda",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"El Jadida’s Portuguese fortified quarter was formerly known as Mazagan.",
+				"The Church of the Assumption in El Jadida’s Portuguese quarter was built in the Manueline style of late Gothic architecture.",
+				"Orson Welles filmed scenes for Othello in El Jadida’s Portuguese cistern."
+			],
+			"it": [
+				"Il quartiere fortificato portoghese di El Jadida era un tempo conosciuto come Mazagan.",
+				"La chiesa dell’Assunzione nel quartiere portoghese di El Jadida fu costruita nello stile manuelino dell’architettura tardogotica.",
+				"Orson Welles girò scene di Otello nella cisterna portoghese di El Jadida."
+			],
+			"de": [
+				"El Jadidas portugiesisches Festungsviertel war früher als Mazagan bekannt.",
+				"Die Kirche Mariä Himmelfahrt in El Jadidas portugiesischem Viertel wurde im manuelinischen Stil der Spätgotik erbaut.",
+				"Orson Welles drehte Szenen für Othello in El Jadidas portugiesischer Zisterne."
+			]
+		}
 	},
 	"settat": {
 		"kind": "city",
@@ -114,7 +284,24 @@
 		"populationRank": 16,
 		"region": "Chaouia - Ouardigha",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"One explanation links Settat’s name to Amazigh aztat, an escort who protected travellers in return for payment.",
+				"Sultan Moulay Ismail built a kasbah at Settat in the seventeenth century, helping the settlement develop around a protected caravan stop.",
+				"Settat’s Hassan I University was established in 1997 after its first faculties opened in 1994."
+			],
+			"it": [
+				"Una spiegazione collega il nome Settat all’amazigh aztat, una scorta che proteggeva i viaggiatori in cambio di un pagamento.",
+				"Il sultano Moulay Ismail costruì una kasbah a Settat nel Seicento, favorendo lo sviluppo dell’insediamento attorno a una tappa protetta per le carovane.",
+				"L’Università Hassan I di Settat fu istituita nel 1997 dopo l’apertura delle prime facoltà nel 1994."
+			],
+			"de": [
+				"Eine Erklärung verbindet Settats Namen mit dem Amazigh-Wort aztat für einen Begleiter, der Reisende gegen Bezahlung schützte.",
+				"Sultan Moulay Ismail errichtete im 17. Jahrhundert eine Kasbah in Settat und förderte damit die Siedlung um einen geschützten Karawanenhalt.",
+				"Settats Hassan-I.-Universität wurde 1997 gegründet, nachdem die ersten Fakultäten 1994 eröffnet worden waren."
+			]
+		}
 	},
 	"safi": {
 		"kind": "city",
@@ -122,7 +309,24 @@
 		"populationRank": 10,
 		"region": "Doukkala - Abda",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Safi appears as Asfi in medieval Arabic texts and as Safim in Portuguese usage.",
+				"Safi’s National Ceramics Museum was established in 1990 and presents Moroccan pottery and ceramics.",
+				"The ceramic artist Boujemaa Lamali founded a school in Safi in 1920 that trained generations of potters."
+			],
+			"it": [
+				"Safi compare come Asfi nei testi arabi medievali e come Safim nell’uso portoghese.",
+				"Il Museo nazionale della ceramica di Safi fu istituito nel 1990 e presenta vasellame e ceramiche marocchine.",
+				"Il ceramista Boujemaa Lamali fondò a Safi nel 1920 una scuola che formò generazioni di vasai."
+			],
+			"de": [
+				"Safi erscheint in mittelalterlichen arabischen Texten als Asfi und im Portugiesischen als Safim.",
+				"Safis Nationales Keramikmuseum wurde 1990 gegründet und zeigt marokkanische Töpferwaren und Keramik.",
+				"Der Keramikkünstler Boujemaa Lamali gründete 1920 in Safi eine Schule, die Generationen von Töpfern ausbildete."
+			]
+		}
 	},
 	"er-rachidia": {
 		"kind": "city",
@@ -130,7 +334,24 @@
 		"populationRank": 12,
 		"region": "Mekncs - Tafilalet",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Errachidia was formerly known as Ksar es-Souk.",
+				"The French army began constructing a military post at Ksar es-Souk in October 1916, around which modern Errachidia developed.",
+				"Errachidia’s Faculty of Sciences and Techniques opened in September 1994 as part of Moulay Ismail University."
+			],
+			"it": [
+				"Errachidia era precedentemente conosciuta come Ksar es-Souk.",
+				"L’esercito francese iniziò a costruire un presidio militare a Ksar es-Souk nell’ottobre 1916, attorno al quale si sviluppò l’odierna Errachidia.",
+				"La Facoltà di scienze e tecniche di Errachidia aprì nel settembre 1994 come parte dell’Università Moulay Ismail."
+			],
+			"de": [
+				"Errachidia war früher als Ksar es-Souk bekannt.",
+				"Die französische Armee begann im Oktober 1916 mit dem Bau eines Militärpostens in Ksar es-Souk, um den sich das moderne Errachidia entwickelte.",
+				"Errachidias Fakultät für Naturwissenschaften und Technik wurde im September 1994 als Teil der Moulay-Ismail-Universität eröffnet."
+			]
+		}
 	},
 	"marrakesh": {
 		"kind": "city",
@@ -139,7 +360,24 @@
 		"population1950": 209000,
 		"region": "Marrakech - Tensift - Al Haouz",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Marrakesh’s name has been interpreted from Amazigh as God’s protection, although its origin is debated.",
+				"Marrakesh’s Jemaa el-Fna square sustains traditions of storytelling, poetry and musical performance recognised by UNESCO as intangible cultural heritage.",
+				"Marrakesh’s Koutoubia Mosque and its minaret date from the twelfth-century Almohad period."
+			],
+			"it": [
+				"Il nome Marrakech è stato interpretato dall’amazigh come protezione di Dio, ma l’origine è discussa.",
+				"La piazza Jemaa el-Fna di Marrakech mantiene tradizioni di narrazione, poesia ed esibizioni musicali riconosciute dall’UNESCO come patrimonio culturale immateriale.",
+				"La moschea Koutoubia di Marrakech e il suo minareto risalgono al periodo almohade del XII secolo."
+			],
+			"de": [
+				"Marrakeschs Name wurde aus dem Amazigh als Gottes Schutz gedeutet, doch seine Herkunft ist umstritten.",
+				"Marrakeschs Platz Jemaa el-Fna bewahrt Traditionen des Geschichtenerzählens, der Dichtung und musikalischer Darbietungen, die von der UNESCO als immaterielles Kulturerbe anerkannt sind.",
+				"Marrakeschs Koutoubia-Moschee und ihr Minarett stammen aus der Almohadenzeit des 12. Jahrhunderts."
+			]
+		}
 	},
 	"agadir": {
 		"kind": "city",
@@ -147,7 +385,24 @@
 		"populationRank": 5,
 		"region": "Souss - Massa - Draâ",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Agadir takes its name from an Amazigh word for a fortified communal granary.",
+				"After the earthquake of 29 February 1960, Agadir was rebuilt to the south of the devastated old town.",
+				"Agadir’s Art Museum, inaugurated in 2023, combines modern and contemporary paintings with traditional jewellery and carpets."
+			],
+			"it": [
+				"Agadir prende il nome da una parola amazigh che indica un granaio comunitario fortificato.",
+				"Dopo il terremoto del 29 febbraio 1960, Agadir fu ricostruita a sud della città vecchia devastata.",
+				"Il Museo d’arte di Agadir, inaugurato nel 2023, accosta dipinti moderni e contemporanei a gioielli e tappeti tradizionali."
+			],
+			"de": [
+				"Agadir ist nach einem Amazigh-Wort für einen befestigten gemeinschaftlichen Getreidespeicher benannt.",
+				"Nach dem Erdbeben vom 29. Februar 1960 wurde Agadir südlich der zerstörten Altstadt neu aufgebaut.",
+				"Agadirs 2023 eingeweihtes Kunstmuseum verbindet moderne und zeitgenössische Gemälde mit traditionellem Schmuck und Teppichen."
+			]
+		}
 	},
 	"goulimine": {
 		"kind": "city",
@@ -155,7 +410,24 @@
 		"populationRank": 18,
 		"region": "Guelmim - Es-Semara",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Goulimine is an older French spelling of the city now generally called Guelmim.",
+				"Guelmim’s Amhirich souk preserves a tradition of trading camels and other livestock.",
+				"In the nineteenth century, Guelmim served as a terminus for Saharan caravans linking desert oases and West African markets."
+			],
+			"it": [
+				"Goulimine è una grafia francese più antica della città oggi generalmente chiamata Guelmim.",
+				"Il souk Amhirich di Guelmim conserva una tradizione di commercio di dromedari e altro bestiame.",
+				"Nell’Ottocento, Guelmim fu un punto di arrivo delle carovane sahariane che collegavano le oasi del deserto e i mercati dell’Africa occidentale."
+			],
+			"de": [
+				"Goulimine ist eine ältere französische Schreibweise der heute gewöhnlich Guelmim genannten Stadt.",
+				"Guelmims Amhirich-Souk bewahrt eine Tradition des Handels mit Dromedaren und anderem Vieh.",
+				"Im 19. Jahrhundert diente Guelmim als Endpunkt für Saharakarawanen, die Wüstenoasen und westafrikanische Märkte verbanden."
+			]
+		}
 	},
 	"laayoune": {
 		"kind": "city",
@@ -163,6 +435,23 @@
 		"populationRank": 14,
 		"region": "Laâyoune - Boujdour - Sakia El Hamra",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Laayoune’s historical Spanish name is El Aaiún.",
+				"Spanish colonial officers established a permanent military post at El Aaiún in 1938, around which the modern town developed.",
+				"Laayoune’s Cathedral of Saint Francis of Assisi serves the Catholic Apostolic Prefecture of Western Sahara."
+			],
+			"it": [
+				"Il nome storico spagnolo di Laayoune è El Aaiún.",
+				"Ufficiali coloniali spagnoli istituirono un presidio militare permanente a El Aaiún nel 1938, attorno al quale si sviluppò la città moderna.",
+				"La cattedrale di San Francesco d’Assisi a Laayoune è al servizio della prefettura apostolica cattolica del Sahara Occidentale."
+			],
+			"de": [
+				"Laayounes historischer spanischer Name lautet El Aaiún.",
+				"Spanische Kolonialoffiziere errichteten 1938 einen ständigen Militärposten in El Aaiún, um den sich die moderne Stadt entwickelte.",
+				"Laayounes Kathedrale des heiligen Franz von Assisi dient der katholischen Apostolischen Präfektur Westsahara."
+			]
+		}
 	}
 }

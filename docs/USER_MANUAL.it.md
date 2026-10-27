@@ -1,6 +1,6 @@
 # Geoclick — Manuale
 
-Geoclick è un gioco di geografia di Diego Amicabile. Questo manuale descrive **Geoclick v0.20.0**, nello stato di sviluppo preparato per la versione 1.0.0. La versione effettiva e l’identificativo della build compaiono nell’angolo dello schermo e nella pagina Informazioni.
+Geoclick è un gioco di geografia di Diego Amicabile. Questo manuale descrive **Geoclick v1.0.0**, nella versione candidata alla pubblicazione 1.0.0. La versione effettiva e l’identificativo della build compaiono nell’angolo dello schermo e nella pagina Informazioni.
 
 Le immagini condivise con il manuale inglese mostrano l’interfaccia in inglese e progressi di esempio. I nomi dei pulsanti nel testo seguono invece l’interfaccia italiana. Le immagini delle finestre Windows e Android provengono da versioni precedenti; le funzioni descritte sono quelle attuali.
 

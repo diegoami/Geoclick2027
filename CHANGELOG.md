@@ -5,6 +5,32 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v1.0.0 — in preparation — More of the world, facts throughout, portable browser play
+
+**Explore 217 maps, learn with facts in English, German and Italian, and play in a browser or with the Windows and Android apps.**
+
+Proposals #241 and #244. Release preparation in PRs #243 and #245.
+This entry describes the candidate; no v1.0.0 tag or release has been published.
+
+For players:
+
+- **44 additional maps** cover countries selected for geographical interest and internet presence, alongside the existing catalogue.
+- **Three-language facts throughout the catalogue**: all 6,208 playable place slots have at least three useful sentences in English, German and Italian.
+- **German and Italian user manuals**, selected by the app language, accompany the English manual.
+- **Refreshed detailed geography** includes the Netherlands’ 342 municipalities, Hanau’s independent-city status, Norway’s fifteen counties, and rebuilt Danish and Serbian towns maps. The maps retain source-edition and disputed-territory notices where applicable.
+- **A portable HTML5 browser ZIP** supports embedded play at a recommended 1280 × 800, map tours, quizzes and all three manuals. Windows also opens at 1280 × 800. Progress stays on the device; no account is required.
+- **Source and downloads share the Geoclick2027 repository.** About links to the source and the [itch.io page](https://diegoami.itch.io/geoclick).
+
+Under the hood:
+
+- Browser export uses relative asset URLs, hash routing and one bundled metadata file per map. Packaging records the source commit, tag, fact coverage and checksums; publication verifies every upload.
+- Whole-catalogue coverage is checked against playable targets, with exact city/region identities, source references and translated fact sets.
+
+Not covered:
+
+- Final tagged installers and the HTML5 ZIP have not yet been built or tried. Their results will be recorded before publication. The owner uploads the itch.io page and promotional assets.
+- This release does not audit every historical boundary worldwide. Some maps retain older source editions with their existing notices. External map glyph services mean the portable browser export does not promise offline play.
+
 ## v0.20.0 — 2026-10-15 — Nine more towns maps, a fact-box spelling fix
 
 **Towns maps arrive for nine countries that previously had only their main map, and the fact box for every country spells the largest city the way the towns map does.**

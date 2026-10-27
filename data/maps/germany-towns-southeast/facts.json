@@ -5,7 +5,24 @@
 		"populationRank": 21,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Hof’s name developed from Hof des Regnitzlandes, referring to a princely administrative seat.",
+				"A major fire devastated Hof in 1823.",
+				"The Hof International Film Festival began in 1967."
+			],
+			"it": [
+				"Il nome Hof deriva da Hof des Regnitzlandes, riferito a una sede amministrativa principesca.",
+				"Un grande incendio devastò Hof nel 1823.",
+				"Il Festival internazionale del cinema di Hof ebbe inizio nel 1967."
+			],
+			"de": [
+				"Der Name Hof entwickelte sich aus Hof des Regnitzlandes, der Bezeichnung eines fürstlichen Verwaltungssitzes.",
+				"Ein großer Brand verwüstete Hof im Jahr 1823.",
+				"Die Internationalen Hofer Filmtage fanden erstmals 1967 statt."
+			]
+		}
 	},
 	"coburg": {
 		"kind": "city",
@@ -13,7 +30,24 @@
 		"populationRank": 28,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The name Coburg appears in a donation document from 1056.",
+				"Martin Luther stayed at Veste Coburg in 1530.",
+				"Duke Johann Ernst commissioned Ehrenburg Palace in 1543."
+			],
+			"it": [
+				"Il nome Coburg compare in un documento di donazione del 1056.",
+				"Martin Lutero soggiornò alla fortezza di Coburg nel 1530.",
+				"Il duca Johann Ernst commissionò il palazzo di Ehrenburg nel 1543."
+			],
+			"de": [
+				"Der Name Coburg erscheint in einer Schenkungsurkunde von 1056.",
+				"Martin Luther hielt sich 1530 auf der Veste Coburg auf.",
+				"Herzog Johann Ernst gab 1543 Schloss Ehrenburg in Auftrag."
+			]
+		}
 	},
 	"bad-kissingen": {
 		"kind": "city",
@@ -21,7 +55,24 @@
 		"populationRank": 57,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Bad Kissingen was recorded as chizziche in 801.",
+				"Bad Kissingen became part of the UNESCO World Heritage site The Great Spa Towns of Europe in 2021.",
+				"Salt production at Bad Kissingen’s Lower Saltworks is documented from 823."
+			],
+			"it": [
+				"Bad Kissingen fu registrata come chizziche nell’801.",
+				"Bad Kissingen entrò nel sito UNESCO delle Grandi città termali d’Europa nel 2021.",
+				"La produzione di sale presso la Salina Inferiore di Bad Kissingen è documentata dall’823."
+			],
+			"de": [
+				"Bad Kissingen wurde 801 als chizziche erwähnt.",
+				"Bad Kissingen wurde 2021 Teil der UNESCO-Welterbestätte Bedeutende Kurstädte Europas.",
+				"Die Salzgewinnung an der Unteren Saline in Bad Kissingen ist seit 823 belegt."
+			]
+		}
 	},
 	"kulmbach": {
 		"kind": "city",
@@ -29,7 +80,24 @@
 		"populationRank": 45,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Kulmbach’s name first appears in a donation note added to a Bible between 1027 and 1040.",
+				"Kulmbach was devastated by fire on 26 November 1553, a catastrophe remembered as Konraditag.",
+				"The rebuilding of Plassenburg Castle began in 1558 under architect Caspar Vischer."
+			],
+			"it": [
+				"Il nome Kulmbach compare per la prima volta in una nota di donazione aggiunta a una Bibbia tra il 1027 e il 1040.",
+				"Kulmbach fu devastata da un incendio il 26 novembre 1553, una catastrofe ricordata come Konraditag.",
+				"La ricostruzione del castello di Plassenburg iniziò nel 1558 sotto la direzione dell’architetto Caspar Vischer."
+			],
+			"de": [
+				"Der Name Kulmbach erscheint erstmals in einem zwischen 1027 und 1040 entstandenen Schenkungsvermerk in einer Bibel.",
+				"Kulmbach wurde am 26. November 1553 durch einen Brand verwüstet, eine als Konraditag erinnerte Katastrophe.",
+				"Der Wiederaufbau der Plassenburg begann 1558 unter dem Baumeister Caspar Vischer."
+			]
+		}
 	},
 	"schweinfurt": {
 		"kind": "city",
@@ -162,7 +230,24 @@
 		"populationRank": 58,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Kitzingen was described as villa Kitzingen in 1040.",
+				"Kitzingen’s Falterturm was built between 1469 and 1496 as a watchtower in the outer town wall.",
+				"The German Carnival Museum opened in Kitzingen in 1967."
+			],
+			"it": [
+				"Kitzingen fu descritta come villa Kitzingen nel 1040.",
+				"Il Falterturm di Kitzingen fu costruito tra il 1469 e il 1496 come torre di guardia della cinta muraria esterna.",
+				"Il Museo tedesco del carnevale aprì a Kitzingen nel 1967."
+			],
+			"de": [
+				"Kitzingen wurde 1040 als villa Kitzingen bezeichnet.",
+				"Der Kitzinger Falterturm wurde zwischen 1469 und 1496 als Wachturm der äußeren Stadtmauer erbaut.",
+				"Das Deutsche Fastnachtmuseum wurde 1967 in Kitzingen eröffnet."
+			]
+		}
 	},
 	"forchheim": {
 		"kind": "city",
@@ -170,7 +255,24 @@
 		"populationRank": 34,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Forchheim appears as Foracheim in Charlemagne’s capitulary of 805.",
+				"Louis the Child was raised to the kingship at Forchheim in 900.",
+				"Prince-Bishop Lamprecht von Brunn built the episcopal castle at Forchheim around 1380."
+			],
+			"it": [
+				"Forchheim compare come Foracheim nel capitolare di Carlo Magno dell’805.",
+				"Ludovico il Fanciullo fu elevato al trono a Forchheim nel 900.",
+				"Il principe vescovo Lamprecht von Brunn costruì il castello vescovile di Forchheim intorno al 1380."
+			],
+			"de": [
+				"Forchheim erscheint als Foracheim in Karls des Großen Kapitular von 805.",
+				"Ludwig das Kind wurde 900 in Forchheim zum König erhoben.",
+				"Fürstbischof Lamprecht von Brunn ließ um 1380 die Forchheimer Bischofsburg errichten."
+			]
+		}
 	},
 	"weiden-in-der-oberpfalz": {
 		"kind": "city",
@@ -178,7 +280,24 @@
 		"populationRank": 25,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The name Weiden first appears in a document of 1241.",
+				"Weiden’s Old Town Hall was built between 1539 and 1548.",
+				"Weiden was connected to the railway network in 1863, encouraging the growth of its glass and porcelain industries."
+			],
+			"it": [
+				"Il nome Weiden compare per la prima volta in un documento del 1241.",
+				"Il vecchio municipio di Weiden fu costruito tra il 1539 e il 1548.",
+				"Weiden fu collegata alla rete ferroviaria nel 1863, favorendo lo sviluppo delle industrie del vetro e della porcellana."
+			],
+			"de": [
+				"Der Name Weiden erscheint erstmals 1241 in einer Urkunde.",
+				"Das Alte Rathaus in Weiden wurde zwischen 1539 und 1548 erbaut.",
+				"Weiden erhielt 1863 Anschluss an das Eisenbahnnetz, was das Wachstum der Glas- und Porzellanindustrie förderte."
+			]
+		}
 	},
 	"erlangen": {
 		"kind": "city",
@@ -211,7 +330,24 @@
 		"populationRank": 53,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Herzogenaurach was first recorded as Uraha in 1002.",
+				"Adolf Dassler founded Adidas in Herzogenaurach in 1949.",
+				"Rudolf Dassler founded the company that became Puma in Herzogenaurach in 1948."
+			],
+			"it": [
+				"Herzogenaurach fu registrata per la prima volta come Uraha nel 1002.",
+				"Adolf Dassler fondò Adidas a Herzogenaurach nel 1949.",
+				"Rudolf Dassler fondò l’azienda divenuta Puma a Herzogenaurach nel 1948."
+			],
+			"de": [
+				"Herzogenaurach wurde 1002 erstmals als Uraha erwähnt.",
+				"Adolf Dassler gründete 1949 Adidas in Herzogenaurach.",
+				"Rudolf Dassler gründete 1948 in Herzogenaurach das spätere Unternehmen Puma."
+			]
+		}
 	},
 	"lauf-an-der-pegnitz": {
 		"kind": "city",
@@ -219,7 +355,24 @@
 		"populationRank": 48,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Lauf appears as Lauffe in the name of the witness Luipoldus in a charter of 1243.",
+				"Emperor Charles IV built Lauf’s Wenzelschloss between 1356 and 1360.",
+				"Lauf’s Wenzelschloss preserves a hall decorated with more than one hundred coats of arms of Bohemian nobles."
+			],
+			"it": [
+				"Lauf compare come Lauffe nel nome del testimone Luipoldus in una carta del 1243.",
+				"L’imperatore Carlo IV costruì il Wenzelschloss di Lauf tra il 1356 e il 1360.",
+				"Il Wenzelschloss di Lauf conserva una sala decorata con oltre cento stemmi di nobili boemi."
+			],
+			"de": [
+				"Lauf erscheint 1243 als Lauffe im Namen des Urkundenzeugen Luipoldus.",
+				"Kaiser Karl IV. errichtete zwischen 1356 und 1360 das Laufer Wenzelschloss.",
+				"Das Laufer Wenzelschloss bewahrt einen Saal mit mehr als hundert Wappen böhmischer Adliger."
+			]
+		}
 	},
 	"furth": {
 		"kind": "city",
@@ -277,7 +430,24 @@
 		"populationRank": 24,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Amberg was first recorded as Ammenberg in a charter of 1034.",
+				"Amberg’s Stadtbrille water gate is first documented in 1454 as a passage over the River Vils.",
+				"Count Palatine Philipp married Margarete of Bavaria-Landshut at the celebrated Amberg wedding in 1474."
+			],
+			"it": [
+				"Amberg fu registrata per la prima volta come Ammenberg in un documento del 1034.",
+				"La porta sull’acqua Stadtbrille di Amberg è documentata per la prima volta nel 1454 come passaggio sopra il fiume Vils.",
+				"Il conte palatino Filippo sposò Margherita di Baviera-Landshut nelle celebri nozze di Amberg del 1474."
+			],
+			"de": [
+				"Amberg wurde 1034 erstmals als Ammenberg in einer Urkunde erwähnt.",
+				"Das Amberger Wassertor Stadtbrille ist erstmals 1454 als Gang über die Vils nachweisbar.",
+				"Pfalzgraf Philipp heiratete bei der berühmten Amberger Hochzeit 1474 Margarete von Bayern-Landshut."
+			]
+		}
 	},
 	"schwabach": {
 		"kind": "city",
@@ -285,7 +455,24 @@
 		"populationRank": 29,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Schwabach was first recorded as Suabach in the chronicle of Zwiefalten Abbey in 1117.",
+				"Schwabach’s historic town hall was built in 1528 and 1529.",
+				"Schwabach’s town hall received its Golden Hall in 1952, with a frieze made from 14,000 sheets of local gold leaf."
+			],
+			"it": [
+				"Schwabach fu registrata per la prima volta come Suabach nella cronaca dell’abbazia di Zwiefalten nel 1117.",
+				"Il municipio storico di Schwabach fu costruito nel 1528 e nel 1529.",
+				"Il municipio di Schwabach ricevette nel 1952 la Sala d’Oro, con un fregio composto da 14.000 fogli di foglia d’oro locale."
+			],
+			"de": [
+				"Schwabach wurde 1117 erstmals als Suabach in der Chronik des Klosters Zwiefalten erwähnt.",
+				"Das historische Schwabacher Rathaus wurde 1528 und 1529 erbaut.",
+				"Das Schwabacher Rathaus erhielt 1952 den Goldenen Saal mit einem Fries aus 14.000 Blatt Schwabacher Blattgold."
+			]
+		}
 	},
 	"schwandorf": {
 		"kind": "city",
@@ -293,7 +480,24 @@
 		"populationRank": 37,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Schwandorf was first documented as Suainicondorf around 1006.",
+				"Konrad Max Kunz, composer of the Bavarian anthem, was born in Schwandorf’s Blasturm in 1812.",
+				"Schwandorf’s rock-cut cellars were once used to ferment and store beer."
+			],
+			"it": [
+				"Schwandorf fu documentata per la prima volta come Suainicondorf intorno al 1006.",
+				"Konrad Max Kunz, compositore dell’inno bavarese, nacque nel Blasturm di Schwandorf nel 1812.",
+				"Le cantine scavate nella roccia di Schwandorf erano un tempo usate per fermentare e conservare la birra."
+			],
+			"de": [
+				"Schwandorf wurde um 1006 erstmals als Suainicondorf erwähnt.",
+				"Konrad Max Kunz, der Komponist der Bayernhymne, wurde 1812 im Schwandorfer Blasturm geboren.",
+				"Die Schwandorfer Felsenkeller dienten einst als Gär- und Lagerkeller für Bier."
+			]
+		}
 	},
 	"ansbach": {
 		"kind": "city",
@@ -301,7 +505,24 @@
 		"populationRank": 30,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Ansbach was formerly called Onoldisbach, Onolsbach and Onsbach before the name Ansbach appeared in 1732.",
+				"Ansbach served as a princely residence from 1385 to 1791.",
+				"The orangery in Ansbach’s court garden was built between 1726 and 1743."
+			],
+			"it": [
+				"Ansbach era chiamata Onoldisbach, Onolsbach e Onsbach prima che comparisse il nome Ansbach nel 1732.",
+				"Ansbach fu una residenza principesca dal 1385 al 1791.",
+				"L’orangerie nel giardino di corte di Ansbach fu costruita tra il 1726 e il 1743."
+			],
+			"de": [
+				"Ansbach hieß früher Onoldisbach, Onolsbach und Onsbach, bevor 1732 der Name Ansbach erschien.",
+				"Ansbach war von 1385 bis 1791 Residenzstadt.",
+				"Die Orangerie im Ansbacher Hofgarten wurde zwischen 1726 und 1743 erbaut."
+			]
+		}
 	},
 	"neumarkt-in-der-oberpfalz": {
 		"kind": "city",
@@ -309,7 +530,24 @@
 		"populationRank": 26,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Neumarkt means new market and was known in Latin as novum forum.",
+				"Neumarkt’s museum of historic Maybach vehicles opened in 2009.",
+				"The Museum Lothar Fischer in Neumarkt opened in 2004."
+			],
+			"it": [
+				"Neumarkt significa nuovo mercato ed era conosciuta in latino come novum forum.",
+				"Il museo dei veicoli storici Maybach di Neumarkt aprì nel 2009.",
+				"Il Museo Lothar Fischer di Neumarkt aprì nel 2004."
+			],
+			"de": [
+				"Neumarkt bedeutet neuer Markt und war im Lateinischen als novum forum bekannt.",
+				"Das Museum für historische Maybach-Fahrzeuge in Neumarkt wurde 2009 eröffnet.",
+				"Das Museum Lothar Fischer in Neumarkt wurde 2004 eröffnet."
+			]
+		}
 	},
 	"roth": {
 		"kind": "city",
@@ -317,7 +555,24 @@
 		"populationRank": 50,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Roth was recorded as Rote when a church was consecrated in 1060.",
+				"Margrave Georg the Pious built Ratibor Palace in Roth between 1535 and 1538 as a hunting residence.",
+				"Roth hosted its first triathlon, the Franken-Triathlon, in 1984."
+			],
+			"it": [
+				"Roth fu registrata come Rote in occasione della consacrazione di una chiesa nel 1060.",
+				"Il margravio Giorgio il Pio costruì il castello di Ratibor a Roth tra il 1535 e il 1538 come residenza di caccia.",
+				"Roth ospitò il suo primo triathlon, il Franken-Triathlon, nel 1984."
+			],
+			"de": [
+				"Roth wurde 1060 bei einer Kirchenweihe als Rote erwähnt.",
+				"Markgraf Georg der Fromme ließ Schloss Ratibor in Roth zwischen 1535 und 1538 als Jagdschloss erbauen.",
+				"1984 fand in Roth mit dem Franken-Triathlon der erste Triathlon statt."
+			]
+		}
 	},
 	"regensburg": {
 		"kind": "city",
@@ -350,7 +605,24 @@
 		"populationRank": 18,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Straubing was first documented as Strupinga in 897.",
+				"Straubing’s Roman treasure was discovered during excavation work at Alburg in 1950.",
+				"Straubing’s Gäubodenvolksfest originated as an agricultural festival in 1812."
+			],
+			"it": [
+				"Straubing fu documentata per la prima volta come Strupinga nell’897.",
+				"Il tesoro romano di Straubing fu scoperto durante lavori di scavo ad Alburg nel 1950.",
+				"Il Gäubodenvolksfest di Straubing nacque come festa agricola nel 1812."
+			],
+			"de": [
+				"Straubing wurde 897 erstmals als Strupinga urkundlich erwähnt.",
+				"Der Straubinger Römerschatz wurde 1950 bei Erdarbeiten in Alburg entdeckt.",
+				"Das Straubinger Gäubodenvolksfest entstand 1812 als Landwirtschaftsfest."
+			]
+		}
 	},
 	"deggendorf": {
 		"kind": "city",
@@ -358,7 +630,24 @@
 		"populationRank": 33,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Deggendorf first appears in a charter of 1002 as deggindorf.",
+				"Deggendorf’s Old Town Hall with its Gothic tower was built in 1535.",
+				"Deggendorf’s Crafts Museum opened in 1991 in a converted warehouse."
+			],
+			"it": [
+				"Deggendorf compare per la prima volta in una carta del 1002 come deggindorf.",
+				"Il vecchio municipio di Deggendorf con la torre gotica fu costruito nel 1535.",
+				"Il Museo dell’artigianato di Deggendorf aprì nel 1991 in un magazzino riconvertito."
+			],
+			"de": [
+				"Deggendorf erscheint 1002 erstmals als deggindorf in einer Urkunde.",
+				"Das Alte Rathaus in Deggendorf mit seinem gotischen Turm wurde 1535 erbaut.",
+				"Das Deggendorfer Handwerksmuseum wurde 1991 in einem umgebauten Lagerhaus eröffnet."
+			]
+		}
 	},
 	"ingolstadt": {
 		"kind": "city",
@@ -391,7 +680,24 @@
 		"populationRank": 35,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Neuburg an der Donau is identified with the Roman settlement Venaxamodurum.",
+				"Count Palatine Ottheinrich built Neuburg’s Renaissance palace between 1530 and 1545.",
+				"Neuburg Palace’s chapel contains frescoes painted by Hans Bocksberger in 1543."
+			],
+			"it": [
+				"Neuburg an der Donau è identificata con l’insediamento romano Venaxamodurum.",
+				"Il conte palatino Ottheinrich costruì il palazzo rinascimentale di Neuburg tra il 1530 e il 1545.",
+				"La cappella del palazzo di Neuburg conserva affreschi dipinti da Hans Bocksberger nel 1543."
+			],
+			"de": [
+				"Neuburg an der Donau wird mit der römischen Siedlung Venaxamodurum gleichgesetzt.",
+				"Pfalzgraf Ottheinrich erbaute das Neuburger Renaissanceschloss zwischen 1530 und 1545.",
+				"Die Neuburger Schlosskapelle enthält Fresken, die Hans Bocksberger 1543 malte."
+			]
+		}
 	},
 	"passau": {
 		"kind": "city",
@@ -399,7 +705,24 @@
 		"populationRank": 17,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Passau’s name probably developed from Batavis, the name of a Roman auxiliary fort.",
+				"St Stephen’s Cathedral in Passau was rebuilt in the Baroque style after the great fire of 1662.",
+				"The University of Passau opened in 1978."
+			],
+			"it": [
+				"Il nome Passau deriva probabilmente da Batavis, il nome di un forte ausiliario romano.",
+				"Il duomo di Santo Stefano a Passau fu ricostruito in stile barocco dopo il grande incendio del 1662.",
+				"L’Università di Passau aprì nel 1978."
+			],
+			"de": [
+				"Der Name Passau entwickelte sich wahrscheinlich aus Batavis, dem Namen eines römischen Hilfstruppenkastells.",
+				"Der Passauer Stephansdom wurde nach dem großen Brand von 1662 im Barockstil wiederaufgebaut.",
+				"Die Universität Passau wurde 1978 eröffnet."
+			]
+		}
 	},
 	"landshut": {
 		"kind": "city",
@@ -407,7 +730,24 @@
 		"populationRank": 12,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Landshut means protection of the land, a name once shared by the town and its castle.",
+				"Duke Georg the Rich married the Polish princess Hedwig in Landshut in 1475.",
+				"Landshut’s St Martin’s Church was begun around 1385 and completed around 1500."
+			],
+			"it": [
+				"Landshut significa protezione del territorio, un nome un tempo condiviso dalla città e dal suo castello.",
+				"Il duca Giorgio il Ricco sposò la principessa polacca Edvige a Landshut nel 1475.",
+				"La costruzione della chiesa di San Martino a Landshut iniziò intorno al 1385 e terminò intorno al 1500."
+			],
+			"de": [
+				"Landshut bedeutet Hut des Landes, einen Namen, den Stadt und Burg einst gemeinsam trugen.",
+				"Herzog Georg der Reiche heiratete 1475 in Landshut die polnische Prinzessin Hedwig.",
+				"Der Bau der Landshuter Martinskirche begann um 1385 und wurde um 1500 vollendet."
+			]
+		}
 	},
 	"pfaffenhofen-an-der-ilm": {
 		"kind": "city",
@@ -415,7 +755,24 @@
 		"populationRank": 43,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Pfaffenhofen appears as Pfaffenhovn in a market reference of 1197.",
+				"Pfaffenhofen’s town hall was built in 1868.",
+				"An Austrian army defeated Bavarian and French forces at Pfaffenhofen in 1745."
+			],
+			"it": [
+				"Pfaffenhofen compare come Pfaffenhovn in un riferimento al mercato del 1197.",
+				"Il municipio di Pfaffenhofen fu costruito nel 1868.",
+				"Un esercito austriaco sconfisse le forze bavaresi e francesi presso Pfaffenhofen nel 1745."
+			],
+			"de": [
+				"Pfaffenhofen erscheint 1197 als Pfaffenhovn in einer Erwähnung des Marktes.",
+				"Das Pfaffenhofener Rathaus wurde 1868 erbaut.",
+				"Ein österreichisches Heer besiegte 1745 bei Pfaffenhofen bayerische und französische Truppen."
+			]
+		}
 	},
 	"aichach": {
 		"kind": "city",
@@ -423,7 +780,24 @@
 		"populationRank": 60,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Aichach appears as Aichahe in the names of two men in a record from around 1135–1140.",
+				"The Wittelsbach dynasty took its name in 1115 from its castle in today’s Aichach district of Oberwittelsbach.",
+				"Wittelsbach Castle was razed in 1209 after its owner was outlawed for murdering King Philipp of Swabia."
+			],
+			"it": [
+				"Aichach compare come Aichahe nei nomi di due uomini in un documento del 1135–1140 circa.",
+				"La dinastia Wittelsbach prese il nome nel 1115 dal proprio castello nell’attuale quartiere Oberwittelsbach di Aichach.",
+				"Il castello Wittelsbach fu raso al suolo nel 1209 dopo che il proprietario fu messo al bando per aver ucciso il re Filippo di Svevia."
+			],
+			"de": [
+				"Aichach erscheint um 1135–1140 als Aichahe in den Namen zweier Männer.",
+				"Die Wittelsbacher Dynastie benannte sich 1115 nach ihrer Burg im heutigen Aichacher Stadtteil Oberwittelsbach.",
+				"Burg Wittelsbach wurde 1209 geschleift, nachdem ihr Besitzer wegen der Ermordung König Philipps von Schwaben geächtet worden war."
+			]
+		}
 	},
 	"gersthofen": {
 		"kind": "city",
@@ -431,7 +805,24 @@
 		"populationRank": 55,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Gersthofen was recorded as Gershouen in 1143.",
+				"Gersthofen’s Balloon Museum opened in 1985 in the former water tower.",
+				"Gersthofen was raised to town status in 1969."
+			],
+			"it": [
+				"Gersthofen fu registrata come Gershouen nel 1143.",
+				"Il Museo delle mongolfiere di Gersthofen aprì nel 1985 nell’ex torre idrica.",
+				"Gersthofen fu elevata al rango di città nel 1969."
+			],
+			"de": [
+				"Gersthofen wurde 1143 als Gershouen erwähnt.",
+				"Das Gersthofer Ballonmuseum wurde 1985 im früheren Wasserturm eröffnet.",
+				"Gersthofen wurde 1969 zur Stadt erhoben."
+			]
+		}
 	},
 	"freising": {
 		"kind": "city",
@@ -439,7 +830,24 @@
 		"populationRank": 19,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Freising’s early name Frigisinga derives from the personal name Frigis.",
+				"Boniface established the bishopric of Freising in 739.",
+				"Brewing education at Weihenstephan began in 1865 with Carl Lintner’s one-semester course for brewers."
+			],
+			"it": [
+				"L’antico nome di Freising, Frigisinga, deriva dal nome personale Frigis.",
+				"Bonifacio istituì il vescovado di Freising nel 739.",
+				"L’insegnamento della birrificazione a Weihenstephan iniziò nel 1865 con il corso semestrale per birrai di Carl Lintner."
+			],
+			"de": [
+				"Freisings früher Name Frigisinga leitet sich vom Personennamen Frigis ab.",
+				"Bonifatius richtete 739 das Bistum Freising ein.",
+				"Die Brauerausbildung in Weihenstephan begann 1865 mit Carl Lintners einsemestrigem Brauer-Cursus."
+			]
+		}
 	},
 	"neu-ulm": {
 		"kind": "city",
@@ -447,7 +855,24 @@
 		"populationRank": 15,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The name Neu-Ulm first appeared in municipal records in 1814.",
+				"Neu-Ulm developed as the Bavarian bridgehead of Ulm’s federal fortress after the decision to build it in 1841.",
+				"King Ludwig II raised Neu-Ulm to town status in 1869."
+			],
+			"it": [
+				"Il nome Neu-Ulm comparve per la prima volta nei documenti comunali nel 1814.",
+				"Neu-Ulm si sviluppò come testa di ponte bavarese della fortezza federale di Ulm dopo la decisione di costruirla nel 1841.",
+				"Il re Ludovico II elevò Neu-Ulm al rango di città nel 1869."
+			],
+			"de": [
+				"Der Name Neu-Ulm erschien 1814 erstmals in den Gemeindeakten.",
+				"Neu-Ulm entwickelte sich nach dem Baubeschluss von 1841 zum bayerischen Brückenkopf der Bundesfestung Ulm.",
+				"König Ludwig II. erhob Neu-Ulm 1869 zur Stadt."
+			]
+		}
 	},
 	"augsburg": {
 		"kind": "city",
@@ -480,7 +905,24 @@
 		"populationRank": 36,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Friedberg was founded in 1264 as the town beside the castle called Fridberch.",
+				"Clockmaking brought Friedberg international renown in the eighteenth century.",
+				"Friedberg’s Herrgottsruh pilgrimage church was built between 1731 and 1753."
+			],
+			"it": [
+				"Friedberg fu fondata nel 1264 come città accanto al castello chiamato Fridberch.",
+				"La produzione di orologi rese Friedberg famosa a livello internazionale nel XVIII secolo.",
+				"La chiesa di pellegrinaggio Herrgottsruh di Friedberg fu costruita tra il 1731 e il 1753."
+			],
+			"de": [
+				"Friedberg wurde 1264 als Stadt bei der Burg Fridberch gegründet.",
+				"Die Uhrmacherei machte Friedberg im achtzehnten Jahrhundert international bekannt.",
+				"Die Friedberger Wallfahrtskirche Herrgottsruh wurde zwischen 1731 und 1753 erbaut."
+			]
+		}
 	},
 	"senden": {
 		"kind": "city",
@@ -488,7 +930,24 @@
 		"populationRank": 54,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Senden was recorded as Sennden in a document of 1358 preserved in a later copy.",
+				"Senden’s late Gothic St Jodok Church dates from the fifteenth century.",
+				"An Austrian customs post was established in Senden in 1537."
+			],
+			"it": [
+				"Senden fu registrata come Sennden in un documento del 1358 conservato in una copia successiva.",
+				"La chiesa tardogotica di San Jodok a Senden risale al XV secolo.",
+				"Un posto doganale austriaco fu istituito a Senden nel 1537."
+			],
+			"de": [
+				"Senden wurde 1358 als Sennden in einer später abgeschriebenen Urkunde erwähnt.",
+				"Die spätgotische Sendener Kirche St. Jodok stammt aus dem fünfzehnten Jahrhundert.",
+				"1537 wurde in Senden eine österreichische Zollstation eingerichtet."
+			]
+		}
 	},
 	"erding": {
 		"kind": "city",
@@ -496,7 +955,24 @@
 		"populationRank": 32,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Erding’s name comes from Ardeoingas, the early name of Altenerding meaning among Ardeo’s people.",
+				"The Erdinger brewery has brewed beer in Erding since 1886.",
+				"Erding’s Schöner Turm is the last surviving tower of the town’s four former gate towers."
+			],
+			"it": [
+				"Il nome Erding deriva da Ardeoingas, l’antico nome di Altenerding che significa presso la gente di Ardeo.",
+				"Il birrificio Erdinger produce birra a Erding dal 1886.",
+				"Lo Schöner Turm di Erding è l’ultima torre superstite delle quattro antiche porte turrite della città."
+			],
+			"de": [
+				"Erdings Name geht auf Ardeoingas zurück, den frühen Namen Altenerdings mit der Bedeutung bei den Leuten des Ardeo.",
+				"Die Brauerei Erdinger braut seit 1886 Bier in Erding.",
+				"Der Schöne Turm in Erding ist der letzte erhaltene von ehemals vier Tortürmen der Stadt."
+			]
+		}
 	},
 	"unterschlei-heim": {
 		"kind": "city",
@@ -504,7 +980,24 @@
 		"populationRank": 39,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"An older name of Unterschleißheim was Niederschleißheim.",
+				"The Lohhof settlement in today’s Unterschleißheim was founded in 1929.",
+				"Unterschleißheim was raised to town status in 2000."
+			],
+			"it": [
+				"Un nome più antico di Unterschleißheim era Niederschleißheim.",
+				"L’insediamento di Lohhof nell’attuale Unterschleißheim fu fondato nel 1929.",
+				"Unterschleißheim fu elevata al rango di città nel 2000."
+			],
+			"de": [
+				"Ein älterer Name Unterschleißheims war Niederschleißheim.",
+				"Die Siedlung Lohhof im heutigen Unterschleißheim wurde 1929 gegründet.",
+				"Unterschleißheim wurde 2000 zur Stadt erhoben."
+			]
+		}
 	},
 	"konigsbrunn": {
 		"kind": "city",
@@ -512,7 +1005,24 @@
 		"populationRank": 41,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Königsbrunn takes its name from wells dug in 1833 under King Ludwig I.",
+				"Archaeologists discovered a Roman sanctuary dedicated to Mithras in Königsbrunn’s municipal cemetery.",
+				"Königsbrunn was raised to town status in 1967."
+			],
+			"it": [
+				"Königsbrunn prende il nome dai pozzi scavati nel 1833 sotto il re Ludovico I.",
+				"Gli archeologi scoprirono un santuario romano dedicato a Mitra nel cimitero comunale di Königsbrunn.",
+				"Königsbrunn fu elevata al rango di città nel 1967."
+			],
+			"de": [
+				"Königsbrunn ist nach Brunnen benannt, die 1833 unter König Ludwig I. gegraben wurden.",
+				"Archäologen entdeckten im Königsbrunner Stadtfriedhof ein römisches Mithras-Heiligtum.",
+				"Königsbrunn wurde 1967 zur Stadt erhoben."
+			]
+		}
 	},
 	"dachau": {
 		"kind": "city",
@@ -520,7 +1030,24 @@
 		"populationRank": 20,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Dachau was first recorded as Dahauua in a donation document of 805.",
+				"The Nazi regime opened Dachau concentration camp on 22 March 1933.",
+				"Hans Wisreutter created the Renaissance coffered ceiling in Dachau Palace’s banqueting hall between 1564 and 1566."
+			],
+			"it": [
+				"Dachau fu registrata per la prima volta come Dahauua in un documento di donazione dell’805.",
+				"Il regime nazista aprì il campo di concentramento di Dachau il 22 marzo 1933.",
+				"Hans Wisreutter realizzò il soffitto rinascimentale a cassettoni del salone delle feste del castello di Dachau tra il 1564 e il 1566."
+			],
+			"de": [
+				"Dachau wurde 805 erstmals als Dahauua in einer Schenkungsurkunde erwähnt.",
+				"Das NS-Regime eröffnete am 22. März 1933 das Konzentrationslager Dachau.",
+				"Hans Wisreutter schuf zwischen 1564 und 1566 die Renaissance-Kassettendecke im Festsaal von Schloss Dachau."
+			]
+		}
 	},
 	"muhldorf-am-inn": {
 		"kind": "city",
@@ -528,7 +1055,24 @@
 		"populationRank": 59,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Mühldorf appears as Muldorf in a royal charter of 1190.",
+				"Mühldorf’s St Nicholas’s Church was first documented in 1251.",
+				"Mühldorf remained under Salzburg rule until it became Bavarian in 1802."
+			],
+			"it": [
+				"Mühldorf compare come Muldorf in una carta reale del 1190.",
+				"La chiesa di San Nicola di Mühldorf fu documentata per la prima volta nel 1251.",
+				"Mühldorf rimase sotto il dominio di Salisburgo fino a quando divenne bavarese nel 1802."
+			],
+			"de": [
+				"Mühldorf erscheint 1190 als Muldorf in einer Königsurkunde.",
+				"Die Mühldorfer Nikolauskirche wurde 1251 erstmals urkundlich erwähnt.",
+				"Mühldorf blieb unter Salzburger Herrschaft, bis es 1802 bayerisch wurde."
+			]
+		}
 	},
 	"waldkraiburg": {
 		"kind": "city",
@@ -536,7 +1080,24 @@
 		"populationRank": 47,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Waldkraiburg was adopted as the name of the new municipality founded in 1950.",
+				"Displaced people developed new industries in Waldkraiburg’s former powder-factory bunkers after the Second World War.",
+				"Waldkraiburg’s Bunker 29 industrial museum occupies an original powder-factory building from 1940."
+			],
+			"it": [
+				"Waldkraiburg fu adottato come nome del nuovo comune fondato nel 1950.",
+				"I profughi svilupparono nuove industrie negli ex bunker della fabbrica di polvere da sparo di Waldkraiburg dopo la Seconda guerra mondiale.",
+				"Il museo industriale Bunker 29 di Waldkraiburg occupa un edificio originale della fabbrica di polvere da sparo del 1940."
+			],
+			"de": [
+				"Waldkraiburg wurde als Name der 1950 gegründeten neuen Gemeinde eingeführt.",
+				"Heimatvertriebene entwickelten nach dem Zweiten Weltkrieg neue Industrien in den Bunkern des früheren Waldkraiburger Pulverwerks.",
+				"Das Waldkraiburger Industriemuseum Bunker 29 befindet sich in einem originalen Pulverwerksgebäude von 1940."
+			]
+		}
 	},
 	"olching": {
 		"kind": "city",
@@ -544,7 +1105,24 @@
 		"populationRank": 42,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Olching was recorded as Ollichingen around 1150.",
+				"Olching expanded in 1978 through its union with Esting and Geiselbullach.",
+				"Olching received town status in 2011."
+			],
+			"it": [
+				"Olching fu registrata come Ollichingen intorno al 1150.",
+				"Olching si ampliò nel 1978 con l’unione con Esting e Geiselbullach.",
+				"Olching ricevette il titolo di città nel 2011."
+			],
+			"de": [
+				"Olching wurde um 1150 als Ollichingen erwähnt.",
+				"Olching wurde 1978 durch den Zusammenschluss mit Esting und Geiselbullach erweitert.",
+				"Olching erhielt 2011 die Bezeichnung Stadt."
+			]
+		}
 	},
 	"furstenfeldbruck": {
 		"kind": "city",
@@ -552,7 +1130,24 @@
 		"populationRank": 31,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Fürstenfeldbruck’s combined name, joining Fürstenfeld Abbey and the market town Bruck, became official in 1908.",
+				"The Cistercian community of Fürstenfeld moved to its site near Bruck in 1263.",
+				"Fürstenfeld’s Baroque abbey church was designed by Giovanni Antonio Viscardi and consecrated in 1741."
+			],
+			"it": [
+				"Il nome composto Fürstenfeldbruck, che unisce l’abbazia di Fürstenfeld e il borgo mercantile di Bruck, divenne ufficiale nel 1908.",
+				"La comunità cistercense di Fürstenfeld si trasferì nel sito presso Bruck nel 1263.",
+				"La chiesa abbaziale barocca di Fürstenfeld fu progettata da Giovanni Antonio Viscardi e consacrata nel 1741."
+			],
+			"de": [
+				"Der Doppelname Fürstenfeldbruck aus Kloster Fürstenfeld und Markt Bruck wurde 1908 amtlich festgelegt.",
+				"Der Zisterzienserkonvent Fürstenfeld zog 1263 an seinen Standort bei Bruck.",
+				"Die barocke Klosterkirche Fürstenfeld wurde von Giovanni Antonio Viscardi entworfen und 1741 geweiht."
+			]
+		}
 	},
 	"munchen": {
 		"kind": "city",
@@ -585,7 +1180,24 @@
 		"populationRank": 27,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Germering was first securely recorded as Kermaringun between 948 and 957.",
+				"Remains of a Roman brick kiln were found at Germering’s Allinger Weg.",
+				"Germering received town status in 1991."
+			],
+			"it": [
+				"Germering fu registrata con certezza per la prima volta come Kermaringun tra il 948 e il 957.",
+				"Resti di una fornace romana per mattoni furono trovati all’Allinger Weg di Germering.",
+				"Germering ricevette il titolo di città nel 1991."
+			],
+			"de": [
+				"Germering wurde zwischen 948 und 957 erstmals sicher als Kermaringun erwähnt.",
+				"Am Allinger Weg in Germering wurden Reste eines römischen Ziegelbrennofens gefunden.",
+				"Germering erhielt 1991 die Bezeichnung Stadt."
+			]
+		}
 	},
 	"vaterstetten": {
 		"kind": "city",
@@ -593,7 +1205,24 @@
 		"populationRank": 51,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The municipality formerly called Parsdorf adopted the name Vaterstetten in 1978.",
+				"Sculptor Josef Thorak’s studio at Baldham was built to Albert Speer’s plans around 1937.",
+				"German and American army delegations met at the Thorak studio in Baldham in 1945 to negotiate the surrender of German troops in southern Germany."
+			],
+			"it": [
+				"Il comune precedentemente chiamato Parsdorf adottò il nome Vaterstetten nel 1978.",
+				"Lo studio dello scultore Josef Thorak a Baldham fu costruito su progetto di Albert Speer intorno al 1937.",
+				"Delegazioni degli eserciti tedesco e americano si incontrarono nello studio Thorak di Baldham nel 1945 per negoziare la resa delle truppe tedesche nella Germania meridionale."
+			],
+			"de": [
+				"Die zuvor Parsdorf genannte Gemeinde erhielt 1978 den Namen Vaterstetten.",
+				"Das Atelier des Bildhauers Josef Thorak in Baldham wurde um 1937 nach Plänen Albert Speers erbaut.",
+				"Deutsche und amerikanische Armeedelegationen trafen sich 1945 im Baldhamer Thorak-Atelier, um über die Kapitulation deutscher Truppen in Süddeutschland zu verhandeln."
+			]
+		}
 	},
 	"unterhaching": {
 		"kind": "city",
@@ -601,7 +1230,24 @@
 		"populationRank": 44,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The name Haching appears in a charter of 806, but it is uncertain whether Unterhaching or Oberhaching is meant.",
+				"Unterhaching’s Agfa housing estate was developed from 1938 for workers of the Munich camera factory.",
+				"Unterhaching’s sports park was built from 1987 on the site of a former gravel pit."
+			],
+			"it": [
+				"Il nome Haching compare in una carta dell’806, ma non è certo se si riferisca a Unterhaching o a Oberhaching.",
+				"L’insediamento residenziale Agfa di Unterhaching fu sviluppato dal 1938 per i lavoratori della fabbrica di macchine fotografiche di Monaco.",
+				"Il parco sportivo di Unterhaching fu costruito dal 1987 sul sito di una vecchia cava di ghiaia."
+			],
+			"de": [
+				"Der Name Haching erscheint in einer Urkunde von 806, doch ist unklar, ob Unterhaching oder Oberhaching gemeint ist.",
+				"Die Unterhachinger Agfa-Siedlung entstand ab 1938 für Beschäftigte des Münchner Kamerawerks.",
+				"Der Unterhachinger Sportpark entstand ab 1987 auf dem Gelände einer früheren Kiesgrube."
+			]
+		}
 	},
 	"landsberg-am-lech": {
 		"kind": "city",
@@ -609,7 +1255,24 @@
 		"populationRank": 38,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Landsberg takes its name from the castle called Landespurch or Landesperch, built around 1160.",
+				"Artist Hubert von Herkomer built his Mutterturm studio tower in Landsberg between 1884 and 1888.",
+				"Landsberg’s Gothic Bayertor gate dates from 1425."
+			],
+			"it": [
+				"Landsberg prende nome dal castello chiamato Landespurch o Landesperch, costruito intorno al 1160.",
+				"L’artista Hubert von Herkomer costruì la sua torre studio Mutterturm a Landsberg tra il 1884 e il 1888.",
+				"La porta gotica Bayertor di Landsberg risale al 1425."
+			],
+			"de": [
+				"Landsberg hat seinen Namen von der um 1160 erbauten Burg Landespurch oder Landesperch.",
+				"Der Künstler Hubert von Herkomer errichtete zwischen 1884 und 1888 seinen Atelierturm Mutterturm in Landsberg.",
+				"Das gotische Bayertor in Landsberg stammt von 1425."
+			]
+		}
 	},
 	"starnberg": {
 		"kind": "city",
@@ -617,7 +1280,24 @@
 		"populationRank": 52,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Starnberg was recorded as Starnberch around 1225–1226.",
+				"The railway from Munich to Starnberg opened in 1854 and accelerated the settlement’s growth.",
+				"Starnberg received town rights in 1912."
+			],
+			"it": [
+				"Starnberg fu registrata come Starnberch intorno al 1225–1226.",
+				"La ferrovia da Monaco a Starnberg aprì nel 1854 e accelerò la crescita dell’insediamento.",
+				"Starnberg ricevette i diritti di città nel 1912."
+			],
+			"de": [
+				"Starnberg wurde um 1225–1226 als Starnberch erwähnt.",
+				"Die Bahnstrecke von München nach Starnberg wurde 1854 eröffnet und beschleunigte das Wachstum des Ortes.",
+				"Starnberg erhielt 1912 die Stadtrechte."
+			]
+		}
 	},
 	"memmingen": {
 		"kind": "city",
@@ -625,7 +1305,24 @@
 		"populationRank": 23,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Memmingen’s name first appears in a document of 1128.",
+				"The peasants’ Twelve Articles, demanding freedoms including an end to serfdom, were drawn up in Memmingen in 1525.",
+				"Memmingen became Bavarian in 1803 after centuries as a free imperial city."
+			],
+			"it": [
+				"Il nome Memmingen compare per la prima volta in un documento del 1128.",
+				"I Dodici articoli dei contadini, che chiedevano libertà tra cui l’abolizione della servitù della gleba, furono redatti a Memmingen nel 1525.",
+				"Memmingen divenne bavarese nel 1803 dopo secoli come libera città imperiale."
+			],
+			"de": [
+				"Der Name Memmingen erscheint erstmals 1128 in einer Urkunde.",
+				"Die Zwölf Artikel der Bauern, die unter anderem die Abschaffung der Leibeigenschaft forderten, entstanden 1525 in Memmingen.",
+				"Memmingen wurde 1803 nach Jahrhunderten als freie Reichsstadt bayerisch."
+			]
+		}
 	},
 	"kaufbeuren": {
 		"kind": "city",
@@ -633,7 +1330,24 @@
 		"populationRank": 22,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Kaufbeuren appears as unsere stat ze Bueron in a royal charter of 1240.",
+				"Writer Ludwig Ganghofer was born in Kaufbeuren in 1855.",
+				"Displaced glass and jewellery makers from Gablonz began building the Kaufbeuren district of Neugablonz in 1946."
+			],
+			"it": [
+				"Kaufbeuren compare come unsere stat ze Bueron in un documento regio del 1240.",
+				"Lo scrittore Ludwig Ganghofer nacque a Kaufbeuren nel 1855.",
+				"Artigiani del vetro e dei gioielli espulsi da Gablonz iniziarono a costruire il quartiere di Neugablonz a Kaufbeuren nel 1946."
+			],
+			"de": [
+				"Kaufbeuren erscheint 1240 in einer Königsurkunde als unsere stat ze Bueron.",
+				"Der Schriftsteller Ludwig Ganghofer wurde 1855 in Kaufbeuren geboren.",
+				"Vertriebene Glas- und Schmuckwarenhersteller aus Gablonz begannen 1946 mit dem Aufbau des Kaufbeurer Stadtteils Neugablonz."
+			]
+		}
 	},
 	"geretsried": {
 		"kind": "city",
@@ -641,7 +1355,24 @@
 		"populationRank": 46,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Geretsried was first recorded as Gerratesried in 1083.",
+				"Construction of the armaments factories that later shaped Geretsried began in 1938.",
+				"Displaced people from the Sudetenland arrived at Geretsried in 1946 and were housed in former factory and camp buildings."
+			],
+			"it": [
+				"Geretsried fu registrata per la prima volta come Gerratesried nel 1083.",
+				"La costruzione delle fabbriche di armamenti che avrebbero poi segnato Geretsried iniziò nel 1938.",
+				"I profughi dai Sudeti arrivarono a Geretsried nel 1946 e furono alloggiati negli edifici dell’ex fabbrica e degli accampamenti."
+			],
+			"de": [
+				"Geretsried wurde 1083 erstmals als Gerratesried erwähnt.",
+				"Der Bau der später für Geretsried prägenden Rüstungswerke begann 1938.",
+				"1946 kamen Heimatvertriebene aus dem Sudetenland nach Geretsried und wurden in ehemaligen Werks- und Lagergebäuden untergebracht."
+			]
+		}
 	},
 	"rosenheim": {
 		"kind": "city",
@@ -649,7 +1380,24 @@
 		"populationRank": 14,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Rosenheim’s name is attested in thirteenth-century documents concerning the settlement and its castle.",
+				"Rosenheim’s saltworks began producing salt in 1810.",
+				"Rosenheim received its first railway connection in 1857."
+			],
+			"it": [
+				"Il nome Rosenheim è attestato in documenti del XIII secolo riguardanti l’insediamento e il suo castello.",
+				"Le saline di Rosenheim iniziarono a produrre sale nel 1810.",
+				"Rosenheim ricevette il suo primo collegamento ferroviario nel 1857."
+			],
+			"de": [
+				"Der Name Rosenheim ist in Urkunden des 13. Jahrhunderts zu Siedlung und Burg belegt.",
+				"Die Rosenheimer Saline begann 1810 mit der Salzherstellung.",
+				"Rosenheim erhielt 1857 seinen ersten Eisenbahnanschluss."
+			]
+		}
 	},
 	"weilheim-in-oberbayern": {
 		"kind": "city",
@@ -657,7 +1405,24 @@
 		"populationRank": 56,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Weilheim was recorded as Wilhaim in a royal charter of 1010.",
+				"Weilheim was described as an oppidum, a town, in 1238.",
+				"The nave and choir of Weilheim’s Church of the Assumption were rebuilt from 1624 to plans by Hans Krumper."
+			],
+			"it": [
+				"Weilheim fu registrata come Wilhaim in una carta reale del 1010.",
+				"Weilheim fu descritta come oppidum, cioè città, nel 1238.",
+				"La navata e il coro della chiesa dell’Assunzione di Weilheim furono ricostruiti dal 1624 su progetto di Hans Krumper."
+			],
+			"de": [
+				"Weilheim wurde 1010 als Wilhaim in einer Königsurkunde erwähnt.",
+				"Weilheim wurde 1238 als oppidum, also als Stadt, bezeichnet.",
+				"Langhaus und Chor der Weilheimer Stadtpfarrkirche Maria Himmelfahrt wurden ab 1624 nach Plänen von Hans Krumper neu errichtet."
+			]
+		}
 	},
 	"kempten": {
 		"kind": "city",
@@ -665,7 +1430,24 @@
 		"populationRank": 13,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The ancient name Kambodounon, recorded by Strabo in the first century AD, is associated with Kempten.",
+				"Kempten’s former imperial town and the separate prince-abbey town were united in 1818.",
+				"Prince-Abbot Roman Giel von Gielsberg rebuilt Kempten’s residence and abbey church after the Thirty Years’ War."
+			],
+			"it": [
+				"L’antico nome Kambodounon, registrato da Strabone nel I secolo d.C., è associato a Kempten.",
+				"L’ex città imperiale di Kempten e la distinta città dell’abbazia principesca furono unite nel 1818.",
+				"Il principe-abate Roman Giel von Gielsberg ricostruì la residenza e la chiesa abbaziale di Kempten dopo la Guerra dei Trent’anni."
+			],
+			"de": [
+				"Der von Strabon im ersten Jahrhundert nach Christus genannte antike Name Kambodounon wird mit Kempten verbunden.",
+				"Die frühere Reichsstadt Kempten und die eigenständige Stiftsstadt wurden 1818 vereinigt.",
+				"Fürstabt Roman Giel von Gielsberg ließ Kemptens Residenz und Stiftskirche nach dem Dreißigjährigen Krieg wiederaufbauen."
+			]
+		}
 	},
 	"lindau": {
 		"kind": "city",
@@ -673,7 +1455,24 @@
 		"populationRank": 49,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Lindau appears as Lintouua in a charter of 882.",
+				"Lindau’s former imperial-city library was founded in 1538.",
+				"Lindau’s rebuilt harbour, with its lighthouse and Bavarian lion, was inaugurated in 1856."
+			],
+			"it": [
+				"Lindau compare come Lintouua in una carta dell’882.",
+				"La biblioteca dell’ex città imperiale di Lindau fu fondata nel 1538.",
+				"Il porto ricostruito di Lindau, con il faro e il leone bavarese, fu inaugurato nel 1856."
+			],
+			"de": [
+				"Lindau erscheint 882 als Lintouua in einer Urkunde.",
+				"Die ehemalige Reichsstädtische Bibliothek Lindau wurde 1538 gegründet.",
+				"Der erneuerte Lindauer Hafen mit Leuchtturm und bayerischem Löwen wurde 1856 eingeweiht."
+			]
+		}
 	},
 	"garmisch-partenkirchen": {
 		"kind": "city",
@@ -681,6 +1480,23 @@
 		"populationRank": 40,
 		"region": "Bayern",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Garmisch-Partenkirchen received its combined name when the two market towns were united in 1935.",
+				"Garmisch-Partenkirchen hosted the Winter Olympic Games in 1936.",
+				"Composer Richard Strauss moved into his villa in Garmisch in 1908."
+			],
+			"it": [
+				"Garmisch-Partenkirchen ricevette il nome composto quando i due comuni di mercato furono riuniti nel 1935.",
+				"Garmisch-Partenkirchen ospitò i Giochi olimpici invernali nel 1936.",
+				"Il compositore Richard Strauss si trasferì nella propria villa di Garmisch nel 1908."
+			],
+			"de": [
+				"Garmisch-Partenkirchen erhielt seinen Doppelnamen beim Zusammenschluss der beiden Marktgemeinden 1935.",
+				"Garmisch-Partenkirchen war 1936 Austragungsort der Olympischen Winterspiele.",
+				"Der Komponist Richard Strauss bezog 1908 seine Villa in Garmisch."
+			]
+		}
 	}
 }

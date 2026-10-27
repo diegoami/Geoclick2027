@@ -2,21 +2,25 @@
 	"_note": [
 		"Name-facts for Kosovo (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"peja": {
 		"city": {
 			"en": [
-				"The Patriarchate of Peć, the old seat of the Serbian Orthodox patriarchs, is a UNESCO site.",
-				"The Rugova gorge climbs from the town into the mountains."
+				"Peja was known as İpek during Ottoman rule.",
+				"The Patriarchate of Peć, the historic seat of Serbian Orthodox patriarchs, is part of UNESCO’s Medieval Monuments in Kosovo site.",
+				"The arched stone bridge in Rugova Gorge appears on the emblem of Peja municipality."
 			],
 			"it": [
-				"Il Patriarcato di Peć, antica sede dei patriarchi ortodossi serbi, è un sito UNESCO.",
-				"La gola di Rugova sale dalla città verso le montagne."
+				"Peja era conosciuta come İpek durante il dominio ottomano.",
+				"Il Patriarcato di Peć, sede storica dei patriarchi ortodossi serbi, fa parte del sito UNESCO Monumenti medievali in Kosovo.",
+				"Il ponte in pietra ad arco nella gola di Rugova compare sullo stemma del comune di Peja."
 			],
 			"de": [
-				"Das Patriarchat von Peć, der alte Sitz der serbisch-orthodoxen Patriarchen, ist eine UNESCO-Stätte.",
-				"Die Rugova-Schlucht führt von der Stadt hinauf in die Berge."
+				"Peja war während der osmanischen Herrschaft als İpek bekannt.",
+				"Das Patriarchat von Peć, der historische Sitz serbisch-orthodoxer Patriarchen, gehört zur UNESCO-Stätte Mittelalterliche Denkmäler im Kosovo.",
+				"Die steinerne Bogenbrücke in der Rugova-Schlucht erscheint im Wappen der Gemeinde Peja."
 			]
 		}
 	},
@@ -42,17 +46,32 @@
 	"prizren": {
 		"city": {
 			"en": [
-				"In 1878 the League of Prizren, the start of the Albanian national movement, met here.",
-				"Its film festival, DokuFest, has shown documentaries every summer since 2002."
+				"Byzantine sources recorded Prizren as Prisdriana.",
+				"The League of Prizren was founded in the city on 10 June 1878 and became a key organisation of the Albanian national movement.",
+				"Prizren’s DokuFest documentary and short-film festival was founded in 2002 and holds screenings each summer."
 			],
 			"it": [
-				"Nel 1878 qui si riunì la Lega di Prizren, l’inizio del movimento nazionale albanese.",
-				"Il suo festival del cinema, DokuFest, proietta documentari ogni estate dal 2002."
+				"Le fonti bizantine registrarono Prizren come Prisdriana.",
+				"La Lega di Prizren fu fondata in città il 10 giugno 1878 e divenne un’organizzazione centrale del movimento nazionale albanese.",
+				"Il festival DokuFest di Prizren, dedicato a documentari e cortometraggi, fu fondato nel 2002 e organizza proiezioni ogni estate."
 			],
 			"de": [
-				"1878 tagte hier die Liga von Prizren, der Beginn der albanischen Nationalbewegung.",
-				"Ihr Filmfestival DokuFest zeigt seit 2002 jeden Sommer Dokumentarfilme."
+				"Byzantinische Quellen verzeichneten Prizren als Prisdriana.",
+				"Die Liga von Prizren wurde am 10. Juni 1878 in der Stadt gegründet und wurde zu einer wichtigen Organisation der albanischen Nationalbewegung.",
+				"Prizrens Dokumentar- und Kurzfilmfestival DokuFest wurde 2002 gegründet und veranstaltet jeden Sommer Filmvorführungen."
 			]
 		}
+	},
+	"_sources": {
+		"peja:city": [
+			"https://pejatourism.org/wp-content/uploads/2025/09/Rural-Tourism-in-Peja-Brochure.pdf",
+			"https://whc.unesco.org/en/list/724/",
+			"https://pejatourism.org/rugova-gorge/"
+		],
+		"prizren:city": [
+			"https://chwbkosova.org/wp-content/uploads/2014/09/Publication_2011_12-min.pdf",
+			"https://prizren.rks-gov.net/historiku/",
+			"https://dokufest.com/en/info"
+		]
 	}
 }

@@ -11,10 +11,10 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | Distribution | Complete; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) merged | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
 | Boundary and target audit | All 22 new countries complete; Norway 15 counties; known Dutch/German corrections implemented | Licensed, reproducible sources and suitable map types for 22 countries |
 | Maps | All 44 expansion maps and six legacy-country packages complete (217 total) | Administrative maps and towns/urban maps; generated through the existing pipeline |
-| Facts | Current whole-catalogue checkpoint: 5567/6208 complete; 507 missing and 134 short sets block 1.0 ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)) | Facts for added targets in English, German, and Italian; existing target gaps audited |
+| Facts | Complete: 6208/6208 playable slots, zero missing/short sets; strict audit passes ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)) | Facts for added targets in English, German, and Italian; existing target gaps audited |
 | Content completion | DE/IT manuals and all three town rebuilds complete; 120/120 playable country slots pass | Deferred thin towns maps and German/Italian manual checked against agreed scope |
-| itch.io | Draft covers/copy/previews exported; final packages/screenshots pending; owner handles upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
-| Release preparation | Waits for complete whole-catalogue facts; version remains 0.20.0 | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
+| itch.io | Candidate pack exported: four 1280×800 screenshots, cover/banner, EN/DE/IT descriptions and tags; tagged refresh pending; owner uploads | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
+| Release preparation | All facts complete; 1.0.0 manifests and candidate CHANGELOG prepared; all four local gates pass; final review pending | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
 | Milestone and publication | Pending | Owner-approved merge, milestone review, installers tried, exact tag and publication |
 | Retirement | Pending | Delete old release repository only after migration verification and merged replacement links |
 
@@ -563,12 +563,13 @@ Kartverket geometry. All three legacy town-map IDs remain stable.
 
 The three backlog country passes are complete: Denmark 28/28, Norway 35/35,
 Serbia 57/57 playable file/ID/kind slots, including two Danish continent aliases.
-The whole catalogue currently has 6208 distinct slots, of which 5567 have at
-least three sentences in EN/IT/DE; 507 are missing and 134 are short. Germany,
-Poland, Romania, Malaysia and other country batches are researched in parallel,
-validated against exact queued IDs/kinds and integrated into authored files.
-All older gaps remain mandatory before 1.0. The complete Romania and Malaysia
-passes have landed in this working branch; no partial total means release-ready.
+The whole catalogue now has 6208/6208 distinct playable file/ID/kind slots with
+at least three sentences in EN/IT/DE: zero missing and zero short sets. All
+parallel country drafts are integrated into authored files and regenerated
+outputs. Exact queue validation checks identities, translations and references;
+editorial review checks factual scope and translation samples. The strict
+whole-catalogue audit passes. Content completion does not replace the remaining
+PR, owner-merge and milestone release gates.
 
 The owner approved updating known Dutch/German border cases. Voorne aan Zee
 replaces its three predecessor municipalities, giving 342 Dutch targets. Hanau
@@ -641,7 +642,7 @@ A separate HTML5 build uses hash routing, relative assets and bundled map
 metadata, preserving the ordinary web/desktop/Android build. Run
 `node scripts/package-html5.mjs --draft` for an internal candidate ZIP. The
 default command requires a clean version tag and complete authored facts.
-The current draft is still version 0.20.0, with 743 files and all 217 maps.
+The initial prototype used version 0.20.0, with 743 files and all 217 maps.
 It is not the 1.0.0 release or an itch.io upload.
 
 The extracted ZIP was served under a nested URL on a static server without
@@ -651,9 +652,47 @@ The German Unicode table of contents also worked. No browser request/page errors
 were recorded. Four map-resource unit tests and six packaging tests pass.
 Generated HTML5 routes and output are excluded from lint/format scans.
 
-The current fact checkpoint is 5567/6208 complete, with 507 missing and 134 short
-sets. Further researched batches remain in the country authors' worktrees and
-require editorial integration. Remaining release work includes all fact gaps,
-installer/publisher integration for the HTML5 ZIP, refreshed final itch.io
-assets, versioning, final independent PR review, owner merge approval and the
-formal milestone review. Deploys remain stopped; no deployment was tested.
+That checkpoint had 5567/6208 complete facts. The subsequent completion pass
+below supersedes its remaining-content status. Deploys remain stopped; no
+deployment was tested.
+
+### Complete facts and 1.0.0 candidate preparation (2026-10-27)
+
+All 6208 playable slots now have three or more authored sentences in EN/IT/DE.
+The final 641 sets cover Germany, Italy, Kazakhstan, Kenya, Kosovo, Moldova,
+Morocco, New Zealand, North Macedonia, Pakistan, Peru, the Philippines, Russia,
+South Africa, Thailand and Venezuela. Every queued batch passed exact country,
+ID/kind, trilingual structure, source and Italian-style validation before
+integration; numbers/years were checked with manual resolution of written
+centuries and decades. All older missing and short sets are resolved.
+
+The seven version manifests and lockfile entries now agree on 1.0.0. CHANGELOG
+records a candidate, explicitly disclosing unbuilt/untested final installers.
+HTML5 ZIP, its checksum sidecar and provenance report are integrated into
+package-release and publish-release. Publication checks the exact asset list,
+all hashes, complete facts, clean source and the version tag/commit. Drafts and
+untagged candidates cannot be published. Nineteen release-tool regression tests
+pass (migration, HTML5 and asset verification).
+
+Candidate itch.io assets are exported outside the implementing worktree:
+C:/Users/diego/projects/Geoclick2027-itchio-assets/candidate-1.0.0-20261027T082010Z
+and its sibling ZIP. Eighteen files include four authentic 1280×800 screenshots,
+630×500 cover, 1280×720 banner, full and short EN/DE/IT descriptions, tags,
+upload notes and a local listing preview. Captures use the dirty candidate
+build, visibly marked v1.0.0 / 3db1389; refresh from the reviewed release tag.
+Actual packaged web output renders Taiwan overview, Finnish tour in German,
+Hungarian overview in Italian and German quiz without request/page errors.
+About shows 1.0.0 and canonical repository/itch.io links. The owner handles all
+itch.io navigation/upload; no itch.io page was opened.
+
+All four local gates pass: check, test (2873 app tests, zero failures), lint
+and production build. The standard root test command now includes all nineteen
+release-tool regressions. The manual-version checks caught the old version text
+in EN/DE/IT and all three headings were updated to the 1.0.0 candidate.
+
+Remaining: independent PR review, explicit owner merge
+approval for #243/#245, candidate milestone issue and owner-started review,
+installer/device checks, exact reviewed tag, final artifacts/screenshots and
+publication, then verified old-repository retirement. No tag, publication,
+merge or deployment was performed. Android SDK/signing configuration is ready
+in this worktree; no Android device or AVD was available during preflight.

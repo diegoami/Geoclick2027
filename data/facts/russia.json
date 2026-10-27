@@ -17,7 +17,8 @@
 		"The map uses Natural Earth's labels, so some are the short form",
 		"(Moskva and Moskovskaya are the city and the oblast around it) and a",
 		"few use older or transliterated spellings - Chita for Zabaykalsky,",
-		"Yevrey for the Jewish Autonomous Oblast."
+		"Yevrey for the Jewish Autonomous Oblast.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"adygey": {
 		"en": [
@@ -1212,16 +1213,19 @@
 	"rostov-on-don": {
 		"city": {
 			"en": [
-				"Named for Saint Dmitry of Rostov, with \"on-Don\" to tell it from the ancient Rostov near Moscow.",
-				"It is called the gateway to the Caucasus."
+				"Rostov-on-Don traces its foundation to the Temernik customs post established in 1749.",
+				"A fortress built there in the 1760s was dedicated to Saint Dmitry of Rostov, giving the later city its name.",
+				"Trade through the Don River port helped Rostov develop into a major commercial centre in the nineteenth century."
 			],
 			"it": [
-				"Prende il nome da san Dmitrij di Rostov, con \"sul Don\" per distinguerla dall’antica Rostov vicino a Mosca.",
-				"È chiamata la porta del Caucaso."
+				"Rostov sul Don fa risalire la propria fondazione al posto doganale del Temernik istituito nel 1749.",
+				"Una fortezza costruita sul posto negli anni Sessanta del Settecento fu dedicata a san Dimitri di Rostov, dando il nome alla futura città.",
+				"Il commercio attraverso il porto sul fiume Don contribuì a trasformare Rostov in un grande centro commerciale nell’Ottocento."
 			],
 			"de": [
-				"Nach dem heiligen Dmitri von Rostow benannt, mit „am Don“ zur Unterscheidung vom antiken Rostow bei Moskau.",
-				"Sie wird das Tor zum Kaukasus genannt."
+				"Rostow am Don führt seine Gründung auf die 1749 eingerichtete Temernik-Zollstation zurück.",
+				"Eine dort in den 1760er-Jahren erbaute Festung wurde dem heiligen Dimitri von Rostow geweiht und gab der späteren Stadt ihren Namen.",
+				"Der Handel über den Hafen am Don trug dazu bei, dass Rostow im 19. Jahrhundert zu einem bedeutenden Handelszentrum wurde."
 			]
 		}
 	},
@@ -1767,6 +1771,12 @@
 			"Das Jüdische Autonome Gebiet – jewrej bedeutet Jude; es wurde 1934 als sowjetische jüdische Heimstätte im Fernen Osten geschaffen.",
 			"Der Plan scheiterte weitgehend: Juden machten nie mehr als etwa ein Drittel der Bevölkerung aus und sind heute weit unter 1 %.",
 			"Jiddisch ist noch immer eine kooffizielle Sprache, und die Straßenschilder in Birobidschan sind zweisprachig."
+		]
+	},
+	"_sources": {
+		"rostov-on-don:city": [
+			"https://tourism.rostov-gorod.ru/info/history/",
+			"https://rostovmuseum.ru/exhibitions/2040/"
 		]
 	}
 }

@@ -32,12 +32,17 @@ Get the version marked **Latest** from [Releases](https://github.com/diegoami/Ge
 | --- | --- |
 | Windows 10/11 | `Geoclick-X.Y.Z-windows-x64-setup.exe` (recommended), or `-windows-x64.msi` |
 | Android 7+ | `Geoclick-X.Y.Z-android.apk` |
+| Portable browser (from 1.0.0) | `Geoclick-X.Y.Z-html5.zip` |
 
 Windows installers are unsigned. If SmartScreen appears, choose **More info → Run anyway**.
 On Android, download the APK, allow your browser/file manager to **install unknown apps**,
 and open it to install. Install a new version over the old one to keep local progress.
 Very old Android builds used a different signing key; see [the signing-key history](docs/RELEASES.md)
 before uninstalling, which clears progress.
+
+The portable browser ZIP contains `index.html` and can be uploaded as an HTML5
+game or extracted and served over HTTP with byte-range support. Use a 1280 × 800
+frame; opening the file directly is not supported.
 
 Each release includes SHA256SUMS.txt. Compare its entry with
 certutil -hashfile <file> SHA256 on Windows or sha256sum <file> elsewhere.

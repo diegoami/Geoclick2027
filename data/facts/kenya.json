@@ -3,7 +3,8 @@
 		"Name-facts for Kenya (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the 47 counties, each as a \"region\" entry (en, it, de); Nairobi sits beside the city of the same id."
+		"v0.19 added the 47 counties, each as a \"region\" entry (en, it, de); Nairobi sits beside the city of the same id.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"nairobi": {
 		"city": {
@@ -210,6 +211,23 @@
 				"Der Mount Elgon, ein erloschener Vulkan an der Grenze zu Uganda, erhebt sich an seiner Nordwestseite.",
 				"Die Bukusu sind für ihre Beschneidungsfeiern bekannt, die sie alle zwei Jahre abhalten."
 			]
+		},
+		"city": {
+			"en": [
+				"Local tradition connects Bungoma’s name with engoma, the drums used to summon Bukusu elders and community gatherings.",
+				"Bungoma developed around a railway stopping point and workers’ camp when the Kenya–Uganda railway reached it in 1925.",
+				"Bungoma was recognised as a market centre in 1933 as commerce expanded around the railway settlement."
+			],
+			"it": [
+				"La tradizione locale collega il nome Bungoma a engoma, i tamburi usati per convocare gli anziani bukusu e le riunioni della comunità.",
+				"Bungoma si sviluppò attorno a una fermata ferroviaria e a un campo di lavoratori quando la ferrovia Kenya–Uganda vi arrivò nel 1925.",
+				"Bungoma fu riconosciuta come centro di mercato nel 1933, mentre il commercio si ampliava attorno all’insediamento ferroviario."
+			],
+			"de": [
+				"Die örtliche Überlieferung verbindet Bungomas Namen mit engoma, den Trommeln zur Einberufung von Bukusu-Ältesten und Gemeinschaftsversammlungen.",
+				"Bungoma entwickelte sich um einen Bahnhaltepunkt und ein Arbeiterlager, als die Kenia–Uganda-Bahn den Ort 1925 erreichte.",
+				"Bungoma wurde 1933 als Marktzentrum anerkannt, während der Handel um die Eisenbahnsiedlung wuchs."
+			]
 		}
 	},
 	"elgeyo-marakwet": {
@@ -266,6 +284,23 @@
 				"Die Herkunft des Namens ist ungewiss; Kakamega ist die Heimat vieler Luhya.",
 				"Der Kakamega-Wald ist Kenias letzter Rest des Regenwalds, der sich einst quer durch Afrika bis zum Atlantik erstreckte.",
 				"Ein Goldrausch in den 1930er-Jahren lockte Tausende Schürfer in die Gegend."
+			]
+		},
+		"city": {
+			"en": [
+				"A local naming story links Kakamega to a Luhya word for pinching, describing how visitors handled the maize staple ugali.",
+				"Kakamega’s growth accelerated during the gold rush of the early 1930s.",
+				"Kakamega’s Masinde Muliro University traces its origins to the Western College of Arts and Applied Sciences, founded through community fundraising in 1972."
+			],
+			"it": [
+				"Un racconto locale collega il nome Kakamega a una parola luhya che significa pizzicare, descrivendo come i visitatori prendevano l’ugali, alimento a base di mais.",
+				"La crescita di Kakamega accelerò durante la corsa all’oro dei primi anni Trenta del Novecento.",
+				"L’Università Masinde Muliro di Kakamega trae origine dal Western College of Arts and Applied Sciences, fondato attraverso una raccolta di fondi comunitaria nel 1972."
+			],
+			"de": [
+				"Eine örtliche Erzählung verbindet Kakamegas Namen mit einem Luhya-Wort für Kneifen und beschreibt damit, wie Besucher die Maisspeise Ugali griffen.",
+				"Kakamegas Wachstum beschleunigte sich während des Goldrausches der frühen 1930er Jahre.",
+				"Kakamegas Masinde-Muliro-Universität geht auf das Western College of Arts and Applied Sciences zurück, das 1972 durch gemeinschaftliche Spendensammlung gegründet wurde."
 			]
 		}
 	},
@@ -438,6 +473,23 @@
 				"Kisumu ist Kenias wichtigster Hafen am Victoriasee und seine drittgrößte Stadt.",
 				"Das Kisumu Impala Sanctuary am Ufer ist ein kleiner Park für Impalas, Zebras und Flusspferde."
 			]
+		},
+		"city": {
+			"en": [
+				"Kisumu was briefly called Port Florence when the railway port was established in 1901.",
+				"The Uganda Railway reached Kisumu in December 1901, linking the inland port with the coast.",
+				"Kisumu Museum, opened in 1980, includes a traditional Luo homestead exhibition interpreting domestic life and cultural practices."
+			],
+			"it": [
+				"Kisumu fu chiamata per breve tempo Port Florence quando il porto ferroviario fu istituito nel 1901.",
+				"La ferrovia dell’Uganda raggiunse Kisumu nel dicembre 1901, collegando il porto interno alla costa.",
+				"Il Museo di Kisumu, aperto nel 1980, comprende un’esposizione di una tradizionale abitazione luo che illustra la vita domestica e le pratiche culturali."
+			],
+			"de": [
+				"Kisumu hieß vorübergehend Port Florence, als der Eisenbahnhafen 1901 angelegt wurde.",
+				"Die Uganda-Bahn erreichte Kisumu im Dezember 1901 und verband den Binnenhafen mit der Küste.",
+				"Das 1980 eröffnete Kisumu-Museum umfasst eine Ausstellung eines traditionellen Luo-Gehöfts, die häusliches Leben und kulturelle Praktiken vermittelt."
+			]
 		}
 	},
 	"kericho": {
@@ -457,6 +509,23 @@
 				"Seine Teeplantagen mit Regen das ganze Jahr liefern einen großen Teil des kenianischen Tees.",
 				"Kenia ist einer der größten Exporteure von Schwarztee der Welt."
 			]
+		},
+		"city": {
+			"en": [
+				"One explanation links Kericho’s name to the Kipsigis word for medicine, although the town’s name has several competing origins.",
+				"Kericho’s Sacred Heart Cathedral uses Kenyan cypress wood and natural ventilation in a design by John McAslan and Partners.",
+				"Kericho’s Sikh gurdwara preserves the former family home and wagon workshop of the religious leader Baba Puran Singh."
+			],
+			"it": [
+				"Una spiegazione collega il nome Kericho alla parola kipsigis per medicina, ma esistono diverse ipotesi concorrenti sull’origine del nome.",
+				"La cattedrale del Sacro Cuore di Kericho impiega legno di cipresso del Kenya e ventilazione naturale in un progetto di John McAslan and Partners.",
+				"Il gurdwara sikh di Kericho conserva l’antica casa familiare e l’officina per carri del leader religioso Baba Puran Singh."
+			],
+			"de": [
+				"Eine Erklärung verbindet Kerichos Namen mit dem Kipsigis-Wort für Medizin, doch es gibt mehrere konkurrierende Deutungen.",
+				"Kerichos Herz-Jesu-Kathedrale verwendet kenianisches Zypressenholz und natürliche Belüftung in einem Entwurf von John McAslan and Partners.",
+				"Kerichos Sikh-Gurdwara bewahrt das frühere Wohnhaus und die Wagenwerkstatt des religiösen Führers Baba Puran Singh."
+			]
 		}
 	},
 	"nyeri": {
@@ -475,6 +544,23 @@
 				"Die Herkunft des Namens ist ungewiss; Nyeri ist eine Kikuyu-Stadt an den Hängen des Mount Kenya.",
 				"In der Treetops Lodge im Aberdare-Wald erfuhr Prinzessin Elisabeth 1952, dass sie Königin geworden war.",
 				"Robert Baden-Powell, der Gründer der Pfadfinder, ist in Nyeri begraben."
+			]
+		},
+		"city": {
+			"en": [
+				"Nyeri’s name is commonly traced to the Maasai word nyiro, referring to the area’s red soil.",
+				"Robert Baden-Powell, founder of the Scout Movement, lived at Nyeri’s Paxtu cottage from 1938 until his death in 1941.",
+				"Baden-Powell’s grave in Nyeri bears the Scout trail sign of a circle with a central dot, meaning going home."
+			],
+			"it": [
+				"Il nome Nyeri viene comunemente ricondotto alla parola maasai nyiro, riferita al suolo rosso della zona.",
+				"Robert Baden-Powell, fondatore del movimento scout, visse nel cottage Paxtu a Nyeri dal 1938 fino alla morte nel 1941.",
+				"La tomba di Baden-Powell a Nyeri reca il segnale di pista scout formato da un cerchio con un punto centrale, che significa ritorno a casa."
+			],
+			"de": [
+				"Nyeris Name wird gewöhnlich auf das Maasai-Wort nyiro zurückgeführt, das sich auf den roten Boden der Gegend bezieht.",
+				"Robert Baden-Powell, der Gründer der Pfadfinderbewegung, lebte von 1938 bis zu seinem Tod 1941 in Nyeris Paxtu-Cottage.",
+				"Baden-Powells Grab in Nyeri trägt das Pfadfinder-Wegzeichen eines Kreises mit einem Punkt in der Mitte, das Heimkehr bedeutet."
 			]
 		}
 	},
@@ -514,6 +600,23 @@
 				"Der Lake-Nakuru-Nationalpark ist für Flamingos und Nashörner berühmt.",
 				"Der Menengai-Krater, eine riesige vulkanische Caldera, erhebt sich über der Stadt."
 			]
+		},
+		"city": {
+			"en": [
+				"Nakuru’s name comes from a Maasai expression meaning dusty place.",
+				"Nakuru was established as a railway town in 1904 during British colonial rule.",
+				"Nakuru’s Hyrax Hill archaeological site preserves settlement hollows associated with Sirikwa pastoralists."
+			],
+			"it": [
+				"Il nome Nakuru deriva da un’espressione maasai che significa luogo polveroso.",
+				"Nakuru fu istituita come città ferroviaria nel 1904 durante il dominio coloniale britannico.",
+				"Il sito archeologico di Hyrax Hill a Nakuru conserva avvallamenti di insediamenti associati ai pastori sirikwa."
+			],
+			"de": [
+				"Nakurus Name stammt von einem Maasai-Ausdruck für staubiger Ort.",
+				"Nakuru wurde 1904 während der britischen Kolonialherrschaft als Eisenbahnstadt angelegt.",
+				"Nakurus archäologische Stätte Hyrax Hill bewahrt Siedlungsmulden, die mit den Sirikwa-Hirten verbunden werden."
+			]
 		}
 	},
 	"kirinyaga": {
@@ -552,6 +655,23 @@
 				"Der Tana, der längste Fluss Kenias, fließt hindurch.",
 				"Dadaab im County war einer der größten Flüchtlingslagerkomplexe der Welt."
 			]
+		},
+		"city": {
+			"en": [
+				"One local tradition says Garissa was named after Karisa, a Pokomo elder whose farming clan settled at the site.",
+				"British colonial authorities developed Garissa as an administrative and military post in the early twentieth century.",
+				"Garissa’s livestock market connects pastoral producers and traders from Kenya and Somalia with meat markets in Nairobi and Mombasa."
+			],
+			"it": [
+				"Una tradizione locale afferma che Garissa prese il nome da Karisa, un anziano pokomo il cui clan di agricoltori si stabilì sul posto.",
+				"Le autorità coloniali britanniche svilupparono Garissa come presidio amministrativo e militare all’inizio del Novecento.",
+				"Il mercato del bestiame di Garissa collega allevatori e commercianti del Kenya e della Somalia ai mercati della carne di Nairobi e Mombasa."
+			],
+			"de": [
+				"Einer örtlichen Überlieferung zufolge wurde Garissa nach Karisa benannt, einem Pokomo-Ältesten, dessen Bauernclan sich dort niederließ.",
+				"Die britischen Kolonialbehörden entwickelten Garissa im frühen 20. Jahrhundert als Verwaltungs- und Militärposten.",
+				"Garissas Viehmarkt verbindet Viehhalter und Händler aus Kenia und Somalia mit den Fleischmärkten von Nairobi und Mombasa."
+			]
 		}
 	},
 	"embu": {
@@ -570,6 +690,23 @@
 				"Benannt nach den Embu, nahen Verwandten der Kikuyu und der Meru.",
 				"Das County steigt von Kaffeefarmen an den Hängen des Mount Kenya bis zum Tana hinab.",
 				"Die Staudämme von Masinga, Kamburu und Kiambere am Tana liefern einen großen Teil des kenianischen Wasserkraftstroms."
+			]
+		},
+		"city": {
+			"en": [
+				"Embu town was historically known as Nthithiarî, also called Kîrîmaarî.",
+				"During the First World War, Embu developed as a recruitment and transit centre for military personnel.",
+				"The University of Embu traces its origins to an agricultural training school established in 1947."
+			],
+			"it": [
+				"La città di Embu era storicamente conosciuta come Nthithiarî, detta anche Kîrîmaarî.",
+				"Durante la prima guerra mondiale, Embu si sviluppò come centro di reclutamento e transito per il personale militare.",
+				"L’Università di Embu trae origine da una scuola di formazione agricola istituita nel 1947."
+			],
+			"de": [
+				"Die Stadt Embu war historisch als Nthithiarî, auch Kîrîmaarî genannt, bekannt.",
+				"Im Ersten Weltkrieg entwickelte sich Embu als Rekrutierungs- und Durchgangszentrum für Militärangehörige.",
+				"Die Universität Embu geht auf eine 1947 gegründete landwirtschaftliche Ausbildungsstätte zurück."
 			]
 		}
 	},
@@ -723,6 +860,23 @@
 				"Die Kamba des Countys sind für ihre Holzschnitzereien berühmt.",
 				"Auf seinen Ebenen südlich von Nairobi entsteht die Konza Technology City."
 			]
+		},
+		"city": {
+			"en": [
+				"Machakos’s name is generally traced to Masaku wa Musya, a nineteenth-century Kamba prophet and trader.",
+				"Machakos served as an inland administrative and forwarding station for the Imperial British East Africa Company.",
+				"Machakos University began as a Technical Rural Training School in 1957."
+			],
+			"it": [
+				"Il nome Machakos viene generalmente ricondotto a Masaku wa Musya, profeta e commerciante kamba dell’Ottocento.",
+				"Machakos fu una stazione interna di amministrazione e smistamento per la Compagnia britannica dell’Africa orientale.",
+				"L’Università di Machakos nacque nel 1957 come scuola tecnica di formazione rurale."
+			],
+			"de": [
+				"Machakos’ Name wird gewöhnlich auf Masaku wa Musya zurückgeführt, einen Kamba-Propheten und Händler des 19. Jahrhunderts.",
+				"Machakos diente der Imperial British East Africa Company als Verwaltungs- und Weiterleitungsstation im Landesinneren.",
+				"Die Universität Machakos entstand 1957 als technische Ausbildungsstätte für den ländlichen Raum."
+			]
 		}
 	},
 	"narok": {
@@ -856,6 +1010,23 @@
 				"Gedi, eine im Wald verborgene Suaheli-Ruinenstadt, war vom 13. bis zum 17. Jahrhundert bewohnt.",
 				"In Malindi im County wurde Vasco da Gama 1498 auf dem Weg nach Indien empfangen."
 			]
+		},
+		"city": {
+			"en": [
+				"One linguistic explanation connects Kilifi’s name with Swahili kilindi, referring to deep water or a tidal inlet.",
+				"The Mnarani ruins in Kilifi municipality preserve the mosques and tombs of a medieval Swahili settlement.",
+				"Kilifi Bridge was completed in 1991 to carry the coastal road across Kilifi Creek."
+			],
+			"it": [
+				"Una spiegazione linguistica collega il nome Kilifi allo swahili kilindi, riferito ad acque profonde o a un’insenatura di marea.",
+				"Le rovine di Mnarani nel comune di Kilifi conservano moschee e tombe di un insediamento swahili medievale.",
+				"Il ponte di Kilifi fu completato nel 1991 per far attraversare alla strada costiera l’insenatura di Kilifi."
+			],
+			"de": [
+				"Eine sprachwissenschaftliche Erklärung verbindet Kilifis Namen mit dem Swahili-Wort kilindi für tiefes Wasser oder einen Meeresarm.",
+				"Die Ruinen von Mnarani im Gemeindegebiet von Kilifi bewahren Moscheen und Gräber einer mittelalterlichen Swahili-Siedlung.",
+				"Die Kilifi-Brücke wurde 1991 fertiggestellt, um die Küstenstraße über den Kilifi Creek zu führen."
+			]
 		}
 	},
 	"taita-taveta": {
@@ -894,6 +1065,23 @@
 				"Fort Jesus, 1593-96 von den Portugiesen erbaut, ist Welterbe.",
 				"Mombasa ist der wichtigste Hafen Kenias und eines großen Teils Ostafrikas."
 			]
+		},
+		"city": {
+			"en": [
+				"Mombasa’s historical Portuguese name is Mombaça.",
+				"Mombasa’s Fort Jesus was built by the Portuguese between 1593 and 1596 using designs by the Italian architect Giovanni Battista Cairati.",
+				"The traveller Ibn Battuta visited Mombasa in 1331 and described the town’s architecture."
+			],
+			"it": [
+				"Il nome storico portoghese di Mombasa è Mombaça.",
+				"Il Forte Jesus di Mombasa fu costruito dai portoghesi tra il 1593 e il 1596 su progetto dell’architetto italiano Giovanni Battista Cairati.",
+				"Il viaggiatore Ibn Battuta visitò Mombasa nel 1331 e descrisse l’architettura della città."
+			],
+			"de": [
+				"Mombasas historischer portugiesischer Name lautet Mombaça.",
+				"Mombasas Fort Jesus wurde zwischen 1593 und 1596 von den Portugiesen nach Entwürfen des italienischen Architekten Giovanni Battista Cairati erbaut.",
+				"Der Reisende Ibn Battuta besuchte Mombasa 1331 und beschrieb die Architektur der Stadt."
+			]
 		}
 	},
 	"kwale": {
@@ -912,6 +1100,155 @@
 				"Die Herkunft des Namens ist ungewiss; Kwale liegt an der Küste südlich von Mombasa.",
 				"Der Diani Beach mit seinem weißen Sand ist einer der bekanntesten Strände Ostafrikas.",
 				"Die Kaya-Wälder der Mijikenda, heilige Haine in den Küstenhügeln, sind Welterbe."
+			]
+		}
+	},
+	"_sources": {
+		"kitale:city": [
+			"https://irepository.aua.ac.ke/bitstreams/f80b3565-9191-4f85-900c-7a2f1e5afa46/download",
+			"https://museums.or.ke/wp-content/uploads/2020/05/annual_report_18-19.pdf"
+		],
+		"bungoma:city": [
+			"https://www.bungoma.go.ke/history/",
+			"https://www.bungoma.go.ke/wp-content/uploads/2026/03/BUNGOMA-MUNICIPALITY-MIDP-FY-2023-2027.pdf"
+		],
+		"eldoret:city": [
+			"https://eldoretcity.uasingishu.go.ke/about-the-city/",
+			"https://eldoretcity.uasingishu.go.ke/wp-content/uploads/2024/11/ELDORET-FINAL-DRAFT-PLAN-REPORT.pdf"
+		],
+		"kakamega:city": [
+			"https://repository.kippra.or.ke/bitstreams/1b81ce52-0c4b-4d0e-88fe-d4c60eb27014/download",
+			"https://mmust.ac.ke/mmust-profile/"
+		],
+		"kisumu:city": [
+			"https://www.kisumu.go.ke/wp-content/uploads/2019/08/Kisumu-County-Urban-Institutional-Development-Strategy-CUIDS-2018-2019-final.pdf",
+			"https://www.kisumu.go.ke/wp-content/uploads/2022/02/4TH-ANNUAL-STATE-OF-THE-COUNTY-REPORT-low-ress_211203_202127_220131_134830.pdf",
+			"https://museums.or.ke/wp-content/uploads/2024/01/Kisumu-Museum-Brochure.pdf"
+		],
+		"nakuru:city": [
+			"https://nakuru.go.ke/wp-content/uploads/2024/12/IDEP-NAKURU-MUNICIPALITY.pdf",
+			"https://www.nakuru.go.ke/history/",
+			"https://museums.or.ke/hyrax-hill-museum/"
+		],
+		"kericho:city": [
+			"https://kerichomunicipal.ke/static/general_docs/DocNo.33%20KERICHO%20MUNICIPALITY%20IDeP.pdf",
+			"https://www.mcaslan.co.uk/Kericho_Cathedral",
+			"https://gnnsj.org/heritage-and-conservation/kenya-heritage-conservation-masterplanning/"
+		],
+		"nyeri:city": [
+			"https://ir.jkuat.ac.ke/bitstream/handle/123456789/5615/HINGA-MSC%20CIVIL%20ENG-%202021%20%28Library%29%20%281%29.pdf?isAllowed=y&sequence=3",
+			"https://www.nyeri.go.ke/wp-content/uploads/2021/02/Tourism-and-Heritage-Sites-in-Nyeri-County.pdf",
+			"https://www.scout.org/es/node/2291"
+		],
+		"garissa:city": [
+			"https://erepository.uonbi.ac.ke/server/api/core/bitstreams/260e46e2-dd31-49cb-8a74-d0809565e654/content",
+			"https://garissa.go.ke/garissa-history/",
+			"https://cgspace.cgiar.org/rest/bitstreams/81eb30f3-54a1-4f53-b9fb-4f4c6cfdd0ea/retrieve"
+		],
+		"embu:city": [
+			"https://www.ajol.info/index.php/jhcs/article/download/285276/268789/666706",
+			"https://ir-library.ku.ac.ke/server/api/core/bitstreams/0370f958-2cf2-4214-a98f-211971dfac6e/content",
+			"https://embuni.ac.ke/wp-content/uploads/2020/07/AboutUs.pdf"
+		],
+		"thika:city": [
+			"https://www.kpda.or.ke/documents/Industry-Reports/Thika%20Intergrated%20Strategic%20Urban%20Development%20Plan%20Report.pdf",
+			"https://dev.kiambu.go.ke/wp-content/uploads/2021/05/Thika-Municipality-Spatial-plan.pdf"
+		],
+		"machakos:city": [
+			"https://ir-library.ku.ac.ke/server/api/core/bitstreams/3bb02a85-f222-4b87-9f61-28041756c879/content",
+			"https://dos.mksu.ac.ke/wp-content/uploads/2025/02/Machakos-University-Handbook.pdf"
+		],
+		"malindi:city": [
+			"https://www.jesuits.global/sj_files/2021/06/annuario2021en.pdf",
+			"https://cvc.instituto-camoes.pt/conhecer/biblioteca-digital-camoes/explorar-por-autor/169-169/file.html",
+			"https://museums.or.ke/vasco-dagama-pillar/",
+			"https://museums.or.ke/malindi-cultural-complex/"
+		],
+		"kilifi:city": [
+			"https://www.researchgate.net/publication/371733379_GOMBO_05_Asili_ya_Toponimi_Kilifi_ni_Mkilifi_au_ni_Kilinri",
+			"https://museums.or.ke/mnarani/",
+			"https://kilifimunicipality.go.ke/wp-content/uploads/2024/11/MUNICIPALITY-OF-KILIFI-REVISED-IDeP-2020-2024-1.pdf",
+			"https://openjicareport.jica.go.jp/pdf/12250494_02.pdf"
+		],
+		"mombasa:city": [
+			"https://www.infopedia.pt/dicionarios/ingles-portugues/Mombasa?express=%24mombaca",
+			"https://cvc.instituto-camoes.pt/conhecer/biblioteca-digital-camoes/explorar-por-autor/169-169/file.html",
+			"https://whc.unesco.org/document/103462"
+		]
+	},
+	"kitale": {
+		"city": {
+			"en": [
+				"One recorded oral history traces Kitale’s name to a local term for long acacia thorns.",
+				"Kitale Museum developed from Hugh Stoneham’s private museum, founded in 1926, and opened in its public form in 1974.",
+				"Kitale Museum’s outdoor homesteads illustrate the building traditions and domestic life of Nandi, Sabaot and Bukusu communities."
+			],
+			"it": [
+				"Una testimonianza di storia orale registrata collega il nome Kitale a un termine locale per le lunghe spine di acacia.",
+				"Il Museo di Kitale si sviluppò dal museo privato di Hugh Stoneham, fondato nel 1926, e aprì nella sua forma pubblica nel 1974.",
+				"Le abitazioni all’aperto del Museo di Kitale illustrano le tradizioni costruttive e la vita domestica delle comunità nandi, sabaot e bukusu."
+			],
+			"de": [
+				"Eine aufgezeichnete mündliche Überlieferung führt Kitales Namen auf einen örtlichen Ausdruck für lange Akaziendornen zurück.",
+				"Das Kitale-Museum entstand aus Hugh Stonehams 1926 gegründetem Privatmuseum und wurde 1974 in seiner öffentlichen Form eröffnet.",
+				"Die Freilichtgehöfte des Kitale-Museums veranschaulichen Bautraditionen und häusliches Leben der Nandi-, Sabaot- und Bukusu-Gemeinschaften."
+			]
+		}
+	},
+	"eldoret": {
+		"city": {
+			"en": [
+				"Eldoret’s name is generally traced to the Maasai word eldore, referring to a stony riverbed.",
+				"Eldoret’s early settlement was known as Sixty-four, a name associated with the numbered colonial farm on which it developed.",
+				"Colonial planning segregated Eldoret’s residential areas by race, with African residents concentrated in Eldoret West."
+			],
+			"it": [
+				"Il nome Eldoret viene generalmente ricondotto alla parola maasai eldore, riferita a un letto fluviale pietroso.",
+				"Il primo insediamento di Eldoret era conosciuto come Sixty-four, nome associato al numero della fattoria coloniale su cui si sviluppò.",
+				"La pianificazione coloniale separò le zone residenziali di Eldoret per razza, concentrando gli abitanti africani a Eldoret West."
+			],
+			"de": [
+				"Eldorets Name wird gewöhnlich auf das Maasai-Wort eldore für ein steiniges Flussbett zurückgeführt.",
+				"Eldorets frühe Siedlung war als Sixty-four bekannt, ein Name, der mit der nummerierten Kolonialfarm verbunden ist, auf der sie entstand.",
+				"Die koloniale Planung trennte Eldorets Wohngebiete nach rassistischen Kategorien und konzentrierte afrikanische Bewohner in Eldoret West."
+			]
+		}
+	},
+	"thika": {
+		"city": {
+			"en": [
+				"One tradition links Thika’s name to the Kikuyu word guthika, meaning to bury, although another explanation invokes a Maasai word.",
+				"Thika gives its name to Elspeth Huxley’s childhood memoir The Flame Trees of Thika, published in 1959.",
+				"British settlers erected a pillar in central Thika to commemorate the town’s foundation."
+			],
+			"it": [
+				"Una tradizione collega il nome Thika alla parola kikuyu guthika, che significa seppellire, ma un’altra spiegazione richiama una parola maasai.",
+				"Thika dà il nome al libro di memorie d’infanzia di Elspeth Huxley The Flame Trees of Thika, pubblicato nel 1959.",
+				"I coloni britannici eressero un pilastro nel centro di Thika per commemorare la fondazione della città."
+			],
+			"de": [
+				"Eine Überlieferung verbindet Thikas Namen mit dem Kikuyu-Wort guthika für begraben, doch eine andere Erklärung verweist auf ein Maasai-Wort.",
+				"Thika gibt Elspeth Huxleys 1959 veröffentlichten Kindheitserinnerungen The Flame Trees of Thika ihren Namen.",
+				"Britische Siedler errichteten im Zentrum von Thika eine Säule zur Erinnerung an die Stadtgründung."
+			]
+		}
+	},
+	"malindi": {
+		"city": {
+			"en": [
+				"Malindi appears as Melinde in historical Portuguese accounts.",
+				"Malindi’s Vasco da Gama Pillar was erected by Portuguese sailors in the late fifteenth century and carries a limestone cross.",
+				"Malindi Cultural Complex occupies a former Imperial British East Africa Company office built in the early 1890s and opened as a museum in 2013."
+			],
+			"it": [
+				"Malindi compare come Melinde nei resoconti storici portoghesi.",
+				"Il pilastro Vasco da Gama di Malindi fu eretto da marinai portoghesi alla fine del Quattrocento e reca una croce in pietra calcarea.",
+				"Il complesso culturale di Malindi occupa un ex ufficio della Compagnia britannica dell’Africa orientale costruito nei primi anni Novanta dell’Ottocento e aperto come museo nel 2013."
+			],
+			"de": [
+				"Malindi erscheint in historischen portugiesischen Berichten als Melinde.",
+				"Malindis Vasco-da-Gama-Säule wurde im späten 15. Jahrhundert von portugiesischen Seefahrern errichtet und trägt ein Kalksteinkreuz.",
+				"Malindis Kulturkomplex befindet sich in einem früheren Büro der Imperial British East Africa Company aus den frühen 1890er Jahren, das 2013 als Museum eröffnet wurde."
 			]
 		}
 	}

@@ -25,6 +25,16 @@ written once.
 **Framework: Svelte** (SvelteKit for the app shell). Lighter than React,
 pairs well with a canvas/map-heavy UI.
 
+The portable HTML5 export uses the same browser core with a separate hash-router
+build (`VITE_GEOCLICK_HTML5=1`). `scripts/prepare-html5.mjs` creates disposable
+routes without changing authored pages; `appPaths.ts` preserves the physical
+`index.html` URL beneath nested hosting directories. `mapResource.ts` loads one
+metadata bundle per map, reducing the export to 743 files for 217 maps.
+`scripts/package-html5.mjs` validates the archive and records source provenance;
+`release-assets.mjs` verifies its tag, coverage and checksums before publication.
+PMTiles require HTTP byte-range support. Fonts may still use external glyph
+services, so the portable browser ZIP does not promise offline operation.
+
 ## Map rendering: MapLibre GL JS + PMTiles
 
 - **MapLibre GL JS** — open-source WebGL vector-tile renderer. Gives custom
