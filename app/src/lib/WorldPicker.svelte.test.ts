@@ -118,6 +118,7 @@ const fake = vi.hoisted(() => {
 const { gotoMock } = vi.hoisted(() => ({ gotoMock: vi.fn() }));
 vi.mock('$app/navigation', () => ({ goto: gotoMock }));
 vi.mock('$app/paths', () => ({
+	asset: (file: string) => file,
 	resolve: (route: string, params: { mapId: string }) => route.replace('[mapId]', params.mapId)
 }));
 
