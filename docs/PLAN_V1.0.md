@@ -2,7 +2,18 @@
 
 Owner-approved scope: [proposal #241](https://github.com/diegoami/Geoclick2027/issues/241).
 Release version: **1.0.0**. itch.io page: <https://diegoami.itch.io/geoclick>.
-This plan records work still to land; it is not a claim that 1.0.0 is released.
+Released as [v1.0.0](https://github.com/diegoami/Geoclick2027/releases/tag/v1.0.0) from reviewed commit `099752eab8fcf0543902cafb2cfe42ca4b3e3a95`. Historical sections below retain their dated implementation evidence; the table and release record describe the current status.
+
+
+## Final release record
+
+- Tag **v1.0.0** names exactly the independently reviewed commit **099752eab8fcf0543902cafb2cfe42ca4b3e3a95**. [Round-2 AGREE](https://github.com/diegoami/Geoclick2027/issues/246#issuecomment-6443730394).
+- [Published GitHub release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.0.0): Windows setup EXE/MSI, signed Android APK, HTML5 ZIP, provenance/checksums and promotional ZIP with its checksum. All nine remote SHA256 digests match local files.
+- Final HTML5 ZIP: **743 files / 217 maps**, SHA256 **5b785ce58239e6cfb7280704bd48df5e74c695e35aafb7398b800e0b7f06852b**. Actual Chromium replay under a nested URL without SPA fallback passed all five fixes, phone layout and EN/DE/IT manuals/images/anchors.
+- Windows setup was installed and actual map polygons, boundaries and labels verified. Android APK was built/signed and its signature verified, but **not run on a device or emulator**: the owner explicitly waived that check. Owner gameplay testing is not claimed. No deployment was triggered or checked.
+- Owner authorization superseded the earlier upload-only-by-owner rule for this release: Butler uploaded **diegoami/geoclick:html5** (build2230108), **:windows** (2230109), **:android** (2230107), all version1.0.0. Applying page copy/artwork and marking HTML5 playable requires the itch.io page editor.
+- Durable final packages, artwork, four refreshed screenshots, EN/DE/IT copy, tags/settings and verification evidence: `C:/Users/diego/projects/Geoclick2027-itchio-assets/v1.0.0-099752e`. Recommended browser frame **1280×800**, player-controlled fullscreen.
+- **1.0.1:** [proposal #256](https://github.com/diegoami/Geoclick2027/issues/256) preserves all three earned degrees permanently and adds a per-map reset. This behavior is not implemented in1.0.0; mistakes currently reset the place's clean streak, while time alone does not. Other non-blocking findings remain tracked in #247/#248.
 
 ## Work batches
 
@@ -13,9 +24,9 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | Maps | All 44 expansion maps and six legacy-country packages complete (217 total) | Administrative maps and towns/urban maps; generated through the existing pipeline |
 | Facts | Complete: 6208/6208 playable slots, zero missing/short sets; strict audit passes ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)) | Facts for added targets in English, German, and Italian; existing target gaps audited |
 | Content completion | DE/IT manuals and all three town rebuilds complete; 120/120 playable country slots pass | Deferred thin towns maps and German/Italian manual checked against agreed scope |
-| itch.io | Candidate pack exported: four 1280×800 screenshots, cover/banner, EN/DE/IT descriptions and tags; tagged refresh pending; owner uploads | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
-| Release preparation | All facts complete; 1.0.0 manifests and candidate CHANGELOG prepared; all four local gates pass; final review: no blockers, two comma-space typos corrected | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
-| Milestone and publication | #243/#245 merged; #246 AGREE on 0b026e1; owner-authorized QA fixes #249–#253 pending; native checks/tag/publication remain | Owner-approved merge, milestone review, installers tried, exact tag and publication |
+| itch.io | HTML5, Windows and Android channels uploaded via Butler as 1.0.0; final promotional ZIP attached to GitHub; page-editor artwork/copy/playable checkbox remain | Four refreshed 1280×800 screenshots, cover/banner, EN/DE/IT descriptions, tags, settings and local listing preview |
+| Release preparation | Complete: seven manifests at 1.0.0; all four gates passed; final artifacts rebuilt from reviewed tag and hashes verified | Windows EXE/MSI, signed Android APK, portable HTML5 ZIP, provenance and checksums |
+| Milestone and publication | #242/#243/#245/#254 merged; #249–#253 closed; #246 round-2 AGREE on 099752e; v1.0.0 tagged and published | Windows installed/map-rendering check passed; Android signature verified and runtime check explicitly waived by owner; final nested HTML5 and manuals passed |
 | Retirement | Pending | Delete old release repository only after migration verification and merged replacement links |
 
 Code PRs receive the required external-family review and owner merge approval.
