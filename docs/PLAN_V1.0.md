@@ -14,7 +14,7 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | Facts | Complete: 6208/6208 playable slots, zero missing/short sets; strict audit passes ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)) | Facts for added targets in English, German, and Italian; existing target gaps audited |
 | Content completion | DE/IT manuals and all three town rebuilds complete; 120/120 playable country slots pass | Deferred thin towns maps and German/Italian manual checked against agreed scope |
 | itch.io | Candidate pack exported: four 1280×800 screenshots, cover/banner, EN/DE/IT descriptions and tags; tagged refresh pending; owner uploads | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
-| Release preparation | All facts complete; 1.0.0 manifests and candidate CHANGELOG prepared; all four local gates pass; final review pending | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
+| Release preparation | All facts complete; 1.0.0 manifests and candidate CHANGELOG prepared; all four local gates pass; final review: no blockers, two comma-space typos corrected | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
 | Milestone and publication | Pending | Owner-approved merge, milestone review, installers tried, exact tag and publication |
 | Retirement | Pending | Delete old release repository only after migration verification and merged replacement links |
 
@@ -690,7 +690,17 @@ and production build. The standard root test command now includes all nineteen
 release-tool regressions. The manual-version checks caught the old version text
 in EN/DE/IT and all three headings were updated to the 1.0.0 candidate.
 
-Remaining: independent PR review, explicit owner merge
+Final independent review on c057ff6: [no blockers](https://github.com/diegoami/Geoclick2027/pull/245#pullrequestreview-5664961709). The sole MINOR finding was missing German comma spacing in two Dutch facts; both are corrected and regenerated. The reviewer independently checked all trilingual structures/numbers, sampled about sixty fact sets and exercised a nested browser ZIP. Twelve packaging and 54 focused app tests passed. The review was not the formal release milestone review.
+
+The clean browser candidate from c057ff6 has 743 files / 217 maps and complete
+fact hooks for all 7400 target appearances. Maps, tours, quiz reloads, all three
+manuals/images/Unicode TOC and all 217 home-map choices pass on a nested host
+without route fallback. It is untagged and correctly fails publication checks.
+Clean candidate assets and playable ZIP are separately exported at
+C:/Users/diego/projects/Geoclick2027-itchio-assets/candidate-1.0.0-c057ff6-20261027T083655Z.
+This supersedes the earlier dirty promotional draft; tagged final refresh remains.
+
+Remaining: explicit owner merge
 approval for #243/#245, candidate milestone issue and owner-started review,
 installer/device checks, exact reviewed tag, final artifacts/screenshots and
 publication, then verified old-repository retirement. No tag, publication,
