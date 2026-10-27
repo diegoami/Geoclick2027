@@ -44,19 +44,19 @@ describe('live MapLibre control language (#251)', () => {
 			remove();
 		}
 	});
-	it('localizes newly added popup controls and stops when the map is removed', async () => {
+	it('localizes newly added attribution controls and stops when the map is removed', async () => {
 		setLanguage('it');
 		const { host, remove } = controls();
-		const close = document.createElement('button');
-		close.className = 'maplibregl-popup-close-button';
-		host.append(close);
-		await expect.poll(() => close.title).toBe('Chiudi popup');
+		const attribution = document.createElement('button');
+		attribution.className = 'maplibregl-ctrl-attrib-button';
+		host.append(attribution);
+		await expect.poll(() => attribution.title).toBe('Mostra o nascondi le attribuzioni');
 		remove();
 		setLanguage('de');
 		flushSync();
-		expect(close.title).toBe('Chiudi popup');
-		close.title = 'After removal';
+		expect(attribution.title).toBe('Mostra o nascondi le attribuzioni');
+		attribution.title = 'After removal';
 		await new Promise((resolve) => setTimeout(resolve, 0));
-		expect(close.title).toBe('After removal');
+		expect(attribution.title).toBe('After removal');
 	});
 });

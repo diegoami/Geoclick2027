@@ -12,7 +12,6 @@ const controls = [
 		'AttributionControl.ToggleAttribution',
 		'mapControl.attribution'
 	],
-	['.maplibregl-popup-close-button', 'Popup.Close', 'mapControl.closePopup'],
 	['.maplibregl-canvas', 'Map.Title', 'mapControl.map']
 ] as const satisfies readonly (readonly [string, string, TranslationKey])[];
 
@@ -34,7 +33,7 @@ export function followMapControlLanguage(map: Map): void {
 	const stop = $effect.root(() => {
 		$effect(update);
 	});
-	// Popups and controls can be added later; MapLibre may also refresh labels.
+	// Controls can be added later; MapLibre may also refresh labels.
 	// Write only changed values, so our own attribute notifications settle immediately.
 	const observer = new MutationObserver(update);
 	observer.observe(container, {

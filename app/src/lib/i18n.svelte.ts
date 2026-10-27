@@ -160,7 +160,6 @@ export type TranslationKey =
 	| 'mapControl.resetBearing'
 	| 'mapControl.map'
 	| 'mapControl.attribution'
-	| 'mapControl.closePopup'
 	| 'quiz.townSubtitle'
 	| 'quiz.subtitle'
 	| 'quiz.closeAriaLabel'
@@ -363,7 +362,6 @@ const en: Dictionary = {
 	'mapControl.resetBearing': 'Drag to rotate map, click to reset north',
 	'mapControl.map': 'Map',
 	'mapControl.attribution': 'Toggle attribution',
-	'mapControl.closePopup': 'Close popup',
 	'quiz.townSubtitle': 'Drag each name onto its town marker — {placed} / {total} placed',
 	'quiz.subtitle': 'Drag each name onto its matching area — {placed} / {total} placed',
 	'quiz.closeAriaLabel': 'Close and view the map',
@@ -582,7 +580,6 @@ const de: Dictionary = {
 	'mapControl.resetBearing': 'Zum Drehen ziehen, zum Ausrichten nach Norden klicken',
 	'mapControl.map': 'Karte',
 	'mapControl.attribution': 'Quellenangaben ein- oder ausblenden',
-	'mapControl.closePopup': 'Popup schließen',
 	'quiz.townSubtitle': 'Ziehe jeden Namen auf seine Stadtmarkierung — {placed} / {total} platziert',
 	'quiz.subtitle': 'Ziehe jeden Namen auf das passende Gebiet — {placed} / {total} platziert',
 	'quiz.closeAriaLabel': 'Schließen und Karte ansehen',
@@ -803,7 +800,6 @@ const it: Dictionary = {
 	'mapControl.resetBearing': 'Trascina per ruotare, fai clic per orientare a nord',
 	'mapControl.map': 'Mappa',
 	'mapControl.attribution': 'Mostra o nascondi le attribuzioni',
-	'mapControl.closePopup': 'Chiudi popup',
 	'quiz.townSubtitle':
 		'Trascina ogni nome sul relativo indicatore della città — {placed} / {total} posizionati',
 	'quiz.subtitle': 'Trascina ogni nome sull’area corrispondente — {placed} / {total} posizionati',
