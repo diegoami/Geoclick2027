@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 
 const { gotoMock } = vi.hoisted(() => ({ gotoMock: vi.fn() }));
-vi.mock('$app/navigation', () => ({ goto: gotoMock }));
+vi.mock('$app/navigation', () => ({ goto: gotoMock, afterNavigate: vi.fn() }));
 vi.mock('$app/paths', () => ({
 	asset: (file: string) => file,
 	resolve: (route: string, params: Record<string, string> = {}) =>
@@ -10,8 +10,14 @@ vi.mock('$app/paths', () => ({
 }));
 
 import MapNav from './MapNav.svelte';
+import VersionBadge from './VersionBadge.svelte';
 import { setLanguage } from './i18n.svelte';
-import { isSeenDetailed, recordVisit, setDetailedMapsShown } from './mapPrefs.svelte';
+import {
+	forgetDetailed,
+	isSeenDetailed,
+	recordVisit,
+	setDetailedMapsShown
+} from './mapPrefs.svelte';
 
 describe('MapNav sibling map buttons', () => {
 	afterEach(() => {
@@ -135,6 +141,96 @@ describe('MapNav sibling map buttons', () => {
 
 		box!.click();
 		await vi.waitFor(() => expect(ids()).toEqual(['germany-states', 'germany-towns-100k']));
+	});
+
+	it('keeps Singapore detail discovery available before a visit and after hiding it (#249)', async () => {
+		setLanguage('en');
+		setDetailedMapsShown(false);
+		forgetDetailed('singapore-planning-areas');
+		await render(MapNav, {
+			mapId: 'singapore-regions',
+			mapName: 'Singapore — Regions',
+			active: 'explore'
+		});
+		const ids = () =>
+			[...document.querySelectorAll<HTMLElement>('[data-map-id]')].map((el) => el.dataset.mapId);
+		expect(ids()).toEqual(['singapore-regions']);
+		const box = document.querySelector<HTMLInputElement>('.detailed-toggle input')!;
+		expect(box).not.toBeNull();
+		box.click();
+		await vi.waitFor(() => expect(ids()).toContain('singapore-planning-areas'));
+		recordVisit('singapore-planning-areas');
+		box.click();
+		await vi.waitFor(() =>
+			expect(document.querySelector('[data-forget-id="singapore-planning-areas"]')).not.toBeNull()
+		);
+		(
+			document.querySelector('[data-forget-id="singapore-planning-areas"]') as HTMLButtonElement
+		).click();
+		await vi.waitFor(() => expect(ids()).toEqual(['singapore-regions']));
+		expect(document.querySelector('.detailed-toggle input')).not.toBeNull();
+		box.click();
+		await vi.waitFor(() => expect(ids()).toContain('singapore-planning-areas'));
+		forgetDetailed('singapore-planning-areas');
+	});
+
+	it('gives each map mode a title that follows language changes (#250)', async () => {
+		setLanguage('en');
+		await render(MapNav, {
+			mapId: 'singapore-regions',
+			mapName: 'Singapore — Regions',
+			active: 'overview'
+		});
+		await vi.waitFor(() =>
+			expect(document.title).toBe('Singapore — Regions · Overview · Geoclick')
+		);
+		setLanguage('de');
+		await vi.waitFor(() =>
+			expect(document.title).toBe('Singapore — Regions · Übersicht · Geoclick')
+		);
+		setLanguage('it');
+		await vi.waitFor(() =>
+			expect(document.title).toBe('Singapore — Regions · Panoramica · Geoclick')
+		);
+	});
+
+	it('paints the language menu above the build badge (#252)', async () => {
+		setLanguage('en');
+		const chrome = document.createElement('div');
+		chrome.className = 'maplibregl-ctrl-top-right';
+		chrome.style.cssText = 'position:fixed;top:20px;right:20px;width:30px;height:165px';
+		document.body.append(chrome);
+		await render(MapNav, {
+			mapId: 'singapore-regions',
+			mapName: 'Singapore — Regions',
+			active: 'overview'
+		});
+		const badgeView = await render(VersionBadge);
+		try {
+			(document.querySelector('.lang-button') as HTMLButtonElement).click();
+			const badge = document.querySelector<HTMLElement>('.version-badge')!;
+			await vi.waitFor(() => expect(Number.parseFloat(getComputedStyle(badge).top)).toBe(193));
+			const b = badge.getBoundingClientRect();
+			const option = [...document.querySelectorAll<HTMLElement>('.lang-option')].find((el) => {
+				const r = el.getBoundingClientRect();
+				return (
+					Math.max(b.left, r.left) < Math.min(b.right, r.right) &&
+					Math.max(b.top, r.top) < Math.min(b.bottom, r.bottom)
+				);
+			});
+			expect(option).toBeDefined();
+			const r = option!.getBoundingClientRect();
+			// Include the decorative badge in hit testing without altering paint order.
+			badge.style.pointerEvents = 'auto';
+			const top = document.elementFromPoint(
+				(Math.max(b.left, r.left) + Math.min(b.right, r.right)) / 2,
+				(Math.max(b.top, r.top) + Math.min(b.bottom, r.bottom)) / 2
+			);
+			expect(option!.contains(top)).toBe(true);
+		} finally {
+			badgeView.unmount();
+			chrome.remove();
+		}
 	});
 
 	it('has no toggle for a country without detailed maps', async () => {

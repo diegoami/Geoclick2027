@@ -59,8 +59,14 @@ const fake = vi.hoisted(() => {
 			}
 		]
 	};
-	function createMap() {
+	function createMap(container: HTMLElement) {
+		const removed: (() => void)[] = [];
 		const map = {
+			getContainer: () => container,
+			once: (event: string, callback: () => void) => {
+				if (event === 'remove') removed.push(callback);
+				return map;
+			},
 			on: (type: string, layerOrCallback: string | ((event: unknown) => void)) => {
 				if (type === 'load' && typeof layerOrCallback === 'function')
 					state.load = () => layerOrCallback(undefined);
@@ -75,7 +81,7 @@ const fake = vi.hoisted(() => {
 			fitBounds: () => map,
 			getCanvas: () => ({ style: {} }),
 			resize: () => map,
-			remove: () => {}
+			remove: () => removed.forEach((callback) => callback())
 		};
 		return map;
 	}
@@ -124,9 +130,9 @@ vi.mock('$app/paths', () => ({
 
 vi.mock('maplibre-gl', () => ({
 	Map: class {
-		constructor(options: { doubleClickZoom?: boolean }) {
+		constructor(options: { container: HTMLElement; doubleClickZoom?: boolean }) {
 			fake.state.mapOptions = options;
-			Object.assign(this, fake.createMap());
+			Object.assign(this, fake.createMap(options.container));
 		}
 	},
 	Marker: fake.Marker,

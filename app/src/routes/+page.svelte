@@ -99,6 +99,8 @@
 	});
 </script>
 
+<svelte:head><title>Geoclick</title></svelte:head>
+
 <StartBar {showMap} switchDisabled={tutorialRuns} onView={setHomeView} {isApp} {myMapsCount} />
 
 <main>

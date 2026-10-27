@@ -16,6 +16,7 @@
 	import { resolve } from '$lib/appPaths';
 	import { getLanguage, t, type TranslationKey } from './i18n.svelte';
 	import { foldCreditOnNarrowScreens } from './geoclickMap';
+	import { followMapControlLanguage, mapControlLocale } from './mapControlsLanguage.svelte';
 	import { enableLabelCollision, registerLabel } from './labelCollision';
 	import { CROWDED_CLASS, MAGNIFIED_CLASS } from './labelMagnify';
 	import type { Mastery } from './homeProgress';
@@ -310,6 +311,7 @@
 				const [west, south, east, north] = boxOf(start);
 				map = new maplibregl.Map({
 					container,
+					locale: mapControlLocale(),
 					// Keep a double tap from zooming the map between label taps.
 					doubleClickZoom: false,
 					bounds: [
@@ -367,6 +369,7 @@
 				// On a phone the credit starts folded behind its (i), as on every map.
 				foldCreditOnNarrowScreens(map, container);
 				map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+				followMapControlLanguage(map);
 				stopCollision = enableLabelCollision(map, container);
 				map.on('load', () => {
 					if (!map || !picker) return;

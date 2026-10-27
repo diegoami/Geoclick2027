@@ -54,6 +54,7 @@
 
 	// The tutorial points at the tabs and the pills, so they show while it
 	// runs even if the player had hidden them.
+	let languageMenuOpen = $state(false);
 	const hidden = $derived(mapNavHidden() && tutorialState().status === 'idle');
 	const currentGroup = $derived(
 		mapGroups.find((group) => group.maps.some((map) => map.id === mapId))
@@ -66,11 +67,22 @@
 			(map) => !map.advanced || detailedMapsShown() || isSeenDetailed(map.id) || map.id === mapId
 		)
 	);
-	const showMapSwitcher = $derived(groupMaps.length > 1);
+	// A hidden detail map still needs its checkbox to become discoverable.
+	const showMapSwitcher = $derived((currentGroup?.maps.length ?? 0) > 1);
+	const pageTitle = $derived(
+		[mapName, active ? t(`nav.${active}`) : undefined, 'Geoclick'].filter(Boolean).join(' · ')
+	);
 </script>
 
+<svelte:head><title>{pageTitle}</title></svelte:head>
+
 <!-- Hidden by the button under the zoom control (hideButtonsControl). -->
-<div class="nav-overlay" class:hidden data-map-overlay="top">
+<div
+	class="nav-overlay"
+	class:hidden
+	class:language-menu-open={languageMenuOpen}
+	data-map-overlay="top"
+>
 	<div class="nav-row">
 		<a class="nav-btn nav-btn--back" href={resolve('/')}>
 			<svg
@@ -224,13 +236,18 @@
 		<span class="subtitle">{@render subtitle()}</span>
 	{/if}
 	<div class="prefs-row">
-		<LanguageSwitcher />
+		<LanguageSwitcher bind:open={languageMenuOpen} />
 		<TerrainButton />
 		<TutorialButton />
 	</div>
 </div>
 
 <style>
+	/* Menus must escape the badge's stacking level while open; keep the
+	 * ordinary toolbar below quiz trays and other overlays otherwise. */
+	.nav-overlay.language-menu-open {
+		z-index: 21;
+	}
 	.nav-overlay.hidden {
 		display: none;
 	}
