@@ -1,0 +1,247 @@
+{
+	"guanacaste": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alajuela",
+			"Puntarenas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Liberia",
+			"nameDe": "Liberia",
+			"nameIt": "Liberia",
+			"population": 45380
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its name comes from the guanacaste tree and its ear-shaped pods.",
+				"The Nicoya district chose union with Costa Rica in 1824.",
+				"Marimba music accompanies its traditional dances."
+			],
+			"it": [
+				"Il nome viene dall’albero guanacaste e dai suoi baccelli a forma d’orecchio.",
+				"Il distretto di Nicoya scelse l’unione con la Costa Rica nel 1824.",
+				"La musica della marimba accompagna le sue danze tradizionali."
+			],
+			"de": [
+				"Der Name stammt vom Guanacaste-Baum mit seinen ohrförmigen Hülsen.",
+				"Der Bezirk Nicoya entschied sich 1824 für den Anschluss an Costa Rica.",
+				"Marimbamusik begleitet die traditionellen Tänze."
+			]
+		}
+	},
+	"alajuela": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Guanacaste",
+			"Heredia",
+			"Puntarenas",
+			"San José"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Alajuela",
+			"nameDe": "Alajuela",
+			"nameIt": "Alajuela",
+			"population": 387743
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The province takes its name from Alajuela city.",
+				"Juan Santamaría Airport honours an Alajuela-born national hero.",
+				"Volcanic soils support its coffee-growing traditions."
+			],
+			"it": [
+				"La provincia prende il nome dalla città di Alajuela.",
+				"L’aeroporto Juan Santamaría ricorda un eroe nazionale nato ad Alajuela.",
+				"I terreni vulcanici sostengono la sua tradizione del caffè."
+			],
+			"de": [
+				"Die Provinz ist nach der Stadt Alajuela benannt.",
+				"Der Flughafen Juan Santamaría ehrt einen in Alajuela geborenen Nationalhelden.",
+				"Vulkanische Böden fördern die Tradition des Kaffeeanbaus."
+			]
+		}
+	},
+	"heredia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alajuela",
+			"Limón",
+			"San José"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Heredia",
+			"nameDe": "Heredia",
+			"nameIt": "Heredia",
+			"population": 21947
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It shares its name with Heredia, its historic centre.",
+				"La Selva in Sarapiquí is a tropical research station.",
+				"Barva keeps a lively tradition of giant masked figures."
+			],
+			"it": [
+				"Condivide il nome con Heredia, il suo centro storico.",
+				"La Selva, a Sarapiquí, è una stazione di ricerca tropicale.",
+				"Barva conserva una vivace tradizione di grandi figure mascherate."
+			],
+			"de": [
+				"Die Provinz trägt den Namen ihres historischen Zentrums Heredia.",
+				"La Selva in Sarapiquí ist eine Forschungsstation für die Tropen.",
+				"Barva bewahrt eine lebendige Tradition riesiger Maskenfiguren."
+			]
+		}
+	},
+	"limon": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cartago",
+			"Heredia",
+			"Puntarenas",
+			"San José"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Limón",
+			"nameDe": "Puerto Limón",
+			"nameIt": "Limón",
+			"population": 85001
+		},
+		"peak": {
+			"name": "Cerro Chirripó",
+			"elevation": 3820
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Limón is the Spanish word for “lemon”.",
+				"Jamaican railway workers helped shape its Afro-Caribbean culture.",
+				"Costa Rica recognised calypso limonense as intangible heritage in 2012."
+			],
+			"it": [
+				"Limón è la parola spagnola per “limone”.",
+				"I ferrovieri giamaicani contribuirono alla sua cultura afro-caraibica.",
+				"Nel 2012 la Costa Rica riconobbe il calypso limonense come patrimonio immateriale."
+			],
+			"de": [
+				"Limón ist das spanische Wort für „Zitrone“.",
+				"Jamaikanische Eisenbahnarbeiter prägten die afrokaribische Kultur mit.",
+				"Costa Rica erkannte den Calypso aus Limón 2012 als immaterielles Kulturerbe an."
+			]
+		}
+	},
+	"cartago": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Limón",
+			"San José"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cartago",
+			"nameDe": "Cartago",
+			"nameIt": "Cartago",
+			"population": 196946
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It takes its name from Costa Rica’s former capital.",
+				"Guayabo preserves pre-Hispanic stone roads and aqueducts.",
+				"The Basilica of Los Ángeles draws pilgrims to La Negrita."
+			],
+			"it": [
+				"Prende il nome dall’antica capitale della Costa Rica.",
+				"Guayabo conserva strade e acquedotti in pietra preispanici.",
+				"La Basilica di Los Ángeles richiama i pellegrini alla Negrita."
+			],
+			"de": [
+				"Die Provinz ist nach Costa Ricas früherer Hauptstadt benannt.",
+				"Guayabo bewahrt vorspanische Steinstraßen und Wasserleitungen.",
+				"Die Basilika von Los Ángeles zieht Pilger zur La Negrita."
+			]
+		}
+	},
+	"san-jose": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alajuela",
+			"Cartago",
+			"Heredia",
+			"Limón",
+			"Puntarenas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "San José",
+			"nameDe": "San José",
+			"nameIt": "San José",
+			"population": 1284000
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"San José means “Saint Joseph”.",
+				"The capital’s National Theatre opened in 1897.",
+				"Its auditorium floor can rise to make a ballroom."
+			],
+			"it": [
+				"San José significa “San Giuseppe”.",
+				"Il Teatro Nazionale della capitale aprì nel 1897.",
+				"Il pavimento della platea può sollevarsi per creare una sala da ballo."
+			],
+			"de": [
+				"San José bedeutet „Heiliger Josef“.",
+				"Das Nationaltheater in der Hauptstadt eröffnete 1897.",
+				"Sein Zuschauerraumboden lässt sich zu einem Ballsaal anheben."
+			]
+		}
+	},
+	"puntarenas": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alajuela",
+			"Guanacaste",
+			"Limón",
+			"San José"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Puntarenas",
+			"nameDe": "Puntarenas",
+			"nameIt": "Puntarenas",
+			"population": 57102
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Puntarenas means “sand point”.",
+				"Piedras Blancas shelters all four Costa Rican monkey species.",
+				"San Lucas became a national park in 2020 after serving as a prison."
+			],
+			"it": [
+				"Puntarenas significa “punta di sabbia”.",
+				"Piedras Blancas ospita tutte e quattro le specie di scimmie costaricensi.",
+				"San Lucas divenne parco nazionale nel 2020 dopo essere stata una prigione."
+			],
+			"de": [
+				"Puntarenas bedeutet „Sandspitze“.",
+				"Piedras Blancas beherbergt alle vier Affenarten Costa Ricas.",
+				"San Lucas wurde nach seiner Zeit als Gefängnis 2020 zum Nationalpark."
+			]
+		}
+	}
+}

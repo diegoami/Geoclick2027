@@ -1,0 +1,518 @@
+{
+	"id": "uzbekistan-regions",
+	"name": "Uzbekistan — Regions",
+	"country": "Uzbekistan",
+	"attribution": "geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/uzbekistan-gb-9469f09.geojson",
+	"placesSource": "data/places/uzbekistan.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "karakalpakstan",
+			"name": "Karakalpakstan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				59.2408,
+				43.29445
+			],
+			"bbox": [
+				55.9986,
+				40.9988,
+				62.483,
+				45.5901
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						56.4712,
+						43.6984
+					],
+					[
+						59.0397,
+						44.2956
+					],
+					[
+						61.6083,
+						43.1134
+					]
+				],
+				"aspect": 1.29
+			}
+		},
+		{
+			"id": "navoi",
+			"name": "Navoi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				64.29965,
+				41.592150000000004
+			],
+			"bbox": [
+				61.794,
+				39.4489,
+				66.8053,
+				43.7354
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						62.4641,
+						42.4193
+					],
+					[
+						64.3822,
+						42.5812
+					],
+					[
+						66.3003,
+						41.3756
+					]
+				],
+				"aspect": 1.05
+			}
+		},
+		{
+			"id": "tashkent-city",
+			"name": "Tashkent City",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				69.25935,
+				41.28605
+			],
+			"bbox": [
+				69.1219,
+				41.1886,
+				69.3968,
+				41.3835
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						69.1662,
+						41.2789
+					],
+					[
+						69.2563,
+						41.2962
+					],
+					[
+						69.3464,
+						41.3006
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "khorezm",
+			"name": "Khorezm",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				61.2561,
+				41.253
+			],
+			"bbox": [
+				60.075,
+				40.5177,
+				62.4372,
+				41.9883
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						60.2018,
+						41.795
+					],
+					[
+						60.4886,
+						41.3738
+					],
+					[
+						61.1009,
+						41.2783
+					]
+				],
+				"aspect": 2.33
+			}
+		},
+		{
+			"id": "tashkent-region",
+			"name": "Tashkent Region",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				69.95474999999999,
+				41.24375
+			],
+			"bbox": [
+				68.6404,
+				40.1951,
+				71.2691,
+				42.2924
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						69.0615,
+						40.8179
+					],
+					[
+						70.0982,
+						41.135
+					],
+					[
+						70.4226,
+						41.9461
+					]
+				],
+				"aspect": 2.38
+			}
+		},
+		{
+			"id": "namangan",
+			"name": "Namangan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.31175,
+				41.04245
+			],
+			"bbox": [
+				70.415,
+				40.6147,
+				72.2085,
+				41.4702
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						70.59,
+						41.1013
+					],
+					[
+						71.2919,
+						40.8394
+					],
+					[
+						72.0235,
+						41.0961
+					]
+				],
+				"aspect": 2.17
+			}
+		},
+		{
+			"id": "andijan",
+			"name": "Andijan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.26435000000001,
+				40.71905
+			],
+			"bbox": [
+				71.5376,
+				40.4012,
+				72.9911,
+				41.0369
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						71.6917,
+						40.7972
+					],
+					[
+						72.2361,
+						40.7295
+					],
+					[
+						72.787,
+						40.7294
+					]
+				],
+				"aspect": 2.81
+			}
+		},
+		{
+			"id": "syrdarya",
+			"name": "Syrdarya",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				68.6417,
+				40.5573
+			],
+			"bbox": [
+				68.1136,
+				40.1698,
+				69.1698,
+				40.9448
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						68.282,
+						40.4247
+					],
+					[
+						68.6576,
+						40.5776
+					],
+					[
+						69.0333,
+						40.4563
+					]
+				],
+				"aspect": 1.35
+			}
+		},
+		{
+			"id": "fergana",
+			"name": "Fergana",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.27844999999999,
+				40.467600000000004
+			],
+			"bbox": [
+				70.3342,
+				40.1625,
+				72.2227,
+				40.7727
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						70.6378,
+						40.4398
+					],
+					[
+						71.3079,
+						40.5445
+					],
+					[
+						71.9815,
+						40.434
+					]
+				],
+				"aspect": 2.32
+			}
+		},
+		{
+			"id": "jizzakh",
+			"name": "Jizzakh",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				67.8116,
+				40.34085
+			],
+			"bbox": [
+				66.608,
+				39.4986,
+				69.0152,
+				41.1831
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						67.2058,
+						40.9577
+					],
+					[
+						67.5561,
+						40.2382
+					],
+					[
+						68.3373,
+						39.7734
+					]
+				],
+				"aspect": 1.5
+			}
+		},
+		{
+			"id": "bukhara",
+			"name": "Bukhara",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				63.79345,
+				40.2101
+			],
+			"bbox": [
+				62.199,
+				38.9522,
+				65.3879,
+				41.468
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						62.6118,
+						40.4855
+					],
+					[
+						63.6077,
+						39.8555
+					],
+					[
+						64.6036,
+						39.9564
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "samarkand",
+			"name": "Samarkand",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				66.3183,
+				39.95795
+			],
+			"bbox": [
+				65.1322,
+				39.2967,
+				67.5044,
+				40.6192
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						65.3698,
+						39.7348
+					],
+					[
+						66.2453,
+						40.081
+					],
+					[
+						67.1208,
+						39.7826
+					]
+				],
+				"aspect": 1.87
+			}
+		},
+		{
+			"id": "kashkadarya",
+			"name": "Kashkadarya",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				66.0395,
+				38.73585
+			],
+			"bbox": [
+				64.3865,
+				37.9661,
+				67.6925,
+				39.5056
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						65.0255,
+						39.0622
+					],
+					[
+						66.0874,
+						38.6051
+					],
+					[
+						67.2462,
+						38.8342
+					]
+				],
+				"aspect": 1.57
+			}
+		},
+		{
+			"id": "surkhandarya",
+			"name": "Surkhandarya",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				67.46795,
+				38.1025
+			],
+			"bbox": [
+				66.5319,
+				37.1821,
+				68.404,
+				39.0229
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						67.1074,
+						37.5178
+					],
+					[
+						67.6635,
+						38.0677
+					],
+					[
+						67.883,
+						38.753
+					]
+				],
+				"aspect": 1.36
+			}
+		}
+	],
+	"tourOrder": [
+		"karakalpakstan",
+		"navoi",
+		"tashkent-city",
+		"khorezm",
+		"tashkent-region",
+		"namangan",
+		"andijan",
+		"syrdarya",
+		"fergana",
+		"jizzakh",
+		"bukhara",
+		"samarkand",
+		"kashkadarya",
+		"surkhandarya"
+	]
+}

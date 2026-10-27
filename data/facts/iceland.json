@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Iceland (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"reykjavik": {
 		"city": {
@@ -20,6 +21,372 @@
 				"„Rauchbucht“, nach dem Dampf ihrer heißen Quellen.",
 				"Die nördlichste Hauptstadt eines souveränen Staates.",
 				"Fast alle ihre Häuser werden mit Wasser aus dem Untergrund geheizt."
+			]
+		}
+	},
+	"_sources": {
+		"vestfir-ir:region": [
+			"https://www.visiticeland.com/the-regions/the-westfjords/"
+		],
+		"nor-urland-vestra:region": [
+			"https://www.northiceland.is/2024/throun/stefna-um-throun-ferdathjonustu-a-nordurlandi/markadsaherslur",
+			"https://www.northiceland.is/static/files/PDF/Skyrslur/soguferdathjonusta-a-nordurlandi_loka_19.11.2019.pdf"
+		],
+		"nor-urland-eystra:region": [
+			"https://www.northiceland.is/en/destinations/nature/scenic-nature/lake-myvatn"
+		],
+		"austurland:region": [
+			"https://www.east.is/en/destinations/communities/faskrudsfjordur",
+			"https://www.east.is/en/experiences/culture-heritage/museums/french-sailors-in-iceland"
+		],
+		"vesturland:region": [
+			"https://www.visiticeland.com/the-regions/",
+			"https://www.visiticeland.com/things-to-do/the-settlement-center-in-borgarnes/"
+		],
+		"hofu-borgarsv-i:region": [
+			"https://www.unesco.org/en/creative-cities/reykjavik"
+		],
+		"su-urland:region": [
+			"https://www.thingvellir.is/en/",
+			"https://www.south.is/en/place/the-westman-islands"
+		],
+		"su-urnes:region": [
+			"https://www.visitreykjanes.is/en/place/svartsengi",
+			"https://www.unesco.org/en/iggp/reykjanes-unesco-global-geopark"
+		],
+		"isafjor-ur:city": [
+			"https://www.westfjords.is/is/afangastadir/thettbyli/isafjordur"
+		],
+		"sau-arkrokur:city": [
+			"https://www.northiceland.is/is/afangastadir/baeir-thorp/saudarkrokur",
+			"https://www.northiceland.is/static/files/ACW/arcticcoastway_trademanual_for2021.pdf"
+		],
+		"akureyri:city": [
+			"https://www.visitakureyri.is/en/see-and-do/attractions/hearts-of-akureyri",
+			"https://www.visitakureyri.is/en/see-and-do/attractions/botanical-garden"
+		],
+		"egilssta-ir:city": [
+			"https://www.east.is/static/files/pdf/2016/east_iceland_tourist_guide_2016_lowres.pdf",
+			"https://www.east.is/en/communities/visit-mulathing/visit-egilsstadir/historic-and-cultural-sites-in-egilsstadir-area"
+		],
+		"borgarnes:city": [
+			"https://www.visiticeland.com/things-to-do/the-settlement-center-in-borgarnes/",
+			"https://www.west.is/en/moya/toy/index/municipality/borgarnes"
+		],
+		"hofn:city": [
+			"https://www.south.is/en/moya/extras/64/seafood-and-coastal-food-culture",
+			"https://visitvatnajokull.is/information/museums-and-exhibitions/"
+		],
+		"keflavik:city": [
+			"https://www.visitreykjanes.is/en/destinations/munincipalities/reykjanesbaer",
+			"https://www.visitreykjanes.is/static/files/pdf/msr-the-official-tourist-guide-2019_web.pdf"
+		],
+		"selfoss:city": [
+			"https://www.south.is/en/destinations/landmarks-historical-places/history-and-culture/olfusarbru-suspension-bridge",
+			"https://www.south.is/en/destinations/towns/selfoss-area/interesting-places-selfoss"
+		]
+	},
+	"vestfir-ir": {
+		"region": {
+			"en": [
+				"Vestfirðir means “west fjords”.",
+				"Hornstrandir shelters Iceland’s native Arctic foxes.",
+				"Seabirds breed on the cliffs of Látrabjarg."
+			],
+			"it": [
+				"Vestfirðir significa “fiordi occidentali”.",
+				"Hornstrandir ospita le volpi artiche native dell’Islanda.",
+				"Gli uccelli marini nidificano sulle scogliere di Látrabjarg."
+			],
+			"de": [
+				"Vestfirðir bedeutet „Westfjorde“.",
+				"Hornstrandir bietet Islands heimischen Polarfüchsen Schutz.",
+				"An den Klippen von Látrabjarg brüten Seevögel."
+			]
+		}
+	},
+	"nor-urland-vestra": {
+		"region": {
+			"en": [
+				"Norðurland vestra means “northwestern land”.",
+				"Skagafjörður’s heritage is closely tied to Icelandic horses.",
+				"Glaumbær preserves traditional turf farm buildings."
+			],
+			"it": [
+				"Norðurland vestra significa “terra nordoccidentale”.",
+				"La tradizione di Skagafjörður è strettamente legata ai cavalli islandesi.",
+				"Glaumbær conserva le tradizionali costruzioni rurali in torba."
+			],
+			"de": [
+				"Norðurland vestra bedeutet „nordwestliches Land“.",
+				"Das Erbe von Skagafjörður ist eng mit Islandpferden verbunden.",
+				"In Glaumbær sind traditionelle Torfbauten eines Bauernhofs erhalten."
+			]
+		}
+	},
+	"nor-urland-eystra": {
+		"region": {
+			"en": [
+				"Norðurland eystra means “northeastern land”.",
+				"Mývatn’s name means “midge lake”.",
+				"Its pseudocraters formed when hot lava crossed wet ground."
+			],
+			"it": [
+				"Norðurland eystra significa “terra nordorientale”.",
+				"Il nome Mývatn significa “lago dei moscerini”.",
+				"I suoi pseudocrateri si formarono quando la lava bollente attraversò un terreno umido."
+			],
+			"de": [
+				"Norðurland eystra bedeutet „nordöstliches Land“.",
+				"Der Name Mývatn bedeutet „Mückensee“.",
+				"Seine Pseudokrater entstanden, als heiße Lava über nassen Boden floss."
+			]
+		}
+	},
+	"austurland": {
+		"region": {
+			"en": [
+				"Austurland means “eastern land”.",
+				"Fáskrúðsfjörður’s street signs also appear in French.",
+				"Its restored French hospital tells the fishermen’s story."
+			],
+			"it": [
+				"Austurland significa “terra orientale”.",
+				"A Fáskrúðsfjörður i cartelli stradali sono anche in francese.",
+				"Il suo ospedale francese restaurato racconta la storia dei pescatori."
+			],
+			"de": [
+				"Austurland bedeutet „östliches Land“.",
+				"In Fáskrúðsfjörður sind Straßenschilder auch auf Französisch beschriftet.",
+				"Das restaurierte französische Krankenhaus erzählt die Geschichte der Fischer."
+			]
+		}
+	},
+	"vesturland": {
+		"region": {
+			"en": [
+				"Vesturland means “western land”.",
+				"Snæfellsjökull inspired Jules Verne’s journey into the Earth.",
+				"Borgarnes’s Settlement Centre brings Egils saga to life."
+			],
+			"it": [
+				"Vesturland significa “terra occidentale”.",
+				"Snæfellsjökull ispirò il viaggio di Jules Verne al centro della Terra.",
+				"Il Centro della Colonizzazione di Borgarnes dà vita alla Saga di Egill."
+			],
+			"de": [
+				"Vesturland bedeutet „westliches Land“.",
+				"Snæfellsjökull inspirierte Jules Vernes Reise ins Erdinnere.",
+				"Das Landnahmezentrum in Borgarnes erweckt die Egils saga zum Leben."
+			]
+		}
+	},
+	"hofu-borgarsv-i": {
+		"region": {
+			"en": [
+				"Höfuðborgarsvæðið means “the capital area”.",
+				"Reykjavík became a UNESCO City of Literature in 2011.",
+				"Harpa won the Mies van der Rohe architecture prize in 2013."
+			],
+			"it": [
+				"Höfuðborgarsvæðið significa “l’area della capitale”.",
+				"Reykjavík divenne Città della Letteratura UNESCO nel 2011.",
+				"Harpa vinse il premio di architettura Mies van der Rohe nel 2013."
+			],
+			"de": [
+				"Höfuðborgarsvæðið bedeutet „das Hauptstadtgebiet“.",
+				"Reykjavík wurde 2011 UNESCO-Literaturstadt.",
+				"Harpa gewann 2013 den Mies-van-der-Rohe-Architekturpreis."
+			]
+		}
+	},
+	"su-urland": {
+		"region": {
+			"en": [
+				"Suðurland means “southern land”.",
+				"The Alþingi first assembled at Þingvellir in 930.",
+				"Heimaey’s 1973 eruption forced an overnight evacuation."
+			],
+			"it": [
+				"Suðurland significa “terra meridionale”.",
+				"L’Alþingi si riunì per la prima volta a Þingvellir nel 930.",
+				"L’eruzione del 1973 a Heimaey impose un’evacuazione notturna."
+			],
+			"de": [
+				"Suðurland bedeutet „südliches Land“.",
+				"Das Alþingi trat 930 erstmals in Þingvellir zusammen.",
+				"Der Ausbruch auf Heimaey 1973 erzwang eine nächtliche Evakuierung."
+			]
+		}
+	},
+	"su-urnes": {
+		"region": {
+			"en": [
+				"Suðurnes means “southern headlands”.",
+				"Water discharged from Svartsengi’s power station created the Blue Lagoon.",
+				"Here the North American and Eurasian plates pull apart."
+			],
+			"it": [
+				"Suðurnes significa “promontori meridionali”.",
+				"L’acqua scaricata dalla centrale di Svartsengi creò la Laguna Blu.",
+				"Qui le placche nordamericana ed eurasiatica si allontanano."
+			],
+			"de": [
+				"Suðurnes bedeutet „südliche Landzungen“.",
+				"Abgeleitetes Wasser des Kraftwerks Svartsengi schuf die Blaue Lagune.",
+				"Hier driften die nordamerikanische und die eurasische Platte auseinander."
+			]
+		}
+	},
+	"isafjor-ur": {
+		"city": {
+			"en": [
+				"Ísafjörður means “ice fjord”.",
+				"Danish monopoly trade helped it become a fishing and trading hub.",
+				"A local trading firm bought some of Iceland’s first steamships."
+			],
+			"it": [
+				"Ísafjörður significa “fiordo del ghiaccio”.",
+				"Il monopolio commerciale danese ne favorì lo sviluppo come centro di pesca e commercio.",
+				"Una ditta commerciale locale acquistò alcuni dei primi piroscafi islandesi."
+			],
+			"de": [
+				"Ísafjörður bedeutet „Eisfjord“.",
+				"Das dänische Handelsmonopol förderte seinen Aufstieg zum Fischerei- und Handelszentrum.",
+				"Ein örtliches Handelshaus kaufte einige der ersten isländischen Dampfschiffe."
+			]
+		}
+	},
+	"sau-arkrokur": {
+		"city": {
+			"en": [
+				"Its name joins Sauðá, “sheep river”, with a bend or hook.",
+				"The 1238 exhibition recreates medieval battles in virtual reality.",
+				"Haraldur Júlíusson’s main-street shop opened in 1919."
+			],
+			"it": [
+				"Il nome unisce Sauðá, “fiume delle pecore”, a una curva o un uncino.",
+				"La mostra 1238 ricrea battaglie medievali in realtà virtuale.",
+				"Il negozio di Haraldur Júlíusson sulla via principale aprì nel 1919."
+			],
+			"de": [
+				"Der Name verbindet Sauðá, „Schaffluss“, mit einer Biegung oder einem Haken.",
+				"Die Ausstellung 1238 lässt mittelalterliche Schlachten in virtueller Realität erleben.",
+				"Haraldur Júlíussons Laden an der Hauptstraße eröffnete 1919."
+			]
+		}
+	},
+	"akureyri": {
+		"city": {
+			"en": [
+				"Akureyri combines a field with an eyri, a gravel spit.",
+				"Its red traffic lights shine as hearts.",
+				"The public park opened in 1912; its botanical section followed in 1957."
+			],
+			"it": [
+				"Akureyri unisce un campo a un’eyri, una lingua di ghiaia.",
+				"I suoi semafori rossi si illuminano a forma di cuore.",
+				"Il parco pubblico aprì nel 1912; la sezione botanica seguì nel 1957."
+			],
+			"de": [
+				"Akureyri verbindet ein Feld mit eyri, einer Kieslandzunge.",
+				"Die roten Ampeln leuchten hier als Herzen.",
+				"Der öffentliche Park eröffnete 1912; der botanische Teil folgte 1957."
+			]
+		}
+	},
+	"egilssta-ir": {
+		"city": {
+			"en": [
+				"It takes its name from the older Egilsstaðir farm.",
+				"The town was formally established in 1947.",
+				"Oswald Nielsen built its first private house in 1944."
+			],
+			"it": [
+				"Prende il nome dalla più antica fattoria di Egilsstaðir.",
+				"La cittadina fu costituita ufficialmente nel 1947.",
+				"Oswald Nielsen vi costruì la prima casa privata nel 1944."
+			],
+			"de": [
+				"Der Name stammt vom älteren Hof Egilsstaðir.",
+				"Die Stadt wurde 1947 offiziell gegründet.",
+				"Oswald Nielsen baute hier 1944 das erste Privathaus."
+			]
+		}
+	},
+	"borgarnes": {
+		"city": {
+			"en": [
+				"The name links Borg farm with nes, a headland.",
+				"The Settlement Centre retells the story of Egill Skalla-Grímsson.",
+				"The Borgarfjörður Museum exhibits birds and photography."
+			],
+			"it": [
+				"Il nome collega la fattoria Borg a nes, un promontorio.",
+				"Il Centro della Colonizzazione racconta la storia di Egill Skalla-Grímsson.",
+				"Il Museo del Borgarfjörður espone uccelli e fotografie."
+			],
+			"de": [
+				"Der Name verbindet den Hof Borg mit nes, einer Landzunge.",
+				"Das Landnahmezentrum erzählt die Geschichte von Egill Skalla-Grímsson.",
+				"Das Borgarfjörður-Museum zeigt Vögel und Fotografie."
+			]
+		}
+	},
+	"hofn": {
+		"city": {
+			"en": [
+				"Höfn is simply the Icelandic word for “harbour”.",
+				"A summer festival celebrates its langoustine catch.",
+				"Gamlabúð explains the region’s glaciers, geology and culture."
+			],
+			"it": [
+				"Höfn è semplicemente la parola islandese per “porto”.",
+				"Una festa estiva celebra la pesca degli scampi.",
+				"Gamlabúð racconta i ghiacciai, la geologia e la cultura della regione."
+			],
+			"de": [
+				"Höfn ist schlicht das isländische Wort für „Hafen“.",
+				"Ein Sommerfest feiert den Fang von Kaisergranaten.",
+				"Gamlabúð erklärt Gletscher, Geologie und Kultur der Region."
+			]
+		}
+	},
+	"keflavik": {
+		"city": {
+			"en": [
+				"Keflavík joins “driftwood” with vík, a bay.",
+				"It joined Njarðvík and Hafnir as Reykjanesbær in 1994.",
+				"The Duus houses recall its old trading harbour."
+			],
+			"it": [
+				"Keflavík unisce “legname alla deriva” a vík, una baia.",
+				"Nel 1994 si unì a Njarðvík e Hafnir formando Reykjanesbær.",
+				"Le case Duus ricordano il suo antico porto commerciale."
+			],
+			"de": [
+				"Keflavík verbindet „Treibholz“ mit vík, einer Bucht.",
+				"1994 schloss es sich mit Njarðvík und Hafnir zu Reykjanesbær zusammen.",
+				"Die Duus-Häuser erinnern an den alten Handelshafen."
+			]
+		}
+	},
+	"selfoss": {
+		"city": {
+			"en": [
+				"Its name includes foss, the Icelandic word for waterfall.",
+				"Its first bridge over the Ölfusá opened in 1891.",
+				"Bobby Fischer is buried nearby at Laugardælir."
+			],
+			"it": [
+				"Il nome contiene foss, la parola islandese per cascata.",
+				"Il suo primo ponte sull’Ölfusá aprì nel 1891.",
+				"Bobby Fischer è sepolto nella vicina Laugardælir."
+			],
+			"de": [
+				"Im Namen steckt foss, das isländische Wort für Wasserfall.",
+				"Die erste Brücke über die Ölfusá eröffnete hier 1891.",
+				"Bobby Fischer liegt im nahen Laugardælir begraben."
 			]
 		}
 	}

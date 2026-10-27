@@ -1,0 +1,222 @@
+{
+	"id": "united-arab-emirates-towns-1k",
+	"name": "United Arab Emirates — Towns",
+	"country": "United Arab Emirates",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/united-arab-emirates.geojson",
+	"regionsMap": "united-arab-emirates-emirates",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "ras-al-khaimah",
+			"name": "Ras al-Khaimah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				56.128333333,
+				25.898611111
+			],
+			"bbox": [
+				56.128333333,
+				25.898611111,
+				56.128333333,
+				25.898611111
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dibba-al-fujairah",
+			"name": "Dibba Al-Fujairah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				56.266667,
+				25.616667
+			],
+			"bbox": [
+				56.266667,
+				25.616667,
+				56.266667,
+				25.616667
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ajman",
+			"name": "Ajman",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.479722222,
+				25.399444444
+			],
+			"bbox": [
+				55.479722222,
+				25.399444444,
+				55.479722222,
+				25.399444444
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "sharjah",
+			"name": "Sharjah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.411944444,
+				25.3375
+			],
+			"bbox": [
+				55.411944444,
+				25.3375,
+				55.411944444,
+				25.3375
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "dubai",
+			"name": "Dubai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.309444444,
+				25.269722222
+			],
+			"bbox": [
+				55.309444444,
+				25.269722222,
+				55.309444444,
+				25.269722222
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "fujairah",
+			"name": "Fujairah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				56.334444444,
+				25.122222222
+			],
+			"bbox": [
+				56.334444444,
+				25.122222222,
+				56.334444444,
+				25.122222222
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "jebel-ali",
+			"name": "Jebel Ali",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.100884,
+				24.960468
+			],
+			"bbox": [
+				55.100884,
+				24.960468,
+				55.100884,
+				24.960468
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "hatta",
+			"name": "Hatta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				56.12726,
+				24.80073
+			],
+			"bbox": [
+				56.12726,
+				24.80073,
+				56.12726,
+				24.80073
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "abu-dhabi",
+			"name": "Abu Dhabi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				54.396944444,
+				24.451111111
+			],
+			"bbox": [
+				54.396944444,
+				24.451111111,
+				54.396944444,
+				24.451111111
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "al-ain",
+			"name": "Al Ain",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.744722222,
+				24.2075
+			],
+			"bbox": [
+				55.744722222,
+				24.2075,
+				55.744722222,
+				24.2075
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "madinat-zayed",
+			"name": "Madinat Zayed",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				53.65361111,
+				23.65222222
+			],
+			"bbox": [
+				53.65361111,
+				23.65222222,
+				53.65361111,
+				23.65222222
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"ras-al-khaimah",
+		"dibba-al-fujairah",
+		"ajman",
+		"sharjah",
+		"dubai",
+		"fujairah",
+		"jebel-ali",
+		"hatta",
+		"abu-dhabi",
+		"al-ain",
+		"madinat-zayed"
+	]
+}

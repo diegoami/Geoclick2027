@@ -112,6 +112,7 @@ export type TranslationKey =
 	| 'home.lastResult'
 	| 'home.mistakeCount.one'
 	| 'home.mistakeCount.other'
+	| 'mapType.planningAreas'
 	| 'mapType.regions'
 	| 'mapType.towns'
 	| 'mapType.towns50k'
@@ -135,7 +136,12 @@ export type TranslationKey =
 	| 'mapType.countries'
 	| 'mapType.capitals'
 	| 'mapType.departments'
+	| 'mapType.emirates'
+	| 'mapType.countiesAndCities'
 	| 'mapType.counties'
+	| 'mapType.estonianCounties'
+	| 'mapType.hungarianCounties'
+	| 'mapType.lithuanianCounties'
 	| 'mapType.romanianCounties'
 	| 'mapType.cantons'
 	| 'mapType.germanDistricts'
@@ -302,6 +308,7 @@ const en: Dictionary = {
 	'home.mistakeCount.one': '({count} mistake)',
 	'home.mistakeCount.other': '({count} mistakes)',
 
+	'mapType.planningAreas': 'Planning areas',
 	'mapType.regions': 'Regions',
 	'mapType.towns': 'Towns',
 	'mapType.towns50k': 'Towns 50k+',
@@ -325,7 +332,12 @@ const en: Dictionary = {
 	'mapType.countries': 'Countries',
 	'mapType.capitals': 'Capitals',
 	'mapType.departments': 'Departments',
+	'mapType.emirates': 'Emirates',
+	'mapType.countiesAndCities': 'Counties and cities',
 	'mapType.counties': 'Counties',
+	'mapType.estonianCounties': 'Counties',
+	'mapType.hungarianCounties': 'Counties',
+	'mapType.lithuanianCounties': 'Counties',
 	'mapType.romanianCounties': 'Counties',
 	'mapType.cantons': 'Cantons',
 	'mapType.germanDistricts': 'Districts',
@@ -507,6 +519,7 @@ const de: Dictionary = {
 	'home.mistakeCount.one': '({count} Fehler)',
 	'home.mistakeCount.other': '({count} Fehler)',
 
+	'mapType.planningAreas': 'Planungsgebiete',
 	'mapType.regions': 'Regionen',
 	'mapType.towns': 'Städte',
 	'mapType.towns50k': 'Städte 50k+',
@@ -531,7 +544,12 @@ const de: Dictionary = {
 	'mapType.capitals': 'Hauptstädte',
 	'mapType.departments': 'Départements',
 	// Ireland's counties are Grafschaften in German, Romania's județe Kreise.
+	'mapType.emirates': 'Emirate',
+	'mapType.countiesAndCities': 'Landkreise und Städte',
 	'mapType.counties': 'Grafschaften',
+	'mapType.estonianCounties': 'Landkreise',
+	'mapType.hungarianCounties': 'Komitate',
+	'mapType.lithuanianCounties': 'Bezirke',
 	'mapType.romanianCounties': 'Kreise',
 	'mapType.cantons': 'Kantone',
 	'mapType.germanDistricts': 'Kreise',
@@ -716,6 +734,7 @@ const it: Dictionary = {
 	'home.mistakeCount.one': '({count} errore)',
 	'home.mistakeCount.other': '({count} errori)',
 
+	'mapType.planningAreas': 'Aree di pianificazione',
 	'mapType.regions': 'Regioni',
 	'mapType.towns': 'Città',
 	'mapType.towns50k': 'Città 50k+',
@@ -740,7 +759,12 @@ const it: Dictionary = {
 	'mapType.capitals': 'Capitali',
 	'mapType.departments': 'Dipartimenti',
 	// Ireland's counties are contee in Italian, Romania's județe distretti.
+	'mapType.emirates': 'Emirati',
+	'mapType.countiesAndCities': 'Contee e città',
 	'mapType.counties': 'Contee',
+	'mapType.estonianCounties': 'Contee',
+	'mapType.hungarianCounties': 'Comitati',
+	'mapType.lithuanianCounties': 'Contee',
 	'mapType.romanianCounties': 'Distretti',
 	'mapType.cantons': 'Cantoni',
 	'mapType.germanDistricts': 'Circondari',

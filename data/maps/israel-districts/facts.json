@@ -1,0 +1,198 @@
+{
+	"northern": {
+		"kind": "region",
+		"borders": [
+			"Haifa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nazareth",
+			"nameDe": "Nazareth",
+			"nameIt": "Nazareth",
+			"population": 83400
+		},
+		"peak": {
+			"name": "Har Meron",
+			"elevation": 1208
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its name describes the northern district.",
+				"Acre preserves a historic Mediterranean port.",
+				"The Sea of Galilee has a long fishing history."
+			],
+			"it": [
+				"Il nome descrive il distretto settentrionale.",
+				"Acri conserva uno storico porto mediterraneo.",
+				"Il lago di Tiberiade vanta una lunga storia di pesca."
+			],
+			"de": [
+				"Der Name beschreibt den nördlichen Bezirk.",
+				"Akko bewahrt einen historischen Mittelmeerhafen.",
+				"Der See Genezareth besitzt eine lange Fischereigeschichte."
+			]
+		}
+	},
+	"haifa": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Northern"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Haifa",
+			"nameDe": "Haifa",
+			"nameIt": "Haifa",
+			"population": 284560
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Early forms of its name include Hefa.",
+				"The Bahá’í gardens are a major cultural landmark.",
+				"The German Colony preserves nineteenth-century settlement history."
+			],
+			"it": [
+				"Tra le antiche forme del nome vi è Hefa.",
+				"I giardini bahá’í sono un importante simbolo culturale.",
+				"La Colonia Tedesca conserva la storia degli insediamenti ottocenteschi."
+			],
+			"de": [
+				"Zu den frühen Namensformen gehört Hefa.",
+				"Die Bahai-Gärten sind ein bedeutendes Kulturwahrzeichen.",
+				"Die Deutsche Kolonie bewahrt Siedlungsgeschichte des 19. Jahrhunderts."
+			]
+		}
+	},
+	"tel-aviv": {
+		"kind": "region",
+		"borders": [
+			"Central"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tel Aviv",
+			"nameDe": "Tel Aviv-Jaffa",
+			"nameIt": "Tel Aviv",
+			"population": 467875
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name means spring hill, chosen from a Hebrew book title.",
+				"The White City preserves modernist architecture.",
+				"Jaffa preserves an ancient port landscape."
+			],
+			"it": [
+				"Il nome significa collina della primavera, scelto da un titolo ebraico.",
+				"La Città Bianca conserva l’architettura modernista.",
+				"Giaffa conserva il paesaggio di un porto antico."
+			],
+			"de": [
+				"Der Name bedeutet Frühlingshügel und stammt aus einem hebräischen Buchtitel.",
+				"Die Weiße Stadt bewahrt modernistische Architektur.",
+				"Jaffa bewahrt die Landschaft eines alten Hafens."
+			]
+		}
+	},
+	"central": {
+		"kind": "region",
+		"borders": [
+			"Haifa",
+			"Jerusalem",
+			"Southern",
+			"Tel Aviv"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Rishon LeZion",
+			"nameDe": "Rischon LeZion",
+			"nameIt": "Rishon LeZion",
+			"population": 258535
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name refers to the central coastal plain.",
+				"Ramla preserves a medieval White Tower.",
+				"Citrus growing shaped the Sharon landscape."
+			],
+			"it": [
+				"Il nome si riferisce alla pianura costiera centrale.",
+				"Ramla conserva una Torre Bianca medievale.",
+				"La coltivazione degli agrumi plasmò il paesaggio dello Sharon."
+			],
+			"de": [
+				"Der Name bezieht sich auf die zentrale Küstenebene.",
+				"Ramla bewahrt einen mittelalterlichen Weißen Turm.",
+				"Zitrusanbau prägte die Sharon-Landschaft."
+			]
+		}
+	},
+	"jerusalem": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Southern"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jerusalem",
+			"nameDe": "Jerusalem",
+			"nameIt": "Gerusalemme",
+			"population": 1050151
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name is attested in ancient forms such as Urusalim.",
+				"Abu Ghosh preserves a medieval Crusader church.",
+				"The Judean Hills retain traditional terraced landscapes."
+			],
+			"it": [
+				"Il nome è attestato in forme antiche come Urusalim.",
+				"Abu Ghosh conserva una chiesa medievale crociata.",
+				"I monti della Giudea conservano paesaggi terrazzati tradizionali."
+			],
+			"de": [
+				"Der Name ist in alten Formen wie Urusalim belegt.",
+				"Abu Ghosh bewahrt eine mittelalterliche Kreuzfahrerkirche.",
+				"Die Judäischen Berge bewahren traditionelle Terrassenlandschaften."
+			]
+		}
+	},
+	"southern": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Jerusalem"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ashdod",
+			"nameDe": "Aschdod",
+			"nameIt": "Ashdod",
+			"population": 225939
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name describes the southern district.",
+				"Nabataean towns preserve ancient incense-route heritage.",
+				"Makhtesh Ramon formed through erosion."
+			],
+			"it": [
+				"Il nome descrive il distretto meridionale.",
+				"Le città nabatee conservano il patrimonio dell’antica via dell’incenso.",
+				"Il Makhtesh Ramon si formò per erosione."
+			],
+			"de": [
+				"Der Name beschreibt den südlichen Bezirk.",
+				"Nabatäerstädte bewahren das Erbe der alten Weihrauchstraße.",
+				"Der Machtesch Ramon entstand durch Erosion."
+			]
+		}
+	}
+}

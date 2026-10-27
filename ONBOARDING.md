@@ -133,7 +133,7 @@ npx playwright install chromium  # once per machine - component tests run in it
 npm run dev
 ```
 
-Then open the URL Vite prints (typically `http://localhost:5173`). Pick a
+Then open the URL Vite prints (`http://localhost:5187`). Pick a
 map from the home page, try both Tour and Quiz modes.
 
 Useful root-level scripts (run from the repo root, they fan out across
@@ -200,7 +200,7 @@ show up in the output as `|client (chromium)|`, check the config first.
 ## Running the desktop build (Iteration 7)
 
 ```bash
-npm run dev --workspace=app    # start the Vite dev server first (port 5173)
+npm run dev --workspace=app    # start the Vite dev server first (port 5187)
 cd desktop && npm run dev      # in a second terminal: opens the app in a native window
 ```
 
@@ -601,11 +601,12 @@ this one, and is read on demand rather than up front.
   can eat backticks, `${...}` and escapes such as `\d`, leaving broken content
   that may not be noticed until much later. Write a small `.mjs` script in the
   scratchpad and run it instead. `python - <<'EOF'` can hang on stdin here.
-- **A browser test can fail to start because its port is reserved by Windows.**
-  Vitest's browser port 63315 falls in Windows' reserved range 63289–63388.
-  The rest of the gates may pass; rebooting usually releases the range. If one
-  browser-test file fails at startup on this machine, retry before debugging
-  the test itself.
+- **Windows can reserve Vitest’s default browser API port 63315.**
+  The client test project uses loopback port 5191 in app/vite.config.ts; Vite
+  tries the next available port if it is busy. An EACCES listener error is a
+  startup failure, even when all Node assertions passed: confirm that the
+  client tests ran as well. This avoids depending on a reboot to release the
+  reserved range (reproduced on both IPv4 and IPv6, 2026-10-26).
 - **MapLibre's `canvas.toDataURL()` is blank** because its canvas is not created
   with `preserveDrawingBuffer`. To verify that a map rendered, take a page
   screenshot and count distinct pixels instead of reading the canvas.

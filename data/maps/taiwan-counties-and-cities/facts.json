@@ -1,0 +1,714 @@
+{
+	"lienchiang-county": {
+		"kind": "region",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The Matsu islands’ name is linked to the sea goddess Mazu.",
+				"Nangan preserves a major Mazu temple.",
+				"Qinbi village is known for stone houses."
+			],
+			"it": [
+				"Il nome delle isole Matsu è legato alla dea marina Mazu.",
+				"Nangan conserva un importante tempio di Mazu.",
+				"Il villaggio di Qinbi è noto per le case in pietra."
+			],
+			"de": [
+				"Der Name der Matsu-Inseln wird mit der Meeresgöttin Mazu verbunden.",
+				"Nangan bewahrt einen bedeutenden Mazu-Tempel.",
+				"Das Dorf Qinbi ist für Steinhäuser bekannt."
+			]
+		}
+	},
+	"keelung-city": {
+		"kind": "region",
+		"borders": [
+			"New Taipei City"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Keelung",
+			"nameDe": "Keelung",
+			"nameIt": "Keelung",
+			"population": 500000
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Older spellings include Kelang and Chilung.",
+				"Miaokou’s night market grew around temple life.",
+				"Heping Island has distinctive wave-eroded rocks."
+			],
+			"it": [
+				"Tra le grafie antiche vi sono Kelang e Chilung.",
+				"Il mercato notturno di Miaokou crebbe attorno alla vita del tempio.",
+				"L’isola Heping presenta caratteristiche rocce erose dalle onde."
+			],
+			"de": [
+				"Ältere Schreibweisen sind Kelang und Chilung.",
+				"Miaokous Nachtmarkt entstand im Umfeld des Tempellebens.",
+				"Die Insel Heping besitzt markante, von Wellen geformte Felsen."
+			]
+		}
+	},
+	"taipei-city": {
+		"kind": "region",
+		"borders": [
+			"New Taipei City"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Taipei",
+			"nameDe": "Taipeh",
+			"nameIt": "Taipei",
+			"population": 6900273
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Taipei means north Taiwan.",
+				"The National Palace Museum preserves imperial Chinese collections.",
+				"Taipei 101 became a landmark of modern architecture."
+			],
+			"it": [
+				"Taipei significa Taiwan settentrionale.",
+				"Il Museo nazionale del palazzo conserva collezioni imperiali cinesi.",
+				"Taipei 101 divenne un simbolo dell’architettura moderna."
+			],
+			"de": [
+				"Taipei bedeutet Nord-Taiwan.",
+				"Das Nationale Palastmuseum bewahrt kaiserliche chinesische Sammlungen.",
+				"Taipei 101 wurde zu einem Wahrzeichen moderner Architektur."
+			]
+		}
+	},
+	"new-taipei-city": {
+		"kind": "region",
+		"borders": [
+			"Keelung City",
+			"Taipei City",
+			"Taoyuan City",
+			"Yilan County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "New Taipei",
+			"nameDe": "Neu-Taipeh",
+			"nameIt": "Nuova Taipei",
+			"population": 3893740
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Formerly Taipei County, it became New Taipei in 2010.",
+				"Jiufen preserves the atmosphere of a former mining town.",
+				"Pingxi is known for sky-lantern traditions."
+			],
+			"it": [
+				"Già Contea di Taipei, divenne New Taipei nel 2010.",
+				"Jiufen conserva l’atmosfera di un’antica città mineraria.",
+				"Pingxi è nota per le tradizioni delle lanterne volanti."
+			],
+			"de": [
+				"Der frühere Landkreis Taipei wurde 2010 zu New Taipei.",
+				"Jiufen bewahrt die Atmosphäre einer früheren Bergbaustadt.",
+				"Pingxi ist für Himmelslaternen-Traditionen bekannt."
+			]
+		}
+	},
+	"taoyuan-city": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu County",
+			"New Taipei City",
+			"Yilan County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Taoyuan",
+			"nameDe": "Taoyuan",
+			"nameIt": "Taoyuan",
+			"population": 500000
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name means peach garden.",
+				"Daxi preserves a historic trading street.",
+				"Hakka traditions are important throughout the wider municipality."
+			],
+			"it": [
+				"Il nome significa giardino dei peschi.",
+				"Daxi conserva una storica via commerciale.",
+				"Le tradizioni hakka sono importanti nel territorio municipale."
+			],
+			"de": [
+				"Der Name bedeutet Pfirsichgarten.",
+				"Daxi bewahrt eine historische Handelsstraße.",
+				"Hakka-Traditionen prägen das weitere Stadtgebiet."
+			]
+		}
+	},
+	"hsinchu-city": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu County",
+			"Miaoli County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hsinchu",
+			"nameDe": "Hsinchu",
+			"nameIt": "Hsinchu",
+			"population": 750000
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name means new bamboo.",
+				"The City God Temple is a centre of traditional worship.",
+				"The science park helped establish its technology industry."
+			],
+			"it": [
+				"Il nome significa nuovo bambù.",
+				"Il Tempio del Dio della Città è un centro di culto tradizionale.",
+				"Il parco scientifico contribuì alla nascita dell’industria tecnologica."
+			],
+			"de": [
+				"Der Name bedeutet neuer Bambus.",
+				"Der Stadtgott-Tempel ist ein Zentrum traditioneller Verehrung.",
+				"Der Wissenschaftspark förderte die Entstehung der Technologieindustrie."
+			]
+		}
+	},
+	"hsinchu-county": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu City",
+			"Miaoli County",
+			"Taichung City",
+			"Taoyuan City",
+			"Yilan County"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zhubei",
+			"nameDe": "Zhubei",
+			"nameIt": "Zhubei",
+			"population": 200000
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"It shares the name Hsinchu, meaning new bamboo.",
+				"Beipu preserves Hakka houses and traditions.",
+				"Neiwan’s railway recalls the forestry trade."
+			],
+			"it": [
+				"Condivide il nome Hsinchu, nuovo bambù.",
+				"Beipu conserva case e tradizioni hakka.",
+				"La ferrovia di Neiwan ricorda il commercio del legname."
+			],
+			"de": [
+				"Der gemeinsame Name Hsinchu bedeutet neuer Bambus.",
+				"Beipu bewahrt Hakka-Häuser und -Traditionen.",
+				"Neiwans Eisenbahn erinnert an den Holzhandel."
+			]
+		}
+	},
+	"yilan-county": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu County",
+			"Hualien County",
+			"New Taipei City",
+			"Taichung City",
+			"Taoyuan City"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yilan",
+			"nameDe": "Yilan",
+			"nameIt": "Yilan",
+			"population": 150000
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name developed from Kavalan, an Indigenous name.",
+				"Jiaoxi is known for hot springs.",
+				"Su’ao has unusual cold mineral springs."
+			],
+			"it": [
+				"Il nome si sviluppò da Kavalan, un nome indigeno.",
+				"Jiaoxi è nota per le sorgenti calde.",
+				"Su’ao possiede insolite sorgenti minerali fredde."
+			],
+			"de": [
+				"Der Name entwickelte sich aus dem indigenen Namen Kavalan.",
+				"Jiaoxi ist für heiße Quellen bekannt.",
+				"Su’ao besitzt ungewöhnliche kalte Mineralquellen."
+			]
+		}
+	},
+	"miaoli-county": {
+		"kind": "region",
+		"borders": [
+			"Hsinchu City",
+			"Hsinchu County",
+			"Taichung City"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Miaoli",
+			"nameDe": "Miaoli",
+			"nameIt": "Miaoli",
+			"population": 150000
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name was adapted from the Taokas place name Pali.",
+				"Sanyi preserves a woodcarving tradition.",
+				"Dahu is known for strawberry farming."
+			],
+			"it": [
+				"Il nome fu adattato dal toponimo taokas Pali.",
+				"Sanyi conserva una tradizione di intaglio del legno.",
+				"Dahu è nota per la coltivazione delle fragole."
+			],
+			"de": [
+				"Der Name wurde aus dem Taokas-Ortsnamen Pali übernommen.",
+				"Sanyi bewahrt eine Tradition der Holzschnitzerei.",
+				"Dahu ist für Erdbeeranbau bekannt."
+			]
+		}
+	},
+	"kinmen-county": {
+		"kind": "region",
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Kinmen means golden gate.",
+				"Wind Lion God statues protect villages in local tradition.",
+				"Former military tunnels recall the islands’ frontier history."
+			],
+			"it": [
+				"Kinmen significa porta d’oro.",
+				"Le statue del Dio Leone del Vento proteggono i villaggi nella tradizione locale.",
+				"Le antiche gallerie militari ricordano la storia di frontiera delle isole."
+			],
+			"de": [
+				"Kinmen bedeutet goldenes Tor.",
+				"Windlöwen-Statuen schützen nach örtlicher Überlieferung die Dörfer.",
+				"Frühere Militärtunnel erinnern an die Grenzgeschichte der Inseln."
+			]
+		}
+	},
+	"taichung-city": {
+		"kind": "region",
+		"borders": [
+			"Changhua County",
+			"Hsinchu County",
+			"Hualien County",
+			"Miaoli County",
+			"Nantou County",
+			"Yilan County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Taichung",
+			"nameDe": "Taichung",
+			"nameIt": "Taichung",
+			"population": 2629323
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Taichung means central Taiwan.",
+				"Its park pavilion recalls Japanese-era town planning.",
+				"The National Museum of Natural Science is a major cultural institution."
+			],
+			"it": [
+				"Taichung significa Taiwan centrale.",
+				"Il padiglione del parco ricorda l’urbanistica del periodo giapponese.",
+				"Il Museo nazionale di scienze naturali è un’importante istituzione culturale."
+			],
+			"de": [
+				"Taichung bedeutet Zentral-Taiwan.",
+				"Der Parkpavillon erinnert an die Stadtplanung der japanischen Zeit.",
+				"Das Nationale Naturwissenschaftsmuseum ist eine bedeutende Kultureinrichtung."
+			]
+		}
+	},
+	"changhua-county": {
+		"kind": "region",
+		"borders": [
+			"Nantou County",
+			"Taichung City",
+			"Yunlin County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Changhua",
+			"nameDe": "Changhua",
+			"nameIt": "Changhua",
+			"population": 750000
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its earlier name was Banxian.",
+				"The Great Buddha at Baguashan is a landmark.",
+				"Its Confucius temple preserves Qing-era heritage."
+			],
+			"it": [
+				"Il nome precedente era Banxian.",
+				"Il Grande Buddha di Baguashan è un simbolo locale.",
+				"Il tempio di Confucio conserva il patrimonio dell’epoca Qing."
+			],
+			"de": [
+				"Der frühere Name lautete Banxian.",
+				"Der Große Buddha von Baguashan ist ein Wahrzeichen.",
+				"Der Konfuziustempel bewahrt Kulturerbe der Qing-Zeit."
+			]
+		}
+	},
+	"nantou-county": {
+		"kind": "region",
+		"borders": [
+			"Changhua County",
+			"Chiayi County",
+			"Hualien County",
+			"Kaohsiung City",
+			"Taichung City",
+			"Yunlin County"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nantou",
+			"nameDe": "Nantou",
+			"nameIt": "Nantou",
+			"population": 165000
+		},
+		"peak": {
+			"name": "Yu Shan",
+			"elevation": 3952
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county is named after Nantou town.",
+				"Sun Moon Lake is associated with Thao culture.",
+				"Tea growing shapes the hills around Lugu."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Nantou.",
+				"Il lago del Sole e della Luna è legato alla cultura thao.",
+				"La coltivazione del tè caratterizza le colline di Lugu."
+			],
+			"de": [
+				"Der Landkreis ist nach Nantou benannt.",
+				"Der Sonne-Mond-See ist mit der Thao-Kultur verbunden.",
+				"Teeanbau prägt die Hügel um Lugu."
+			]
+		}
+	},
+	"hualien-county": {
+		"kind": "region",
+		"borders": [
+			"Kaohsiung City",
+			"Nantou County",
+			"Taichung City",
+			"Taitung County",
+			"Yilan County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hualien",
+			"nameDe": "Hualien",
+			"nameIt": "Hualien",
+			"population": 350468
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county shares its name with Hualien City.",
+				"Taroko is famed for its marble gorge.",
+				"Amis and other Indigenous communities preserve distinctive cultural traditions."
+			],
+			"it": [
+				"La contea condivide il nome con la città di Hualien.",
+				"Taroko è celebre per la gola di marmo.",
+				"Gli amis e altre comunità indigene conservano particolari tradizioni culturali."
+			],
+			"de": [
+				"Der Landkreis teilt seinen Namen mit Hualien.",
+				"Taroko ist für seine Marmorschlucht bekannt.",
+				"Amis und andere indigene Gemeinschaften bewahren eigene Kulturtraditionen."
+			]
+		}
+	},
+	"yunlin-county": {
+		"kind": "region",
+		"borders": [
+			"Changhua County",
+			"Chiayi County",
+			"Nantou County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Douliou",
+			"nameDe": "Douliu",
+			"nameIt": "Douliu",
+			"population": 106653
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Chinese name means cloud forest.",
+				"Beigang’s Chaotian Temple is dedicated to Mazu.",
+				"Glove puppetry is an important cultural tradition."
+			],
+			"it": [
+				"Il nome cinese significa foresta di nuvole.",
+				"Il Tempio Chaotian di Beigang è dedicato a Mazu.",
+				"Il teatro dei burattini a guanto è un’importante tradizione culturale."
+			],
+			"de": [
+				"Der chinesische Name bedeutet Wolkenwald.",
+				"Beigangs Chaotian-Tempel ist Mazu geweiht.",
+				"Handpuppentheater ist eine bedeutende Kulturtradition."
+			]
+		}
+	},
+	"chiayi-city": {
+		"kind": "region",
+		"borders": [
+			"Chiayi County"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chiayi",
+			"nameDe": "Chiayi",
+			"nameIt": "Chiayi",
+			"population": 500000
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Formerly Tsulosan, it was renamed Chiayi in 1787.",
+				"The Alishan Forest Railway starts here.",
+				"Hinoki Village preserves former forestry dormitories."
+			],
+			"it": [
+				"Già Tsulosan, fu ribattezzata Chiayi nel 1787.",
+				"La ferrovia forestale di Alishan parte da qui.",
+				"Il villaggio Hinoki conserva antichi dormitori dei lavoratori forestali."
+			],
+			"de": [
+				"Das frühere Tsulosan wurde 1787 in Chiayi umbenannt.",
+				"Die Alishan-Waldbahn beginnt hier.",
+				"Das Hinoki-Dorf bewahrt frühere Forstarbeiterunterkünfte."
+			]
+		}
+	},
+	"penghu-county": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Magong",
+			"nameDe": "Makung",
+			"nameIt": "Magong",
+			"population": 56435
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its old European name Pescadores means fishermen in Portuguese.",
+				"Basalt columns recall the islands’ volcanic origin.",
+				"Traditional houses use local stone."
+			],
+			"it": [
+				"L’antico nome europeo Pescadores significa pescatori in portoghese.",
+				"Le colonne di basalto ricordano l’origine vulcanica delle isole.",
+				"Le case tradizionali utilizzano pietra locale."
+			],
+			"de": [
+				"Der alte europäische Name Pescadores bedeutet auf Portugiesisch Fischer.",
+				"Basaltsäulen erinnern an den vulkanischen Ursprung der Inseln.",
+				"Traditionelle Häuser verwenden örtlichen Stein."
+			]
+		}
+	},
+	"chiayi-county": {
+		"kind": "region",
+		"borders": [
+			"Chiayi City",
+			"Kaohsiung City",
+			"Nantou County",
+			"Tainan City",
+			"Yunlin County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Puzi",
+			"nameDe": "Puzih",
+			"nameIt": "Puzi",
+			"population": 50000
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The name Chiayi recalls a Qing-era commendation of loyalty.",
+				"Alishan is known for tea and forestry heritage.",
+				"Taibao houses the National Palace Museum’s Southern Branch."
+			],
+			"it": [
+				"Il nome Chiayi ricorda un elogio della lealtà dell’epoca Qing.",
+				"Alishan è nota per il tè e il patrimonio forestale.",
+				"Taibao ospita la sede meridionale del Museo nazionale del palazzo."
+			],
+			"de": [
+				"Der Name Chiayi erinnert an ein Lob der Treue aus der Qing-Zeit.",
+				"Alishan ist für Tee und Forstgeschichte bekannt.",
+				"Taibao beherbergt die südliche Zweigstelle des Nationalen Palastmuseums."
+			]
+		}
+	},
+	"tainan-city": {
+		"kind": "region",
+		"borders": [
+			"Chiayi County",
+			"Kaohsiung City"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tainan",
+			"nameDe": "Tainan",
+			"nameIt": "Tainan",
+			"population": 1876312
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Tainan means southern Taiwan.",
+				"Anping’s old fort recalls the Dutch period.",
+				"Its Confucius temple preserves an early centre of classical learning."
+			],
+			"it": [
+				"Tainan significa Taiwan meridionale.",
+				"L’antico forte di Anping ricorda il periodo olandese.",
+				"Il tempio di Confucio conserva un antico centro di studi classici."
+			],
+			"de": [
+				"Tainan bedeutet Süd-Taiwan.",
+				"Anpings altes Fort erinnert an die niederländische Zeit.",
+				"Der Konfuziustempel bewahrt ein frühes Zentrum klassischer Bildung."
+			]
+		}
+	},
+	"kaohsiung-city": {
+		"kind": "region",
+		"borders": [
+			"Chiayi County",
+			"Hualien County",
+			"Nantou County",
+			"Pingtung County",
+			"Tainan City",
+			"Taitung County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kaohsiung",
+			"nameDe": "Kaohsiung",
+			"nameIt": "Kaohsiung",
+			"population": 2769072
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its earlier name Takau came from an Indigenous place name.",
+				"Pier-2 turned old warehouses into an arts district.",
+				"The Love River is a landmark of the city."
+			],
+			"it": [
+				"Il nome precedente Takau derivava da un toponimo indigeno.",
+				"Pier-2 trasformò antichi magazzini in un quartiere artistico.",
+				"Il Fiume dell’Amore è un simbolo della città."
+			],
+			"de": [
+				"Der frühere Name Takau ging auf einen indigenen Ortsnamen zurück.",
+				"Pier-2 verwandelte alte Lagerhäuser in ein Kunstviertel.",
+				"Der Liebesfluss ist ein Wahrzeichen der Stadt."
+			]
+		}
+	},
+	"taitung-county": {
+		"kind": "region",
+		"borders": [
+			"Hualien County",
+			"Kaohsiung City",
+			"Pingtung County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Taitung",
+			"nameDe": "Taitung",
+			"nameIt": "Taitung",
+			"population": 175000
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Taitung means eastern Taiwan.",
+				"The Beinan archaeological site preserves prehistoric burials.",
+				"The National Museum of Prehistory explores the island’s early cultures."
+			],
+			"it": [
+				"Taitung significa Taiwan orientale.",
+				"Il sito archeologico di Beinan conserva sepolture preistoriche.",
+				"Il Museo nazionale della preistoria esplora le antiche culture dell’isola."
+			],
+			"de": [
+				"Taitung bedeutet Ost-Taiwan.",
+				"Die archäologische Stätte Beinan bewahrt prähistorische Gräber.",
+				"Das Nationale Museum für Vorgeschichte erforscht die frühen Kulturen der Insel."
+			]
+		}
+	},
+	"pingtung-county": {
+		"kind": "region",
+		"borders": [
+			"Kaohsiung City",
+			"Taitung County"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pingtung",
+			"nameDe": "Pingtung",
+			"nameIt": "Pingtung",
+			"population": 503530
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The county is named after Pingtung City.",
+				"Kenting National Park protects coastal and coral habitats.",
+				"Liuqiu is known for its coral-limestone landscape."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Pingtung.",
+				"Il Parco nazionale di Kenting protegge habitat costieri e corallini.",
+				"Liuqiu è nota per il paesaggio di calcare corallino."
+			],
+			"de": [
+				"Der Landkreis ist nach Pingtung benannt.",
+				"Der Kenting-Nationalpark schützt Küsten- und Korallenlebensräume.",
+				"Liuqiu ist für seine Korallenkalklandschaft bekannt."
+			]
+		}
+	}
+}

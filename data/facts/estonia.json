@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Estonia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"tallinn": {
 		"city": {
@@ -24,18 +25,792 @@
 		}
 	},
 	"tartu": {
-		"city": {
+		"region": {
 			"en": [
-				"Its university was founded in 1632 by the Swedish king Gustavus Adolphus.",
-				"It calls itself the city of good thoughts."
+				"The county takes its name from the town of Tartu.",
+				"Its university was founded in 1632 under Swedish rule.",
+				"The old observatory received a pioneering Fraunhofer telescope in 1824."
 			],
 			"it": [
-				"La sua università fu fondata nel 1632 dal re di Svezia Gustavo Adolfo.",
-				"Si definisce la città dei buoni pensieri."
+				"La contea prende il nome dalla città di Tartu.",
+				"La sua università fu fondata nel 1632 sotto il dominio svedese.",
+				"Il vecchio osservatorio ricevette un innovativo telescopio Fraunhofer nel 1824."
 			],
 			"de": [
-				"Ihre Universität wurde 1632 vom schwedischen König Gustav Adolf gegründet.",
-				"Sie nennt sich die Stadt der guten Gedanken."
+				"Der Kreis ist nach der Stadt Tartu benannt.",
+				"Seine Universität wurde 1632 unter schwedischer Herrschaft gegründet.",
+				"Die alte Sternwarte erhielt 1824 ein wegweisendes Fraunhofer-Teleskop."
+			]
+		},
+		"city": {
+			"en": [
+				"Dorpat is its historical German name.",
+				"Its university was founded in 1632 by Sweden’s King Gustav II Adolf.",
+				"An innovative Fraunhofer telescope arrived at its observatory in 1824."
+			],
+			"it": [
+				"Dorpat è il suo nome storico tedesco.",
+				"La sua università fu fondata nel 1632 dal re svedese Gustavo II Adolfo.",
+				"Un innovativo telescopio Fraunhofer arrivò al suo osservatorio nel 1824."
+			],
+			"de": [
+				"Dorpat ist sein historischer deutscher Name.",
+				"Seine Universität wurde 1632 vom schwedischen König Gustav II. Adolf gegründet.",
+				"1824 erhielt seine Sternwarte ein neuartiges Fraunhofer-Teleskop."
+			]
+		}
+	},
+	"_sources": {
+		"harju:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://visitharju.ee/jagala-jogi-ja-rippsild/",
+			"https://arhiiv.eki.ee/dict/knr/lisad/knr_sonastik.pdf"
+		],
+		"laane-viru:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://rmk.ee/en/exploring-nature/where-to-go/rmk-sagadi-forest-centre/",
+			"https://arhiiv.eki.ee/dict/knr/index.cgi?Q=Virumaa"
+		],
+		"ida-viru:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://energy.ec.europa.eu/document/download/1fc50488-58e5-44f3-8f19-bab5875c2fe3_en?filename=9_strategies_and_plans_for_the_ida-virumaa_region_ando_leppiman_deputy_secretary_general_in_the_ministry_of_economic_affairs_and_communications_.pdf",
+			"https://arhiiv.eki.ee/dict/knr/index.cgi?Q=Virumaa"
+		],
+		"jarva:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://visitestonia.com/en/where-to-go/where-to-find-the-most-scenic-views-in-estonia",
+			"https://tyrilillelaat.ee/en",
+			"https://arhiiv.eki.ee/dict/knr/index.cgi?Q=J%C3%A4rvamaa"
+		],
+		"rapla:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://visitestonia.com/en/rapla-maarja-magdaleena-church",
+			"https://visitestonia.com/en/mahtra-peasant-museum-and-atla-eeru-tavern"
+		],
+		"laane:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://linnuriik.ee/en/bird-species-that-you-can-see-from-the-penijoe-observation-tower/",
+			"https://arhiiv.eki.ee/dict/knr/index.cgi?Q=L%C3%A4%C3%A4nemaa"
+		],
+		"hiiu:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://hiiumaa.ee/en/highlights-of-the-islands/",
+			"https://arhiiv.eki.ee/dict/knr/index.cgi?Q=Hiiumaa"
+		],
+		"jogeva:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://visitjogeva.com/en/attractions/",
+			"https://visitestonia.com/en/palamuse-o-lutss-parish-school-museum"
+		],
+		"tartu:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://ut.ee/en/content/history-university-tartu",
+			"https://muuseum.ut.ee/en/content/exhibition-two-boys-who-dreamed-stars-struve-fraunhofer-and-200-year-old-telescope"
+		],
+		"viljandi:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://visitestonia.com/en/where-to-go/viljandi",
+			"https://visitviljandi.ee/en/county/soomaa/"
+		],
+		"parnu:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://visitsoomaa.ee/asukoht/",
+			"https://visitestonia.com/en/where-to-go/soomaa-national-park-3"
+		],
+		"saare:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://hiiumaa.ee/en/highlights-of-the-islands/",
+			"https://arhiiv.eki.ee/cgi-bin/mkn8.cgi?allikas=&asum=&form=ee&keel=&kihelkond=&kohanimi=&lang=et&maakond=&nimeliik=a1&of=tb&staatus=P&vald="
+		],
+		"polva:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://visitestonia.com/en/large-and-small-taevaskoda-sandstone-outcrops",
+			"https://visitestonia.com/en/estonian-road-museum"
+		],
+		"valga:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://visitestonia.com/en/where-to-go/where-to-find-the-most-scenic-views-in-estonia",
+			"https://visitestonia.com/en/sangaste-castle"
+		],
+		"voru:region": [
+			"https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart",
+			"https://www.visitvoru.ee/wezd-rather-go-hungry-than-without-going-to-the-sauna"
+		],
+		"maardu:city": [
+			"https://arhiiv.eki.ee/dict/knr/index.cgi?C06=et&F=M&Q=Maardu",
+			"https://maardu45.ee/en/maardu/maardu-lugu/"
+		],
+		"kohtla-jarve:city": [
+			"https://arhiiv.eki.ee/dict/knr/index.cgi?Q=Kohtla-J%C3%A4rve"
+		],
+		"sillamae:city": [
+			"https://www.sillamae.ee/en/tourism/history",
+			"https://idaviru.ee/en/sillamae-the-city-which-once-was-hidden-from-the-maps/"
+		],
+		"narva:city": [
+			"https://visitestonia.com/en/where-to-go/narva-1",
+			"https://visitnarva.ee/activities/kreenholm-district-and-kreenholm-textile-factory/"
+		],
+		"johvi:city": [
+			"https://arhiiv.eki.ee/dict/knr/index.cgi?Q=jewe",
+			"https://johvimuuseum.ee/johvi-church/"
+		],
+		"rakvere:city": [
+			"https://teatmik.eki.ee/teatmik/eesti-nimed-voorkeelses-tekstis/",
+			"https://visitrakvere.com/visitee/skulptuur-tarvas/",
+			"https://visitestonia.com/en/tarvas-sculpture"
+		],
+		"saue:city": [
+			"https://sauemois.ee/?lang=en&page_id=115"
+		],
+		"keila:city": [
+			"https://eki.ee/dict/knr/lisad/knr_sonastik.pdf",
+			"https://harjumaamuuseum.ee/en/"
+		],
+		"tapa:city": [
+			"https://arhiiv.eki.ee/dict/knr/index.cgi?Q=Tapa",
+			"https://tapamuuseum.ee/"
+		],
+		"haapsalu:city": [
+			"https://teatmik.eki.ee/teatmik/eesti-nimed-voorkeelses-tekstis/",
+			"https://visitestonia.com/en/where-to-go/haapsalu",
+			"https://media.voog.com/0000/0051/0451/files/VisitHaapsalu_ENG_148x210mm_web.pdf"
+		],
+		"paide:city": [
+			"https://teatmik.eki.ee/teatmik/eesti-nimed-voorkeelses-tekstis/",
+			"https://visitestonia.com/en/where-to-go/where-to-find-the-most-scenic-views-in-estonia",
+			"https://paide.kovtp.ee/linna-tutvustus"
+		],
+		"parnu:city": [
+			"https://teatmik.eki.ee/teatmik/eesti-nimed-voorkeelses-tekstis/",
+			"https://visitparnu.com/wp-content/uploads/2023/01/parnu-imagotrkis-2019_ENG.pdf"
+		],
+		"tartu:city": [
+			"https://teatmik.eki.ee/teatmik/eesti-nimed-voorkeelses-tekstis/",
+			"https://ut.ee/en/content/history-university-tartu",
+			"https://muuseum.ut.ee/en/content/exhibition-two-boys-who-dreamed-stars-struve-fraunhofer-and-200-year-old-telescope"
+		],
+		"viljandi:city": [
+			"https://teatmik.eki.ee/teatmik/eesti-nimed-voorkeelses-tekstis/",
+			"https://visitestonia.com/en/where-to-go/viljandi"
+		],
+		"kuressaare:city": [
+			"https://teatmik.eki.ee/teatmik/eesti-nimed-voorkeelses-tekstis/",
+			"https://www.muinsuskaitseamet.ee/sites/default/files/documents/2024-02/Visiting_Neighbours.pdf"
+		],
+		"elva:city": [
+			"https://visitelva.com/arbi-jarve-loodusrada/arbi-jarve-tahendus-elva-kultuuriloos/",
+			"https://visitelva.com/professoritelinnaosa/"
+		],
+		"polva:city": [
+			"https://arhiiv.eki.ee/dict/knr/lisad/knr_sonastik.pdf",
+			"https://visitestonia.com/en/polva-central-square"
+		],
+		"voru:city": [
+			"https://teatmik.eki.ee/teatmik/eesti-nimed-voorkeelses-tekstis/",
+			"https://www.visitvoru.ee/files/jalutuskaik/Voru_linna_jalutuskaik_A3.pdf"
+		],
+		"valga:city": [
+			"https://teatmik.eki.ee/teatmik/eesti-nimed-voorkeelses-tekstis/",
+			"https://riga.mfa.ee/timeline-of-estonian-latvian-relations/",
+			"https://visitvalgavalka.com/history/"
+		]
+	},
+	"harju": {
+		"region": {
+			"en": [
+				"Harju’s name is probably related to a word for a ridge.",
+				"The Jägala River reaches the Gulf of Finland here.",
+				"Its lower course includes the Jägala waterfall."
+			],
+			"it": [
+				"Il nome Harju è probabilmente legato a una parola che indica un crinale.",
+				"Qui il fiume Jägala raggiunge il Golfo di Finlandia.",
+				"Il suo corso inferiore comprende la cascata di Jägala."
+			],
+			"de": [
+				"Der Name Harju hängt wahrscheinlich mit einem Wort für einen Höhenrücken zusammen.",
+				"Hier mündet der Fluss Jägala in den Finnischen Meerbusen.",
+				"An seinem Unterlauf liegt der Jägala-Wasserfall."
+			]
+		}
+	},
+	"laane-viru": {
+		"region": {
+			"en": [
+				"Lääne-Viru means western Viru, preserving an old regional name.",
+				"Sagadi Manor lies in its part of Lahemaa National Park.",
+				"The manor complex houses a forest museum."
+			],
+			"it": [
+				"Lääne-Viru significa Viru occidentale e conserva un antico nome regionale.",
+				"Il maniero di Sagadi si trova nella sua parte del Parco nazionale di Lahemaa.",
+				"Il complesso del maniero ospita un museo forestale."
+			],
+			"de": [
+				"Lääne-Viru bedeutet westliches Viru und bewahrt einen alten Landschaftsnamen.",
+				"Das Gut Sagadi liegt in seinem Teil des Lahemaa-Nationalparks.",
+				"Der Gutskomplex beherbergt ein Waldmuseum."
+			]
+		}
+	},
+	"ida-viru": {
+		"region": {
+			"en": [
+				"Ida-Viru means eastern Viru, preserving an old regional name.",
+				"The Narva River marks its border with Russia.",
+				"Oil-shale mining has shaped its industrial landscape."
+			],
+			"it": [
+				"Ida-Viru significa Viru orientale e conserva un antico nome regionale.",
+				"Il fiume Narva segna il suo confine con la Russia.",
+				"L’estrazione di scisti bituminosi ha modellato il suo paesaggio industriale."
+			],
+			"de": [
+				"Ida-Viru bedeutet östliches Viru und bewahrt einen alten Landschaftsnamen.",
+				"Der Fluss Narva bildet seine Grenze zu Russland.",
+				"Der Ölschieferabbau hat seine Industrielandschaft geprägt."
+			]
+		}
+	},
+	"jarva": {
+		"region": {
+			"en": [
+				"Järva’s name is usually linked to järv, the Estonian word for lake.",
+				"Paide’s castle tower recalls the medieval Livonian Order.",
+				"Türi’s flower fair brings gardeners to the county each spring."
+			],
+			"it": [
+				"Il nome Järva viene solitamente collegato a järv, la parola estone per lago.",
+				"La torre del castello di Paide ricorda l’Ordine di Livonia medievale.",
+				"La fiera dei fiori di Türi richiama gli appassionati di giardinaggio ogni primavera."
+			],
+			"de": [
+				"Der Name Järva wird meist mit järv, dem estnischen Wort für See, verbunden.",
+				"Paides Burgturm erinnert an den mittelalterlichen Livländischen Orden.",
+				"Türis Blumenmesse zieht jeden Frühling Gartenfreunde in den Kreis."
+			]
+		}
+	},
+	"rapla": {
+		"region": {
+			"en": [
+				"The county takes its name from the town of Rapla.",
+				"Rapla’s church has an unusual pair of towers.",
+				"The Mahtra Peasant Museum recalls the peasant uprising of 1858."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Rapla.",
+				"La chiesa di Rapla ha un’insolita coppia di torri.",
+				"Il Museo contadino di Mahtra ricorda la rivolta contadina del 1858."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Rapla benannt.",
+				"Raplas Kirche hat ein ungewöhnliches Turmpaar.",
+				"Das Bauernmuseum Mahtra erinnert an den Bauernaufstand von 1858."
+			]
+		}
+	},
+	"laane": {
+		"region": {
+			"en": [
+				"Lääne’s name refers to its western position among Estonia’s mainland counties.",
+				"Its coast includes birdwatching sites around Matsalu Bay.",
+				"Migrating geese and cranes gather on the coastal meadows."
+			],
+			"it": [
+				"Il nome Lääne richiama la sua posizione occidentale tra le contee continentali estoni.",
+				"La sua costa comprende punti di osservazione degli uccelli attorno alla baia di Matsalu.",
+				"Oche e gru migratrici si radunano nei prati costieri."
+			],
+			"de": [
+				"Der Name Lääne verweist auf seine westliche Lage unter Estlands Festlandkreisen.",
+				"An seiner Küste liegen Vogelbeobachtungsplätze an der Matsalu-Bucht.",
+				"Zugvögel wie Gänse und Kraniche sammeln sich auf den Küstenwiesen."
+			]
+		}
+	},
+	"hiiu": {
+		"region": {
+			"en": [
+				"Hiiu takes its name from the island of Hiiumaa.",
+				"Hiiumaa is Estonia’s second-largest island.",
+				"Kõpu’s lighthouse recalls the island’s long seafaring history."
+			],
+			"it": [
+				"Hiiu prende il nome dall’isola di Hiiumaa.",
+				"Hiiumaa è la seconda isola più grande dell’Estonia.",
+				"Il faro di Kõpu ricorda la lunga storia marinara dell’isola."
+			],
+			"de": [
+				"Hiiu ist nach der Insel Hiiumaa benannt.",
+				"Hiiumaa ist Estlands zweitgrößte Insel.",
+				"Der Leuchtturm Kõpu erinnert an die lange Seefahrtsgeschichte der Insel."
+			]
+		}
+	},
+	"jogeva": {
+		"region": {
+			"en": [
+				"The county takes its name from the town of Jõgeva.",
+				"Palamuse preserves the parish-school world associated with Oskar Luts’s Spring.",
+				"Põltsamaa’s castle was founded in 1272."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Jõgeva.",
+				"Palamuse conserva il mondo della scuola parrocchiale legato a Primavera di Oskar Luts.",
+				"Il castello di Põltsamaa fu fondato nel 1272."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Jõgeva benannt.",
+				"Palamuse bewahrt die Pfarrschulwelt aus Oskar Luts’ Frühling.",
+				"Die Burg Põltsamaa wurde 1272 gegründet."
+			]
+		}
+	},
+	"viljandi": {
+		"region": {
+			"en": [
+				"The county takes its name from the town of Viljandi.",
+				"Its folk-music festival celebrates traditional music.",
+				"The county reaches into Soomaa, famous for its flood-filled fifth season."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Viljandi.",
+				"Il suo festival folk celebra la musica tradizionale.",
+				"La contea si estende fino a Soomaa, celebre per la quinta stagione delle inondazioni."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Viljandi benannt.",
+				"Sein Folkfestival feiert die traditionelle Musik.",
+				"Der Kreis reicht bis nach Soomaa, bekannt für seine fünfte Jahreszeit mit Überschwemmungen."
+			]
+		},
+		"city": {
+			"en": [
+				"Fellin is its historical German name.",
+				"The town belonged to the medieval Hanseatic trading network.",
+				"Its annual folk-music festival celebrates traditional music."
+			],
+			"it": [
+				"Fellin è il suo nome storico tedesco.",
+				"La città faceva parte della rete commerciale anseatica medievale.",
+				"Il suo festival folk annuale celebra la musica tradizionale."
+			],
+			"de": [
+				"Fellin ist sein historischer deutscher Name.",
+				"Die Stadt gehörte zum mittelalterlichen Handelsnetz der Hanse.",
+				"Ihr jährliches Folkfestival feiert die traditionelle Musik."
+			]
+		}
+	},
+	"parnu": {
+		"region": {
+			"en": [
+				"The county takes its name from the town of Pärnu.",
+				"Soomaa’s landscape crosses the boundary between Pärnu and Viljandi counties.",
+				"During its fifth season, floods can turn forests and meadows into canoe routes."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Pärnu.",
+				"Il paesaggio di Soomaa attraversa il confine tra le contee di Pärnu e Viljandi.",
+				"Durante la quinta stagione, le inondazioni possono trasformare boschi e prati in percorsi per canoe."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Pärnu benannt.",
+				"Soomaas Landschaft erstreckt sich über die Grenze zwischen den Kreisen Pärnu und Viljandi.",
+				"In der fünften Jahreszeit können Überschwemmungen Wälder und Wiesen zu Kanurouten machen."
+			]
+		},
+		"city": {
+			"en": [
+				"Pernau is its historical German name.",
+				"Its first seaside bathing establishment opened in 1838.",
+				"Its waterfront has notable examples of 1930s functionalist architecture."
+			],
+			"it": [
+				"Pernau è il suo nome storico tedesco.",
+				"Il suo primo stabilimento balneare aprì nel 1838.",
+				"Il lungomare ospita notevoli esempi di architettura funzionalista degli anni Trenta."
+			],
+			"de": [
+				"Pernau ist sein historischer deutscher Name.",
+				"Seine erste Seebadeanstalt eröffnete 1838.",
+				"An der Küste stehen bedeutende Beispiele funktionalistischer Architektur der 1930er Jahre."
+			]
+		}
+	},
+	"saare": {
+		"region": {
+			"en": [
+				"Saare shares its name with the island of Saaremaa.",
+				"The Kaali craters on Saaremaa were formed by a meteorite impact.",
+				"Angla preserves traditional windmills."
+			],
+			"it": [
+				"Saare condivide il nome con l’isola di Saaremaa.",
+				"I crateri di Kaali, a Saaremaa, furono formati dall’impatto di un meteorite.",
+				"Angla conserva mulini a vento tradizionali."
+			],
+			"de": [
+				"Saare teilt seinen Namen mit der Insel Saaremaa.",
+				"Die Kaali-Krater auf Saaremaa entstanden durch einen Meteoriteneinschlag.",
+				"Angla bewahrt traditionelle Windmühlen."
+			]
+		}
+	},
+	"polva": {
+		"region": {
+			"en": [
+				"The county takes its name from the town of Põlva.",
+				"Taevaskoja’s sandstone cliffs rise above the Ahja River.",
+				"The Road Museum at Varbuse occupies a former horse post station."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Põlva.",
+				"Le pareti di arenaria di Taevaskoja si innalzano sul fiume Ahja.",
+				"Il Museo della strada di Varbuse occupa un’antica stazione di posta a cavalli."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Põlva benannt.",
+				"Die Sandsteinfelsen von Taevaskoja ragen über dem Fluss Ahja auf.",
+				"Das Straßenmuseum in Varbuse nutzt eine ehemalige Pferdepoststation."
+			]
+		},
+		"city": {
+			"en": [
+				"Pölwe is a historical German form of the name.",
+				"The Church of the Blessed Virgin Mary stands near the town centre.",
+				"Its central square opened in 2018 as part of Estonia’s centenary programme."
+			],
+			"it": [
+				"Pölwe è una forma storica tedesca del nome.",
+				"La chiesa della Beata Vergine Maria sorge vicino al centro.",
+				"La piazza centrale aprì nel 2018 nell’ambito del programma per il centenario dell’Estonia."
+			],
+			"de": [
+				"Pölwe ist eine historische deutsche Namensform.",
+				"Die Marienkirche steht nahe dem Stadtzentrum.",
+				"Der zentrale Platz wurde 2018 im Rahmen von Estlands Hundertjahrfeier eröffnet."
+			]
+		}
+	},
+	"valga": {
+		"region": {
+			"en": [
+				"The county takes its name from the town of Valga.",
+				"The county includes Otepää’s winter-sports landscape.",
+				"Sangaste Castle and its park were inspired by Windsor Castle."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Valga.",
+				"La contea comprende il paesaggio degli sport invernali di Otepää.",
+				"Il castello di Sangaste e il suo parco furono ispirati al castello di Windsor."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Valga benannt.",
+				"Zum Kreis gehört die Wintersportlandschaft von Otepää.",
+				"Schloss Sangaste und sein Park wurden von Windsor Castle inspiriert."
+			]
+		},
+		"city": {
+			"en": [
+				"Walk is its historical German name.",
+				"A border divided the town between Estonia and Latvia in 1920.",
+				"Railway connections fuelled its rapid growth around the turn of the twentieth century."
+			],
+			"it": [
+				"Walk è il suo nome storico tedesco.",
+				"Nel 1920 un confine divise la città tra Estonia e Lettonia.",
+				"I collegamenti ferroviari favorirono la sua rapida crescita tra Ottocento e Novecento."
+			],
+			"de": [
+				"Walk ist sein historischer deutscher Name.",
+				"1920 teilte eine Grenze die Stadt zwischen Estland und Lettland.",
+				"Eisenbahnverbindungen förderten ihr rasches Wachstum um die Wende zum zwanzigsten Jahrhundert."
+			]
+		}
+	},
+	"voru": {
+		"region": {
+			"en": [
+				"The county takes its name from the town of Võru.",
+				"The smoke-sauna tradition of Old Võromaa entered UNESCO’s intangible heritage list in 2014.",
+				"These traditional saunas have no chimney."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Võru.",
+				"La tradizione della sauna a fumo della Vecchia Võromaa entrò nella lista UNESCO del patrimonio immateriale nel 2014.",
+				"Queste saune tradizionali non hanno camino."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Võru benannt.",
+				"Die Rauchsaunatradition des alten Võromaa wurde 2014 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen.",
+				"Diese traditionellen Saunen haben keinen Schornstein."
+			]
+		},
+		"city": {
+			"en": [
+				"Werro is its historical German name.",
+				"The planned town was founded on manor lands in 1784.",
+				"The physician and Kalevipoeg compiler Friedrich Reinhold Kreutzwald lived here."
+			],
+			"it": [
+				"Werro è il suo nome storico tedesco.",
+				"La città pianificata fu fondata sui terreni di un maniero nel 1784.",
+				"Qui visse Friedrich Reinhold Kreutzwald, medico e compilatore del Kalevipoeg."
+			],
+			"de": [
+				"Werro ist sein historischer deutscher Name.",
+				"Die planmäßig angelegte Stadt wurde 1784 auf Gutsland gegründet.",
+				"Hier lebte der Arzt und Kalevipoeg-Bearbeiter Friedrich Reinhold Kreutzwald."
+			]
+		}
+	},
+	"maardu": {
+		"city": {
+			"en": [
+				"The settlement grew on the lands of Maardu Manor around a new phosphorite factory.",
+				"Phosphorite extraction shaped the town’s industrial history.",
+				"Muuga Harbour opened in the 1980s beside the town."
+			],
+			"it": [
+				"L’abitato crebbe sui terreni del maniero di Maardu attorno a una nuova fabbrica di fosforite.",
+				"L’estrazione di fosforite segnò la storia industriale della città.",
+				"Il porto di Muuga aprì negli anni Ottanta accanto alla città."
+			],
+			"de": [
+				"Die Siedlung entstand auf dem Land des Gutes Maardu um eine neue Phosphoritfabrik.",
+				"Der Phosphoritabbau prägte die Industriegeschichte der Stadt.",
+				"Neben der Stadt wurde in den 1980er Jahren der Hafen Muuga eröffnet."
+			]
+		}
+	},
+	"kohtla-jarve": {
+		"city": {
+			"en": [
+				"Its name joins those of the Kohtla and Järve manors.",
+				"The city grew with the oil-shale industry in the 1920s.",
+				"Its urban districts occupy separate patches of land."
+			],
+			"it": [
+				"Il nome unisce quelli dei manieri di Kohtla e Järve.",
+				"La città crebbe con l’industria degli scisti bituminosi negli anni Venti.",
+				"I suoi quartieri occupano aree separate tra loro."
+			],
+			"de": [
+				"Der Name verbindet die Namen der Güter Kohtla und Järve.",
+				"Die Stadt wuchs in den 1920er Jahren mit der Ölschieferindustrie.",
+				"Ihre Stadtteile liegen auf räumlich getrennten Flächen."
+			]
+		}
+	},
+	"sillamae": {
+		"city": {
+			"en": [
+				"The settlement was first recorded in 1502.",
+				"It became a closed Soviet town because of its uranium industry.",
+				"Its seafront preserves an ensemble of Stalinist architecture."
+			],
+			"it": [
+				"L’insediamento fu menzionato per la prima volta nel 1502.",
+				"Divenne una città sovietica chiusa per via della sua industria dell’uranio.",
+				"Il lungomare conserva un complesso di architettura stalinista."
+			],
+			"de": [
+				"Die Siedlung wurde erstmals 1502 erwähnt.",
+				"Wegen ihrer Uranindustrie wurde sie zu einer geschlossenen sowjetischen Stadt.",
+				"An ihrer Küste ist ein Ensemble stalinistischer Architektur erhalten."
+			]
+		}
+	},
+	"narva": {
+		"city": {
+			"en": [
+				"Narva Castle is also known as Hermann Castle.",
+				"It faces Ivangorod’s fortress across the river.",
+				"The Kreenholm textile works grew here in the nineteenth century."
+			],
+			"it": [
+				"Il castello di Narva è noto anche come castello di Hermann.",
+				"Si affaccia sulla fortezza di Ivangorod, oltre il fiume.",
+				"La manifattura tessile di Kreenholm si sviluppò qui nell’Ottocento."
+			],
+			"de": [
+				"Die Burg Narva ist auch als Hermannsfeste bekannt.",
+				"Ihr gegenüber liegt jenseits des Flusses die Festung Iwangorod.",
+				"Im neunzehnten Jahrhundert entstand hier die Textilfabrik Kreenholm."
+			]
+		}
+	},
+	"johvi": {
+		"city": {
+			"en": [
+				"Jewe is its historical German name.",
+				"St Michael’s Church was built to serve as a fortress as well as a place of worship.",
+				"A museum occupies the vaulted rooms beneath the church’s altar."
+			],
+			"it": [
+				"Jewe è il suo nome storico tedesco.",
+				"La chiesa di San Michele fu costruita come fortezza oltre che come luogo di culto.",
+				"Un museo occupa gli ambienti voltati sotto l’altare della chiesa."
+			],
+			"de": [
+				"Jewe ist sein historischer deutscher Name.",
+				"Die Michaelskirche wurde zugleich als Festung und Gotteshaus gebaut.",
+				"In den Gewölberäumen unter dem Altar befindet sich ein Museum."
+			]
+		}
+	},
+	"rakvere": {
+		"city": {
+			"en": [
+				"Wesenberg is its historical German name.",
+				"Its castle recalls the town’s medieval past.",
+				"The bronze Tarvas sculpture celebrates an aurochs, a symbol of the town."
+			],
+			"it": [
+				"Wesenberg è il suo nome storico tedesco.",
+				"Il castello ricorda il passato medievale della città.",
+				"La scultura bronzea Tarvas celebra un uro, simbolo della città."
+			],
+			"de": [
+				"Wesenberg ist sein historischer deutscher Name.",
+				"Die Burg erinnert an die mittelalterliche Vergangenheit der Stadt.",
+				"Die Bronzeskulptur Tarvas zeigt einen Auerochsen als Wahrzeichen der Stadt."
+			]
+		}
+	},
+	"saue": {
+		"city": {
+			"en": [
+				"Saue’s manor was also known as Friedrichshof.",
+				"Its present manor house was completed in 1792.",
+				"The manor is an example of early Classical architecture in Estonia."
+			],
+			"it": [
+				"Il maniero di Saue era noto anche come Friedrichshof.",
+				"L’attuale edificio padronale fu completato nel 1792.",
+				"Il maniero è un esempio del primo classicismo in Estonia."
+			],
+			"de": [
+				"Das Gut Saue war auch als Friedrichshof bekannt.",
+				"Das heutige Herrenhaus wurde 1792 fertiggestellt.",
+				"Das Gut ist ein Beispiel des frühen Klassizismus in Estland."
+			]
+		}
+	},
+	"keila": {
+		"city": {
+			"en": [
+				"Kegel is its historical German name.",
+				"The Harju County Museum occupies its former manor house.",
+				"Ruins of the medieval manor stand nearby in the river-island park."
+			],
+			"it": [
+				"Kegel è il suo nome storico tedesco.",
+				"Il Museo della contea di Harju occupa il suo antico maniero.",
+				"I resti del maniero medievale sorgono poco lontano nel parco sull’isola fluviale."
+			],
+			"de": [
+				"Kegel ist sein historischer deutscher Name.",
+				"Das Museum des Kreises Harju befindet sich im ehemaligen Herrenhaus.",
+				"Im nahen Park auf einer Flussinsel liegen die Ruinen des mittelalterlichen Gutshauses."
+			]
+		}
+	},
+	"tapa": {
+		"city": {
+			"en": [
+				"Tapa probably comes from an old personal name such as Tabbe or Tappe.",
+				"The railway built in 1870 helped the settlement grow.",
+				"Its museum traces both railway and military history."
+			],
+			"it": [
+				"Tapa deriva probabilmente da un antico nome personale come Tabbe o Tappe.",
+				"La ferrovia costruita nel 1870 favorì la crescita dell’abitato.",
+				"Il suo museo racconta la storia ferroviaria e militare."
+			],
+			"de": [
+				"Tapa geht wahrscheinlich auf einen alten Personennamen wie Tabbe oder Tappe zurück.",
+				"Die 1870 gebaute Eisenbahn förderte das Wachstum der Siedlung.",
+				"Das Stadtmuseum erzählt von Eisenbahn- und Militärgeschichte."
+			]
+		}
+	},
+	"haapsalu": {
+		"city": {
+			"en": [
+				"Hapsal is its historical German name.",
+				"Its mud-spa tradition began in 1825.",
+				"A medieval bishop’s castle stands in the town."
+			],
+			"it": [
+				"Hapsal è il suo nome storico tedesco.",
+				"La sua tradizione di cure con il fango iniziò nel 1825.",
+				"Nella città sorge un castello vescovile medievale."
+			],
+			"de": [
+				"Hapsal ist sein historischer deutscher Name.",
+				"Seine Tradition als Schlammbad begann 1825.",
+				"In der Stadt steht eine mittelalterliche Bischofsburg."
+			]
+		}
+	},
+	"paide": {
+		"city": {
+			"en": [
+				"Weißenstein is its historical German name.",
+				"Its medieval castle site is marked by a prominent tower.",
+				"The Opinion Festival has brought public debates here since 2013."
+			],
+			"it": [
+				"Weißenstein è il suo nome storico tedesco.",
+				"Una torre imponente segnala il sito del castello medievale.",
+				"Il Festival delle opinioni porta qui dibattiti pubblici dal 2013."
+			],
+			"de": [
+				"Weißenstein ist sein historischer deutscher Name.",
+				"Ein markanter Turm kennzeichnet den Standort der mittelalterlichen Burg.",
+				"Seit 2013 bringt das Meinungsfestival öffentliche Debatten in die Stadt."
+			]
+		}
+	},
+	"kuressaare": {
+		"city": {
+			"en": [
+				"Arensburg is its historical German name.",
+				"Its medieval bishop’s castle houses the Saaremaa Museum.",
+				"The fortress gained much of its present form during Swedish rule."
+			],
+			"it": [
+				"Arensburg è il suo nome storico tedesco.",
+				"Il castello vescovile medievale ospita il Museo di Saaremaa.",
+				"La fortezza assunse gran parte della sua forma attuale sotto il dominio svedese."
+			],
+			"de": [
+				"Arensburg ist sein historischer deutscher Name.",
+				"Die mittelalterliche Bischofsburg beherbergt das Saaremaa-Museum.",
+				"Die Festung erhielt einen Großteil ihrer heutigen Form unter schwedischer Herrschaft."
+			]
+		}
+	},
+	"elva": {
+		"city": {
+			"en": [
+				"Elva takes its name from the Elva River.",
+				"Pine forests and lakes helped it develop as a summer resort.",
+				"Professors from Tartu built summer homes beside Lake Verevi."
+			],
+			"it": [
+				"Elva prende il nome dal fiume Elva.",
+				"Pinete e laghi favorirono il suo sviluppo come località di villeggiatura estiva.",
+				"Professori di Tartu costruirono case per le vacanze accanto al lago Verevi."
+			],
+			"de": [
+				"Elva ist nach dem Fluss Elva benannt.",
+				"Kiefernwälder und Seen förderten seine Entwicklung zum Sommerkurort.",
+				"Professoren aus Tartu bauten Sommerhäuser am Verevi-See."
 			]
 		}
 	}

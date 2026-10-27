@@ -1,0 +1,689 @@
+{
+	"borsod-abauj-zemplen": {
+		"kind": "region",
+		"borders": [
+			"Hajdú-Bihar",
+			"Heves",
+			"Jász-Nagykun-Szolnok",
+			"Nógrád",
+			"Szabolcs-Szatmár-Bereg"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Miskolc",
+			"nameDe": "Miskolc",
+			"nameIt": "Miskolc",
+			"population": 139246
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The name joins three historic counties: Borsod, Abaúj and Zemplén.",
+				"Tokaj’s vineyards became World Heritage in 2002.",
+				"The Aggtelek caves share a World Heritage site with Slovakia."
+			],
+			"it": [
+				"Il nome unisce tre contee storiche: Borsod, Abaúj e Zemplén.",
+				"I vigneti del Tokaj divennero Patrimonio mondiale nel 2002.",
+				"Le grotte di Aggtelek condividono un sito UNESCO con la Slovacchia."
+			],
+			"de": [
+				"Der Name verbindet die historischen Komitate Borsod, Abaúj und Zemplén.",
+				"Tokajs Weinberge wurden 2002 Welterbe.",
+				"Die Höhlen von Aggtelek teilen eine Welterbestätte mit der Slowakei."
+			]
+		}
+	},
+	"szabolcs-szatmar-bereg": {
+		"kind": "region",
+		"borders": [
+			"Borsod-Abaúj-Zemplén",
+			"Hajdú-Bihar"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nyíregyháza",
+			"nameDe": "Nyíregyháza",
+			"nameIt": "Nyíregyháza",
+			"population": 114096
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its long name preserves three older county names.",
+				"Nyírbátor’s church recalls the powerful Báthory family.",
+				"Tákos is known for a little church with painted wooden ceilings."
+			],
+			"it": [
+				"Il lungo nome conserva i nomi di tre contee più antiche.",
+				"La chiesa di Nyírbátor ricorda la potente famiglia Báthory.",
+				"Tákos è nota per una piccola chiesa dai soffitti lignei dipinti."
+			],
+			"de": [
+				"Der lange Name bewahrt drei ältere Komitatsnamen.",
+				"Die Kirche von Nyírbátor erinnert an die mächtige Familie Báthory.",
+				"Tákos ist für eine kleine Kirche mit bemalten Holzdecken bekannt."
+			]
+		}
+	},
+	"nograd": {
+		"kind": "region",
+		"borders": [
+			"Borsod-Abaúj-Zemplén",
+			"Heves",
+			"Pest"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Salgótarján",
+			"nameDe": "Salgótarján",
+			"nameIt": "Salgótarján",
+			"population": 29824
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Nógrád comes from a Slavic name meaning “new castle”.",
+				"Hollókő preserves a traditional Palóc village.",
+				"Its wooden porches and folk dress became symbols of local heritage."
+			],
+			"it": [
+				"Nógrád viene da un nome slavo che significa “castello nuovo”.",
+				"Hollókő conserva un villaggio tradizionale dei Palóc.",
+				"I portici in legno e i costumi popolari divennero simboli del patrimonio locale."
+			],
+			"de": [
+				"Nógrád stammt von einem slawischen Namen für „neue Burg“.",
+				"Hollókő bewahrt ein traditionelles Palóc-Dorf.",
+				"Holzveranden und Trachten wurden zu Symbolen des örtlichen Kulturerbes."
+			]
+		}
+	},
+	"heves": {
+		"kind": "region",
+		"borders": [
+			"Borsod-Abaúj-Zemplén",
+			"Jász-Nagykun-Szolnok",
+			"Nógrád",
+			"Pest"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Eger",
+			"nameDe": "Eger",
+			"nameIt": "Eger",
+			"population": 47921
+		},
+		"peak": {
+			"name": "Kékes",
+			"elevation": 1015
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It preserves the name of the old settlement Heves.",
+				"Eger’s castle resisted an Ottoman siege in 1552.",
+				"Egri Bikavér, “bull’s blood”, is its famous red-wine blend."
+			],
+			"it": [
+				"Conserva il nome dell’antico insediamento di Heves.",
+				"Il castello di Eger resistette a un assedio ottomano nel 1552.",
+				"L’Egri Bikavér, “sangue di toro”, è il suo celebre vino rosso da assemblaggio."
+			],
+			"de": [
+				"Der Name bewahrt den der alten Siedlung Heves.",
+				"Die Burg von Eger widerstand 1552 einer osmanischen Belagerung.",
+				"Egri Bikavér, „Stierblut“, ist die bekannte Rotweincuvée der Gegend."
+			]
+		}
+	},
+	"gyor-moson-sopron": {
+		"kind": "region",
+		"borders": [
+			"Komárom-Esztergom",
+			"Vas",
+			"Veszprém"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Győr",
+			"nameDe": "Győr",
+			"nameIt": "Győr",
+			"population": 128225
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Győr, Moson and Sopron give the county its three-part name.",
+				"Pannonhalma’s monastic community began in 996.",
+				"Sopron’s 1921 vote earned it the “most loyal city” title."
+			],
+			"it": [
+				"Győr, Moson e Sopron danno alla contea il suo nome tripartito.",
+				"La comunità monastica di Pannonhalma nacque nel 996.",
+				"Il voto del 1921 valse a Sopron il titolo di “città più fedele”."
+			],
+			"de": [
+				"Győr, Moson und Sopron bilden den dreiteiligen Komitatsnamen.",
+				"Pannonhalmas Klostergemeinschaft entstand 996.",
+				"Die Abstimmung von 1921 brachte Sopron den Titel „treueste Stadt“ ein."
+			]
+		}
+	},
+	"komarom-esztergom": {
+		"kind": "region",
+		"borders": [
+			"Fejér",
+			"Győr-Moson-Sopron",
+			"Pest",
+			"Veszprém"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tatabánya",
+			"nameDe": "Tatabánya",
+			"nameIt": "Tatabánya",
+			"population": 64546
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The name links the historic towns Komárom and Esztergom.",
+				"Esztergom became a historic centre of Hungarian Catholic life.",
+				"Tata’s castle stands beside the man-made Old Lake."
+			],
+			"it": [
+				"Il nome collega le città storiche di Komárom ed Esztergom.",
+				"Esztergom divenne un centro storico del cattolicesimo ungherese.",
+				"Il castello di Tata sorge accanto al Lago Vecchio artificiale."
+			],
+			"de": [
+				"Der Name verbindet die historischen Städte Komárom und Esztergom.",
+				"Esztergom wurde zu einem historischen Zentrum des ungarischen Katholizismus.",
+				"Tatas Burg steht am künstlich angelegten Alten See."
+			]
+		}
+	},
+	"pest": {
+		"kind": "region",
+		"borders": [
+			"Bács-Kiskun",
+			"Budapest",
+			"Fejér",
+			"Heves",
+			"Jász-Nagykun-Szolnok",
+			"Komárom-Esztergom",
+			"Nógrád"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Érd",
+			"nameDe": "Érd",
+			"nameIt": "Érd",
+			"population": 71613
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county kept the name of Pest, now part of Budapest.",
+				"Szentendre became known for artists and museums.",
+				"Gödöllő’s royal palace was a favourite residence of Empress Elisabeth."
+			],
+			"it": [
+				"La contea conservò il nome di Pest, oggi parte di Budapest.",
+				"Szentendre divenne nota per artisti e musei.",
+				"Il palazzo reale di Gödöllő fu una residenza prediletta dell’imperatrice Elisabetta."
+			],
+			"de": [
+				"Das Komitat bewahrte den Namen Pest, heute ein Teil Budapests.",
+				"Szentendre wurde für Künstler und Museen bekannt.",
+				"Das Königsschloss Gödöllő war eine Lieblingsresidenz von Kaiserin Elisabeth."
+			]
+		}
+	},
+	"budapest": {
+		"kind": "region",
+		"type": "Capital City",
+		"borders": [
+			"Pest"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Budapest",
+			"nameDe": "Budapest",
+			"nameIt": "Budapest",
+			"population": 1675777
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Buda, Pest and Óbuda united as Budapest in 1873.",
+				"The Fisherman’s Bastion’s seven towers recall seven Magyar tribes.",
+				"Continental Europe’s first electric underground opened here in 1896."
+			],
+			"it": [
+				"Buda, Pest e Óbuda si unirono in Budapest nel 1873.",
+				"Le sette torri del Bastione dei Pescatori ricordano sette tribù magiare.",
+				"Qui aprì nel 1896 la prima metropolitana elettrica dell’Europa continentale."
+			],
+			"de": [
+				"Buda, Pest und Óbuda vereinigten sich 1873 zu Budapest.",
+				"Die sieben Türme der Fischerbastei erinnern an sieben magyarische Stämme.",
+				"Hier eröffnete 1896 Kontinentaleuropas erste elektrische U-Bahn."
+			]
+		}
+	},
+	"hajdu-bihar": {
+		"kind": "region",
+		"borders": [
+			"Békés",
+			"Borsod-Abaúj-Zemplén",
+			"Jász-Nagykun-Szolnok",
+			"Szabolcs-Szatmár-Bereg"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Debrecen",
+			"nameDe": "Debrecen",
+			"nameIt": "Debrecen",
+			"population": 202331
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The name joins the hajdú region with historic Bihar.",
+				"Hortobágy’s pastoral landscape joined the World Heritage List in 1999.",
+				"Debrecen’s Reformed tradition earned it the “Calvinist Rome” nickname."
+			],
+			"it": [
+				"Il nome unisce la regione degli hajdú allo storico Bihar.",
+				"Il paesaggio pastorale di Hortobágy entrò nel Patrimonio mondiale nel 1999.",
+				"La tradizione riformata valse a Debrecen il soprannome di “Roma calvinista”."
+			],
+			"de": [
+				"Der Name verbindet die Hajdú-Region mit dem historischen Bihar.",
+				"Hortobágys Hirtenlandschaft wurde 1999 Welterbe.",
+				"Die reformierte Tradition brachte Debrecen den Beinamen „calvinistisches Rom“ ein."
+			]
+		}
+	},
+	"jasz-nagykun-szolnok": {
+		"kind": "region",
+		"borders": [
+			"Bács-Kiskun",
+			"Békés",
+			"Borsod-Abaúj-Zemplén",
+			"Csongrád-Csanád",
+			"Hajdú-Bihar",
+			"Heves",
+			"Pest"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Szolnok",
+			"nameDe": "Szolnok",
+			"nameIt": "Szolnok",
+			"population": 64681
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Jász and Nagykun recall Jassic and Cuman settlers.",
+				"Szolnok developed an influential artists’ colony.",
+				"Lake Tisza was created by damming the river."
+			],
+			"it": [
+				"Jász e Nagykun ricordano i coloni jassi e cumani.",
+				"A Szolnok si sviluppò un’importante colonia di artisti.",
+				"Il Lago Tisza fu creato sbarrando il fiume."
+			],
+			"de": [
+				"Jász und Nagykun erinnern an jassische und kumanische Siedler.",
+				"In Szolnok entstand eine einflussreiche Künstlerkolonie.",
+				"Der Theiß-See entstand durch Aufstauen des Flusses."
+			]
+		}
+	},
+	"fejer": {
+		"kind": "region",
+		"borders": [
+			"Bács-Kiskun",
+			"Komárom-Esztergom",
+			"Pest",
+			"Somogy",
+			"Tolna",
+			"Veszprém"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Székesfehérvár",
+			"nameDe": "Székesfehérvár",
+			"nameIt": "Székesfehérvár",
+			"population": 94605
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Fejér is an older Hungarian form of “white”.",
+				"Hungarian kings were crowned at Székesfehérvár for centuries.",
+				"Gorsium near Tác preserves remains of a Roman town."
+			],
+			"it": [
+				"Fejér è una forma ungherese antica di “bianco”.",
+				"Per secoli i re d’Ungheria furono incoronati a Székesfehérvár.",
+				"Gorsium, vicino a Tác, conserva i resti di una città romana."
+			],
+			"de": [
+				"Fejér ist eine ältere ungarische Form von „weiß“.",
+				"Jahrhundertelang wurden Ungarns Könige in Székesfehérvár gekrönt.",
+				"Gorsium bei Tác bewahrt die Reste einer römischen Stadt."
+			]
+		}
+	},
+	"vas": {
+		"kind": "region",
+		"borders": [
+			"Győr-Moson-Sopron",
+			"Veszprém",
+			"Zala"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Szombathely",
+			"nameDe": "Szombathely",
+			"nameIt": "Szombathely",
+			"population": 76389
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Vas literally means “iron”.",
+				"Szombathely grew from the Roman settlement Savaria.",
+				"The Őrség region preserves the heritage of medieval border guards."
+			],
+			"it": [
+				"Vas significa letteralmente “ferro”.",
+				"Szombathely si sviluppò dall’insediamento romano di Savaria.",
+				"La regione dell’Őrség conserva l’eredità delle guardie di confine medievali."
+			],
+			"de": [
+				"Vas bedeutet wörtlich „Eisen“.",
+				"Szombathely entstand aus der römischen Siedlung Savaria.",
+				"Die Region Őrség bewahrt das Erbe mittelalterlicher Grenzwächter."
+			]
+		}
+	},
+	"veszprem": {
+		"kind": "region",
+		"borders": [
+			"Fejér",
+			"Győr-Moson-Sopron",
+			"Komárom-Esztergom",
+			"Somogy",
+			"Vas",
+			"Zala"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Veszprém",
+			"nameDe": "Veszprém",
+			"nameIt": "Veszprém",
+			"population": 54590
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The county is named after the early royal centre Veszprém.",
+				"Volcanic hills and vineyards shape the Balaton Uplands.",
+				"Veszprém–Balaton was a European Capital of Culture in 2023."
+			],
+			"it": [
+				"La contea prende il nome dall’antico centro reale di Veszprém.",
+				"Colline vulcaniche e vigneti caratterizzano gli altopiani del Balaton.",
+				"Veszprém–Balaton fu Capitale europea della cultura nel 2023."
+			],
+			"de": [
+				"Das Komitat ist nach dem frühen königlichen Zentrum Veszprém benannt.",
+				"Vulkanhügel und Weinberge prägen das Balaton-Oberland.",
+				"Veszprém–Balaton war 2023 Europäische Kulturhauptstadt."
+			]
+		}
+	},
+	"bekes": {
+		"kind": "region",
+		"borders": [
+			"Csongrád-Csanád",
+			"Hajdú-Bihar",
+			"Jász-Nagykun-Szolnok"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Békéscsaba",
+			"nameDe": "Békéscsaba",
+			"nameIt": "Békéscsaba",
+			"population": 53433
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Békés means “peaceful” in Hungarian.",
+				"Gyula preserves a Gothic brick castle.",
+				"Slovak settlers helped revive its towns in the eighteenth century."
+			],
+			"it": [
+				"Békés significa “pacifico” in ungherese.",
+				"Gyula conserva un castello gotico in mattoni.",
+				"I coloni slovacchi contribuirono alla rinascita delle sue cittadine nel Settecento."
+			],
+			"de": [
+				"Békés bedeutet auf Ungarisch „friedlich“.",
+				"Gyula bewahrt eine gotische Backsteinburg.",
+				"Slowakische Siedler halfen im 18. Jahrhundert beim Wiederaufbau der Städte."
+			]
+		}
+	},
+	"zala": {
+		"kind": "region",
+		"borders": [
+			"Somogy",
+			"Vas",
+			"Veszprém"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zalaegerszeg",
+			"nameDe": "Zalaegerszeg",
+			"nameIt": "Zalaegerszeg",
+			"population": 53494
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Zala shares its name with the river flowing through it.",
+				"Hévíz is known for its naturally warm lake.",
+				"The Festetics family built a grand palace at Keszthely."
+			],
+			"it": [
+				"Zala condivide il nome con il fiume che l’attraversa.",
+				"Hévíz è nota per il suo lago naturalmente caldo.",
+				"La famiglia Festetics costruì un grande palazzo a Keszthely."
+			],
+			"de": [
+				"Zala trägt denselben Namen wie der durchfließende Fluss.",
+				"Hévíz ist für seinen natürlich warmen See bekannt.",
+				"Die Familie Festetics errichtete in Keszthely ein großes Schloss."
+			]
+		}
+	},
+	"bacs-kiskun": {
+		"kind": "region",
+		"borders": [
+			"Baranya",
+			"Csongrád-Csanád",
+			"Fejér",
+			"Jász-Nagykun-Szolnok",
+			"Pest",
+			"Tolna"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kecskemét",
+			"nameDe": "Kecskemét",
+			"nameIt": "Kecskemét",
+			"population": 108106
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Bács is a historic county name; Kiskun means “Little Cuman”.",
+				"Kiskunság National Park protects sandy grasslands and wetlands.",
+				"Kecskemét became known for apricots and apricot brandy."
+			],
+			"it": [
+				"Bács è il nome di una contea storica; Kiskun significa “piccolo cumano”.",
+				"Il Parco nazionale di Kiskunság protegge praterie sabbiose e zone umide.",
+				"Kecskemét divenne nota per albicocche e acquavite di albicocche."
+			],
+			"de": [
+				"Bács ist ein historischer Komitatsname; Kiskun bedeutet „Kleinkumanien“.",
+				"Der Nationalpark Kiskunság schützt Sandsteppen und Feuchtgebiete.",
+				"Kecskemét wurde für Aprikosen und Aprikosenbrand bekannt."
+			]
+		}
+	},
+	"tolna": {
+		"kind": "region",
+		"borders": [
+			"Bács-Kiskun",
+			"Baranya",
+			"Fejér",
+			"Somogy"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Szekszárd",
+			"nameDe": "Szekszárd",
+			"nameIt": "Szekszárd",
+			"population": 28975
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"It preserves the name of Tolna, a former county centre.",
+				"Kadarka grapes belong to Szekszárd’s red-wine tradition.",
+				"Gemenc’s Danube floodplain forests shelter red deer."
+			],
+			"it": [
+				"Conserva il nome di Tolna, un antico centro della contea.",
+				"L’uva kadarka appartiene alla tradizione dei vini rossi di Szekszárd.",
+				"I boschi alluvionali del Danubio a Gemenc ospitano cervi."
+			],
+			"de": [
+				"Der Name bewahrt den des früheren Komitatszentrums Tolna.",
+				"Kadarka-Trauben gehören zur Rotweintradition von Szekszárd.",
+				"Die Donauauen von Gemenc bieten Rothirschen Lebensraum."
+			]
+		}
+	},
+	"csongrad-csanad": {
+		"kind": "region",
+		"borders": [
+			"Bács-Kiskun",
+			"Békés",
+			"Jász-Nagykun-Szolnok"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Szeged",
+			"nameDe": "Szeged",
+			"nameIt": "Seghedino",
+			"population": 157596
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Csongrád comes from Slavic words for “black castle”.",
+				"Csanád was added to the county’s official name in 2020.",
+				"Ópusztaszer displays a panorama of the Magyar arrival."
+			],
+			"it": [
+				"Csongrád viene da parole slave che significano “castello nero”.",
+				"Csanád fu aggiunto al nome ufficiale della contea nel 2020.",
+				"Ópusztaszer espone un panorama dell’arrivo dei magiari."
+			],
+			"de": [
+				"Csongrád stammt von slawischen Wörtern für „schwarze Burg“.",
+				"Csanád wurde 2020 dem offiziellen Komitatsnamen hinzugefügt.",
+				"Ópusztaszer zeigt ein Panoramagemälde der magyarischen Ankunft."
+			]
+		}
+	},
+	"somogy": {
+		"kind": "region",
+		"borders": [
+			"Baranya",
+			"Fejér",
+			"Tolna",
+			"Veszprém",
+			"Zala"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kaposvár",
+			"nameDe": "Kaposvár",
+			"nameIt": "Kaposvár",
+			"population": 57454
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Somogy comes from som, the cornel tree.",
+				"Its shores include Lake Balaton’s southern resort towns.",
+				"King Ladislaus I founded Somogyvár’s abbey in 1091."
+			],
+			"it": [
+				"Somogy viene da som, il corniolo.",
+				"Le sue rive comprendono le località turistiche meridionali del Balaton.",
+				"Re Ladislao I fondò l’abbazia di Somogyvár nel 1091."
+			],
+			"de": [
+				"Somogy geht auf som, die Kornelkirsche, zurück.",
+				"Zum Komitat gehören die Ferienorte am Südufer des Balaton.",
+				"König Ladislaus I. gründete 1091 die Abtei Somogyvár."
+			]
+		}
+	},
+	"baranya": {
+		"kind": "region",
+		"borders": [
+			"Bács-Kiskun",
+			"Somogy",
+			"Tolna"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pécs",
+			"nameDe": "Pécs",
+			"nameIt": "Pécs",
+			"population": 137976
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The name is tied to Baranyavár, an early royal centre.",
+				"Pécs preserves decorated tombs from Roman Sopianae.",
+				"Villány became a celebrated red-wine district."
+			],
+			"it": [
+				"Il nome è legato a Baranyavár, un antico centro reale.",
+				"Pécs conserva tombe decorate dell’antica Sopianae romana.",
+				"Villány divenne un rinomato distretto del vino rosso."
+			],
+			"de": [
+				"Der Name ist mit Baranyavár, einem frühen königlichen Zentrum, verbunden.",
+				"Pécs bewahrt bemalte Gräber aus dem römischen Sopianae.",
+				"Villány wurde zu einem bekannten Rotweingebiet."
+			]
+		}
+	}
+}

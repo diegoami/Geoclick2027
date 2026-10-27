@@ -252,6 +252,7 @@ export const LOCAL_NAME_FIELD: Record<string, string> = {
 	Poland: 'NAME_PL',
 	Netherlands: 'NAME_NL',
 	Hungary: 'NAME_HU',
+	'Costa Rica': 'NAME_ES',
 	Sweden: 'NAME_SV',
 	Turkey: 'NAME_TR',
 	Vietnam: 'NAME_VI',

@@ -1,0 +1,392 @@
+{
+	"id": "iraq-towns-10k",
+	"name": "Iraq — Towns",
+	"country": "Iraq",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; OpenStreetMap contributors via Geofabrik, 2026-10-26 extract; admin_level=4; 2026-10-26; ODbL 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"regionsMap": "iraq-governorates",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "duhok",
+			"name": "Duhok",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.0000026,
+				36.8667001
+			],
+			"bbox": [
+				43.0000026,
+				36.8667001,
+				43.0000026,
+				36.8667001
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "mosul",
+			"name": "Mosul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.1430586,
+				36.3469483
+			],
+			"bbox": [
+				43.1430586,
+				36.3469483,
+				43.1430586,
+				36.3469483
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "erbil",
+			"name": "Erbil",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.0066751,
+				36.1809895
+			],
+			"bbox": [
+				44.0066751,
+				36.1809895,
+				44.0066751,
+				36.1809895
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "as-sulaymaniyah",
+			"name": "As Sulaymaniyah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.4308597,
+				35.5612777
+			],
+			"bbox": [
+				45.4308597,
+				35.5612777,
+				45.4308597,
+				35.5612777
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kirkuk",
+			"name": "Kirkuk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.3922668,
+				35.4722392
+			],
+			"bbox": [
+				44.3922668,
+				35.4722392,
+				44.3922668,
+				35.4722392
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "baqubah",
+			"name": "Baqubah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.6572635,
+				33.7476416
+			],
+			"bbox": [
+				44.6572635,
+				33.7476416,
+				44.6572635,
+				33.7476416
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "ar-ramadi",
+			"name": "Ar Ramadi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.2999821,
+				33.420013
+			],
+			"bbox": [
+				43.2999821,
+				33.420013,
+				43.2999821,
+				33.420013
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "al-fallujah",
+			"name": "Al Fallujah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.7772656,
+				33.347666
+			],
+			"bbox": [
+				43.7772656,
+				33.347666,
+				43.7772656,
+				33.347666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "baghdad",
+			"name": "Baghdad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.3919229,
+				33.3405944
+			],
+			"bbox": [
+				44.3919229,
+				33.3405944,
+				44.3919229,
+				33.3405944
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "karbala",
+			"name": "Karbala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.0244856,
+				32.6149201
+			],
+			"bbox": [
+				44.0244856,
+				32.6149201,
+				44.0244856,
+				32.6149201
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "al-kut",
+			"name": "Al Kut",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.8303702,
+				32.4907158
+			],
+			"bbox": [
+				45.8303702,
+				32.4907158,
+				45.8303702,
+				32.4907158
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "al-hillah",
+			"name": "Al Hillah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.4217224,
+				32.4721381
+			],
+			"bbox": [
+				44.4217224,
+				32.4721381,
+				44.4217224,
+				32.4721381
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "najaf",
+			"name": "Najaf",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.3353711,
+				32.0003323
+			],
+			"bbox": [
+				44.3353711,
+				32.0003323,
+				44.3353711,
+				32.0003323
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ad-diwaniyah",
+			"name": "Ad Diwaniyah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.9239656,
+				31.9889376
+			],
+			"bbox": [
+				44.9239656,
+				31.9889376,
+				44.9239656,
+				31.9889376
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "al-amarah",
+			"name": "Al Amarah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				47.1511682,
+				31.8416081
+			],
+			"bbox": [
+				47.1511682,
+				31.8416081,
+				47.1511682,
+				31.8416081
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ash-shatrah",
+			"name": "Ash Shatrah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.1772225,
+				31.4175255
+			],
+			"bbox": [
+				46.1772225,
+				31.4175255,
+				46.1772225,
+				31.4175255
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "as-samawah",
+			"name": "As Samawah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.2802746,
+				31.3098576
+			],
+			"bbox": [
+				45.2802746,
+				31.3098576,
+				45.2802746,
+				31.3098576
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "an-nasiriyah",
+			"name": "An Nasiriyah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.2675529,
+				31.0429488
+			],
+			"bbox": [
+				46.2675529,
+				31.0429488,
+				46.2675529,
+				31.0429488
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "basra",
+			"name": "Basra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				47.8116108,
+				30.5154696
+			],
+			"bbox": [
+				47.8116108,
+				30.5154696,
+				47.8116108,
+				30.5154696
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "az-zubayr",
+			"name": "Az Zubayr",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				47.7079817,
+				30.3891644
+			],
+			"bbox": [
+				47.7079817,
+				30.3891644,
+				47.7079817,
+				30.3891644
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"duhok",
+		"mosul",
+		"erbil",
+		"as-sulaymaniyah",
+		"kirkuk",
+		"baqubah",
+		"ar-ramadi",
+		"al-fallujah",
+		"baghdad",
+		"karbala",
+		"al-kut",
+		"al-hillah",
+		"najaf",
+		"ad-diwaniyah",
+		"al-amarah",
+		"ash-shatrah",
+		"as-samawah",
+		"an-nasiriyah",
+		"basra",
+		"az-zubayr"
+	]
+}

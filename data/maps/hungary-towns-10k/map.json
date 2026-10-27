@@ -1,0 +1,450 @@
+{
+	"id": "hungary-towns-10k",
+	"name": "Hungary — Towns",
+	"country": "Hungary",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/hungary.geojson",
+	"regionsMap": "hungary-counties",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "miskolc",
+			"name": "Miskolc",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.783333333,
+				48.1
+			],
+			"bbox": [
+				20.783333333,
+				48.1,
+				20.783333333,
+				48.1
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "salgotarjan",
+			"name": "Salgótarján",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.786666666,
+				48.085277777
+			],
+			"bbox": [
+				19.786666666,
+				48.085277777,
+				19.786666666,
+				48.085277777
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "nyiregyhaza",
+			"name": "Nyíregyháza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.716666666,
+				47.95
+			],
+			"bbox": [
+				21.716666666,
+				47.95,
+				21.716666666,
+				47.95
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "eger",
+			"name": "Eger",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.374722222,
+				47.898888888
+			],
+			"bbox": [
+				20.374722222,
+				47.898888888,
+				20.374722222,
+				47.898888888
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "vac",
+			"name": "Vác",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.131111111,
+				47.775277777
+			],
+			"bbox": [
+				19.131111111,
+				47.775277777,
+				19.131111111,
+				47.775277777
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "gyor",
+			"name": "Győr",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.634444444,
+				47.684166666
+			],
+			"bbox": [
+				17.634444444,
+				47.684166666,
+				17.634444444,
+				47.684166666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "sopron",
+			"name": "Sopron",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.583333333,
+				47.683333333
+			],
+			"bbox": [
+				16.583333333,
+				47.683333333,
+				16.583333333,
+				47.683333333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "dunakeszi",
+			"name": "Dunakeszi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.138055555,
+				47.629722222
+			],
+			"bbox": [
+				19.138055555,
+				47.629722222,
+				19.138055555,
+				47.629722222
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tatabanya",
+			"name": "Tatabánya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.39485,
+				47.58616
+			],
+			"bbox": [
+				18.39485,
+				47.58616,
+				18.39485,
+				47.58616
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "debrecen",
+			"name": "Debrecen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.639166666,
+				47.53
+			],
+			"bbox": [
+				21.639166666,
+				47.53,
+				21.639166666,
+				47.53
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "budapest",
+			"name": "Budapest",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.040833333,
+				47.498333333
+			],
+			"bbox": [
+				19.040833333,
+				47.498333333,
+				19.040833333,
+				47.498333333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "erd",
+			"name": "Érd",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.921944444,
+				47.378333333
+			],
+			"bbox": [
+				18.921944444,
+				47.378333333,
+				18.921944444,
+				47.378333333
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "szombathely",
+			"name": "Szombathely",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.633333333,
+				47.233333333
+			],
+			"bbox": [
+				16.633333333,
+				47.233333333,
+				16.633333333,
+				47.233333333
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "szekesfehervar",
+			"name": "Székesfehérvár",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.410811,
+				47.1910169
+			],
+			"bbox": [
+				18.410811,
+				47.1910169,
+				18.410811,
+				47.1910169
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "szolnok",
+			"name": "Szolnok",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.176388888,
+				47.174722222
+			],
+			"bbox": [
+				20.176388888,
+				47.174722222,
+				20.176388888,
+				47.174722222
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "veszprem",
+			"name": "Veszprém",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.916666666,
+				47.1
+			],
+			"bbox": [
+				17.916666666,
+				47.1,
+				17.916666666,
+				47.1
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kecskemet",
+			"name": "Kecskemét",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.691666666,
+				46.9075
+			],
+			"bbox": [
+				19.691666666,
+				46.9075,
+				19.691666666,
+				46.9075
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "zalaegerszeg",
+			"name": "Zalaegerszeg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.851111111,
+				46.839166666
+			],
+			"bbox": [
+				16.851111111,
+				46.839166666,
+				16.851111111,
+				46.839166666
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bekescsaba",
+			"name": "Békéscsaba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.083333333,
+				46.683333333
+			],
+			"bbox": [
+				21.083333333,
+				46.683333333,
+				21.083333333,
+				46.683333333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kaposvar",
+			"name": "Kaposvár",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.783333333,
+				46.366666666
+			],
+			"bbox": [
+				17.783333333,
+				46.366666666,
+				17.783333333,
+				46.366666666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "szekszard",
+			"name": "Szekszárd",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.703888888,
+				46.355833333
+			],
+			"bbox": [
+				18.703888888,
+				46.355833333,
+				18.703888888,
+				46.355833333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "szeged",
+			"name": "Szeged",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.166666666,
+				46.25
+			],
+			"bbox": [
+				20.166666666,
+				46.25,
+				20.166666666,
+				46.25
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "pecs",
+			"name": "Pécs",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.233055555,
+				46.070833333
+			],
+			"bbox": [
+				18.233055555,
+				46.070833333,
+				18.233055555,
+				46.070833333
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"miskolc",
+		"salgotarjan",
+		"nyiregyhaza",
+		"eger",
+		"vac",
+		"gyor",
+		"sopron",
+		"dunakeszi",
+		"tatabanya",
+		"debrecen",
+		"budapest",
+		"erd",
+		"szombathely",
+		"szekesfehervar",
+		"szolnok",
+		"veszprem",
+		"kecskemet",
+		"zalaegerszeg",
+		"bekescsaba",
+		"kaposvar",
+		"szekszard",
+		"szeged",
+		"pecs"
+	]
+}

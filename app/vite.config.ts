@@ -25,6 +25,8 @@ try {
 }
 
 export default defineConfig({
+	// Port 5173 belongs to another local game; keep web and Tauri development aligned.
+	server: { port: 5187, strictPort: true },
 	define: {
 		__APP_VERSION__: JSON.stringify(pkg.version),
 		__BUILD_SHA__: JSON.stringify(buildSha)
@@ -90,6 +92,9 @@ export default defineConfig({
 					name: 'client',
 					browser: {
 						enabled: true,
+						// Windows can reserve Vitest’s default port 63315. Keep the
+						// browser API on loopback and let Vite try the next port if busy.
+						api: { host: '127.0.0.1', port: 5191 },
 						provider: playwright(),
 						instances: [{ browser: 'chromium', headless: true }]
 					},

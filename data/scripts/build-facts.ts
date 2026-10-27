@@ -1,3 +1,6 @@
+import { correctPlaces } from './placeCorrections.js';
+import { canonicalRegionAtPoint } from './boundaryRegions.js';
+import { applyBoundaryRenames } from './boundaryRenames.js';
 // Builds data/maps/<id>/facts.json - the derived half of the fact box
 // (FT-34, docs/PLAN_V0.8.md).
 //
@@ -121,10 +124,16 @@ function sourcesFor(bbox: Bbox, placesPath: string = PLACES_SHP) {
 			[...spat, '-select', 'name,elevation,featurecla'],
 			tmp('peaks')
 		),
-		places: exportGeojson(
-			placesPath,
-			[...spat, '-select', 'NAME,NAME_DE,NAME_IT,POP_MAX,POP1950,ADM0CAP,ADM1NAME,ADM0NAME'],
-			tmp('places')
+		// Read snapshots directly: OGR's fixed Natural Earth field selection drops
+		// coordinatePrecision, silently disabling coastal association fallbacks.
+		places: correctPlaces(
+			placesPath !== PLACES_SHP
+				? readGeojson(placesPath)
+				: exportGeojson(
+						placesPath,
+						[...spat, '-select', 'NAME,NAME_DE,NAME_IT,POP_MAX,POP1950,ADM0CAP,ADM1NAME,ADM0NAME'],
+						tmp('places')
+					)
 		),
 		admin1: exportGeojson(
 			ADMIN1_SHP,
@@ -239,7 +248,8 @@ function factsForRegionMap(
 	borders: Map<string, Set<string>>,
 	// Targets from a register outside Natural Earth (#39): no admin-1 row is
 	// theirs, and the smallest one covering a district is its whole state.
-	ownRows = true
+	ownRows = true,
+	canonicalCountry?: string
 ): Record<string, DerivedFact> {
 	const coast = coastIndex(sources.coast.map((f) => f.geometry));
 	const countryMap = targets[0]?.type === 'country';
@@ -247,6 +257,7 @@ function factsForRegionMap(
 		? rowsByTarget(targets, sources.admin1, countryMap ? ['admin'] : ['name', 'region'])
 		: new Map<string, Feature[]>();
 
+	const canonicalNames = new Set(targets.map((target) => target.name));
 	const facts: Record<string, DerivedFact> = {};
 	for (const target of targets) {
 		const fact: DerivedFact = { kind: 'region' };
@@ -285,7 +296,19 @@ function factsForRegionMap(
 			const inside = (f: Feature) =>
 				shapes.some((s) => pointInPolygon(f.geometry.coordinates as Position, s));
 			const towns = sources.places
-				.filter((f) => typeof f.properties.POP_MAX === 'number' && inside(f))
+				.filter(
+					(f) =>
+						typeof f.properties.POP_MAX === 'number' &&
+						(canonicalCountry
+							? canonicalRegionAtPoint(
+									f.geometry.coordinates as Position,
+									sources.admin1,
+									canonicalCountry,
+									canonicalNames,
+									Number(f.properties.coordinatePrecision ?? 0)
+								) === target.name
+							: inside(f))
+				)
 				.sort((a, b) => Number(b.properties.POP_MAX) - Number(a.properties.POP_MAX));
 			if (towns[0]) {
 				fact.largestCity = {
@@ -323,7 +346,8 @@ function factsForRegionMap(
 function factsForCityMap(
 	targets: MapTarget[],
 	sources: Sources,
-	extent: Bbox
+	extent: Bbox,
+	canonicalRegions?: { country: string; names: Set<string> }
 ): Record<string, DerivedFact> {
 	const coast = coastIndex(sources.coast.map((f) => f.geometry));
 	// Matched on position, not on name: a town's name on the map may have
@@ -359,7 +383,15 @@ function factsForCityMap(
 			// right once multiplied out, and both nonsense if they are not.
 			const in1950 = Number(row.properties.POP1950);
 			if (Number.isFinite(in1950) && in1950 > 0) fact.population1950 = in1950 * 1000;
-			const region = row.properties.ADM1NAME;
+			const region = canonicalRegions
+				? canonicalRegionAtPoint(
+						target.centroid,
+						sources.admin1,
+						canonicalRegions.country,
+						canonicalRegions.names,
+						Number(row.properties.coordinatePrecision ?? 0)
+					)
+				: row.properties.ADM1NAME;
 			if (typeof region === 'string' && region !== '' && region !== target.name) {
 				fact.region = region;
 			}
@@ -379,7 +411,11 @@ async function buildOne(mapId: string): Promise<number> {
 	const map = JSON.parse(readFileSync(path.join(absOutDir, 'map.json'), 'utf8')) as {
 		country?: string;
 		placesSource?: string;
+		regionsMap?: string;
+		largestCityFacts?: boolean;
 		boundarySource?: string;
+		boundaryFacts?: boolean;
+		boundaryRenames?: Record<string, string>;
 		targets: (MapTarget & { country?: string })[];
 	};
 	const usable = map.targets.filter((t) => !t.crossesAntimeridian && !crossesAntimeridian(t.bbox));
@@ -391,16 +427,62 @@ async function buildOne(mapId: string): Promise<number> {
 		map.placesSource ? path.join(REPO_ROOT, map.placesSource) : undefined
 	);
 
+	const regionsMap = map.regionsMap
+		? (JSON.parse(
+				readFileSync(path.join(MAPS_DIR, map.regionsMap, 'map.json'), 'utf8')
+			) as typeof map)
+		: undefined;
+	if (regionsMap && regionsMap.country !== map.country)
+		throw new Error('regionsMap country mismatch');
+	const geometryMap = regionsMap ?? map;
+	// Prepared external snapshots may supply canonical name/admin properties.
+	// Use their actual geometry for area/coast/city facts rather than old admin-1.
+	if (geometryMap.boundaryFacts) {
+		if (!geometryMap.boundarySource) throw new Error('boundaryFacts requires boundarySource');
+		const external = JSON.parse(
+			readFileSync(path.join(REPO_ROOT, geometryMap.boundarySource), 'utf8')
+		) as {
+			features: Feature<AnyGeometry & { type: string }>[];
+		};
+		if (
+			!Array.isArray(external.features) ||
+			!external.features.length ||
+			external.features.some(
+				(feature) =>
+					feature.properties.admin !== map.country ||
+					typeof feature.properties.name !== 'string' ||
+					!['Polygon', 'MultiPolygon'].includes(feature.geometry.type)
+			)
+		)
+			throw new Error('Boundary fact source must contain named polygons for this country');
+		sources.admin1 = external.features;
+	}
+
+	// Match the same unions used by --rename + --dissolve=name. Without this,
+	// county-right cities can disappear from their merged county's facts.
+	if (geometryMap.boundaryRenames)
+		sources.admin1 = applyBoundaryRenames(sources.admin1, map.country, geometryMap.boundaryRenames);
 	const isCityMap = map.targets[0]?.type === 'city';
 	const facts = isCityMap
-		? factsForCityMap(map.targets, sources, extent)
+		? factsForCityMap(
+				map.targets,
+				sources,
+				extent,
+				regionsMap
+					? { country: map.country!, names: new Set(regionsMap.targets.map((t) => t.name)) }
+					: undefined
+			)
 		: factsForRegionMap(
 				map.targets,
 				sources,
 				extent,
 				await adjacencyForMapDir(absOutDir),
-				!map.boundarySource
+				!map.boundarySource || !!map.boundaryFacts,
+				map.boundaryFacts ? map.country : undefined
 			);
+
+	if (map.largestCityFacts === false)
+		for (const fact of Object.values(facts)) delete fact.largestCity;
 
 	// The authored name-facts, where a person has written any (FT-36).
 	const hooksFor = authoredResolver(map.country);

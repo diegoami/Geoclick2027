@@ -532,7 +532,15 @@ Other candidates considered, not pursued further once Netlify worked:
   off, not instead of it.
 
 **Status**: deployed and verified — all three demo maps (as of Iteration 3.5;
-173 maps across 58 countries ship today (v0.20 added nine towns maps; the previous count was 164 across 57 (one new country is split between Natural Earth "Czech Republic" and "Czechia" spellings)), click-to-highlight,
+217 maps across 79 countries are in the working tree (Natural Earth labels Czech Republic and Czechia are joined), click-to-highlight,
+The v1.0 country pipeline is configured in `data/scripts/v1CountrySpecs.ts`.
+Its two source importers pin licensed boundary snapshots; current-source
+recipes and Angola's legal grouping reconstruction live beside the builders.
+Town metadata points to its administrative map with `regionsMap`, so context
+polygons and city-region facts use the same names and footprints. Neutral
+contested areas remain land context. `audit-v1-country-facts.ts` checks the
+44 expansion maps for complete authored EN/IT/DE hooks.
+
 and tour mode all confirmed working against the live Netlify URL (not
 just a successful build). See ROADMAP.md's Iteration 3.5 for the full
 story, Cloudflare included.

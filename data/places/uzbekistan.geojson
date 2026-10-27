@@ -1,0 +1,978 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "OpenStreetMap, Wambacher",
+		"via": "geoBoundaries gbOpen 9469f09",
+		"year": "2017",
+		"url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/UZB/ADM1/geoBoundaries-UZB-ADM1.geojson",
+		"sha256": "32552c187bd709f4f7d18e191d724edb8fcd2215d4519ffaa8ff02adcc16bca5",
+		"licence": "Open Data Commons Open Database License 1.0",
+		"licenceUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+		"simplification": "25%, keep-shapes; precision 0.000001"
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T12:38:25.023Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"UZB\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					72.350555555,
+					40.783333333
+				]
+			},
+			"properties": {
+				"NAME": "Andijan",
+				"NAME_EN": "Andijan",
+				"NAME_IT": "Andijan",
+				"NAME_DE": "Andijon",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Andijan",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 547800,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q487656"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					70.07348,
+					41.01107
+				]
+			},
+			"properties": {
+				"NAME": "Angren",
+				"NAME_EN": "Angren",
+				"NAME_IT": "Angren",
+				"NAME_DE": "Angren",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Tashkent Region",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 126962,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q542966"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					72.233333333,
+					40.633333333
+				]
+			},
+			"properties": {
+				"NAME": "Asaka",
+				"NAME_EN": "Asaka",
+				"NAME_IT": "Asaka",
+				"NAME_DE": "Asaka",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Andijan",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 107400,
+				"POP1950": 0,
+				"populationDate": "2017-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q378393"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					60.75,
+					41.683333333
+				]
+			},
+			"properties": {
+				"NAME": "Beruniy",
+				"NAME_EN": "Beruniy",
+				"NAME_IT": "Beruniy",
+				"NAME_DE": "Beruniy",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Karakalpakstan",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 66019,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q18242285"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					69.201944444,
+					40.813611111
+				]
+			},
+			"properties": {
+				"NAME": "Bo'ka",
+				"NAME_EN": "Bo'ka",
+				"NAME_IT": "Bo'ka",
+				"NAME_DE": "Boʻka",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Tashkent Region",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28000,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3814773"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					64.428611111,
+					39.774722222
+				]
+			},
+			"properties": {
+				"NAME": "Bukhara",
+				"NAME_EN": "Bukhara",
+				"NAME_IT": "Bukhara",
+				"NAME_DE": "Buchara",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Bukhara",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 280187,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q5764"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					71.786388888,
+					40.386388888
+				]
+			},
+			"properties": {
+				"NAME": "Fergana",
+				"NAME_EN": "Fergana",
+				"NAME_IT": "Fergana",
+				"NAME_DE": "Fargʻona",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Fergana",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 299200,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q486329"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					66.248055555,
+					38.620833333
+				]
+			},
+			"properties": {
+				"NAME": "G‘uzor",
+				"NAME_EN": "G‘uzor",
+				"NAME_IT": "Guzar",
+				"NAME_DE": "Gʻuzor",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Kashkadarya",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26592,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2631365"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					68.7833,
+					40.5153
+				]
+			},
+			"properties": {
+				"NAME": "Guliston",
+				"NAME_EN": "Guliston",
+				"NAME_IT": "Gulistan",
+				"NAME_DE": "Guliston",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Syrdarya",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 55600,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q609649"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					60.391944444,
+					41.844722222
+				]
+			},
+			"properties": {
+				"NAME": "Gurlan",
+				"NAME_EN": "Gurlan",
+				"NAME_IT": "Gurlan",
+				"NAME_DE": "Gurlan",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Khorezm",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 27300,
+				"POP1950": 0,
+				"populationDate": "2004-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3779859"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					67.85,
+					40.116666666
+				]
+			},
+			"properties": {
+				"NAME": "Jizzakh",
+				"NAME_EN": "Jizzakh",
+				"NAME_IT": "Jizzax",
+				"NAME_DE": "Jizzax",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Jizzakh",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 163200,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q572380"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					64.551666666,
+					39.722777777
+				]
+			},
+			"properties": {
+				"NAME": "Kagan",
+				"NAME_EN": "Kagan",
+				"NAME_IT": "Kogon",
+				"NAME_DE": "Kogon",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Bukhara",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 86745,
+				"POP1950": 0,
+				"populationDate": "2009-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1658752"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					66.265555555,
+					39.895833333
+				]
+			},
+			"properties": {
+				"NAME": "Kattakurgan",
+				"NAME_EN": "Kattakurgan",
+				"NAME_IT": "Kattaqo'rg'on",
+				"NAME_DE": "Kattaqoʻrgʻon",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Samarkand",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 84741,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q422197"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					60.361111111,
+					41.381388888
+				]
+			},
+			"properties": {
+				"NAME": "Khiva",
+				"NAME_EN": "Khiva",
+				"NAME_IT": "Khiva",
+				"NAME_DE": "Xiva",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Khorezm",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 105300,
+				"POP1950": 0,
+				"populationDate": "2017-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q486195"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					58.906666666,
+					43.075833333
+				]
+			},
+			"properties": {
+				"NAME": "Kungrad",
+				"NAME_EN": "Kungrad",
+				"NAME_IT": "Kungrad",
+				"NAME_DE": "Qoʻngʻirot",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Karakalpakstan",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 80090,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1657994"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					71.716666666,
+					40.466666666
+				]
+			},
+			"properties": {
+				"NAME": "Margilan",
+				"NAME_EN": "Margilan",
+				"NAME_IT": "Margilan",
+				"NAME_DE": "Margʻilon",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Fergana",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 242500,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q261076"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					59.033333333,
+					43.766666666
+				]
+			},
+			"properties": {
+				"NAME": "Moynaq",
+				"NAME_EN": "Moynaq",
+				"NAME_IT": "Moynaq",
+				"NAME_DE": "Moʻynoq",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Karakalpakstan",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 13500,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q750989"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					71.6725,
+					40.995277777
+				]
+			},
+			"properties": {
+				"NAME": "Namangan",
+				"NAME_EN": "Namangan",
+				"NAME_IT": "Namangan",
+				"NAME_DE": "Namangan",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Namangan",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 626120,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q492552"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					65.383333333,
+					40.083333333
+				]
+			},
+			"properties": {
+				"NAME": "Navoiy",
+				"NAME_EN": "Navoiy",
+				"NAME_IT": "Navoiy",
+				"NAME_DE": "Navoiy",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Navoi",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 220000,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q763015"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					59.602222222,
+					42.464722222
+				]
+			},
+			"properties": {
+				"NAME": "Nukus",
+				"NAME_EN": "Nukus",
+				"NAME_IT": "Nukus",
+				"NAME_DE": "Nukus",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Karakalpakstan",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 319583,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q489898"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					69.6,
+					40.85
+				]
+			},
+			"properties": {
+				"NAME": "Olmaliq",
+				"NAME_EN": "Olmaliq",
+				"NAME_IT": "Olmaliq",
+				"NAME_DE": "Olmaliq",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Tashkent Region",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 141894,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q986429"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					59.533333333,
+					42.6
+				]
+			},
+			"properties": {
+				"NAME": "Oqmang‘it",
+				"NAME_EN": "Oqmang‘it",
+				"NAME_IT": "Oqmang‘it",
+				"NAME_DE": "Oqmang‘it",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Karakalpakstan",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10100,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3661563"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					59,
+					42.833333333
+				]
+			},
+			"properties": {
+				"NAME": "Qanliko‘l",
+				"NAME_EN": "Qanliko‘l",
+				"NAME_IT": "Qanliko‘l",
+				"NAME_DE": "Qanliko‘l",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Karakalpakstan",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10700,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3661518"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					65.8,
+					38.866666666
+				]
+			},
+			"properties": {
+				"NAME": "Qarshi",
+				"NAME_EN": "Qarshi",
+				"NAME_IT": "Karshi",
+				"NAME_DE": "Qarshi",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Kashkadarya",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 274891,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q644008"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					70.9425,
+					40.528611111
+				]
+			},
+			"properties": {
+				"NAME": "Qoʻqon",
+				"NAME_EN": "Qoʻqon",
+				"NAME_IT": "Kokand",
+				"NAME_DE": "Qoʻqon",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Fergana",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 252731,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q489890"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					71.284722222,
+					40.356666666
+				]
+			},
+			"properties": {
+				"NAME": "Rishton",
+				"NAME_EN": "Rishton",
+				"NAME_IT": "Rishdan",
+				"NAME_DE": "Rishton",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Fergana",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 50200,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q250276"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					66.975833333,
+					39.654722222
+				]
+			},
+			"properties": {
+				"NAME": "Samarkand",
+				"NAME_EN": "Samarkand",
+				"NAME_IT": "Samarcanda",
+				"NAME_DE": "Samarqand",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Samarkand",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 546303,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q5753"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					66.833333333,
+					39.05
+				]
+			},
+			"properties": {
+				"NAME": "Shahrisabz",
+				"NAME_EN": "Shahrisabz",
+				"NAME_IT": "Shahrisabz",
+				"NAME_DE": "Shahrisabz",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Kashkadarya",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 142700,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q569766"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					59.775277777,
+					42.935833333
+				]
+			},
+			"properties": {
+				"NAME": "Shimbay",
+				"NAME_EN": "Shimbay",
+				"NAME_IT": "Chimboy",
+				"NAME_DE": "Chimboy",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Karakalpakstan",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 39571,
+				"POP1950": 0,
+				"populationDate": "2009-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1073108"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					69.279722222,
+					41.311111111
+				]
+			},
+			"properties": {
+				"NAME": "Tashkent",
+				"NAME_EN": "Tashkent",
+				"NAME_IT": "Tashkent",
+				"NAME_DE": "Taschkent",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Tashkent City",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 2956384,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q269"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					67.278333333,
+					37.224166666
+				]
+			},
+			"properties": {
+				"NAME": "Termez",
+				"NAME_EN": "Termez",
+				"NAME_IT": "Termez",
+				"NAME_DE": "Termiz",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Surkhandarya",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 136200,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q491879"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					61,
+					41.55
+				]
+			},
+			"properties": {
+				"NAME": "Tortkul",
+				"NAME_EN": "Tortkul",
+				"NAME_IT": "Turtkul",
+				"NAME_DE": "Toʻrtkoʻl",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Karakalpakstan",
+				"coordinatePrecision": 0.0166667,
+				"ADM0CAP": 0,
+				"POP_MAX": 50800,
+				"POP1950": 0,
+				"populationDate": "2004-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1027623"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					63.555555555,
+					42.156666666
+				]
+			},
+			"properties": {
+				"NAME": "Uchkuduk",
+				"NAME_EN": "Uchkuduk",
+				"NAME_IT": "Uchquduq",
+				"NAME_DE": "Uchquduq",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Navoi",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24200,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q6364"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					60.6249,
+					41.5345
+				]
+			},
+			"properties": {
+				"NAME": "Urgench",
+				"NAME_EN": "Urgench",
+				"NAME_IT": "Urgench",
+				"NAME_DE": "Urganch",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Khorezm",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 150000,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q472925"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					64.51395,
+					40.023277
+				]
+			},
+			"properties": {
+				"NAME": "Vabkent",
+				"NAME_EN": "Vabkent",
+				"NAME_IT": "Vobkent",
+				"NAME_DE": "Vobkent",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Bukhara",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 16600,
+				"POP1950": 0,
+				"populationDate": "2004-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q500641"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					72.97314,
+					40.812689
+				]
+			},
+			"properties": {
+				"NAME": "Xonobod",
+				"NAME_EN": "Xonobod",
+				"NAME_IT": "Xonobod",
+				"NAME_DE": "Xonobod",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Andijan",
+				"coordinatePrecision": 0.0166667,
+				"ADM0CAP": 0,
+				"POP_MAX": 42301,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q650208"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					65.966666666,
+					40.033333333
+				]
+			},
+			"properties": {
+				"NAME": "Yangirabad",
+				"NAME_EN": "Yangirabad",
+				"NAME_IT": "Yangirabad",
+				"NAME_DE": "Yangirabad",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Navoi",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 15500,
+				"POP1950": 0,
+				"populationDate": "2004-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q6169765"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					68.816666666,
+					40.266666666
+				]
+			},
+			"properties": {
+				"NAME": "Yangiyer",
+				"NAME_EN": "Yangiyer",
+				"NAME_IT": "Yangiyer",
+				"NAME_DE": "Yangiyer",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Syrdarya",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 44200,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1658420"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					69.046666666,
+					41.1125
+				]
+			},
+			"properties": {
+				"NAME": "Yangiyo‘l",
+				"NAME_EN": "Yangiyo‘l",
+				"NAME_IT": "Yangiyol",
+				"NAME_DE": "Yangiyoʻl",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Tashkent Region",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 72500,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q384774"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					64.2,
+					41.566666666
+				]
+			},
+			"properties": {
+				"NAME": "Zarafshon",
+				"NAME_EN": "Zarafshon",
+				"NAME_IT": "Zarafshan",
+				"NAME_DE": "Zarafshon",
+				"ADM0NAME": "Uzbekistan",
+				"ADM1NAME": "Navoi",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 54300,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q147697"
+			}
+		}
+	]
+}

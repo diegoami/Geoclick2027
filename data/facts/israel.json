@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Israel (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"jerusalem": {
 		"city": {
@@ -20,6 +21,582 @@
 				"Eine Stadt, die dem Judentum, dem Christentum und dem Islam heilig ist.",
 				"Die Mauern ihrer Altstadt ließ der osmanische Sultan Süleyman der Prächtige in den 1530er-Jahren bauen.",
 				"Ihr Status ist eine der umstrittensten Fragen der Welt."
+			]
+		},
+		"region": {
+			"en": [
+				"Its name is attested in ancient forms such as Urusalim.",
+				"Abu Ghosh preserves a medieval Crusader church.",
+				"The Judean Hills retain traditional terraced landscapes."
+			],
+			"it": [
+				"Il nome è attestato in forme antiche come Urusalim.",
+				"Abu Ghosh conserva una chiesa medievale crociata.",
+				"I monti della Giudea conservano paesaggi terrazzati tradizionali."
+			],
+			"de": [
+				"Der Name ist in alten Formen wie Urusalim belegt.",
+				"Abu Ghosh bewahrt eine mittelalterliche Kreuzfahrerkirche.",
+				"Die Judäischen Berge bewahren traditionelle Terrassenlandschaften."
+			]
+		}
+	},
+	"_sources": {
+		"northern:region": [
+			"https://en.wikipedia.org/wiki/Northern_District_(Israel)",
+			"https://en.wikipedia.org/wiki/Acre,_Israel",
+			"https://en.wikipedia.org/wiki/Sea_of_Galilee"
+		],
+		"haifa:region": [
+			"https://en.wikipedia.org/wiki/Haifa",
+			"https://en.wikipedia.org/wiki/Terraces_(Bah%C3%A1%CA%BC%C3%AD)",
+			"https://en.wikipedia.org/wiki/German_Colony,_Haifa"
+		],
+		"haifa:city": [
+			"https://en.wikipedia.org/wiki/Haifa",
+			"https://en.wikipedia.org/wiki/Terraces_(Bah%C3%A1%CA%BC%C3%AD)",
+			"https://en.wikipedia.org/wiki/German_Colony,_Haifa"
+		],
+		"tel-aviv:region": [
+			"https://en.wikipedia.org/wiki/Tel_Aviv",
+			"https://whc.unesco.org/en/list/1096",
+			"https://en.wikipedia.org/wiki/Jaffa"
+		],
+		"tel-aviv:city": [
+			"https://en.wikipedia.org/wiki/Tel_Aviv",
+			"https://whc.unesco.org/en/list/1096",
+			"https://en.wikipedia.org/wiki/Jaffa"
+		],
+		"central:region": [
+			"https://en.wikipedia.org/wiki/Central_District_(Israel)",
+			"https://en.wikipedia.org/wiki/White_Tower_(Ramla)",
+			"https://en.wikipedia.org/wiki/Sharon_plain"
+		],
+		"jerusalem:region": [
+			"https://en.wikipedia.org/wiki/Names_of_Jerusalem",
+			"https://en.wikipedia.org/wiki/Abu_Ghosh",
+			"https://en.wikipedia.org/wiki/Judaean_Mountains"
+		],
+		"southern:region": [
+			"https://en.wikipedia.org/wiki/Southern_District_(Israel)",
+			"https://en.wikipedia.org/wiki/Incense_Route_%E2%80%93_Desert_Cities_in_the_Negev",
+			"https://en.wikipedia.org/wiki/Makhtesh_Ramon"
+		],
+		"nazareth:city": [
+			"https://en.wikipedia.org/wiki/Nazareth",
+			"https://en.wikipedia.org/wiki/Church_of_the_Annunciation"
+		],
+		"hadera:city": [
+			"https://en.wikipedia.org/wiki/Hadera",
+			"https://en.wikipedia.org/wiki/Khan_Museum"
+		],
+		"netanya:city": [
+			"https://www.netanya.muni.il/en/Pages/History.aspx",
+			"https://en.wikipedia.org/wiki/Netanya"
+		],
+		"kfar-saba:city": [
+			"https://en.wikipedia.org/wiki/Kfar_Saba"
+		],
+		"herzliya:city": [
+			"https://en.wikipedia.org/wiki/Herzliya",
+			"https://en.wikipedia.org/wiki/Apollonia-Arsuf"
+		],
+		"petah-tikva:city": [
+			"https://en.wikipedia.org/wiki/Petah_Tikva"
+		],
+		"bnei-brak:city": [
+			"https://en.wikipedia.org/wiki/Bnei_Brak"
+		],
+		"ramat-gan:city": [
+			"https://en.wikipedia.org/wiki/Ramat_Gan",
+			"https://en.wikipedia.org/wiki/Ramat_Gan_Safari"
+		],
+		"bat-yam:city": [
+			"https://en.wikipedia.org/wiki/Bat_Yam",
+			"https://en.wikipedia.org/wiki/Bat_Yam_Museum_of_Art"
+		],
+		"holon:city": [
+			"https://en.wikipedia.org/wiki/Holon",
+			"https://en.wikipedia.org/wiki/Design_Museum_Holon",
+			"https://en.wikipedia.org/wiki/Israeli_Children%27s_Museum"
+		],
+		"rishon-lezion:city": [
+			"https://en.wikipedia.org/wiki/Rishon_LeZion"
+		],
+		"modi-in-maccabim-re-ut:city": [
+			"https://en.wikipedia.org/wiki/Modi%27in-Maccabim-Re%27ut",
+			"https://en.wikipedia.org/wiki/Umm_el-Umdan"
+		],
+		"rehovot:city": [
+			"https://en.wikipedia.org/wiki/Rehovot",
+			"https://en.wikipedia.org/wiki/Weizmann_Institute_of_Science"
+		],
+		"ashdod:city": [
+			"https://en.wikipedia.org/wiki/Ashdod",
+			"https://en.wikipedia.org/wiki/Ashdod-Yam"
+		],
+		"beit-shemesh:city": [
+			"https://en.wikipedia.org/wiki/Beit_Shemesh",
+			"https://en.wikipedia.org/wiki/Soreq_Cave"
+		],
+		"ashkelon:city": [
+			"https://en.wikipedia.org/wiki/Ashkelon"
+		],
+		"beersheba:city": [
+			"https://en.wikipedia.org/wiki/Beersheba",
+			"https://en.wikipedia.org/wiki/Tel_Be%27er_Sheva",
+			"https://en.wikipedia.org/wiki/Negev_Museum_of_Art"
+		]
+	},
+	"northern": {
+		"region": {
+			"en": [
+				"Its name describes the northern district.",
+				"Acre preserves a historic Mediterranean port.",
+				"The Sea of Galilee has a long fishing history."
+			],
+			"it": [
+				"Il nome descrive il distretto settentrionale.",
+				"Acri conserva uno storico porto mediterraneo.",
+				"Il lago di Tiberiade vanta una lunga storia di pesca."
+			],
+			"de": [
+				"Der Name beschreibt den nördlichen Bezirk.",
+				"Akko bewahrt einen historischen Mittelmeerhafen.",
+				"Der See Genezareth besitzt eine lange Fischereigeschichte."
+			]
+		}
+	},
+	"haifa": {
+		"region": {
+			"en": [
+				"Early forms of its name include Hefa.",
+				"The Bahá’í gardens are a major cultural landmark.",
+				"The German Colony preserves nineteenth-century settlement history."
+			],
+			"it": [
+				"Tra le antiche forme del nome vi è Hefa.",
+				"I giardini bahá’í sono un importante simbolo culturale.",
+				"La Colonia Tedesca conserva la storia degli insediamenti ottocenteschi."
+			],
+			"de": [
+				"Zu den frühen Namensformen gehört Hefa.",
+				"Die Bahai-Gärten sind ein bedeutendes Kulturwahrzeichen.",
+				"Die Deutsche Kolonie bewahrt Siedlungsgeschichte des 19. Jahrhunderts."
+			]
+		},
+		"city": {
+			"en": [
+				"Early forms of its name include Hefa.",
+				"The Bahá’í gardens are a major cultural landmark.",
+				"The German Colony preserves nineteenth-century settlement history."
+			],
+			"it": [
+				"Tra le antiche forme del nome vi è Hefa.",
+				"I giardini bahá’í sono un importante simbolo culturale.",
+				"La Colonia Tedesca conserva la storia degli insediamenti ottocenteschi."
+			],
+			"de": [
+				"Zu den frühen Namensformen gehört Hefa.",
+				"Die Bahai-Gärten sind ein bedeutendes Kulturwahrzeichen.",
+				"Die Deutsche Kolonie bewahrt Siedlungsgeschichte des 19. Jahrhunderts."
+			]
+		}
+	},
+	"tel-aviv": {
+		"region": {
+			"en": [
+				"Its name means spring hill, chosen from a Hebrew book title.",
+				"The White City preserves modernist architecture.",
+				"Jaffa preserves an ancient port landscape."
+			],
+			"it": [
+				"Il nome significa collina della primavera, scelto da un titolo ebraico.",
+				"La Città Bianca conserva l’architettura modernista.",
+				"Giaffa conserva il paesaggio di un porto antico."
+			],
+			"de": [
+				"Der Name bedeutet Frühlingshügel und stammt aus einem hebräischen Buchtitel.",
+				"Die Weiße Stadt bewahrt modernistische Architektur.",
+				"Jaffa bewahrt die Landschaft eines alten Hafens."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name means spring hill, chosen from a Hebrew book title.",
+				"The White City preserves modernist architecture.",
+				"Jaffa preserves an ancient port landscape."
+			],
+			"it": [
+				"Il nome significa collina della primavera, scelto da un titolo ebraico.",
+				"La Città Bianca conserva l’architettura modernista.",
+				"Giaffa conserva il paesaggio di un porto antico."
+			],
+			"de": [
+				"Der Name bedeutet Frühlingshügel und stammt aus einem hebräischen Buchtitel.",
+				"Die Weiße Stadt bewahrt modernistische Architektur.",
+				"Jaffa bewahrt die Landschaft eines alten Hafens."
+			]
+		}
+	},
+	"central": {
+		"region": {
+			"en": [
+				"Its name refers to the central coastal plain.",
+				"Ramla preserves a medieval White Tower.",
+				"Citrus growing shaped the Sharon landscape."
+			],
+			"it": [
+				"Il nome si riferisce alla pianura costiera centrale.",
+				"Ramla conserva una Torre Bianca medievale.",
+				"La coltivazione degli agrumi plasmò il paesaggio dello Sharon."
+			],
+			"de": [
+				"Der Name bezieht sich auf die zentrale Küstenebene.",
+				"Ramla bewahrt einen mittelalterlichen Weißen Turm.",
+				"Zitrusanbau prägte die Sharon-Landschaft."
+			]
+		}
+	},
+	"southern": {
+		"region": {
+			"en": [
+				"Its name describes the southern district.",
+				"Nabataean towns preserve ancient incense-route heritage.",
+				"Makhtesh Ramon formed through erosion."
+			],
+			"it": [
+				"Il nome descrive il distretto meridionale.",
+				"Le città nabatee conservano il patrimonio dell’antica via dell’incenso.",
+				"Il Makhtesh Ramon si formò per erosione."
+			],
+			"de": [
+				"Der Name beschreibt den südlichen Bezirk.",
+				"Nabatäerstädte bewahren das Erbe der alten Weihrauchstraße.",
+				"Der Machtesch Ramon entstand durch Erosion."
+			]
+		}
+	},
+	"nazareth": {
+		"city": {
+			"en": [
+				"Its name has been linked to a word for branch, but the origin is debated.",
+				"The Basilica of the Annunciation is a Christian pilgrimage site.",
+				"The old market preserves traditional trading streets."
+			],
+			"it": [
+				"Il nome è stato collegato a una parola per germoglio, ma l’origine è discussa.",
+				"La Basilica dell’Annunciazione è un luogo di pellegrinaggio cristiano.",
+				"Il mercato antico conserva tradizionali vie commerciali."
+			],
+			"de": [
+				"Der Name wird mit einem Wort für Spross verbunden, doch die Herkunft ist umstritten.",
+				"Die Verkündigungsbasilika ist ein christliches Pilgerziel.",
+				"Der alte Markt bewahrt traditionelle Handelsgassen."
+			]
+		}
+	},
+	"hadera": {
+		"city": {
+			"en": [
+				"Its name recalls the Arabic word for green.",
+				"Wetland drainage shaped its early farming settlement.",
+				"The Khan Museum preserves local history."
+			],
+			"it": [
+				"Il nome ricorda la parola araba per verde.",
+				"Il drenaggio delle zone umide plasmò il primo insediamento agricolo.",
+				"Il Museo del Khan conserva la storia locale."
+			],
+			"de": [
+				"Der Name erinnert an das arabische Wort für Grün.",
+				"Die Entwässerung von Feuchtgebieten prägte die frühe Landwirtschaftssiedlung.",
+				"Das Khan-Museum bewahrt örtliche Geschichte."
+			]
+		}
+	},
+	"netanya": {
+		"city": {
+			"en": [
+				"Its name honours philanthropist Nathan Straus.",
+				"Citrus growing shaped its early economy.",
+				"Diamond cutting later became important."
+			],
+			"it": [
+				"Il nome onora il filantropo Nathan Straus.",
+				"La coltivazione degli agrumi plasmò la prima economia.",
+				"Il taglio dei diamanti divenne importante in seguito."
+			],
+			"de": [
+				"Der Name ehrt den Philanthropen Nathan Straus.",
+				"Zitrusanbau prägte die frühe Wirtschaft.",
+				"Später wurde das Diamantenschleifen wichtig."
+			]
+		}
+	},
+	"kfar-saba": {
+		"city": {
+			"en": [
+				"Its name is commonly translated as grandfather’s village.",
+				"Citrus farming shaped its growth.",
+				"The Khan building preserves early settlement history."
+			],
+			"it": [
+				"Il nome è comunemente tradotto come villaggio del nonno.",
+				"L’agrumicoltura ne plasmò la crescita.",
+				"L’edificio del Khan conserva la storia del primo insediamento."
+			],
+			"de": [
+				"Der Name wird gewöhnlich als Großvaters Dorf übersetzt.",
+				"Zitrusanbau prägte das Wachstum.",
+				"Das Khan-Gebäude bewahrt frühe Siedlungsgeschichte."
+			]
+		}
+	},
+	"herzliya": {
+		"city": {
+			"en": [
+				"It is named after Theodor Herzl.",
+				"The modern town was founded in 1924.",
+				"Apollonia preserves ancient port and fortress remains."
+			],
+			"it": [
+				"Prende il nome da Theodor Herzl.",
+				"La città moderna fu fondata nel 1924.",
+				"Apollonia conserva resti di un antico porto e di una fortezza."
+			],
+			"de": [
+				"Die Stadt ist nach Theodor Herzl benannt.",
+				"Die moderne Stadt wurde 1924 gegründet.",
+				"Apollonia bewahrt alte Hafen- und Festungsreste."
+			]
+		}
+	},
+	"petah-tikva": {
+		"city": {
+			"en": [
+				"Its Hebrew name means gate of hope.",
+				"The founding farming settlement dates to 1878.",
+				"Citrus growing shaped its early economy."
+			],
+			"it": [
+				"Il nome ebraico significa porta della speranza.",
+				"L’insediamento agricolo originario risale al 1878.",
+				"L’agrumicoltura ne plasmò la prima economia."
+			],
+			"de": [
+				"Der hebräische Name bedeutet Tor der Hoffnung.",
+				"Die ursprüngliche Landwirtschaftssiedlung stammt von 1878.",
+				"Zitrusanbau prägte die frühe Wirtschaft."
+			]
+		}
+	},
+	"bnei-brak": {
+		"city": {
+			"en": [
+				"Its name revives the ancient place name Bene Beraq.",
+				"The modern town was founded in 1924.",
+				"Yeshivas became central to its cultural life."
+			],
+			"it": [
+				"Il nome riprende l’antico toponimo Bene Beraq.",
+				"La città moderna fu fondata nel 1924.",
+				"Le yeshivot divennero centrali nella vita culturale."
+			],
+			"de": [
+				"Der Name greift den alten Ortsnamen Bene Beraq auf.",
+				"Die moderne Stadt wurde 1924 gegründet.",
+				"Jeschiwot wurden für das Kulturleben zentral."
+			]
+		}
+	},
+	"ramat-gan": {
+		"city": {
+			"en": [
+				"Its Hebrew name means garden heights.",
+				"The Safari became a major zoological park.",
+				"The diamond exchange shaped its business district."
+			],
+			"it": [
+				"Il nome ebraico significa alture del giardino.",
+				"Il Safari divenne un importante parco zoologico.",
+				"La borsa dei diamanti plasmò il quartiere commerciale."
+			],
+			"de": [
+				"Der hebräische Name bedeutet Gartenhöhen.",
+				"Der Safari wurde zu einem bedeutenden Tierpark.",
+				"Die Diamantenbörse prägte das Geschäftsviertel."
+			]
+		}
+	},
+	"bat-yam": {
+		"city": {
+			"en": [
+				"Its name means daughter of the sea.",
+				"Its earlier settlement name was Bayit VaGan.",
+				"The Ben-Ari museum became a centre of modern art."
+			],
+			"it": [
+				"Il nome significa figlia del mare.",
+				"Il nome precedente dell’insediamento era Bayit VaGan.",
+				"Il Museo Ben-Ari divenne un centro d’arte moderna."
+			],
+			"de": [
+				"Der Name bedeutet Tochter des Meeres.",
+				"Der frühere Siedlungsname lautete Bayit VaGan.",
+				"Das Ben-Ari-Museum wurde zu einem Zentrum moderner Kunst."
+			]
+		}
+	},
+	"holon": {
+		"city": {
+			"en": [
+				"Its name comes from the Hebrew word for sand.",
+				"The Design Museum became an architectural landmark.",
+				"The Children’s Museum is a cultural institution."
+			],
+			"it": [
+				"Il nome deriva dalla parola ebraica per sabbia.",
+				"Il Museo del Design divenne un simbolo architettonico.",
+				"Il Museo dei Bambini è un’istituzione culturale."
+			],
+			"de": [
+				"Der Name stammt vom hebräischen Wort für Sand.",
+				"Das Designmuseum wurde zu einem architektonischen Wahrzeichen.",
+				"Das Kindermuseum ist eine Kultureinrichtung."
+			]
+		}
+	},
+	"rishon-lezion": {
+		"city": {
+			"en": [
+				"Its Hebrew name means first in Zion.",
+				"The modern settlement was founded in 1882.",
+				"Rothschild-backed wine growing shaped its early economy."
+			],
+			"it": [
+				"Il nome ebraico significa primo a Sion.",
+				"L’insediamento moderno fu fondato nel 1882.",
+				"La viticoltura sostenuta dai Rothschild ne plasmò la prima economia."
+			],
+			"de": [
+				"Der hebräische Name bedeutet zuerst in Zion.",
+				"Die moderne Siedlung wurde 1882 gegründet.",
+				"Von Rothschild geförderter Weinbau prägte die frühe Wirtschaft."
+			]
+		}
+	},
+	"modi-in-maccabim-re-ut": {
+		"city": {
+			"en": [
+				"Its compound name joins Modi’in, Maccabim and Re’ut.",
+				"Modi’in recalls an ancient settlement associated with the Maccabees.",
+				"Umm el-Umdan preserves an ancient synagogue."
+			],
+			"it": [
+				"Il nome composto unisce Modi’in, Maccabim e Re’ut.",
+				"Modi’in ricorda un antico insediamento legato ai Maccabei.",
+				"Umm el-Umdan conserva un’antica sinagoga."
+			],
+			"de": [
+				"Der zusammengesetzte Name verbindet Modi’in, Maccabim und Re’ut.",
+				"Modi’in erinnert an eine alte, mit den Makkabäern verbundene Siedlung.",
+				"Umm el-Umdan bewahrt eine antike Synagoge."
+			]
+		}
+	},
+	"rehovot": {
+		"city": {
+			"en": [
+				"Its Hebrew name means broad spaces.",
+				"The modern town was founded in 1890.",
+				"The Weizmann Institute became a scientific landmark."
+			],
+			"it": [
+				"Il nome ebraico significa ampi spazi.",
+				"La città moderna fu fondata nel 1890.",
+				"L’Istituto Weizmann divenne un simbolo scientifico."
+			],
+			"de": [
+				"Der hebräische Name bedeutet weite Räume.",
+				"Die moderne Stadt wurde 1890 gegründet.",
+				"Das Weizmann-Institut wurde zu einem Wissenschaftswahrzeichen."
+			]
+		}
+	},
+	"ashdod": {
+		"city": {
+			"en": [
+				"Its name is attested as an ancient Philistine city.",
+				"The modern port expanded in the 1960s.",
+				"Ashdod-Yam preserves coastal fortress remains."
+			],
+			"it": [
+				"Il nome è attestato come antica città filistea.",
+				"Il porto moderno si ampliò negli anni Sessanta.",
+				"Ashdod-Yam conserva resti di una fortezza costiera."
+			],
+			"de": [
+				"Der Name ist als alte Philisterstadt belegt.",
+				"Der moderne Hafen wuchs in den 1960er Jahren.",
+				"Ashdod-Yam bewahrt Reste einer Küstenfestung."
+			]
+		}
+	},
+	"beit-shemesh": {
+		"city": {
+			"en": [
+				"Its Hebrew name means house of the sun.",
+				"Tel Beit Shemesh preserves Bronze Age archaeology.",
+				"Nearby Soreq Cave has stalactite formations."
+			],
+			"it": [
+				"Il nome ebraico significa casa del sole.",
+				"Tel Beit Shemesh conserva testimonianze archeologiche dell’età del bronzo.",
+				"La vicina grotta di Soreq presenta formazioni di stalattiti."
+			],
+			"de": [
+				"Der hebräische Name bedeutet Haus der Sonne.",
+				"Tel Beit Schemesch bewahrt bronzezeitliche Archäologie.",
+				"Die nahe Soreq-Höhle besitzt Tropfsteinformationen."
+			]
+		}
+	},
+	"ashkelon": {
+		"city": {
+			"en": [
+				"Its ancient name is also transcribed Ashqelon.",
+				"It developed as a Mediterranean trading port.",
+				"The archaeological park preserves a Canaanite gate."
+			],
+			"it": [
+				"Il nome antico è trascritto anche Ashqelon.",
+				"Si sviluppò come porto commerciale mediterraneo.",
+				"Il parco archeologico conserva una porta cananea."
+			],
+			"de": [
+				"Der alte Name wird auch Ashqelon transkribiert.",
+				"Die Stadt entwickelte sich als Mittelmeerhandelshafen.",
+				"Der archäologische Park bewahrt ein kanaanäisches Tor."
+			]
+		}
+	},
+	"beersheba": {
+		"city": {
+			"en": [
+				"Traditional translations include well of seven and well of the oath.",
+				"Nearby Tel Beersheba preserves ancient waterworks.",
+				"The Negev Museum occupies a former Ottoman governor’s house."
+			],
+			"it": [
+				"Le traduzioni tradizionali comprendono pozzo dei sette e pozzo del giuramento.",
+				"La vicina Tel Beersheba conserva antiche opere idrauliche.",
+				"Il Museo del Negev occupa l’antica casa di un governatore ottomano."
+			],
+			"de": [
+				"Traditionelle Übersetzungen sind Brunnen der Sieben und Brunnen des Eides.",
+				"Das nahe Tel Beerscheba bewahrt antike Wasseranlagen.",
+				"Das Negev-Museum befindet sich in einem früheren osmanischen Gouverneurshaus."
 			]
 		}
 	}

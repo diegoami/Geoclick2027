@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Costa Rica (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"san-jose": {
 		"city": {
@@ -20,6 +21,429 @@
 				"Die Hauptstadt seit 1823.",
 				"1884 gehörte sie zu den ersten Städten der Welt mit elektrischer Straßenbeleuchtung.",
 				"Ihr Nationaltheater von 1897 wurde durch eine Steuer auf Kaffeeexporte bezahlt."
+			]
+		},
+		"region": {
+			"en": [
+				"San José means “Saint Joseph”.",
+				"The capital’s National Theatre opened in 1897.",
+				"Its auditorium floor can rise to make a ballroom."
+			],
+			"it": [
+				"San José significa “San Giuseppe”.",
+				"Il Teatro Nazionale della capitale aprì nel 1897.",
+				"Il pavimento della platea può sollevarsi per creare una sala da ballo."
+			],
+			"de": [
+				"San José bedeutet „Heiliger Josef“.",
+				"Das Nationaltheater in der Hauptstadt eröffnete 1897.",
+				"Sein Zuschauerraumboden lässt sich zu einem Ballsaal anheben."
+			]
+		}
+	},
+	"_sources": {
+		"guanacaste:region": [
+			"https://www.mcj.go.cr/print/pdf/node/7394",
+			"https://www.inder.go.cr/wp-content/uploads/2024/11/Caracterizacion-Territorio-Liberia-LaCruz.pdf"
+		],
+		"alajuela:region": [
+			"https://munialajuela.go.cr/municipalidad/historia-mision-y-vision",
+			"https://museojuansantamaria.go.cr/wp-content/uploads/biografias/juan_santamaria.pdf"
+		],
+		"heredia:region": [
+			"https://www.ict.go.cr/es/documentos-institucionales/brochures-1/brochures-para-el-turista/caminatas/2368-caminata-por-heredia-1/file.html",
+			"https://si.cultura.cr/infraestructura/biblioteca-de-la-estacion-biologica-la-selva-de-la-organizacion-de-estudios",
+			"https://agenda.mcj.go.cr/evento/estreno-del-largometraje-la-dama-de-las-mil-caras"
+		],
+		"limon:region": [
+			"https://repositoriotec.tec.ac.cr/bitstream/handle/2238/12256/ExpoLim%C3%B3nCompletaBC.pdf?isAllowed=y&sequence=1"
+		],
+		"cartago:region": [
+			"https://patrimoniovirtual.muni-carta.go.cr/",
+			"https://www.sinac.go.cr/es/ac/accvc/mng/paginas/default.aspx"
+		],
+		"san-jose:region": [
+			"https://www.teatronacional.go.cr/Seccion/101/antecedentes",
+			"https://www.teatronacional.go.cr/transparency/files/48_informedefindegestinfredherrerabermdez201520185marzo2018.pdf"
+		],
+		"puntarenas:region": [
+			"https://www.ict.go.cr/flipbook/guias/PDF/GUIA_PUNTARENAS_2.pdf",
+			"https://sinac.go.cr/ES/ac/acosa/pnpb/Paginas/default.aspx",
+			"https://www.sinac.go.cr/es/ac/acopac/pnisl/paginas/default.aspx"
+		],
+		"la-cruz:city": [
+			"https://www.munilacruz.go.cr/images/La_Cruz/HISTORIA_DEL_CANTON_DE_LA_CRUZ.pdf",
+			"https://ict.go.cr/flipbook/guias/PDF/GUIA%20GUANACASTE%20NORTE.pdf"
+		],
+		"liberia:city": [
+			"https://www.inder.go.cr/wp-content/uploads/2024/11/Caracterizacion-Territorio-Liberia-LaCruz.pdf",
+			"https://www.muniliberia.go.cr/muni/std/97/edificio-de-la-antigua-gobernacion"
+		],
+		"canas:city": [
+			"https://ict.go.cr/flipbook/guias/PDF/GUIA%20GUANACASTE%20NORTE.pdf"
+		],
+		"quesada:city": [
+			"https://www.munisc.go.cr/Documentos/Secciones/51/Plan%20desarrollo%20Distrital%20de%20Ciudad%20Quesada.pdf"
+		],
+		"alajuela:city": [
+			"https://munialajuela.go.cr/municipalidad/historia-mision-y-vision",
+			"https://museojuansantamaria.go.cr/wp-content/uploads/biografias/juan_santamaria.pdf"
+		],
+		"heredia:city": [
+			"https://www.ict.go.cr/es/documentos-institucionales/brochures-1/brochures-para-el-turista/caminatas/2368-caminata-por-heredia-1/file.html",
+			"https://www.srb.una.ac.cr/index.php/es/quienes-somos/resena-historica"
+		],
+		"limon:city": [
+			"https://repositoriotec.tec.ac.cr/bitstream/handle/2238/12256/ExpoLim%C3%B3nCompletaBC.pdf?isAllowed=y&sequence=1"
+		],
+		"puntarenas:city": [
+			"https://www.ict.go.cr/flipbook/guias/PDF/GUIA_PUNTARENAS_2.pdf"
+		],
+		"cartago:city": [
+			"https://patrimoniovirtual.muni-carta.go.cr/"
+		],
+		"sixaola:city": [
+			"https://repositorio.mopt.go.cr/items/df8a4ded-9c1b-40ed-bec7-574d5a5222d1",
+			"https://www.museocostarica.go.cr/wp-content/uploads/Publicaciones/Historia/Travesias-cordillera-Talamanca.pdf"
+		],
+		"ciudad-cortes:city": [
+			"https://www.patrimonio.go.cr/biblioteca_digital/publicaciones/1990/historia_del_pacifico_sur.pdf",
+			"https://www.seguridadpublica.go.cr/ministerio/sembremos_seg/informes/sembremos_seguridad/2020/osa/inf_final_osa.pdf"
+		],
+		"golfito:city": [
+			"https://incop.go.cr/terminal-golfito/",
+			"https://www.ict.go.cr/es/documentos-institucionales/gidt/1713-programa-gestion-integral-de-destinos-golfito-jimenez/file.html"
+		]
+	},
+	"guanacaste": {
+		"region": {
+			"en": [
+				"Its name comes from the guanacaste tree and its ear-shaped pods.",
+				"The Nicoya district chose union with Costa Rica in 1824.",
+				"Marimba music accompanies its traditional dances."
+			],
+			"it": [
+				"Il nome viene dall’albero guanacaste e dai suoi baccelli a forma d’orecchio.",
+				"Il distretto di Nicoya scelse l’unione con la Costa Rica nel 1824.",
+				"La musica della marimba accompagna le sue danze tradizionali."
+			],
+			"de": [
+				"Der Name stammt vom Guanacaste-Baum mit seinen ohrförmigen Hülsen.",
+				"Der Bezirk Nicoya entschied sich 1824 für den Anschluss an Costa Rica.",
+				"Marimbamusik begleitet die traditionellen Tänze."
+			]
+		}
+	},
+	"alajuela": {
+		"region": {
+			"en": [
+				"The province takes its name from Alajuela city.",
+				"Juan Santamaría Airport honours an Alajuela-born national hero.",
+				"Volcanic soils support its coffee-growing traditions."
+			],
+			"it": [
+				"La provincia prende il nome dalla città di Alajuela.",
+				"L’aeroporto Juan Santamaría ricorda un eroe nazionale nato ad Alajuela.",
+				"I terreni vulcanici sostengono la sua tradizione del caffè."
+			],
+			"de": [
+				"Die Provinz ist nach der Stadt Alajuela benannt.",
+				"Der Flughafen Juan Santamaría ehrt einen in Alajuela geborenen Nationalhelden.",
+				"Vulkanische Böden fördern die Tradition des Kaffeeanbaus."
+			]
+		},
+		"city": {
+			"en": [
+				"One explanation traces its name to the La Lajuela river.",
+				"The national hero Juan Santamaría was born here.",
+				"Former army barracks now house his history museum."
+			],
+			"it": [
+				"Una spiegazione fa risalire il nome al fiume La Lajuela.",
+				"Qui nacque l’eroe nazionale Juan Santamaría.",
+				"Il suo museo storico occupa un’antica caserma."
+			],
+			"de": [
+				"Eine Erklärung führt den Namen auf den Fluss La Lajuela zurück.",
+				"Hier wurde der Nationalheld Juan Santamaría geboren.",
+				"Sein Geschichtsmuseum befindet sich heute in einer ehemaligen Kaserne."
+			]
+		}
+	},
+	"heredia": {
+		"region": {
+			"en": [
+				"It shares its name with Heredia, its historic centre.",
+				"La Selva in Sarapiquí is a tropical research station.",
+				"Barva keeps a lively tradition of giant masked figures."
+			],
+			"it": [
+				"Condivide il nome con Heredia, il suo centro storico.",
+				"La Selva, a Sarapiquí, è una stazione di ricerca tropicale.",
+				"Barva conserva una vivace tradizione di grandi figure mascherate."
+			],
+			"de": [
+				"Die Provinz trägt den Namen ihres historischen Zentrums Heredia.",
+				"La Selva in Sarapiquí ist eine Forschungsstation für die Tropen.",
+				"Barva bewahrt eine lebendige Tradition riesiger Maskenfiguren."
+			]
+		},
+		"city": {
+			"en": [
+				"Named for the colonial official Alonso Fernández de Heredia.",
+				"The round El Fortín tower became its landmark.",
+				"Costa Rica’s National University was founded here in 1973."
+			],
+			"it": [
+				"Prende il nome dal funzionario coloniale Alonso Fernández de Heredia.",
+				"La torre circolare El Fortín divenne il suo simbolo.",
+				"L’Università Nazionale della Costa Rica fu fondata qui nel 1973."
+			],
+			"de": [
+				"Benannt nach dem Kolonialbeamten Alonso Fernández de Heredia.",
+				"Der runde Turm El Fortín wurde zum Wahrzeichen.",
+				"Hier wurde 1973 Costa Ricas Nationaluniversität gegründet."
+			]
+		}
+	},
+	"limon": {
+		"region": {
+			"en": [
+				"Limón is the Spanish word for “lemon”.",
+				"Jamaican railway workers helped shape its Afro-Caribbean culture.",
+				"Costa Rica recognised calypso limonense as intangible heritage in 2012."
+			],
+			"it": [
+				"Limón è la parola spagnola per “limone”.",
+				"I ferrovieri giamaicani contribuirono alla sua cultura afro-caraibica.",
+				"Nel 2012 la Costa Rica riconobbe il calypso limonense come patrimonio immateriale."
+			],
+			"de": [
+				"Limón ist das spanische Wort für „Zitrone“.",
+				"Jamaikanische Eisenbahnarbeiter prägten die afrokaribische Kultur mit.",
+				"Costa Rica erkannte den Calypso aus Limón 2012 als immaterielles Kulturerbe an."
+			]
+		},
+		"city": {
+			"en": [
+				"Limón means “lemon” in Spanish.",
+				"Calypso singers became chroniclers of its Afro-Caribbean community.",
+				"Jamaican workers helped build the railway to the Central Valley."
+			],
+			"it": [
+				"Limón significa “limone” in spagnolo.",
+				"I cantanti di calypso divennero i cronisti della sua comunità afro-caraibica.",
+				"I lavoratori giamaicani contribuirono alla ferrovia verso la Valle Centrale."
+			],
+			"de": [
+				"Limón bedeutet auf Spanisch „Zitrone“.",
+				"Calypso-Sänger wurden zu Chronisten der afrokaribischen Gemeinschaft.",
+				"Jamaikanische Arbeiter halfen beim Bau der Bahn ins Zentraltal."
+			]
+		}
+	},
+	"cartago": {
+		"region": {
+			"en": [
+				"It takes its name from Costa Rica’s former capital.",
+				"Guayabo preserves pre-Hispanic stone roads and aqueducts.",
+				"The Basilica of Los Ángeles draws pilgrims to La Negrita."
+			],
+			"it": [
+				"Prende il nome dall’antica capitale della Costa Rica.",
+				"Guayabo conserva strade e acquedotti in pietra preispanici.",
+				"La Basilica di Los Ángeles richiama i pellegrini alla Negrita."
+			],
+			"de": [
+				"Die Provinz ist nach Costa Ricas früherer Hauptstadt benannt.",
+				"Guayabo bewahrt vorspanische Steinstraßen und Wasserleitungen.",
+				"Die Basilika von Los Ángeles zieht Pilger zur La Negrita."
+			]
+		},
+		"city": {
+			"en": [
+				"Cartago is the Spanish form of “Carthage”.",
+				"It remained Costa Rica’s capital until 1823.",
+				"Pilgrims visit its basilica to honour La Negrita."
+			],
+			"it": [
+				"Cartago è la forma spagnola di “Cartagine”.",
+				"Rimase capitale della Costa Rica fino al 1823.",
+				"I pellegrini visitano la sua basilica per rendere omaggio alla Negrita."
+			],
+			"de": [
+				"Cartago ist die spanische Form von „Karthago“.",
+				"Bis 1823 war es Costa Ricas Hauptstadt.",
+				"Pilger besuchen die Basilika, um La Negrita zu verehren."
+			]
+		}
+	},
+	"puntarenas": {
+		"region": {
+			"en": [
+				"Puntarenas means “sand point”.",
+				"Piedras Blancas shelters all four Costa Rican monkey species.",
+				"San Lucas became a national park in 2020 after serving as a prison."
+			],
+			"it": [
+				"Puntarenas significa “punta di sabbia”.",
+				"Piedras Blancas ospita tutte e quattro le specie di scimmie costaricensi.",
+				"San Lucas divenne parco nazionale nel 2020 dopo essere stata una prigione."
+			],
+			"de": [
+				"Puntarenas bedeutet „Sandspitze“.",
+				"Piedras Blancas beherbergt alle vier Affenarten Costa Ricas.",
+				"San Lucas wurde nach seiner Zeit als Gefängnis 2020 zum Nationalpark."
+			]
+		},
+		"city": {
+			"en": [
+				"The name describes its sandy point.",
+				"Coffee exports helped it grow as a nineteenth-century port.",
+				"The Virgen del Mar festival honours seafarers."
+			],
+			"it": [
+				"Il nome descrive la sua punta sabbiosa.",
+				"L’esportazione del caffè ne favorì lo sviluppo portuale nell’Ottocento.",
+				"La festa della Virgen del Mar rende omaggio ai marinai."
+			],
+			"de": [
+				"Der Name beschreibt die sandige Landspitze.",
+				"Kaffeeexporte förderten seinen Aufstieg zum Hafen im 19. Jahrhundert.",
+				"Das Fest der Virgen del Mar ehrt die Seeleute."
+			]
+		}
+	},
+	"la-cruz": {
+		"city": {
+			"en": [
+				"Tradition links its name to a cross on a herder’s grave.",
+				"Nearby Santa Rosa preserves the memory of the 1856 battle.",
+				"Bahía Salinas is known for strong trade winds."
+			],
+			"it": [
+				"La tradizione lega il nome a una croce sulla tomba di un mandriano.",
+				"La vicina Santa Rosa conserva la memoria della battaglia del 1856.",
+				"Bahía Salinas è nota per i forti alisei."
+			],
+			"de": [
+				"Der Überlieferung nach gab ein Kreuz auf einem Viehtreibergrab dem Ort seinen Namen.",
+				"Das nahe Santa Rosa erinnert an die Schlacht von 1856.",
+				"Die Bahía Salinas ist für starke Passatwinde bekannt."
+			]
+		}
+	},
+	"liberia": {
+		"city": {
+			"en": [
+				"It took the name Liberia in 1854, replacing Guanacaste.",
+				"Its “White City” nickname recalls pale soils and whitewashed adobe.",
+				"The old governor’s house was built around 1850."
+			],
+			"it": [
+				"Nel 1854 il nome Liberia sostituì Guanacaste.",
+				"Il soprannome “Città Bianca” ricorda i terreni chiari e le case d’adobe imbiancate.",
+				"L’antico palazzo del governatore fu costruito intorno al 1850."
+			],
+			"de": [
+				"1854 ersetzte der Name Liberia das frühere Guanacaste.",
+				"Der Beiname „Weiße Stadt“ erinnert an helle Böden und weiß getünchte Lehmhäuser.",
+				"Das alte Gouverneurshaus entstand um 1850."
+			]
+		}
+	},
+	"canas": {
+		"city": {
+			"en": [
+				"Cañas is Spanish for “canes” or “reeds”.",
+				"Otto Apuy covered its church in colourful mosaics.",
+				"Broken ceramic pieces form the trencadís decoration."
+			],
+			"it": [
+				"Cañas significa “canne” in spagnolo.",
+				"Otto Apuy rivestì la sua chiesa di mosaici colorati.",
+				"La decorazione a trencadís è composta da frammenti di ceramica."
+			],
+			"de": [
+				"Cañas ist das spanische Wort für „Rohre“ oder „Schilf“.",
+				"Otto Apuy schmückte die Kirche mit farbigen Mosaiken.",
+				"Zerbrochene Keramikstücke bilden die Trencadís-Dekoration."
+			]
+		}
+	},
+	"quesada": {
+		"city": {
+			"en": [
+				"Its Quesada name commemorates early settlers.",
+				"The settlement was previously called La Unión.",
+				"Early roads linked the area to the river landing at Muelle."
+			],
+			"it": [
+				"Il nome Quesada ricorda i primi coloni.",
+				"L’insediamento si chiamava in precedenza La Unión.",
+				"Le prime strade collegavano la zona all’approdo fluviale di Muelle."
+			],
+			"de": [
+				"Der Name Quesada erinnert an frühe Siedler.",
+				"Zuvor hieß die Siedlung La Unión.",
+				"Frühe Straßen verbanden die Gegend mit der Flussanlegestelle Muelle."
+			]
+		}
+	},
+	"sixaola": {
+		"city": {
+			"en": [
+				"The town shares its name with the Sixaola River.",
+				"An old railway bridge connected it with Panama.",
+				"Banana growing shaped the lowlands around the crossing."
+			],
+			"it": [
+				"La cittadina condivide il nome con il fiume Sixaola.",
+				"Un antico ponte ferroviario la collegava a Panamá.",
+				"La coltivazione delle banane trasformò le pianure intorno al valico."
+			],
+			"de": [
+				"Der Ort trägt denselben Namen wie der Fluss Sixaola.",
+				"Eine alte Eisenbahnbrücke verband ihn mit Panama.",
+				"Bananenanbau prägte das Tiefland um den Grenzübergang."
+			]
+		}
+	},
+	"ciudad-cortes": {
+		"city": {
+			"en": [
+				"Its earlier name, El Pozo, means “the well”.",
+				"It is also known as Puerto Cortés.",
+				"Rails were laid to carry materials and banana harvests."
+			],
+			"it": [
+				"Il nome precedente, El Pozo, significa “il pozzo”.",
+				"È conosciuta anche come Puerto Cortés.",
+				"Furono posati binari per trasportare materiali e raccolti di banane."
+			],
+			"de": [
+				"Der frühere Name El Pozo bedeutet „der Brunnen“.",
+				"Die Stadt ist auch als Puerto Cortés bekannt.",
+				"Schienen wurden für den Transport von Material und Bananenernten verlegt."
+			]
+		}
+	},
+	"golfito": {
+		"city": {
+			"en": [
+				"Golfito is a diminutive of golfo, “gulf”.",
+				"Its banana-export pier began operating in 1941.",
+				"Its duty-free shopping centre opened in 1990."
+			],
+			"it": [
+				"Golfito è un diminutivo di golfo.",
+				"La banchina per l’esportazione delle banane entrò in funzione nel 1941.",
+				"Il centro commerciale esente da dazi aprì nel 1990."
+			],
+			"de": [
+				"Golfito ist eine Verkleinerungsform von golfo, „Golf“.",
+				"Der Pier für den Bananenexport ging 1941 in Betrieb.",
+				"Das zollfreie Einkaufszentrum eröffnete 1990."
 			]
 		}
 	}

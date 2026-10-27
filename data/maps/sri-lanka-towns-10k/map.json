@@ -1,0 +1,355 @@
+{
+	"id": "sri-lanka-towns-10k",
+	"name": "Sri Lanka — Towns",
+	"country": "Sri Lanka",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/sri-lanka.geojson",
+	"regionsMap": "sri-lanka-provinces",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "jaffna",
+			"name": "Jaffna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.016666666,
+				9.664722222
+			],
+			"bbox": [
+				80.016666666,
+				9.664722222,
+				80.016666666,
+				9.664722222
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "mullaitivu",
+			"name": "Mullaitivu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.8,
+				9.283333333
+			],
+			"bbox": [
+				80.8,
+				9.283333333,
+				80.8,
+				9.283333333
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mannar",
+			"name": "Mannar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.9137786,
+				8.9772444
+			],
+			"bbox": [
+				79.9137786,
+				8.9772444,
+				79.9137786,
+				8.9772444
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "trincomalee",
+			"name": "Trincomalee",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.233333333,
+				8.566666666
+			],
+			"bbox": [
+				81.233333333,
+				8.566666666,
+				81.233333333,
+				8.566666666
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "anuradhapura",
+			"name": "Anuradhapura",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.410833333,
+				8.335
+			],
+			"bbox": [
+				80.410833333,
+				8.335,
+				80.410833333,
+				8.335
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "vakarai",
+			"name": "Vakarai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.4333,
+				8.13333
+			],
+			"bbox": [
+				81.4333,
+				8.13333,
+				81.4333,
+				8.13333
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "matale",
+			"name": "Matale",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.616666666,
+				7.466666666
+			],
+			"bbox": [
+				80.616666666,
+				7.466666666,
+				80.616666666,
+				7.466666666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kandy",
+			"name": "Kandy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.635,
+				7.293055555
+			],
+			"bbox": [
+				80.635,
+				7.293055555,
+				80.635,
+				7.293055555
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kegalle",
+			"name": "Kegalle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.345277777,
+				7.253055555
+			],
+			"bbox": [
+				80.345277777,
+				7.253055555,
+				80.345277777,
+				7.253055555
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "negombo",
+			"name": "Negombo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.838611111,
+				7.211111111
+			],
+			"bbox": [
+				79.838611111,
+				7.211111111,
+				79.838611111,
+				7.211111111
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gampaha",
+			"name": "Gampaha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.999722222,
+				7.091666666
+			],
+			"bbox": [
+				79.999722222,
+				7.091666666,
+				79.999722222,
+				7.091666666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "badulla",
+			"name": "Badulla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.056388888,
+				6.984722222
+			],
+			"bbox": [
+				81.056388888,
+				6.984722222,
+				81.056388888,
+				6.984722222
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "nuwara-eliya",
+			"name": "Nuwara Eliya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.78286,
+				6.97078
+			],
+			"bbox": [
+				80.78286,
+				6.97078,
+				80.78286,
+				6.97078
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "colombo",
+			"name": "Colombo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.860555555,
+				6.926666666
+			],
+			"bbox": [
+				79.860555555,
+				6.926666666,
+				79.860555555,
+				6.926666666
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sri-jayawardenepura-kotte",
+			"name": "Sri Jayawardenepura Kotte",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.916388888,
+				6.9
+			],
+			"bbox": [
+				79.916388888,
+				6.9,
+				79.916388888,
+				6.9
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "hambantota",
+			"name": "Hambantota",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.1185,
+				6.1241
+			],
+			"bbox": [
+				81.1185,
+				6.1241,
+				81.1185,
+				6.1241
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "galle",
+			"name": "Galle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.215555555,
+				6.032777777
+			],
+			"bbox": [
+				80.215555555,
+				6.032777777,
+				80.215555555,
+				6.032777777
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "matara",
+			"name": "Matara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.533333333,
+				5.95
+			],
+			"bbox": [
+				80.533333333,
+				5.95,
+				80.533333333,
+				5.95
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"jaffna",
+		"mullaitivu",
+		"mannar",
+		"trincomalee",
+		"anuradhapura",
+		"vakarai",
+		"matale",
+		"kandy",
+		"kegalle",
+		"negombo",
+		"gampaha",
+		"badulla",
+		"nuwara-eliya",
+		"colombo",
+		"sri-jayawardenepura-kotte",
+		"hambantota",
+		"galle",
+		"matara"
+	]
+}

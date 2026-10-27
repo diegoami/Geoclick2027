@@ -1,0 +1,392 @@
+{
+	"id": "taiwan-towns-10k",
+	"name": "Taiwan — Towns",
+	"country": "Taiwan",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"regionsMap": "taiwan-counties-and-cities",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "keelung",
+			"name": "Keelung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.7332824,
+				25.1332579
+			],
+			"bbox": [
+				121.7332824,
+				25.1332579,
+				121.7332824,
+				25.1332579
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "taipei",
+			"name": "Taipei",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.5683333,
+				25.0358333
+			],
+			"bbox": [
+				121.5683333,
+				25.0358333,
+				121.5683333,
+				25.0358333
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "new-taipei",
+			"name": "New Taipei",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.465,
+				25.0127778
+			],
+			"bbox": [
+				121.465,
+				25.0127778,
+				121.465,
+				25.0127778
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "taoyuan",
+			"name": "Taoyuan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.3111111,
+				24.9888889
+			],
+			"bbox": [
+				121.3111111,
+				24.9888889,
+				121.3111111,
+				24.9888889
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "zhubei",
+			"name": "Zhubei",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.0119444,
+				24.8333333
+			],
+			"bbox": [
+				121.0119444,
+				24.8333333,
+				121.0119444,
+				24.8333333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "hsinchu",
+			"name": "Hsinchu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.9767395,
+				24.8167914
+			],
+			"bbox": [
+				120.9767395,
+				24.8167914,
+				120.9767395,
+				24.8167914
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "yilan",
+			"name": "Yilan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.75,
+				24.75
+			],
+			"bbox": [
+				121.75,
+				24.75,
+				121.75,
+				24.75
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "miaoli",
+			"name": "Miaoli",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.82,
+				24.57
+			],
+			"bbox": [
+				120.82,
+				24.57,
+				120.82,
+				24.57
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "taichung",
+			"name": "Taichung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.681667,
+				24.1520775
+			],
+			"bbox": [
+				120.681667,
+				24.1520775,
+				120.681667,
+				24.1520775
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "changhua",
+			"name": "Changhua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.5134086,
+				24.0734001
+			],
+			"bbox": [
+				120.5134086,
+				24.0734001,
+				120.5134086,
+				24.0734001
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "hualien",
+			"name": "Hualien",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.6000089,
+				23.9837415
+			],
+			"bbox": [
+				121.6000089,
+				23.9837415,
+				121.6000089,
+				23.9837415
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "nantou",
+			"name": "Nantou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.6833333,
+				23.9166667
+			],
+			"bbox": [
+				120.6833333,
+				23.9166667,
+				120.6833333,
+				23.9166667
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "douliou",
+			"name": "Douliou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.5438889,
+				23.7075
+			],
+			"bbox": [
+				120.5438889,
+				23.7075,
+				120.5438889,
+				23.7075
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "magong",
+			"name": "Magong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.5833333,
+				23.5666667
+			],
+			"bbox": [
+				119.5833333,
+				23.5666667,
+				119.5833333,
+				23.5666667
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "chiayi",
+			"name": "Chiayi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.4350671,
+				23.4754521
+			],
+			"bbox": [
+				120.4350671,
+				23.4754521,
+				120.4350671,
+				23.4754521
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "puzi",
+			"name": "Puzi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.2419444,
+				23.4611111
+			],
+			"bbox": [
+				120.2419444,
+				23.4611111,
+				120.2419444,
+				23.4611111
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tainan",
+			"name": "Tainan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.2000427,
+				23.0000031
+			],
+			"bbox": [
+				120.2000427,
+				23.0000031,
+				120.2000427,
+				23.0000031
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "taitung",
+			"name": "Taitung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.140037,
+				22.7553927
+			],
+			"bbox": [
+				121.140037,
+				22.7553927,
+				121.140037,
+				22.7553927
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "pingtung",
+			"name": "Pingtung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.4816792,
+				22.6817021
+			],
+			"bbox": [
+				120.4816792,
+				22.6817021,
+				120.4816792,
+				22.6817021
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "kaohsiung",
+			"name": "Kaohsiung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.2666019,
+				22.6333071
+			],
+			"bbox": [
+				120.2666019,
+				22.6333071,
+				120.2666019,
+				22.6333071
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"keelung",
+		"taipei",
+		"new-taipei",
+		"taoyuan",
+		"zhubei",
+		"hsinchu",
+		"yilan",
+		"miaoli",
+		"taichung",
+		"changhua",
+		"hualien",
+		"nantou",
+		"douliou",
+		"magong",
+		"chiayi",
+		"puzi",
+		"tainan",
+		"taitung",
+		"pingtung",
+		"kaohsiung"
+	]
+}

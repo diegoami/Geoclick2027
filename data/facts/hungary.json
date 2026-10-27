@@ -2,114 +2,156 @@
 	"_note": [
 		"Name-facts for Hungary (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"budapest": {
-		"city": {
+		"region": {
 			"en": [
-				"Buda and Pest, two towns across the Danube, joined with Óbuda in 1873.",
-				"Its underground railway of 1896 is the oldest in continental Europe.",
-				"More than a hundred hot springs feed its baths."
+				"Buda, Pest and Óbuda united as Budapest in 1873.",
+				"The Fisherman’s Bastion’s seven towers recall seven Magyar tribes.",
+				"Continental Europe’s first electric underground opened here in 1896."
 			],
 			"it": [
-				"Buda e Pest, due città sulle rive opposte del Danubio, unite con Óbuda nel 1873.",
-				"La sua metropolitana del 1896 è la più antica dell’Europa continentale.",
-				"Più di cento sorgenti calde alimentano le sue terme."
+				"Buda, Pest e Óbuda si unirono in Budapest nel 1873.",
+				"Le sette torri del Bastione dei Pescatori ricordano sette tribù magiare.",
+				"Qui aprì nel 1896 la prima metropolitana elettrica dell’Europa continentale."
 			],
 			"de": [
-				"Buda und Pest, zwei Städte beiderseits der Donau, wurden 1873 mit Óbuda vereinigt.",
-				"Ihre U-Bahn von 1896 ist die älteste auf dem europäischen Festland.",
-				"Mehr als hundert heiße Quellen speisen ihre Bäder."
+				"Buda, Pest und Óbuda vereinigten sich 1873 zu Budapest.",
+				"Die sieben Türme der Fischerbastei erinnern an sieben magyarische Stämme.",
+				"Hier eröffnete 1896 Kontinentaleuropas erste elektrische U-Bahn."
+			]
+		},
+		"city": {
+			"en": [
+				"Buda, Pest and Óbuda united in 1873.",
+				"Its 1896 metro is continental Europe’s oldest electric underground.",
+				"Thermal springs feed the city’s historic baths."
+			],
+			"it": [
+				"Buda, Pest e Óbuda si unirono nel 1873.",
+				"La metropolitana del 1896 è la più antica linea sotterranea elettrica dell’Europa continentale.",
+				"Le sorgenti termali alimentano gli storici bagni della città."
+			],
+			"de": [
+				"Buda, Pest und Óbuda vereinigten sich 1873.",
+				"Die U-Bahn von 1896 ist die älteste elektrische Untergrundbahn Kontinentaleuropas.",
+				"Thermalquellen speisen die historischen Bäder."
 			]
 		}
 	},
 	"debrecen": {
 		"city": {
 			"en": [
-				"Called the Calvinist Rome, for its Protestant college and church.",
-				"In 1849 Lajos Kossuth declared Hungary independent of the Habsburgs in its Great Church."
+				"Its Reformed tradition earned it the nickname “Calvinist Rome”.",
+				"Kossuth declared independence from the Habsburgs in its Great Church in 1849.",
+				"It again hosted a temporary Hungarian government in 1944."
 			],
 			"it": [
-				"Chiamata la Roma calvinista, per il suo collegio e la sua chiesa protestanti.",
-				"Nel 1849 Lajos Kossuth dichiarò nella sua Grande Chiesa l’indipendenza dell’Ungheria dagli Asburgo."
+				"La tradizione riformata le valse il soprannome di “Roma calvinista”.",
+				"Kossuth proclamò l’indipendenza dagli Asburgo nella sua Grande Chiesa nel 1849.",
+				"Nel 1944 ospitò nuovamente un governo provvisorio ungherese."
 			],
 			"de": [
-				"Wegen ihres protestantischen Kollegiums und ihrer Kirche das „calvinistische Rom“ genannt.",
-				"1849 erklärte Lajos Kossuth in ihrer Großen Kirche Ungarn für unabhängig von den Habsburgern."
+				"Die reformierte Tradition brachte den Beinamen „calvinistisches Rom“ ein.",
+				"Kossuth erklärte 1849 in der Großen Kirche die Unabhängigkeit von den Habsburgern.",
+				"1944 beherbergte die Stadt erneut eine provisorische ungarische Regierung."
 			]
 		}
 	},
 	"gyor": {
 		"city": {
 			"en": [
-				"It stands where the Rába and a branch of the Danube meet, and calls itself the city of rivers.",
-				"Audi’s engine plant here is one of the largest in the world."
+				"The Roman settlement was called Arrabona.",
+				"The Rába meets a branch of the Danube here.",
+				"Baroque churches and palaces shape its historic centre."
 			],
 			"it": [
-				"Sorge dove la Rába incontra un ramo del Danubio, e si definisce la città dei fiumi.",
-				"Lo stabilimento di motori Audi qui è uno dei più grandi del mondo."
+				"L’insediamento romano si chiamava Arrabona.",
+				"Qui la Rába incontra un ramo del Danubio.",
+				"Chiese e palazzi barocchi caratterizzano il centro storico."
 			],
 			"de": [
-				"Sie liegt dort, wo sich die Rába und ein Donauarm treffen, und nennt sich selbst die Stadt der Flüsse.",
-				"Audis Motorenwerk hier ist eines der größten der Welt."
+				"Die römische Siedlung hieß Arrabona.",
+				"Hier mündet die Raab in einen Donauarm.",
+				"Barocke Kirchen und Paläste prägen die Altstadt."
 			]
 		}
 	},
 	"kaposvar": {
 		"city": {
 			"en": [
-				"\"Castle on the Kapos\", its river.",
-				"The painter József Rippl-Rónai was born here."
+				"The name joins the Kapos River with vár, “castle”.",
+				"Painter József Rippl-Rónai was born here.",
+				"It is often called the “city of flowers”."
 			],
 			"it": [
-				"\"Castello sul Kapos\", il suo fiume.",
-				"Qui nacque il pittore József Rippl-Rónai."
+				"Il nome unisce il fiume Kapos a vár, “castello”.",
+				"Qui nacque il pittore József Rippl-Rónai.",
+				"È spesso chiamata la “città dei fiori”."
 			],
 			"de": [
-				"„Burg an der Kapos“, ihrem Fluss.",
-				"Der Maler József Rippl-Rónai wurde hier geboren."
+				"Der Name verbindet den Fluss Kapos mit vár, „Burg“.",
+				"Hier wurde der Maler József Rippl-Rónai geboren.",
+				"Die Stadt wird oft „Stadt der Blumen“ genannt."
 			]
 		}
 	},
 	"kecskemet": {
 		"city": {
 			"en": [
-				"The composer Zoltán Kodály was born here in 1882.",
-				"Its apricots go into one of Hungary’s best-known pálinka brandies."
+				"Kecske, “goat”, gives the first part of its name.",
+				"Composer Zoltán Kodály was born here in 1882.",
+				"Its ornate Art Nouveau buildings became civic landmarks."
 			],
 			"it": [
+				"Kecske, “capra”, dà la prima parte del nome.",
 				"Qui nacque nel 1882 il compositore Zoltán Kodály.",
-				"Le sue albicocche finiscono in una delle pálinka più note d’Ungheria."
+				"Gli edifici decorati in stile liberty divennero simboli cittadini."
 			],
 			"de": [
-				"Der Komponist Zoltán Kodály wurde hier 1882 geboren.",
-				"Ihre Aprikosen werden zu einem der bekanntesten ungarischen Pálinkas gebrannt."
+				"Kecske, „Ziege“, bildet den ersten Teil des Namens.",
+				"Hier wurde 1882 der Komponist Zoltán Kodály geboren.",
+				"Prächtige Jugendstilbauten wurden zu Wahrzeichen der Stadt."
 			]
 		}
 	},
 	"miskolc": {
 		"city": {
 			"en": [
-				"A centre of Hungarian heavy industry, with a bath inside a cave at Miskolctapolca."
+				"The name remembers the medieval Miskóc clan.",
+				"The castle of Diósgyőr recalls its royal past.",
+				"Thermal waters made Miskolctapolca’s caves famous."
 			],
 			"it": [
-				"Un centro dell’industria pesante ungherese, con terme dentro una grotta a Miskolctapolca."
+				"Il nome ricorda il clan medievale dei Miskóc.",
+				"Il castello di Diósgyőr richiama il suo passato reale.",
+				"Le acque termali resero famose le grotte di Miskolctapolca."
 			],
 			"de": [
-				"Ein Zentrum der ungarischen Schwerindustrie, mit einem Bad in einer Höhle in Miskolctapolca."
+				"Der Name erinnert an die mittelalterliche Sippe Miskóc.",
+				"Burg Diósgyőr erinnert an die königliche Vergangenheit.",
+				"Thermalwasser machte die Höhlen von Miskolctapolca berühmt."
 			]
 		}
 	},
 	"nyiregyhaza": {
 		"city": {
 			"en": [
-				"\"Birch church\", from nyír, the birch tree."
+				"Its name joins nyír, “birch”, with egyház, “church”.",
+				"Slovak settlers helped rebuild it in the eighteenth century.",
+				"Sóstó’s museum village preserves old regional buildings."
 			],
 			"it": [
-				"\"Chiesa della betulla\", da nyír, la betulla."
+				"Il nome unisce nyír, “betulla”, a egyház, “chiesa”.",
+				"I coloni slovacchi contribuirono a ricostruirla nel Settecento.",
+				"Il villaggio museo di Sóstó conserva antichi edifici della regione."
 			],
 			"de": [
-				"„Birkenkirche“, von nyír, der Birke."
+				"Der Name verbindet nyír, „Birke“, mit egyház, „Kirche“.",
+				"Slowakische Siedler halfen im 18. Jahrhundert beim Wiederaufbau.",
+				"Das Museumsdorf Sóstó bewahrt alte Gebäude aus der Region."
 			]
 		}
 	},
@@ -135,42 +177,57 @@
 	"szeged": {
 		"city": {
 			"en": [
-				"The Tisza flood of 1879 almost wiped it out, and it was rebuilt around ring boulevards.",
-				"At its university in the 1930s, Albert Szent-Györgyi isolated vitamin C from the local paprika."
+				"The name is often linked to szeg, a corner or bend.",
+				"The 1879 Tisza flood led to a major rebuilding.",
+				"Paprika became one of its signature products."
 			],
 			"it": [
-				"La piena del Tibisco del 1879 la distrusse quasi del tutto, e fu ricostruita intorno a viali ad anello.",
-				"Nella sua università, negli anni Trenta, Albert Szent-Györgyi isolò la vitamina C dalla paprica locale."
+				"Il nome è spesso legato a szeg, un angolo o una curva.",
+				"L’alluvione della Tisza del 1879 portò a una grande ricostruzione.",
+				"La paprika divenne uno dei suoi prodotti simbolo."
 			],
 			"de": [
-				"Das Theiß-Hochwasser von 1879 löschte sie fast aus, und sie wurde rund um Ringboulevards wieder aufgebaut.",
-				"An ihrer Universität isolierte Albert Szent-Györgyi in den 1930er-Jahren Vitamin C aus dem heimischen Paprika."
+				"Der Name wird oft mit szeg, einer Ecke oder Biegung, verbunden.",
+				"Das Theiß-Hochwasser von 1879 führte zu einem großen Wiederaufbau.",
+				"Paprika wurde zu einem charakteristischen Erzeugnis."
 			]
 		}
 	},
 	"szekesfehervar": {
 		"city": {
 			"en": [
-				"For five centuries the town where the kings of Hungary were crowned and buried."
+				"White castle and a royal seat are joined in its name.",
+				"Hungarian kings were crowned here for centuries.",
+				"The coronation basilica’s ruins form a memorial garden."
 			],
 			"it": [
-				"Per cinque secoli la città dove si incoronavano e si seppellivano i re d’Ungheria."
+				"Il nome unisce un castello bianco a una sede reale.",
+				"Per secoli i re d’Ungheria furono incoronati qui.",
+				"Le rovine della basilica delle incoronazioni formano un giardino commemorativo."
 			],
 			"de": [
-				"Fünf Jahrhunderte lang die Stadt, in der die Könige von Ungarn gekrönt und begraben wurden."
+				"Der Name verbindet eine weiße Burg mit einem königlichen Sitz.",
+				"Jahrhundertelang wurden hier Ungarns Könige gekrönt.",
+				"Die Ruinen der Krönungsbasilika bilden einen Gedenkgarten."
 			]
 		}
 	},
 	"szolnok": {
 		"city": {
 			"en": [
-				"A town on the Tisza, with an artists’ colony since 1902."
+				"A 1075 charter records the name as Zounok.",
+				"Its artists’ colony was established in 1902.",
+				"The Tisza and Zagyva meet in the city."
 			],
 			"it": [
-				"Una città sul Tibisco, con una colonia di artisti dal 1902."
+				"Un documento del 1075 registra il nome come Zounok.",
+				"La sua colonia di artisti fu fondata nel 1902.",
+				"La Tisza e la Zagyva si incontrano in città."
 			],
 			"de": [
-				"Eine Stadt an der Theiß, mit einer Künstlerkolonie seit 1902."
+				"Eine Urkunde von 1075 verzeichnet den Namen als Zounok.",
+				"Die Künstlerkolonie wurde 1902 gegründet.",
+				"Theiß und Zagyva treffen in der Stadt zusammen."
 			]
 		}
 	},
@@ -190,6 +247,740 @@
 				"„Samstagsmarkt“.",
 				"Das römische Savaria, die älteste Stadt Ungarns.",
 				"Der heilige Martin von Tours wurde hier um 316 geboren."
+			]
+		}
+	},
+	"_sources": {
+		"borsod-abauj-zemplen:region": [
+			"https://en.wikipedia.org/wiki/Borsod-Aba%C3%BAj-Zempl%C3%A9n_County",
+			"https://whc.unesco.org/en/list/1063",
+			"https://en.wikipedia.org/wiki/Caves_of_Aggtelek_Karst_and_Slovak_Karst"
+		],
+		"szabolcs-szatmar-bereg:region": [
+			"https://en.wikipedia.org/wiki/Szabolcs-Szatm%C3%A1r-Bereg_County",
+			"https://en.wikipedia.org/wiki/Ny%C3%ADrb%C3%A1tor",
+			"https://en.wikipedia.org/wiki/T%C3%A1kos"
+		],
+		"nograd:region": [
+			"https://en.wikipedia.org/wiki/N%C3%B3gr%C3%A1d_County",
+			"https://whc.unesco.org/en/list/401/"
+		],
+		"heves:region": [
+			"https://en.wikipedia.org/wiki/Heves_County",
+			"https://en.wikipedia.org/wiki/Eger"
+		],
+		"gyor-moson-sopron:region": [
+			"https://en.wikipedia.org/wiki/Gy%C5%91r-Moson-Sopron_County",
+			"https://whc.unesco.org/en/list/758/",
+			"https://en.wikipedia.org/wiki/Sopron"
+		],
+		"komarom-esztergom:region": [
+			"https://en.wikipedia.org/wiki/Kom%C3%A1rom-Esztergom_County",
+			"https://en.wikipedia.org/wiki/Tata%2C_Hungary"
+		],
+		"pest:region": [
+			"https://en.wikipedia.org/wiki/Pest_County",
+			"https://en.wikipedia.org/wiki/Szentendre",
+			"https://en.wikipedia.org/wiki/Royal_Palace_of_G%C3%B6d%C3%B6ll%C5%91"
+		],
+		"budapest:region": [
+			"https://whc.unesco.org/en/list/400/",
+			"https://en.wikipedia.org/wiki/Fisherman's_Bastion"
+		],
+		"hajdu-bihar:region": [
+			"https://en.wikipedia.org/wiki/Hajd%C3%BA-Bihar_County",
+			"https://whc.unesco.org/en/list/474/",
+			"https://en.wikipedia.org/wiki/Debrecen"
+		],
+		"jasz-nagykun-szolnok:region": [
+			"https://en.wikipedia.org/wiki/J%C3%A1sz-Nagykun-Szolnok_County",
+			"https://en.wikipedia.org/wiki/Lake_Tisza",
+			"https://info.szolnok.hu/files/1509036683_szolnok_konyve.pdf"
+		],
+		"fejer:region": [
+			"https://en.wikipedia.org/wiki/Fej%C3%A9r_County",
+			"https://en.wikipedia.org/wiki/Gorsium"
+		],
+		"vas:region": [
+			"https://en.wikipedia.org/wiki/Vas_County",
+			"https://en.wikipedia.org/wiki/%C5%90rs%C3%A9g"
+		],
+		"veszprem:region": [
+			"https://en.wikipedia.org/wiki/Veszpr%C3%A9m_County",
+			"https://www.veszpreminfo.hu/en/veszprem-the-city-of-queens",
+			"https://en.wikipedia.org/wiki/Veszpr%C3%A9m"
+		],
+		"bekes:region": [
+			"https://en.wikipedia.org/wiki/B%C3%A9k%C3%A9s_County",
+			"https://en.wikipedia.org/wiki/Gyula%2C_Hungary"
+		],
+		"zala:region": [
+			"https://en.wikipedia.org/wiki/Zala_County",
+			"https://en.wikipedia.org/wiki/H%C3%A9v%C3%ADz",
+			"https://en.wikipedia.org/wiki/Festetics_Palace"
+		],
+		"bacs-kiskun:region": [
+			"https://en.wikipedia.org/wiki/B%C3%A1cs-Kiskun_County",
+			"https://en.wikipedia.org/wiki/Kiskuns%C3%A1g_National_Park",
+			"https://en.wikipedia.org/wiki/Kecskem%C3%A9t"
+		],
+		"tolna:region": [
+			"https://en.wikipedia.org/wiki/Tolna_County",
+			"https://en.wikipedia.org/wiki/Gemenc"
+		],
+		"csongrad-csanad:region": [
+			"https://en.wikipedia.org/wiki/Csongr%C3%A1d-Csan%C3%A1d_County",
+			"https://www.ksh.hu/regionalatlas_counties?lang=en",
+			"https://en.wikipedia.org/wiki/%C3%93pusztaszer_National_Heritage_Park"
+		],
+		"somogy:region": [
+			"https://mnytud.arts.unideb.hu/onomural/kotetek/ou3/12kristoa.pdf",
+			"https://en.wikipedia.org/wiki/Somogy_County",
+			"https://en.wikipedia.org/wiki/Somogyv%C3%A1r"
+		],
+		"baranya:region": [
+			"https://mnytud.arts.unideb.hu/szakdolgozat/1561/fieder_m_1561.pdf",
+			"https://whc.unesco.org/en/list/853/",
+			"https://en.wikipedia.org/wiki/Vill%C3%A1ny"
+		],
+		"salgotarjan:city": [
+			"https://en.wikipedia.org/wiki/Salg%C3%B3tarj%C3%A1n"
+		],
+		"miskolc:city": [
+			"https://en.wikipedia.org/wiki/Miskolc"
+		],
+		"nyiregyhaza:city": [
+			"https://en.wikipedia.org/wiki/Ny%C3%ADregyh%C3%A1za"
+		],
+		"eger:city": [
+			"https://en.wikipedia.org/wiki/Eger"
+		],
+		"vac:city": [
+			"https://www.vac.hu/docs/VAC_ITS_Megalapozo_vizsgalat_.pdf",
+			"https://www.vac.hu/vac/varostortenet.html",
+			"https://en.wikipedia.org/wiki/V%C3%A1c"
+		],
+		"gyor:city": [
+			"https://en.wikipedia.org/wiki/Gy%C5%91r"
+		],
+		"tatabanya:city": [
+			"https://en.wikipedia.org/wiki/Tatab%C3%A1nya"
+		],
+		"debrecen:city": [
+			"https://en.wikipedia.org/wiki/Debrecen"
+		],
+		"szekesfehervar:city": [
+			"https://en.wikipedia.org/wiki/Sz%C3%A9kesfeh%C3%A9rv%C3%A1r",
+			"https://mnytud.arts.unideb.hu/onomural/kotetek/ou3/12kristoa.pdf"
+		],
+		"szolnok:city": [
+			"https://info.szolnok.hu/files/1509036683_szolnok_konyve.pdf",
+			"https://en.wikipedia.org/wiki/Szolnok"
+		],
+		"veszprem:city": [
+			"https://www.veszpreminfo.hu/en/veszprem-the-city-of-queens",
+			"https://en.wikipedia.org/wiki/Veszpr%C3%A9m"
+		],
+		"kecskemet:city": [
+			"https://en.wikipedia.org/wiki/Kecskem%C3%A9t"
+		],
+		"zalaegerszeg:city": [
+			"https://en.wikipedia.org/wiki/Zalaegerszeg"
+		],
+		"bekescsaba:city": [
+			"https://en.wikipedia.org/wiki/B%C3%A9k%C3%A9scsaba"
+		],
+		"kaposvar:city": [
+			"https://en.wikipedia.org/wiki/Kaposv%C3%A1r"
+		],
+		"szekszard:city": [
+			"https://mnytud.arts.unideb.hu/mnyj/61/49pelczederk.pdf",
+			"https://en.wikipedia.org/wiki/Szeksz%C3%A1rd"
+		],
+		"szeged:city": [
+			"https://en.wikipedia.org/wiki/Szeged"
+		],
+		"budapest:city": [
+			"https://whc.unesco.org/en/list/400/",
+			"https://en.wikipedia.org/wiki/Budapest"
+		],
+		"sopron:city": [
+			"https://www.visitsopron.com/en/reszletek/fire-tower"
+		],
+		"dunakeszi:city": [
+			"https://dunakeszi.hu/dunakeszirol/"
+		],
+		"erd:city": [
+			"https://www.erd.hu/data/cms684505/Telepulesfejlesztesi_Koncepcio.pdf",
+			"https://foldrajzimuzeum.hu/erd-tortenelmi-emlekei/",
+			"https://foldrajzimuzeum.hu/muzeum/muzeum-tortenete/"
+		]
+	},
+	"borsod-abauj-zemplen": {
+		"region": {
+			"en": [
+				"The name joins three historic counties: Borsod, Abaúj and Zemplén.",
+				"Tokaj’s vineyards became World Heritage in 2002.",
+				"The Aggtelek caves share a World Heritage site with Slovakia."
+			],
+			"it": [
+				"Il nome unisce tre contee storiche: Borsod, Abaúj e Zemplén.",
+				"I vigneti del Tokaj divennero Patrimonio mondiale nel 2002.",
+				"Le grotte di Aggtelek condividono un sito UNESCO con la Slovacchia."
+			],
+			"de": [
+				"Der Name verbindet die historischen Komitate Borsod, Abaúj und Zemplén.",
+				"Tokajs Weinberge wurden 2002 Welterbe.",
+				"Die Höhlen von Aggtelek teilen eine Welterbestätte mit der Slowakei."
+			]
+		}
+	},
+	"szabolcs-szatmar-bereg": {
+		"region": {
+			"en": [
+				"Its long name preserves three older county names.",
+				"Nyírbátor’s church recalls the powerful Báthory family.",
+				"Tákos is known for a little church with painted wooden ceilings."
+			],
+			"it": [
+				"Il lungo nome conserva i nomi di tre contee più antiche.",
+				"La chiesa di Nyírbátor ricorda la potente famiglia Báthory.",
+				"Tákos è nota per una piccola chiesa dai soffitti lignei dipinti."
+			],
+			"de": [
+				"Der lange Name bewahrt drei ältere Komitatsnamen.",
+				"Die Kirche von Nyírbátor erinnert an die mächtige Familie Báthory.",
+				"Tákos ist für eine kleine Kirche mit bemalten Holzdecken bekannt."
+			]
+		}
+	},
+	"nograd": {
+		"region": {
+			"en": [
+				"Nógrád comes from a Slavic name meaning “new castle”.",
+				"Hollókő preserves a traditional Palóc village.",
+				"Its wooden porches and folk dress became symbols of local heritage."
+			],
+			"it": [
+				"Nógrád viene da un nome slavo che significa “castello nuovo”.",
+				"Hollókő conserva un villaggio tradizionale dei Palóc.",
+				"I portici in legno e i costumi popolari divennero simboli del patrimonio locale."
+			],
+			"de": [
+				"Nógrád stammt von einem slawischen Namen für „neue Burg“.",
+				"Hollókő bewahrt ein traditionelles Palóc-Dorf.",
+				"Holzveranden und Trachten wurden zu Symbolen des örtlichen Kulturerbes."
+			]
+		}
+	},
+	"heves": {
+		"region": {
+			"en": [
+				"It preserves the name of the old settlement Heves.",
+				"Eger’s castle resisted an Ottoman siege in 1552.",
+				"Egri Bikavér, “bull’s blood”, is its famous red-wine blend."
+			],
+			"it": [
+				"Conserva il nome dell’antico insediamento di Heves.",
+				"Il castello di Eger resistette a un assedio ottomano nel 1552.",
+				"L’Egri Bikavér, “sangue di toro”, è il suo celebre vino rosso da assemblaggio."
+			],
+			"de": [
+				"Der Name bewahrt den der alten Siedlung Heves.",
+				"Die Burg von Eger widerstand 1552 einer osmanischen Belagerung.",
+				"Egri Bikavér, „Stierblut“, ist die bekannte Rotweincuvée der Gegend."
+			]
+		}
+	},
+	"gyor-moson-sopron": {
+		"region": {
+			"en": [
+				"Győr, Moson and Sopron give the county its three-part name.",
+				"Pannonhalma’s monastic community began in 996.",
+				"Sopron’s 1921 vote earned it the “most loyal city” title."
+			],
+			"it": [
+				"Győr, Moson e Sopron danno alla contea il suo nome tripartito.",
+				"La comunità monastica di Pannonhalma nacque nel 996.",
+				"Il voto del 1921 valse a Sopron il titolo di “città più fedele”."
+			],
+			"de": [
+				"Győr, Moson und Sopron bilden den dreiteiligen Komitatsnamen.",
+				"Pannonhalmas Klostergemeinschaft entstand 996.",
+				"Die Abstimmung von 1921 brachte Sopron den Titel „treueste Stadt“ ein."
+			]
+		}
+	},
+	"komarom-esztergom": {
+		"region": {
+			"en": [
+				"The name links the historic towns Komárom and Esztergom.",
+				"Esztergom became a historic centre of Hungarian Catholic life.",
+				"Tata’s castle stands beside the man-made Old Lake."
+			],
+			"it": [
+				"Il nome collega le città storiche di Komárom ed Esztergom.",
+				"Esztergom divenne un centro storico del cattolicesimo ungherese.",
+				"Il castello di Tata sorge accanto al Lago Vecchio artificiale."
+			],
+			"de": [
+				"Der Name verbindet die historischen Städte Komárom und Esztergom.",
+				"Esztergom wurde zu einem historischen Zentrum des ungarischen Katholizismus.",
+				"Tatas Burg steht am künstlich angelegten Alten See."
+			]
+		}
+	},
+	"pest": {
+		"region": {
+			"en": [
+				"The county kept the name of Pest, now part of Budapest.",
+				"Szentendre became known for artists and museums.",
+				"Gödöllő’s royal palace was a favourite residence of Empress Elisabeth."
+			],
+			"it": [
+				"La contea conservò il nome di Pest, oggi parte di Budapest.",
+				"Szentendre divenne nota per artisti e musei.",
+				"Il palazzo reale di Gödöllő fu una residenza prediletta dell’imperatrice Elisabetta."
+			],
+			"de": [
+				"Das Komitat bewahrte den Namen Pest, heute ein Teil Budapests.",
+				"Szentendre wurde für Künstler und Museen bekannt.",
+				"Das Königsschloss Gödöllő war eine Lieblingsresidenz von Kaiserin Elisabeth."
+			]
+		}
+	},
+	"hajdu-bihar": {
+		"region": {
+			"en": [
+				"The name joins the hajdú region with historic Bihar.",
+				"Hortobágy’s pastoral landscape joined the World Heritage List in 1999.",
+				"Debrecen’s Reformed tradition earned it the “Calvinist Rome” nickname."
+			],
+			"it": [
+				"Il nome unisce la regione degli hajdú allo storico Bihar.",
+				"Il paesaggio pastorale di Hortobágy entrò nel Patrimonio mondiale nel 1999.",
+				"La tradizione riformata valse a Debrecen il soprannome di “Roma calvinista”."
+			],
+			"de": [
+				"Der Name verbindet die Hajdú-Region mit dem historischen Bihar.",
+				"Hortobágys Hirtenlandschaft wurde 1999 Welterbe.",
+				"Die reformierte Tradition brachte Debrecen den Beinamen „calvinistisches Rom“ ein."
+			]
+		}
+	},
+	"jasz-nagykun-szolnok": {
+		"region": {
+			"en": [
+				"Jász and Nagykun recall Jassic and Cuman settlers.",
+				"Szolnok developed an influential artists’ colony.",
+				"Lake Tisza was created by damming the river."
+			],
+			"it": [
+				"Jász e Nagykun ricordano i coloni jassi e cumani.",
+				"A Szolnok si sviluppò un’importante colonia di artisti.",
+				"Il Lago Tisza fu creato sbarrando il fiume."
+			],
+			"de": [
+				"Jász und Nagykun erinnern an jassische und kumanische Siedler.",
+				"In Szolnok entstand eine einflussreiche Künstlerkolonie.",
+				"Der Theiß-See entstand durch Aufstauen des Flusses."
+			]
+		}
+	},
+	"fejer": {
+		"region": {
+			"en": [
+				"Fejér is an older Hungarian form of “white”.",
+				"Hungarian kings were crowned at Székesfehérvár for centuries.",
+				"Gorsium near Tác preserves remains of a Roman town."
+			],
+			"it": [
+				"Fejér è una forma ungherese antica di “bianco”.",
+				"Per secoli i re d’Ungheria furono incoronati a Székesfehérvár.",
+				"Gorsium, vicino a Tác, conserva i resti di una città romana."
+			],
+			"de": [
+				"Fejér ist eine ältere ungarische Form von „weiß“.",
+				"Jahrhundertelang wurden Ungarns Könige in Székesfehérvár gekrönt.",
+				"Gorsium bei Tác bewahrt die Reste einer römischen Stadt."
+			]
+		}
+	},
+	"vas": {
+		"region": {
+			"en": [
+				"Vas literally means “iron”.",
+				"Szombathely grew from the Roman settlement Savaria.",
+				"The Őrség region preserves the heritage of medieval border guards."
+			],
+			"it": [
+				"Vas significa letteralmente “ferro”.",
+				"Szombathely si sviluppò dall’insediamento romano di Savaria.",
+				"La regione dell’Őrség conserva l’eredità delle guardie di confine medievali."
+			],
+			"de": [
+				"Vas bedeutet wörtlich „Eisen“.",
+				"Szombathely entstand aus der römischen Siedlung Savaria.",
+				"Die Region Őrség bewahrt das Erbe mittelalterlicher Grenzwächter."
+			]
+		}
+	},
+	"veszprem": {
+		"region": {
+			"en": [
+				"The county is named after the early royal centre Veszprém.",
+				"Volcanic hills and vineyards shape the Balaton Uplands.",
+				"Veszprém–Balaton was a European Capital of Culture in 2023."
+			],
+			"it": [
+				"La contea prende il nome dall’antico centro reale di Veszprém.",
+				"Colline vulcaniche e vigneti caratterizzano gli altopiani del Balaton.",
+				"Veszprém–Balaton fu Capitale europea della cultura nel 2023."
+			],
+			"de": [
+				"Das Komitat ist nach dem frühen königlichen Zentrum Veszprém benannt.",
+				"Vulkanhügel und Weinberge prägen das Balaton-Oberland.",
+				"Veszprém–Balaton war 2023 Europäische Kulturhauptstadt."
+			]
+		},
+		"city": {
+			"en": [
+				"Its older name Bezprem is traced to Slavic roots.",
+				"Its bishops held the right to crown Hungarian queens.",
+				"Veszprém–Balaton was a European Capital of Culture in 2023."
+			],
+			"it": [
+				"Il nome più antico, Bezprem, è ricondotto a radici slave.",
+				"I suoi vescovi avevano il diritto di incoronare le regine d’Ungheria.",
+				"Veszprém–Balaton fu Capitale europea della cultura nel 2023."
+			],
+			"de": [
+				"Der ältere Name Bezprem wird auf slawische Wurzeln zurückgeführt.",
+				"Die Bischöfe besaßen das Recht, ungarische Königinnen zu krönen.",
+				"Veszprém–Balaton war 2023 Europäische Kulturhauptstadt."
+			]
+		}
+	},
+	"bekes": {
+		"region": {
+			"en": [
+				"Békés means “peaceful” in Hungarian.",
+				"Gyula preserves a Gothic brick castle.",
+				"Slovak settlers helped revive its towns in the eighteenth century."
+			],
+			"it": [
+				"Békés significa “pacifico” in ungherese.",
+				"Gyula conserva un castello gotico in mattoni.",
+				"I coloni slovacchi contribuirono alla rinascita delle sue cittadine nel Settecento."
+			],
+			"de": [
+				"Békés bedeutet auf Ungarisch „friedlich“.",
+				"Gyula bewahrt eine gotische Backsteinburg.",
+				"Slowakische Siedler halfen im 18. Jahrhundert beim Wiederaufbau der Städte."
+			]
+		}
+	},
+	"zala": {
+		"region": {
+			"en": [
+				"Zala shares its name with the river flowing through it.",
+				"Hévíz is known for its naturally warm lake.",
+				"The Festetics family built a grand palace at Keszthely."
+			],
+			"it": [
+				"Zala condivide il nome con il fiume che l’attraversa.",
+				"Hévíz è nota per il suo lago naturalmente caldo.",
+				"La famiglia Festetics costruì un grande palazzo a Keszthely."
+			],
+			"de": [
+				"Zala trägt denselben Namen wie der durchfließende Fluss.",
+				"Hévíz ist für seinen natürlich warmen See bekannt.",
+				"Die Familie Festetics errichtete in Keszthely ein großes Schloss."
+			]
+		}
+	},
+	"bacs-kiskun": {
+		"region": {
+			"en": [
+				"Bács is a historic county name; Kiskun means “Little Cuman”.",
+				"Kiskunság National Park protects sandy grasslands and wetlands.",
+				"Kecskemét became known for apricots and apricot brandy."
+			],
+			"it": [
+				"Bács è il nome di una contea storica; Kiskun significa “piccolo cumano”.",
+				"Il Parco nazionale di Kiskunság protegge praterie sabbiose e zone umide.",
+				"Kecskemét divenne nota per albicocche e acquavite di albicocche."
+			],
+			"de": [
+				"Bács ist ein historischer Komitatsname; Kiskun bedeutet „Kleinkumanien“.",
+				"Der Nationalpark Kiskunság schützt Sandsteppen und Feuchtgebiete.",
+				"Kecskemét wurde für Aprikosen und Aprikosenbrand bekannt."
+			]
+		}
+	},
+	"tolna": {
+		"region": {
+			"en": [
+				"It preserves the name of Tolna, a former county centre.",
+				"Kadarka grapes belong to Szekszárd’s red-wine tradition.",
+				"Gemenc’s Danube floodplain forests shelter red deer."
+			],
+			"it": [
+				"Conserva il nome di Tolna, un antico centro della contea.",
+				"L’uva kadarka appartiene alla tradizione dei vini rossi di Szekszárd.",
+				"I boschi alluvionali del Danubio a Gemenc ospitano cervi."
+			],
+			"de": [
+				"Der Name bewahrt den des früheren Komitatszentrums Tolna.",
+				"Kadarka-Trauben gehören zur Rotweintradition von Szekszárd.",
+				"Die Donauauen von Gemenc bieten Rothirschen Lebensraum."
+			]
+		}
+	},
+	"csongrad-csanad": {
+		"region": {
+			"en": [
+				"Csongrád comes from Slavic words for “black castle”.",
+				"Csanád was added to the county’s official name in 2020.",
+				"Ópusztaszer displays a panorama of the Magyar arrival."
+			],
+			"it": [
+				"Csongrád viene da parole slave che significano “castello nero”.",
+				"Csanád fu aggiunto al nome ufficiale della contea nel 2020.",
+				"Ópusztaszer espone un panorama dell’arrivo dei magiari."
+			],
+			"de": [
+				"Csongrád stammt von slawischen Wörtern für „schwarze Burg“.",
+				"Csanád wurde 2020 dem offiziellen Komitatsnamen hinzugefügt.",
+				"Ópusztaszer zeigt ein Panoramagemälde der magyarischen Ankunft."
+			]
+		}
+	},
+	"somogy": {
+		"region": {
+			"en": [
+				"Somogy comes from som, the cornel tree.",
+				"Its shores include Lake Balaton’s southern resort towns.",
+				"King Ladislaus I founded Somogyvár’s abbey in 1091."
+			],
+			"it": [
+				"Somogy viene da som, il corniolo.",
+				"Le sue rive comprendono le località turistiche meridionali del Balaton.",
+				"Re Ladislao I fondò l’abbazia di Somogyvár nel 1091."
+			],
+			"de": [
+				"Somogy geht auf som, die Kornelkirsche, zurück.",
+				"Zum Komitat gehören die Ferienorte am Südufer des Balaton.",
+				"König Ladislaus I. gründete 1091 die Abtei Somogyvár."
+			]
+		}
+	},
+	"baranya": {
+		"region": {
+			"en": [
+				"The name is tied to Baranyavár, an early royal centre.",
+				"Pécs preserves decorated tombs from Roman Sopianae.",
+				"Villány became a celebrated red-wine district."
+			],
+			"it": [
+				"Il nome è legato a Baranyavár, un antico centro reale.",
+				"Pécs conserva tombe decorate dell’antica Sopianae romana.",
+				"Villány divenne un rinomato distretto del vino rosso."
+			],
+			"de": [
+				"Der Name ist mit Baranyavár, einem frühen königlichen Zentrum, verbunden.",
+				"Pécs bewahrt bemalte Gräber aus dem römischen Sopianae.",
+				"Villány wurde zu einem bekannten Rotweingebiet."
+			]
+		}
+	},
+	"salgotarjan": {
+		"city": {
+			"en": [
+				"Its name joins Salgó Castle with the old Tarján tribal name.",
+				"Coal mining drove its nineteenth-century growth.",
+				"A former mine became an underground mining museum."
+			],
+			"it": [
+				"Il nome unisce il castello di Salgó all’antico nome tribale Tarján.",
+				"Le miniere di carbone ne trainarono la crescita nell’Ottocento.",
+				"Una vecchia miniera divenne un museo minerario sotterraneo."
+			],
+			"de": [
+				"Der Name verbindet Burg Salgó mit dem alten Stammesnamen Tarján.",
+				"Kohlebergbau trieb das Wachstum im 19. Jahrhundert an.",
+				"Ein früheres Bergwerk wurde zum unterirdischen Bergbaumuseum."
+			]
+		}
+	},
+	"eger": {
+		"city": {
+			"en": [
+				"The name is linked to éger, the alder tree.",
+				"Its castle defenders held off an Ottoman army in 1552.",
+				"Egri Bikavér means “bull’s blood”, a local red-wine blend."
+			],
+			"it": [
+				"Il nome è legato a éger, l’ontano.",
+				"I difensori del castello respinsero un esercito ottomano nel 1552.",
+				"Egri Bikavér significa “sangue di toro”, un vino rosso locale da assemblaggio."
+			],
+			"de": [
+				"Der Name ist mit éger, der Erle, verbunden.",
+				"Die Burgverteidiger wehrten 1552 ein osmanisches Heer ab.",
+				"Egri Bikavér bedeutet „Stierblut“, eine örtliche Rotweincuvée."
+			]
+		}
+	},
+	"vac": {
+		"city": {
+			"en": [
+				"A local legend links its name to a hermit.",
+				"A hidden church crypt yielded naturally preserved mummies.",
+				"Its 1764 triumphal arch honoured Maria Theresa’s visit."
+			],
+			"it": [
+				"Una leggenda locale lega il nome a un eremita.",
+				"Una cripta nascosta restituì mummie conservate naturalmente.",
+				"L’arco trionfale del 1764 onorò la visita di Maria Teresa."
+			],
+			"de": [
+				"Eine örtliche Sage verbindet den Namen mit einem Einsiedler.",
+				"Eine verborgene Kirchengruft enthielt natürlich erhaltene Mumien.",
+				"Der Triumphbogen von 1764 ehrte Maria Theresias Besuch."
+			]
+		}
+	},
+	"tatabanya": {
+		"city": {
+			"en": [
+				"The ending bánya means “mine”, recalling its coal industry.",
+				"Four settlements merged into the city in 1947.",
+				"A large bronze turul bird overlooks the town."
+			],
+			"it": [
+				"La terminazione bánya significa “miniera” e ricorda l’industria del carbone.",
+				"Quattro insediamenti si unirono nella città nel 1947.",
+				"Un grande turul di bronzo domina la cittadina."
+			],
+			"de": [
+				"Die Endung bánya bedeutet „Bergwerk“ und erinnert an den Kohlebergbau.",
+				"Vier Siedlungen schlossen sich 1947 zur Stadt zusammen.",
+				"Ein großer bronzener Turulvogel überblickt die Stadt."
+			]
+		}
+	},
+	"zalaegerszeg": {
+		"city": {
+			"en": [
+				"The name links the Zala with éger, the alder tree.",
+				"The Göcsej Village Museum preserves traditional rural houses.",
+				"Its petroleum museum explores Hungary’s oil industry."
+			],
+			"it": [
+				"Il nome collega la Zala a éger, l’ontano.",
+				"Il Museo del Villaggio di Göcsej conserva case rurali tradizionali.",
+				"Il museo del petrolio racconta l’industria petrolifera ungherese."
+			],
+			"de": [
+				"Der Name verbindet die Zala mit éger, der Erle.",
+				"Das Göcsej-Dorfmuseum bewahrt traditionelle Bauernhäuser.",
+				"Das Erdölmuseum erzählt von Ungarns Ölindustrie."
+			]
+		}
+	},
+	"bekescsaba": {
+		"city": {
+			"en": [
+				"Csaba is an old personal name; békés means “peaceful”.",
+				"Slovak settlers rebuilt the community in the eighteenth century.",
+				"Csabai sausage became its culinary emblem."
+			],
+			"it": [
+				"Csaba è un antico nome personale; békés significa “pacifico”.",
+				"I coloni slovacchi ricostruirono la comunità nel Settecento.",
+				"La salsiccia csabai divenne il suo simbolo gastronomico."
+			],
+			"de": [
+				"Csaba ist ein alter Personenname; békés bedeutet „friedlich“.",
+				"Slowakische Siedler bauten die Gemeinde im 18. Jahrhundert wieder auf.",
+				"Die Csabai-Wurst wurde zum kulinarischen Wahrzeichen."
+			]
+		}
+	},
+	"szekszard": {
+		"city": {
+			"en": [
+				"Its name’s origin is debated; medieval forms include Saxard.",
+				"Kadarka grapes are central to its red-wine tradition.",
+				"The poet Mihály Babits was born here."
+			],
+			"it": [
+				"L’origine del nome è discussa; tra le forme medievali c’è Saxard.",
+				"L’uva kadarka è centrale nella sua tradizione del vino rosso.",
+				"Qui nacque il poeta Mihály Babits."
+			],
+			"de": [
+				"Die Herkunft des Namens ist umstritten; mittelalterliche Formen umfassen Saxard.",
+				"Kadarka-Trauben stehen im Zentrum der Rotweintradition.",
+				"Hier wurde der Dichter Mihály Babits geboren."
+			]
+		}
+	},
+	"sopron": {
+		"city": {
+			"en": [
+				"Its Latin title Civitas Fidelissima means most loyal town.",
+				"A 1921 referendum kept the town in Hungary.",
+				"Its Fire Tower once watched for fires and approaching soldiers."
+			],
+			"it": [
+				"Il titolo latino Civitas Fidelissima significa città fedelissima.",
+				"Un referendum del 1921 mantenne la città in Ungheria.",
+				"La Torre del Fuoco sorvegliava un tempo incendi e soldati in avvicinamento."
+			],
+			"de": [
+				"Sein lateinischer Titel Civitas Fidelissima bedeutet treueste Stadt.",
+				"Eine Volksabstimmung von 1921 hielt die Stadt bei Ungarn.",
+				"Vom Feuerturm hielt man früher nach Bränden und herannahenden Soldaten Ausschau."
+			]
+		}
+	},
+	"dunakeszi": {
+		"city": {
+			"en": [
+				"Keszi in its name recalls an early Hungarian tribe.",
+				"The railway reached the settlement in 1846.",
+				"Alag became known for horse racing and training."
+			],
+			"it": [
+				"L’elemento Keszi nel nome richiama un’antica tribù magiara.",
+				"La ferrovia raggiunse l’abitato nel 1846.",
+				"Alag divenne nota per le corse e l’addestramento dei cavalli."
+			],
+			"de": [
+				"Der Namensbestandteil Keszi erinnert an einen frühen ungarischen Stamm.",
+				"Die Eisenbahn erreichte die Siedlung 1846.",
+				"Alag wurde für Pferderennen und Pferdetraining bekannt."
+			]
+		}
+	},
+	"erd": {
+		"city": {
+			"en": [
+				"A document of 1243 records the name as Erdu.",
+				"Its surviving minaret recalls the seventeenth-century Ottoman period.",
+				"The Hungarian Geographical Museum occupies a former inn built in 1840."
+			],
+			"it": [
+				"Un documento del 1243 riporta il nome Erdu.",
+				"Il minareto superstite ricorda il periodo ottomano del Seicento.",
+				"Il Museo geografico ungherese occupa un’antica locanda costruita nel 1840."
+			],
+			"de": [
+				"Eine Urkunde von 1243 nennt den Ort Erdu.",
+				"Das erhaltene Minarett erinnert an die osmanische Zeit des siebzehnten Jahrhunderts.",
+				"Das Ungarische Geographische Museum befindet sich in einem ehemaligen Gasthof von 1840."
 			]
 		}
 	}

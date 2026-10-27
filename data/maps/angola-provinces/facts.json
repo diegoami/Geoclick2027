@@ -1,0 +1,710 @@
+{
+	"cabinda": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Cabinda",
+			"nameDe": "Cabinda",
+			"nameIt": "Cabinda",
+			"population": 91791
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The city and province share the name Cabinda.",
+				"Maritime trade and petroleum shaped its modern economy.",
+				"Maiombe forest forms part of the wider provincial landscape."
+			],
+			"it": [
+				"La città e la provincia condividono il nome Cabinda.",
+				"Commercio marittimo e petrolio ne plasmarono l’economia moderna.",
+				"La foresta del Maiombe fa parte del più ampio paesaggio provinciale."
+			],
+			"de": [
+				"Stadt und Provinz teilen den Namen Cabinda.",
+				"Seehandel und Erdöl prägten die moderne Wirtschaft.",
+				"Der Maiombe-Wald gehört zur weiteren Provinzlandschaft."
+			]
+		}
+	},
+	"zaire": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Uíge"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Soyo",
+			"nameDe": "Soyo",
+			"nameIt": "Soyo",
+			"population": 67491
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its name derives from Nzadi, a name for the Congo River.",
+				"Mbanza Kongo preserves a historic royal capital.",
+				"Soyo developed as an important river-mouth trading centre."
+			],
+			"it": [
+				"Il nome deriva da Nzadi, un nome del fiume Congo.",
+				"Mbanza Kongo conserva una storica capitale reale.",
+				"Soyo si sviluppò come importante centro commerciale alla foce."
+			],
+			"de": [
+				"Der Name stammt von Nzadi, einem Namen des Kongo-Flusses.",
+				"Mbanza Kongo bewahrt eine historische Königshauptstadt.",
+				"Soyo entwickelte sich als bedeutendes Handelszentrum an der Flussmündung."
+			]
+		}
+	},
+	"uige": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Cuanza Norte",
+			"Malanje",
+			"Zaire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Uíge",
+			"nameDe": "Uíge",
+			"nameIt": "Uíge",
+			"population": 60008
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Uíge city was formerly called Carmona.",
+				"Coffee plantations shaped its regional economy.",
+				"Bakongo traditions form part of its cultural heritage."
+			],
+			"it": [
+				"La città di Uíge si chiamava in precedenza Carmona.",
+				"Le piantagioni di caffè ne plasmarono l’economia regionale.",
+				"Le tradizioni bakongo fanno parte del patrimonio culturale."
+			],
+			"de": [
+				"Uíge hieß früher Carmona.",
+				"Kaffeeplantagen prägten die regionale Wirtschaft.",
+				"Bakongo-Traditionen gehören zum kulturellen Erbe."
+			]
+		}
+	},
+	"bengo": {
+		"kind": "region",
+		"borders": [
+			"Cuanza Norte",
+			"Icolo e Bengo",
+			"Luanda",
+			"Uíge",
+			"Zaire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Caxito",
+			"nameDe": "Caxito",
+			"nameIt": "Caxito",
+			"population": 28224
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It is named after the Bengo River.",
+				"The Dande valley supports farming around Caxito.",
+				"Ambriz preserves coastal trading heritage."
+			],
+			"it": [
+				"Prende il nome dal fiume Bengo.",
+				"La valle del Dande sostiene l’agricoltura attorno a Caxito.",
+				"Ambriz conserva il patrimonio commerciale costiero."
+			],
+			"de": [
+				"Der Name geht auf den Bengo-Fluss zurück.",
+				"Das Dande-Tal ermöglicht Landwirtschaft um Caxito.",
+				"Ambriz bewahrt Küstenhandelserbe."
+			]
+		}
+	},
+	"lunda-norte": {
+		"kind": "region",
+		"borders": [
+			"Lunda Sul",
+			"Malanje"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Capenda-Camulemba",
+			"nameDe": "Capenda Camulemba",
+			"nameIt": "Capenda Camulemba",
+			"population": 80000
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The Portuguese name means North Lunda.",
+				"Lunda and Chokwe traditions shape its cultural heritage.",
+				"Dundo’s museum preserves ethnographic collections."
+			],
+			"it": [
+				"Il nome portoghese significa Lunda settentrionale.",
+				"Le tradizioni lunda e chokwe ne plasmano il patrimonio culturale.",
+				"Il museo di Dundo conserva collezioni etnografiche."
+			],
+			"de": [
+				"Der portugiesische Name bedeutet Nord-Lunda.",
+				"Lunda- und Chokwe-Traditionen prägen das Kulturerbe.",
+				"Dundos Museum bewahrt ethnografische Sammlungen."
+			]
+		}
+	},
+	"cuanza-norte": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Cuanza Sul",
+			"Icolo e Bengo",
+			"Malanje",
+			"Uíge"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Camabatela",
+			"nameDe": "Ambaca",
+			"nameIt": "Ambaca",
+			"population": 12837
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its name refers to the northern Cuanza River area.",
+				"Ndalatando was formerly called Salazar.",
+				"Cambambe preserves early fort remains."
+			],
+			"it": [
+				"Il nome si riferisce all’area settentrionale del fiume Cuanza.",
+				"Ndalatando si chiamava in precedenza Salazar.",
+				"Cambambe conserva resti di un antico forte."
+			],
+			"de": [
+				"Der Name bezieht sich auf das nördliche Cuanza-Gebiet.",
+				"Ndalatando hieß früher Salazar.",
+				"Cambambe bewahrt frühe Festungsreste."
+			]
+		}
+	},
+	"luanda": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Icolo e Bengo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Luanda",
+			"nameDe": "Luanda",
+			"nameIt": "Luanda",
+			"population": 5172900
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The province takes its name from Luanda, formerly São Paulo de Loanda.",
+				"São Miguel fortress preserves colonial military heritage.",
+				"The bay’s Ilha is a long sandy spit."
+			],
+			"it": [
+				"La provincia prende il nome da Luanda, un tempo São Paulo de Loanda.",
+				"La fortezza di São Miguel conserva il patrimonio militare coloniale.",
+				"L’Ilha della baia è una lunga lingua di sabbia."
+			],
+			"de": [
+				"Die Provinz ist nach Luanda benannt, dem früheren São Paulo de Loanda.",
+				"Die Festung São Miguel bewahrt koloniales Militärerbe.",
+				"Die Ilha der Bucht ist eine lange Sandnehrung."
+			]
+		}
+	},
+	"malanje": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Cuanza Norte",
+			"Cuanza Sul",
+			"Lunda Norte",
+			"Lunda Sul",
+			"Uíge"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Malanje",
+			"nameDe": "Malanje",
+			"nameIt": "Malanje",
+			"population": 125856
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its capital’s name was also written Malange.",
+				"The wider province includes Kalandula Falls.",
+				"Pungo Andongo is known for dramatic rock formations."
+			],
+			"it": [
+				"Il nome della capitale era scritto anche Malange.",
+				"Il territorio provinciale comprende le cascate di Kalandula.",
+				"Pungo Andongo è noto per spettacolari formazioni rocciose."
+			],
+			"de": [
+				"Der Name der Hauptstadt wurde auch Malange geschrieben.",
+				"Zur weiteren Provinz gehören die Kalandula-Fälle.",
+				"Pungo Andongo ist für eindrucksvolle Felsformationen bekannt."
+			]
+		}
+	},
+	"icolo-e-bengo": {
+		"kind": "region",
+		"borders": [
+			"Bengo",
+			"Cuanza Norte",
+			"Cuanza Sul",
+			"Luanda"
+		],
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name preserves the historic Icolo e Bengo district.",
+				"Agostinho Neto was born at Kaxicane.",
+				"Quiçama preserves protected natural landscapes."
+			],
+			"it": [
+				"Il nome conserva lo storico distretto di Icolo e Bengo.",
+				"Agostinho Neto nacque a Kaxicane.",
+				"Quiçama conserva paesaggi naturali protetti."
+			],
+			"de": [
+				"Der Name bewahrt den historischen Bezirk Icolo e Bengo.",
+				"Agostinho Neto wurde in Kaxicane geboren.",
+				"Quiçama bewahrt geschützte Naturlandschaften."
+			]
+		}
+	},
+	"lunda-sul": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Lunda Norte",
+			"Malanje",
+			"Moxico",
+			"Moxico Leste"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saurimo",
+			"nameDe": "Saurimo",
+			"nameIt": "Saurimo",
+			"population": 41316
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The Portuguese name means South Lunda.",
+				"Chokwe sculpture is part of its cultural heritage.",
+				"Saurimo was formerly called Henrique de Carvalho."
+			],
+			"it": [
+				"Il nome portoghese significa Lunda meridionale.",
+				"La scultura chokwe fa parte del patrimonio culturale.",
+				"Saurimo si chiamava in precedenza Henrique de Carvalho."
+			],
+			"de": [
+				"Der portugiesische Name bedeutet Süd-Lunda.",
+				"Chokwe-Bildhauerei gehört zum kulturellen Erbe.",
+				"Saurimo hieß früher Henrique de Carvalho."
+			]
+		}
+	},
+	"cuanza-sul": {
+		"kind": "region",
+		"borders": [
+			"Benguela",
+			"Bié",
+			"Cuanza Norte",
+			"Huambo",
+			"Icolo e Bengo",
+			"Malanje"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sumbe",
+			"nameDe": "Sumbe",
+			"nameIt": "Sumbe",
+			"population": 33277
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name refers to the southern Cuanza River area.",
+				"Sumbe was formerly Novo Redondo.",
+				"Waku Kungo was formerly Santa Comba."
+			],
+			"it": [
+				"Il nome si riferisce all’area meridionale del fiume Cuanza.",
+				"Sumbe si chiamava in precedenza Novo Redondo.",
+				"Waku Kungo si chiamava in precedenza Santa Comba."
+			],
+			"de": [
+				"Der Name bezieht sich auf das südliche Cuanza-Gebiet.",
+				"Sumbe hieß früher Novo Redondo.",
+				"Waku Kungo hieß früher Santa Comba."
+			]
+		}
+	},
+	"moxico-leste": {
+		"kind": "region",
+		"borders": [
+			"Lunda Sul",
+			"Moxico"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luau",
+			"nameDe": "Luau",
+			"nameIt": "Luau",
+			"population": 18465
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Leste means east in Portuguese.",
+				"It was established under the 2024 provincial reform.",
+				"The upper Zambezi runs through its landscape."
+			],
+			"it": [
+				"Leste significa est in portoghese.",
+				"Fu istituita con la riforma provinciale del 2024.",
+				"L’alto Zambesi attraversa il paesaggio."
+			],
+			"de": [
+				"Leste bedeutet auf Portugiesisch Osten.",
+				"Die Provinz entstand unter der Provinzreform von 2024.",
+				"Der obere Sambesi durchzieht ihre Landschaft."
+			]
+		}
+	},
+	"bie": {
+		"kind": "region",
+		"borders": [
+			"Cuando",
+			"Cuanza Sul",
+			"Cubango",
+			"Huambo",
+			"Huíla",
+			"Lunda Sul",
+			"Malanje",
+			"Moxico"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kuito",
+			"nameDe": "Kuito",
+			"nameIt": "Kuito",
+			"population": 114286
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name recalls the historic Bié kingdom.",
+				"Kuito was formerly called Silva Porto.",
+				"Maize farming shapes the central highlands."
+			],
+			"it": [
+				"Il nome ricorda lo storico regno del Bié.",
+				"Kuito si chiamava in precedenza Silva Porto.",
+				"La coltivazione del mais caratterizza gli altopiani centrali."
+			],
+			"de": [
+				"Der Name erinnert an das historische Königreich Bié.",
+				"Kuito hieß früher Silva Porto.",
+				"Maisanbau prägt das zentrale Hochland."
+			]
+		}
+	},
+	"huambo": {
+		"kind": "region",
+		"borders": [
+			"Benguela",
+			"Bié",
+			"Cuanza Sul",
+			"Huíla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Huambo",
+			"nameDe": "Huambo",
+			"nameIt": "Huambo",
+			"population": 1100000
+		},
+		"peak": {
+			"name": "Moro de Môco",
+			"elevation": 2620
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name recalls the historic Wambu kingdom.",
+				"The city was formerly called Nova Lisboa.",
+				"The Benguela Railway shaped its industrial growth."
+			],
+			"it": [
+				"Il nome ricorda lo storico regno del Wambu.",
+				"La città si chiamava in precedenza Nova Lisboa.",
+				"La ferrovia di Benguela ne plasmò la crescita industriale."
+			],
+			"de": [
+				"Der Name erinnert an das historische Königreich Wambu.",
+				"Die Stadt hieß früher Nova Lisboa.",
+				"Die Benguela-Bahn prägte das industrielle Wachstum."
+			]
+		}
+	},
+	"benguela": {
+		"kind": "region",
+		"borders": [
+			"Cuanza Sul",
+			"Huambo",
+			"Huíla",
+			"Namibe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lobito",
+			"nameDe": "Lobito",
+			"nameIt": "Lobito",
+			"population": 207932
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The province takes its name from Benguela, founded as São Filipe de Benguela.",
+				"Maritime trade shaped its growth.",
+				"Nossa Senhora do Pópulo church preserves colonial architecture."
+			],
+			"it": [
+				"La provincia prende il nome da Benguela, fondata come São Filipe de Benguela.",
+				"Il commercio marittimo ne plasmò la crescita.",
+				"La chiesa di Nossa Senhora do Pópulo conserva l’architettura coloniale."
+			],
+			"de": [
+				"Die Provinz ist nach Benguela benannt, das als São Filipe de Benguela gegründet wurde.",
+				"Seehandel prägte das Wachstum.",
+				"Die Kirche Nossa Senhora do Pópulo bewahrt Kolonialarchitektur."
+			]
+		}
+	},
+	"moxico": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Cuando",
+			"Lunda Sul",
+			"Moxico Leste"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luena",
+			"nameDe": "Luena",
+			"nameIt": "Luena",
+			"population": 21115
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The old Moxico name was retained after the eastern province split off.",
+				"Luena was formerly called Luso.",
+				"Miombo woodland forms part of its landscape."
+			],
+			"it": [
+				"L’antico nome Moxico fu mantenuto dopo la separazione della provincia orientale.",
+				"Luena si chiamava in precedenza Luso.",
+				"I boschi di miombo fanno parte del paesaggio."
+			],
+			"de": [
+				"Der alte Name Moxico blieb nach der Abtrennung der östlichen Provinz erhalten.",
+				"Luena hieß früher Luso.",
+				"Miombo-Waldland gehört zur Landschaft."
+			]
+		}
+	},
+	"huila": {
+		"kind": "region",
+		"borders": [
+			"Benguela",
+			"Bié",
+			"Cubango",
+			"Cunene",
+			"Huambo",
+			"Namibe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lubango",
+			"nameDe": "Lubango",
+			"nameIt": "Lubango",
+			"population": 125632
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Huíla is a historic name of Angola’s southern highlands.",
+				"The Serra da Leba road crosses a steep escarpment.",
+				"Nyaneka communities preserve cattle-keeping traditions."
+			],
+			"it": [
+				"Huíla è un nome storico degli altopiani meridionali angolani.",
+				"La strada della Serra da Leba attraversa una ripida scarpata.",
+				"Le comunità nyaneka conservano tradizioni di allevamento bovino."
+			],
+			"de": [
+				"Huíla ist ein historischer Name des südlichen angolanischen Hochlands.",
+				"Die Straße Serra da Leba überquert eine steile Geländestufe.",
+				"Nyaneka-Gemeinschaften bewahren Rinderhaltungstraditionen."
+			]
+		}
+	},
+	"namibe": {
+		"kind": "region",
+		"borders": [
+			"Benguela",
+			"Cunene",
+			"Huíla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Moçâmedes",
+			"nameDe": "Namibe",
+			"nameIt": "Namibe",
+			"population": 132900
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name recalls the Namib Desert.",
+				"Welwitschia is part of its desert flora.",
+				"Iona National Park protects desert landscapes."
+			],
+			"it": [
+				"Il nome ricorda il deserto del Namib.",
+				"La welwitschia fa parte della flora desertica.",
+				"Il Parco nazionale di Iona protegge paesaggi desertici."
+			],
+			"de": [
+				"Der Name erinnert an die Namib-Wüste.",
+				"Welwitschia gehört zur Wüstenflora.",
+				"Der Iona-Nationalpark schützt Wüstenlandschaften."
+			]
+		}
+	},
+	"cubango": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Cuando",
+			"Cunene",
+			"Huíla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Menongue",
+			"nameDe": "Menongue",
+			"nameIt": "Menongue",
+			"population": 13030
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"It is named after the Cubango River.",
+				"Menongue was formerly called Serpa Pinto.",
+				"The river continues towards the Okavango Delta."
+			],
+			"it": [
+				"Prende il nome dal fiume Cubango.",
+				"Menongue si chiamava in precedenza Serpa Pinto.",
+				"Il fiume prosegue verso il delta dell’Okavango."
+			],
+			"de": [
+				"Der Name geht auf den Cubango-Fluss zurück.",
+				"Menongue hieß früher Serpa Pinto.",
+				"Der Fluss fließt weiter zum Okavangodelta."
+			]
+		}
+	},
+	"cuando": {
+		"kind": "region",
+		"borders": [
+			"Bié",
+			"Cubango",
+			"Moxico"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mavinga",
+			"nameDe": "Mavinga",
+			"nameIt": "Mavinga",
+			"population": 30000
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"It is named after the Cuando River.",
+				"Mavinga became the new province’s capital.",
+				"Luengue-Luiana National Park protects southeastern woodland."
+			],
+			"it": [
+				"Prende il nome dal fiume Cuando.",
+				"Mavinga divenne la capitale della nuova provincia.",
+				"Il Parco nazionale Luengue-Luiana protegge i boschi sudorientali."
+			],
+			"de": [
+				"Der Name geht auf den Cuando-Fluss zurück.",
+				"Mavinga wurde Hauptstadt der neuen Provinz.",
+				"Der Luengue-Luiana-Nationalpark schützt südöstliches Waldland."
+			]
+		}
+	},
+	"cunene": {
+		"kind": "region",
+		"borders": [
+			"Cubango",
+			"Huíla",
+			"Namibe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ondjiva",
+			"nameDe": "Ondjiva",
+			"nameIt": "Ondjiva",
+			"population": 10169
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"It is named after the Cunene River.",
+				"Ovambo pastoral traditions shape local heritage.",
+				"Ondjiva was formerly called Vila Pereira d’Eça."
+			],
+			"it": [
+				"Prende il nome dal fiume Cunene.",
+				"Le tradizioni pastorali ovambo plasmano il patrimonio locale.",
+				"Ondjiva si chiamava in precedenza Vila Pereira d’Eça."
+			],
+			"de": [
+				"Der Name geht auf den Kunene-Fluss zurück.",
+				"Ovambo-Weidetraditionen prägen das örtliche Erbe.",
+				"Ondjiva hieß früher Vila Pereira d’Eça."
+			]
+		}
+	}
+}

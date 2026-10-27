@@ -1,0 +1,140 @@
+{
+	"northern": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Eastern",
+			"Western"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arua",
+			"nameDe": "Arua",
+			"nameIt": "Arua",
+			"population": 250000
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its historic cultural areas include Acholi and Lango.",
+				"Kidepo Valley became a national park in 1962.",
+				"The Narus Valley attracts wildlife to its water during the dry season."
+			],
+			"it": [
+				"Tra le sue aree culturali storiche vi sono Acholi e Lango.",
+				"La valle di Kidepo divenne un parco nazionale nel 1962.",
+				"La valle del Narus attira la fauna presso le sue acque durante la stagione secca."
+			],
+			"de": [
+				"Zu ihren historischen Kulturräumen gehören Acholi und Lango.",
+				"Das Kidepo-Tal wurde 1962 zum Nationalpark.",
+				"Das Narus-Tal zieht in der Trockenzeit Wildtiere an seine Wasserstellen."
+			]
+		}
+	},
+	"eastern": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Northern"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mbale",
+			"nameDe": "Mbale",
+			"nameIt": "Mbale",
+			"population": 402368
+		},
+		"peak": {
+			"name": "Mount Elgon",
+			"elevation": 4321
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Busoga preserves the traditions of a historic kingdom.",
+				"At Jinja, the Nile begins its journey from Lake Victoria.",
+				"Nyero’s painted rock shelters preserve evidence of prehistoric human activity."
+			],
+			"it": [
+				"Busoga conserva le tradizioni di un regno storico.",
+				"A Jinja il Nilo inizia il suo viaggio dal lago Vittoria.",
+				"I ripari rocciosi dipinti di Nyero conservano testimonianze dell’attività umana preistorica."
+			],
+			"de": [
+				"Busoga bewahrt die Traditionen eines historischen Königreichs.",
+				"Bei Jinja beginnt der Nil seinen Weg aus dem Victoriasee.",
+				"Nyeros bemalte Felsunterstände bewahren Spuren prähistorischer menschlicher Tätigkeit."
+			]
+		}
+	},
+	"western": {
+		"kind": "region",
+		"borders": [
+			"Central",
+			"Northern"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mbarara",
+			"nameDe": "Mbarara",
+			"nameIt": "Mbarara",
+			"population": 83700
+		},
+		"peak": {
+			"name": "Mount Stanley",
+			"elevation": 4979
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its historic cultural areas include Bunyoro, Tooro and Ankole.",
+				"Bwindi’s forests shelter mountain gorillas and exceptional plant diversity.",
+				"The Rwenzori Mountains are protected as a World Heritage Site."
+			],
+			"it": [
+				"Tra le sue aree culturali storiche vi sono Bunyoro, Tooro e Ankole.",
+				"Le foreste di Bwindi ospitano gorilla di montagna e un’eccezionale diversità vegetale.",
+				"I monti Rwenzori sono protetti come patrimonio mondiale."
+			],
+			"de": [
+				"Zu ihren historischen Kulturräumen gehören Bunyoro, Tooro und Ankole.",
+				"Bwindis Wälder beherbergen Berggorillas und eine außergewöhnliche Pflanzenvielfalt.",
+				"Das Ruwenzori-Gebirge ist als Welterbestätte geschützt."
+			]
+		}
+	},
+	"central": {
+		"kind": "region",
+		"borders": [
+			"Eastern",
+			"Northern",
+			"Western"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kampala",
+			"nameDe": "Kampala",
+			"nameIt": "Kampala",
+			"population": 1420000
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The region includes the historic heartland of the Buganda kingdom.",
+				"Kasubi is a royal burial site and spiritual centre for the Baganda.",
+				"Traditional barkcloth is made by beating the inner bark of the mutuba tree."
+			],
+			"it": [
+				"La regione comprende il cuore storico del regno del Buganda.",
+				"Kasubi è un luogo di sepoltura reale e un centro spirituale per i baganda.",
+				"Il tradizionale tessuto di corteccia si ottiene battendo la corteccia interna dell’albero mutuba."
+			],
+			"de": [
+				"Die Region umfasst das historische Kernland des Königreichs Buganda.",
+				"Kasubi ist eine königliche Begräbnisstätte und ein spirituelles Zentrum der Baganda.",
+				"Traditioneller Rindenstoff entsteht durch das Klopfen der inneren Rinde des Mutuba-Baums."
+			]
+		}
+	}
+}

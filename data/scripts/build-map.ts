@@ -1,3 +1,4 @@
+import { appendNeutralBoundaryContext } from './neutralBoundaryContext.js';
 // Builds one demo map package from the Natural Earth admin-1 dataset:
 // filters by country, simplifies geometry, builds a PMTiles tileset, and
 // derives a draft map.json (Target[] + a default north-to-south tour
@@ -522,9 +523,10 @@ async function main() {
 		console.error(`Unknown --clean-names "${args['clean-names']}".`);
 		process.exit(1);
 	}
-	const attribution = args.attribution
+	let attribution = args.attribution
 		? `${args.attribution}; Natural Earth (public domain), https://www.naturalearthdata.com`
 		: 'Natural Earth (public domain), https://www.naturalearthdata.com';
+	if (args['places-source']) attribution += '; Wikidata (CC0), https://www.wikidata.org';
 	// --within=Bayern,Hessen keeps the targets whose interior point lies
 	// inside those admin-1 areas of --country, from Natural Earth - a
 	// register's districts carry no state, and a slice by state is how
@@ -889,10 +891,17 @@ async function main() {
 		name: mapName,
 		country,
 		attribution,
+		...(args['largest-city-facts'] === 'false' ? { largestCityFacts: false } : {}),
 		// Boundaries from outside Natural Earth: build-facts.ts then does not
 		// match targets to Natural Earth's admin-1 rows, which would describe
 		// a district as its whole state.
 		...(source ? { boundarySource: source } : {}),
+		...(args['places-source'] ? { placesSource: args['places-source'] } : {}),
+		...(source && args['boundary-facts'] === 'true' ? { boundaryFacts: true } : {}),
+		// Keep custom name-based dissolves reproducible for derived facts too.
+		...(!source && !countryLevel && renames.size
+			? { boundaryRenames: Object.fromEntries(renames) }
+			: {}),
 		tiles: 'tiles.pmtiles',
 		targets,
 		tourOrder: targets.map((t) => t.id)
@@ -938,7 +947,13 @@ async function main() {
 		const targetAdmins = geojson.features.map((f) => f.properties.ADMIN as string);
 		selectAdmin0Context(padBbox(overallBboxOf(targets)), contextPath, targetAdmins);
 	} else {
-		selectAdmin0Context(padBbox(overallBboxOf(targets)), landPath, [country]);
+		selectAdmin0Context(padBbox(overallBboxOf(targets)), landPath, source ? [] : [country]);
+		if (source) {
+			const external = JSON.parse(readFileSync(path.resolve(REPO_ROOT, source), 'utf8')) as {
+				contextFeatures?: unknown[];
+			};
+			appendNeutralBoundaryContext(landPath, external.contextFeatures ?? []);
+		}
 	}
 
 	console.log('[5/6] Building vector tiles (tippecanoe + pmtiles convert)...');

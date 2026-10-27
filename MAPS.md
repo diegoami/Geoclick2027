@@ -1727,3 +1727,126 @@ first. `italy-towns-100k`/`germany-towns-100k` needed all of it —
 hit-testing/camera-framing changes, and the two fixes found only by
 actually testing the built maps (tippecanoe's zoom-dependent dropping,
 the dense-cluster tolerance bug) — real work, not a footnote.
+
+
+### v1.0 country expansion
+
+Draft implementation tracked in docs/PLAN_V1.0.md. On Linux with GDAL 3.12.2,
+tippecanoe 2.53.0 and PMTiles CLI 1.31.2, from the repository root:
+
+    export PMTILES_BIN="$PWD/.toolchain/pmtiles"
+    node --import tsx data/scripts/build-v1-country-maps.ts
+
+Optional: append --country=estonia (or another batch country).
+
+| Country | Administrative map (targets) | Towns map (targets) |
+| --- | --- | --- |
+| Hungary | hungary-counties (20) | hungary-towns-10k (23) |
+| Slovakia | slovakia-regions (8) | slovakia-towns-10k (20) |
+| Estonia | estonia-counties (15) | estonia-towns-5k (20) |
+| Lithuania | lithuania-counties (10) | lithuania-towns-10k (20) |
+| Iceland | iceland-regions (8) | iceland-towns-1k (9) |
+| Costa Rica | costa-rica-provinces (7) | costa-rica-towns-1k (13) |
+
+The batch forces terrain regeneration when bounds change. Hungary dissolves
+43 Natural Earth units into 19 counties plus Budapest; Iceland merges Reykjavik
+into the capital region, yielding eight regions. boundaryRenames metadata lets
+derived facts use the same unions, retaining cities such as Szeged.
+
+Estonia uses data/boundaries/estonia-counties-2026-09-02.geojson from the
+Estonian Land and Spatial Development Board, with provider/date attribution
+and unrestricted-use terms preserved. Explicitly refetch with:
+
+    node --import tsx data/scripts/fetch-estonia-counties.ts
+
+Source ZIP SHA256:
+b8862ad2217e3efbb4db3dd95f2d0e32cb2d0ca6b7c3c9447d9c87fb43d0abd9.
+A changed upstream ZIP requires deliberate review. A point check places Lihula
+in Parnu after the 2017 transfer, not Laane. boundaryFacts enables derived facts
+from named source polygons. placesSource selects the town snapshot for regional
+facts. The batch checks Kuressaare, Parnu, Kardla, Jogeva, Reykjavik, Szeged and Erd
+explicitly, plus previously missing Slovak/Lithuanian county cities. Hungary
+uses its dated snapshot for both maps so Pest includes Erd. Source/fact parity,
+town regions and trilingual target coverage are guarded by v1CountryData.test.ts.
+
+Hungary, Slovakia, Estonia and Lithuania have committed Wikidata town
+snapshots (CC0), reproducible through data/scripts/fetch-v1-towns.ts in WSL.
+The fetcher uses Wikidata administrative hierarchies for ADM1NAME; where
+Lithuanian municipalities bypass counties, missing associations use actual
+point-in-polygon containment against Natural Earth (public domain), with
+provenance preserved. Ambiguous or missing associations fail the refresh.
+Budapest is its own county-equivalent unit. GDAL and the Natural Earth admin-1
+source are required for that Lithuanian fallback. The fetcher now refreshes twelve used country snapshots; Costa Rica remains on Natural Earth.
+Estonia fetches towns from 1,000 population so smaller county seats remain in
+regional facts; its playable towns map still starts at 5,000. Population selection uses
+the latest dated non-future statement, even when lower than an older value.
+Petrzalka is excluded as a Bratislava borough rather than an independent town.
+Costa Rica uses Natural Earth towns at 1,000 population; bounds exclude Cocos.
+
+After editing authored data/facts files, refresh generated hooks:
+
+    node --import tsx data/scripts/refresh-facts-hooks.ts
+
+Hungary retains Salgotarjan, Vac and Szekszard explicitly with --retain,
+beyond the twenty most populous towns selected from its snapshot. This keeps
+county seats and existing authored learning content while adding Erd, Sopron
+and Dunakeszi. The flag still respects source availability, bounds, exclusions
+and the population threshold, and rejects missing/ambiguous retained names.
+The first six countries contain 173 targets; the complete expansion contains 735.
+
+
+The complete v1.0 expansion is configured in data/scripts/v1CountrySpecs.ts:
+22 countries, two maps each, 217 maps in the catalogue after regeneration.
+Fetch the additional pinned polygon inputs before building:
+
+    node --import tsx data/scripts/fetch-v1-boundaries.ts
+    node --import tsx data/scripts/fetch-v1-current-boundaries.ts
+    node --import tsx data/scripts/fetch-v1-towns.ts
+    node --import tsx data/scripts/build-v1-country-maps.ts
+    node --import tsx data/scripts/build-picker.ts
+    node --import tsx data/scripts/audit-v1-country-facts.ts --strict
+
+The first boundary fetcher pins geoBoundaries commit 9469f09 for UAE, Sri
+Lanka, Uzbekistan, Nepal, Taiwan, Uganda, DR Congo and Ghana; each input has
+its source licence and hash in v1BoundarySources.ts. The current-source
+fetcher handles Ethiopia, Tanzania, Latvia, Slovenia, Singapore, Israel,
+Iraq and Angola. v1CurrentBoundarySources.ts records URLs, dates, licences,
+raw hashes (or the canonical feature digest for the volatile Slovenian WFS
+wrapper) and exact expected division counts. Singapore uses two official
+URA 2019 layers: five regions and 55 planning areas; its planning-area map
+is detailed and omits inappropriate largest-city facts.
+
+Angola's 21 provinces are a documented cartographic reconstruction: current
+OSM/Geofabrik outer outlines with the four new-province partitions derived
+from licensed OCHA municipal outlines and legal 2025 groupings. The derivation
+in deriveAngolaProvinces.ts checks area conservation, non-overlap and five
+capital anchors. It is not an official cadastral survey. Iraq's source contains
+Halabja, unlike stale eighteen-governorate snapshots. Ethiopia's contested
+polygon is neutral land context, not a quiz target.
+
+Town maps store regionsMap to reuse the administrative map's source polygons,
+renames and credits for their context and generated region facts. Precise
+coordinates are preferred only after selecting the newest observed population;
+a coastal point can be associated within its stated source precision only when
+one canonical region is unambiguous. Israel explicitly clips to the selected
+six-district source footprint and requires that its source capital survives.
+The twelve snapshot profiles include native labels for Latvia and Slovenia.
+
+The world picker retains Singapore despite the continent quiz's area threshold;
+it is selectable without adding a tiny target to the continent quiz. Rebuild
+its tiles and metadata together using build-picker.ts after this change.
+
+The complete expansion has authored EN/IT/DE hooks for all 735 targets. After
+editing them, run refresh-facts-hooks.ts and the strict audit above; the data
+regression suite enforces all 44 maps. Shared townNameFixups.ts normalizes
+Ethiopia's Nazret/Giyon/Awasa to Adama/Woliso/Hawassa and Iraq's Irbil/Az Aubayr
+to Erbil/Az Zubayr in both playable towns and derived regional facts.
+
+Reviewed place corrections are applied by build-points-map.ts and build-facts.ts
+before their population/spatial selection; raw input snapshots stay intact.
+placeCorrections.ts records the exact corrected points, census value and source
+URLs. GeoNames coordinate corrections are credited under CC BY 4.0 in affected
+map attribution. JSON place snapshots retain coordinatePrecision throughout
+fact generation; regional largest-city selection uses the same bounded resolver
+as town associations. expectedLargest checks guard Cape Coast, Kalemie, Musoma,
+Kigoma and Mekele. Taiwan excludes four Taoyuan boroughs by the owner's decision.

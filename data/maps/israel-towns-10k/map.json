@@ -1,0 +1,393 @@
+{
+	"id": "israel-towns-10k",
+	"name": "Israel — Towns",
+	"country": "Israel",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; Wikimedia district geometry; 2006; Public Domain; https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM1/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/israel.geojson",
+	"regionsMap": "israel-districts",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "haifa",
+			"name": "Haifa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.999166666,
+				32.819166666
+			],
+			"bbox": [
+				34.999166666,
+				32.819166666,
+				34.999166666,
+				32.819166666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "nazareth",
+			"name": "Nazareth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.29785,
+				32.702102777
+			],
+			"bbox": [
+				35.29785,
+				32.702102777,
+				35.29785,
+				32.702102777
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "hadera",
+			"name": "Hadera",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.916666666,
+				32.45
+			],
+			"bbox": [
+				34.916666666,
+				32.45,
+				34.916666666,
+				32.45
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "netanya",
+			"name": "Netanya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.856666666,
+				32.328611111
+			],
+			"bbox": [
+				34.856666666,
+				32.328611111,
+				34.856666666,
+				32.328611111
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kfar-saba",
+			"name": "Kfar Saba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.907683333,
+				32.185783333
+			],
+			"bbox": [
+				34.907683333,
+				32.185783333,
+				34.907683333,
+				32.185783333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "herzliya",
+			"name": "Herzliya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.842222222,
+				32.155555555
+			],
+			"bbox": [
+				34.842222222,
+				32.155555555,
+				34.842222222,
+				32.155555555
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "petah-tikva",
+			"name": "Petah Tikva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.883333333,
+				32.083333333
+			],
+			"bbox": [
+				34.883333333,
+				32.083333333,
+				34.883333333,
+				32.083333333
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bnei-brak",
+			"name": "Bnei Brak",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.8338,
+				32.08074
+			],
+			"bbox": [
+				34.8338,
+				32.08074,
+				34.8338,
+				32.08074
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tel-aviv",
+			"name": "Tel Aviv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.78,
+				32.08
+			],
+			"bbox": [
+				34.78,
+				32.08,
+				34.78,
+				32.08
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ramat-gan",
+			"name": "Ramat Gan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.823541,
+				32.070007
+			],
+			"bbox": [
+				34.823541,
+				32.070007,
+				34.823541,
+				32.070007
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bat-yam",
+			"name": "Bat Yam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.750277777,
+				32.023055555
+			],
+			"bbox": [
+				34.750277777,
+				32.023055555,
+				34.750277777,
+				32.023055555
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "holon",
+			"name": "Holon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.766666666,
+				32.016666666
+			],
+			"bbox": [
+				34.766666666,
+				32.016666666,
+				34.766666666,
+				32.016666666
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "rishon-lezion",
+			"name": "Rishon LeZion",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.8,
+				31.95
+			],
+			"bbox": [
+				34.8,
+				31.95,
+				34.8,
+				31.95
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "modi-in-maccabim-re-ut",
+			"name": "Modi'in-Maccabim-Re'ut",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.007636111,
+				31.907652777
+			],
+			"bbox": [
+				35.007636111,
+				31.907652777,
+				35.007636111,
+				31.907652777
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "rehovot",
+			"name": "Rehovot",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.807777777,
+				31.891388888
+			],
+			"bbox": [
+				34.807777777,
+				31.891388888,
+				34.807777777,
+				31.891388888
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ashdod",
+			"name": "Ashdod",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.650277777,
+				31.797777777
+			],
+			"bbox": [
+				34.650277777,
+				31.797777777,
+				34.650277777,
+				31.797777777
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "jerusalem",
+			"name": "Jerusalem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.225555555,
+				31.778888888
+			],
+			"bbox": [
+				35.225555555,
+				31.778888888,
+				35.225555555,
+				31.778888888
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "beit-shemesh",
+			"name": "Beit Shemesh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.988611111,
+				31.751388888
+			],
+			"bbox": [
+				34.988611111,
+				31.751388888,
+				34.988611111,
+				31.751388888
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ashkelon",
+			"name": "Ashkelon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.566388888,
+				31.665833333
+			],
+			"bbox": [
+				34.566388888,
+				31.665833333,
+				34.566388888,
+				31.665833333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "beersheba",
+			"name": "Beersheba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.786666666,
+				31.252222222
+			],
+			"bbox": [
+				34.786666666,
+				31.252222222,
+				34.786666666,
+				31.252222222
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"haifa",
+		"nazareth",
+		"hadera",
+		"netanya",
+		"kfar-saba",
+		"herzliya",
+		"petah-tikva",
+		"bnei-brak",
+		"tel-aviv",
+		"ramat-gan",
+		"bat-yam",
+		"holon",
+		"rishon-lezion",
+		"modi-in-maccabim-re-ut",
+		"rehovot",
+		"ashdod",
+		"jerusalem",
+		"beit-shemesh",
+		"ashkelon",
+		"beersheba"
+	]
+}

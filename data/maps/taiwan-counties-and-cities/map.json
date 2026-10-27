@@ -1,0 +1,788 @@
+{
+	"id": "taiwan-counties-and-cities",
+	"name": "Taiwan — Counties and Cities",
+	"country": "Taiwan",
+	"attribution": "geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/boundaries/taiwan-gb-9469f09.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "lienchiang-county",
+			"name": "Lienchiang County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.20885,
+				26.16285
+			],
+			"bbox": [
+				119.9105,
+				25.9531,
+				120.5072,
+				26.3726
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						119.9158,
+						26.1478
+					],
+					[
+						119.937,
+						26.1534
+					],
+					[
+						119.9575,
+						26.1608
+					]
+				],
+				"aspect": 2.37
+			}
+		},
+		{
+			"id": "keelung-city",
+			"name": "Keelung City",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.71685,
+				25.115000000000002
+			],
+			"bbox": [
+				121.6268,
+				25.0532,
+				121.8069,
+				25.1768
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						121.6612,
+						25.123
+					],
+					[
+						121.7232,
+						25.0977
+					],
+					[
+						121.7851,
+						25.1263
+					]
+				],
+				"aspect": 1.29
+			}
+		},
+		{
+			"id": "taipei-city",
+			"name": "Taipei City",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.56084999999999,
+				25.08525
+			],
+			"bbox": [
+				121.457,
+				24.961,
+				121.6647,
+				25.2095
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						121.5336,
+						25.1711
+					],
+					[
+						121.5448,
+						25.0855
+					],
+					[
+						121.5764,
+						25.0042
+					]
+				],
+				"aspect": 1.57
+			}
+		},
+		{
+			"id": "new-taipei-city",
+			"name": "New Taipei City",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.64435,
+				24.9858
+			],
+			"bbox": [
+				121.2828,
+				24.6732,
+				122.0059,
+				25.2984
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						121.3966,
+						24.9232
+					],
+					[
+						121.6335,
+						24.8646
+					],
+					[
+						121.8704,
+						25.0122
+					]
+				],
+				"aspect": 2
+			}
+		},
+		{
+			"id": "taoyuan-city",
+			"name": "Taoyuan City",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.23285,
+				24.854300000000002
+			],
+			"bbox": [
+				120.9858,
+				24.5865,
+				121.4799,
+				25.1221
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						121.1495,
+						25.0443
+					],
+					[
+						121.3189,
+						24.8753
+					],
+					[
+						121.4062,
+						24.6604
+					]
+				],
+				"aspect": 3.08
+			}
+		},
+		{
+			"id": "hsinchu-city",
+			"name": "Hsinchu City",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.95585,
+				24.782899999999998
+			],
+			"bbox": [
+				120.8794,
+				24.7126,
+				121.0323,
+				24.8532
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						120.9092,
+						24.7719
+					],
+					[
+						120.9638,
+						24.8088
+					],
+					[
+						121.0184,
+						24.7981
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "hsinchu-county",
+			"name": "Hsinchu County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.17085,
+				24.686799999999998
+			],
+			"bbox": [
+				120.9296,
+				24.4274,
+				121.4121,
+				24.9462
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						121.0182,
+						24.8851
+					],
+					[
+						121.1356,
+						24.6777
+					],
+					[
+						121.3172,
+						24.5145
+					]
+				],
+				"aspect": 2.09
+			}
+		},
+		{
+			"id": "yilan-county",
+			"name": "Yilan County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.6418,
+				24.6507
+			],
+			"bbox": [
+				121.3177,
+				24.313,
+				121.9659,
+				24.9884
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						121.4656,
+						24.3967
+					],
+					[
+						121.7058,
+						24.5175
+					],
+					[
+						121.7517,
+						24.7583
+					]
+				],
+				"aspect": 1.39
+			}
+		},
+		{
+			"id": "miaoli-county",
+			"name": "Miaoli County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.94225,
+				24.515
+			],
+			"bbox": [
+				120.6219,
+				24.2893,
+				121.2626,
+				24.7407
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						120.7218,
+						24.4838
+					],
+					[
+						120.9317,
+						24.5502
+					],
+					[
+						121.1415,
+						24.4334
+					]
+				],
+				"aspect": 1.18
+			}
+		},
+		{
+			"id": "kinmen-county",
+			"name": "Kinmen County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				118.34385,
+				24.45685
+			],
+			"bbox": [
+				118.2147,
+				24.3858,
+				118.473,
+				24.5279
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						118.3105,
+						24.4245
+					],
+					[
+						118.3717,
+						24.4626
+					],
+					[
+						118.4448,
+						24.4705
+					]
+				],
+				"aspect": 1.85
+			}
+		},
+		{
+			"id": "taichung-city",
+			"name": "Taichung City",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.9596,
+				24.22185
+			],
+			"bbox": [
+				120.4682,
+				24.0022,
+				121.451,
+				24.4415
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						120.5723,
+						24.2089
+					],
+					[
+						120.9669,
+						24.1752
+					],
+					[
+						121.3224,
+						24.3367
+					]
+				],
+				"aspect": 3.71
+			}
+		},
+		{
+			"id": "changhua-county",
+			"name": "Changhua County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.4646,
+				23.99175
+			],
+			"bbox": [
+				120.2502,
+				23.7861,
+				120.679,
+				24.1974
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						120.3437,
+						23.943
+					],
+					[
+						120.4781,
+						24.013
+					],
+					[
+						120.6125,
+						23.9651
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "nantou-county",
+			"name": "Nantou County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.98415,
+				23.840449999999997
+			],
+			"bbox": [
+				120.6189,
+				23.4352,
+				121.3494,
+				24.2457
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						120.7334,
+						23.7795
+					],
+					[
+						120.9724,
+						23.7421
+					],
+					[
+						121.2114,
+						23.9145
+					]
+				],
+				"aspect": 0.69
+			}
+		},
+		{
+			"id": "hualien-county",
+			"name": "Hualien County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.3803,
+				23.735799999999998
+			],
+			"bbox": [
+				120.9871,
+				23.1011,
+				121.7735,
+				24.3705
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						121.2071,
+						23.3013
+					],
+					[
+						121.4141,
+						23.7684
+					],
+					[
+						121.5389,
+						24.2576
+					]
+				],
+				"aspect": 3.33
+			}
+		},
+		{
+			"id": "yunlin-county",
+			"name": "Yunlin County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.43665,
+				23.668750000000003
+			],
+			"bbox": [
+				120.1394,
+				23.5043,
+				120.7339,
+				23.8332
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						120.1699,
+						23.6399
+					],
+					[
+						120.3775,
+						23.7697
+					],
+					[
+						120.6055,
+						23.7067
+					]
+				],
+				"aspect": 1.92
+			}
+		},
+		{
+			"id": "chiayi-city",
+			"name": "Chiayi City",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.44925,
+				23.47885
+			],
+			"bbox": [
+				120.3892,
+				23.4396,
+				120.5093,
+				23.5181
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						120.4031,
+						23.4859
+					],
+					[
+						120.4498,
+						23.4801
+					],
+					[
+						120.4965,
+						23.4739
+					]
+				],
+				"aspect": 1.89
+			}
+		},
+		{
+			"id": "penghu-county",
+			"name": "Penghu County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.50444999999999,
+				23.472900000000003
+			],
+			"bbox": [
+				119.3146,
+				23.1903,
+				119.6943,
+				23.7555
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "chiayi-county",
+			"name": "Chiayi County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.53829999999999,
+				23.42505
+			],
+			"bbox": [
+				120.119,
+				23.2148,
+				120.9576,
+				23.6353
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						120.2008,
+						23.459
+					],
+					[
+						120.4966,
+						23.4526
+					],
+					[
+						120.7923,
+						23.4463
+					]
+				],
+				"aspect": 2.51
+			}
+		},
+		{
+			"id": "tainan-city",
+			"name": "Tainan City",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.34565,
+				23.1511
+			],
+			"bbox": [
+				120.035,
+				22.889,
+				120.6563,
+				23.4132
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						120.1109,
+						23.1345
+					],
+					[
+						120.3069,
+						23.103
+					],
+					[
+						120.5028,
+						23.199
+					]
+				],
+				"aspect": 0.86
+			}
+		},
+		{
+			"id": "kaohsiung-city",
+			"name": "Kaohsiung City",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.61195000000001,
+				22.97365
+			],
+			"bbox": [
+				120.1751,
+				22.476,
+				121.0488,
+				23.4713
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						120.2956,
+						22.6588
+					],
+					[
+						120.644,
+						22.9911
+					],
+					[
+						120.9381,
+						23.3648
+					]
+				],
+				"aspect": 4.3
+			}
+		},
+		{
+			"id": "taitung-county",
+			"name": "Taitung County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.17005,
+				22.723
+			],
+			"bbox": [
+				120.7395,
+				22.0029,
+				121.6006,
+				23.4431
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						120.8216,
+						22.3406
+					],
+					[
+						120.9426,
+						22.772
+					],
+					[
+						121.1537,
+						23.1642
+					]
+				],
+				"aspect": 4.23
+			}
+		},
+		{
+			"id": "pingtung-county",
+			"name": "Pingtung County",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.62835000000001,
+				22.3915
+			],
+			"bbox": [
+				120.3529,
+				21.8979,
+				120.9038,
+				22.8851
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						120.6437,
+						22.7809
+					],
+					[
+						120.5821,
+						22.377
+					],
+					[
+						120.8248,
+						22.0282
+					]
+				],
+				"aspect": 4.09
+			}
+		}
+	],
+	"tourOrder": [
+		"lienchiang-county",
+		"keelung-city",
+		"taipei-city",
+		"new-taipei-city",
+		"taoyuan-city",
+		"hsinchu-city",
+		"hsinchu-county",
+		"yilan-county",
+		"miaoli-county",
+		"kinmen-county",
+		"taichung-city",
+		"changhua-county",
+		"nantou-county",
+		"hualien-county",
+		"yunlin-county",
+		"chiayi-city",
+		"penghu-county",
+		"chiayi-county",
+		"tainan-city",
+		"kaohsiung-city",
+		"taitung-county",
+		"pingtung-county"
+	]
+}

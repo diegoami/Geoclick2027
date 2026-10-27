@@ -1,0 +1,1748 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "Latvian Ministry of Smart Administration and Regional Development; planning regions from 2021-07-01",
+		"year": "2021",
+		"url": "https://data.gov.lv/dati/dataset/788c670f-733a-4197-b159-4a00bada964b/resource/39336816-8b65-44d1-90c6-545018292916/download/planosanas_regioni.geojson",
+		"sha256": "d30850125ff6a105f1e40f7b841cb979cbca8145b94869b4fc669501ddee4f4e",
+		"hashMode": "raw",
+		"rawSha256": "d30850125ff6a105f1e40f7b841cb979cbca8145b94869b4fc669501ddee4f4e",
+		"licence": "CC0 1.0",
+		"licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+		"simplification": "25%, keep-shapes; EPSG:4326 precision 0.000001",
+		"contextOnly": []
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T12:37:05.157Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"LVA\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"lv\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.323611111,
+					57.076944444
+				]
+			},
+			"properties": {
+				"NAME": "Ādaži",
+				"NAME_EN": "Ādaži",
+				"NAME_IT": "Ādaži",
+				"NAME_DE": "Ādaži",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7683,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q336006"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.255,
+					56.600833333
+				]
+			},
+			"properties": {
+				"NAME": "Aizkraukle",
+				"NAME_EN": "Aizkraukle",
+				"NAME_IT": "Aizkraukle",
+				"NAME_DE": "Aizkraukle",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6626,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q411715"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.601666666,
+					56.721111111
+				]
+			},
+			"properties": {
+				"NAME": "Aizpute",
+				"NAME_EN": "Aizpute",
+				"NAME_IT": "Aizpute",
+				"NAME_DE": "Aizpute",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3763,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q411723"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.882777777,
+					57.766944444
+				]
+			},
+			"properties": {
+				"NAME": "Aloja",
+				"NAME_EN": "Aloja",
+				"NAME_IT": "Aloja",
+				"NAME_DE": "Aloja",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1024,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q659019"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.050277777,
+					57.423888888
+				]
+			},
+			"properties": {
+				"NAME": "Alūksne",
+				"NAME_EN": "Alūksne",
+				"NAME_IT": "Alūksne",
+				"NAME_DE": "Alūksne",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6104,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q291333"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.894166666,
+					56.461111111
+				]
+			},
+			"properties": {
+				"NAME": "Auce",
+				"NAME_EN": "Auce",
+				"NAME_IT": "Auce",
+				"NAME_DE": "Auce",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2131,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q758578"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.390833333,
+					56.7425
+				]
+			},
+			"properties": {
+				"NAME": "Baldone",
+				"NAME_EN": "Baldone",
+				"NAME_IT": "Baldone",
+				"NAME_DE": "Baldone",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3676,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q789351"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.119444444,
+					56.875
+				]
+			},
+			"properties": {
+				"NAME": "Baloži",
+				"NAME_EN": "Baloži",
+				"NAME_IT": "Baloži",
+				"NAME_DE": "Baloži",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6795,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q757043"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.266666666,
+					57.129166666
+				]
+			},
+			"properties": {
+				"NAME": "Balvi",
+				"NAME_EN": "Balvi",
+				"NAME_IT": "Balvi",
+				"NAME_DE": "Balvi",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5500,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q218402"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.1875,
+					56.406666666
+				]
+			},
+			"properties": {
+				"NAME": "Bauska",
+				"NAME_EN": "Bauska",
+				"NAME_IT": "Bauska",
+				"NAME_DE": "Bauska",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 9566,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q498256"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.566388888,
+					56.683333333
+				]
+			},
+			"properties": {
+				"NAME": "Brocēni",
+				"NAME_EN": "Brocēni",
+				"NAME_IT": "Brocēni",
+				"NAME_DE": "Brocēni",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2827,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q840836"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.274722222,
+					57.313055555
+				]
+			},
+			"properties": {
+				"NAME": "Cēsis",
+				"NAME_EN": "Cēsis",
+				"NAME_IT": "Cēsis",
+				"NAME_DE": "Cēsis",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14899,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q107582"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.306666666,
+					56.968333333
+				]
+			},
+			"properties": {
+				"NAME": "Cesvaine",
+				"NAME_EN": "Cesvaine",
+				"NAME_IT": "Cesvaine",
+				"NAME_DE": "Cesvaine",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1163,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q757050"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.536944444,
+					56.094722222
+				]
+			},
+			"properties": {
+				"NAME": "Dagda",
+				"NAME_EN": "Dagda",
+				"NAME_IT": "Dagda",
+				"NAME_DE": "Dagda",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1756,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q757101"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.516111111,
+					55.871388888
+				]
+			},
+			"properties": {
+				"NAME": "Daugavpils",
+				"NAME_EN": "Daugavpils",
+				"NAME_IT": "Daugavpils",
+				"NAME_DE": "Daugavpils",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 77486,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q80021"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.281111111,
+					56.625833333
+				]
+			},
+			"properties": {
+				"NAME": "Dobele",
+				"NAME_EN": "Dobele",
+				"NAME_IT": "Dobele",
+				"NAME_DE": "Dobele",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 8429,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q729447"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.1675,
+					56.5375
+				]
+			},
+			"properties": {
+				"NAME": "Grobiņa",
+				"NAME_EN": "Grobiņa",
+				"NAME_IT": "Grobiņa",
+				"NAME_DE": "Grobiņa",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3686,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q757049"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.756388888,
+					57.175
+				]
+			},
+			"properties": {
+				"NAME": "Gulbene",
+				"NAME_EN": "Gulbene",
+				"NAME_IT": "Gulbene",
+				"NAME_DE": "Gulbene",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6683,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q753010"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.2,
+					56.6
+				]
+			},
+			"properties": {
+				"NAME": "Iecava",
+				"NAME_EN": "Iecava",
+				"NAME_IT": "Iecava",
+				"NAME_DE": "Iecava",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 5286,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1023764"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.496388888,
+					56.836666666
+				]
+			},
+			"properties": {
+				"NAME": "Ikšķile",
+				"NAME_EN": "Ikšķile",
+				"NAME_IT": "Ikšķile",
+				"NAME_DE": "Uexküll",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7412,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q753029"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.296666666,
+					55.978055555
+				]
+			},
+			"properties": {
+				"NAME": "Ilūkste",
+				"NAME_EN": "Ilūkste",
+				"NAME_IT": "Ilūkste",
+				"NAME_DE": "Ilūkste",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1992,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q580373"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.081388888,
+					56.6175
+				]
+			},
+			"properties": {
+				"NAME": "Jaunjelgava",
+				"NAME_EN": "Jaunjelgava",
+				"NAME_IT": "Jaunjelgava",
+				"NAME_DE": "Jaunjelgava",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1616,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q835771"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.866388888,
+					56.4975
+				]
+			},
+			"properties": {
+				"NAME": "Jēkabpils",
+				"NAME_EN": "Jēkabpils",
+				"NAME_IT": "Jēkabpils",
+				"NAME_DE": "Jēkabpils",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 20685,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q191120"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.724444444,
+					56.652222222
+				]
+			},
+			"properties": {
+				"NAME": "Jelgava",
+				"NAME_EN": "Jelgava",
+				"NAME_IT": "Jelgava",
+				"NAME_DE": "Jelgava",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 54408,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q179830"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.722111111,
+					56.9665
+				]
+			},
+			"properties": {
+				"NAME": "Jūrmala",
+				"NAME_EN": "Jūrmala",
+				"NAME_IT": "Jūrmala",
+				"NAME_DE": "Jūrmala",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 52926,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q178382"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.776111111,
+					57.036388888
+				]
+			},
+			"properties": {
+				"NAME": "Kandava",
+				"NAME_EN": "Kandava",
+				"NAME_IT": "Kandava",
+				"NAME_DE": "Kandava",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3180,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q849152"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.673888888,
+					56.786666666
+				]
+			},
+			"properties": {
+				"NAME": "Kārsava",
+				"NAME_EN": "Kārsava",
+				"NAME_IT": "Kārsava",
+				"NAME_DE": "Kārsava",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1799,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q849147"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.721388888,
+					56.744444444
+				]
+			},
+			"properties": {
+				"NAME": "Ķegums",
+				"NAME_EN": "Ķegums",
+				"NAME_IT": "Ķegums",
+				"NAME_DE": "Ķegums",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2047,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q344621"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.23,
+					56.82662
+				]
+			},
+			"properties": {
+				"NAME": "Ķekava",
+				"NAME_EN": "Ķekava",
+				"NAME_IT": "Ķekava",
+				"NAME_DE": "Keckau",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 4967,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q344608"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.433333333,
+					56.65
+				]
+			},
+			"properties": {
+				"NAME": "Koknese",
+				"NAME_EN": "Koknese",
+				"NAME_IT": "Koknese",
+				"NAME_DE": "Koknese",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 2328,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q504681"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.164444444,
+					55.895555555
+				]
+			},
+			"properties": {
+				"NAME": "Krāslava",
+				"NAME_EN": "Krāslava",
+				"NAME_IT": "Krāslava",
+				"NAME_DE": "Krāslava",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6678,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q638592"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.97,
+					56.967222222
+				]
+			},
+			"properties": {
+				"NAME": "Kuldīga",
+				"NAME_EN": "Kuldīga",
+				"NAME_IT": "Kuldīga",
+				"NAME_DE": "Kuldīga",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 9855,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q155281"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.810555555,
+					56.7175
+				]
+			},
+			"properties": {
+				"NAME": "Lielvārde",
+				"NAME_EN": "Lielvārde",
+				"NAME_IT": "Lielvārde",
+				"NAME_DE": "Lielvārde",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5866,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q597346"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.011111111,
+					56.508333333
+				]
+			},
+			"properties": {
+				"NAME": "Liepāja",
+				"NAME_EN": "Liepāja",
+				"NAME_IT": "Liepāja",
+				"NAME_DE": "Libau",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 66746,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167668"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.039722222,
+					57.233611111
+				]
+			},
+			"properties": {
+				"NAME": "Līgatne",
+				"NAME_EN": "Līgatne",
+				"NAME_IT": "Līgatne",
+				"NAME_DE": "Līgatne",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1014,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q853761"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.713055555,
+					57.514722222
+				]
+			},
+			"properties": {
+				"NAME": "Limbaži",
+				"NAME_EN": "Limbaži",
+				"NAME_IT": "Limbaži",
+				"NAME_DE": "Limbaži",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6410,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q166684"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.176111111,
+					56.353888888
+				]
+			},
+			"properties": {
+				"NAME": "Līvāni",
+				"NAME_EN": "Līvāni",
+				"NAME_IT": "Līvāni",
+				"NAME_DE": "Līvāni",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6626,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q849156"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.722777777,
+					56.901666666
+				]
+			},
+			"properties": {
+				"NAME": "Lubāna",
+				"NAME_EN": "Lubāna",
+				"NAME_IT": "Lubāna",
+				"NAME_DE": "Lubahn",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1410,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q844477"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.721111111,
+					56.543888888
+				]
+			},
+			"properties": {
+				"NAME": "Ludza",
+				"NAME_EN": "Ludza",
+				"NAME_IT": "Ludza",
+				"NAME_DE": "Ludsen",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 7054,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q744259"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.220555555,
+					56.854166666
+				]
+			},
+			"properties": {
+				"NAME": "Madona",
+				"NAME_EN": "Madona",
+				"NAME_IT": "Madona",
+				"NAME_DE": "Madona",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6502,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q586048"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.0575,
+					56.906944444
+				]
+			},
+			"properties": {
+				"NAME": "Mārupe",
+				"NAME_EN": "Mārupe",
+				"NAME_IT": "Mārupe",
+				"NAME_DE": "Mārupe",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17058,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q987175"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.05,
+					57.866666666
+				]
+			},
+			"properties": {
+				"NAME": "Mazsalaca",
+				"NAME_EN": "Mazsalaca",
+				"NAME_IT": "Mazsalaca",
+				"NAME_DE": "Mazsalaca",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 1094,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q844468"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.604722222,
+					56.816944444
+				]
+			},
+			"properties": {
+				"NAME": "Ogre",
+				"NAME_EN": "Ogre",
+				"NAME_IT": "Ogre",
+				"NAME_DE": "Ogre",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22499,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q731915"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.936944444,
+					56.784444444
+				]
+			},
+			"properties": {
+				"NAME": "Olaine",
+				"NAME_EN": "Olaine",
+				"NAME_IT": "Olaine",
+				"NAME_DE": "Olaine",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 9580,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q249715"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.721666666,
+					56.616111111
+				]
+			},
+			"properties": {
+				"NAME": "Pļaviņas",
+				"NAME_EN": "Pļaviņas",
+				"NAME_IT": "Pļaviņas",
+				"NAME_DE": "Pļaviņas",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2835,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q567747"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.724722222,
+					56.294166666
+				]
+			},
+			"properties": {
+				"NAME": "Preiļi",
+				"NAME_EN": "Preiļi",
+				"NAME_IT": "Preiļi",
+				"NAME_DE": "Preiļi",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5724,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q858476"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.593333333,
+					56.447222222
+				]
+			},
+			"properties": {
+				"NAME": "Priekule",
+				"NAME_EN": "Priekule",
+				"NAME_IT": "Priekule",
+				"NAME_DE": "Priekule",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1786,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q908683"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.330833333,
+					56.506666666
+				]
+			},
+			"properties": {
+				"NAME": "Rēzekne",
+				"NAME_EN": "Rēzekne",
+				"NAME_IT": "Rēzekne",
+				"NAME_DE": "Rēzekne",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 25978,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q180379"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.106944444,
+					56.9475
+				]
+			},
+			"properties": {
+				"NAME": "Rīga",
+				"NAME_EN": "Riga",
+				"NAME_IT": "Riga",
+				"NAME_DE": "Riga",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 588911,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1773"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.326111111,
+					57.896944444
+				]
+			},
+			"properties": {
+				"NAME": "Rūjiena",
+				"NAME_EN": "Rūjiena",
+				"NAME_IT": "Rūjiena",
+				"NAME_DE": "Rūjiena",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2565,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q765976"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.572777777,
+					57.045833333
+				]
+			},
+			"properties": {
+				"NAME": "Sabile",
+				"NAME_EN": "Sabile",
+				"NAME_IT": "Sabile",
+				"NAME_DE": "Sabile",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1295,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q650475"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.358611111,
+					57.749444444
+				]
+			},
+			"properties": {
+				"NAME": "Salacgrīva",
+				"NAME_EN": "Salacgrīva",
+				"NAME_IT": "Salacgrīva",
+				"NAME_DE": "Salacgrīva",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2435,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q659665"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.35,
+					56.861388888
+				]
+			},
+			"properties": {
+				"NAME": "Salaspils",
+				"NAME_EN": "Salaspils",
+				"NAME_IT": "Salaspils",
+				"NAME_DE": "Salaspils",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17817,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q732986"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.493611111,
+					56.666666666
+				]
+			},
+			"properties": {
+				"NAME": "Saldus",
+				"NAME_EN": "Saldus",
+				"NAME_IT": "Saldus",
+				"NAME_DE": "Saldus",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 9492,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q744247"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.416388888,
+					57.263611111
+				]
+			},
+			"properties": {
+				"NAME": "Saulkrasti",
+				"NAME_EN": "Saulkrasti",
+				"NAME_IT": "Saulkrasti",
+				"NAME_DE": "Saulkrasti",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5311,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q840823"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.751111111,
+					57.650555555
+				]
+			},
+			"properties": {
+				"NAME": "Seda",
+				"NAME_EN": "Seda",
+				"NAME_IT": "Seda",
+				"NAME_DE": "Seda",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1121,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q578527"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.854444444,
+					57.153888888
+				]
+			},
+			"properties": {
+				"NAME": "Sigulda",
+				"NAME_EN": "Sigulda",
+				"NAME_IT": "Sigulda",
+				"NAME_DE": "Sigulda",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14784,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q465698"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.016388888,
+					56.675555555
+				]
+			},
+			"properties": {
+				"NAME": "Skrunda",
+				"NAME_EN": "Skrunda",
+				"NAME_IT": "Skrunda",
+				"NAME_DE": "Skrunda",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1704,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q267871"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.906388888,
+					57.424166666
+				]
+			},
+			"properties": {
+				"NAME": "Smiltene",
+				"NAME_EN": "Smiltene",
+				"NAME_IT": "Smiltene",
+				"NAME_DE": "Smiltene",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4994,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q840806"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.534722222,
+					57.145
+				]
+			},
+			"properties": {
+				"NAME": "Stende",
+				"NAME_EN": "Stende",
+				"NAME_IT": "Stende",
+				"NAME_DE": "Stende",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1483,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q909654"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.588888888,
+					57.244722222
+				]
+			},
+			"properties": {
+				"NAME": "Talsi",
+				"NAME_EN": "Talsi",
+				"NAME_IT": "Talsi",
+				"NAME_DE": "Talsi",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 8637,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q520405"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.15352,
+					56.9687895
+				]
+			},
+			"properties": {
+				"NAME": "Tukums",
+				"NAME_EN": "Tukums",
+				"NAME_IT": "Tukums",
+				"NAME_DE": "Tukums",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.000277778,
+				"ADM0CAP": 0,
+				"POP_MAX": 16033,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q636935"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.591944444,
+					57.370555555
+				]
+			},
+			"properties": {
+				"NAME": "Valdemārpils",
+				"NAME_EN": "Valdemārpils",
+				"NAME_IT": "Valdemārpils",
+				"NAME_DE": "Valdemārpils",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1122,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q846341"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.021388888,
+					57.775277777
+				]
+			},
+			"properties": {
+				"NAME": "Valka",
+				"NAME_EN": "Valka",
+				"NAME_IT": "Valka",
+				"NAME_DE": "Valka",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4562,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q323774"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.423055555,
+					57.538055555
+				]
+			},
+			"properties": {
+				"NAME": "Valmiera",
+				"NAME_EN": "Valmiera",
+				"NAME_IT": "Valmiera",
+				"NAME_DE": "Valmiera",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22746,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q108037"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.548611111,
+					57.091944444
+				]
+			},
+			"properties": {
+				"NAME": "Vangaži",
+				"NAME_EN": "Vangaži",
+				"NAME_IT": "Vangaži",
+				"NAME_DE": "Vangaži",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Rīga",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3049,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q849832"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.755,
+					56.607777777
+				]
+			},
+			"properties": {
+				"NAME": "Varakļāni",
+				"NAME_EN": "Varakļāni",
+				"NAME_IT": "Varakļāni",
+				"NAME_DE": "Varakļāni",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Vidzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1600,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q849141"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.564444444,
+					57.389722222
+				]
+			},
+			"properties": {
+				"NAME": "Ventspils",
+				"NAME_EN": "Ventspils",
+				"NAME_IT": "Ventspils",
+				"NAME_DE": "Ventspils",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Kurzeme",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 32479,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q104036"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.556944444,
+					56.345277777
+				]
+			},
+			"properties": {
+				"NAME": "Viesīte",
+				"NAME_EN": "Viesīte",
+				"NAME_IT": "Viesīte",
+				"NAME_DE": "Viesīte",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Zemgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1467,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q641220"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.672222222,
+					57.184166666
+				]
+			},
+			"properties": {
+				"NAME": "Viļaka",
+				"NAME_EN": "Viļaka",
+				"NAME_IT": "Viļaka",
+				"NAME_DE": "Viļaka",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1116,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q26441"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.925277777,
+					56.552777777
+				]
+			},
+			"properties": {
+				"NAME": "Viļāni",
+				"NAME_EN": "Viļāni",
+				"NAME_IT": "Viļāni",
+				"NAME_DE": "Viļāni",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2678,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q836513"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					28.1225,
+					56.385555555
+				]
+			},
+			"properties": {
+				"NAME": "Zilupe",
+				"NAME_EN": "Zilupe",
+				"NAME_IT": "Zilupe",
+				"NAME_DE": "Zilupe",
+				"ADM0NAME": "Latvia",
+				"ADM1NAME": "Latgale",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1163,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q203375"
+			}
+		}
+	]
+}

@@ -1,0 +1,393 @@
+{
+	"id": "estonia-towns-5k",
+	"name": "Estonia — Towns",
+	"country": "Estonia",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; Administrative and settlement units: Estonian Land and Spatial Development Board, snapshot 2026-09-02; unrestricted use with attribution; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/estonia.geojson",
+	"regionsMap": "estonia-counties",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "maardu",
+			"name": "Maardu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.016111111,
+				59.478055555
+			],
+			"bbox": [
+				25.016111111,
+				59.478055555,
+				25.016111111,
+				59.478055555
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tallinn",
+			"name": "Tallinn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.745,
+				59.437222222
+			],
+			"bbox": [
+				24.745,
+				59.437222222,
+				24.745,
+				59.437222222
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kohtla-jarve",
+			"name": "Kohtla-Järve",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.283333333,
+				59.4
+			],
+			"bbox": [
+				27.283333333,
+				59.4,
+				27.283333333,
+				59.4
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sillamae",
+			"name": "Sillamäe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.774166666,
+				59.393055555
+			],
+			"bbox": [
+				27.774166666,
+				59.393055555,
+				27.774166666,
+				59.393055555
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "narva",
+			"name": "Narva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.200555555,
+				59.379166666
+			],
+			"bbox": [
+				28.200555555,
+				59.379166666,
+				28.200555555,
+				59.379166666
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "johvi",
+			"name": "Jõhvi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.412222222,
+				59.3575
+			],
+			"bbox": [
+				27.412222222,
+				59.3575,
+				27.412222222,
+				59.3575
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "rakvere",
+			"name": "Rakvere",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.361111111,
+				59.350555555
+			],
+			"bbox": [
+				26.361111111,
+				59.350555555,
+				26.361111111,
+				59.350555555
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "saue",
+			"name": "Saue",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.562222222,
+				59.323055555
+			],
+			"bbox": [
+				24.562222222,
+				59.323055555,
+				24.562222222,
+				59.323055555
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "keila",
+			"name": "Keila",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.4225,
+				59.308611111
+			],
+			"bbox": [
+				24.4225,
+				59.308611111,
+				24.4225,
+				59.308611111
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tapa",
+			"name": "Tapa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.962777777,
+				59.264444444
+			],
+			"bbox": [
+				25.962777777,
+				59.264444444,
+				25.962777777,
+				59.264444444
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "haapsalu",
+			"name": "Haapsalu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.536944444,
+				58.946944444
+			],
+			"bbox": [
+				23.536944444,
+				58.946944444,
+				23.536944444,
+				58.946944444
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "paide",
+			"name": "Paide",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.566666666,
+				58.883333333
+			],
+			"bbox": [
+				25.566666666,
+				58.883333333,
+				25.566666666,
+				58.883333333
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "parnu",
+			"name": "Pärnu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.498888888,
+				58.384444444
+			],
+			"bbox": [
+				24.498888888,
+				58.384444444,
+				24.498888888,
+				58.384444444
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tartu",
+			"name": "Tartu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.7225,
+				58.38
+			],
+			"bbox": [
+				26.7225,
+				58.38,
+				26.7225,
+				58.38
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "viljandi",
+			"name": "Viljandi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.595555555,
+				58.363333333
+			],
+			"bbox": [
+				25.595555555,
+				58.363333333,
+				25.595555555,
+				58.363333333
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kuressaare",
+			"name": "Kuressaare",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.486111111,
+				58.253333333
+			],
+			"bbox": [
+				22.486111111,
+				58.253333333,
+				22.486111111,
+				58.253333333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "elva",
+			"name": "Elva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.415833333,
+				58.2275
+			],
+			"bbox": [
+				26.415833333,
+				58.2275,
+				26.415833333,
+				58.2275
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "polva",
+			"name": "Põlva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.055555555,
+				58.053611111
+			],
+			"bbox": [
+				27.055555555,
+				58.053611111,
+				27.055555555,
+				58.053611111
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "voru",
+			"name": "Võru",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.992777777,
+				57.848611111
+			],
+			"bbox": [
+				26.992777777,
+				57.848611111,
+				26.992777777,
+				57.848611111
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "valga",
+			"name": "Valga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.031111111,
+				57.776944444
+			],
+			"bbox": [
+				26.031111111,
+				57.776944444,
+				26.031111111,
+				57.776944444
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"maardu",
+		"tallinn",
+		"kohtla-jarve",
+		"sillamae",
+		"narva",
+		"johvi",
+		"rakvere",
+		"saue",
+		"keila",
+		"tapa",
+		"haapsalu",
+		"paide",
+		"parnu",
+		"tartu",
+		"viljandi",
+		"kuressaare",
+		"elva",
+		"polva",
+		"voru",
+		"valga"
+	]
+}

@@ -1,0 +1,932 @@
+{
+	"id": "congo-kinshasa-provinces",
+	"name": "Democratic Republic of the Congo — Provinces",
+	"country": "Democratic Republic of the Congo",
+	"attribution": "geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Coordinate corrections: GeoNames, CC BY 4.0, https://www.geonames.org; Musoma coordinate: Tanzania municipal strategic plan; data/scripts/placeCorrections.ts; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/boundaries/congo-kinshasa-gb-9469f09.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "nord-ubangi",
+			"name": "Nord-Ubangi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.26755,
+				4.017
+			],
+			"bbox": [
+				19.0194,
+				2.8843,
+				23.5157,
+				5.1497
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						19.5878,
+						4.6842
+					],
+					[
+						20.7345,
+						3.4277
+					],
+					[
+						22.3622,
+						3.5266
+					]
+				],
+				"aspect": 2.4
+			}
+		},
+		{
+			"id": "bas-uele",
+			"name": "Bas-Uélé",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.06015,
+				3.6582500000000002
+			],
+			"bbox": [
+				22.4334,
+				1.9382,
+				27.6869,
+				5.3783
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						23.7513,
+						3.5333
+					],
+					[
+						25.3208,
+						3.7235
+					],
+					[
+						26.8904,
+						3.6899
+					]
+				],
+				"aspect": 1.12
+			}
+		},
+		{
+			"id": "haut-uele",
+			"name": "Haut-Uélé",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.72475,
+				3.33925
+			],
+			"bbox": [
+				26.8716,
+				1.4699,
+				30.5779,
+				5.2086
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						27.4587,
+						3.7215
+					],
+					[
+						28.7223,
+						2.9327
+					],
+					[
+						29.986,
+						3.3551
+					]
+				],
+				"aspect": 1.2
+			}
+		},
+		{
+			"id": "sud-ubangi",
+			"name": "Sud-Ubangi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.489150000000002,
+				3.3278
+			],
+			"bbox": [
+				18.0719,
+				1.8884,
+				20.9064,
+				4.7672
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						18.5771,
+						3.1249
+					],
+					[
+						19.3117,
+						3.456
+					],
+					[
+						20.0463,
+						3.0831
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "ituri",
+			"name": "Ituri",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.33285,
+				2.1319
+			],
+			"bbox": [
+				27.3883,
+				0.5827,
+				31.2774,
+				3.6811
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						28.1438,
+						1.2373
+					],
+					[
+						29.7609,
+						1.336
+					],
+					[
+						30.6821,
+						2.6393
+					]
+				],
+				"aspect": 2.15
+			}
+		},
+		{
+			"id": "mongala",
+			"name": "Mongala",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.3948,
+				2.0294499999999998
+			],
+			"bbox": [
+				19.2101,
+				0.7256,
+				23.5795,
+				3.3333
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						20.3686,
+						1.8148
+					],
+					[
+						21.7208,
+						1.9979
+					],
+					[
+						22.9302,
+						2.6648
+					]
+				],
+				"aspect": 2.3
+			}
+		},
+		{
+			"id": "tshopo",
+			"name": "Tshopo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.2214,
+				0.20775
+			],
+			"bbox": [
+				22.2607,
+				-1.981,
+				28.1821,
+				2.3965
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						23.2101,
+						0.8843
+					],
+					[
+						25.3138,
+						-0.2015
+					],
+					[
+						27.4176,
+						0.7323
+					]
+				],
+				"aspect": 1.5
+			}
+		},
+		{
+			"id": "equateur",
+			"name": "Équateur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.65485,
+				0.06285000000000007
+			],
+			"bbox": [
+				16.5281,
+				-2.0006,
+				20.7816,
+				2.1263
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						17.9471,
+						0.0112
+					],
+					[
+						19.0509,
+						0.4968
+					],
+					[
+						20.1547,
+						0.5106
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "tshuapa",
+			"name": "Tshuapa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.9362,
+				-0.45355
+			],
+			"bbox": [
+				19.46,
+				-2.6663,
+				24.4124,
+				1.7592
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						20.5054,
+						-0.9171
+					],
+					[
+						21.8587,
+						-0.2004
+					],
+					[
+						23.212,
+						-0.7828
+					]
+				],
+				"aspect": 0.82
+			}
+		},
+		{
+			"id": "nord-kivu",
+			"name": "Nord-Kivu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.59675,
+				-0.5416000000000001
+			],
+			"bbox": [
+				27.2062,
+				-2.0474,
+				29.9873,
+				0.9642
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						27.9602,
+						-1.6074
+					],
+					[
+						28.8908,
+						-0.7759
+					],
+					[
+						29.0963,
+						0.4964
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "maniema",
+			"name": "Maniema",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.6353,
+				-2.4955
+			],
+			"bbox": [
+				24.4708,
+				-5,
+				28.7998,
+				0.009
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "mai-ndombe",
+			"name": "Mai-Ndombe",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.45,
+				-2.5597
+			],
+			"bbox": [
+				15.8947,
+				-4.3827,
+				21.0053,
+				-0.7367
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.58,
+						-2.7192
+					],
+					[
+						18.4702,
+						-1.9238
+					],
+					[
+						20.3326,
+						-2.9293
+					]
+				],
+				"aspect": 1.68
+			}
+		},
+		{
+			"id": "sud-kivu",
+			"name": "Sud-Kivu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.03595,
+				-3.29705
+			],
+			"bbox": [
+				26.8106,
+				-5.0103,
+				29.2613,
+				-1.5838
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						27.2775,
+						-2.9092
+					],
+					[
+						28.111,
+						-2.8295
+					],
+					[
+						28.9445,
+						-3.5488
+					]
+				],
+				"aspect": 0.76
+			}
+		},
+		{
+			"id": "sankuru",
+			"name": "Sankuru",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.40885,
+				-3.77345
+			],
+			"bbox": [
+				21.701,
+				-5.853,
+				25.1167,
+				-1.6939
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						22.3638,
+						-2.9728
+					],
+					[
+						23.4731,
+						-3.8612
+					],
+					[
+						24.5824,
+						-3.6945
+					]
+				],
+				"aspect": 0.7
+			}
+		},
+		{
+			"id": "kinshasa",
+			"name": "Kinshasa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.83055,
+				-4.4788
+			],
+			"bbox": [
+				15.1282,
+				-5.03,
+				16.5329,
+				-3.9276
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						15.3562,
+						-4.362
+					],
+					[
+						15.875,
+						-4.5273
+					],
+					[
+						16.3938,
+						-4.4237
+					]
+				],
+				"aspect": 1.51
+			}
+		},
+		{
+			"id": "kwilu",
+			"name": "Kwilu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.3435,
+				-4.81075
+			],
+			"bbox": [
+				16.4841,
+				-6.4011,
+				20.2029,
+				-3.2204
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						17.468,
+						-3.9046
+					],
+					[
+						18.6276,
+						-4.7594
+					],
+					[
+						19.7871,
+						-5.6133
+					]
+				],
+				"aspect": 1.34
+			}
+		},
+		{
+			"id": "kasai",
+			"name": "Kasaï",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.106949999999998,
+				-4.8804
+			],
+			"bbox": [
+				19.6755,
+				-7.2833,
+				22.5384,
+				-2.4775
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						20.6777,
+						-6.7948
+					],
+					[
+						21.1652,
+						-4.9359
+					],
+					[
+						21.5281,
+						-3.0436
+					]
+				],
+				"aspect": 2.31
+			}
+		},
+		{
+			"id": "kongo-central",
+			"name": "Kongo-Central",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.2314,
+				-5.139950000000001
+			],
+			"bbox": [
+				12.201,
+				-6.0015,
+				16.2618,
+				-4.2784
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						12.8611,
+						-5.3561
+					],
+					[
+						14.4154,
+						-5.0609
+					],
+					[
+						15.9808,
+						-5.3854
+					]
+				],
+				"aspect": 2.79
+			}
+		},
+		{
+			"id": "kasai-central",
+			"name": "Kasaï-Central",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.5915,
+				-6.0603
+			],
+			"bbox": [
+				21.419,
+				-7.9187,
+				23.764,
+				-4.2019
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						22.4838,
+						-7.5238
+					],
+					[
+						22.2254,
+						-6.0885
+					],
+					[
+						22.7888,
+						-4.7136
+					]
+				],
+				"aspect": 1.98
+			}
+		},
+		{
+			"id": "kasai-oriental",
+			"name": "Kasaï-Oriental",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.55395,
+				-6.20925
+			],
+			"bbox": [
+				22.9325,
+				-6.7818,
+				24.1754,
+				-5.6367
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						23.0897,
+						-6.0829
+					],
+					[
+						23.4969,
+						-6.3017
+					],
+					[
+						23.904,
+						-6.1319
+					]
+				],
+				"aspect": 1.01
+			}
+		},
+		{
+			"id": "kwango",
+			"name": "Kwango",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.031100000000002,
+				-6.21145
+			],
+			"bbox": [
+				16.096,
+				-8.1308,
+				19.9662,
+				-4.2921
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.7752,
+						-4.9521
+					],
+					[
+						17.3145,
+						-6.7545
+					],
+					[
+						19.0729,
+						-7.4646
+					]
+				],
+				"aspect": 1.92
+			}
+		},
+		{
+			"id": "lomami",
+			"name": "Lomami",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.6475,
+				-6.40535
+			],
+			"bbox": [
+				23.0167,
+				-7.997,
+				26.2783,
+				-4.8137
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						23.505,
+						-7.4458
+					],
+					[
+						24.4284,
+						-6.1344
+					],
+					[
+						25.8239,
+						-5.329
+					]
+				],
+				"aspect": 3
+			}
+		},
+		{
+			"id": "tanganyika",
+			"name": "Tanganyika",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.26665,
+				-6.6978
+			],
+			"bbox": [
+				25.9415,
+				-8.3956,
+				30.5918,
+				-5
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						26.4397,
+						-5.7062
+					],
+					[
+						28.3809,
+						-6.3733
+					],
+					[
+						29.8712,
+						-7.7543
+					]
+				],
+				"aspect": 1.8
+			}
+		},
+		{
+			"id": "haut-lomami",
+			"name": "Haut-Lomami",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.7468,
+				-8.097750000000001
+			],
+			"bbox": [
+				23.6295,
+				-10.0347,
+				27.8641,
+				-6.1608
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						24.2681,
+						-8.3603
+					],
+					[
+						25.4834,
+						-8.1434
+					],
+					[
+						26.6987,
+						-8.1359
+					]
+				],
+				"aspect": 0.81
+			}
+		},
+		{
+			"id": "lualaba",
+			"name": "Lualaba",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.45075,
+				-9.68295
+			],
+			"bbox": [
+				21.7515,
+				-11.7083,
+				27.15,
+				-7.6576
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						22.2814,
+						-8.8867
+					],
+					[
+						23.7219,
+						-10.7562
+					],
+					[
+						26.0769,
+						-10.8175
+					]
+				],
+				"aspect": 2.3
+			}
+		},
+		{
+			"id": "haut-katanga",
+			"name": "Haut-Katanga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.653550000000003,
+				-10.51965
+			],
+			"bbox": [
+				25.4923,
+				-13.459,
+				29.8148,
+				-7.5803
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						28.2715,
+						-8.4025
+					],
+					[
+						25.9573,
+						-10.9001
+					],
+					[
+						29.175,
+						-12.9086
+					]
+				],
+				"aspect": 2.41
+			}
+		}
+	],
+	"tourOrder": [
+		"nord-ubangi",
+		"bas-uele",
+		"haut-uele",
+		"sud-ubangi",
+		"ituri",
+		"mongala",
+		"tshopo",
+		"equateur",
+		"tshuapa",
+		"nord-kivu",
+		"maniema",
+		"mai-ndombe",
+		"sud-kivu",
+		"sankuru",
+		"kinshasa",
+		"kwilu",
+		"kasai",
+		"kongo-central",
+		"kasai-central",
+		"kasai-oriental",
+		"kwango",
+		"lomami",
+		"tanganyika",
+		"haut-lomami",
+		"lualaba",
+		"haut-katanga"
+	]
+}

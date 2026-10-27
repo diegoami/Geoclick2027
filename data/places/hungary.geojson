@@ -1,0 +1,3248 @@
+{
+	"type": "FeatureCollection",
+	"source": "Wikidata (CC0)",
+	"fetchedAt": "2026-10-26T12:33:21.491Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"HUN\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2011-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"hu\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  OPTIONAL {\n    ?item wdt:P131* ?region .\n    ?region wdt:P31 wd:Q188604; wdt:P17 ?country;\n      rdfs:label ?regionName . FILTER(LANG(?regionName)=\"hu\")\n  }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.005277777,
+					47.189166666
+				]
+			},
+			"properties": {
+				"NAME": "Abony",
+				"NAME_EN": "Abony",
+				"NAME_IT": "Abony",
+				"NAME_DE": "Abony",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14632,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q480421"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.552222222,
+					47.100555555
+				]
+			},
+			"properties": {
+				"NAME": "Ajka",
+				"NAME_EN": "Ajka",
+				"NAME_IT": "Ajka",
+				"NAME_DE": "Ajka",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Veszprém megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 25806,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q206872"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.606666666,
+					47.24
+				]
+			},
+			"properties": {
+				"NAME": "Albertirsa",
+				"NAME_EN": "Albertirsa",
+				"NAME_IT": "Albertirsa",
+				"NAME_DE": "Albertirsa",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14151,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q578823"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.953611111,
+					46.183333333
+				]
+			},
+			"properties": {
+				"NAME": "Baja",
+				"NAME_EN": "Baja",
+				"NAME_IT": "Baja",
+				"NAME_DE": "Baja",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Bács-Kiskun megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 31997,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q203344"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.293722222,
+					48.071194444
+				]
+			},
+			"properties": {
+				"NAME": "Balassagyarmat",
+				"NAME_EN": "Balassagyarmat",
+				"NAME_IT": "Balassagyarmat",
+				"NAME_DE": "Balassagyarmat",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Nógrád megye",
+				"coordinatePrecision": 0.000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13530,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q789233"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.021944444,
+					47.029166666
+				]
+			},
+			"properties": {
+				"NAME": "Balatonalmádi",
+				"NAME_EN": "Balatonalmádi",
+				"NAME_IT": "Balatonalmádi",
+				"NAME_DE": "Balatonalmádi",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Veszprém megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10067,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q789256"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.883333333,
+					46.95
+				]
+			},
+			"properties": {
+				"NAME": "Balatonfüred",
+				"NAME_EN": "Balatonfüred",
+				"NAME_IT": "Balatonfüred",
+				"NAME_DE": "Balatonfüred",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Veszprém megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 12838,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q680743"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.35,
+					47.616666666
+				]
+			},
+			"properties": {
+				"NAME": "Balmazújváros",
+				"NAME_EN": "Balmazújváros",
+				"NAME_IT": "Balmazújváros",
+				"NAME_DE": "Balmazújváros",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Hajdú-Bihar megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 17113,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q789510"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.828611111,
+					47.989166666
+				]
+			},
+			"properties": {
+				"NAME": "Bátonyterenye",
+				"NAME_EN": "Bátonyterenye",
+				"NAME_IT": "Bátonyterenye",
+				"NAME_DE": "Bátonyterenye",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Nógrád megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10930,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q853746"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.125,
+					46.776944444
+				]
+			},
+			"properties": {
+				"NAME": "Békés",
+				"NAME_EN": "Békés",
+				"NAME_IT": "Békés",
+				"NAME_DE": "Békés",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Békés megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17194,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q740810"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.083333333,
+					46.683333333
+				]
+			},
+			"properties": {
+				"NAME": "Békéscsaba",
+				"NAME_EN": "Békéscsaba",
+				"NAME_IT": "Békéscsaba",
+				"NAME_DE": "Békéscsaba",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Békés megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 53433,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q178878"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.55,
+					47.216666666
+				]
+			},
+			"properties": {
+				"NAME": "Berettyóújfalu",
+				"NAME_EN": "Berettyóújfalu",
+				"NAME_IT": "Berettyóújfalu",
+				"NAME_DE": "Berettyóújfalu",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Hajdú-Bihar megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13807,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q793405"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.823611111,
+					47.474166666
+				]
+			},
+			"properties": {
+				"NAME": "Biatorbágy",
+				"NAME_EN": "Biatorbágy",
+				"NAME_IT": "Biatorbágy",
+				"NAME_DE": "Biatorbágy",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15680,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q736635"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.63625,
+					47.490738888
+				]
+			},
+			"properties": {
+				"NAME": "Bicske",
+				"NAME_EN": "Bicske",
+				"NAME_IT": "Bicske",
+				"NAME_DE": "Bicske",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Fejér megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11212,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3599"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.53,
+					46.3
+				]
+			},
+			"properties": {
+				"NAME": "Bonyhád",
+				"NAME_EN": "Bonyhád",
+				"NAME_IT": "Bonyhád",
+				"NAME_DE": "Bonyhád",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Tolna megye",
+				"coordinatePrecision": 0.01,
+				"ADM0CAP": 0,
+				"POP_MAX": 11603,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q834567"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.04596,
+					47.62153
+				]
+			},
+			"properties": {
+				"NAME": "Budakalász",
+				"NAME_EN": "Budakalász",
+				"NAME_IT": "Budakalász",
+				"NAME_DE": "Budakalász",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 12193,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q850935"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.93,
+					47.511111111
+				]
+			},
+			"properties": {
+				"NAME": "Budakeszi",
+				"NAME_EN": "Budakeszi",
+				"NAME_IT": "Budakeszi",
+				"NAME_DE": "Budakeszi",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15955,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842912"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.957777777,
+					47.460555555
+				]
+			},
+			"properties": {
+				"NAME": "Budaörs",
+				"NAME_EN": "Budaörs",
+				"NAME_IT": "Budaörs",
+				"NAME_DE": "Budaörs",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29237,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q755691"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.040833333,
+					47.498333333
+				]
+			},
+			"properties": {
+				"NAME": "Budapest",
+				"NAME_EN": "Budapest",
+				"NAME_IT": "Budapest",
+				"NAME_DE": "Budapest",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Budapest",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 1675777,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1781"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.797751,
+					47.171645
+				]
+			},
+			"properties": {
+				"NAME": "Cegléd",
+				"NAME_EN": "Cegléd",
+				"NAME_IT": "Cegléd",
+				"NAME_DE": "Cegléd",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 35959,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q214948"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.140277777,
+					46.711111111
+				]
+			},
+			"properties": {
+				"NAME": "Csongrád",
+				"NAME_EN": "Csongrád",
+				"NAME_IT": "Csongrád",
+				"NAME_DE": "Csongrád",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Csongrád-Csanád megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15216,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q649214"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.316666666,
+					47.183333333
+				]
+			},
+			"properties": {
+				"NAME": "Dabas",
+				"NAME_EN": "Dabas",
+				"NAME_IT": "Dabas",
+				"NAME_DE": "Dabas",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17826,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q854940"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.639166666,
+					47.53
+				]
+			},
+			"properties": {
+				"NAME": "Debrecen",
+				"NAME_EN": "Debrecen",
+				"NAME_IT": "Debrecen",
+				"NAME_DE": "Debrecen",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Hajdú-Bihar megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 202331,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q79880"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.945833333,
+					47.404166666
+				]
+			},
+			"properties": {
+				"NAME": "Diósd",
+				"NAME_EN": "Diósd",
+				"NAME_IT": "Diósd",
+				"NAME_DE": "Diósd",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11780,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q126670"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.131007,
+					46.376888
+				]
+			},
+			"properties": {
+				"NAME": "Dombóvár",
+				"NAME_EN": "Dombóvár",
+				"NAME_IT": "Dombóvár",
+				"NAME_DE": "Dombóvár",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Tolna megye",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 16512,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q633789"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.729166666,
+					47.719444444
+				]
+			},
+			"properties": {
+				"NAME": "Dorog",
+				"NAME_EN": "Dorog",
+				"NAME_IT": "Dorog",
+				"NAME_DE": "Dorog",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Komárom-Esztergom megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11226,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q748797"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.084444444,
+					47.355277777
+				]
+			},
+			"properties": {
+				"NAME": "Dunaharaszti",
+				"NAME_EN": "Dunaharaszti",
+				"NAME_IT": "Dunaharaszti",
+				"NAME_DE": "Dunaharaszti",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 23772,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q854933"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.138055555,
+					47.629722222
+				]
+			},
+			"properties": {
+				"NAME": "Dunakeszi",
+				"NAME_EN": "Dunakeszi",
+				"NAME_IT": "Dunakeszi",
+				"NAME_DE": "Dunakeszi",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 42328,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q547479"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.916666666,
+					46.983333333
+				]
+			},
+			"properties": {
+				"NAME": "Dunaújváros",
+				"NAME_EN": "Dunaújváros",
+				"NAME_IT": "Dunaújváros",
+				"NAME_DE": "Dunaújváros",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Fejér megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 40818,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q187812"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.374722222,
+					47.898888888
+				]
+			},
+			"properties": {
+				"NAME": "Eger",
+				"NAME_EN": "Eger",
+				"NAME_IT": "Eger",
+				"NAME_DE": "Eger",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Heves megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 47921,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167109"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.921944444,
+					47.378333333
+				]
+			},
+			"properties": {
+				"NAME": "Érd",
+				"NAME_EN": "Érd",
+				"NAME_IT": "Érd",
+				"NAME_DE": "Érd",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 71613,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q193050"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.740277777,
+					47.785555555
+				]
+			},
+			"properties": {
+				"NAME": "Esztergom",
+				"NAME_EN": "Esztergom",
+				"NAME_IT": "Esztergom",
+				"NAME_DE": "Esztergom",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Komárom-Esztergom megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28230,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q171353"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.192777777,
+					47.609166666
+				]
+			},
+			"properties": {
+				"NAME": "Fót",
+				"NAME_EN": "Fót",
+				"NAME_IT": "Fót",
+				"NAME_DE": "Fót",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 20865,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q830652"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.609061111,
+					47.197311111
+				]
+			},
+			"properties": {
+				"NAME": "Gárdony",
+				"NAME_EN": "Gárdony",
+				"NAME_IT": "Gárdony",
+				"NAME_DE": "Gárdony",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Fejér megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13795,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q642031"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.134444444,
+					47.690555555
+				]
+			},
+			"properties": {
+				"NAME": "Göd",
+				"NAME_EN": "Göd",
+				"NAME_IT": "Göd",
+				"NAME_DE": "Göd",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21826,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q604258"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.366666666,
+					47.6
+				]
+			},
+			"properties": {
+				"NAME": "Gödöllő",
+				"NAME_EN": "Gödöllő",
+				"NAME_IT": "Gödöllő",
+				"NAME_DE": "Gödöllő",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 32357,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q209988"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.213611111,
+					47.382222222
+				]
+			},
+			"properties": {
+				"NAME": "Gyál",
+				"NAME_EN": "Gyál",
+				"NAME_IT": "Gyál",
+				"NAME_DE": "Gyál",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24078,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842908"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.823333333,
+					46.936111111
+				]
+			},
+			"properties": {
+				"NAME": "Gyomaendrőd",
+				"NAME_EN": "Gyomaendrőd",
+				"NAME_IT": "Gyomaendrőd",
+				"NAME_DE": "Gyomaendrőd",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Békés megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11715,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q732300"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.394503,
+					47.4223375
+				]
+			},
+			"properties": {
+				"NAME": "Gyömrő",
+				"NAME_EN": "Gyömrő",
+				"NAME_IT": "Gyömrő",
+				"NAME_DE": "Gyömrő",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 20403,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q854906"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.933333333,
+					47.783333333
+				]
+			},
+			"properties": {
+				"NAME": "Gyöngyös",
+				"NAME_EN": "Gyöngyös",
+				"NAME_IT": "Gyöngyös",
+				"NAME_DE": "Gyöngyös",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Heves megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26925,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q209983"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.634444444,
+					47.684166666
+				]
+			},
+			"properties": {
+				"NAME": "Győr",
+				"NAME_EN": "Győr",
+				"NAME_IT": "Győr",
+				"NAME_DE": "Győr",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Győr-Moson-Sopron megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 128225,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q134494"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.282777777,
+					46.65
+				]
+			},
+			"properties": {
+				"NAME": "Gyula",
+				"NAME_EN": "Gyula",
+				"NAME_IT": "Gyula",
+				"NAME_DE": "Gyula",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Békés megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 27227,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q214938"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.516666666,
+					47.666666666
+				]
+			},
+			"properties": {
+				"NAME": "Hajdúböszörmény",
+				"NAME_EN": "Hajdúböszörmény",
+				"NAME_IT": "Hajdúböszörmény",
+				"NAME_DE": "Hajdúböszörmény",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Hajdú-Bihar megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28943,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q679224"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.666666666,
+					47.683333333
+				]
+			},
+			"properties": {
+				"NAME": "Hajdúhadház",
+				"NAME_EN": "Hajdúhadház",
+				"NAME_IT": "Hajdúhadház",
+				"NAME_DE": "Hajdúhadház",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Hajdú-Bihar megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 13002,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q911530"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.433333333,
+					47.85
+				]
+			},
+			"properties": {
+				"NAME": "Hajdúnánás",
+				"NAME_EN": "Hajdúnánás",
+				"NAME_IT": "Hajdúnánás",
+				"NAME_DE": "Hajdúnánás",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Hajdú-Bihar megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 15949,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q739304"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.766666666,
+					47.6
+				]
+			},
+			"properties": {
+				"NAME": "Hajdúsámson",
+				"NAME_EN": "Hajdúsámson",
+				"NAME_IT": "Hajdúsámson",
+				"NAME_DE": "Hajdúsámson",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Hajdú-Bihar megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 14302,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q911650"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.383333333,
+					47.45
+				]
+			},
+			"properties": {
+				"NAME": "Hajdúszoboszló",
+				"NAME_EN": "Hajdúszoboszló",
+				"NAME_IT": "Hajdúszoboszló",
+				"NAME_DE": "Hajdúszoboszló",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Hajdú-Bihar megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 24159,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q830404"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.987777777,
+					47.360833333
+				]
+			},
+			"properties": {
+				"NAME": "Halásztelek",
+				"NAME_EN": "Halásztelek",
+				"NAME_IT": "Halásztelek",
+				"NAME_DE": "Halásztelek",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12186,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q378591"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.669722222,
+					47.668055555
+				]
+			},
+			"properties": {
+				"NAME": "Hatvan",
+				"NAME_EN": "Hatvan",
+				"NAME_IT": "Hatvan",
+				"NAME_DE": "Hatvan",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Heves megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19353,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q629849"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.318888888,
+					46.430277777
+				]
+			},
+			"properties": {
+				"NAME": "Hódmezővásárhely",
+				"NAME_EN": "Hódmezővásárhely",
+				"NAME_IT": "Hódmezővásárhely",
+				"NAME_DE": "Hódmezővásárhely",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Csongrád-Csanád megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 41249,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q124375"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.4,
+					47.533333333
+				]
+			},
+			"properties": {
+				"NAME": "Isaszeg",
+				"NAME_EN": "Isaszeg",
+				"NAME_IT": "Isaszeg",
+				"NAME_DE": "Isaszeg",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 11482,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q515791"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.916666666,
+					47.5
+				]
+			},
+			"properties": {
+				"NAME": "Jászberény",
+				"NAME_EN": "Jászberény",
+				"NAME_IT": "Jászberény",
+				"NAME_DE": "Jászberény",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Jász-Nagykun-Szolnok megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24854,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q281371"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.985555555,
+					46.533333333
+				]
+			},
+			"properties": {
+				"NAME": "Kalocsa",
+				"NAME_EN": "Kalocsa",
+				"NAME_IT": "Kalocsa",
+				"NAME_DE": "Kalocsa",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Bács-Kiskun megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14020,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q679249"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.783333333,
+					46.366666666
+				]
+			},
+			"properties": {
+				"NAME": "Kaposvár",
+				"NAME_EN": "Kaposvár",
+				"NAME_IT": "Kaposvár",
+				"NAME_DE": "Kaposvár",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Somogy megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 57454,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q184998"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.933333333,
+					47.316666666
+				]
+			},
+			"properties": {
+				"NAME": "Karcag",
+				"NAME_EN": "Karcag",
+				"NAME_IT": "Karcag",
+				"NAME_DE": "Karcag",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Jász-Nagykun-Szolnok megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 17737,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q756273"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.645555555,
+					48.253055555
+				]
+			},
+			"properties": {
+				"NAME": "Kazincbarcika",
+				"NAME_EN": "Kazincbarcika",
+				"NAME_IT": "Kazincbarcika",
+				"NAME_DE": "Kazincbarcika",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Borsod-Abaúj-Zemplén megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 23137,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q214942"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.691666666,
+					46.9075
+				]
+			},
+			"properties": {
+				"NAME": "Kecskemét",
+				"NAME_EN": "Kecskemét",
+				"NAME_IT": "Kecskemét",
+				"NAME_DE": "Kecskemét",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Bács-Kiskun megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 108106,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q171357"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.276293,
+					47.566341
+				]
+			},
+			"properties": {
+				"NAME": "Kerepes",
+				"NAME_EN": "Kerepes",
+				"NAME_IT": "Kerepes",
+				"NAME_DE": "Kerepes",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 11262,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q374203"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.24628,
+					46.7675
+				]
+			},
+			"properties": {
+				"NAME": "Keszthely",
+				"NAME_EN": "Keszthely",
+				"NAME_IT": "Keszthely",
+				"NAME_DE": "Keszthely",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Zala megye",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 17207,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q526335"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.283611111,
+					46.620277777
+				]
+			},
+			"properties": {
+				"NAME": "Kiskőrös",
+				"NAME_EN": "Kiskőrös",
+				"NAME_IT": "Kiskőrös",
+				"NAME_DE": "Kiskőrös",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Bács-Kiskun megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13091,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q646850"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.85,
+					46.705
+				]
+			},
+			"properties": {
+				"NAME": "Kiskunfélegyháza",
+				"NAME_EN": "Kiskunfélegyháza",
+				"NAME_IT": "Kiskunfélegyháza",
+				"NAME_DE": "Kiskunfélegyháza",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Bács-Kiskun megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28043,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q478038"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.488333333,
+					46.431944444
+				]
+			},
+			"properties": {
+				"NAME": "Kiskunhalas",
+				"NAME_EN": "Kiskunhalas",
+				"NAME_IT": "Kiskunhalas",
+				"NAME_DE": "Kiskunhalas",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Bács-Kiskun megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 25366,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q329775"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.736666666,
+					46.492222222
+				]
+			},
+			"properties": {
+				"NAME": "Kiskunmajsa",
+				"NAME_EN": "Kiskunmajsa",
+				"NAME_IT": "Kiskunmajsa",
+				"NAME_DE": "Kiskunmajsa",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Bács-Kiskun megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10630,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q629471"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.263333333,
+					47.547777777
+				]
+			},
+			"properties": {
+				"NAME": "Kistarcsa",
+				"NAME_EN": "Kistarcsa",
+				"NAME_IT": "Kistarcsa",
+				"NAME_DE": "Kistarcsa",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13527,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q512073"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.084444444,
+					48.226388888
+				]
+			},
+			"properties": {
+				"NAME": "Kisvárda",
+				"NAME_EN": "Kisvárda",
+				"NAME_IT": "Kisvárda",
+				"NAME_DE": "Kisvárda",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Szabolcs-Szatmár-Bereg megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14437,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q674311"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.121666666,
+					47.74
+				]
+			},
+			"properties": {
+				"NAME": "Komárom",
+				"NAME_EN": "Komárom",
+				"NAME_IT": "Komárom",
+				"NAME_DE": "Komárom",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Komárom-Esztergom megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19585,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q625154"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.261111111,
+					46.191111111
+				]
+			},
+			"properties": {
+				"NAME": "Komló",
+				"NAME_EN": "Komló",
+				"NAME_IT": "Komló",
+				"NAME_DE": "Komló",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Baranya megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21425,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q430207"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.540727,
+					47.388794
+				]
+			},
+			"properties": {
+				"NAME": "Kőszeg",
+				"NAME_EN": "Kőszeg",
+				"NAME_IT": "Kőszeg",
+				"NAME_DE": "Kőszeg",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Vas megye",
+				"coordinatePrecision": 1e-8,
+				"ADM0CAP": 0,
+				"POP_MAX": 11500,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q613813"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.5575,
+					47.026388888
+				]
+			},
+			"properties": {
+				"NAME": "Lajosmizse",
+				"NAME_EN": "Lajosmizse",
+				"NAME_IT": "Lajosmizse",
+				"NAME_DE": "Lajosmizse",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Bács-Kiskun megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11631,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q843025"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.3525,
+					47.443888888
+				]
+			},
+			"properties": {
+				"NAME": "Maglód",
+				"NAME_EN": "Maglód",
+				"NAME_IT": "Maglód",
+				"NAME_DE": "Maglód",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12260,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q283023"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.478888888,
+					46.22
+				]
+			},
+			"properties": {
+				"NAME": "Makó",
+				"NAME_EN": "Makó",
+				"NAME_IT": "Makó",
+				"NAME_DE": "Makó",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Csongrád-Csanád megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21699,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q240504"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.406388888,
+					46.583055555
+				]
+			},
+			"properties": {
+				"NAME": "Marcali",
+				"NAME_EN": "Marcali",
+				"NAME_IT": "Marcali",
+				"NAME_DE": "Marcali",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Somogy megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10351,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q843009"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.316666666,
+					47.943055555
+				]
+			},
+			"properties": {
+				"NAME": "Mátészalka",
+				"NAME_EN": "Mátészalka",
+				"NAME_IT": "Mátészalka",
+				"NAME_DE": "Mátészalka",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Szabolcs-Szatmár-Bereg megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14688,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842976"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.564722222,
+					47.806666666
+				]
+			},
+			"properties": {
+				"NAME": "Mezőkövesd",
+				"NAME_EN": "Mezőkövesd",
+				"NAME_IT": "Mezőkövesd",
+				"NAME_DE": "Mezőkövesd",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Borsod-Abaúj-Zemplén megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15221,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q933638"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.618055555,
+					47.004166666
+				]
+			},
+			"properties": {
+				"NAME": "Mezőtúr",
+				"NAME_EN": "Mezőtúr",
+				"NAME_IT": "Mezőtúr",
+				"NAME_DE": "Mezőtúr",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Jász-Nagykun-Szolnok megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15053,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q855052"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.783333333,
+					48.1
+				]
+			},
+			"properties": {
+				"NAME": "Miskolc",
+				"NAME_EN": "Miskolc",
+				"NAME_IT": "Miskolc",
+				"NAME_DE": "Miskolc",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Borsod-Abaúj-Zemplén megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 139246,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q102397"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.679722222,
+					45.995833333
+				]
+			},
+			"properties": {
+				"NAME": "Mohács",
+				"NAME_EN": "Mohács",
+				"NAME_IT": "Mohács",
+				"NAME_DE": "Mohács",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Baranya megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 16924,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q320798"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.448888888,
+					47.3475
+				]
+			},
+			"properties": {
+				"NAME": "Monor",
+				"NAME_EN": "Monor",
+				"NAME_IT": "Monor",
+				"NAME_DE": "Monor",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19378,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q749320"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.208611111,
+					47.371666666
+				]
+			},
+			"properties": {
+				"NAME": "Mór",
+				"NAME_EN": "Mór",
+				"NAME_IT": "Mór",
+				"NAME_DE": "Mór",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Fejér megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13027,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q680963"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.266666666,
+					47.866666666
+				]
+			},
+			"properties": {
+				"NAME": "Mosonmagyaróvár",
+				"NAME_EN": "Mosonmagyaróvár",
+				"NAME_IT": "Mosonmagyaróvár",
+				"NAME_DE": "Mosonmagyaróvár",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Győr-Moson-Sopron megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 33621,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q207406"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.9975,
+					46.455833333
+				]
+			},
+			"properties": {
+				"NAME": "Nagykanizsa",
+				"NAME_EN": "Nagykanizsa",
+				"NAME_IT": "Nagykanizsa",
+				"NAME_DE": "Nagykanizsa",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Zala megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 41497,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q14424"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.741388888,
+					47.417777777
+				]
+			},
+			"properties": {
+				"NAME": "Nagykáta",
+				"NAME_EN": "Nagykáta",
+				"NAME_IT": "Nagykáta",
+				"NAME_DE": "Nagykáta",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11815,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q766168"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.783888888,
+					47.033055555
+				]
+			},
+			"properties": {
+				"NAME": "Nagykőrös",
+				"NAME_EN": "Nagykőrös",
+				"NAME_IT": "Nagykőrös",
+				"NAME_DE": "Nagykőrös",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22746,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q830394"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.13,
+					47.835277777
+				]
+			},
+			"properties": {
+				"NAME": "Nyírbátor",
+				"NAME_EN": "Nyírbátor",
+				"NAME_IT": "Nyírbátor",
+				"NAME_DE": "Nyírbátor",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Szabolcs-Szatmár-Bereg megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11063,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q755686"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.716666666,
+					47.95
+				]
+			},
+			"properties": {
+				"NAME": "Nyíregyháza",
+				"NAME_EN": "Nyíregyháza",
+				"NAME_IT": "Nyíregyháza",
+				"NAME_DE": "Nyíregyháza",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Szabolcs-Szatmár-Bereg megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 114096,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q171223"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.642777777,
+					46.567777777
+				]
+			},
+			"properties": {
+				"NAME": "Orosháza",
+				"NAME_EN": "Orosháza",
+				"NAME_IT": "Orosháza",
+				"NAME_DE": "Orosháza",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Békés megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24396,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q390796"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.316388888,
+					47.489166666
+				]
+			},
+			"properties": {
+				"NAME": "Oroszlány",
+				"NAME_EN": "Oroszlány",
+				"NAME_IT": "Oroszlány",
+				"NAME_DE": "Oroszlány",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Komárom-Esztergom megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17362,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q843028"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.286944444,
+					48.219166666
+				]
+			},
+			"properties": {
+				"NAME": "Ózd",
+				"NAME_EN": "Ózd",
+				"NAME_IT": "Ózd",
+				"NAME_DE": "Ózd",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Borsod-Abaúj-Zemplén megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29624,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q293558"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.855833333,
+					46.621944444
+				]
+			},
+			"properties": {
+				"NAME": "Paks",
+				"NAME_EN": "Paks",
+				"NAME_IT": "Paks",
+				"NAME_DE": "Paks",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Tolna megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17453,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q740800"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.465833333,
+					47.330555555
+				]
+			},
+			"properties": {
+				"NAME": "Pápa",
+				"NAME_EN": "Pápa",
+				"NAME_IT": "Pápa",
+				"NAME_DE": "Pápa",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Veszprém megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 27770,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q214945"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.341944444,
+					47.491111111
+				]
+			},
+			"properties": {
+				"NAME": "Pécel",
+				"NAME_EN": "Pécel",
+				"NAME_IT": "Pécel",
+				"NAME_DE": "Pécel",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17389,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q222964"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.233055555,
+					46.070833333
+				]
+			},
+			"properties": {
+				"NAME": "Pécs",
+				"NAME_EN": "Pécs",
+				"NAME_IT": "Pécs",
+				"NAME_DE": "Pécs",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Baranya megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 137976,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q45779"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.546944444,
+					47.285833333
+				]
+			},
+			"properties": {
+				"NAME": "Pilis",
+				"NAME_EN": "Pilis",
+				"NAME_IT": "Pilis",
+				"NAME_DE": "Pilis",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11965,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q845575"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.910833333,
+					47.621111111
+				]
+			},
+			"properties": {
+				"NAME": "Pilisvörösvár",
+				"NAME_EN": "Pilisvörösvár",
+				"NAME_IT": "Pilisvörösvár",
+				"NAME_DE": "Pilisvörösvár",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14600,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q530634"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.026944444,
+					47.647222222
+				]
+			},
+			"properties": {
+				"NAME": "Pomáz",
+				"NAME_EN": "Pomáz",
+				"NAME_IT": "Pomáz",
+				"NAME_DE": "Pomáz",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 18205,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842923"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.113888888,
+					47.319722222
+				]
+			},
+			"properties": {
+				"NAME": "Püspökladány",
+				"NAME_EN": "Püspökladány",
+				"NAME_IT": "Püspökladány",
+				"NAME_DE": "Püspökladány",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Hajdú-Bihar megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12892,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842934"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.945555555,
+					47.160833333
+				]
+			},
+			"properties": {
+				"NAME": "Ráckeve",
+				"NAME_EN": "Ráckeve",
+				"NAME_IT": "Ráckeve",
+				"NAME_DE": "Ráckeve",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11040,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q755701"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.718333333,
+					48.216944444
+				]
+			},
+			"properties": {
+				"NAME": "Sajószentpéter",
+				"NAME_EN": "Sajószentpéter",
+				"NAME_IT": "Sajószentpéter",
+				"NAME_DE": "Sajószentpéter",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Borsod-Abaúj-Zemplén megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10992,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q855086"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.786666666,
+					48.085277777
+				]
+			},
+			"properties": {
+				"NAME": "Salgótarján",
+				"NAME_EN": "Salgótarján",
+				"NAME_IT": "Salgótarján",
+				"NAME_DE": "Salgótarján",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Nógrád megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29824,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q189769"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.619319444,
+					46.887761111
+				]
+			},
+			"properties": {
+				"NAME": "Sárbogárd",
+				"NAME_EN": "Sárbogárd",
+				"NAME_IT": "Sárbogárd",
+				"NAME_DE": "Sárbogárd",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Fejér megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11397,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q593314"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.566111111,
+					48.318888888
+				]
+			},
+			"properties": {
+				"NAME": "Sárospatak",
+				"NAME_EN": "Sárospatak",
+				"NAME_IT": "Sárospatak",
+				"NAME_DE": "Sárospatak",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Borsod-Abaúj-Zemplén megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10250,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q668318"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.935277777,
+					47.253888888
+				]
+			},
+			"properties": {
+				"NAME": "Sárvár",
+				"NAME_EN": "Sárvár",
+				"NAME_IT": "Sárvár",
+				"NAME_DE": "Sárvár",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Vas megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13721,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q843043"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.65611,
+					48.39405
+				]
+			},
+			"properties": {
+				"NAME": "Sátoraljaújhely",
+				"NAME_EN": "Sátoraljaújhely",
+				"NAME_IT": "Sátoraljaújhely",
+				"NAME_DE": "Sátoraljaújhely",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Borsod-Abaúj-Zemplén megye",
+				"coordinatePrecision": 0.013528765877507,
+				"ADM0CAP": 0,
+				"POP_MAX": 12388,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q116417"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.05,
+					46.9
+				]
+			},
+			"properties": {
+				"NAME": "Siófok",
+				"NAME_EN": "Siófok",
+				"NAME_IT": "Siófok",
+				"NAME_DE": "Siófok",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Somogy megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 23589,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q245126"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.583333333,
+					47.683333333
+				]
+			},
+			"properties": {
+				"NAME": "Sopron",
+				"NAME_EN": "Sopron",
+				"NAME_IT": "Sopron",
+				"NAME_DE": "Sopron",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Győr-Moson-Sopron megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 60035,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q168648"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.6,
+					46.85
+				]
+			},
+			"properties": {
+				"NAME": "Szarvas",
+				"NAME_EN": "Szarvas",
+				"NAME_IT": "Szarvas",
+				"NAME_DE": "Szarvas",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Békés megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 13950,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q843014"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.911388888,
+					47.316666666
+				]
+			},
+			"properties": {
+				"NAME": "Százhalombatta",
+				"NAME_EN": "Százhalombatta",
+				"NAME_IT": "Százhalombatta",
+				"NAME_DE": "Százhalombatta",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 18239,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q773203"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.166666666,
+					46.25
+				]
+			},
+			"properties": {
+				"NAME": "Szeged",
+				"NAME_EN": "Szeged",
+				"NAME_IT": "Seghedino",
+				"NAME_DE": "Szeged",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Csongrád-Csanád megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 157596,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q81581"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.410811,
+					47.1910169
+				]
+			},
+			"properties": {
+				"NAME": "Székesfehérvár",
+				"NAME_EN": "Székesfehérvár",
+				"NAME_IT": "Székesfehérvár",
+				"NAME_DE": "Székesfehérvár",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Fejér megye",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 94605,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q130212"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.703888888,
+					46.355833333
+				]
+			},
+			"properties": {
+				"NAME": "Szekszárd",
+				"NAME_EN": "Szekszárd",
+				"NAME_IT": "Szekszárd",
+				"NAME_DE": "Szekszárd",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Tolna megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28975,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q189761"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.0725,
+					47.673333333
+				]
+			},
+			"properties": {
+				"NAME": "Szentendre",
+				"NAME_EN": "Szentendre",
+				"NAME_IT": "Szentendre",
+				"NAME_DE": "Szentendre",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28433,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q390798"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.257222222,
+					46.651944444
+				]
+			},
+			"properties": {
+				"NAME": "Szentes",
+				"NAME_EN": "Szentes",
+				"NAME_IT": "Szentes",
+				"NAME_DE": "Szentes",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Csongrád-Csanád megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24067,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q377834"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.012777777,
+					47.322777777
+				]
+			},
+			"properties": {
+				"NAME": "Szigethalom",
+				"NAME_EN": "Szigethalom",
+				"NAME_IT": "Szigethalom",
+				"NAME_DE": "Szigethalom",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 18392,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q784229"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.048333333,
+					47.345277777
+				]
+			},
+			"properties": {
+				"NAME": "Szigetszentmiklós",
+				"NAME_EN": "Szigetszentmiklós",
+				"NAME_IT": "Szigetszentmiklós",
+				"NAME_DE": "Szigetszentmiklós",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 40126,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q740853"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.176388888,
+					47.174722222
+				]
+			},
+			"properties": {
+				"NAME": "Szolnok",
+				"NAME_EN": "Szolnok",
+				"NAME_IT": "Szolnok",
+				"NAME_DE": "Szolnok",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Jász-Nagykun-Szolnok megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 64681,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q181276"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.633333333,
+					47.233333333
+				]
+			},
+			"properties": {
+				"NAME": "Szombathely",
+				"NAME_EN": "Szombathely",
+				"NAME_IT": "Szombathely",
+				"NAME_DE": "Szombathely",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Vas megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 76389,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q42007"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.441111111,
+					46.882777777
+				]
+			},
+			"properties": {
+				"NAME": "Tapolca",
+				"NAME_EN": "Tapolca",
+				"NAME_IT": "Tapolca",
+				"NAME_DE": "Tapolca",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Veszprém megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13610,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q288413"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.316666666,
+					47.65
+				]
+			},
+			"properties": {
+				"NAME": "Tata",
+				"NAME_EN": "Tata",
+				"NAME_IT": "Tata",
+				"NAME_DE": "Tata",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Komárom-Esztergom megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 23535,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q329768"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.39485,
+					47.58616
+				]
+			},
+			"properties": {
+				"NAME": "Tatabánya",
+				"NAME_EN": "Tatabánya",
+				"NAME_IT": "Tatabánya",
+				"NAME_DE": "Tatabánya",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Komárom-Esztergom megye",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 64546,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q187821"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.76,
+					47.619
+				]
+			},
+			"properties": {
+				"NAME": "Tiszafüred",
+				"NAME_EN": "Tiszafüred",
+				"NAME_IT": "Tiszafüred",
+				"NAME_DE": "Tiszafüred",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Jász-Nagykun-Szolnok megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10525,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q903177"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.095,
+					46.931111111
+				]
+			},
+			"properties": {
+				"NAME": "Tiszakécske",
+				"NAME_EN": "Tiszakécske",
+				"NAME_IT": "Tiszakécske",
+				"NAME_DE": "Tiszakécske",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Bács-Kiskun megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11615,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q841603"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.051944444,
+					47.922777777
+				]
+			},
+			"properties": {
+				"NAME": "Tiszaújváros",
+				"NAME_EN": "Tiszaújváros",
+				"NAME_IT": "Tiszaújváros",
+				"NAME_DE": "Tiszaújváros",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Borsod-Abaúj-Zemplén megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13944,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q375097"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.368888888,
+					47.951111111
+				]
+			},
+			"properties": {
+				"NAME": "Tiszavasvári",
+				"NAME_EN": "Tiszavasvári",
+				"NAME_IT": "Tiszavasvári",
+				"NAME_DE": "Tiszavasvári",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Szabolcs-Szatmár-Bereg megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12114,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q278017"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.961944444,
+					47.321944444
+				]
+			},
+			"properties": {
+				"NAME": "Tököl",
+				"NAME_EN": "Tököl",
+				"NAME_IT": "Tököl",
+				"NAME_DE": "Tököl",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11254,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q916987"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.775,
+					46.425
+				]
+			},
+			"properties": {
+				"NAME": "Tolna",
+				"NAME_EN": "Tolna",
+				"NAME_IT": "Tolna",
+				"NAME_DE": "Tolna",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Tolna megye",
+				"coordinatePrecision": 0.000277778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10457,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q843021"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.915555555,
+					47.435555555
+				]
+			},
+			"properties": {
+				"NAME": "Törökbálint",
+				"NAME_EN": "Törökbálint",
+				"NAME_IT": "Törökbálint",
+				"NAME_DE": "Törökbálint",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14937,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q645567"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.416666666,
+					47.183333333
+				]
+			},
+			"properties": {
+				"NAME": "Törökszentmiklós",
+				"NAME_EN": "Törökszentmiklós",
+				"NAME_IT": "Törökszentmiklós",
+				"NAME_DE": "Törökszentmiklós",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Jász-Nagykun-Szolnok megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 18874,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q840986"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.683333333,
+					47.8
+				]
+			},
+			"properties": {
+				"NAME": "Újfehértó",
+				"NAME_EN": "Újfehértó",
+				"NAME_IT": "Újfehértó",
+				"NAME_DE": "Újfehértó",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Szabolcs-Szatmár-Bereg megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12144,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q330171"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.344444444,
+					47.384166666
+				]
+			},
+			"properties": {
+				"NAME": "Üllő",
+				"NAME_EN": "Üllő",
+				"NAME_IT": "Üllő",
+				"NAME_DE": "Üllő",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12836,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q933467"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.131111111,
+					47.775277777
+				]
+			},
+			"properties": {
+				"NAME": "Vác",
+				"NAME_EN": "Vác",
+				"NAME_IT": "Vác",
+				"NAME_DE": "Vác",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 33646,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q207408"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.139444444,
+					47.197222222
+				]
+			},
+			"properties": {
+				"NAME": "Várpalota",
+				"NAME_EN": "Várpalota",
+				"NAME_IT": "Várpalota",
+				"NAME_DE": "Várpalota",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Veszprém megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19073,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q755681"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.272222222,
+					47.410833333
+				]
+			},
+			"properties": {
+				"NAME": "Vecsés",
+				"NAME_EN": "Vecsés",
+				"NAME_IT": "Vecsés",
+				"NAME_DE": "Vecsés",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21279,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q36063"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.284722222,
+					47.656944444
+				]
+			},
+			"properties": {
+				"NAME": "Veresegyház",
+				"NAME_EN": "Veresegyház",
+				"NAME_IT": "Veresegyház",
+				"NAME_DE": "Veresegyház",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Pest megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21314,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q843039"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.916666666,
+					47.1
+				]
+			},
+			"properties": {
+				"NAME": "Veszprém",
+				"NAME_EN": "Veszprém",
+				"NAME_IT": "Veszprém",
+				"NAME_DE": "Veszprém",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Veszprém megye",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 54590,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q146317"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.851111111,
+					46.839166666
+				]
+			},
+			"properties": {
+				"NAME": "Zalaegerszeg",
+				"NAME_EN": "Zalaegerszeg",
+				"NAME_IT": "Zalaegerszeg",
+				"NAME_DE": "Zalaegerszeg",
+				"ADM0NAME": "Hungary",
+				"ADM1NAME": "Zala megye",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 53494,
+				"POP1950": 0,
+				"populationDate": "2026-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q60037"
+			}
+		}
+	]
+}

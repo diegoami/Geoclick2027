@@ -5,6 +5,12 @@
 // row where even the chosen --name-field is wrong or dated, not a whole new
 // per-country table until there's more than one or two exceptions.
 export const NAME_FIXUPS: Record<string, Record<string, string>> = {
+	// Natural Earth's legacy labels; use the current names in both maps and facts.
+	Ethiopia: { Nazret: 'Adama', Giyon: 'Woliso', Awasa: 'Hawassa' },
+	Iraq: { Irbil: 'Erbil', 'Az Aubayr': 'Az Zubayr' },
+	'Sri Lanka': { 'Mullaitivu(මූලදීපය)': 'Mullaitivu' },
+	// The Angolan city resumed Moçâmedes in 2016; Namibe remains its province.
+	Angola: { Namibe: 'Moçâmedes' },
 	// Turkish dropped the circumflex from this city's name; its own
 	// municipality writes Elazığ. Hakkâri, also on this map, keeps its.
 	Turkey: { Elâzığ: 'Elazığ' },
@@ -46,7 +52,11 @@ export const NAME_FIXUPS: Record<string, Record<string, string>> = {
 		'Sidi bel Abbes': 'Sidi Bel Abbès',
 		Ghardaia: 'Ghardaïa'
 	},
-	Pakistan: { Sialkote: 'Sialkot', Saidu: 'Saidu Sharif', 'Sheikhu Pura': 'Sheikhupura' },
+	Pakistan: {
+		Sialkote: 'Sialkot',
+		Saidu: 'Saidu Sharif',
+		'Sheikhu Pura': 'Sheikhupura'
+	},
 	// Iran's and Saudi Arabia's towns spelled as the provinces and regions
 	// of the same maps are: English, not a transliteration's.
 	Iran: {

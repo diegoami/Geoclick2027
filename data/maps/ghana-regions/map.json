@@ -1,0 +1,590 @@
+{
+	"id": "ghana-regions",
+	"name": "Ghana — Regions",
+	"country": "Ghana",
+	"attribution": "geoBoundaries gbOpen 9469f09; Open Street Map; 2021; Creative Commons Attribution-ShareAlike 2.0; https://creativecommons.org/licenses/by-sa/2.0/; Coordinate corrections: GeoNames, CC BY 4.0, https://www.geonames.org; Musoma coordinate: Tanzania municipal strategic plan; data/scripts/placeCorrections.ts; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/ghana-gb-9469f09.geojson",
+	"placesSource": "data/places/ghana.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "upper-east",
+			"name": "Upper East",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.7705,
+				10.72785
+			],
+			"bbox": [
+				-1.5731,
+				10.2808,
+				0.0321,
+				11.1749
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-1.4076,
+						10.6725
+					],
+					[
+						-0.7826,
+						10.7679
+					],
+					[
+						-0.1666,
+						10.9066
+					]
+				],
+				"aspect": 2.68
+			}
+		},
+		{
+			"id": "upper-west",
+			"name": "Upper West",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.1837999999999997,
+				10.32845
+			],
+			"bbox": [
+				-2.9413,
+				9.6359,
+				-1.4263,
+				11.021
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-2.7014,
+						10.4061
+					],
+					[
+						-2.1835,
+						10.2686
+					],
+					[
+						-1.6656,
+						10.4269
+					]
+				],
+				"aspect": 0.81
+			}
+		},
+		{
+			"id": "north-east",
+			"name": "North East",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.61005,
+				10.3225
+			],
+			"bbox": [
+				-1.6378,
+				9.9315,
+				0.4177,
+				10.7135
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-1.4243,
+						10.1784
+					],
+					[
+						-0.6279,
+						10.5771
+					],
+					[
+						0.196,
+						10.2871
+					]
+				],
+				"aspect": 4.08
+			}
+		},
+		{
+			"id": "northern",
+			"name": "Northern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.4004,
+				9.27665
+			],
+			"bbox": [
+				-1.3678,
+				8.2316,
+				0.567,
+				10.3217
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-1.1105,
+						9.7596
+					],
+					[
+						-0.3717,
+						9.7961
+					],
+					[
+						0.3672,
+						9.133
+					]
+				],
+				"aspect": 1.67
+			}
+		},
+		{
+			"id": "savannah",
+			"name": "Savannah",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.46145,
+				9.03805
+			],
+			"bbox": [
+				-2.7802,
+				7.9937,
+				-0.1427,
+				10.0824
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-2.4949,
+						9.2591
+					],
+					[
+						-1.4927,
+						9.1089
+					],
+					[
+						-0.5798,
+						8.6968
+					]
+				],
+				"aspect": 1.79
+			}
+		},
+		{
+			"id": "bono-east",
+			"name": "Bono East",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.95335,
+				7.973450000000001
+			],
+			"bbox": [
+				-2.1217,
+				7.1721,
+				0.215,
+				8.7748
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-1.7815,
+						8.1409
+					],
+					[
+						-0.944,
+						7.8523
+					],
+					[
+						-0.1073,
+						7.5616
+					]
+				],
+				"aspect": 2.34
+			}
+		},
+		{
+			"id": "oti",
+			"name": "Oti",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.17074999999999999,
+				7.922499999999999
+			],
+			"bbox": [
+				-0.3897,
+				7.0893,
+				0.7312,
+				8.7557
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						0.3756,
+						8.5966
+					],
+					[
+						0.0883,
+						7.9949
+					],
+					[
+						0.3609,
+						7.4108
+					]
+				],
+				"aspect": 2.15
+			}
+		},
+		{
+			"id": "bono",
+			"name": "Bono",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.5018,
+				7.81115
+			],
+			"bbox": [
+				-3.1098,
+				6.8357,
+				-1.8938,
+				8.7866
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-2.9162,
+						7.051
+					],
+					[
+						-2.4217,
+						7.5255
+					],
+					[
+						-2.2656,
+						8.1387
+					]
+				],
+				"aspect": 1.83
+			}
+		},
+		{
+			"id": "ahafo",
+			"name": "Ahafo",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.36285,
+				6.8649000000000004
+			],
+			"bbox": [
+				-2.8678,
+				6.3881,
+				-1.8579,
+				7.3417
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-2.7052,
+						6.6138
+					],
+					[
+						-2.5584,
+						6.8431
+					],
+					[
+						-2.4075,
+						7.0677
+					]
+				],
+				"aspect": 0.97
+			}
+		},
+		{
+			"id": "ashanti",
+			"name": "Ashanti",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.3245,
+				6.7413
+			],
+			"bbox": [
+				-2.4485,
+				5.8617,
+				-0.2005,
+				7.6209
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-2.106,
+						6.6139
+					],
+					[
+						-1.4349,
+						6.5544
+					],
+					[
+						-0.7637,
+						7.1346
+					]
+				],
+				"aspect": 1.19
+			}
+		},
+		{
+			"id": "volta",
+			"name": "Volta",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.6306,
+				6.5364
+			],
+			"bbox": [
+				0.0616,
+				5.7718,
+				1.1996,
+				7.301
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						0.3042,
+						7.0025
+					],
+					[
+						0.2971,
+						6.3456
+					],
+					[
+						0.8224,
+						5.917
+					]
+				],
+				"aspect": 2.06
+			}
+		},
+		{
+			"id": "eastern",
+			"name": "Eastern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.47564999999999996,
+				6.4607
+			],
+			"bbox": [
+				-1.2466,
+				5.7249,
+				0.2953,
+				7.1965
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-1.0475,
+						6.1477
+					],
+					[
+						-0.4991,
+						6.3968
+					],
+					[
+						0.0493,
+						6.6307
+					]
+				],
+				"aspect": 0.86
+			}
+		},
+		{
+			"id": "western-north",
+			"name": "Western North",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.66805,
+				6.1785
+			],
+			"bbox": [
+				-3.2588,
+				5.3413,
+				-2.0773,
+				7.0157
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-3.1122,
+						6.7702
+					],
+					[
+						-2.6211,
+						6.3085
+					],
+					[
+						-2.6769,
+						5.6328
+					]
+				],
+				"aspect": 2.44
+			}
+		},
+		{
+			"id": "greater-accra",
+			"name": "Greater Accra",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.0867,
+				5.75855
+			],
+			"bbox": [
+				-0.4989,
+				5.4821,
+				0.6723,
+				6.035
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-0.3542,
+						5.6194
+					],
+					[
+						0.0384,
+						5.8547
+					],
+					[
+						0.4932,
+						5.901
+					]
+				],
+				"aspect": 3.64
+			}
+		},
+		{
+			"id": "central",
+			"name": "Central",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.2823499999999999,
+				5.6655
+			],
+			"bbox": [
+				-2.1767,
+				5.0317,
+				-0.388,
+				6.2993
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-1.7082,
+						5.7585
+					],
+					[
+						-1.2385,
+						5.3484
+					],
+					[
+						-0.5803,
+						5.461
+					]
+				],
+				"aspect": 2.04
+			}
+		},
+		{
+			"id": "western",
+			"name": "Western",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.2749,
+				5.43995
+			],
+			"bbox": [
+				-3.1105,
+				4.7448,
+				-1.4393,
+				6.1351
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-2.6496,
+						5.4006
+					],
+					[
+						-2.1705,
+						5.587
+					],
+					[
+						-1.6913,
+						5.3154
+					]
+				],
+				"aspect": 0.84
+			}
+		}
+	],
+	"tourOrder": [
+		"upper-east",
+		"upper-west",
+		"north-east",
+		"northern",
+		"savannah",
+		"bono-east",
+		"oti",
+		"bono",
+		"ahafo",
+		"ashanti",
+		"volta",
+		"eastern",
+		"western-north",
+		"greater-accra",
+		"central",
+		"western"
+	]
+}

@@ -1,0 +1,392 @@
+{
+	"id": "congo-kinshasa-towns-10k",
+	"name": "Democratic Republic of the Congo — Towns",
+	"country": "Democratic Republic of the Congo",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Coordinate corrections: GeoNames, CC BY 4.0, https://www.geonames.org; Musoma coordinate: Tanzania municipal strategic plan; data/scripts/placeCorrections.ts; Natural Earth (public domain), https://www.naturalearthdata.com; Coordinate corrections: GeoNames, CC BY 4.0, https://www.geonames.org; Musoma coordinate: Tanzania municipal strategic plan; data/scripts/placeCorrections.ts",
+	"regionsMap": "congo-kinshasa-provinces",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "gemena",
+			"name": "Gemena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.7699971,
+				3.2600193
+			],
+			"bbox": [
+				19.7699971,
+				3.2600193,
+				19.7699971,
+				3.2600193
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kisangani",
+			"name": "Kisangani",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.2200004,
+				0.5200057
+			],
+			"bbox": [
+				25.2200004,
+				0.5200057,
+				25.2200004,
+				0.5200057
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "beni",
+			"name": "Beni",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.4500264,
+				0.4904468
+			],
+			"bbox": [
+				29.4500264,
+				0.4904468,
+				29.4500264,
+				0.4904468
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "butembo",
+			"name": "Butembo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.2800109,
+				0.1300037
+			],
+			"bbox": [
+				29.2800109,
+				0.1300037,
+				29.2800109,
+				0.1300037
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "mbandaka",
+			"name": "Mbandaka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.2600118,
+				0.040035
+			],
+			"bbox": [
+				18.2600118,
+				0.040035,
+				18.2600118,
+				0.040035
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bukavu",
+			"name": "Bukavu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.8400378,
+				-2.5099902
+			],
+			"bbox": [
+				28.8400378,
+				-2.5099902,
+				28.8400378,
+				-2.5099902
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kindu",
+			"name": "Kindu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.9099841,
+				-2.963916
+			],
+			"bbox": [
+				25.9099841,
+				-2.963916,
+				25.9099841,
+				-2.963916
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kinshasa",
+			"name": "Kinshasa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.313026,
+				-4.3277782
+			],
+			"bbox": [
+				15.313026,
+				-4.3277782,
+				15.313026,
+				-4.3277782
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kikwit",
+			"name": "Kikwit",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.8500016,
+				-5.0300431
+			],
+			"bbox": [
+				18.8500016,
+				-5.0300431,
+				18.8500016,
+				-5.0300431
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "mbanza-ngungu",
+			"name": "Mbanza-Ngungu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.8600126,
+				-5.2496163
+			],
+			"bbox": [
+				14.8600126,
+				-5.2496163,
+				14.8600126,
+				-5.2496163
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "matadi",
+			"name": "Matadi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.4500211,
+				-5.8166101
+			],
+			"bbox": [
+				13.4500211,
+				-5.8166101,
+				13.4500211,
+				-5.8166101
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "boma",
+			"name": "Boma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.0499939,
+				-5.8299943
+			],
+			"bbox": [
+				13.0499939,
+				-5.8299943,
+				13.0499939,
+				-5.8299943
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kananga",
+			"name": "Kananga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.3980716,
+				-5.8880964
+			],
+			"bbox": [
+				22.3980716,
+				-5.8880964,
+				22.3980716,
+				-5.8880964
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kalemie",
+			"name": "Kalemie",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.1947078704834,
+				-5.947485075933609
+			],
+			"bbox": [
+				29.1947078704834,
+				-5.947485075933609,
+				29.1947078704834,
+				-5.947485075933609
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mbuji-mayi",
+			"name": "Mbuji-Mayi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.59805,
+				-6.1480806
+			],
+			"bbox": [
+				23.59805,
+				-6.1480806,
+				23.59805,
+				-6.1480806
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tshikapa",
+			"name": "Tshikapa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.7700394,
+				-6.4099589
+			],
+			"bbox": [
+				20.7700394,
+				-6.4099589,
+				20.7700394,
+				-6.4099589
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "mwene-ditu",
+			"name": "Mwene-Ditu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.4400057,
+				-7.0000004
+			],
+			"bbox": [
+				23.4400057,
+				-7.0000004,
+				23.4400057,
+				-7.0000004
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kolwezi",
+			"name": "Kolwezi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.4724397,
+				-10.7167244
+			],
+			"bbox": [
+				25.4724397,
+				-10.7167244,
+				25.4724397,
+				-10.7167244
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "likasi",
+			"name": "Likasi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.7800085,
+				-10.9700423
+			],
+			"bbox": [
+				26.7800085,
+				-10.9700423,
+				26.7800085,
+				-10.9700423
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lubumbashi",
+			"name": "Lubumbashi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.4780716,
+				-11.6780789
+			],
+			"bbox": [
+				27.4780716,
+				-11.6780789,
+				27.4780716,
+				-11.6780789
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"gemena",
+		"kisangani",
+		"beni",
+		"butembo",
+		"mbandaka",
+		"bukavu",
+		"kindu",
+		"kinshasa",
+		"kikwit",
+		"mbanza-ngungu",
+		"matadi",
+		"boma",
+		"kananga",
+		"kalemie",
+		"mbuji-mayi",
+		"tshikapa",
+		"mwene-ditu",
+		"kolwezi",
+		"likasi",
+		"lubumbashi"
+	]
+}

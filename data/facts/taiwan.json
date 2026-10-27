@@ -2,7 +2,9 @@
 	"_note": [
 		"Name-facts for Taiwan (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind.",
+		"Owner excludes four Taoyuan boroughs from towns; their authored text is preserved under _excludedDistricts for possible future district maps."
 	],
 	"taipei": {
 		"city": {
@@ -21,6 +23,1055 @@
 				"Ihr Nationales Palastmuseum birgt Schätze, die aus den kaiserlichen Sammlungen Pekings stammen.",
 				"Ihre Nachtmärkte gehören zu den belebtesten Asiens."
 			]
+		}
+	},
+	"_sources": {
+		"lienchiang-county:region": [
+			"https://en.wikipedia.org/wiki/Matsu_Islands",
+			"https://eng.taiwan.net.tw/m1.aspx?id=A12-00252&sNo=0002016"
+		],
+		"keelung-city:region": [
+			"https://en.wikipedia.org/wiki/Keelung",
+			"https://en.wikipedia.org/wiki/Heping_Island_Park"
+		],
+		"keelung:city": [
+			"https://en.wikipedia.org/wiki/Keelung",
+			"https://en.wikipedia.org/wiki/Heping_Island_Park"
+		],
+		"taipei-city:region": [
+			"https://en.wikipedia.org/wiki/Taipei",
+			"https://en.wikipedia.org/wiki/National_Palace_Museum"
+		],
+		"new-taipei-city:region": [
+			"https://en.wikipedia.org/wiki/New_Taipei_City",
+			"https://en.wikipedia.org/wiki/Jiufen",
+			"https://en.wikipedia.org/wiki/Pingxi_District"
+		],
+		"new-taipei:city": [
+			"https://en.wikipedia.org/wiki/New_Taipei_City",
+			"https://en.wikipedia.org/wiki/Jiufen",
+			"https://en.wikipedia.org/wiki/Pingxi_District"
+		],
+		"taoyuan-city:region": [
+			"https://en.wikipedia.org/wiki/Taoyuan,_Taiwan",
+			"https://en.wikipedia.org/wiki/Daxi_District"
+		],
+		"taoyuan:city": [
+			"https://en.wikipedia.org/wiki/Taoyuan,_Taiwan",
+			"https://en.wikipedia.org/wiki/Daxi_District"
+		],
+		"hsinchu-city:region": [
+			"https://en.wikipedia.org/wiki/Hsinchu",
+			"https://en.wikipedia.org/wiki/Chenghuang_Temple_of_Hsinchu",
+			"https://en.wikipedia.org/wiki/Hsinchu_Science_Park"
+		],
+		"hsinchu:city": [
+			"https://en.wikipedia.org/wiki/Hsinchu",
+			"https://en.wikipedia.org/wiki/Chenghuang_Temple_of_Hsinchu",
+			"https://en.wikipedia.org/wiki/Hsinchu_Science_Park"
+		],
+		"hsinchu-county:region": [
+			"https://en.wikipedia.org/wiki/Hsinchu_County",
+			"https://en.wikipedia.org/wiki/Beipu",
+			"https://en.wikipedia.org/wiki/Neiwan_Line"
+		],
+		"yilan-county:region": [
+			"https://en.wikipedia.org/wiki/Yilan_County,_Taiwan",
+			"https://en.wikipedia.org/wiki/Su%27ao_Cold_Spring"
+		],
+		"miaoli-county:region": [
+			"https://en.wikipedia.org/wiki/Miaoli_County"
+		],
+		"kinmen-county:region": [
+			"https://en.wikipedia.org/wiki/Kinmen"
+		],
+		"taichung-city:region": [
+			"https://en.wikipedia.org/wiki/Taichung",
+			"https://en.wikipedia.org/wiki/Taichung_Park"
+		],
+		"taichung:city": [
+			"https://en.wikipedia.org/wiki/Taichung",
+			"https://en.wikipedia.org/wiki/Taichung_Park"
+		],
+		"changhua-county:region": [
+			"https://en.wikipedia.org/wiki/Changhua",
+			"https://en.wikipedia.org/wiki/Changhua_Confucius_Temple"
+		],
+		"changhua:city": [
+			"https://en.wikipedia.org/wiki/Changhua",
+			"https://en.wikipedia.org/wiki/Changhua_Confucius_Temple"
+		],
+		"nantou-county:region": [
+			"https://en.wikipedia.org/wiki/Nantou_County",
+			"https://en.wikipedia.org/wiki/Sun_Moon_Lake",
+			"https://en.wikipedia.org/wiki/Lugu,_Nantou"
+		],
+		"hualien-county:region": [
+			"https://en.wikipedia.org/wiki/Hualien_County",
+			"https://en.wikipedia.org/wiki/Taroko_National_Park"
+		],
+		"yunlin-county:region": [
+			"https://en.wikipedia.org/wiki/Yunlin_County",
+			"https://en.wikipedia.org/wiki/Beigang_Chaotian_Temple"
+		],
+		"chiayi-city:region": [
+			"https://en.wikipedia.org/wiki/Chiayi",
+			"https://en.wikipedia.org/wiki/Hinoki_Village"
+		],
+		"chiayi:city": [
+			"https://en.wikipedia.org/wiki/Chiayi",
+			"https://en.wikipedia.org/wiki/Hinoki_Village"
+		],
+		"penghu-county:region": [
+			"https://en.wikipedia.org/wiki/Penghu"
+		],
+		"chiayi-county:region": [
+			"https://en.wikipedia.org/wiki/Chiayi_County",
+			"https://en.wikipedia.org/wiki/Southern_Branch_of_the_National_Palace_Museum"
+		],
+		"tainan-city:region": [
+			"https://en.wikipedia.org/wiki/Tainan",
+			"https://en.wikipedia.org/wiki/Fort_Zeelandia_(Taiwan)",
+			"https://en.wikipedia.org/wiki/Tainan_Confucian_Temple"
+		],
+		"tainan:city": [
+			"https://en.wikipedia.org/wiki/Tainan",
+			"https://en.wikipedia.org/wiki/Fort_Zeelandia_(Taiwan)",
+			"https://en.wikipedia.org/wiki/Tainan_Confucian_Temple"
+		],
+		"kaohsiung-city:region": [
+			"https://en.wikipedia.org/wiki/Kaohsiung",
+			"https://en.wikipedia.org/wiki/Pier-2_Art_Center"
+		],
+		"kaohsiung:city": [
+			"https://en.wikipedia.org/wiki/Kaohsiung",
+			"https://en.wikipedia.org/wiki/Pier-2_Art_Center"
+		],
+		"taitung-county:region": [
+			"https://en.wikipedia.org/wiki/Taitung_City",
+			"https://en.wikipedia.org/wiki/Beinan_Cultural_Park",
+			"https://en.wikipedia.org/wiki/National_Museum_of_Prehistory_(Taiwan)"
+		],
+		"taitung:city": [
+			"https://en.wikipedia.org/wiki/Taitung_City",
+			"https://en.wikipedia.org/wiki/Beinan_Cultural_Park",
+			"https://en.wikipedia.org/wiki/National_Museum_of_Prehistory_(Taiwan)"
+		],
+		"pingtung-county:region": [
+			"https://en.wikipedia.org/wiki/Pingtung_County",
+			"https://en.wikipedia.org/wiki/Kenting_National_Park",
+			"https://en.wikipedia.org/wiki/Liuqiu_Island"
+		],
+		"zhongli:city": [
+			"https://en.wikipedia.org/wiki/Zhongli_District"
+		],
+		"bade:city": [
+			"https://eng.tycg.gov.tw/cp.aspx?Create=1&n=959"
+		],
+		"pingzhen:city": [
+			"https://travel.tycg.gov.tw/en/travel/tour/229"
+		],
+		"yangmei:city": [
+			"https://gallery.tycg.gov.tw/lantern-festival/2023/en/Traditional-Lantern.html",
+			"https://travel.tycg.gov.tw/en/Travel/ListByRegion",
+			"https://keid.nat.gov.tw/creativelife/information/enjoy_ct_en?id=150"
+		],
+		"zhubei:city": [
+			"https://en.wikipedia.org/wiki/Zhubei",
+			"https://en.wikipedia.org/wiki/Hsinchu_HSR_station"
+		],
+		"yilan:city": [
+			"https://en.wikipedia.org/wiki/Yilan_City",
+			"https://en.wikipedia.org/wiki/Yilan_Distillery",
+			"https://en.wikipedia.org/wiki/Jimmy_Park"
+		],
+		"hualien:city": [
+			"https://en.wikipedia.org/wiki/Hualien_City",
+			"https://en.wikipedia.org/wiki/Pine_Garden",
+			"https://en.wikipedia.org/wiki/Dongdamen_Night_Market"
+		],
+		"nantou:city": [
+			"https://en.wikipedia.org/wiki/Nantou_City",
+			"https://en.wikipedia.org/wiki/Nantou_County_Culture_Park"
+		],
+		"pingtung:city": [
+			"https://en.wikipedia.org/wiki/Pingtung_City",
+			"https://eng.taiwan.net.tw/m1.aspx?sno=0042423"
+		],
+		"miaoli:city": [
+			"https://www.miaoli.gov.tw/eng/News_map.aspx?n=441&sms=9525",
+			"https://eng.taiwan.net.tw/m1.aspx?id=A12-00565&sNo=0002110"
+		],
+		"douliou:city": [
+			"https://www.yunlin.gov.tw/English/News_Content.aspx?n=1324&s=608499&sms=9695",
+			"https://www.taipeitimes.com/News/feat/archives/2021/09/03/2003763709"
+		],
+		"magong:city": [
+			"https://www.penghu-nsa.gov.tw/english/InDepthExperience/ThematicTours/CultureTour/CultureTour02eng.htm",
+			"https://www.penghu-nsa.gov.tw/english/InDepthExperience/ThematicTours/CultureTour/CultureTour01eng.htm",
+			"https://www.penghu.gov.tw/Tmakun/en/home.jsp?id=14"
+		],
+		"puzi:city": [
+			"https://taiwan-scene.com/2021/06/05/exploring-taiwans-mazu-belief-in-chiayi-a-trip-to-puzi/",
+			"https://taiwangods.moi.gov.tw/html/cultural_EN/3_0011.aspx?i=270",
+			"https://www.swcoast-nsa.gov.tw/en/attraction/details/541"
+		]
+	},
+	"lienchiang-county": {
+		"region": {
+			"en": [
+				"The Matsu islands’ name is linked to the sea goddess Mazu.",
+				"Nangan preserves a major Mazu temple.",
+				"Qinbi village is known for stone houses."
+			],
+			"it": [
+				"Il nome delle isole Matsu è legato alla dea marina Mazu.",
+				"Nangan conserva un importante tempio di Mazu.",
+				"Il villaggio di Qinbi è noto per le case in pietra."
+			],
+			"de": [
+				"Der Name der Matsu-Inseln wird mit der Meeresgöttin Mazu verbunden.",
+				"Nangan bewahrt einen bedeutenden Mazu-Tempel.",
+				"Das Dorf Qinbi ist für Steinhäuser bekannt."
+			]
+		}
+	},
+	"keelung-city": {
+		"region": {
+			"en": [
+				"Older spellings include Kelang and Chilung.",
+				"Miaokou’s night market grew around temple life.",
+				"Heping Island has distinctive wave-eroded rocks."
+			],
+			"it": [
+				"Tra le grafie antiche vi sono Kelang e Chilung.",
+				"Il mercato notturno di Miaokou crebbe attorno alla vita del tempio.",
+				"L’isola Heping presenta caratteristiche rocce erose dalle onde."
+			],
+			"de": [
+				"Ältere Schreibweisen sind Kelang und Chilung.",
+				"Miaokous Nachtmarkt entstand im Umfeld des Tempellebens.",
+				"Die Insel Heping besitzt markante, von Wellen geformte Felsen."
+			]
+		}
+	},
+	"keelung": {
+		"city": {
+			"en": [
+				"Older spellings include Kelang and Chilung.",
+				"Miaokou’s night market grew around temple life.",
+				"Heping Island has distinctive wave-eroded rocks."
+			],
+			"it": [
+				"Tra le grafie antiche vi sono Kelang e Chilung.",
+				"Il mercato notturno di Miaokou crebbe attorno alla vita del tempio.",
+				"L’isola Heping presenta caratteristiche rocce erose dalle onde."
+			],
+			"de": [
+				"Ältere Schreibweisen sind Kelang und Chilung.",
+				"Miaokous Nachtmarkt entstand im Umfeld des Tempellebens.",
+				"Die Insel Heping besitzt markante, von Wellen geformte Felsen."
+			]
+		}
+	},
+	"taipei-city": {
+		"region": {
+			"en": [
+				"Taipei means north Taiwan.",
+				"The National Palace Museum preserves imperial Chinese collections.",
+				"Taipei 101 became a landmark of modern architecture."
+			],
+			"it": [
+				"Taipei significa Taiwan settentrionale.",
+				"Il Museo nazionale del palazzo conserva collezioni imperiali cinesi.",
+				"Taipei 101 divenne un simbolo dell’architettura moderna."
+			],
+			"de": [
+				"Taipei bedeutet Nord-Taiwan.",
+				"Das Nationale Palastmuseum bewahrt kaiserliche chinesische Sammlungen.",
+				"Taipei 101 wurde zu einem Wahrzeichen moderner Architektur."
+			]
+		}
+	},
+	"new-taipei-city": {
+		"region": {
+			"en": [
+				"Formerly Taipei County, it became New Taipei in 2010.",
+				"Jiufen preserves the atmosphere of a former mining town.",
+				"Pingxi is known for sky-lantern traditions."
+			],
+			"it": [
+				"Già Contea di Taipei, divenne New Taipei nel 2010.",
+				"Jiufen conserva l’atmosfera di un’antica città mineraria.",
+				"Pingxi è nota per le tradizioni delle lanterne volanti."
+			],
+			"de": [
+				"Der frühere Landkreis Taipei wurde 2010 zu New Taipei.",
+				"Jiufen bewahrt die Atmosphäre einer früheren Bergbaustadt.",
+				"Pingxi ist für Himmelslaternen-Traditionen bekannt."
+			]
+		}
+	},
+	"new-taipei": {
+		"city": {
+			"en": [
+				"Formerly Taipei County, it became New Taipei in 2010.",
+				"Jiufen preserves the atmosphere of a former mining town.",
+				"Pingxi is known for sky-lantern traditions."
+			],
+			"it": [
+				"Già Contea di Taipei, divenne New Taipei nel 2010.",
+				"Jiufen conserva l’atmosfera di un’antica città mineraria.",
+				"Pingxi è nota per le tradizioni delle lanterne volanti."
+			],
+			"de": [
+				"Der frühere Landkreis Taipei wurde 2010 zu New Taipei.",
+				"Jiufen bewahrt die Atmosphäre einer früheren Bergbaustadt.",
+				"Pingxi ist für Himmelslaternen-Traditionen bekannt."
+			]
+		}
+	},
+	"taoyuan-city": {
+		"region": {
+			"en": [
+				"Its name means peach garden.",
+				"Daxi preserves a historic trading street.",
+				"Hakka traditions are important throughout the wider municipality."
+			],
+			"it": [
+				"Il nome significa giardino dei peschi.",
+				"Daxi conserva una storica via commerciale.",
+				"Le tradizioni hakka sono importanti nel territorio municipale."
+			],
+			"de": [
+				"Der Name bedeutet Pfirsichgarten.",
+				"Daxi bewahrt eine historische Handelsstraße.",
+				"Hakka-Traditionen prägen das weitere Stadtgebiet."
+			]
+		}
+	},
+	"taoyuan": {
+		"city": {
+			"en": [
+				"Its name means peach garden.",
+				"Daxi preserves a historic trading street.",
+				"Hakka traditions are important throughout the wider municipality."
+			],
+			"it": [
+				"Il nome significa giardino dei peschi.",
+				"Daxi conserva una storica via commerciale.",
+				"Le tradizioni hakka sono importanti nel territorio municipale."
+			],
+			"de": [
+				"Der Name bedeutet Pfirsichgarten.",
+				"Daxi bewahrt eine historische Handelsstraße.",
+				"Hakka-Traditionen prägen das weitere Stadtgebiet."
+			]
+		}
+	},
+	"hsinchu-city": {
+		"region": {
+			"en": [
+				"Its name means new bamboo.",
+				"The City God Temple is a centre of traditional worship.",
+				"The science park helped establish its technology industry."
+			],
+			"it": [
+				"Il nome significa nuovo bambù.",
+				"Il Tempio del Dio della Città è un centro di culto tradizionale.",
+				"Il parco scientifico contribuì alla nascita dell’industria tecnologica."
+			],
+			"de": [
+				"Der Name bedeutet neuer Bambus.",
+				"Der Stadtgott-Tempel ist ein Zentrum traditioneller Verehrung.",
+				"Der Wissenschaftspark förderte die Entstehung der Technologieindustrie."
+			]
+		}
+	},
+	"hsinchu": {
+		"city": {
+			"en": [
+				"Its name means new bamboo.",
+				"The City God Temple is a centre of traditional worship.",
+				"The science park helped establish its technology industry."
+			],
+			"it": [
+				"Il nome significa nuovo bambù.",
+				"Il Tempio del Dio della Città è un centro di culto tradizionale.",
+				"Il parco scientifico contribuì alla nascita dell’industria tecnologica."
+			],
+			"de": [
+				"Der Name bedeutet neuer Bambus.",
+				"Der Stadtgott-Tempel ist ein Zentrum traditioneller Verehrung.",
+				"Der Wissenschaftspark förderte die Entstehung der Technologieindustrie."
+			]
+		}
+	},
+	"hsinchu-county": {
+		"region": {
+			"en": [
+				"It shares the name Hsinchu, meaning new bamboo.",
+				"Beipu preserves Hakka houses and traditions.",
+				"Neiwan’s railway recalls the forestry trade."
+			],
+			"it": [
+				"Condivide il nome Hsinchu, nuovo bambù.",
+				"Beipu conserva case e tradizioni hakka.",
+				"La ferrovia di Neiwan ricorda il commercio del legname."
+			],
+			"de": [
+				"Der gemeinsame Name Hsinchu bedeutet neuer Bambus.",
+				"Beipu bewahrt Hakka-Häuser und -Traditionen.",
+				"Neiwans Eisenbahn erinnert an den Holzhandel."
+			]
+		}
+	},
+	"yilan-county": {
+		"region": {
+			"en": [
+				"Its name developed from Kavalan, an Indigenous name.",
+				"Jiaoxi is known for hot springs.",
+				"Su’ao has unusual cold mineral springs."
+			],
+			"it": [
+				"Il nome si sviluppò da Kavalan, un nome indigeno.",
+				"Jiaoxi è nota per le sorgenti calde.",
+				"Su’ao possiede insolite sorgenti minerali fredde."
+			],
+			"de": [
+				"Der Name entwickelte sich aus dem indigenen Namen Kavalan.",
+				"Jiaoxi ist für heiße Quellen bekannt.",
+				"Su’ao besitzt ungewöhnliche kalte Mineralquellen."
+			]
+		}
+	},
+	"miaoli-county": {
+		"region": {
+			"en": [
+				"Its name was adapted from the Taokas place name Pali.",
+				"Sanyi preserves a woodcarving tradition.",
+				"Dahu is known for strawberry farming."
+			],
+			"it": [
+				"Il nome fu adattato dal toponimo taokas Pali.",
+				"Sanyi conserva una tradizione di intaglio del legno.",
+				"Dahu è nota per la coltivazione delle fragole."
+			],
+			"de": [
+				"Der Name wurde aus dem Taokas-Ortsnamen Pali übernommen.",
+				"Sanyi bewahrt eine Tradition der Holzschnitzerei.",
+				"Dahu ist für Erdbeeranbau bekannt."
+			]
+		}
+	},
+	"kinmen-county": {
+		"region": {
+			"en": [
+				"Kinmen means golden gate.",
+				"Wind Lion God statues protect villages in local tradition.",
+				"Former military tunnels recall the islands’ frontier history."
+			],
+			"it": [
+				"Kinmen significa porta d’oro.",
+				"Le statue del Dio Leone del Vento proteggono i villaggi nella tradizione locale.",
+				"Le antiche gallerie militari ricordano la storia di frontiera delle isole."
+			],
+			"de": [
+				"Kinmen bedeutet goldenes Tor.",
+				"Windlöwen-Statuen schützen nach örtlicher Überlieferung die Dörfer.",
+				"Frühere Militärtunnel erinnern an die Grenzgeschichte der Inseln."
+			]
+		}
+	},
+	"taichung-city": {
+		"region": {
+			"en": [
+				"Taichung means central Taiwan.",
+				"Its park pavilion recalls Japanese-era town planning.",
+				"The National Museum of Natural Science is a major cultural institution."
+			],
+			"it": [
+				"Taichung significa Taiwan centrale.",
+				"Il padiglione del parco ricorda l’urbanistica del periodo giapponese.",
+				"Il Museo nazionale di scienze naturali è un’importante istituzione culturale."
+			],
+			"de": [
+				"Taichung bedeutet Zentral-Taiwan.",
+				"Der Parkpavillon erinnert an die Stadtplanung der japanischen Zeit.",
+				"Das Nationale Naturwissenschaftsmuseum ist eine bedeutende Kultureinrichtung."
+			]
+		}
+	},
+	"taichung": {
+		"city": {
+			"en": [
+				"Taichung means central Taiwan.",
+				"Its park pavilion recalls Japanese-era town planning.",
+				"The National Museum of Natural Science is a major cultural institution."
+			],
+			"it": [
+				"Taichung significa Taiwan centrale.",
+				"Il padiglione del parco ricorda l’urbanistica del periodo giapponese.",
+				"Il Museo nazionale di scienze naturali è un’importante istituzione culturale."
+			],
+			"de": [
+				"Taichung bedeutet Zentral-Taiwan.",
+				"Der Parkpavillon erinnert an die Stadtplanung der japanischen Zeit.",
+				"Das Nationale Naturwissenschaftsmuseum ist eine bedeutende Kultureinrichtung."
+			]
+		}
+	},
+	"changhua-county": {
+		"region": {
+			"en": [
+				"Its earlier name was Banxian.",
+				"The Great Buddha at Baguashan is a landmark.",
+				"Its Confucius temple preserves Qing-era heritage."
+			],
+			"it": [
+				"Il nome precedente era Banxian.",
+				"Il Grande Buddha di Baguashan è un simbolo locale.",
+				"Il tempio di Confucio conserva il patrimonio dell’epoca Qing."
+			],
+			"de": [
+				"Der frühere Name lautete Banxian.",
+				"Der Große Buddha von Baguashan ist ein Wahrzeichen.",
+				"Der Konfuziustempel bewahrt Kulturerbe der Qing-Zeit."
+			]
+		}
+	},
+	"changhua": {
+		"city": {
+			"en": [
+				"Its earlier name was Banxian.",
+				"The Great Buddha at Baguashan is a landmark.",
+				"Its Confucius temple preserves Qing-era heritage."
+			],
+			"it": [
+				"Il nome precedente era Banxian.",
+				"Il Grande Buddha di Baguashan è un simbolo locale.",
+				"Il tempio di Confucio conserva il patrimonio dell’epoca Qing."
+			],
+			"de": [
+				"Der frühere Name lautete Banxian.",
+				"Der Große Buddha von Baguashan ist ein Wahrzeichen.",
+				"Der Konfuziustempel bewahrt Kulturerbe der Qing-Zeit."
+			]
+		}
+	},
+	"nantou-county": {
+		"region": {
+			"en": [
+				"The county is named after Nantou town.",
+				"Sun Moon Lake is associated with Thao culture.",
+				"Tea growing shapes the hills around Lugu."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Nantou.",
+				"Il lago del Sole e della Luna è legato alla cultura thao.",
+				"La coltivazione del tè caratterizza le colline di Lugu."
+			],
+			"de": [
+				"Der Landkreis ist nach Nantou benannt.",
+				"Der Sonne-Mond-See ist mit der Thao-Kultur verbunden.",
+				"Teeanbau prägt die Hügel um Lugu."
+			]
+		}
+	},
+	"hualien-county": {
+		"region": {
+			"en": [
+				"The county shares its name with Hualien City.",
+				"Taroko is famed for its marble gorge.",
+				"Amis and other Indigenous communities preserve distinctive cultural traditions."
+			],
+			"it": [
+				"La contea condivide il nome con la città di Hualien.",
+				"Taroko è celebre per la gola di marmo.",
+				"Gli amis e altre comunità indigene conservano particolari tradizioni culturali."
+			],
+			"de": [
+				"Der Landkreis teilt seinen Namen mit Hualien.",
+				"Taroko ist für seine Marmorschlucht bekannt.",
+				"Amis und andere indigene Gemeinschaften bewahren eigene Kulturtraditionen."
+			]
+		}
+	},
+	"yunlin-county": {
+		"region": {
+			"en": [
+				"Its Chinese name means cloud forest.",
+				"Beigang’s Chaotian Temple is dedicated to Mazu.",
+				"Glove puppetry is an important cultural tradition."
+			],
+			"it": [
+				"Il nome cinese significa foresta di nuvole.",
+				"Il Tempio Chaotian di Beigang è dedicato a Mazu.",
+				"Il teatro dei burattini a guanto è un’importante tradizione culturale."
+			],
+			"de": [
+				"Der chinesische Name bedeutet Wolkenwald.",
+				"Beigangs Chaotian-Tempel ist Mazu geweiht.",
+				"Handpuppentheater ist eine bedeutende Kulturtradition."
+			]
+		}
+	},
+	"chiayi-city": {
+		"region": {
+			"en": [
+				"Formerly Tsulosan, it was renamed Chiayi in 1787.",
+				"The Alishan Forest Railway starts here.",
+				"Hinoki Village preserves former forestry dormitories."
+			],
+			"it": [
+				"Già Tsulosan, fu ribattezzata Chiayi nel 1787.",
+				"La ferrovia forestale di Alishan parte da qui.",
+				"Il villaggio Hinoki conserva antichi dormitori dei lavoratori forestali."
+			],
+			"de": [
+				"Das frühere Tsulosan wurde 1787 in Chiayi umbenannt.",
+				"Die Alishan-Waldbahn beginnt hier.",
+				"Das Hinoki-Dorf bewahrt frühere Forstarbeiterunterkünfte."
+			]
+		}
+	},
+	"chiayi": {
+		"city": {
+			"en": [
+				"Formerly Tsulosan, it was renamed Chiayi in 1787.",
+				"The Alishan Forest Railway starts here.",
+				"Hinoki Village preserves former forestry dormitories."
+			],
+			"it": [
+				"Già Tsulosan, fu ribattezzata Chiayi nel 1787.",
+				"La ferrovia forestale di Alishan parte da qui.",
+				"Il villaggio Hinoki conserva antichi dormitori dei lavoratori forestali."
+			],
+			"de": [
+				"Das frühere Tsulosan wurde 1787 in Chiayi umbenannt.",
+				"Die Alishan-Waldbahn beginnt hier.",
+				"Das Hinoki-Dorf bewahrt frühere Forstarbeiterunterkünfte."
+			]
+		}
+	},
+	"penghu-county": {
+		"region": {
+			"en": [
+				"Its old European name Pescadores means fishermen in Portuguese.",
+				"Basalt columns recall the islands’ volcanic origin.",
+				"Traditional houses use local stone."
+			],
+			"it": [
+				"L’antico nome europeo Pescadores significa pescatori in portoghese.",
+				"Le colonne di basalto ricordano l’origine vulcanica delle isole.",
+				"Le case tradizionali utilizzano pietra locale."
+			],
+			"de": [
+				"Der alte europäische Name Pescadores bedeutet auf Portugiesisch Fischer.",
+				"Basaltsäulen erinnern an den vulkanischen Ursprung der Inseln.",
+				"Traditionelle Häuser verwenden örtlichen Stein."
+			]
+		}
+	},
+	"chiayi-county": {
+		"region": {
+			"en": [
+				"The name Chiayi recalls a Qing-era commendation of loyalty.",
+				"Alishan is known for tea and forestry heritage.",
+				"Taibao houses the National Palace Museum’s Southern Branch."
+			],
+			"it": [
+				"Il nome Chiayi ricorda un elogio della lealtà dell’epoca Qing.",
+				"Alishan è nota per il tè e il patrimonio forestale.",
+				"Taibao ospita la sede meridionale del Museo nazionale del palazzo."
+			],
+			"de": [
+				"Der Name Chiayi erinnert an ein Lob der Treue aus der Qing-Zeit.",
+				"Alishan ist für Tee und Forstgeschichte bekannt.",
+				"Taibao beherbergt die südliche Zweigstelle des Nationalen Palastmuseums."
+			]
+		}
+	},
+	"tainan-city": {
+		"region": {
+			"en": [
+				"Tainan means southern Taiwan.",
+				"Anping’s old fort recalls the Dutch period.",
+				"Its Confucius temple preserves an early centre of classical learning."
+			],
+			"it": [
+				"Tainan significa Taiwan meridionale.",
+				"L’antico forte di Anping ricorda il periodo olandese.",
+				"Il tempio di Confucio conserva un antico centro di studi classici."
+			],
+			"de": [
+				"Tainan bedeutet Süd-Taiwan.",
+				"Anpings altes Fort erinnert an die niederländische Zeit.",
+				"Der Konfuziustempel bewahrt ein frühes Zentrum klassischer Bildung."
+			]
+		}
+	},
+	"tainan": {
+		"city": {
+			"en": [
+				"Tainan means southern Taiwan.",
+				"Anping’s old fort recalls the Dutch period.",
+				"Its Confucius temple preserves an early centre of classical learning."
+			],
+			"it": [
+				"Tainan significa Taiwan meridionale.",
+				"L’antico forte di Anping ricorda il periodo olandese.",
+				"Il tempio di Confucio conserva un antico centro di studi classici."
+			],
+			"de": [
+				"Tainan bedeutet Süd-Taiwan.",
+				"Anpings altes Fort erinnert an die niederländische Zeit.",
+				"Der Konfuziustempel bewahrt ein frühes Zentrum klassischer Bildung."
+			]
+		}
+	},
+	"kaohsiung-city": {
+		"region": {
+			"en": [
+				"Its earlier name Takau came from an Indigenous place name.",
+				"Pier-2 turned old warehouses into an arts district.",
+				"The Love River is a landmark of the city."
+			],
+			"it": [
+				"Il nome precedente Takau derivava da un toponimo indigeno.",
+				"Pier-2 trasformò antichi magazzini in un quartiere artistico.",
+				"Il Fiume dell’Amore è un simbolo della città."
+			],
+			"de": [
+				"Der frühere Name Takau ging auf einen indigenen Ortsnamen zurück.",
+				"Pier-2 verwandelte alte Lagerhäuser in ein Kunstviertel.",
+				"Der Liebesfluss ist ein Wahrzeichen der Stadt."
+			]
+		}
+	},
+	"kaohsiung": {
+		"city": {
+			"en": [
+				"Its earlier name Takau came from an Indigenous place name.",
+				"Pier-2 turned old warehouses into an arts district.",
+				"The Love River is a landmark of the city."
+			],
+			"it": [
+				"Il nome precedente Takau derivava da un toponimo indigeno.",
+				"Pier-2 trasformò antichi magazzini in un quartiere artistico.",
+				"Il Fiume dell’Amore è un simbolo della città."
+			],
+			"de": [
+				"Der frühere Name Takau ging auf einen indigenen Ortsnamen zurück.",
+				"Pier-2 verwandelte alte Lagerhäuser in ein Kunstviertel.",
+				"Der Liebesfluss ist ein Wahrzeichen der Stadt."
+			]
+		}
+	},
+	"taitung-county": {
+		"region": {
+			"en": [
+				"Taitung means eastern Taiwan.",
+				"The Beinan archaeological site preserves prehistoric burials.",
+				"The National Museum of Prehistory explores the island’s early cultures."
+			],
+			"it": [
+				"Taitung significa Taiwan orientale.",
+				"Il sito archeologico di Beinan conserva sepolture preistoriche.",
+				"Il Museo nazionale della preistoria esplora le antiche culture dell’isola."
+			],
+			"de": [
+				"Taitung bedeutet Ost-Taiwan.",
+				"Die archäologische Stätte Beinan bewahrt prähistorische Gräber.",
+				"Das Nationale Museum für Vorgeschichte erforscht die frühen Kulturen der Insel."
+			]
+		}
+	},
+	"taitung": {
+		"city": {
+			"en": [
+				"Taitung means eastern Taiwan.",
+				"The Beinan archaeological site preserves prehistoric burials.",
+				"The National Museum of Prehistory explores the island’s early cultures."
+			],
+			"it": [
+				"Taitung significa Taiwan orientale.",
+				"Il sito archeologico di Beinan conserva sepolture preistoriche.",
+				"Il Museo nazionale della preistoria esplora le antiche culture dell’isola."
+			],
+			"de": [
+				"Taitung bedeutet Ost-Taiwan.",
+				"Die archäologische Stätte Beinan bewahrt prähistorische Gräber.",
+				"Das Nationale Museum für Vorgeschichte erforscht die frühen Kulturen der Insel."
+			]
+		}
+	},
+	"pingtung-county": {
+		"region": {
+			"en": [
+				"The county is named after Pingtung City.",
+				"Kenting National Park protects coastal and coral habitats.",
+				"Liuqiu is known for its coral-limestone landscape."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Pingtung.",
+				"Il Parco nazionale di Kenting protegge habitat costieri e corallini.",
+				"Liuqiu è nota per il paesaggio di calcare corallino."
+			],
+			"de": [
+				"Der Landkreis ist nach Pingtung benannt.",
+				"Der Kenting-Nationalpark schützt Küsten- und Korallenlebensräume.",
+				"Liuqiu ist für seine Korallenkalklandschaft bekannt."
+			]
+		}
+	},
+	"zhubei": {
+		"city": {
+			"en": [
+				"Its name refers to the area north of Hsinchu.",
+				"Xinwawu preserves Hakka cultural heritage.",
+				"Hsinchu’s high-speed railway station is located here."
+			],
+			"it": [
+				"Il nome si riferisce all’area a nord di Hsinchu.",
+				"Xinwawu conserva il patrimonio culturale hakka.",
+				"Qui si trova la stazione dell’alta velocità di Hsinchu."
+			],
+			"de": [
+				"Der Name bezieht sich auf das Gebiet nördlich von Hsinchu.",
+				"Xinwawu bewahrt Hakka-Kulturerbe.",
+				"Der Hochgeschwindigkeitsbahnhof Hsinchu liegt hier."
+			]
+		}
+	},
+	"yilan": {
+		"city": {
+			"en": [
+				"Its name developed from the Indigenous name Kavalan.",
+				"Its old distillery recalls Japanese-era industry.",
+				"Jimmy Park displays scenes from illustrator Jimmy Liao’s work."
+			],
+			"it": [
+				"Il nome deriva dall’indigeno Kavalan.",
+				"L’antica distilleria ricorda l’industria del periodo giapponese.",
+				"Jimmy Park presenta scene dalle opere dell’illustratore Jimmy Liao."
+			],
+			"de": [
+				"Der Name entwickelte sich aus dem indigenen Kavalan.",
+				"Die alte Brennerei erinnert an die Industrie der japanischen Zeit.",
+				"Der Jimmy-Park zeigt Szenen aus Werken des Illustrators Jimmy Liao."
+			]
+		}
+	},
+	"hualien": {
+		"city": {
+			"en": [
+				"Japanese-era maps used the name Karenkō.",
+				"Pine Garden preserves a historic Japanese military building.",
+				"Dongdamen is a well-known night market."
+			],
+			"it": [
+				"Le mappe del periodo giapponese usavano il nome Karenkō.",
+				"Pine Garden conserva un edificio militare giapponese storico.",
+				"Dongdamen è un noto mercato notturno."
+			],
+			"de": [
+				"Karten der japanischen Zeit verwendeten den Namen Karenkō.",
+				"Pine Garden bewahrt ein historisches japanisches Militärgebäude.",
+				"Dongdamen ist ein bekannter Nachtmarkt."
+			]
+		}
+	},
+	"nantou": {
+		"city": {
+			"en": [
+				"Its name transcribes the Hoanya place name Ramtau.",
+				"The city preserves a pottery-making tradition.",
+				"Its county museum presents local history."
+			],
+			"it": [
+				"Il nome trascrive il toponimo hoanya Ramtau.",
+				"La città conserva una tradizione ceramica.",
+				"Il museo della contea presenta la storia locale."
+			],
+			"de": [
+				"Der Name überträgt den Hoanya-Ortsnamen Ramtau.",
+				"Die Stadt bewahrt eine Töpfertradition.",
+				"Das Kreismuseum zeigt örtliche Geschichte."
+			]
+		}
+	},
+	"pingtung": {
+		"city": {
+			"en": [
+				"Its earlier name was Akau.",
+				"Shengli Village preserves Japanese-era military housing.",
+				"Cifeng Temple is dedicated to Mazu."
+			],
+			"it": [
+				"Il nome precedente era Akau.",
+				"Il villaggio Shengli conserva alloggi militari del periodo giapponese.",
+				"Il Tempio Cifeng è dedicato a Mazu."
+			],
+			"de": [
+				"Der frühere Name lautete Akau.",
+				"Das Shengli-Dorf bewahrt Militärunterkünfte aus japanischer Zeit.",
+				"Der Cifeng-Tempel ist Mazu geweiht."
+			]
+		}
+	},
+	"miaoli": {
+		"city": {
+			"en": [
+				"Its name was adapted from the Taokas place name Pali.",
+				"The 460-metre Gongweixu railway tunnel was completed in 1903.",
+				"Trains were rerouted in 1998, leaving the old tunnel for preservation."
+			],
+			"it": [
+				"Il nome fu adattato dal toponimo taokas Pali.",
+				"Il tunnel ferroviario Gongweixu, lungo 460 metri, fu completato nel 1903.",
+				"Nel 1998 i treni furono deviati, permettendo di conservare il vecchio tunnel."
+			],
+			"de": [
+				"Der Name wurde aus dem Taokas-Ortsnamen Pali übernommen.",
+				"Der 460 Meter lange Eisenbahntunnel Gongweixu wurde 1903 fertiggestellt.",
+				"1998 wurden die Züge umgeleitet, sodass der alte Tunnel erhalten werden konnte."
+			]
+		}
+	},
+	"douliou": {
+		"city": {
+			"en": [
+				"Its name is also romanized Douliu.",
+				"Taiping Street preserves ornate shopfronts from the Japanese colonial era.",
+				"Yunzhong Street’s former police dormitories became cultural spaces."
+			],
+			"it": [
+				"Il nome è trascritto anche Douliu.",
+				"Taiping Street conserva elaborate facciate di negozi dell’epoca coloniale giapponese.",
+				"Gli ex alloggi della polizia di Yunzhong Street sono diventati spazi culturali."
+			],
+			"de": [
+				"Der Name wird auch Douliu geschrieben.",
+				"Die Taiping-Straße bewahrt verzierte Ladenfassaden aus der japanischen Kolonialzeit.",
+				"Frühere Polizeiunterkünfte an der Yunzhong-Straße wurden zu Kulturräumen."
+			]
+		}
+	},
+	"magong": {
+		"city": {
+			"en": [
+				"Its name recalls the historic Mazu temple.",
+				"The Four-Eyed Well has four circular openings for drawing water.",
+				"Shuncheng Gate preserves part of the old city defences."
+			],
+			"it": [
+				"Il nome ricorda lo storico tempio di Mazu.",
+				"Il Pozzo dei quattro occhi ha quattro aperture circolari per attingere acqua.",
+				"La porta Shuncheng conserva parte delle antiche difese cittadine."
+			],
+			"de": [
+				"Der Name erinnert an den historischen Mazu-Tempel.",
+				"Der Vier-Augen-Brunnen hat vier runde Öffnungen zum Wasserschöpfen.",
+				"Das Shuncheng-Tor bewahrt einen Teil der alten Stadtbefestigung."
+			]
+		}
+	},
+	"puzi": {
+		"city": {
+			"en": [
+				"An earlier name meant beneath the hackberry tree.",
+				"Peitian Temple is a centre of Mazu worship.",
+				"The embroidery hall preserves a tradition of religious needlework."
+			],
+			"it": [
+				"Un nome precedente significava sotto l’albero di bagolaro.",
+				"Il tempio Peitian è un centro del culto di Mazu.",
+				"Il museo del ricamo conserva una tradizione di lavori ad ago religiosi."
+			],
+			"de": [
+				"Ein früherer Name bedeutete unter dem Zürgelbaum.",
+				"Der Peitian-Tempel ist ein Zentrum der Mazu-Verehrung.",
+				"Das Stickereimuseum bewahrt eine Tradition religiöser Nadelarbeiten."
+			]
+		}
+	},
+	"_excludedDistricts": {
+		"zhongli": {
+			"city": {
+				"en": [
+					"Its name was formerly romanized Chungli.",
+					"Zhongping Road preserves a historic commercial district.",
+					"Renhai Temple is a centre of traditional worship."
+				],
+				"it": [
+					"Il nome era precedentemente romanizzato Chungli.",
+					"Via Zhongping conserva uno storico quartiere commerciale.",
+					"Il Tempio Renhai è un centro di culto tradizionale."
+				],
+				"de": [
+					"Der Name wurde früher als Chungli romanisiert.",
+					"Die Zhongping-Straße bewahrt ein historisches Geschäftsviertel.",
+					"Der Renhai-Tempel ist ein Zentrum traditioneller Verehrung."
+				]
+			}
+		},
+		"bade": {
+			"city": {
+				"en": [
+					"Its old name Bakuaicuo meant eight houses.",
+					"Dabei Pond provides habitat for birds.",
+					"Sanyuan Temple preserves community religious traditions."
+				],
+				"it": [
+					"L’antico nome Bakuaicuo significava otto case.",
+					"Lo stagno Dabei offre un habitat agli uccelli.",
+					"Il Tempio Sanyuan conserva le tradizioni religiose della comunità."
+				],
+				"de": [
+					"Der alte Name Bakuaicuo bedeutete acht Häuser.",
+					"Der Dabei-Teich bietet Vögeln Lebensraum.",
+					"Der Sanyuan-Tempel bewahrt religiöse Gemeindetraditionen."
+				]
+			}
+		},
+		"pingzhen": {
+			"city": {
+				"en": [
+					"Its older settlement was known as Anping Town.",
+					"Historic irrigation channels recall its farming past.",
+					"Baozhong Yimin Temple preserves Hakka religious heritage."
+				],
+				"it": [
+					"L’antico insediamento era noto come Anping Town.",
+					"Gli storici canali irrigui ricordano il passato agricolo.",
+					"Il Tempio Baozhong Yimin conserva il patrimonio religioso hakka."
+				],
+				"de": [
+					"Die ältere Siedlung war als Anping Town bekannt.",
+					"Historische Bewässerungskanäle erinnern an die Landwirtschaftsgeschichte.",
+					"Der Baozhong-Yimin-Tempel bewahrt religiöses Hakka-Erbe."
+				]
+			}
+		},
+		"yangmei": {
+			"city": {
+				"en": [
+					"Its name recalls the wild waxberry trees that once grew here.",
+					"Fugang preserves an old trading street.",
+					"The Kuo Yuan Ye museum explores pastry and wedding traditions."
+				],
+				"it": [
+					"Il nome ricorda gli alberi di yangmei selvatici che crescevano qui.",
+					"Fugang conserva un’antica via commerciale.",
+					"Il museo Kuo Yuan Ye esplora le tradizioni dolciarie e nuziali."
+				],
+				"de": [
+					"Der Name erinnert an die hier einst wachsenden Wachsbeerbäume.",
+					"Fugang bewahrt eine alte Handelsstraße.",
+					"Das Kuo-Yuan-Ye-Museum zeigt Gebäck- und Hochzeitstraditionen."
+				]
+			}
 		}
 	}
 }

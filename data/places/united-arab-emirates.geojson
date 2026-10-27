@@ -1,0 +1,282 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "OpenStreetMap, Wambacher",
+		"via": "geoBoundaries gbOpen 9469f09",
+		"year": "2017",
+		"url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/ARE/ADM1/geoBoundaries-ARE-ADM1.geojson",
+		"sha256": "f6f0097b183518b7ddedd48c60b7e864e222156d2f0227bd345f271c2dd3d873",
+		"licence": "Open Data Commons Open Database License 1.0",
+		"licenceUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+		"simplification": "25%, keep-shapes; precision 0.000001"
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T12:34:53.714Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"ARE\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					54.396944444,
+					24.451111111
+				]
+			},
+			"properties": {
+				"NAME": "Abu Dhabi",
+				"NAME_EN": "Abu Dhabi",
+				"NAME_IT": "Abu Dhabi",
+				"NAME_DE": "Abu Dhabi",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Abu Dhabi",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 1570000,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1519"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					55.479722222,
+					25.399444444
+				]
+			},
+			"properties": {
+				"NAME": "Ajman",
+				"NAME_EN": "Ajman",
+				"NAME_IT": "Ajmān",
+				"NAME_DE": "Adschman",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Ajman",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 565767,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q530171"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					55.744722222,
+					24.2075
+				]
+			},
+			"properties": {
+				"NAME": "Al Ain",
+				"NAME_EN": "Al Ain",
+				"NAME_IT": "Al-'Ayn",
+				"NAME_DE": "Al-Ain",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Abu Dhabi",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 766936,
+				"POP1950": 0,
+				"populationDate": "2017-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q234600"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					56.266667,
+					25.616667
+				]
+			},
+			"properties": {
+				"NAME": "Dibba Al-Fujairah",
+				"NAME_EN": "Dibba Al-Fujairah",
+				"NAME_IT": "Dibba Al-Fujairah",
+				"NAME_DE": "Dibba Al-Fujairah",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Sharjah",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 41017,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q3696182"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					55.309444444,
+					25.269722222
+				]
+			},
+			"properties": {
+				"NAME": "Dubai",
+				"NAME_EN": "Dubai",
+				"NAME_IT": "Dubai",
+				"NAME_DE": "Dubai",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Dubai",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3944751,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q612"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					56.334444444,
+					25.122222222
+				]
+			},
+			"properties": {
+				"NAME": "Fujairah",
+				"NAME_EN": "Fujairah",
+				"NAME_IT": "Fujairah",
+				"NAME_DE": "Fudschaira",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Fujairah",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 93673,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q4045"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					56.12726,
+					24.80073
+				]
+			},
+			"properties": {
+				"NAME": "Hatta",
+				"NAME_EN": "Hatta",
+				"NAME_IT": "Hatta",
+				"NAME_DE": "Hatta",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Dubai",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 15324,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q770233"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					55.100884,
+					24.960468
+				]
+			},
+			"properties": {
+				"NAME": "Jebel Ali",
+				"NAME_EN": "Jebel Ali",
+				"NAME_IT": "Jebel Ali",
+				"NAME_DE": "Dschabal Ali",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Dubai",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 31634,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q665502"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					53.65361111,
+					23.65222222
+				]
+			},
+			"properties": {
+				"NAME": "Madinat Zayed",
+				"NAME_EN": "Madinat Zayed",
+				"NAME_IT": "Madinat Zayed",
+				"NAME_DE": "Madinat Zayed",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Abu Dhabi",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29095,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q12241857"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					56.128333333,
+					25.898611111
+				]
+			},
+			"properties": {
+				"NAME": "Ras al-Khaimah",
+				"NAME_EN": "Ras al-Khaimah",
+				"NAME_IT": "Ras Al Khayma",
+				"NAME_DE": "Ra’s al-Chaima",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Ras Al Khaimah",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 115949,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2126436"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					55.411944444,
+					25.3375
+				]
+			},
+			"properties": {
+				"NAME": "Sharjah",
+				"NAME_EN": "Sharjah",
+				"NAME_IT": "Sharja",
+				"NAME_DE": "Schardscha",
+				"ADM0NAME": "United Arab Emirates",
+				"ADM1NAME": "Sharjah",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1247749,
+				"POP1950": 0,
+				"populationDate": "2015-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q289693"
+			}
+		}
+	]
+}

@@ -1,0 +1,363 @@
+{
+	"id": "lithuania-counties",
+	"name": "Lithuania — Counties",
+	"country": "Lithuania",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/lithuania.geojson",
+	"boundaryRenames": {
+		"Telšiai": "Telšių",
+		"Šiauliai": "Šiaulių",
+		"Panevezio": "Panevėžio",
+		"Klaipedos": "Klaipėdos",
+		"Taurages": "Tauragės",
+		"Marijampoles": "Marijampolės"
+	},
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "telsiu",
+			"name": "Telšių",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.14085,
+				56.0096
+			],
+			"bbox": [
+				21.5834,
+				55.6018,
+				22.6983,
+				56.4174
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						21.6947,
+						55.9058
+					],
+					[
+						22.1042,
+						56.0629
+					],
+					[
+						22.5137,
+						56.0003
+					]
+				],
+				"aspect": 0.84
+			}
+		},
+		{
+			"id": "siauliu",
+			"name": "Šiaulių",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.2575,
+				55.94135
+			],
+			"bbox": [
+				22.3746,
+				55.4743,
+				24.1404,
+				56.4084
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						22.7082,
+						55.9492
+					],
+					[
+						23.3115,
+						55.922
+					],
+					[
+						23.9148,
+						55.9655
+					]
+				],
+				"aspect": 0.84
+			}
+		},
+		{
+			"id": "panevezio",
+			"name": "Panevėžio",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.9142,
+				55.915949999999995
+			],
+			"bbox": [
+				23.8671,
+				55.3932,
+				25.9613,
+				56.4387
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						24.1421,
+						55.8237
+					],
+					[
+						24.9142,
+						56.0997
+					],
+					[
+						25.6864,
+						55.961
+					]
+				],
+				"aspect": 1.36
+			}
+		},
+		{
+			"id": "klaipedos",
+			"name": "Klaipėdos",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.671799999999998,
+				55.7068
+			],
+			"bbox": [
+				21.0447,
+				55.0299,
+				22.2989,
+				56.3837
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						21.4558,
+						56.19
+					],
+					[
+						21.1838,
+						55.6254
+					],
+					[
+						21.8045,
+						55.143
+					]
+				],
+				"aspect": 3.1
+			}
+		},
+		{
+			"id": "utenos",
+			"name": "Utenos",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.699550000000002,
+				55.492599999999996
+			],
+			"bbox": [
+				24.6305,
+				55.0267,
+				26.7686,
+				55.9585
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						24.9035,
+						55.4823
+					],
+					[
+						25.6334,
+						55.4303
+					],
+					[
+						26.3634,
+						55.5609
+					]
+				],
+				"aspect": 1.61
+			}
+		},
+		{
+			"id": "taurages",
+			"name": "Tauragės",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.64585,
+				55.372
+			],
+			"bbox": [
+				21.8142,
+				55.0571,
+				23.4775,
+				55.6869
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						22.0699,
+						55.5432
+					],
+					[
+						22.484,
+						55.1739
+					],
+					[
+						23.2484,
+						55.1264
+					]
+				],
+				"aspect": 2.59
+			}
+		},
+		{
+			"id": "kauno",
+			"name": "Kauno",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.72285,
+				55.02205
+			],
+			"bbox": [
+				22.6457,
+				54.4698,
+				24.8,
+				55.5743
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						23.2265,
+						55.507
+					],
+					[
+						24.0868,
+						55.2597
+					],
+					[
+						24.2865,
+						54.7147
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "vilniaus",
+			"name": "Vilniaus",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.56425,
+				54.825450000000004
+			],
+			"bbox": [
+				24.3886,
+				54.1283,
+				26.7399,
+				55.5226
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "marijampoles",
+			"name": "Marijampolės",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.165399999999998,
+				54.665850000000006
+			],
+			"bbox": [
+				22.5712,
+				54.2263,
+				23.7596,
+				55.1054
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						22.7947,
+						54.67
+					],
+					[
+						23.1831,
+						54.7451
+					],
+					[
+						23.5716,
+						54.6587
+					]
+				],
+				"aspect": 0.62
+			}
+		},
+		{
+			"id": "alytaus",
+			"name": "Alytaus",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.165999999999997,
+				54.222899999999996
+			],
+			"bbox": [
+				23.336,
+				53.8868,
+				24.996,
+				54.559
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						23.5466,
+						54.2025
+					],
+					[
+						24.1142,
+						54.2518
+					],
+					[
+						24.6818,
+						54.2063
+					]
+				],
+				"aspect": 1.21
+			}
+		}
+	],
+	"tourOrder": [
+		"telsiu",
+		"siauliu",
+		"panevezio",
+		"klaipedos",
+		"utenos",
+		"taurages",
+		"kauno",
+		"vilniaus",
+		"marijampoles",
+		"alytaus"
+	]
+}

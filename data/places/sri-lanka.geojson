@@ -1,0 +1,450 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": {
+		"provider": "OpenStreetMap, Wambacher",
+		"via": "geoBoundaries gbOpen 9469f09",
+		"year": "2017",
+		"url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/LKA/ADM1/geoBoundaries-LKA-ADM1.geojson",
+		"sha256": "29905000ac7860781735a34f556be278e023a4e7188dd53f7a9717457f1716a3",
+		"licence": "Open Data Commons Open Database License 1.0",
+		"licenceUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+		"simplification": "25%, keep-shapes; precision 0.000001"
+	},
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-26T12:35:00.398Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"LKA\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.410833333,
+					8.335
+				]
+			},
+			"properties": {
+				"NAME": "Anuradhapura",
+				"NAME_EN": "Anuradhapura",
+				"NAME_IT": "Anurādhapura",
+				"NAME_DE": "Anuradhapura",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "North Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 63208,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q5724"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81.056388888,
+					6.984722222
+				]
+			},
+			"properties": {
+				"NAME": "Badulla",
+				"NAME_EN": "Badulla",
+				"NAME_IT": "Badulla",
+				"NAME_DE": "Badulla",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Uva",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 42923,
+				"POP1950": 0,
+				"populationDate": "2007-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q390096"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79.860555555,
+					6.926666666
+				]
+			},
+			"properties": {
+				"NAME": "Colombo",
+				"NAME_EN": "Colombo",
+				"NAME_IT": "Colombo",
+				"NAME_DE": "Colombo",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Western",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 647557,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q35381"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.215555555,
+					6.032777777
+				]
+			},
+			"properties": {
+				"NAME": "Galle",
+				"NAME_EN": "Galle",
+				"NAME_IT": "Galle",
+				"NAME_DE": "Galle",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 93118,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q319366"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79.999722222,
+					7.091666666
+				]
+			},
+			"properties": {
+				"NAME": "Gampaha",
+				"NAME_EN": "Gampaha",
+				"NAME_IT": "Gampaha",
+				"NAME_DE": "Gampaha",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Western",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 191040,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2616818"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81.1185,
+					6.1241
+				]
+			},
+			"properties": {
+				"NAME": "Hambantota",
+				"NAME_EN": "Hambantota",
+				"NAME_IT": "Hambantota",
+				"NAME_DE": "Hambantota",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 11213,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1025283"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.016666666,
+					9.664722222
+				]
+			},
+			"properties": {
+				"NAME": "Jaffna",
+				"NAME_EN": "Jaffna",
+				"NAME_IT": "Jaffna",
+				"NAME_DE": "Jaffna",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 88138,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q215277"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.635,
+					7.293055555
+				]
+			},
+			"properties": {
+				"NAME": "Kandy",
+				"NAME_EN": "Kandy",
+				"NAME_IT": "Kandy",
+				"NAME_DE": "Kandy",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 120087,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q203197"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.345277777,
+					7.253055555
+				]
+			},
+			"properties": {
+				"NAME": "Kegalle",
+				"NAME_EN": "Kegalle",
+				"NAME_IT": "Kegalle",
+				"NAME_DE": "Kegalle",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Sabaragamuwa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17962,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1968268"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79.9137786,
+					8.9772444
+				]
+			},
+			"properties": {
+				"NAME": "Mannar",
+				"NAME_EN": "Mannar",
+				"NAME_IT": "Mannar",
+				"NAME_DE": "Mannar",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 35000,
+				"POP1950": 0,
+				"populationDate": "2007-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1280127"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.616666666,
+					7.466666666
+				]
+			},
+			"properties": {
+				"NAME": "Matale",
+				"NAME_EN": "Matale",
+				"NAME_IT": "Matale",
+				"NAME_DE": "Matale",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 36451,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1540498"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.533333333,
+					5.95
+				]
+			},
+			"properties": {
+				"NAME": "Matara",
+				"NAME_EN": "Matara",
+				"NAME_IT": "Matara",
+				"NAME_DE": "Matara",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Southern",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 68244,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q13360574"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.8,
+					9.283333333
+				]
+			},
+			"properties": {
+				"NAME": "Mullaitivu(මූලදීපය)",
+				"NAME_EN": "Mullaitivu(මූලදීපය)",
+				"NAME_IT": "Mullaitivu",
+				"NAME_DE": "Mullaitivu",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Northern",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 37339,
+				"POP1950": 0,
+				"populationDate": "2009-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q507144"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79.838611111,
+					7.211111111
+				]
+			},
+			"properties": {
+				"NAME": "Negombo",
+				"NAME_EN": "Negombo",
+				"NAME_IT": "Negombo",
+				"NAME_DE": "Negombo",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Western",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 142136,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q668616"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80.78286,
+					6.97078
+				]
+			},
+			"properties": {
+				"NAME": "Nuwara Eliya",
+				"NAME_EN": "Nuwara Eliya",
+				"NAME_IT": "Nuwara Eliya",
+				"NAME_DE": "Nuwara Eliya",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Central",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 27500,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1340579"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79.916388888,
+					6.9
+				]
+			},
+			"properties": {
+				"NAME": "Sri Jayawardenepura Kotte",
+				"NAME_EN": "Sri Jayawardenepura Kotte",
+				"NAME_IT": "Sri Jayawardenapura Kotte",
+				"NAME_DE": "Sri Jayewardenepura Kotte",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Western",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 115826,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q41963"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81.233333333,
+					8.566666666
+				]
+			},
+			"properties": {
+				"NAME": "Trincomalee",
+				"NAME_EN": "Trincomalee",
+				"NAME_IT": "Trincomalee",
+				"NAME_DE": "Trincomalee",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Eastern",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 99135,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q323873"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81.4333,
+					8.13333
+				]
+			},
+			"properties": {
+				"NAME": "Vakarai",
+				"NAME_EN": "Vakarai",
+				"NAME_IT": "Vakarai",
+				"NAME_DE": "Vakarai",
+				"ADM0NAME": "Sri Lanka",
+				"ADM1NAME": "Eastern",
+				"coordinatePrecision": 0.090744277421996,
+				"ADM0CAP": 0,
+				"POP_MAX": 21000,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q7908969"
+			}
+		}
+	]
+}

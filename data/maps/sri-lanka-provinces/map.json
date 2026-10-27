@@ -1,0 +1,338 @@
+{
+	"id": "sri-lanka-provinces",
+	"name": "Sri Lanka — Provinces",
+	"country": "Sri Lanka",
+	"attribution": "geoBoundaries gbOpen 9469f09; OpenStreetMap, Wambacher; 2017; Open Data Commons Open Database License 1.0; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/sri-lanka-gb-9469f09.geojson",
+	"placesSource": "data/places/sri-lanka.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "northern",
+			"name": "Northern",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.3065,
+				9.18075
+			],
+			"bbox": [
+				79.6507,
+				8.5262,
+				80.9623,
+				9.8353
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						80.0139,
+						8.8849
+					],
+					[
+						80.4018,
+						9.1998
+					],
+					[
+						80.7896,
+						9.147
+					]
+				],
+				"aspect": 0.98
+			}
+		},
+		{
+			"id": "north-central",
+			"name": "North Central",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.64645,
+				8.29065
+			],
+			"bbox": [
+				79.9528,
+				7.6611,
+				81.3401,
+				8.9202
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						80.1374,
+						8.4076
+					],
+					[
+						80.6681,
+						8.4514
+					],
+					[
+						81.1987,
+						7.9911
+					]
+				],
+				"aspect": 1.8
+			}
+		},
+		{
+			"id": "north-western",
+			"name": "North Western",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.13525,
+				7.91275
+			],
+			"bbox": [
+				79.6927,
+				7.2582,
+				80.5778,
+				8.5673
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						79.8603,
+						7.864
+					],
+					[
+						80.1612,
+						7.76
+					],
+					[
+						80.462,
+						7.6515
+					]
+				],
+				"aspect": 0.68
+			}
+		},
+		{
+			"id": "eastern",
+			"name": "Eastern",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.3159,
+				7.7514
+			],
+			"bbox": [
+				80.753,
+				6.5107,
+				81.8788,
+				8.9921
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						81.3238,
+						7.9729
+					],
+					[
+						81.6667,
+						7.4186
+					],
+					[
+						81.7569,
+						6.7662
+					]
+				],
+				"aspect": 3.67
+			}
+		},
+		{
+			"id": "central",
+			"name": "Central",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.71905000000001,
+				7.38175
+			],
+			"bbox": [
+				80.4221,
+				6.7512,
+				81.016,
+				8.0123
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						80.6312,
+						6.8415
+					],
+					[
+						80.8336,
+						7.3128
+					],
+					[
+						80.696,
+						7.8091
+					]
+				],
+				"aspect": 2.41
+			}
+		},
+		{
+			"id": "uva",
+			"name": "Uva",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.2228,
+				6.96075
+			],
+			"bbox": [
+				80.8084,
+				6.2965,
+				81.6372,
+				7.625
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						80.9693,
+						6.8482
+					],
+					[
+						81.2622,
+						6.9991
+					],
+					[
+						81.555,
+						6.8707
+					]
+				],
+				"aspect": 0.6
+			}
+		},
+		{
+			"id": "western",
+			"name": "Western",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.1089,
+				6.8283000000000005
+			],
+			"bbox": [
+				79.8365,
+				6.3261,
+				80.3813,
+				7.3305
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						80.0151,
+						7.212
+					],
+					[
+						79.9729,
+						6.7972
+					],
+					[
+						80.1976,
+						6.4441
+					]
+				],
+				"aspect": 2.49
+			}
+		},
+		{
+			"id": "sabaragamuwa",
+			"name": "Sabaragamuwa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.55324999999999,
+				6.8172999999999995
+			],
+			"bbox": [
+				80.1541,
+				6.2381,
+				80.9524,
+				7.3965
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						80.2877,
+						7.2007
+					],
+					[
+						80.3328,
+						6.6806
+					],
+					[
+						80.7799,
+						6.383
+					]
+				],
+				"aspect": 2.9
+			}
+		},
+		{
+			"id": "southern",
+			"name": "Southern",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.84774999999999,
+				6.2501
+			],
+			"bbox": [
+				79.9876,
+				5.9202,
+				81.7079,
+				6.58
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						80.129,
+						6.2402
+					],
+					[
+						80.7709,
+						6.0322
+					],
+					[
+						81.3466,
+						6.332
+					]
+				],
+				"aspect": 4.2
+			}
+		}
+	],
+	"tourOrder": [
+		"northern",
+		"north-central",
+		"north-western",
+		"eastern",
+		"central",
+		"uva",
+		"western",
+		"sabaragamuwa",
+		"southern"
+	]
+}

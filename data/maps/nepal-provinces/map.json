@@ -1,0 +1,249 @@
+{
+	"id": "nepal-provinces",
+	"name": "Nepal — Provinces",
+	"country": "Nepal",
+	"attribution": "geoBoundaries gbOpen 9469f09; Survey Department of Nepal, OCHA FISS; 2020; Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO); https://creativecommons.org/licenses/by/3.0/igo/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/nepal-gb-9469f09.geojson",
+	"placesSource": "data/places/nepal.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "sudurpashchim",
+			"name": "Sudurpashchim",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.9334,
+				29.3206
+			],
+			"bbox": [
+				80.0586,
+				28.3945,
+				81.8082,
+				30.2467
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						80.3931,
+						29.152
+					],
+					[
+						80.9914,
+						29.4559
+					],
+					[
+						81.5897,
+						29.5838
+					]
+				],
+				"aspect": 0.91
+			}
+		},
+		{
+			"id": "karnali",
+			"name": "Karnali",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				82.3306,
+				29.3001
+			],
+			"bbox": [
+				80.9823,
+				28.1553,
+				83.6789,
+				30.4449
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						81.5727,
+						29.285
+					],
+					[
+						82.4572,
+						29.2013
+					],
+					[
+						83.3417,
+						29.1783
+					]
+				],
+				"aspect": 1.67
+			}
+		},
+		{
+			"id": "gandaki",
+			"name": "Gandaki",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				84.03864999999999,
+				28.38445
+			],
+			"bbox": [
+				82.8793,
+				27.4378,
+				85.198,
+				29.3311
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						83.2501,
+						28.5363
+					],
+					[
+						84.0746,
+						28.5197
+					],
+					[
+						84.8991,
+						28.24
+					]
+				],
+				"aspect": 1.7
+			}
+		},
+		{
+			"id": "lumbini",
+			"name": "Lumbini",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				82.5429,
+				28.10035
+			],
+			"bbox": [
+				81.0592,
+				27.3315,
+				84.0266,
+				28.8692
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bagmati",
+			"name": "Bagmati",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.2464,
+				27.6527
+			],
+			"bbox": [
+				83.92,
+				26.9191,
+				86.5728,
+				28.3863
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						84.5902,
+						27.7023
+					],
+					[
+						85.4397,
+						27.9074
+					],
+					[
+						86.222,
+						27.5299
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "koshi",
+			"name": "Koshi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				87.18225000000001,
+				27.230449999999998
+			],
+			"bbox": [
+				86.1632,
+				26.3478,
+				88.2013,
+				28.1131
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						86.5218,
+						27.3753
+					],
+					[
+						87.2322,
+						27.1599
+					],
+					[
+						87.9425,
+						27.092
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "madhesh",
+			"name": "Madhesh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.74845,
+				26.9439
+			],
+			"bbox": [
+				84.4839,
+				26.4246,
+				87.013,
+				27.4632
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						84.8008,
+						27.212
+					],
+					[
+						85.7806,
+						26.8666
+					],
+					[
+						86.7919,
+						26.6005
+					]
+				],
+				"aspect": 5.22
+			}
+		}
+	],
+	"tourOrder": [
+		"sudurpashchim",
+		"karnali",
+		"gandaki",
+		"lumbini",
+		"bagmati",
+		"koshi",
+		"madhesh"
+	]
+}

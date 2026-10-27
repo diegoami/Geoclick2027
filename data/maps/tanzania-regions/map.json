@@ -1,0 +1,1129 @@
+{
+	"id": "tanzania-regions",
+	"name": "Tanzania — Regions",
+	"country": "Tanzania",
+	"attribution": "Tanzania administrative boundaries via OCHA COD-AB, 2018-10-19; 2018; CC BY 3.0 IGO; https://creativecommons.org/licenses/by/3.0/igo/; Coordinate corrections: GeoNames, CC BY 4.0, https://www.geonames.org; Musoma coordinate: Tanzania municipal strategic plan; data/scripts/placeCorrections.ts; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/boundaries/tanzania-regions-2018.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "mara",
+			"name": "Mara",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.235749999999996,
+				-1.7622999999999998
+			],
+			"bbox": [
+				33.2056,
+				-2.4976,
+				35.2659,
+				-1.027
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						33.7807,
+						-1.7458
+					],
+					[
+						34.4281,
+						-1.6807
+					],
+					[
+						35.0754,
+						-2.0691
+					]
+				],
+				"aspect": 1.17
+			}
+		},
+		{
+			"id": "kagera",
+			"name": "Kagera",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.158299999999997,
+				-2.17135
+			],
+			"bbox": [
+				30.4107,
+				-3.3596,
+				31.9059,
+				-0.9831
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						31.0278,
+						-3.0212
+					],
+					[
+						31.2154,
+						-2.0797
+					],
+					[
+						31.2506,
+						-1.1231
+					]
+				],
+				"aspect": 2.28
+			}
+		},
+		{
+			"id": "mwanza",
+			"name": "Mwanza",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.8656,
+				-2.5667
+			],
+			"bbox": [
+				31.9426,
+				-3.4354,
+				33.7886,
+				-1.698
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						32.8627,
+						-3.0373
+					],
+					[
+						33.2117,
+						-2.9906
+					],
+					[
+						33.5606,
+						-2.7625
+					]
+				],
+				"aspect": 0.91
+			}
+		},
+		{
+			"id": "arusha",
+			"name": "Arusha",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.089349999999996,
+				-2.9174
+			],
+			"bbox": [
+				34.7493,
+				-4.1478,
+				37.4294,
+				-1.687
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						35.3019,
+						-2.6623
+					],
+					[
+						36.016,
+						-2.9648
+					],
+					[
+						36.7301,
+						-3.1189
+					]
+				],
+				"aspect": 0.92
+			}
+		},
+		{
+			"id": "simiyu",
+			"name": "Simiyu",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.32235,
+				-3.1317000000000004
+			],
+			"bbox": [
+				33.4231,
+				-4.0841,
+				35.2216,
+				-2.1793
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						33.7605,
+						-2.8895
+					],
+					[
+						34.2731,
+						-3.2198
+					],
+					[
+						34.7857,
+						-3.1595
+					]
+				],
+				"aspect": 0.73
+			}
+		},
+		{
+			"id": "geita",
+			"name": "Geita",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.9717,
+				-3.3531
+			],
+			"bbox": [
+				31.1508,
+				-4.4683,
+				32.7926,
+				-2.2379
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						31.3998,
+						-3.8377
+					],
+					[
+						31.8679,
+						-3.2164
+					],
+					[
+						32.3359,
+						-3.0435
+					]
+				],
+				"aspect": 0.8
+			}
+		},
+		{
+			"id": "kilimanjaro",
+			"name": "Kilimanjaro",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.6466,
+				-3.7316
+			],
+			"bbox": [
+				36.8897,
+				-4.6137,
+				38.4035,
+				-2.8495
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						37.2148,
+						-3.0423
+					],
+					[
+						37.63,
+						-3.7198
+					],
+					[
+						38.0199,
+						-4.4115
+					]
+				],
+				"aspect": 2.79
+			}
+		},
+		{
+			"id": "shinyanga",
+			"name": "Shinyanga",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.9583,
+				-3.7600000000000002
+			],
+			"bbox": [
+				31.683,
+				-4.3238,
+				34.2336,
+				-3.1962
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						32.0934,
+						-4.0181
+					],
+					[
+						32.9613,
+						-3.426
+					],
+					[
+						33.9455,
+						-3.7244
+					]
+				],
+				"aspect": 3.46
+			}
+		},
+		{
+			"id": "manyara",
+			"name": "Manyara",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.432900000000004,
+				-4.6998999999999995
+			],
+			"bbox": [
+				34.8657,
+				-5.9513,
+				38.0001,
+				-3.4485
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						36.4593,
+						-4.7414
+					],
+					[
+						37.016,
+						-4.7031
+					],
+					[
+						37.5726,
+						-4.5168
+					]
+				],
+				"aspect": 0.54
+			}
+		},
+		{
+			"id": "kigoma",
+			"name": "Kigoma",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.5455,
+				-4.700900000000001
+			],
+			"bbox": [
+				29.5984,
+				-6.5707,
+				31.4926,
+				-2.8311
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						30.0337,
+						-5.1617
+					],
+					[
+						30.9801,
+						-4.49
+					],
+					[
+						31.052,
+						-3.4503
+					]
+				],
+				"aspect": 1.76
+			}
+		},
+		{
+			"id": "kaskazini-pemba",
+			"name": "Kaskazini Pemba",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.75935,
+				-5.04265
+			],
+			"bbox": [
+				39.6425,
+				-5.2008,
+				39.8762,
+				-4.8845
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						39.7122,
+						-5.016
+					],
+					[
+						39.7704,
+						-5.0702
+					],
+					[
+						39.8285,
+						-5.0687
+					]
+				],
+				"aspect": 0.5
+			}
+		},
+		{
+			"id": "tanga",
+			"name": "Tanga",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.1199,
+				-5.0638000000000005
+			],
+			"bbox": [
+				37.0197,
+				-6.0187,
+				39.2201,
+				-4.1089
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						37.3853,
+						-5.6088
+					],
+					[
+						38.162,
+						-5.078
+					],
+					[
+						38.9387,
+						-5.0561
+					]
+				],
+				"aspect": 1.31
+			}
+		},
+		{
+			"id": "kusini-pemba",
+			"name": "Kusini Pemba",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.71495,
+				-5.31895
+			],
+			"bbox": [
+				39.5742,
+				-5.4794,
+				39.8557,
+				-5.1585
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						39.6902,
+						-5.4154
+					],
+					[
+						39.7488,
+						-5.32
+					],
+					[
+						39.7908,
+						-5.2166
+					]
+				],
+				"aspect": 1.72
+			}
+		},
+		{
+			"id": "tabora",
+			"name": "Tabora",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.6398,
+				-5.4266
+			],
+			"bbox": [
+				31.038,
+				-6.9765,
+				34.2416,
+				-3.8767
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						31.6399,
+						-4.9557
+					],
+					[
+						32.6901,
+						-5.6086
+					],
+					[
+						33.7403,
+						-5.2577
+					]
+				],
+				"aspect": 0.98
+			}
+		},
+		{
+			"id": "singida",
+			"name": "Singida",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.417699999999996,
+				-5.67015
+			],
+			"bbox": [
+				33.4865,
+				-7.5348,
+				35.3489,
+				-3.8055
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						34.1592,
+						-7.0712
+					],
+					[
+						34.9356,
+						-5.7022
+					],
+					[
+						34.5047,
+						-4.1686
+					]
+				],
+				"aspect": 2.48
+			}
+		},
+		{
+			"id": "dodoma",
+			"name": "Dodoma",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.0106,
+				-5.845000000000001
+			],
+			"bbox": [
+				35.0572,
+				-7.3773,
+				36.964,
+				-4.3127
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						35.8255,
+						-4.648
+					],
+					[
+						35.7587,
+						-5.8132
+					],
+					[
+						36.0955,
+						-6.9238
+					]
+				],
+				"aspect": 1.91
+			}
+		},
+		{
+			"id": "kaskazini-unguja",
+			"name": "Kaskazini Unguja",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.29135,
+				-5.8816500000000005
+			],
+			"bbox": [
+				39.1815,
+				-6.04,
+				39.4012,
+				-5.7233
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						39.2591,
+						-6.017
+					],
+					[
+						39.3165,
+						-5.9015
+					],
+					[
+						39.3223,
+						-5.7724
+					]
+				],
+				"aspect": 2.68
+			}
+		},
+		{
+			"id": "mjini-magharibi",
+			"name": "Mjini Magharibi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.24795,
+				-6.17445
+			],
+			"bbox": [
+				39.1859,
+				-6.3209,
+				39.31,
+				-6.028
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						39.2446,
+						-6.0616
+					],
+					[
+						39.2225,
+						-6.1768
+					],
+					[
+						39.2741,
+						-6.284
+					]
+				],
+				"aspect": 3.11
+			}
+		},
+		{
+			"id": "kusini-unguja",
+			"name": "Kusini Unguja",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.42515,
+				-6.248950000000001
+			],
+			"bbox": [
+				39.27,
+				-6.4763,
+				39.5803,
+				-6.0216
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						39.3284,
+						-6.0798
+					],
+					[
+						39.4362,
+						-6.2498
+					],
+					[
+						39.532,
+						-6.4266
+					]
+				],
+				"aspect": 2.81
+			}
+		},
+		{
+			"id": "katavi",
+			"name": "Katavi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.3309,
+				-6.37265
+			],
+			"bbox": [
+				29.903,
+				-7.6119,
+				32.7588,
+				-5.1334
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						30.38,
+						-5.5686
+					],
+					[
+						31.1208,
+						-6.5296
+					],
+					[
+						32.2579,
+						-6.941
+					]
+				],
+				"aspect": 1.71
+			}
+		},
+		{
+			"id": "dar-es-salaam",
+			"name": "Dar es Salaam",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.280950000000004,
+				-6.8717500000000005
+			],
+			"bbox": [
+				39.009,
+				-7.1794,
+				39.5529,
+				-6.5641
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						39.0728,
+						-6.72
+					],
+					[
+						39.2839,
+						-6.8997
+					],
+					[
+						39.4949,
+						-7.0793
+					]
+				],
+				"aspect": 3.02
+			}
+		},
+		{
+			"id": "pwani",
+			"name": "Pwani",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.851,
+				-7.17765
+			],
+			"bbox": [
+				37.7941,
+				-8.5125,
+				39.9079,
+				-5.8428
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						38.3099,
+						-6.0743
+					],
+					[
+						38.9217,
+						-7.0873
+					],
+					[
+						38.6518,
+						-8.236
+					]
+				],
+				"aspect": 2.41
+			}
+		},
+		{
+			"id": "morogoro",
+			"name": "Morogoro",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.919700000000006,
+				-7.858750000000001
+			],
+			"bbox": [
+				35.3237,
+				-9.9174,
+				38.5157,
+				-5.8001
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						36.3128,
+						-9.2314
+					],
+					[
+						37.3466,
+						-7.946
+					],
+					[
+						37.5939,
+						-6.2898
+					]
+				],
+				"aspect": 2.26
+			}
+		},
+		{
+			"id": "iringa",
+			"name": "Iringa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.5193,
+				-7.9634
+			],
+			"bbox": [
+				34.1938,
+				-9.0402,
+				36.8448,
+				-6.8866
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						34.6944,
+						-7.652
+					],
+					[
+						35.5627,
+						-8.1126
+					],
+					[
+						36.4309,
+						-7.7475
+					]
+				],
+				"aspect": 1.34
+			}
+		},
+		{
+			"id": "rukwa",
+			"name": "Rukwa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.474449999999997,
+				-7.97905
+			],
+			"bbox": [
+				30.5031,
+				-9.0733,
+				32.4458,
+				-6.8848
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						30.763,
+						-7.1495
+					],
+					[
+						31.2442,
+						-7.9888
+					],
+					[
+						31.9998,
+						-8.5973
+					]
+				],
+				"aspect": 2.41
+			}
+		},
+		{
+			"id": "songwe",
+			"name": "Songwe",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.855050000000006,
+				-8.2748
+			],
+			"bbox": [
+				32.0202,
+				-9.624,
+				33.6899,
+				-6.9256
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						32.5269,
+						-8.4492
+					],
+					[
+						32.4985,
+						-9.0395
+					],
+					[
+						33.3693,
+						-9.4474
+					]
+				],
+				"aspect": 1.79
+			}
+		},
+		{
+			"id": "mbeya",
+			"name": "Mbeya",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.9309,
+				-8.2874
+			],
+			"bbox": [
+				32.8937,
+				-9.7097,
+				34.9681,
+				-6.8651
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						33.0404,
+						-7.8002
+					],
+					[
+						33.8003,
+						-8.4597
+					],
+					[
+						34.5603,
+						-8.3969
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "lindi",
+			"name": "Lindi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.42385,
+				-9.33415
+			],
+			"bbox": [
+				36.8681,
+				-10.7358,
+				39.9796,
+				-7.9325
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						37.4511,
+						-9.5166
+					],
+					[
+						38.4716,
+						-9.1587
+					],
+					[
+						39.4921,
+						-9.672
+					]
+				],
+				"aspect": 0.95
+			}
+		},
+		{
+			"id": "njombe",
+			"name": "Njombe",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.667100000000005,
+				-9.60015
+			],
+			"bbox": [
+				33.811,
+				-10.5361,
+				35.5232,
+				-8.6642
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						34.0411,
+						-9.2952
+					],
+					[
+						34.7175,
+						-9.7114
+					],
+					[
+						35.3939,
+						-9.4873
+					]
+				],
+				"aspect": 1.33
+			}
+		},
+		{
+			"id": "ruvuma",
+			"name": "Ruvuma",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.34185,
+				-10.50515
+			],
+			"bbox": [
+				34.5707,
+				-11.7618,
+				38.113,
+				-9.2485
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						35.0365,
+						-10.6321
+					],
+					[
+						36.4215,
+						-10.5193
+					],
+					[
+						37.6509,
+						-11.1479
+					]
+				],
+				"aspect": 1.55
+			}
+		},
+		{
+			"id": "mtwara",
+			"name": "Mtwara",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.22185,
+				-10.7714
+			],
+			"bbox": [
+				37.999,
+				-11.4177,
+				40.4447,
+				-10.1251
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						38.2039,
+						-11.0205
+					],
+					[
+						39.19,
+						-10.8206
+					],
+					[
+						40.1214,
+						-10.4445
+					]
+				],
+				"aspect": 2.95
+			}
+		}
+	],
+	"tourOrder": [
+		"mara",
+		"kagera",
+		"mwanza",
+		"arusha",
+		"simiyu",
+		"geita",
+		"kilimanjaro",
+		"shinyanga",
+		"manyara",
+		"kigoma",
+		"kaskazini-pemba",
+		"tanga",
+		"kusini-pemba",
+		"tabora",
+		"singida",
+		"dodoma",
+		"kaskazini-unguja",
+		"mjini-magharibi",
+		"kusini-unguja",
+		"katavi",
+		"dar-es-salaam",
+		"pwani",
+		"morogoro",
+		"iringa",
+		"rukwa",
+		"songwe",
+		"mbeya",
+		"lindi",
+		"njombe",
+		"ruvuma",
+		"mtwara"
+	]
+}

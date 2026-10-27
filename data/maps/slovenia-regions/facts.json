@@ -1,0 +1,408 @@
+{
+	"pomurska": {
+		"kind": "region",
+		"borders": [
+			"Podravska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Murska Sobota",
+			"nameDe": "Murska Sobota",
+			"nameIt": "Murska Sobota",
+			"population": 11190
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its name refers to the Mura River.",
+				"The region includes the historic landscapes of Prekmurje and Prlekija.",
+				"River-powered mills were once an important part of life along the Mura."
+			],
+			"it": [
+				"Il nome si riferisce al fiume Mura.",
+				"La regione comprende i paesaggi storici di Prekmurje e Prlekija.",
+				"I mulini azionati dal fiume erano un tempo importanti nella vita lungo la Mura."
+			],
+			"de": [
+				"Der Name bezieht sich auf den Fluss Mur.",
+				"Die Region umfasst die historischen Landschaften Prekmurje und Prlekija.",
+				"Flussbetriebene Mühlen waren einst ein wichtiger Teil des Lebens an der Mur."
+			]
+		}
+	},
+	"koroska": {
+		"kind": "region",
+		"borders": [
+			"Podravska",
+			"Savinjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ravne na Koroškem",
+			"nameDe": "Ravne na Koroškem",
+			"nameIt": "Ravne na Koroškem",
+			"population": 7363
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Koroška is the Slovenian name for Carinthia.",
+				"Mežica’s former lead and zinc mine can be explored by bicycle or kayak.",
+				"The cross-border Karawanken UNESCO Global Geopark links Slovenia with Austria."
+			],
+			"it": [
+				"Koroška è il nome sloveno della Carinzia.",
+				"L’ex miniera di piombo e zinco di Mežica si può esplorare in bicicletta o kayak.",
+				"Il Geoparco mondiale UNESCO transfrontaliero delle Caravanche collega Slovenia e Austria."
+			],
+			"de": [
+				"Koroška ist der slowenische Name für Kärnten.",
+				"Das frühere Blei- und Zinkbergwerk Mežica lässt sich mit Fahrrad oder Kajak erkunden.",
+				"Der grenzüberschreitende UNESCO Global Geopark Karawanken verbindet Slowenien und Österreich."
+			]
+		}
+	},
+	"podravska": {
+		"kind": "region",
+		"borders": [
+			"Koroška",
+			"Pomurska",
+			"Savinjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Maribor",
+			"nameDe": "Maribor",
+			"nameIt": "Maribor",
+			"population": 114301
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its name refers to the Drava River.",
+				"Maribor preserves a cultivated grapevine more than four centuries old.",
+				"Ptuj’s Kurenti customs use masks and ringing bells to welcome spring."
+			],
+			"it": [
+				"Il nome si riferisce al fiume Drava.",
+				"Maribor conserva una vite coltivata di oltre quattro secoli.",
+				"Le tradizioni dei Kurenti di Ptuj usano maschere e campanacci per accogliere la primavera."
+			],
+			"de": [
+				"Der Name bezieht sich auf die Drau.",
+				"Maribor bewahrt eine mehr als vier Jahrhunderte alte Kulturrebe.",
+				"Ptujs Kurenti-Bräuche begrüßen den Frühling mit Masken und Glockengeläut."
+			]
+		}
+	},
+	"gorenjska": {
+		"kind": "region",
+		"borders": [
+			"Goriška",
+			"Osrednjeslovenska",
+			"Savinjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kranj",
+			"nameDe": "Krainburg",
+			"nameIt": "Kranj",
+			"population": 37605
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its historic name is Upper Carniola.",
+				"Lake Bled’s island church is a landmark of the region.",
+				"Bohinj preserves Alpine dairy farming and the distinctive mohant cheese."
+			],
+			"it": [
+				"Il nome storico è Alta Carniola.",
+				"La chiesa sull’isola del lago di Bled è un simbolo della regione.",
+				"Bohinj conserva l’allevamento alpino da latte e il caratteristico formaggio mohant."
+			],
+			"de": [
+				"Der historische Name lautet Oberkrain.",
+				"Die Inselkirche im Bleder See ist ein Wahrzeichen der Region.",
+				"Bohinj bewahrt alpine Milchwirtschaft und den charakteristischen Mohant-Käse."
+			]
+		}
+	},
+	"savinjska": {
+		"kind": "region",
+		"borders": [
+			"Gorenjska",
+			"Koroška",
+			"Osrednjeslovenska",
+			"Podravska",
+			"Posavska",
+			"Zasavska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Celje",
+			"nameDe": "Celje",
+			"nameIt": "Celje",
+			"population": 37122
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name refers to the Savinja River.",
+				"The medieval Counts of Celje rose to power in this area.",
+				"Hop-growing Žalec celebrates its brewing heritage with a beer fountain."
+			],
+			"it": [
+				"Il nome si riferisce al fiume Savinja.",
+				"I conti medievali di Celje salirono al potere in questa zona.",
+				"Žalec, centro della coltivazione del luppolo, celebra la tradizione birraria con una fontana di birra."
+			],
+			"de": [
+				"Der Name bezieht sich auf den Fluss Savinja.",
+				"Die mittelalterlichen Grafen von Cilli stiegen in dieser Gegend zur Macht auf.",
+				"Der Hopfenort Žalec feiert seine Brautradition mit einem Bierbrunnen."
+			]
+		}
+	},
+	"goriska": {
+		"kind": "region",
+		"borders": [
+			"Gorenjska",
+			"Obalno-kraška",
+			"Osrednjeslovenska",
+			"Primorsko-notranjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nova Gorica",
+			"nameDe": "Nova Gorica",
+			"nameIt": "Nova Gorica",
+			"population": 13031
+		},
+		"peak": {
+			"name": "Triglav",
+			"elevation": 2864
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name recalls the historic Gorizia area.",
+				"The hills of Brda preserve a long winemaking tradition.",
+				"The Soča valley was a major front during the First World War."
+			],
+			"it": [
+				"Il nome ricorda la storica area goriziana.",
+				"Le colline del Brda conservano una lunga tradizione vinicola.",
+				"La valle dell’Isonzo fu un importante fronte durante la Prima guerra mondiale."
+			],
+			"de": [
+				"Der Name erinnert an das historische Görzer Gebiet.",
+				"Die Hügel von Brda bewahren eine lange Weinbautradition.",
+				"Das Soča-Tal war im Ersten Weltkrieg ein wichtiger Frontabschnitt."
+			]
+		}
+	},
+	"zasavska": {
+		"kind": "region",
+		"borders": [
+			"Jugovzhodna Slovenija",
+			"Osrednjeslovenska",
+			"Posavska",
+			"Savinjska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Trbovlje",
+			"nameDe": "Trbovlje",
+			"nameIt": "Trbovlje",
+			"population": 13678
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name refers to the Sava area.",
+				"Coal mining shaped the region’s industrial towns and workers’ culture.",
+				"Trbovlje’s 360-metre chimney remains a striking industrial landmark."
+			],
+			"it": [
+				"Il nome si riferisce all’area della Sava.",
+				"L’estrazione del carbone plasmò le città industriali e la cultura operaia della regione.",
+				"La ciminiera di Trbovlje, alta 360 metri, rimane un imponente simbolo industriale."
+			],
+			"de": [
+				"Der Name bezieht sich auf das Gebiet an der Save.",
+				"Kohlebergbau prägte die Industriestädte und Arbeiterkultur der Region.",
+				"Der 360 Meter hohe Schornstein von Trbovlje bleibt ein markantes Industriedenkmal."
+			]
+		}
+	},
+	"osrednjeslovenska": {
+		"kind": "region",
+		"borders": [
+			"Gorenjska",
+			"Goriška",
+			"Jugovzhodna Slovenija",
+			"Primorsko-notranjska",
+			"Savinjska",
+			"Zasavska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ljubljana",
+			"nameDe": "Ljubljana",
+			"nameIt": "Lubiana",
+			"population": 284293
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Slovenian name means Central Slovenia.",
+				"Jože Plečnik transformed Ljubljana’s public spaces and architecture.",
+				"Velika Planina preserves a distinctive settlement of herdsmen’s huts."
+			],
+			"it": [
+				"Il nome sloveno significa Slovenia centrale.",
+				"Jože Plečnik trasformò gli spazi pubblici e l’architettura di Lubiana.",
+				"Velika Planina conserva un caratteristico insediamento di capanne dei pastori."
+			],
+			"de": [
+				"Der slowenische Name bedeutet Zentralslowenien.",
+				"Jože Plečnik gestaltete Ljubljanas öffentliche Räume und Architektur um.",
+				"Velika Planina bewahrt eine charakteristische Siedlung von Hirtenhütten."
+			]
+		}
+	},
+	"posavska": {
+		"kind": "region",
+		"borders": [
+			"Jugovzhodna Slovenija",
+			"Savinjska",
+			"Zasavska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Krško",
+			"nameDe": "Krško",
+			"nameIt": "Krško",
+			"population": 6852
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name refers to the Sava River area.",
+				"Brežice Castle preserves elaborate Baroque decoration.",
+				"The Božidar Jakac art museum occupies a former monastery at Kostanjevica na Krki."
+			],
+			"it": [
+				"Il nome si riferisce all’area del fiume Sava.",
+				"Il castello di Brežice conserva elaborate decorazioni barocche.",
+				"Il museo d’arte Božidar Jakac occupa un ex monastero a Kostanjevica na Krki."
+			],
+			"de": [
+				"Der Name bezieht sich auf das Gebiet an der Save.",
+				"Schloss Brežice bewahrt aufwendige barocke Ausstattungen.",
+				"Das Kunstmuseum Božidar Jakac befindet sich in einem ehemaligen Kloster bei Kostanjevica na Krki."
+			]
+		}
+	},
+	"jugovzhodna-slovenija": {
+		"kind": "region",
+		"borders": [
+			"Osrednjeslovenska",
+			"Posavska",
+			"Primorsko-notranjska",
+			"Zasavska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kočevje",
+			"nameDe": "Kočevje",
+			"nameIt": "Kočevje",
+			"population": 8151
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its Slovenian name means Southeast Slovenia.",
+				"Bela Krajina’s Green George tradition welcomes spring with birch-covered costumes.",
+				"Krokar’s primeval beech forest forms part of a UNESCO World Heritage Site."
+			],
+			"it": [
+				"Il nome sloveno significa Slovenia sudorientale.",
+				"La tradizione del Giorgio Verde della Bela Krajina accoglie la primavera con costumi coperti di betulla.",
+				"La faggeta primaria di Krokar fa parte di un sito del patrimonio mondiale UNESCO."
+			],
+			"de": [
+				"Der slowenische Name bedeutet Südostslowenien.",
+				"Bela Krajinas Grüner Georg begrüßt den Frühling in birkenbedeckten Gewändern.",
+				"Krokars Buchenurwald gehört zu einer UNESCO-Welterbestätte."
+			]
+		}
+	},
+	"primorsko-notranjska": {
+		"kind": "region",
+		"borders": [
+			"Goriška",
+			"Jugovzhodna Slovenija",
+			"Obalno-kraška",
+			"Osrednjeslovenska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Postojna",
+			"nameDe": "Postojna",
+			"nameIt": "Postumia",
+			"population": 9605
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name combines the historic Littoral and Inner Carniola names.",
+				"Postojna Cave shelters the unusual cave salamander known as the olm.",
+				"Lake Cerknica expands and disappears as water moves through the karst underground."
+			],
+			"it": [
+				"Il nome combina le denominazioni storiche del Litorale e della Carniola interna.",
+				"La grotta di Postumia ospita l’insolita salamandra cavernicola chiamata proteo.",
+				"Il lago di Cerknica si espande e scompare seguendo i movimenti dell’acqua nel sottosuolo carsico."
+			],
+			"de": [
+				"Der Name verbindet die historischen Bezeichnungen Küstenland und Innerkrain.",
+				"Die Höhle von Postojna beherbergt den ungewöhnlichen Grottenolm.",
+				"Der Zirknitzer See wächst und verschwindet mit den Wasserbewegungen im Karstuntergrund."
+			]
+		}
+	},
+	"obalno-kraska": {
+		"kind": "region",
+		"borders": [
+			"Goriška",
+			"Primorsko-notranjska"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Koper",
+			"nameDe": "Koper",
+			"nameIt": "Capodistria",
+			"population": 25913
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name joins the ideas of coast and karst.",
+				"Škocjan’s caves contain a spectacular underground river canyon.",
+				"Lipica’s stud farm was founded in 1580 and gave the Lipizzaner horse its name."
+			],
+			"it": [
+				"Il nome unisce i concetti di costa e Carso.",
+				"Le grotte di Škocjan contengono uno spettacolare canyon fluviale sotterraneo.",
+				"L’allevamento di Lipica fu fondato nel 1580 e diede il nome al cavallo lipizzano."
+			],
+			"de": [
+				"Der Name verbindet Küste und Karst.",
+				"Die Höhlen von Škocjan enthalten eine eindrucksvolle unterirdische Flussschlucht.",
+				"Das 1580 gegründete Gestüt Lipica gab dem Lipizzaner seinen Namen."
+			]
+		}
+	}
+}

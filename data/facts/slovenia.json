@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Slovenia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"ljubljana": {
 		"city": {
@@ -26,16 +27,727 @@
 	"maribor": {
 		"city": {
 			"en": [
-				"A vine on one of its old houses, more than 400 years old, is listed as the oldest in the world.",
-				"It was a European Capital of Culture in 2012."
+				"Its historical German name was Marburg an der Drau.",
+				"Its old vine is recognised as the oldest cultivated grapevine still bearing fruit.",
+				"The city was a European Capital of Culture in 2012."
 			],
 			"it": [
-				"Una vite su una delle sue vecchie case, di oltre 400 anni, è indicata come la più antica del mondo.",
-				"Fu Capitale europea della cultura nel 2012."
+				"Il nome storico tedesco era Marburg an der Drau.",
+				"La sua antica vite è riconosciuta come la più vecchia vite coltivata ancora fruttifera.",
+				"La città fu Capitale europea della cultura nel 2012."
 			],
 			"de": [
-				"Ein Weinstock an einem ihrer alten Häuser, mehr als 400 Jahre alt, gilt als der älteste der Welt.",
-				"Sie war 2012 Europäische Kulturhauptstadt."
+				"Der historische deutsche Name lautete Marburg an der Drau.",
+				"Die Alte Rebe gilt als älteste noch fruchttragende Kulturrebe.",
+				"Die Stadt war 2012 Europäische Kulturhauptstadt."
+			]
+		}
+	},
+	"_sources": {
+		"pomurska:region": [
+			"https://en.wikipedia.org/wiki/Mura_Statistical_Region",
+			"https://www.mojaslovenija.si/Verzej/uvod_eng.html"
+		],
+		"koroska:region": [
+			"https://en.wikipedia.org/wiki/Carinthia_Statistical_Region",
+			"https://www.slovenia.info/en/stories/go-underground-by-bike-and-kayak",
+			"https://www.slovenia.info/en/things-to-do/slovenia-unique-experiences/37-kayaking-adventure-through-the-underground-of-mount-peca"
+		],
+		"podravska:region": [
+			"https://en.wikipedia.org/wiki/Drava_Statistical_Region",
+			"https://www.slovenia.info/en/places-to-go/attractions/world-s-oldest-vine",
+			"https://ich.unesco.org/en/RL/door-to-door-rounds-of-kurenti-01278?RL=01278"
+		],
+		"gorenjska:region": [
+			"https://en.wikipedia.org/wiki/Upper_Carniola",
+			"https://en.wikipedia.org/wiki/Lake_Bled",
+			"https://www.tnp.si/en/park/traditional-activities/agriculture/typical-local-products/"
+		],
+		"savinjska:region": [
+			"https://en.wikipedia.org/wiki/Savinja_Statistical_Region",
+			"https://www.slovenia.info/en/places-to-go/regions/thermal-pannonian-slovenia/celje",
+			"https://www.pokmuz-ce.si/en/exhibitions/permanent-exhibitions/the-counts-of-celje/"
+		],
+		"goriska:region": [
+			"https://en.wikipedia.org/wiki/Gorizia_Statistical_Region",
+			"https://www.decanter.com/wine/wine-travel/cycling-tour-in-western-slovenia-five-great-bike-routes-with-wineries-and-stunning-views",
+			"https://en.wikipedia.org/wiki/Battles_of_the_Isonzo"
+		],
+		"zasavska:region": [
+			"https://en.wikipedia.org/wiki/Central_Sava_Statistical_Region",
+			"https://en.wikipedia.org/wiki/Trbovlje"
+		],
+		"osrednjeslovenska:region": [
+			"https://en.wikipedia.org/wiki/Central_Slovenia_Statistical_Region",
+			"https://en.wikipedia.org/wiki/Jo%C5%BEe_Ple%C4%8Dnik",
+			"https://www.slovenia.info/en/places-to-go/attractions/velika-planina"
+		],
+		"posavska:region": [
+			"https://en.wikipedia.org/wiki/Lower_Sava_Statistical_Region",
+			"https://culture.gov.si/en/Bre%C5%BEice_Castle",
+			"https://www.galerija-bj.si/en/"
+		],
+		"jugovzhodna-slovenija:region": [
+			"https://en.wikipedia.org/wiki/Southeast_Slovenia_Statistical_Region",
+			"https://www.belakrajina.si/en/visit-us/traditional-events/jurjevo-st-georges-day/",
+			"https://www.slovenia.info/en/press-centre/news-of-the-tourism-press-agency/16335-new-the-krokar-primeval-forest-hiking-trail"
+		],
+		"primorsko-notranjska:region": [
+			"https://en.wikipedia.org/wiki/Littoral%E2%80%93Inner_Carniola_Statistical_Region",
+			"https://www.slovenia.info/uploads/publikacije/en/ANG_splosni_katalog_2016_WEB__pub.pdf"
+		],
+		"obalno-kraska:region": [
+			"https://en.wikipedia.org/wiki/Coastal%E2%80%93Karst_Statistical_Region",
+			"https://whc.unesco.org/en/list/390/",
+			"https://www.slovenia.info/en/places-to-go/attractions/lipica"
+		],
+		"murska-sobota:city": [
+			"https://en.wikipedia.org/wiki/Murska_Sobota",
+			"https://www.visitpomurje.eu/en/explore/the-renaissance-castle-in-murska-sobota",
+			"https://www.expano.si/medijsko-sredisce/expano-v-oddaji-ambienti"
+		],
+		"maribor:city": [
+			"https://en.wikipedia.org/wiki/Maribor",
+			"https://www.slovenia.info/en/press-centre/news-of-the-tourism-press-agency/35878-maribor-s-old-vine-retains-its-crown-the-world-s-oldest-noble-grapevine-still-producing-fruit"
+		],
+		"jesenice:city": [
+			"https://en.wikipedia.org/wiki/Jesenice",
+			"https://en.wikipedia.org/wiki/Stara_Sava"
+		],
+		"ptuj:city": [
+			"https://en.wikipedia.org/wiki/Ptuj",
+			"https://en.wikipedia.org/wiki/Ptuj_Castle",
+			"https://ich.unesco.org/en/RL/door-to-door-rounds-of-kurenti-01278?RL=01278"
+		],
+		"slovenska-bistrica:city": [
+			"https://en.wikipedia.org/wiki/Slovenska_Bistrica",
+			"https://www.visitmaribor.si/en/offer/natural-sights/7783-bistriski-vintgar-gorge/"
+		],
+		"velenje:city": [
+			"https://en.wikipedia.org/wiki/Velenje",
+			"https://www.visitsaleska.si/en/saleska-valley/the-velenje-museum/"
+		],
+		"kranj:city": [
+			"https://en.wikipedia.org/wiki/Kranj"
+		],
+		"celje:city": [
+			"https://en.wikipedia.org/wiki/Celje",
+			"https://www.pokmuz-ce.si/en/exhibitions/permanent-exhibitions/the-counts-of-celje/",
+			"https://www.gov.si/en/news/2021-04-14-a-short-history-of-slovenia/"
+		],
+		"kamnik:city": [
+			"https://en.wikipedia.org/wiki/Kamnik",
+			"https://en.wikipedia.org/wiki/Little_Castle",
+			"https://www.rudolfmaister.si/maistrova-pot/kamnik/"
+		],
+		"skofja-loka:city": [
+			"https://en.wikipedia.org/wiki/%C5%A0kofja_Loka",
+			"https://ich.unesco.org/en/RL/skofja-loka-passion-play-01203?RL=01203"
+		],
+		"trbovlje:city": [
+			"https://en.wikipedia.org/wiki/Trbovlje"
+		],
+		"domzale:city": [
+			"https://www.visitljubljana.com/en/poi/straw-hat-museum-domzale",
+			"https://www.gov.si/assets/ministrstva/MK/DEDISCINA/NESNOVNA/RNSD_EN/Rzd-02_00036_eng.pdf",
+			"https://www.btc.si/wp-content/uploads/2024/06/MF_web-bilten-2024.pdf"
+		],
+		"nova-gorica:city": [
+			"https://en.wikipedia.org/wiki/Nova_Gorica",
+			"https://culture.ec.europa.eu/it/news/celebrating-2025-and-welcoming-the-2026-european-capitals-of-culture"
+		],
+		"vrhnika:city": [
+			"https://en.wikipedia.org/wiki/Vrhnika",
+			"https://en.wikipedia.org/wiki/Ivan_Cankar",
+			"https://visitvrhnika.si/en/place/ljubljanica-river-springs/"
+		],
+		"logatec:city": [
+			"https://visitlogatec.com/zgodovina/",
+			"https://dlib.si/stream/URN%3ANBN%3ASI%3ADOC-YU12VW6X/cc4909f3-2c73-43d8-87a6-49f2e2696569/PDF"
+		],
+		"postojna:city": [
+			"https://en.wikipedia.org/wiki/Postojna",
+			"https://en.wikipedia.org/wiki/Postojna_Cave"
+		],
+		"kocevje:city": [
+			"https://www.kocevsko.com/en/stories/the-gottscheers",
+			"https://www.slovenia.info/en/press-centre/news-of-the-tourism-press-agency/16335-new-the-krokar-primeval-forest-hiking-trail"
+		],
+		"koper:city": [
+			"https://en.wikipedia.org/wiki/Koper",
+			"https://en.wikipedia.org/wiki/Praetorian_Palace"
+		],
+		"izola:city": [
+			"https://en.wikipedia.org/wiki/Izola"
+		]
+	},
+	"pomurska": {
+		"region": {
+			"en": [
+				"Its name refers to the Mura River.",
+				"The region includes the historic landscapes of Prekmurje and Prlekija.",
+				"River-powered mills were once an important part of life along the Mura."
+			],
+			"it": [
+				"Il nome si riferisce al fiume Mura.",
+				"La regione comprende i paesaggi storici di Prekmurje e Prlekija.",
+				"I mulini azionati dal fiume erano un tempo importanti nella vita lungo la Mura."
+			],
+			"de": [
+				"Der Name bezieht sich auf den Fluss Mur.",
+				"Die Region umfasst die historischen Landschaften Prekmurje und Prlekija.",
+				"Flussbetriebene Mühlen waren einst ein wichtiger Teil des Lebens an der Mur."
+			]
+		}
+	},
+	"koroska": {
+		"region": {
+			"en": [
+				"Koroška is the Slovenian name for Carinthia.",
+				"Mežica’s former lead and zinc mine can be explored by bicycle or kayak.",
+				"The cross-border Karawanken UNESCO Global Geopark links Slovenia with Austria."
+			],
+			"it": [
+				"Koroška è il nome sloveno della Carinzia.",
+				"L’ex miniera di piombo e zinco di Mežica si può esplorare in bicicletta o kayak.",
+				"Il Geoparco mondiale UNESCO transfrontaliero delle Caravanche collega Slovenia e Austria."
+			],
+			"de": [
+				"Koroška ist der slowenische Name für Kärnten.",
+				"Das frühere Blei- und Zinkbergwerk Mežica lässt sich mit Fahrrad oder Kajak erkunden.",
+				"Der grenzüberschreitende UNESCO Global Geopark Karawanken verbindet Slowenien und Österreich."
+			]
+		}
+	},
+	"podravska": {
+		"region": {
+			"en": [
+				"Its name refers to the Drava River.",
+				"Maribor preserves a cultivated grapevine more than four centuries old.",
+				"Ptuj’s Kurenti customs use masks and ringing bells to welcome spring."
+			],
+			"it": [
+				"Il nome si riferisce al fiume Drava.",
+				"Maribor conserva una vite coltivata di oltre quattro secoli.",
+				"Le tradizioni dei Kurenti di Ptuj usano maschere e campanacci per accogliere la primavera."
+			],
+			"de": [
+				"Der Name bezieht sich auf die Drau.",
+				"Maribor bewahrt eine mehr als vier Jahrhunderte alte Kulturrebe.",
+				"Ptujs Kurenti-Bräuche begrüßen den Frühling mit Masken und Glockengeläut."
+			]
+		}
+	},
+	"gorenjska": {
+		"region": {
+			"en": [
+				"Its historic name is Upper Carniola.",
+				"Lake Bled’s island church is a landmark of the region.",
+				"Bohinj preserves Alpine dairy farming and the distinctive mohant cheese."
+			],
+			"it": [
+				"Il nome storico è Alta Carniola.",
+				"La chiesa sull’isola del lago di Bled è un simbolo della regione.",
+				"Bohinj conserva l’allevamento alpino da latte e il caratteristico formaggio mohant."
+			],
+			"de": [
+				"Der historische Name lautet Oberkrain.",
+				"Die Inselkirche im Bleder See ist ein Wahrzeichen der Region.",
+				"Bohinj bewahrt alpine Milchwirtschaft und den charakteristischen Mohant-Käse."
+			]
+		}
+	},
+	"savinjska": {
+		"region": {
+			"en": [
+				"Its name refers to the Savinja River.",
+				"The medieval Counts of Celje rose to power in this area.",
+				"Hop-growing Žalec celebrates its brewing heritage with a beer fountain."
+			],
+			"it": [
+				"Il nome si riferisce al fiume Savinja.",
+				"I conti medievali di Celje salirono al potere in questa zona.",
+				"Žalec, centro della coltivazione del luppolo, celebra la tradizione birraria con una fontana di birra."
+			],
+			"de": [
+				"Der Name bezieht sich auf den Fluss Savinja.",
+				"Die mittelalterlichen Grafen von Cilli stiegen in dieser Gegend zur Macht auf.",
+				"Der Hopfenort Žalec feiert seine Brautradition mit einem Bierbrunnen."
+			]
+		}
+	},
+	"goriska": {
+		"region": {
+			"en": [
+				"Its name recalls the historic Gorizia area.",
+				"The hills of Brda preserve a long winemaking tradition.",
+				"The Soča valley was a major front during the First World War."
+			],
+			"it": [
+				"Il nome ricorda la storica area goriziana.",
+				"Le colline del Brda conservano una lunga tradizione vinicola.",
+				"La valle dell’Isonzo fu un importante fronte durante la Prima guerra mondiale."
+			],
+			"de": [
+				"Der Name erinnert an das historische Görzer Gebiet.",
+				"Die Hügel von Brda bewahren eine lange Weinbautradition.",
+				"Das Soča-Tal war im Ersten Weltkrieg ein wichtiger Frontabschnitt."
+			]
+		}
+	},
+	"zasavska": {
+		"region": {
+			"en": [
+				"Its name refers to the Sava area.",
+				"Coal mining shaped the region’s industrial towns and workers’ culture.",
+				"Trbovlje’s 360-metre chimney remains a striking industrial landmark."
+			],
+			"it": [
+				"Il nome si riferisce all’area della Sava.",
+				"L’estrazione del carbone plasmò le città industriali e la cultura operaia della regione.",
+				"La ciminiera di Trbovlje, alta 360 metri, rimane un imponente simbolo industriale."
+			],
+			"de": [
+				"Der Name bezieht sich auf das Gebiet an der Save.",
+				"Kohlebergbau prägte die Industriestädte und Arbeiterkultur der Region.",
+				"Der 360 Meter hohe Schornstein von Trbovlje bleibt ein markantes Industriedenkmal."
+			]
+		}
+	},
+	"osrednjeslovenska": {
+		"region": {
+			"en": [
+				"Its Slovenian name means Central Slovenia.",
+				"Jože Plečnik transformed Ljubljana’s public spaces and architecture.",
+				"Velika Planina preserves a distinctive settlement of herdsmen’s huts."
+			],
+			"it": [
+				"Il nome sloveno significa Slovenia centrale.",
+				"Jože Plečnik trasformò gli spazi pubblici e l’architettura di Lubiana.",
+				"Velika Planina conserva un caratteristico insediamento di capanne dei pastori."
+			],
+			"de": [
+				"Der slowenische Name bedeutet Zentralslowenien.",
+				"Jože Plečnik gestaltete Ljubljanas öffentliche Räume und Architektur um.",
+				"Velika Planina bewahrt eine charakteristische Siedlung von Hirtenhütten."
+			]
+		}
+	},
+	"posavska": {
+		"region": {
+			"en": [
+				"Its name refers to the Sava River area.",
+				"Brežice Castle preserves elaborate Baroque decoration.",
+				"The Božidar Jakac art museum occupies a former monastery at Kostanjevica na Krki."
+			],
+			"it": [
+				"Il nome si riferisce all’area del fiume Sava.",
+				"Il castello di Brežice conserva elaborate decorazioni barocche.",
+				"Il museo d’arte Božidar Jakac occupa un ex monastero a Kostanjevica na Krki."
+			],
+			"de": [
+				"Der Name bezieht sich auf das Gebiet an der Save.",
+				"Schloss Brežice bewahrt aufwendige barocke Ausstattungen.",
+				"Das Kunstmuseum Božidar Jakac befindet sich in einem ehemaligen Kloster bei Kostanjevica na Krki."
+			]
+		}
+	},
+	"jugovzhodna-slovenija": {
+		"region": {
+			"en": [
+				"Its Slovenian name means Southeast Slovenia.",
+				"Bela Krajina’s Green George tradition welcomes spring with birch-covered costumes.",
+				"Krokar’s primeval beech forest forms part of a UNESCO World Heritage Site."
+			],
+			"it": [
+				"Il nome sloveno significa Slovenia sudorientale.",
+				"La tradizione del Giorgio Verde della Bela Krajina accoglie la primavera con costumi coperti di betulla.",
+				"La faggeta primaria di Krokar fa parte di un sito del patrimonio mondiale UNESCO."
+			],
+			"de": [
+				"Der slowenische Name bedeutet Südostslowenien.",
+				"Bela Krajinas Grüner Georg begrüßt den Frühling in birkenbedeckten Gewändern.",
+				"Krokars Buchenurwald gehört zu einer UNESCO-Welterbestätte."
+			]
+		}
+	},
+	"primorsko-notranjska": {
+		"region": {
+			"en": [
+				"Its name combines the historic Littoral and Inner Carniola names.",
+				"Postojna Cave shelters the unusual cave salamander known as the olm.",
+				"Lake Cerknica expands and disappears as water moves through the karst underground."
+			],
+			"it": [
+				"Il nome combina le denominazioni storiche del Litorale e della Carniola interna.",
+				"La grotta di Postumia ospita l’insolita salamandra cavernicola chiamata proteo.",
+				"Il lago di Cerknica si espande e scompare seguendo i movimenti dell’acqua nel sottosuolo carsico."
+			],
+			"de": [
+				"Der Name verbindet die historischen Bezeichnungen Küstenland und Innerkrain.",
+				"Die Höhle von Postojna beherbergt den ungewöhnlichen Grottenolm.",
+				"Der Zirknitzer See wächst und verschwindet mit den Wasserbewegungen im Karstuntergrund."
+			]
+		}
+	},
+	"obalno-kraska": {
+		"region": {
+			"en": [
+				"Its name joins the ideas of coast and karst.",
+				"Škocjan’s caves contain a spectacular underground river canyon.",
+				"Lipica’s stud farm was founded in 1580 and gave the Lipizzaner horse its name."
+			],
+			"it": [
+				"Il nome unisce i concetti di costa e Carso.",
+				"Le grotte di Škocjan contengono uno spettacolare canyon fluviale sotterraneo.",
+				"L’allevamento di Lipica fu fondato nel 1580 e diede il nome al cavallo lipizzano."
+			],
+			"de": [
+				"Der Name verbindet Küste und Karst.",
+				"Die Höhlen von Škocjan enthalten eine eindrucksvolle unterirdische Flussschlucht.",
+				"Das 1580 gegründete Gestüt Lipica gab dem Lipizzaner seinen Namen."
+			]
+		}
+	},
+	"murska-sobota": {
+		"city": {
+			"en": [
+				"Sobota means Saturday, recalling the town’s traditional market day.",
+				"Its Renaissance castle houses the Pomurje Museum.",
+				"The Expano pavilion first represented Slovenia at Milan’s Expo in 2015."
+			],
+			"it": [
+				"Sobota significa sabato e ricorda il tradizionale giorno di mercato della città.",
+				"Il castello rinascimentale ospita il Museo del Pomurje.",
+				"Il padiglione Expano rappresentò inizialmente la Slovenia all’Expo di Milano nel 2015."
+			],
+			"de": [
+				"Sobota bedeutet Samstag und erinnert an den traditionellen Markttag der Stadt.",
+				"Das Renaissanceschloss beherbergt das Pomurje-Museum.",
+				"Der Expano-Pavillon vertrat Slowenien zunächst auf der Mailänder Expo 2015."
+			]
+		}
+	},
+	"jesenice": {
+		"city": {
+			"en": [
+				"Ironworking shaped the town’s growth over several centuries.",
+				"Stara Sava preserves buildings from its industrial past.",
+				"Ice hockey became a distinctive part of the town’s sporting culture."
+			],
+			"it": [
+				"La lavorazione del ferro plasmò la crescita della città per diversi secoli.",
+				"Stara Sava conserva edifici del passato industriale.",
+				"L’hockey su ghiaccio divenne una parte caratteristica della cultura sportiva locale."
+			],
+			"de": [
+				"Die Eisenverarbeitung prägte das Wachstum der Stadt über mehrere Jahrhunderte.",
+				"Stara Sava bewahrt Gebäude aus ihrer industriellen Vergangenheit.",
+				"Eishockey wurde zu einem prägenden Teil der örtlichen Sportkultur."
+			]
+		}
+	},
+	"ptuj": {
+		"city": {
+			"en": [
+				"The Romans knew the settlement as Poetovio.",
+				"Its castle houses historical museum collections.",
+				"The Kurenti’s masked rounds are a UNESCO-recognised Shrovetide tradition."
+			],
+			"it": [
+				"I romani conoscevano l’insediamento come Poetovio.",
+				"Il castello ospita collezioni museali storiche.",
+				"I giri mascherati dei Kurenti sono una tradizione carnevalesca riconosciuta dall’UNESCO."
+			],
+			"de": [
+				"Die Römer kannten die Siedlung als Poetovio.",
+				"Die Burg beherbergt historische Museumssammlungen.",
+				"Die maskierten Umzüge der Kurenti sind ein von der UNESCO anerkannter Fastnachtsbrauch."
+			]
+		}
+	},
+	"slovenska-bistrica": {
+		"city": {
+			"en": [
+				"The medieval town grew on the route between Maribor and Celje.",
+				"Its historic castle houses museum collections.",
+				"The nearby Bistrica gorge preserves a Roman marble quarry and traces of old mills."
+			],
+			"it": [
+				"La città medievale crebbe sulla via tra Maribor e Celje.",
+				"Lo storico castello ospita collezioni museali.",
+				"La vicina gola della Bistrica conserva una cava romana di marmo e tracce di antichi mulini."
+			],
+			"de": [
+				"Die mittelalterliche Stadt wuchs am Weg zwischen Maribor und Celje.",
+				"Ihr historisches Schloss beherbergt Museumssammlungen.",
+				"Die nahe Bistrica-Schlucht bewahrt einen römischen Marmorbruch und Spuren alter Mühlen."
+			]
+		}
+	},
+	"velenje": {
+		"city": {
+			"en": [
+				"The modern mining town expanded rapidly in the decades after the Second World War.",
+				"Its medieval castle was remodelled into a Renaissance residence.",
+				"The castle’s museum began with a coal-mining collection in 1957."
+			],
+			"it": [
+				"La moderna città mineraria si ampliò rapidamente nei decenni successivi alla Seconda guerra mondiale.",
+				"Il castello medievale fu trasformato in residenza rinascimentale.",
+				"Il museo del castello iniziò con una collezione sull’estrazione del carbone nel 1957."
+			],
+			"de": [
+				"Die moderne Bergbaustadt wuchs nach dem Zweiten Weltkrieg rasch.",
+				"Ihre mittelalterliche Burg wurde zu einer Renaissanceresidenz umgebaut.",
+				"Das Schlossmuseum begann 1957 mit einer Sammlung zum Kohlebergbau."
+			]
+		}
+	},
+	"kranj": {
+		"city": {
+			"en": [
+				"Its name descends from ancient Carnium.",
+				"Poet France Prešeren spent his final years here.",
+				"The Kokra River cuts a steep canyon beside the historic centre."
+			],
+			"it": [
+				"Il nome discende dall’antica Carnium.",
+				"Il poeta France Prešeren vi trascorse gli ultimi anni.",
+				"Il fiume Kokra scava un ripido canyon accanto al centro storico."
+			],
+			"de": [
+				"Der Name geht auf das antike Carnium zurück.",
+				"Der Dichter France Prešeren verbrachte hier seine letzten Jahre.",
+				"Die Kokra schneidet eine steile Schlucht neben der Altstadt ein."
+			]
+		}
+	},
+	"celje": {
+		"city": {
+			"en": [
+				"The Roman town was called Celeia.",
+				"The Counts of Celje became a powerful medieval dynasty.",
+				"Their three golden stars inspired the stars on Slovenia’s coat of arms."
+			],
+			"it": [
+				"La città romana si chiamava Celeia.",
+				"I conti di Celje divennero una potente dinastia medievale.",
+				"Le loro tre stelle d’oro ispirarono le stelle sullo stemma sloveno."
+			],
+			"de": [
+				"Die römische Stadt hieß Celeia.",
+				"Die Grafen von Cilli wurden zu einer mächtigen mittelalterlichen Dynastie.",
+				"Ihre drei goldenen Sterne inspirierten die Sterne im slowenischen Staatswappen."
+			]
+		}
+	},
+	"kamnik": {
+		"city": {
+			"en": [
+				"Its historic German name was Stein, meaning stone.",
+				"Mali Grad preserves a Romanesque castle chapel.",
+				"General and poet Rudolf Maister was born here in 1874."
+			],
+			"it": [
+				"Il nome storico tedesco era Stein, che significa pietra.",
+				"Mali Grad conserva una cappella castellana romanica.",
+				"Qui nacque nel 1874 il generale e poeta Rudolf Maister."
+			],
+			"de": [
+				"Der historische deutsche Name lautete Stein.",
+				"Mali Grad bewahrt eine romanische Burgkapelle.",
+				"Hier wurde 1874 der General und Dichter Rudolf Maister geboren."
+			]
+		}
+	},
+	"skofja-loka": {
+		"city": {
+			"en": [
+				"Its name means bishop’s meadow, recalling the bishops of Freising.",
+				"The Capuchin Bridge is a surviving medieval stone crossing.",
+				"Its processional Passion Play entered UNESCO’s intangible heritage list in 2016."
+			],
+			"it": [
+				"Il nome significa prato del vescovo e ricorda i vescovi di Frisinga.",
+				"Il Ponte dei Cappuccini è un attraversamento medievale in pietra ancora conservato.",
+				"La rappresentazione processionale della Passione entrò nella lista del patrimonio immateriale UNESCO nel 2016."
+			],
+			"de": [
+				"Der Name bedeutet Bischofswiese und erinnert an die Bischöfe von Freising.",
+				"Die Kapuzinerbrücke ist eine erhaltene mittelalterliche Steinbrücke.",
+				"Das Prozessionspassionsspiel wurde 2016 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen."
+			]
+		}
+	},
+	"trbovlje": {
+		"city": {
+			"en": [
+				"Its modern history was shaped by coal mining.",
+				"The former power station’s chimney rises 360 metres.",
+				"The industrial music group Laibach originated here."
+			],
+			"it": [
+				"La sua storia moderna fu plasmata dall’estrazione del carbone.",
+				"La ciminiera dell’ex centrale elettrica raggiunge 360 metri.",
+				"Qui nacque il gruppo di musica industriale Laibach."
+			],
+			"de": [
+				"Die moderne Geschichte der Stadt wurde vom Kohlebergbau geprägt.",
+				"Der Schornstein des ehemaligen Kraftwerks ist 360 Meter hoch.",
+				"Die Industrial-Band Laibach entstand hier."
+			]
+		}
+	},
+	"domzale": {
+		"city": {
+			"en": [
+				"Straw-hat making drove the town’s nineteenth-century industrial growth.",
+				"Local workshops and factories sold hats across Europe and beyond.",
+				"The Straw Hat Museum preserves the craft’s tools and production techniques."
+			],
+			"it": [
+				"La produzione di cappelli di paglia trainò la crescita industriale ottocentesca della città.",
+				"Botteghe e fabbriche locali vendevano cappelli in Europa e oltre.",
+				"Il Museo del cappello di paglia conserva strumenti e tecniche di produzione del mestiere."
+			],
+			"de": [
+				"Die Strohhutherstellung trieb das industrielle Wachstum der Stadt im 19. Jahrhundert an.",
+				"Örtliche Werkstätten und Fabriken verkauften Hüte in Europa und darüber hinaus.",
+				"Das Strohhutmuseum bewahrt Werkzeuge und Herstellungstechniken des Handwerks."
+			]
+		}
+	},
+	"nova-gorica": {
+		"city": {
+			"en": [
+				"Its name means New Gorizia.",
+				"Architect Edvard Ravnikar planned the new town after the border changed in 1947.",
+				"It shared the 2025 European Capital of Culture programme with neighbouring Gorizia in Italy."
+			],
+			"it": [
+				"Il nome significa Nuova Gorizia.",
+				"L’architetto Edvard Ravnikar progettò la città nuova dopo il cambiamento del confine nel 1947.",
+				"Condivise il programma di Capitale europea della cultura 2025 con la vicina Gorizia, in Italia."
+			],
+			"de": [
+				"Der Name bedeutet Neu-Görz.",
+				"Architekt Edvard Ravnikar plante die neue Stadt nach der Grenzänderung von 1947.",
+				"Sie teilte das Kulturhauptstadtprogramm 2025 mit dem benachbarten italienischen Gorizia."
+			]
+		}
+	},
+	"vrhnika": {
+		"city": {
+			"en": [
+				"The Roman settlement here was known as Nauportus.",
+				"Writer Ivan Cankar was born in the town in 1876.",
+				"Nearby karst springs mark the emergence of the Ljubljanica River."
+			],
+			"it": [
+				"L’insediamento romano era noto come Nauportus.",
+				"Lo scrittore Ivan Cankar nacque in città nel 1876.",
+				"Le vicine sorgenti carsiche segnano l’emergere del fiume Ljubljanica."
+			],
+			"de": [
+				"Die römische Siedlung hieß Nauportus.",
+				"Der Schriftsteller Ivan Cankar wurde hier 1876 geboren.",
+				"Nahe Karstquellen markieren den Austritt der Ljubljanica."
+			]
+		}
+	},
+	"logatec": {
+		"city": {
+			"en": [
+				"It prospered on the historic transport route towards Trieste.",
+				"Local tradition links its lime-tree avenue with Napoleon’s marriage to Marie-Louise.",
+				"The Logaščica stream disappears into a sinkhole within the town."
+			],
+			"it": [
+				"Prosperò lungo la storica via di trasporto verso Trieste.",
+				"La tradizione locale collega il viale di tigli alle nozze di Napoleone con Maria Luisa.",
+				"Il torrente Logaščica scompare in un inghiottitoio all’interno della città."
+			],
+			"de": [
+				"Die Stadt blühte am historischen Verkehrsweg nach Triest auf.",
+				"Die örtliche Überlieferung verbindet die Lindenallee mit Napoleons Hochzeit mit Marie-Louise.",
+				"Der Bach Logaščica verschwindet im Ort in einer Schwinde."
+			]
+		}
+	},
+	"postojna": {
+		"city": {
+			"en": [
+				"The town was historically also known as Adelsberg in German.",
+				"Its famous cave system shelters the cave salamander called the olm.",
+				"Rails for tourist trains were laid in Postojna Cave in 1872."
+			],
+			"it": [
+				"La città era storicamente nota anche come Adelsberg in tedesco.",
+				"Il celebre sistema di grotte ospita la salamandra cavernicola chiamata proteo.",
+				"Nella grotta di Postumia furono posati binari per i treni turistici nel 1872."
+			],
+			"de": [
+				"Die Stadt war auf Deutsch historisch auch als Adelsberg bekannt.",
+				"Ihr berühmtes Höhlensystem beherbergt den Grottenolm.",
+				"In der Höhle von Postojna wurden 1872 Schienen für Besucherzüge verlegt."
+			]
+		}
+	},
+	"kocevje": {
+		"city": {
+			"en": [
+				"Its historical German name was Gottschee.",
+				"German-speaking settlers arrived in the wider area during the fourteenth century.",
+				"Nearby Kočevsko forests preserve the primeval beech woodland of Krokar."
+			],
+			"it": [
+				"Il nome storico tedesco era Gottschee.",
+				"Coloni di lingua tedesca arrivarono nella zona nel Trecento.",
+				"Le vicine foreste del Kočevsko conservano la faggeta primaria di Krokar."
+			],
+			"de": [
+				"Der historische deutsche Name lautete Gottschee.",
+				"Deutschsprachige Siedler kamen im 14. Jahrhundert in die weitere Gegend.",
+				"Die nahen Wälder des Kočevsko bewahren den Buchenurwald Krokar."
+			]
+		}
+	},
+	"koper": {
+		"city": {
+			"en": [
+				"Its Italian name Capodistria recalls its historic role in Istria.",
+				"The Praetorian Palace reflects the town’s Venetian heritage.",
+				"The historic centre occupies what was once an island."
+			],
+			"it": [
+				"Il nome italiano Capodistria ricorda il ruolo storico della città in Istria.",
+				"Il Palazzo Pretorio riflette il patrimonio veneziano della città.",
+				"Il centro storico occupa quella che un tempo era un’isola."
+			],
+			"de": [
+				"Der italienische Name Capodistria erinnert an die historische Rolle der Stadt in Istrien.",
+				"Der Prätorenpalast spiegelt das venezianische Erbe der Stadt wider.",
+				"Die Altstadt liegt auf einer ehemaligen Insel."
+			]
+		}
+	},
+	"izola": {
+		"city": {
+			"en": [
+				"Its name comes from Italian isola, meaning island.",
+				"The former island was joined to the mainland in the nineteenth century.",
+				"Fishing and shipbuilding became important parts of the town’s identity."
+			],
+			"it": [
+				"Il nome deriva dall’italiano isola.",
+				"L’antica isola fu collegata alla terraferma nell’Ottocento.",
+				"Pesca e cantieristica divennero parti importanti dell’identità cittadina."
+			],
+			"de": [
+				"Der Name stammt vom italienischen isola für Insel.",
+				"Die frühere Insel wurde im 19. Jahrhundert mit dem Festland verbunden.",
+				"Fischerei und Schiffbau wurden zu wichtigen Teilen der städtischen Identität."
 			]
 		}
 	}

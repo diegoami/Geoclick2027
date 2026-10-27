@@ -1,3 +1,5 @@
+import { correctPlaces, placeCorrectionAttribution } from './placeCorrections.js';
+import { appendNeutralBoundaryContext } from './neutralBoundaryContext.js';
 // Builds one point-target map package (towns/cities) from Natural Earth's
 // populated-places dataset: filters by country + a minimum population,
 // builds a PMTiles tileset, and derives a draft map.json (Target[] with
@@ -10,6 +12,7 @@
 // MAPS.md's "Point-target implementation" section for the full reasoning.
 //
 // Usage:
+// Optional --retain=TownA,TownB keeps named eligible places beyond --max-count.
 //   npx tsx data/scripts/build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k --name-field=NAME_IT --min-population=100000 --name="Italy — Towns"
 //
 // Several countries at once (#39): --countries (ADM0NAME list) or
@@ -57,7 +60,8 @@ import {
 	isUnbounded,
 	parseBounds,
 	withinBounds,
-	spacedOut
+	spacedOut,
+	retainNamedPlaces
 } from './placeSelection.js';
 
 const SOURCE_SHP = path.join(
@@ -145,9 +149,28 @@ async function main() {
 	// (placeSelection.ts's spacedOut). Off by default, so every map built
 	// before it existed rebuilds identically.
 	const minSpacing = Number(args['min-spacing'] ?? 0);
-	const attribution = placesSource
+	let attribution = placesSource
 		? 'Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com'
 		: 'Natural Earth (public domain), https://www.naturalearthdata.com';
+	// Reuse the administrative map's current polygons and canonical names.
+	const regionsMapId = args['regions-map'];
+	const regionsMap = regionsMapId
+		? (JSON.parse(
+				readFileSync(path.join(REPO_ROOT, 'data/maps', regionsMapId, 'map.json'), 'utf8')
+			) as {
+				country: string;
+				attribution: string;
+				boundarySource?: string;
+				boundaryFacts?: boolean;
+				boundaryRenames?: Record<string, string>;
+				targets: { name: string }[];
+			})
+		: undefined;
+	if (regionsMap && (multiCountry || regionsMap.country !== country))
+		throw new Error('regions-map must belong to this one country');
+	if (regionsMap) attribution += '; ' + regionsMap.attribution;
+	const correctionCredit = placeCorrectionAttribution(country);
+	if (correctionCredit) attribution += '; ' + correctionCredit;
 	const outDir = args.out;
 	const minPopulation = Number(args['min-population'] ?? 100000);
 	// Adaptive selection, added when the >100k-population threshold alone
@@ -244,7 +267,7 @@ async function main() {
 		? sqlIn('ADM0_A3', continentA3)
 		: countryList.length > 0
 			? sqlIn('ADM0NAME', countryList)
-			: `ADM0NAME='${country}'`;
+			: sqlIn('ADM0NAME', [args['source-country'] ?? country]);
 	const whereClause =
 		`${countryClause} AND POP_MAX > 0` +
 		(admin1.length ? ` AND ${sqlIn('ADM1NAME', admin1)}` : '') +
@@ -273,6 +296,7 @@ async function main() {
 		`[2/5] Selecting towns (population > ${minPopulation}, min ${minCount}, max ${maxCount === Infinity ? 'none' : maxCount}) and deriving draft map.json...`
 	);
 	const geojson: PlaceCollection = JSON.parse(readFileSync(filteredPath, 'utf-8'));
+	geojson.features = correctPlaces(geojson.features);
 	// The slice is applied first: "the 50 biggest" then means the 50 biggest
 	// of this part of the country, not of the whole of it.
 	const inSlice = withinBounds(
@@ -322,6 +346,14 @@ async function main() {
 	if (selectedFeatures.length > maxCount) {
 		selectedFeatures = selectedFeatures.slice(0, maxCount);
 	}
+
+	// Explicit curation may retain useful county seats below the population cap.
+	selectedFeatures = retainNamedPlaces(
+		selectedFeatures,
+		byPopulationDesc.filter((feature) => feature.properties.POP_MAX > minPopulation),
+		parseList(args.retain ?? ''),
+		(feature) => feature.properties.NAME
+	);
 
 	// Two places of the same name would collide on the map's feature-state key
 	// (promoteId: 'name'), so each gets its region added and keeps the plain
@@ -400,6 +432,7 @@ async function main() {
 		// Where the towns came from, when not Natural Earth: build-facts.ts
 		// reads the same file to match each town to its row.
 		...(placesSource ? { placesSource } : {}),
+		...(regionsMapId ? { regionsMap: regionsMapId } : {}),
 		tiles: 'tiles.pmtiles',
 		targets,
 		tourOrder: targets.map((t) => t.id)
@@ -446,10 +479,51 @@ async function main() {
 		// Country outlines rather than one country's admin-1 lines (#39).
 		selectAdmin0Context(padBbox(overallBboxOf(targets)), contextPath);
 	} else {
-		selectCountryContext(country, contextPath);
+		let neutralContext: unknown[] = [];
+		if (regionsMap?.boundarySource && regionsMap.boundaryFacts) {
+			const external = JSON.parse(
+				readFileSync(path.join(REPO_ROOT, regionsMap.boundarySource), 'utf8')
+			);
+			neutralContext = external.contextFeatures ?? [];
+			writeFileSync(contextPath, JSON.stringify(external));
+		} else selectCountryContext(country, contextPath);
+		if (regionsMap) {
+			const context = JSON.parse(readFileSync(contextPath, 'utf8')) as {
+				features: { properties: Record<string, unknown>; geometry: unknown; type: string }[];
+			};
+			const allowed = new Set(regionsMap.targets.map((t) => t.name));
+			for (const feature of context.features) {
+				const original = String(feature.properties.name ?? feature.properties.shapeName ?? '');
+				const name = regionsMap.boundaryRenames?.[original] ?? original;
+				if (!allowed.has(name))
+					throw new Error('Context polygon is not a canonical region: ' + name);
+				feature.properties = { name };
+			}
+			writeFileSync(contextPath, JSON.stringify(context));
+			execFileSync(
+				'npx',
+				[
+					'mapshaper',
+					contextPath,
+					'-dissolve',
+					'fields=name',
+					'-o',
+					contextPath,
+					'format=geojson',
+					'force'
+				],
+				{ stdio: 'inherit' }
+			);
+		}
+
 		// Separate the mapped country's context (colored for city maps) from
 		// neighboring land, which stays subdued and distinct from the sea.
-		selectAdmin0Context(padBbox(overallBboxOf(targets)), landPath, [country]);
+		selectAdmin0Context(
+			padBbox(overallBboxOf(targets)),
+			landPath,
+			regionsMap?.boundarySource ? [] : [country]
+		);
+		appendNeutralBoundaryContext(landPath, neutralContext);
 	}
 
 	console.log('[4/5] Building vector tiles (tippecanoe + pmtiles convert)...');

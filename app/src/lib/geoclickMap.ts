@@ -98,6 +98,8 @@ export function createMap(
 		// does for a map from a register with an attribution licence (#39:
 		// Germany's Kreise, dl-de/by-2-0).
 		attributionControl: {
+			// Detailed boundary licences must not spread across the learning card.
+			compact: true,
 			customAttribution: ['<a href="https://maplibre.org/">MapLibre</a>', mapDef.attribution]
 		}
 	});

@@ -1,0 +1,238 @@
+{
+	"sudurpashchim": {
+		"kind": "region",
+		"borders": [
+			"Karnali",
+			"Lumbini"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bhimdatta",
+			"nameDe": "Bhim Datta",
+			"nameIt": "Mahendranagar",
+			"population": 104599
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Sudurpashchim means far west.",
+				"Khaptad National Park protects highland meadows.",
+				"Shuklaphanta National Park preserves lowland grasslands."
+			],
+			"it": [
+				"Sudurpashchim significa estremo occidente.",
+				"Il Parco nazionale di Khaptad protegge praterie d’altopiano.",
+				"Il Parco nazionale di Shuklaphanta conserva praterie di pianura."
+			],
+			"de": [
+				"Sudurpashchim bedeutet ferner Westen.",
+				"Der Khaptad-Nationalpark schützt Hochlandwiesen.",
+				"Der Shuklaphanta-Nationalpark bewahrt Graslandschaften im Tiefland."
+			]
+		}
+	},
+	"karnali": {
+		"kind": "region",
+		"borders": [
+			"Gandaki",
+			"Lumbini",
+			"Sudurpashchim"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Birendranagar",
+			"nameDe": "Birendranagar",
+			"nameIt": "Birendranagara",
+			"population": 47914
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named after the Karnali River.",
+				"Rara is Nepal’s largest natural lake.",
+				"The Sinja Valley preserves traces of the medieval Khasa kingdom."
+			],
+			"it": [
+				"Prende il nome dal fiume Karnali.",
+				"Il Rara è il più grande lago naturale del Nepal.",
+				"La valle di Sinja conserva tracce del regno medievale dei Khasa."
+			],
+			"de": [
+				"Benannt nach dem Fluss Karnali.",
+				"Der Rara-See ist Nepals größter natürlicher See.",
+				"Das Sinja-Tal bewahrt Spuren des mittelalterlichen Khasa-Reiches."
+			]
+		}
+	},
+	"gandaki": {
+		"kind": "region",
+		"borders": [
+			"Bagmati",
+			"Karnali",
+			"Lumbini"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pokhara",
+			"nameDe": "Pokhara",
+			"nameIt": "Pokhara",
+			"population": 353841
+		},
+		"peak": {
+			"name": "Dhaulagiri",
+			"elevation": 8172
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named after the Gandaki river system.",
+				"The Annapurna Circuit is one of its renowned trekking routes.",
+				"Lo Manthang preserves a walled town and Tibetan cultural traditions."
+			],
+			"it": [
+				"Prende il nome dal sistema fluviale del Gandaki.",
+				"Il circuito dell’Annapurna è uno dei suoi celebri itinerari escursionistici.",
+				"Lo Manthang conserva una città murata e tradizioni culturali tibetane."
+			],
+			"de": [
+				"Benannt nach dem Flusssystem des Gandaki.",
+				"Der Annapurna-Rundweg gehört zu seinen bekannten Trekkingrouten.",
+				"Lo Manthang bewahrt eine ummauerte Stadt und tibetische Kulturtraditionen."
+			]
+		}
+	},
+	"lumbini": {
+		"kind": "region",
+		"borders": [
+			"Gandaki",
+			"Karnali",
+			"Sudurpashchim"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ghorahi",
+			"nameDe": "Ghorahi",
+			"nameIt": "Ghorahi",
+			"population": 156164
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named after Lumbini, the traditional birthplace of the Buddha.",
+				"An Ashokan pillar marks the ancient sacred site at Lumbini.",
+				"Bardiya National Park protects lowland forests and grasslands."
+			],
+			"it": [
+				"Prende il nome da Lumbini, luogo tradizionale della nascita del Buddha.",
+				"Un pilastro di Ashoka segnala l’antico luogo sacro di Lumbini.",
+				"Il Parco nazionale di Bardiya protegge foreste e praterie di pianura."
+			],
+			"de": [
+				"Benannt nach Lumbini, dem überlieferten Geburtsort des Buddha.",
+				"Eine Ashoka-Säule kennzeichnet die alte heilige Stätte in Lumbini.",
+				"Der Bardiya-Nationalpark schützt Wälder und Graslandschaften im Tiefland."
+			]
+		}
+	},
+	"bagmati": {
+		"kind": "region",
+		"borders": [
+			"Gandaki",
+			"Koshi",
+			"Madhesh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kathmandu",
+			"nameDe": "Kathmandu",
+			"nameIt": "Katmandu",
+			"population": 845767
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named after the Bagmati River.",
+				"The Kathmandu Valley’s royal squares belong to a UNESCO World Heritage site.",
+				"Langtang National Park protects Himalayan valleys and forests."
+			],
+			"it": [
+				"Prende il nome dal fiume Bagmati.",
+				"Le piazze reali della valle di Kathmandu fanno parte di un sito UNESCO.",
+				"Il Parco nazionale di Langtang protegge valli e foreste himalayane."
+			],
+			"de": [
+				"Benannt nach dem Fluss Bagmati.",
+				"Die Königsplätze des Kathmandu-Tals gehören zu einer UNESCO-Welterbestätte.",
+				"Der Langtang-Nationalpark schützt Täler und Wälder des Himalaya."
+			]
+		}
+	},
+	"koshi": {
+		"kind": "region",
+		"borders": [
+			"Bagmati",
+			"Madhesh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Biratnagar",
+			"nameDe": "Biratnagar",
+			"nameIt": "Biratnagar",
+			"population": 242548
+		},
+		"peak": {
+			"name": "Mount Everest",
+			"elevation": 8848
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named after the Koshi river system.",
+				"Sagarmatha National Park protects the Everest landscape.",
+				"Ilam is known for its tea gardens."
+			],
+			"it": [
+				"Prende il nome dal sistema fluviale del Koshi.",
+				"Il Parco nazionale di Sagarmatha protegge il paesaggio dell’Everest.",
+				"Ilam è nota per le sue piantagioni di tè."
+			],
+			"de": [
+				"Benannt nach dem Flusssystem des Koshi.",
+				"Der Sagarmatha-Nationalpark schützt die Landschaft am Everest.",
+				"Ilam ist für seine Teegärten bekannt."
+			]
+		}
+	},
+	"madhesh": {
+		"kind": "region",
+		"borders": [
+			"Bagmati",
+			"Koshi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Birgunj",
+			"nameDe": "Birganj",
+			"nameIt": "Birganj",
+			"population": 135904
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Madhesh is usually traced to Sanskrit madhya desh, middle country.",
+				"Janakpur’s Janaki Mandir is a major centre of Ramayana traditions.",
+				"Mithila painting traditions flourish around Janakpur."
+			],
+			"it": [
+				"Madhesh viene solitamente ricondotto al sanscrito madhya desh, paese di mezzo.",
+				"Il Janaki Mandir di Janakpur è un importante centro delle tradizioni del Ramayana.",
+				"Attorno a Janakpur fioriscono le tradizioni pittoriche del Mithila."
+			],
+			"de": [
+				"Madhesh wird meist auf Sanskrit madhya desh, mittleres Land, zurückgeführt.",
+				"Der Janaki Mandir in Janakpur ist ein wichtiges Zentrum der Ramayana-Traditionen.",
+				"Rund um Janakpur wird die Mithila-Malerei gepflegt."
+			]
+		}
+	}
+}

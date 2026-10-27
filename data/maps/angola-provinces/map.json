@@ -1,0 +1,769 @@
+{
+	"id": "angola-provinces",
+	"name": "Angola — Provinces",
+	"country": "Angola",
+	"attribution": "OpenStreetMap contributors via Geofabrik; OCHA COD-AB municipality unions; current province groupings from Law 14/24 and 2025 territorial codification; 2025 groupings; 2026-10-26 geometry snapshot; ODbL 1.0 with attributed CC BY 3.0 IGO source; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/boundaries/angola-provinces-2025.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "cabinda",
+			"name": "Cabinda",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.47915,
+				-5.117699999999999
+			],
+			"bbox": [
+				11.8477,
+				-5.8896,
+				13.1106,
+				-4.3458
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						12.143,
+						-5.6876
+					],
+					[
+						12.2151,
+						-4.9599
+					],
+					[
+						12.8258,
+						-4.5635
+					]
+				],
+				"aspect": 3.13
+			}
+		},
+		{
+			"id": "zaire",
+			"name": "Zaire",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.5134,
+				-6.857749999999999
+			],
+			"bbox": [
+				12.0721,
+				-7.8857,
+				14.9547,
+				-5.8298
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						12.457,
+						-6.7116
+					],
+					[
+						13.5593,
+						-7.0207
+					],
+					[
+						14.6616,
+						-6.2788
+					]
+				],
+				"aspect": 1.94
+			}
+		},
+		{
+			"id": "uige",
+			"name": "Uíge",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.444299999999998,
+				-7.136000000000001
+			],
+			"bbox": [
+				13.7801,
+				-8.428,
+				17.1085,
+				-5.844
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						14.234,
+						-7.3749
+					],
+					[
+						15.4544,
+						-6.9303
+					],
+					[
+						16.6748,
+						-6.7887
+					]
+				],
+				"aspect": 1.38
+			}
+		},
+		{
+			"id": "bengo",
+			"name": "Bengo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.94045,
+				-8.30795
+			],
+			"bbox": [
+				12.9003,
+				-8.9807,
+				14.9806,
+				-7.6352
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						13.2785,
+						-8.0811
+					],
+					[
+						14.0316,
+						-8.3109
+					],
+					[
+						14.7527,
+						-8.6256
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "lunda-norte",
+			"name": "Lunda Norte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.6139,
+				-8.509599999999999
+			],
+			"bbox": [
+				17.2957,
+				-10.1025,
+				21.9321,
+				-6.9167
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						17.9371,
+						-9.2454
+					],
+					[
+						19.624,
+						-8.5029
+					],
+					[
+						21.2904,
+						-7.7158
+					]
+				],
+				"aspect": 1.98
+			}
+		},
+		{
+			"id": "cuanza-norte",
+			"name": "Cuanza Norte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.94255,
+				-8.876100000000001
+			],
+			"bbox": [
+				14.0553,
+				-9.7924,
+				15.8298,
+				-7.9598
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						14.4129,
+						-9.4683
+					],
+					[
+						15.2411,
+						-9.1106
+					],
+					[
+						15.5153,
+						-8.239
+					]
+				],
+				"aspect": 2.09
+			}
+		},
+		{
+			"id": "luanda",
+			"name": "Luanda",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.19965,
+				-9.011099999999999
+			],
+			"bbox": [
+				12.7906,
+				-9.4422,
+				13.6087,
+				-8.58
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						12.9523,
+						-9.2779
+					],
+					[
+						13.0752,
+						-8.9275
+					],
+					[
+						13.3645,
+						-8.6954
+					]
+				],
+				"aspect": 1.54
+			}
+		},
+		{
+			"id": "malanje",
+			"name": "Malanje",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.970599999999997,
+				-9.5439
+			],
+			"bbox": [
+				15.1024,
+				-11.7367,
+				18.8388,
+				-7.3511
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.3501,
+						-7.999
+					],
+					[
+						16.5918,
+						-10.0177
+					],
+					[
+						18.3553,
+						-11.1002
+					]
+				],
+				"aspect": 2.42
+			}
+		},
+		{
+			"id": "icolo-e-bengo",
+			"name": "Icolo e Bengo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.88775,
+				-9.599450000000001
+			],
+			"bbox": [
+				13.1538,
+				-10.4536,
+				14.6217,
+				-8.7453
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						13.5689,
+						-9.1661
+					],
+					[
+						13.6629,
+						-9.8112
+					],
+					[
+						14.2226,
+						-10.1445
+					]
+				],
+				"aspect": 1.21
+			}
+		},
+		{
+			"id": "lunda-sul",
+			"name": "Lunda Sul",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.390500000000003,
+				-9.91425
+			],
+			"bbox": [
+				18.457,
+				-11.5009,
+				22.324,
+				-8.3276
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						18.9567,
+						-10.6024
+					],
+					[
+						20.3306,
+						-10.4142
+					],
+					[
+						21.7045,
+						-9.7662
+					]
+				],
+				"aspect": 1.49
+			}
+		},
+		{
+			"id": "cuanza-sul",
+			"name": "Cuanza Sul",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.966149999999999,
+				-10.93795
+			],
+			"bbox": [
+				13.327,
+				-12.2061,
+				16.6053,
+				-9.6698
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						13.7525,
+						-11.044
+					],
+					[
+						14.9166,
+						-11.2169
+					],
+					[
+						16.0807,
+						-10.3356
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "moxico-leste",
+			"name": "Moxico Leste",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.383049999999997,
+				-12.00225
+			],
+			"bbox": [
+				20.6785,
+				-13.4257,
+				24.0876,
+				-10.5788
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						21.3311,
+						-12.0014
+					],
+					[
+						22.542,
+						-12.0677
+					],
+					[
+						23.753,
+						-11.9593
+					]
+				],
+				"aspect": 1.22
+			}
+		},
+		{
+			"id": "bie",
+			"name": "Bié",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.46235,
+				-12.439900000000002
+			],
+			"bbox": [
+				15.7011,
+				-14.3077,
+				19.2236,
+				-10.5721
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.4713,
+						-11.9959
+					],
+					[
+						17.6234,
+						-13.4027
+					],
+					[
+						18.7755,
+						-12.1125
+					]
+				],
+				"aspect": 1.22
+			}
+		},
+		{
+			"id": "huambo",
+			"name": "Huambo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.695,
+				-12.6003
+			],
+			"bbox": [
+				14.7926,
+				-13.7667,
+				16.5974,
+				-11.4339
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						15.1299,
+						-12.7614
+					],
+					[
+						15.6966,
+						-12.5397
+					],
+					[
+						16.2634,
+						-12.374
+					]
+				],
+				"aspect": 0.57
+			}
+		},
+		{
+			"id": "benguela",
+			"name": "Benguela",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.7136,
+				-12.82545
+			],
+			"bbox": [
+				12.3164,
+				-13.8884,
+				15.1108,
+				-11.7625
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						12.9218,
+						-13.1003
+					],
+					[
+						13.8005,
+						-12.6882
+					],
+					[
+						14.6792,
+						-12.9025
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "moxico",
+			"name": "Moxico",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.9713,
+				-13.698
+			],
+			"bbox": [
+				17.9342,
+				-16.2084,
+				22.0084,
+				-11.1876
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						19.1675,
+						-12.0544
+					],
+					[
+						20.0889,
+						-13.5502
+					],
+					[
+						21.5226,
+						-14.6237
+					]
+				],
+				"aspect": 1.45
+			}
+		},
+		{
+			"id": "huila",
+			"name": "Huíla",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.982400000000002,
+				-14.8379
+			],
+			"bbox": [
+				13.2093,
+				-16.3436,
+				16.7555,
+				-13.3322
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						13.7735,
+						-15.0617
+					],
+					[
+						15.0263,
+						-14.7019
+					],
+					[
+						16.279,
+						-14.3324
+					]
+				],
+				"aspect": 1.1
+			}
+		},
+		{
+			"id": "namibe",
+			"name": "Namibe",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.5716,
+				-15.39325
+			],
+			"bbox": [
+				11.4617,
+				-17.274,
+				13.6815,
+				-13.5125
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						12.2601,
+						-16.8691
+					],
+					[
+						12.746,
+						-15.4173
+					],
+					[
+						12.9091,
+						-13.8837
+					]
+				],
+				"aspect": 2.04
+			}
+		},
+		{
+			"id": "cubango",
+			"name": "Cubango",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.24785,
+				-15.79215
+			],
+			"bbox": [
+				16.4615,
+				-17.9099,
+				20.0342,
+				-13.6744
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						17.1495,
+						-14.2196
+					],
+					[
+						17.5574,
+						-16.222
+					],
+					[
+						19.2111,
+						-17.5041
+					]
+				],
+				"aspect": 3.45
+			}
+		},
+		{
+			"id": "cuando",
+			"name": "Cuando",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.6643,
+				-15.8019
+			],
+			"bbox": [
+				17.8946,
+				-18.038,
+				23.434,
+				-13.5658
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						18.5089,
+						-14.5754
+					],
+					[
+						20.1508,
+						-16.2201
+					],
+					[
+						22.0764,
+						-17.5365
+					]
+				],
+				"aspect": 2.48
+			}
+		},
+		{
+			"id": "cunene",
+			"name": "Cunene",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.27695,
+				-16.2722
+			],
+			"bbox": [
+				13.135,
+				-17.4388,
+				17.4189,
+				-15.1056
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						13.7373,
+						-16.7991
+					],
+					[
+						15.3964,
+						-16.6377
+					],
+					[
+						17.0018,
+						-16.2
+					]
+				],
+				"aspect": 2.07
+			}
+		}
+	],
+	"tourOrder": [
+		"cabinda",
+		"zaire",
+		"uige",
+		"bengo",
+		"lunda-norte",
+		"cuanza-norte",
+		"luanda",
+		"malanje",
+		"icolo-e-bengo",
+		"lunda-sul",
+		"cuanza-sul",
+		"moxico-leste",
+		"bie",
+		"huambo",
+		"benguela",
+		"moxico",
+		"huila",
+		"namibe",
+		"cubango",
+		"cuando",
+		"cunene"
+	]
+}

@@ -1,0 +1,1640 @@
+{
+	"type": "FeatureCollection",
+	"source": "Wikidata (CC0)",
+	"fetchedAt": "2026-10-26T12:33:56.248Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"SVK\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2011-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"sk\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  OPTIONAL {\n    ?item wdt:P131* ?region .\n    ?region wdt:P31 wd:Q15057583; wdt:P17 ?country;\n      rdfs:label ?regionName . FILTER(LANG(?regionName)=\"sk\")\n  }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.258055555,
+					48.718611111
+				]
+			},
+			"properties": {
+				"NAME": "Bánovce nad Bebravou",
+				"NAME_EN": "Bánovce nad Bebravou",
+				"NAME_IT": "Bánovce nad Bebravou",
+				"NAME_DE": "Bánovce nad Bebravou",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15872,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q549849"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.145277777,
+					48.735277777
+				]
+			},
+			"properties": {
+				"NAME": "Banská Bystrica",
+				"NAME_EN": "Banská Bystrica",
+				"NAME_IT": "Banská Bystrica",
+				"NAME_DE": "Banská Bystrica",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Banskobystrický kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 73054,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q144983"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.2756031,
+					49.2926871
+				]
+			},
+			"properties": {
+				"NAME": "Bardejov",
+				"NAME_EN": "Bardejov",
+				"NAME_IT": "Bardejov",
+				"NAME_DE": "Bardejov",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 29495,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27007"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.1093063,
+					48.1516988
+				]
+			},
+			"properties": {
+				"NAME": "Bratislava",
+				"NAME_EN": "Bratislava",
+				"NAME_IT": "Bratislava",
+				"NAME_DE": "Bratislava",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Bratislavský kraj",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 1,
+				"POP_MAX": 480902,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1780"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.638055555,
+					48.803611111
+				]
+			},
+			"properties": {
+				"NAME": "Brezno",
+				"NAME_EN": "Brezno",
+				"NAME_IT": "Brezno",
+				"NAME_DE": "Brezno",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Banskobystrický kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19577,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q465312"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.558055555,
+					49.222777777
+				]
+			},
+			"properties": {
+				"NAME": "Bytča",
+				"NAME_EN": "Bytča",
+				"NAME_IT": "Bytča",
+				"NAME_DE": "Bytča",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Žilinský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11729,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27907"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.788333333,
+					49.438611111
+				]
+			},
+			"properties": {
+				"NAME": "Čadca",
+				"NAME_EN": "Čadca",
+				"NAME_IT": "Čadca",
+				"NAME_DE": "Čadca",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Žilinský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22072,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q337478"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.4187783,
+					48.5611631
+				]
+			},
+			"properties": {
+				"NAME": "Detva",
+				"NAME_EN": "Detva",
+				"NAME_IT": "Detva",
+				"NAME_DE": "Detva",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Banskobystrický kraj",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 13416,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q11857"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					16.97277778,
+					48.20944444
+				]
+			},
+			"properties": {
+				"NAME": "Devínska Nová Ves",
+				"NAME_EN": "Devínska Nová Ves",
+				"NAME_IT": "Devínska Nová Ves",
+				"NAME_DE": "Devínska Nová Ves",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Bratislavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17128,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q970325"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.299166666,
+					49.211666666
+				]
+			},
+			"properties": {
+				"NAME": "Dolný Kubín",
+				"NAME_EN": "Dolný Kubín",
+				"NAME_IT": "Dolný Kubín",
+				"NAME_DE": "Dolný Kubín",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Žilinský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17378,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q589309"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.165833333,
+					48.9575
+				]
+			},
+			"properties": {
+				"NAME": "Dubnica nad Váhom",
+				"NAME_EN": "Dubnica nad Váhom",
+				"NAME_IT": "Dubnica nad Váhom",
+				"NAME_DE": "Dubnica nad Váhom",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21356,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q481528"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.614722222,
+					47.996111111
+				]
+			},
+			"properties": {
+				"NAME": "Dunajská Streda",
+				"NAME_EN": "Dunajská Streda",
+				"NAME_IT": "Dunajská Streda",
+				"NAME_DE": "Dunajská Streda",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trnavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22720,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q646393"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.730833333,
+					48.191388888
+				]
+			},
+			"properties": {
+				"NAME": "Galanta",
+				"NAME_EN": "Galanta",
+				"NAME_IT": "Galanta",
+				"NAME_DE": "Gallandau",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trnavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15402,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q460767"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.761944444,
+					48.727222222
+				]
+			},
+			"properties": {
+				"NAME": "Handlová",
+				"NAME_EN": "Handlová",
+				"NAME_IT": "Handlová",
+				"NAME_DE": "Handlová",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15289,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842011"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.803055555,
+					48.431111111
+				]
+			},
+			"properties": {
+				"NAME": "Hlohovec",
+				"NAME_EN": "Hlohovec",
+				"NAME_IT": "Hlohovec",
+				"NAME_DE": "Hlohovec",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trnavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19214,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q754773"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.162777777,
+					48.811944444
+				]
+			},
+			"properties": {
+				"NAME": "Holíč",
+				"NAME_EN": "Holíč",
+				"NAME_IT": "Holíč",
+				"NAME_DE": "Holíč",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trnavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10735,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q653326"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.912222222,
+					48.930555555
+				]
+			},
+			"properties": {
+				"NAME": "Humenné",
+				"NAME_EN": "Humenné",
+				"NAME_IT": "Humenné",
+				"NAME_DE": "Humenné",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29179,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q502264"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.429166666,
+					49.138333333
+				]
+			},
+			"properties": {
+				"NAME": "Kežmarok",
+				"NAME_EN": "Kežmarok",
+				"NAME_IT": "Kežmarok",
+				"NAME_DE": "Kežmarok",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14984,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q327977"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.997222222,
+					47.915277777
+				]
+			},
+			"properties": {
+				"NAME": "Kolárovo",
+				"NAME_EN": "Kolárovo",
+				"NAME_IT": "Kolárovo",
+				"NAME_DE": "Kolárovo",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Nitriansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10381,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q374095"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.128333333,
+					47.763333333
+				]
+			},
+			"properties": {
+				"NAME": "Komárno",
+				"NAME_EN": "Komárno",
+				"NAME_IT": "Komárno",
+				"NAME_DE": "Komárno",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Nitriansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 31560,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q210796"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.25,
+					48.716666666
+				]
+			},
+			"properties": {
+				"NAME": "Košice",
+				"NAME_EN": "Košice",
+				"NAME_IT": "Košice",
+				"NAME_DE": "Košice",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Košický kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 222286,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q25409"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.783333333,
+					49.3
+				]
+			},
+			"properties": {
+				"NAME": "Kysucké Nové Mesto",
+				"NAME_EN": "Kysucké Nové Mesto",
+				"NAME_IT": "Kysucké Nové Mesto",
+				"NAME_DE": "Kysucké Nové Mesto",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Žilinský kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 14213,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q516578"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.606944444,
+					48.213611111
+				]
+			},
+			"properties": {
+				"NAME": "Levice",
+				"NAME_EN": "Levice",
+				"NAME_IT": "Levice",
+				"NAME_DE": "Levice",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Nitriansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 30161,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q506693"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.590555555,
+					49.022777777
+				]
+			},
+			"properties": {
+				"NAME": "Levoča",
+				"NAME_EN": "Levoča",
+				"NAME_IT": "Levoča",
+				"NAME_DE": "Levoča",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13779,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q242478"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.618055555,
+					49.081111111
+				]
+			},
+			"properties": {
+				"NAME": "Liptovský Mikuláš",
+				"NAME_EN": "Liptovský Mikuláš",
+				"NAME_IT": "Liptovský Mikuláš",
+				"NAME_DE": "Liptovský Mikuláš",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Žilinský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29710,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q272040"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.670833333,
+					48.331388888
+				]
+			},
+			"properties": {
+				"NAME": "Lučenec",
+				"NAME_EN": "Lučenec",
+				"NAME_IT": "Lučenec",
+				"NAME_DE": "Lučenec",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Banskobystrický kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24427,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q728965"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.023611111,
+					48.438055555
+				]
+			},
+			"properties": {
+				"NAME": "Malacky",
+				"NAME_EN": "Malacky",
+				"NAME_IT": "Malacky",
+				"NAME_DE": "Malacky",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Bratislavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 18742,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q837464"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.921388888,
+					49.063611111
+				]
+			},
+			"properties": {
+				"NAME": "Martin",
+				"NAME_EN": "Martin",
+				"NAME_IT": "Martin",
+				"NAME_DE": "Martin",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Žilinský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 50153,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27001"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.918333333,
+					48.7575
+				]
+			},
+			"properties": {
+				"NAME": "Michalovce",
+				"NAME_EN": "Michalovce",
+				"NAME_IT": "Michalovce",
+				"NAME_DE": "Michalovce",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Košický kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 34894,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q460925"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.999166666,
+					48.615555555
+				]
+			},
+			"properties": {
+				"NAME": "Moldava nad Bodvou",
+				"NAME_EN": "Moldava nad Bodvou",
+				"NAME_IT": "Moldava nad Bodvou",
+				"NAME_DE": "Moldava nad Bodvou",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Košický kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10284,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q846440"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.568611111,
+					48.757777777
+				]
+			},
+			"properties": {
+				"NAME": "Myjava",
+				"NAME_EN": "Myjava",
+				"NAME_IT": "Myjava",
+				"NAME_DE": "Myjava",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10316,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q837460"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.0875,
+					48.314722222
+				]
+			},
+			"properties": {
+				"NAME": "Nitra",
+				"NAME_EN": "Nitra",
+				"NAME_IT": "Nitra",
+				"NAME_DE": "Nitra",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Nitriansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 75301,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q26397"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.15,
+					48.933333333
+				]
+			},
+			"properties": {
+				"NAME": "Nová Dubnica",
+				"NAME_EN": "Nová Dubnica",
+				"NAME_IT": "Nová Dubnica",
+				"NAME_DE": "Neudubnitz",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 10130,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q249935"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.833333333,
+					48.783333333
+				]
+			},
+			"properties": {
+				"NAME": "Nové Mesto nad Váhom",
+				"NAME_EN": "Nové Mesto nad Váhom",
+				"NAME_IT": "Nové Mesto nad Váhom",
+				"NAME_DE": "Nové Mesto nad Váhom",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 19171,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q376987"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.1632228,
+					47.9859797
+				]
+			},
+			"properties": {
+				"NAME": "Nové Zámky",
+				"NAME_EN": "Nové Zámky",
+				"NAME_IT": "Nové Zámky",
+				"NAME_DE": "Nové Zámky",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Nitriansky kraj",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 35628,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q276362"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.366666666,
+					48.633333333
+				]
+			},
+			"properties": {
+				"NAME": "Partizánske",
+				"NAME_EN": "Partizánske",
+				"NAME_IT": "Partizánske",
+				"NAME_DE": "Partizánske",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 20096,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q754768"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.116666666,
+					48.133333333
+				]
+			},
+			"properties": {
+				"NAME": "Petržalka",
+				"NAME_EN": "Petržalka",
+				"NAME_IT": "Petržalka",
+				"NAME_DE": "Petržalka",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Bratislavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 112118,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1013328"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.266111111,
+					48.291944444
+				]
+			},
+			"properties": {
+				"NAME": "Pezinok",
+				"NAME_EN": "Pezinok",
+				"NAME_IT": "Pezinok",
+				"NAME_DE": "Pezinok",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Bratislavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24340,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q659424"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.833333333,
+					48.583333333
+				]
+			},
+			"properties": {
+				"NAME": "Piešťany",
+				"NAME_EN": "Piešťany",
+				"NAME_IT": "Piešťany",
+				"NAME_DE": "Piešťany",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trnavský kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 26086,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q321074"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.3,
+					49.05
+				]
+			},
+			"properties": {
+				"NAME": "Poprad",
+				"NAME_EN": "Poprad",
+				"NAME_IT": "Poprad",
+				"NAME_DE": "Poprad",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 48034,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q26393"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.45,
+					49.116666666
+				]
+			},
+			"properties": {
+				"NAME": "Považská Bystrica",
+				"NAME_EN": "Považská Bystrica",
+				"NAME_IT": "Považská Bystrica",
+				"NAME_DE": "Považská Bystrica",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 36690,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q319787"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.233333333,
+					49
+				]
+			},
+			"properties": {
+				"NAME": "Prešov",
+				"NAME_EN": "Prešov",
+				"NAME_IT": "Prešov",
+				"NAME_DE": "Prešov",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 81223,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q26119"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.624166666,
+					48.771388888
+				]
+			},
+			"properties": {
+				"NAME": "Prievidza",
+				"NAME_EN": "Prievidza",
+				"NAME_IT": "Prievidza",
+				"NAME_DE": "Prievidza",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 41959,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q208750"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.330555555,
+					49.12
+				]
+			},
+			"properties": {
+				"NAME": "Púchov",
+				"NAME_EN": "Púchov",
+				"NAME_IT": "Púchov",
+				"NAME_DE": "Púchov",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 16622,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q258481"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.116666666,
+					48.683333333
+				]
+			},
+			"properties": {
+				"NAME": "Revúca",
+				"NAME_EN": "Revúca",
+				"NAME_IT": "Revúca",
+				"NAME_DE": "Revúca",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Banskobystrický kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 10778,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q847213"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.019963888,
+					48.381430555
+				]
+			},
+			"properties": {
+				"NAME": "Rimavská Sobota",
+				"NAME_EN": "Rimavská Sobota",
+				"NAME_IT": "Rimavská Sobota",
+				"NAME_DE": "Rimavská Sobota",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Banskobystrický kraj",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 20964,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q829812"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.531388888,
+					48.658611111
+				]
+			},
+			"properties": {
+				"NAME": "Rožňava",
+				"NAME_EN": "Rožňava",
+				"NAME_IT": "Rožňava",
+				"NAME_DE": "Rožňava",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Košický kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 16794,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q267888"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.308333333,
+					49.078611111
+				]
+			},
+			"properties": {
+				"NAME": "Ružomberok",
+				"NAME_EN": "Ružomberok",
+				"NAME_IT": "Ružomberok",
+				"NAME_DE": "Ružomberok",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Žilinský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26099,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q27541"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.1,
+					49.1
+				]
+			},
+			"properties": {
+				"NAME": "Sabinov",
+				"NAME_EN": "Sabinov",
+				"NAME_IT": "Sabinov",
+				"NAME_DE": "Sabinov",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 11981,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q837478"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.883333333,
+					48.15
+				]
+			},
+			"properties": {
+				"NAME": "Šaľa",
+				"NAME_EN": "Šaľa",
+				"NAME_IT": "Šaľa",
+				"NAME_DE": "Šaľa",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Nitriansky kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 19534,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q391361"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.311666666,
+					48.026666666
+				]
+			},
+			"properties": {
+				"NAME": "Šamorín",
+				"NAME_EN": "Šamorín",
+				"NAME_IT": "Šamorín",
+				"NAME_DE": "Šamorín",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trnavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13622,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q391068"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.399722222,
+					48.218888888
+				]
+			},
+			"properties": {
+				"NAME": "Senec",
+				"NAME_EN": "Senec",
+				"NAME_IT": "Senec",
+				"NAME_DE": "Senec",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Bratislavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 20260,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q754790"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.366666666,
+					48.680555555
+				]
+			},
+			"properties": {
+				"NAME": "Senica",
+				"NAME_EN": "Senica",
+				"NAME_IT": "Senica",
+				"NAME_DE": "Senica",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trnavský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 18970,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q750407"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.733333333,
+					48.283333333
+				]
+			},
+			"properties": {
+				"NAME": "Sereď",
+				"NAME_EN": "Sereď",
+				"NAME_IT": "Sereď",
+				"NAME_DE": "Sereď",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trnavský kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 14946,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q429676"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.156666666,
+					48.988055555
+				]
+			},
+			"properties": {
+				"NAME": "Snina",
+				"NAME_EN": "Snina",
+				"NAME_IT": "Snina",
+				"NAME_DE": "Snina",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17612,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q754788"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.566666666,
+					48.95
+				]
+			},
+			"properties": {
+				"NAME": "Spišská Nová Ves",
+				"NAME_EN": "Spišská Nová Ves",
+				"NAME_IT": "Spišská Nová Ves",
+				"NAME_DE": "Spišská Nová Ves",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Košický kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 34023,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q462840"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.683333333,
+					49.316666666
+				]
+			},
+			"properties": {
+				"NAME": "Stará Ľubovňa",
+				"NAME_EN": "Stará Ľubovňa",
+				"NAME_IT": "Stará Ľubovňa",
+				"NAME_DE": "Stará Ľubovňa",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 15534,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q605521"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.033333333,
+					48.283333333
+				]
+			},
+			"properties": {
+				"NAME": "Stupava",
+				"NAME_EN": "Stupava",
+				"NAME_IT": "Stupava",
+				"NAME_DE": "Stupava",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Bratislavský kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 12979,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q782928"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.183333333,
+					48.55
+				]
+			},
+			"properties": {
+				"NAME": "Topoľčany",
+				"NAME_EN": "Topoľčany",
+				"NAME_IT": "Topoľčany",
+				"NAME_DE": "Topoľčany",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Nitriansky kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 23638,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q750423"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.716666666,
+					48.633333333
+				]
+			},
+			"properties": {
+				"NAME": "Trebišov",
+				"NAME_EN": "Trebišov",
+				"NAME_IT": "Trebišov",
+				"NAME_DE": "Trebischau",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Košický kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 22706,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q256301"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.040555555,
+					48.894166666
+				]
+			},
+			"properties": {
+				"NAME": "Trenčín",
+				"NAME_EN": "Trenčín",
+				"NAME_IT": "Trenčín",
+				"NAME_DE": "Trenčín",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trenčiansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 54104,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q145002"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					17.586211111,
+					48.37775
+				]
+			},
+			"properties": {
+				"NAME": "Trnava",
+				"NAME_EN": "Trnava",
+				"NAME_IT": "Trnava",
+				"NAME_DE": "Trnava",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Trnavský kraj",
+				"coordinatePrecision": 0.0000027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 63184,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q26175"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.338055555,
+					48.215
+				]
+			},
+			"properties": {
+				"NAME": "Veľký Krtíš",
+				"NAME_EN": "Veľký Krtíš",
+				"NAME_IT": "Veľký Krtíš",
+				"NAME_DE": "Veľký Krtíš",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Banskobystrický kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10049,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q673741"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.673055555,
+					48.880555555
+				]
+			},
+			"properties": {
+				"NAME": "Vranov nad Topľou",
+				"NAME_EN": "Vranov nad Topľou",
+				"NAME_IT": "Vranov nad Topľou",
+				"NAME_DE": "Vranov nad Topľou",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Prešovský kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 20007,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842005"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.853333333,
+					48.591944444
+				]
+			},
+			"properties": {
+				"NAME": "Žiar nad Hronom",
+				"NAME_EN": "Žiar nad Hronom",
+				"NAME_IT": "Žiar nad Hronom",
+				"NAME_DE": "Žiar nad Hronom",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Banskobystrický kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 16433,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q393925"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.733333333,
+					49.216666666
+				]
+			},
+			"properties": {
+				"NAME": "Žilina",
+				"NAME_EN": "Žilina",
+				"NAME_IT": "Žilina",
+				"NAME_DE": "Žilina",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Žilinský kraj",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 79873,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q25797"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.396388888,
+					48.378055555
+				]
+			},
+			"properties": {
+				"NAME": "Zlaté Moravce",
+				"NAME_EN": "Zlaté Moravce",
+				"NAME_IT": "Zlaté Moravce",
+				"NAME_DE": "Zlaté Moravce",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Nitriansky kraj",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11733,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q207226"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.1247135,
+					48.5782517
+				]
+			},
+			"properties": {
+				"NAME": "Zvolen",
+				"NAME_EN": "Zvolen",
+				"NAME_IT": "Zvolen",
+				"NAME_DE": "Zvolen",
+				"ADM0NAME": "Slovakia",
+				"ADM1NAME": "Banskobystrický kraj",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 38747,
+				"POP1950": 0,
+				"populationDate": "2025-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q11874"
+			}
+		}
+	]
+}

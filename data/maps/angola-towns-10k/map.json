@@ -1,0 +1,392 @@
+{
+	"id": "angola-towns-10k",
+	"name": "Angola — Towns",
+	"country": "Angola",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; OpenStreetMap contributors via Geofabrik; OCHA COD-AB municipality unions; current province groupings from Law 14/24 and 2025 territorial codification; 2025 groupings; 2026-10-26 geometry snapshot; ODbL 1.0 with attributed CC BY 3.0 IGO source; https://opendatacommons.org/licenses/odbl/1-0/; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"regionsMap": "angola-provinces",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "cabinda",
+			"name": "Cabinda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.1899947,
+				-5.5596232
+			],
+			"bbox": [
+				12.1899947,
+				-5.5596232,
+				12.1899947,
+				-5.5596232
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "soyo",
+			"name": "Soyo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.3699837,
+				-6.1296142
+			],
+			"bbox": [
+				12.3699837,
+				-6.1296142,
+				12.3699837,
+				-6.1296142
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "mbanza-congo",
+			"name": "Mbanza-Congo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.2399987,
+				-6.2696057
+			],
+			"bbox": [
+				14.2399987,
+				-6.2696057,
+				14.2399987,
+				-6.2696057
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "uige",
+			"name": "Uíge",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.0499751,
+				-7.6200142
+			],
+			"bbox": [
+				15.0499751,
+				-7.6200142,
+				15.0499751,
+				-7.6200142
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lucapa",
+			"name": "Lucapa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.7400154,
+				-8.4196037
+			],
+			"bbox": [
+				20.7400154,
+				-8.4196037,
+				20.7400154,
+				-8.4196037
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "caxito",
+			"name": "Caxito",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.6599825,
+				-8.5795422
+			],
+			"bbox": [
+				13.6599825,
+				-8.5795422,
+				13.6599825,
+				-8.5795422
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "luanda",
+			"name": "Luanda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.2324812,
+				-8.8363403
+			],
+			"bbox": [
+				13.2324812,
+				-8.8363403,
+				13.2324812,
+				-8.8363403
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "capenda-camulemba",
+			"name": "Capenda-Camulemba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.4300272,
+				-9.4195943
+			],
+			"bbox": [
+				18.4300272,
+				-9.4195943,
+				18.4300272,
+				-9.4195943
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "malanje",
+			"name": "Malanje",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.3400256,
+				-9.5400004
+			],
+			"bbox": [
+				16.3400256,
+				-9.5400004,
+				16.3400256,
+				-9.5400004
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "saurimo",
+			"name": "Saurimo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.3900109,
+				-9.6595797
+			],
+			"bbox": [
+				20.3900109,
+				-9.6595797,
+				20.3900109,
+				-9.6595797
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sumbe",
+			"name": "Sumbe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.8499967,
+				-11.2100277
+			],
+			"bbox": [
+				13.8499967,
+				-11.2100277,
+				13.8499967,
+				-11.2100277
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "luena",
+			"name": "Luena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.900015,
+				-11.7900439
+			],
+			"bbox": [
+				19.900015,
+				-11.7900439,
+				19.900015,
+				-11.7900439
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lobito",
+			"name": "Lobito",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.54123,
+				-12.3700085
+			],
+			"bbox": [
+				13.54123,
+				-12.3700085,
+				13.54123,
+				-12.3700085
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kuito",
+			"name": "Kuito",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.939989,
+				-12.3800338
+			],
+			"bbox": [
+				16.939989,
+				-12.3800338,
+				16.939989,
+				-12.3800338
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "benguela",
+			"name": "Benguela",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.407233,
+				-12.5782645
+			],
+			"bbox": [
+				13.407233,
+				-12.5782645,
+				13.407233,
+				-12.5782645
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "huambo",
+			"name": "Huambo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.7580635,
+				-12.7480395
+			],
+			"bbox": [
+				15.7580635,
+				-12.7480395,
+				15.7580635,
+				-12.7480395
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "lubango",
+			"name": "Lubango",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.4900187,
+				-14.9100085
+			],
+			"bbox": [
+				13.4900187,
+				-14.9100085,
+				13.4900187,
+				-14.9100085
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "mocamedes",
+			"name": "Moçâmedes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.1600223,
+				-15.1900431
+			],
+			"bbox": [
+				12.1600223,
+				-15.1900431,
+				12.1600223,
+				-15.1900431
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mavinga",
+			"name": "Mavinga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.3600386,
+				-15.7895414
+			],
+			"bbox": [
+				20.3600386,
+				-15.7895414,
+				20.3600386,
+				-15.7895414
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tombua",
+			"name": "Tômbua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.859989,
+				-15.8000317
+			],
+			"bbox": [
+				11.859989,
+				-15.8000317,
+				11.859989,
+				-15.8000317
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"cabinda",
+		"soyo",
+		"mbanza-congo",
+		"uige",
+		"lucapa",
+		"caxito",
+		"luanda",
+		"capenda-camulemba",
+		"malanje",
+		"saurimo",
+		"sumbe",
+		"luena",
+		"lobito",
+		"kuito",
+		"benguela",
+		"huambo",
+		"lubango",
+		"mocamedes",
+		"mavinga",
+		"tombua"
+	]
+}

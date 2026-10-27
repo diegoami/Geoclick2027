@@ -1,0 +1,194 @@
+{
+	"id": "singapore-regions",
+	"name": "Singapore — Regions",
+	"country": "Singapore",
+	"attribution": "Urban Redevelopment Authority, Master Plan 2019 Region Boundary (No Sea), data.gov.sg; 2019; Singapore Open Data Licence 1.0; https://data.gov.sg/open-data-licence; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"largestCityFacts": false,
+	"boundarySource": "data/boundaries/singapore-regions-2019.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "north",
+			"name": "North",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.7827,
+				1.4032499999999999
+			],
+			"bbox": [
+				103.693,
+				1.3358,
+				103.8724,
+				1.4707
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.7491,
+						1.4176
+					],
+					[
+						103.8004,
+						1.3982
+					],
+					[
+						103.8516,
+						1.4281
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "north-east",
+			"name": "North East",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.95305,
+				1.38715
+			],
+			"bbox": [
+				103.8178,
+				1.3336,
+				104.0883,
+				1.4407
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.8362,
+						1.3823
+					],
+					[
+						103.8744,
+						1.3736
+					],
+					[
+						103.9126,
+						1.3945
+					]
+				],
+				"aspect": 1.3
+			}
+		},
+		{
+			"id": "east",
+			"name": "East",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.96525,
+				1.3515000000000001
+			],
+			"bbox": [
+				103.8935,
+				1.302,
+				104.037,
+				1.401
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						103.9138,
+						1.3441
+					],
+					[
+						103.9641,
+						1.3603
+					],
+					[
+						104.0145,
+						1.3426
+					]
+				],
+				"aspect": 1.35
+			}
+		},
+		{
+			"id": "west",
+			"name": "West",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.70205,
+				1.3001
+			],
+			"bbox": [
+				103.6057,
+				1.1665,
+				103.7984,
+				1.4337
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.6236,
+						1.2853
+					],
+					[
+						103.6832,
+						1.337
+					],
+					[
+						103.7477,
+						1.384
+					]
+				],
+				"aspect": 1.76
+			}
+		},
+		{
+			"id": "central",
+			"name": "Central",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.83485,
+				1.2912
+			],
+			"bbox": [
+				103.7502,
+				1.2149,
+				103.9195,
+				1.3675
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.7793,
+						1.3022
+					],
+					[
+						103.8381,
+						1.3064
+					],
+					[
+						103.896,
+						1.3175
+					]
+				],
+				"aspect": 1.56
+			}
+		}
+	],
+	"tourOrder": [
+		"north",
+		"north-east",
+		"east",
+		"west",
+		"central"
+	]
+}

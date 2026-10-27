@@ -1,6 +1,6 @@
 # Geoclick — Roadmap
 
-- **v1.0.0 in preparation (2026-10-25):** owner-approved release consolidation, itch.io references and 22-country expansion. Scope and batch status: [PLAN_V1.0.md](docs/PLAN_V1.0.md), [proposal #241](https://github.com/diegoami/Geoclick2027/issues/241). No 1.0 tag or publication yet.
+- **v1.0.0 in preparation (2026-10-26):** all 22 approved countries have 44 generated maps (217 total) and complete authored EN/IT/DE facts (735/735 targets). All four gates pass (2831 app tests). [PR #243](https://github.com/diegoami/Geoclick2027/pull/243) has a [no-blockers independent review](https://github.com/diegoami/Geoclick2027/pull/243#pullrequestreview-5656320311) and awaits owner testing/merge approval. Two cosmetic notes remain in its review thread. [PLAN_V1.0.md](docs/PLAN_V1.0.md), [proposal #241](https://github.com/diegoami/Geoclick2027/issues/241). No 1.0 tag/publication yet.
 
 Self-contained iterations toward the desktop POC described in
 [ARCHITECTURE.md](ARCHITECTURE.md). Each iteration should leave the repo in

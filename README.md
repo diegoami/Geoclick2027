@@ -3,7 +3,7 @@
 A geography-learning game: pick a map, take a guided tour, then quiz
 yourself by dragging each name onto the place it belongs. The better you
 know a map, the fewer names it offers you at a time — so a map you have
-learned keeps being worth playing. 173 maps across 58 countries (and the six continents), in
+learned keeps being worth playing. 217 maps across 79 countries (and the six continents), in
 English, German and Italian. Portfolio project — see
 [ARCHITECTURE.md](ARCHITECTURE.md) for the full pitch.
 
@@ -57,7 +57,7 @@ npx playwright install chromium  # once per machine: component tests run in it
 npm run dev
 ```
 
-Open the URL Vite prints (typically `http://localhost:5173`).
+Open the URL Vite prints (typically `http://localhost:5187`).
 
 `npm run setup-hooks` points git at the committed `.githooks/`, whose
 `pre-push` runs the four quality gates (`check`, `test`, `lint`, `build`)

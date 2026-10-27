@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Ghana (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"accra": {
 		"city": {
@@ -20,6 +21,815 @@
 				"Von einem Akan-Wort, das oft als „Ameisen“ gedeutet wird, nach den Ameisenhügeln auf ihrer Ebene.",
 				"Kwame Nkrumah erklärte hier 1957 die Unabhängigkeit des Landes.",
 				"Drei europäische Forts, ein niederländisches, ein dänisches und ein britisches, stehen an ihrem alten Ufer."
+			]
+		}
+	},
+	"_sources": {
+		"upper-east:region": [
+			"https://visitghana.com/upper-east-region/"
+		],
+		"upper-west:region": [
+			"https://uwrcc.gov.gh/about",
+			"https://visitghana.com/upper-west-region/"
+		],
+		"north-east:region": [
+			"https://mofep.gov.gh/sites/default/files/pbb-estimates/2020/2020-PBB-MoRRD.pdf",
+			"https://gis.gov.gh/north-east-region/",
+			"https://ghanaculture.gov.gh/north-east-region/"
+		],
+		"northern:region": [
+			"https://en.wikipedia.org/wiki/Kingdom_of_Dagbon",
+			"https://visitghana.com/northern-region/"
+		],
+		"savannah:region": [
+			"https://mofep.gov.gh/sites/default/files/pbb-estimates/2020/2020-PBB-MoRRD.pdf",
+			"https://visitghana.com/northern-region/",
+			"https://visitghana.app/regions/savannah"
+		],
+		"bono-east:region": [
+			"https://mofep.gov.gh/sites/default/files/pbb-estimates/2020/2020-PBB-MoRRD.pdf",
+			"https://visitghana.com/bono-east-region/"
+		],
+		"oti:region": [
+			"https://mofep.gov.gh/sites/default/files/pbb-estimates/2020/2020-PBB-MoRRD.pdf",
+			"https://visitghana.com/oti-region/"
+		],
+		"bono:region": [
+			"https://en.wikipedia.org/wiki/Bono_Region",
+			"https://brcc.gov.gh/"
+		],
+		"ahafo:region": [
+			"https://mofep.gov.gh/sites/default/files/pbb-estimates/2020/2020-PBB-MoRRD.pdf",
+			"https://mbda.gov.gh/ahafo-region/",
+			"https://www.gesetze-im-internet.de/bartschv_2005/anlage_6.html"
+		],
+		"ashanti:region": [
+			"https://ghanaculture.gov.gh/ashanti-region/"
+		],
+		"volta:region": [
+			"https://visitghana.com/volta-region/",
+			"https://ghanaculture.gov.gh/festivals-list/"
+		],
+		"eastern:region": [
+			"https://visitghana.com/eatern-region/"
+		],
+		"western-north:region": [
+			"https://mofep.gov.gh/sites/default/files/pbb-estimates/2020/2020-PBB-MoRRD.pdf",
+			"https://visitghana.com/western-north-region/"
+		],
+		"greater-accra:region": [
+			"https://ghanaculture.gov.gh/greater-accra-region/",
+			"https://ghanaculture.gov.gh/festivals-list/",
+			"https://smarthistory.org/eagle-coffin-ga-ghana/"
+		],
+		"central:region": [
+			"https://en.wikipedia.org/wiki/Central_Region_(Ghana)",
+			"https://www.motcca.gov.gh/tourist-sites/"
+		],
+		"western:region": [
+			"https://visitghana.com/western-region/"
+		],
+		"bawku:city": [
+			"https://mofep.gov.gh/sites/default/files/composite-budget/2012/UE/Bawku.pdf",
+			"https://visitghana.com/upper-east-region/"
+		],
+		"bolgatanga:city": [
+			"https://visitghana.com/upper-east-region/",
+			"https://gmmb.gov.gh/upper-east-regional-museum-bolgatanga-1991/"
+		],
+		"wa:city": [
+			"https://visitghana.com/upper-west-region/"
+		],
+		"saboba:city": [
+			"https://en.wikipedia.org/wiki/Saboba",
+			"https://mofep.gov.gh/sites/default/files/composite-budget/2016/NR/Saboba.pdf"
+		],
+		"tamale:city": [
+			"https://tamaleghana.com/history-of-tamale/",
+			"https://visitghana.com/northern-region/"
+		],
+		"hohoe:city": [
+			"https://en.wikipedia.org/wiki/Hohoe",
+			"https://mofep.gov.gh/sites/default/files/composite-budget/2026/VR/Hohoe.pdf",
+			"https://visitghana.com/volta-region/"
+		],
+		"mampong:city": [
+			"https://en.wikipedia.org/wiki/Mampong",
+			"https://mtce.edu.gh/about-us/"
+		],
+		"agogo:city": [
+			"https://en.wikipedia.org/wiki/Agogo,_Ghana",
+			"https://agogopresbyhospital.org/about-us/"
+		],
+		"kumasi:city": [
+			"https://en.wikipedia.org/wiki/Kumasi",
+			"https://gmmb.gov.gh/museums/"
+		],
+		"ho:city": [
+			"https://gmmb.gov.gh/volta-regional-museum-ho-1973/",
+			"https://visitghana.com/volta-region/"
+		],
+		"dome:city": [
+			"https://en.wikipedia.org/wiki/Dome,_Ghana",
+			"https://mofep.gov.gh/sites/default/files/composite-budget/2026/GR/Ga_East.pdf"
+		],
+		"obuasi:city": [
+			"https://reports.anglogoldashanti.com/22/wp-content/uploads/2023/05/AGA-RR22.pdf",
+			"https://en.wikipedia.org/wiki/Obuasi"
+		],
+		"aflao:city": [
+			"https://en.wikipedia.org/wiki/Aflao",
+			"https://www.glmis.gov.gh/kb/DocumentContentRender/78",
+			"https://www.isd.gov.gh/customs-commissioner-assures-aflao-women-traders-on-illegal-border-extortion/"
+		],
+		"koforidua:city": [
+			"https://www.ndpc.gov.gh/media/ER_New_Juaben_South_MTDP_2018-2021.pdf",
+			"https://en.wikipedia.org/wiki/Koforidua"
+		],
+		"tema:city": [
+			"https://en.wikipedia.org/wiki/Tema",
+			"https://www.ghanaports.gov.gh/page/index/10/TBH2322W/Our-History-and-Future"
+		],
+		"winneba:city": [
+			"https://en.wikipedia.org/wiki/Winneba",
+			"https://ghanaculture.gov.gh/festivals-list/",
+			"https://uew.edu.gh/about-uew/brief-history"
+		],
+		"tarkwa:city": [
+			"https://en.wikipedia.org/wiki/Tarkwa",
+			"https://www.umat.edu.gh/university-history"
+		],
+		"cape-coast:city": [
+			"https://en.wikipedia.org/wiki/Cape_Coast",
+			"https://gmmb.gov.gh/museums/"
+		],
+		"sekondi-takoradi:city": [
+			"https://en.wikipedia.org/wiki/Sekondi-Takoradi",
+			"https://ghanaports.gov.gh/page/index/17/2DQVY8WD/General-Information"
+		]
+	},
+	"upper-east": {
+		"region": {
+			"en": [
+				"The area has long been a crossroads for overland trade.",
+				"Bolgatanga’s artisans are renowned for woven baskets.",
+				"At Paga, local tradition regards crocodiles as sacred."
+			],
+			"it": [
+				"La zona è da lungo tempo un crocevia del commercio terrestre.",
+				"Gli artigiani di Bolgatanga sono rinomati per i cesti intrecciati.",
+				"A Paga la tradizione locale considera sacri i coccodrilli."
+			],
+			"de": [
+				"Die Gegend ist seit Langem ein Knotenpunkt des Überlandhandels.",
+				"Bolgatangas Handwerker sind für geflochtene Körbe bekannt.",
+				"In Paga gelten Krokodile nach örtlicher Überlieferung als heilig."
+			]
+		}
+	},
+	"upper-west": {
+		"region": {
+			"en": [
+				"It was separated from the former Upper Region in 1983.",
+				"Wa Naa’s palace preserves a distinctive earthen architectural tradition.",
+				"Wechiau’s community sanctuary protects hippopotamuses along the Black Volta."
+			],
+			"it": [
+				"Fu separata dalla precedente Regione Superiore nel 1983.",
+				"Il palazzo del Wa Naa conserva una caratteristica tradizione architettonica in terra.",
+				"Il santuario comunitario di Wechiau protegge gli ippopotami lungo il Volta Nero."
+			],
+			"de": [
+				"Die Region wurde 1983 von der früheren Upper Region abgetrennt.",
+				"Der Palast des Wa Naa bewahrt eine charakteristische Lehmbautradition.",
+				"Das gemeinschaftlich betriebene Schutzgebiet Wechiau schützt Flusspferde am Schwarzen Volta."
+			]
+		}
+	},
+	"north-east": {
+		"region": {
+			"en": [
+				"It was created in 2019 from part of Northern Region.",
+				"The Mamprusi kingdom is central to its historical identity.",
+				"Fugu smocks are traditionally made from strips of handwoven patterned cloth."
+			],
+			"it": [
+				"Fu creata nel 2019 da una parte della Regione Settentrionale.",
+				"Il regno mamprusi è centrale nella sua identità storica.",
+				"Le casacche fugu sono tradizionalmente confezionate con strisce di stoffa decorata tessuta a mano."
+			],
+			"de": [
+				"Die Region entstand 2019 aus einem Teil der Northern Region.",
+				"Das Königreich der Mamprusi prägt ihre historische Identität.",
+				"Traditionelle Fugu-Kittel werden aus handgewebten gemusterten Stoffstreifen zusammengesetzt."
+			]
+		}
+	},
+	"northern": {
+		"region": {
+			"en": [
+				"The area includes the historical heartland of the Dagbon kingdom.",
+				"Damba celebrations bring together royal ceremony, music and dance.",
+				"Tamale’s crafts include textile weaving and pottery."
+			],
+			"it": [
+				"La zona comprende il cuore storico del regno del Dagbon.",
+				"Le celebrazioni Damba uniscono cerimonie reali, musica e danza.",
+				"Tra i mestieri di Tamale vi sono la tessitura e la ceramica."
+			],
+			"de": [
+				"Die Gegend umfasst das historische Kernland des Königreichs Dagbon.",
+				"Damba-Feiern verbinden königliches Zeremoniell, Musik und Tanz.",
+				"Zu Tamales Handwerken gehören Weberei und Töpferei."
+			]
+		}
+	},
+	"savannah": {
+		"region": {
+			"en": [
+				"It was created in 2019 from part of Northern Region.",
+				"Mole National Park protects savanna wildlife, including elephants.",
+				"Larabanga’s mosque is known for its earthen walls and projecting timber beams."
+			],
+			"it": [
+				"Fu creata nel 2019 da una parte della Regione Settentrionale.",
+				"Il Parco nazionale di Mole protegge la fauna della savana, compresi gli elefanti.",
+				"La moschea di Larabanga è nota per le pareti in terra e le travi di legno sporgenti."
+			],
+			"de": [
+				"Die Region entstand 2019 aus einem Teil der Northern Region.",
+				"Der Mole-Nationalpark schützt Savannentiere, darunter Elefanten.",
+				"Larabangas Moschee ist für Lehmwände und herausragende Holzbalken bekannt."
+			]
+		}
+	},
+	"bono-east": {
+		"region": {
+			"en": [
+				"It was created in 2019 from the former Brong Ahafo Region.",
+				"Boabeng-Fiema’s monkeys are protected by local religious traditions.",
+				"Kintampo’s waterfalls cascade through a series of rocky steps."
+			],
+			"it": [
+				"Fu creata nel 2019 dalla precedente Regione del Brong Ahafo.",
+				"Le scimmie di Boabeng-Fiema sono protette dalle tradizioni religiose locali.",
+				"Le cascate di Kintampo scendono attraverso una serie di gradini rocciosi."
+			],
+			"de": [
+				"Die Region entstand 2019 aus der früheren Region Brong Ahafo.",
+				"Boabeng-Fiemas Affen werden durch örtliche religiöse Traditionen geschützt.",
+				"Kintampos Wasserfälle stürzen über mehrere Felsstufen."
+			]
+		}
+	},
+	"oti": {
+		"region": {
+			"en": [
+				"Its name refers to the Oti River.",
+				"The region was created from part of Volta Region in 2019.",
+				"Kyabobo National Park protects woodland and forest habitats near the Togo border."
+			],
+			"it": [
+				"Il nome si riferisce al fiume Oti.",
+				"La regione fu creata da una parte della Regione del Volta nel 2019.",
+				"Il Parco nazionale di Kyabobo protegge habitat boschivi e forestali presso il confine togolese."
+			],
+			"de": [
+				"Der Name bezieht sich auf den Oti-Fluss.",
+				"Die Region entstand 2019 aus einem Teil der Volta Region.",
+				"Der Kyabobo-Nationalpark schützt Waldhabitate nahe der Grenze zu Togo."
+			]
+		}
+	},
+	"bono": {
+		"region": {
+			"en": [
+				"Its name recalls the Bono people and their historic kingdom.",
+				"Duasidan preserves a community monkey sanctuary.",
+				"The Bui Dam stands on the Black Volta in the Banda area."
+			],
+			"it": [
+				"Il nome ricorda il popolo bono e il suo regno storico.",
+				"Duasidan conserva un santuario comunitario delle scimmie.",
+				"La diga di Bui sorge sul Volta Nero nell’area di Banda."
+			],
+			"de": [
+				"Der Name erinnert an das Volk der Bono und sein historisches Königreich.",
+				"Duasidan bewahrt ein gemeinschaftliches Affenschutzgebiet.",
+				"Der Bui-Staudamm liegt am Schwarzen Volta im Gebiet Banda."
+			]
+		}
+	},
+	"ahafo": {
+		"region": {
+			"en": [
+				"It was created in 2019 from the former Brong Ahafo Region.",
+				"Mim Bour is a distinctive group of rocky peaks.",
+				"Asumura’s forest shelters the white-necked rockfowl."
+			],
+			"it": [
+				"Fu creata nel 2019 dalla precedente Regione del Brong Ahafo.",
+				"Mim Bour è un caratteristico gruppo di cime rocciose.",
+				"La foresta di Asumura ospita il picatarte collobianco."
+			],
+			"de": [
+				"Die Region entstand 2019 aus der früheren Region Brong Ahafo.",
+				"Mim Bour ist eine markante Gruppe felsiger Gipfel.",
+				"Asumuras Wald beherbergt den Gelbkopf-Felshüpfer."
+			]
+		}
+	},
+	"ashanti": {
+		"region": {
+			"en": [
+				"Its name recalls the Asante people and their kingdom.",
+				"The Golden Stool is a sacred symbol of Asante unity.",
+				"Adinkra cloth uses printed symbols to convey proverbs and ideas."
+			],
+			"it": [
+				"Il nome ricorda il popolo asante e il suo regno.",
+				"Lo Sgabello d’Oro è un simbolo sacro dell’unità asante.",
+				"Il tessuto adinkra usa simboli stampati per esprimere proverbi e idee."
+			],
+			"de": [
+				"Der Name erinnert an das Volk der Asante und sein Königreich.",
+				"Der Goldene Stuhl ist ein heiliges Symbol der Einheit der Asante.",
+				"Adinkra-Stoff vermittelt durch aufgedruckte Symbole Sprichwörter und Gedanken."
+			]
+		}
+	},
+	"volta": {
+		"region": {
+			"en": [
+				"Its name comes from the Volta River.",
+				"Ewe weavers preserve distinctive traditions of kente cloth.",
+				"The Hogbetsotso festival commemorates the migration of the Anlo-Ewe people."
+			],
+			"it": [
+				"Il nome deriva dal fiume Volta.",
+				"I tessitori ewe conservano particolari tradizioni del tessuto kente.",
+				"Il festival Hogbetsotso ricorda la migrazione del popolo anlo-ewe."
+			],
+			"de": [
+				"Der Name geht auf den Volta-Fluss zurück.",
+				"Ewe-Weber bewahren eigene Traditionen des Kente-Stoffs.",
+				"Das Hogbetsotso-Fest erinnert an die Wanderung des Volkes der Anlo-Ewe."
+			]
+		}
+	},
+	"eastern": {
+		"region": {
+			"en": [
+				"Tetteh Quarshie’s farm at Mampong-Akuapem played a pioneering role in Ghana’s cocoa industry.",
+				"Aburi Botanical Gardens preserves a collection of tropical plants.",
+				"The Akosombo Dam created the vast artificial Lake Volta."
+			],
+			"it": [
+				"La fattoria di Tetteh Quarshie a Mampong-Akuapem ebbe un ruolo pionieristico nell’industria ghanese del cacao.",
+				"I giardini botanici di Aburi conservano una collezione di piante tropicali.",
+				"La diga di Akosombo creò il vasto lago artificiale Volta."
+			],
+			"de": [
+				"Tetteh Quarshies Farm in Mampong-Akuapem spielte eine Pionierrolle in Ghanas Kakaoanbau.",
+				"Der botanische Garten Aburi bewahrt eine Sammlung tropischer Pflanzen.",
+				"Der Akosombo-Staudamm schuf den riesigen künstlichen Voltasee."
+			]
+		}
+	},
+	"western-north": {
+		"region": {
+			"en": [
+				"It was separated from Western Region in 2019.",
+				"Cocoa farming is an important part of its economy.",
+				"Bia National Park preserves forest wildlife and habitats."
+			],
+			"it": [
+				"Fu separata dalla Regione Occidentale nel 2019.",
+				"La coltivazione del cacao è una parte importante dell’economia.",
+				"Il Parco nazionale di Bia conserva habitat e fauna forestali."
+			],
+			"de": [
+				"Die Region wurde 2019 von der Western Region abgetrennt.",
+				"Kakaoanbau ist ein wichtiger Teil ihrer Wirtschaft.",
+				"Der Bia-Nationalpark bewahrt Waldlebensräume und ihre Tierwelt."
+			]
+		}
+	},
+	"greater-accra": {
+		"region": {
+			"en": [
+				"The region includes the historic coastal communities of the Ga people.",
+				"Homowo means hooting at hunger and recalls victory over famine.",
+				"Figurative coffins can reflect the life, work or aspirations of the deceased."
+			],
+			"it": [
+				"La regione comprende le storiche comunità costiere del popolo ga.",
+				"Homowo significa deridere la fame e ricorda la vittoria sulla carestia.",
+				"Le bare figurative possono riflettere la vita, il lavoro o le aspirazioni del defunto."
+			],
+			"de": [
+				"Die Region umfasst die historischen Küstengemeinden der Ga.",
+				"Homowo bedeutet den Hunger verhöhnen und erinnert an die Überwindung einer Hungersnot.",
+				"Figürliche Särge können Leben, Beruf oder Wünsche der Verstorbenen widerspiegeln."
+			]
+		}
+	},
+	"central": {
+		"region": {
+			"en": [
+				"Its coastal towns preserve the historical culture of the Fante people.",
+				"Cape Coast’s castle bears witness to the transatlantic slave trade.",
+				"Kakum National Park has a walkway suspended above the forest floor."
+			],
+			"it": [
+				"Le città costiere conservano la cultura storica del popolo fante.",
+				"Il castello di Cape Coast testimonia la tratta transatlantica degli schiavi.",
+				"Il Parco nazionale di Kakum possiede una passerella sospesa sopra il suolo della foresta."
+			],
+			"de": [
+				"Die Küstenstädte bewahren die historische Kultur der Fante.",
+				"Cape Coasts Burg zeugt vom transatlantischen Sklavenhandel.",
+				"Der Kakum-Nationalpark besitzt einen hoch über dem Waldboden verlaufenden Steg."
+			]
+		}
+	},
+	"western": {
+		"region": {
+			"en": [
+				"Its cultural heritage includes the Nzema and Ahanta peoples.",
+				"Nzulezu is a settlement built on stilts above a lake.",
+				"Historic forts at Dixcove and Princes Town recall European coastal trade."
+			],
+			"it": [
+				"Il patrimonio culturale comprende i popoli nzema e ahanta.",
+				"Nzulezu è un insediamento costruito su palafitte sopra un lago.",
+				"Gli storici forti di Dixcove e Princes Town ricordano il commercio costiero europeo."
+			],
+			"de": [
+				"Zum kulturellen Erbe gehören die Völker der Nzema und Ahanta.",
+				"Nzulezu ist eine auf Pfählen über einem See errichtete Siedlung.",
+				"Historische Forts in Dixcove und Princes Town erinnern an den europäischen Küstenhandel."
+			]
+		}
+	},
+	"bawku": {
+		"city": {
+			"en": [
+				"The town developed as a trading crossroads near Burkina Faso and Togo.",
+				"Its traditional three-day market cycle links livestock, food and manufactured-goods traders.",
+				"The Kusasi Samanpiid festival is part of the area’s cultural heritage."
+			],
+			"it": [
+				"La città si sviluppò come crocevia commerciale presso Burkina Faso e Togo.",
+				"Il tradizionale ciclo del mercato ogni tre giorni collega commercianti di bestiame, alimenti e manufatti.",
+				"Il festival Samanpiid dei kusasi fa parte del patrimonio culturale della zona."
+			],
+			"de": [
+				"Die Stadt entwickelte sich als Handelskreuzung nahe Burkina Faso und Togo.",
+				"Ihr traditioneller dreitägiger Marktrhythmus verbindet den Handel mit Vieh, Lebensmitteln und Fertigwaren.",
+				"Das Samanpiid-Fest der Kusasi gehört zum kulturellen Erbe der Gegend."
+			]
+		}
+	},
+	"bolgatanga": {
+		"city": {
+			"en": [
+				"Often shortened to Bolga, it grew as a meeting point for long-distance traders.",
+				"Its artisans are known internationally for woven baskets.",
+				"The regional museum preserves pottery, jewellery and chiefs’ possessions."
+			],
+			"it": [
+				"Spesso abbreviata in Bolga, crebbe come punto d’incontro per commercianti di lunga distanza.",
+				"I suoi artigiani sono noti a livello internazionale per i cesti intrecciati.",
+				"Il museo regionale conserva ceramiche, gioielli e oggetti dei capi tradizionali."
+			],
+			"de": [
+				"Die oft Bolga genannte Stadt wuchs als Treffpunkt für Fernhändler.",
+				"Ihre Handwerker sind international für geflochtene Körbe bekannt.",
+				"Das Regionalmuseum bewahrt Keramik, Schmuck und Besitztümer traditioneller Oberhäupter."
+			]
+		}
+	},
+	"wa": {
+		"city": {
+			"en": [
+				"The town grew within the historic trans-Saharan trading world.",
+				"Wa Naa’s palace is known for its distinctive earthen architecture.",
+				"The Dumba festival celebrates the traditional authority and cultural life of the Wala people."
+			],
+			"it": [
+				"La città crebbe nel mondo degli storici commerci transahariani.",
+				"Il palazzo del Wa Naa è noto per la caratteristica architettura in terra.",
+				"Il festival Dumba celebra l’autorità tradizionale e la vita culturale del popolo wala."
+			],
+			"de": [
+				"Die Stadt wuchs innerhalb der historischen transsaharischen Handelswelt.",
+				"Der Palast des Wa Naa ist für seine charakteristische Lehmarchitektur bekannt.",
+				"Das Dumba-Fest feiert die traditionelle Herrschaft und das kulturelle Leben der Wala."
+			]
+		}
+	},
+	"saboba": {
+		"city": {
+			"en": [
+				"The surrounding district takes its name from the town.",
+				"The area is an important centre of Konkomba culture.",
+				"Farms in the surrounding countryside grow crops including maize, millet and yams."
+			],
+			"it": [
+				"Il distretto circostante prende il nome dalla città.",
+				"La zona è un importante centro della cultura konkomba.",
+				"Le aziende agricole circostanti coltivano, tra gli altri prodotti, mais, miglio e igname."
+			],
+			"de": [
+				"Der umliegende Distrikt ist nach der Stadt benannt.",
+				"Die Gegend ist ein bedeutendes Zentrum der Konkomba-Kultur.",
+				"Im Umland werden unter anderem Mais, Hirse und Yams angebaut."
+			]
+		}
+	},
+	"tamale": {
+		"city": {
+			"en": [
+				"Its name is commonly linked to Dagbani words for the shea tree and a settlement.",
+				"The city developed within the historical territory of Dagbon.",
+				"Smock weaving and pottery are important local crafts."
+			],
+			"it": [
+				"Il nome è comunemente collegato a parole dagbani per l’albero del karité e un insediamento.",
+				"La città si sviluppò nel territorio storico del Dagbon.",
+				"La tessitura delle casacche e la ceramica sono importanti mestieri locali."
+			],
+			"de": [
+				"Der Name wird meist mit Dagbani-Wörtern für den Karitébaum und eine Siedlung verbunden.",
+				"Die Stadt entwickelte sich im historischen Gebiet Dagbon.",
+				"Das Weben von Kitteln und die Töpferei sind wichtige örtliche Handwerke."
+			]
+		}
+	},
+	"hohoe": {
+		"city": {
+			"en": [
+				"The town is a centre of the Gbi traditional area.",
+				"Nearby Wli Waterfalls descend through a forested landscape.",
+				"The wider municipality preserves an old German house at Wli."
+			],
+			"it": [
+				"La città è un centro dell’area tradizionale gbi.",
+				"Le vicine cascate di Wli scendono in un paesaggio boscoso.",
+				"Il territorio municipale conserva un’antica casa tedesca a Wli."
+			],
+			"de": [
+				"Die Stadt ist ein Zentrum des traditionellen Gbi-Gebiets.",
+				"Die nahen Wli-Wasserfälle stürzen durch eine bewaldete Landschaft.",
+				"Im weiteren Gemeindegebiet ist ein altes deutsches Haus bei Wli erhalten."
+			]
+		}
+	},
+	"mampong": {
+		"city": {
+			"en": [
+				"The traditional ruler, the Mamponghene, occupies the historic Silver Stool.",
+				"An earlier royal seat at Agona-Akrofoso is known as Old Mampong.",
+				"The technical college traces its teacher-training role to 1967."
+			],
+			"it": [
+				"Il sovrano tradizionale, il Mamponghene, occupa lo storico Sgabello d’Argento.",
+				"Una precedente sede reale ad Agona-Akrofoso è nota come Vecchia Mampong.",
+				"Il collegio tecnico fa risalire al 1967 il proprio ruolo nella formazione degli insegnanti."
+			],
+			"de": [
+				"Der traditionelle Herrscher, der Mamponghene, sitzt auf dem historischen Silbernen Stuhl.",
+				"Ein früherer Königssitz bei Agona-Akrofoso ist als Alt-Mampong bekannt.",
+				"Das technische College führt seine Lehrerausbildung auf das Jahr 1967 zurück."
+			]
+		}
+	},
+	"agogo": {
+		"city": {
+			"en": [
+				"Founding traditions connect the town with Aduana migrants from Akwamu.",
+				"Its hilly setting earned it the nickname Naturally Walled Town.",
+				"The Basel Mission established its Presbyterian hospital in 1931."
+			],
+			"it": [
+				"Le tradizioni sulla fondazione collegano la città a migranti aduana provenienti da Akwamu.",
+				"Il contesto collinare le valse il soprannome di città cinta da mura naturali.",
+				"La Missione di Basilea vi fondò l’ospedale presbiteriano nel 1931."
+			],
+			"de": [
+				"Gründungsüberlieferungen verbinden die Stadt mit Aduana-Zuwanderern aus Akwamu.",
+				"Ihre hügelige Lage brachte ihr den Beinamen natürlich ummauerte Stadt ein.",
+				"Die Basler Mission gründete hier 1931 das presbyterianische Krankenhaus."
+			]
+		}
+	},
+	"kumasi": {
+		"city": {
+			"en": [
+				"Its name is traditionally interpreted as under the kum tree.",
+				"Manhyia Palace Museum presents the history of Asante royalty.",
+				"Kejetia Market developed into a major centre of commerce."
+			],
+			"it": [
+				"Il nome è tradizionalmente interpretato come sotto l’albero kum.",
+				"Il Museo del Palazzo Manhyia presenta la storia della monarchia asante.",
+				"Il mercato Kejetia si sviluppò come importante centro commerciale."
+			],
+			"de": [
+				"Der Name wird traditionell als unter dem Kum-Baum gedeutet.",
+				"Das Museum im Manhyia-Palast zeigt die Geschichte des Asante-Königtums.",
+				"Der Kejetia-Markt entwickelte sich zu einem bedeutenden Handelszentrum."
+			]
+		}
+	},
+	"ho": {
+		"city": {
+			"en": [
+				"Its regional museum building once housed the Regional House of Chiefs.",
+				"The Volta Regional Museum opened in 1973.",
+				"The Asogli Yam Festival celebrates harvest and cultural traditions."
+			],
+			"it": [
+				"L’edificio del museo regionale ospitava un tempo la Camera regionale dei capi tradizionali.",
+				"Il Museo regionale del Volta aprì nel 1973.",
+				"Il Festival dell’igname Asogli celebra il raccolto e le tradizioni culturali."
+			],
+			"de": [
+				"Das Gebäude des Regionalmuseums beherbergte früher den regionalen Rat der traditionellen Oberhäupter.",
+				"Das Volta-Regionalmuseum wurde 1973 eröffnet.",
+				"Das Asogli-Yamsfest feiert die Ernte und kulturelle Traditionen."
+			]
+		}
+	},
+	"dome": {
+		"city": {
+			"en": [
+				"Its name is commonly rendered phonetically as Dor-mi.",
+				"It contains a major traditional market of the Ga East municipality.",
+				"Tuesdays and Saturdays are traditionally its main market days."
+			],
+			"it": [
+				"Il nome è comunemente reso foneticamente come Dor-mi.",
+				"Ospita un importante mercato tradizionale della municipalità di Ga East.",
+				"Martedì e sabato sono tradizionalmente i principali giorni di mercato."
+			],
+			"de": [
+				"Der Name wird häufig lautlich als Dor-mi wiedergegeben.",
+				"Der Ort besitzt einen bedeutenden traditionellen Markt der Gemeinde Ga East.",
+				"Dienstag und Samstag sind traditionell die wichtigsten Markttage."
+			]
+		}
+	},
+	"obuasi": {
+		"city": {
+			"en": [
+				"Large-scale gold mining developed here from 1897.",
+				"The gold mine is an underground operation.",
+				"Len Clay Stadium is associated with Ashanti Gold’s football history."
+			],
+			"it": [
+				"L’estrazione dell’oro su larga scala si sviluppò qui dal 1897.",
+				"La miniera d’oro opera nel sottosuolo.",
+				"Lo stadio Len Clay è legato alla storia calcistica dell’Ashanti Gold."
+			],
+			"de": [
+				"Der Goldbergbau im großen Maßstab entwickelte sich hier ab 1897.",
+				"Das Goldbergwerk arbeitet unter Tage.",
+				"Das Len-Clay-Stadion ist mit der Fußballgeschichte von Ashanti Gold verbunden."
+			]
+		}
+	},
+	"aflao": {
+		"city": {
+			"en": [
+				"The town belongs to an Ewe-speaking cultural area spanning today’s Ghana–Togo border.",
+				"It directly adjoins Lomé, the capital of Togo.",
+				"Cross-border trading networks are central to its commercial life."
+			],
+			"it": [
+				"La città appartiene a un’area culturale di lingua ewe che attraversa l’attuale confine tra Ghana e Togo.",
+				"Confina direttamente con Lomé, capitale del Togo.",
+				"Le reti commerciali transfrontaliere sono centrali nella sua vita economica."
+			],
+			"de": [
+				"Die Stadt gehört zu einem Ewe-sprachigen Kulturraum beiderseits der heutigen Grenze zwischen Ghana und Togo.",
+				"Sie grenzt unmittelbar an Lomé, die Hauptstadt Togos.",
+				"Grenzüberschreitende Handelsnetze prägen ihr Wirtschaftsleben."
+			]
+		}
+	},
+	"koforidua": {
+		"city": {
+			"en": [
+				"Local tradition links its name to Kofi Ofori and a tree where farmers rested.",
+				"Its history is closely tied to the New Juaben traditional state.",
+				"Its bead market draws buyers and sellers from across the region."
+			],
+			"it": [
+				"La tradizione locale collega il nome a Kofi Ofori e a un albero dove riposavano gli agricoltori.",
+				"La sua storia è strettamente legata allo stato tradizionale del New Juaben.",
+				"Il mercato delle perline attira acquirenti e venditori da tutta la regione."
+			],
+			"de": [
+				"Die örtliche Überlieferung verbindet den Namen mit Kofi Ofori und einem Baum, unter dem Bauern rasteten.",
+				"Die Geschichte der Stadt ist eng mit dem traditionellen Staat New Juaben verbunden.",
+				"Ihr Perlenmarkt zieht Käufer und Verkäufer aus der ganzen Region an."
+			]
+		}
+	},
+	"tema": {
+		"city": {
+			"en": [
+				"It grew from a fishing settlement into a planned industrial city.",
+				"Its port was commissioned in 1962.",
+				"The Accra–Tema motorway links the city with the national capital."
+			],
+			"it": [
+				"Crebbe da insediamento di pescatori a città industriale pianificata.",
+				"Il porto fu inaugurato nel 1962.",
+				"L’autostrada Accra–Tema collega la città alla capitale nazionale."
+			],
+			"de": [
+				"Der Ort wuchs von einer Fischersiedlung zu einer geplanten Industriestadt.",
+				"Der Hafen wurde 1962 in Betrieb genommen.",
+				"Die Autobahn Accra–Tema verbindet die Stadt mit Ghanas Hauptstadt."
+			]
+		}
+	},
+	"winneba": {
+		"city": {
+			"en": [
+				"Its traditional name is Simpa.",
+				"The Effutu people celebrate the Aboakyer festival here.",
+				"The University of Education began as a university college in 1992."
+			],
+			"it": [
+				"Il nome tradizionale è Simpa.",
+				"Il popolo effutu vi celebra il festival Aboakyer.",
+				"L’Università dell’educazione nacque come collegio universitario nel 1992."
+			],
+			"de": [
+				"Der traditionelle Name lautet Simpa.",
+				"Die Effutu feiern hier das Aboakyer-Fest.",
+				"Die University of Education begann 1992 als Universitätscollege."
+			]
+		}
+	},
+	"tarkwa": {
+		"city": {
+			"en": [
+				"The town grew as a centre of gold mining in the Wassa area.",
+				"Its university began as the Tarkwa Technical Institute in 1952.",
+				"The nearby Nsuta mine is known for manganese."
+			],
+			"it": [
+				"La città crebbe come centro di estrazione dell’oro nell’area del Wassa.",
+				"L’università nacque come Istituto tecnico di Tarkwa nel 1952.",
+				"La vicina miniera di Nsuta è nota per il manganese."
+			],
+			"de": [
+				"Die Stadt wuchs als Goldbergbauzentrum im Wassa-Gebiet.",
+				"Ihre Universität begann 1952 als Tarkwa Technical Institute.",
+				"Das nahe Bergwerk Nsuta ist für Mangan bekannt."
+			]
+		}
+	},
+	"cape-coast": {
+		"city": {
+			"en": [
+				"Its European name developed from Portuguese Cabo Corso, meaning short cape.",
+				"Cape Coast Castle’s museum documents the transatlantic slave trade.",
+				"Its traditional name Oguaa recalls a market settlement."
+			],
+			"it": [
+				"Il nome europeo deriva dal portoghese Cabo Corso, capo corto.",
+				"Il museo del Castello di Cape Coast documenta la tratta transatlantica degli schiavi.",
+				"Il nome tradizionale Oguaa ricorda un insediamento commerciale."
+			],
+			"de": [
+				"Der europäische Name entstand aus portugiesisch Cabo Corso, kurzes Kap.",
+				"Das Museum in Cape Coast Castle dokumentiert den transatlantischen Sklavenhandel.",
+				"Der traditionelle Name Oguaa erinnert an eine Marktsiedlung."
+			]
+		}
+	},
+	"sekondi-takoradi": {
+		"city": {
+			"en": [
+				"The two towns merged in 1946.",
+				"Takoradi’s deep-water commercial port opened in 1928.",
+				"Historic forts recall the area’s Dutch and English trading past."
+			],
+			"it": [
+				"Le due città si unirono nel 1946.",
+				"Il porto commerciale in acque profonde di Takoradi aprì nel 1928.",
+				"Gli storici forti ricordano il passato commerciale olandese e inglese della zona."
+			],
+			"de": [
+				"Die beiden Städte schlossen sich 1946 zusammen.",
+				"Takoradis Tiefwasserhandelshafen wurde 1928 eröffnet.",
+				"Historische Forts erinnern an die niederländische und englische Handelsvergangenheit der Gegend."
 			]
 		}
 	}

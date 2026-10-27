@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Uzbekistan (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"tashkent": {
 		"city": {
@@ -20,6 +21,730 @@
 				"„Steinstadt“.",
 				"Ein großer Teil der Stadt wurde nach einem Erdbeben 1966 wiederaufgebaut.",
 				"Ihre 1977 eröffnete U-Bahn war die erste Zentralasiens."
+			]
+		}
+	},
+	"_sources": {
+		"karakalpakstan:region": [
+			"https://en.wikipedia.org/wiki/Karakalpakstan"
+		],
+		"navoi:region": [
+			"https://en.wikipedia.org/wiki/Navoiy_Region"
+		],
+		"khorezm:region": [
+			"https://en.wikipedia.org/wiki/Xorazm_Region"
+		],
+		"tashkent-city:region": [
+			"https://en.wikipedia.org/wiki/Tashkent"
+		],
+		"tashkent-region:region": [
+			"https://en.wikipedia.org/wiki/Tashkent_Region"
+		],
+		"andijan:region": [
+			"https://en.wikipedia.org/wiki/Andijan_Region"
+		],
+		"namangan:region": [
+			"https://en.wikipedia.org/wiki/Namangan_Region"
+		],
+		"fergana:region": [
+			"https://en.wikipedia.org/wiki/Fergana_Region"
+		],
+		"syrdarya:region": [
+			"https://en.wikipedia.org/wiki/Sirdaryo_Region"
+		],
+		"jizzakh:region": [
+			"https://en.wikipedia.org/wiki/Jizzakh_Region"
+		],
+		"bukhara:region": [
+			"https://en.wikipedia.org/wiki/Bukhara_Region"
+		],
+		"samarkand:region": [
+			"https://en.wikipedia.org/wiki/Samarkand_Region"
+		],
+		"kashkadarya:region": [
+			"https://en.wikipedia.org/wiki/Qashqadaryo_Region"
+		],
+		"surkhandarya:region": [
+			"https://en.wikipedia.org/wiki/Surxondaryo_Region"
+		],
+		"nukus:city": [
+			"https://app.uzbekistan.travel/en/i/nukus-en/",
+			"https://uzbekistan.travel/en/o/savitsky-museum-of-arts/"
+		],
+		"urgench:city": [
+			"https://en.wikipedia.org/wiki/Urgench"
+		],
+		"khiva:city": [
+			"https://en.wikipedia.org/wiki/Khiva",
+			"https://whc.unesco.org/en/list/543/"
+		],
+		"angren:city": [
+			"https://www.tourism.mdis.uz/en/districts/angren-district"
+		],
+		"namangan:city": [
+			"https://en.wikipedia.org/wiki/Namangan"
+		],
+		"olmaliq:city": [
+			"https://en.wikipedia.org/wiki/Olmaliq"
+		],
+		"andijan:city": [
+			"https://uzbekistan.travel/storage/app/media/Otabek/Jurnallar/Guide%20book/%D0%93%D0%B0%D0%B9%D0%B4%D0%B1%D1%83%D0%BA%20%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD%20%D0%B0%D0%BD%D0%B3.pdf"
+		],
+		"asaka:city": [
+			"https://en.wikipedia.org/wiki/Asaka,_Uzbekistan"
+		],
+		"qo-qon:city": [
+			"https://en.wikipedia.org/wiki/Kokand",
+			"https://ferganavalley-ctn.uz/things-to-do/"
+		],
+		"margilan:city": [
+			"https://en.wikipedia.org/wiki/Margilan",
+			"https://ferganavalley-ctn.uz/things-to-do/"
+		],
+		"fergana:city": [
+			"https://en.wikipedia.org/wiki/Fergana",
+			"https://uzbekistan.travel/tr/i/fergana/"
+		],
+		"jizzakh:city": [
+			"https://gov.uz/oz/jizzaxcity/pages/about"
+		],
+		"navoiy:city": [
+			"https://uzbekistan.travel/ru/i/navoi/",
+			"https://uzbekistan.travel/uz/r/navoiy-viloyati/"
+		],
+		"bukhara:city": [
+			"https://whc.unesco.org/en/list/602/"
+		],
+		"kagan:city": [
+			"https://uzbekistanwanderer.com/kagan-emir-palace/",
+			"https://en.wikipedia.org/wiki/Kagan,_Uzbekistan"
+		],
+		"samarkand:city": [
+			"https://whc.unesco.org/en/list/603/"
+		],
+		"shahrisabz:city": [
+			"https://whc.unesco.org/en/list/885/",
+			"https://whc.unesco.org/uploads/nominations/885.pdf"
+		],
+		"qarshi:city": [
+			"https://en.wikipedia.org/wiki/Qarshi"
+		],
+		"termez:city": [
+			"https://en.wikipedia.org/wiki/Termez"
+		]
+	},
+	"karakalpakstan": {
+		"region": {
+			"en": [
+				"Named for the Karakalpak people, whose name means black hats.",
+				"Nukus’s Savitsky Museum is renowned for its avant-garde art collection.",
+				"Moynaq’s stranded ships recall the retreat of the Aral Sea."
+			],
+			"it": [
+				"Prende il nome dai karakalpaki, il cui etnonimo significa cappelli neri.",
+				"Il Museo Savitsky di Nukus è celebre per la sua collezione d’arte d’avanguardia.",
+				"Le navi arenate di Moynaq ricordano il ritiro del lago d’Aral."
+			],
+			"de": [
+				"Benannt nach den Karakalpaken, deren Name schwarze Mützen bedeutet.",
+				"Das Savitsky-Museum in Nukus ist für seine Avantgarde-Sammlung bekannt.",
+				"Die gestrandeten Schiffe von Moynaq erinnern an den Rückzug des Aralsees."
+			]
+		}
+	},
+	"navoi": {
+		"region": {
+			"en": [
+				"Its name honours the poet Alisher Navoi.",
+				"Nurata’s mountains contrast with the surrounding Kyzylkum desert.",
+				"Sarmishsay preserves extensive ancient rock carvings."
+			],
+			"it": [
+				"Il nome onora il poeta Alisher Navoi.",
+				"Le montagne di Nurata contrastano con il deserto circostante del Kyzylkum.",
+				"Sarmishsay conserva numerose antiche incisioni rupestri."
+			],
+			"de": [
+				"Der Name ehrt den Dichter Alisher Navoi.",
+				"Die Berge von Nurata bilden einen Kontrast zur umliegenden Kysylkum-Wüste.",
+				"Sarmishsay bewahrt zahlreiche alte Felszeichnungen."
+			]
+		}
+	},
+	"khorezm": {
+		"region": {
+			"en": [
+				"Khorezm preserves the name of the ancient region called Chorasmia.",
+				"Khiva’s walled Itchan Kala is a UNESCO World Heritage site.",
+				"Khiva’s Kalta Minor is a famously unfinished minaret."
+			],
+			"it": [
+				"Khorezm conserva il nome dell’antica regione chiamata Corasmia.",
+				"L’Itchan Kala, la città murata di Khiva, è patrimonio UNESCO.",
+				"Il Kalta Minor di Khiva è un celebre minareto incompiuto."
+			],
+			"de": [
+				"Khorezm bewahrt den Namen der antiken Landschaft Choresmien.",
+				"Die ummauerte Altstadt Itchan Kala in Khiva gehört zum UNESCO-Welterbe.",
+				"Khivas Kalta Minor ist ein berühmtes unvollendetes Minarett."
+			]
+		}
+	},
+	"tashkent-city": {
+		"region": {
+			"en": [
+				"Tashkent is commonly interpreted as stone city.",
+				"Much of its centre was rebuilt after the 1966 earthquake.",
+				"Its metro opened in 1977 as the first in Central Asia."
+			],
+			"it": [
+				"Il nome Tashkent viene comunemente interpretato come città di pietra.",
+				"Gran parte del centro fu ricostruita dopo il terremoto del 1966.",
+				"La sua metropolitana aprì nel 1977, prima dell’Asia centrale."
+			],
+			"de": [
+				"Der Name Tashkent wird meist als steinerne Stadt gedeutet.",
+				"Große Teile des Zentrums wurden nach dem Erdbeben von 1966 wiederaufgebaut.",
+				"Die 1977 eröffnete Metro war die erste Zentralasiens."
+			]
+		}
+	},
+	"tashkent-region": {
+		"region": {
+			"en": [
+				"Shares its name with Tashkent, which is administered separately.",
+				"The Charvak reservoir is a major mountain recreation area.",
+				"Protected areas here form part of the Western Tien-Shan UNESCO site."
+			],
+			"it": [
+				"Condivide il nome con Tashkent, che ha un’amministrazione separata.",
+				"Il bacino di Charvak è un’importante area ricreativa montana.",
+				"Aree protette della regione fanno parte del sito UNESCO del Tien Shan occidentale."
+			],
+			"de": [
+				"Teilt seinen Namen mit Tashkent, das getrennt verwaltet wird.",
+				"Der Charvak-Stausee ist ein wichtiges Erholungsgebiet im Gebirge.",
+				"Schutzgebiete der Region gehören zur UNESCO-Stätte Westlicher Tian-Shan."
+			]
+		}
+	},
+	"andijan": {
+		"region": {
+			"en": [
+				"Named after the city of Andijan.",
+				"Babur, founder of the Mughal dynasty, was born in Andijan in 1483.",
+				"Andijan’s Jami complex preserves a historic religious ensemble."
+			],
+			"it": [
+				"Prende il nome dalla città di Andijan.",
+				"Babur, fondatore della dinastia moghul, nacque ad Andijan nel 1483.",
+				"Il complesso Jami di Andijan conserva un insieme storico di edifici religiosi."
+			],
+			"de": [
+				"Benannt nach der Stadt Andijan.",
+				"Babur, der Gründer der Moguldynastie, wurde 1483 in Andijan geboren.",
+				"Andijans Jami-Komplex bewahrt ein historisches religiöses Bauensemble."
+			]
+		},
+		"city": {
+			"en": [
+				"The Mughal dynasty’s founder Babur was born here.",
+				"A memorial park honours his life and writings.",
+				"The Jami complex includes a madrasa, minaret and Sufi lodge."
+			],
+			"it": [
+				"Qui nacque Babur, fondatore della dinastia moghul.",
+				"Un parco commemorativo ne ricorda la vita e gli scritti.",
+				"Il complesso Jami comprende una madrasa, un minareto e una dimora sufi."
+			],
+			"de": [
+				"Hier wurde Babur, der Gründer der Moguldynastie, geboren.",
+				"Ein Gedenkpark erinnert an sein Leben und seine Schriften.",
+				"Zum Dschami-Komplex gehören eine Madrasa, ein Minarett und eine Sufi-Unterkunft."
+			]
+		}
+	},
+	"namangan": {
+		"region": {
+			"en": [
+				"Named after the city of Namangan.",
+				"Chust is known for traditional knives and embroidered skullcaps.",
+				"Ahsikent preserves the ruins of a medieval Fergana Valley centre."
+			],
+			"it": [
+				"Prende il nome dalla città di Namangan.",
+				"Chust è nota per i coltelli tradizionali e gli zucchetti ricamati.",
+				"Ahsikent conserva i resti di un centro medievale della valle di Fergana."
+			],
+			"de": [
+				"Benannt nach der Stadt Namangan.",
+				"Chust ist für traditionelle Messer und bestickte Kappen bekannt.",
+				"Ahsikent bewahrt die Ruinen eines mittelalterlichen Zentrums im Ferganatal."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name is traditionally linked to Persian words for a salt mine.",
+				"Babur mentioned the settlement in his memoirs.",
+				"It became an important craft and trading centre from the seventeenth century."
+			],
+			"it": [
+				"Il nome è tradizionalmente collegato a parole persiane per miniera di sale.",
+				"Babur menzionò l’insediamento nelle sue memorie.",
+				"Dal Seicento divenne un importante centro artigianale e commerciale."
+			],
+			"de": [
+				"Der Name wird traditionell mit persischen Wörtern für ein Salzbergwerk verbunden.",
+				"Babur erwähnte die Siedlung in seinen Erinnerungen.",
+				"Seit dem 17. Jahrhundert entwickelte sie sich zu einem bedeutenden Handwerks- und Handelszentrum."
+			]
+		}
+	},
+	"fergana": {
+		"region": {
+			"en": [
+				"Takes its name from the Fergana Valley.",
+				"Margilan is renowned for its silk-weaving traditions.",
+				"Kokand’s Khan’s Palace recalls the former Kokand Khanate."
+			],
+			"it": [
+				"Prende il nome dalla valle di Fergana.",
+				"Margilan è celebre per le tradizioni della tessitura della seta.",
+				"Il palazzo del Khan di Kokand ricorda l’antico khanato di Kokand."
+			],
+			"de": [
+				"Benannt nach dem Ferganatal.",
+				"Margilan ist für seine Tradition der Seidenweberei bekannt.",
+				"Der Khanspalast von Kokand erinnert an das frühere Khanat Kokand."
+			]
+		},
+		"city": {
+			"en": [
+				"The modern city was founded in 1876 as New Margilan.",
+				"It was renamed Skobelev before receiving the name Fergana in 1924.",
+				"Its planned streets grew around a Russian military fort."
+			],
+			"it": [
+				"La città moderna fu fondata nel 1876 come Nuova Margilan.",
+				"Fu ribattezzata Skobelev prima di ricevere il nome Fergana nel 1924.",
+				"Le strade pianificate crebbero attorno a una fortezza militare russa."
+			],
+			"de": [
+				"Die moderne Stadt wurde 1876 als Neu-Margilan gegründet.",
+				"Sie hieß später Skobelew und erhielt 1924 den Namen Fergana.",
+				"Ihre planmäßig angelegten Straßen wuchsen um eine russische Militärfestung."
+			]
+		}
+	},
+	"syrdarya": {
+		"region": {
+			"en": [
+				"Named after the Syr Darya River.",
+				"Large irrigation projects transformed the former Hungry Steppe.",
+				"Gulistan’s Persian name means rose garden."
+			],
+			"it": [
+				"Prende il nome dal fiume Syr Darya.",
+				"Grandi progetti d’irrigazione trasformarono l’antica Steppa della Fame.",
+				"Il nome persiano Gulistan significa giardino di rose."
+			],
+			"de": [
+				"Benannt nach dem Fluss Syr Darya.",
+				"Große Bewässerungsprojekte veränderten die frühere Hungersteppe.",
+				"Der persische Name Gulistan bedeutet Rosengarten."
+			]
+		}
+	},
+	"jizzakh": {
+		"region": {
+			"en": [
+				"Named after the city of Jizzakh.",
+				"Zaamin National Park protects mountain juniper forests.",
+				"The Arnasay lake system provides important bird habitats."
+			],
+			"it": [
+				"Prende il nome dalla città di Jizzakh.",
+				"Il Parco nazionale di Zaamin protegge foreste montane di ginepro.",
+				"Il sistema lacustre di Arnasay offre importanti habitat agli uccelli."
+			],
+			"de": [
+				"Benannt nach der Stadt Jizzakh.",
+				"Der Zaamin-Nationalpark schützt Wacholderwälder im Gebirge.",
+				"Das Arnasay-Seensystem bietet wichtige Lebensräume für Vögel."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name is often traced to Sogdian Dizak, meaning small fortress.",
+				"It developed where several ancient caravan routes met.",
+				"Medieval Arab geographers recorded the settlement in their writings."
+			],
+			"it": [
+				"Il nome è spesso ricondotto al sogdiano Dizak, piccola fortezza.",
+				"Si sviluppò dove si incontravano diverse antiche vie carovaniere.",
+				"Geografi arabi medievali descrissero l’insediamento nei loro scritti."
+			],
+			"de": [
+				"Der Name wird oft auf sogdisch Dizak, kleine Festung, zurückgeführt.",
+				"Die Stadt entstand am Schnittpunkt mehrerer alter Karawanenwege.",
+				"Mittelalterliche arabische Geografen erwähnten die Siedlung in ihren Schriften."
+			]
+		}
+	},
+	"bukhara": {
+		"region": {
+			"en": [
+				"Named after the city of Bukhara.",
+				"Bukhara’s Ark fortress was a residence of its rulers.",
+				"The Samanid Mausoleum is a landmark of early Islamic architecture."
+			],
+			"it": [
+				"Prende il nome dalla città di Bukhara.",
+				"La fortezza Ark di Bukhara fu residenza dei suoi sovrani.",
+				"Il mausoleo dei Samanidi è un capolavoro della prima architettura islamica."
+			],
+			"de": [
+				"Benannt nach der Stadt Bukhara.",
+				"Die Festung Ark in Bukhara war eine Residenz der Herrscher.",
+				"Das Samaniden-Mausoleum ist ein bedeutendes Beispiel früher islamischer Architektur."
+			]
+		},
+		"city": {
+			"en": [
+				"It has more than two thousand years of history on the Silk Road.",
+				"The tomb of Ismail Samani is a masterpiece of early Islamic brick architecture.",
+				"Its old centre preserves many seventeenth-century madrasas."
+			],
+			"it": [
+				"Vanta oltre duemila anni di storia lungo la Via della seta.",
+				"La tomba di Ismail Samani è un capolavoro dell’architettura islamica antica in mattoni.",
+				"Il centro storico conserva numerose madrase del Seicento."
+			],
+			"de": [
+				"Die Stadt blickt auf mehr als zweitausend Jahre an der Seidenstraße zurück.",
+				"Das Grab Ismail Samanis ist ein Meisterwerk früher islamischer Backsteinarchitektur.",
+				"Die Altstadt bewahrt zahlreiche Madrasen aus dem 17. Jahrhundert."
+			]
+		}
+	},
+	"samarkand": {
+		"region": {
+			"en": [
+				"Named after the city of Samarkand.",
+				"The Registan’s madrasas form a celebrated monumental square.",
+				"Ulugh Beg’s observatory recalls the region’s astronomical heritage."
+			],
+			"it": [
+				"Prende il nome dalla città di Samarkand.",
+				"Le madrase del Registan formano una celebre piazza monumentale.",
+				"L’osservatorio di Ulugh Beg ricorda il patrimonio astronomico della regione."
+			],
+			"de": [
+				"Benannt nach der Stadt Samarkand.",
+				"Die Medresen des Registan bilden einen berühmten monumentalen Platz.",
+				"Ulugh Begs Observatorium erinnert an das astronomische Erbe der Region."
+			]
+		},
+		"city": {
+			"en": [
+				"Its ancient settlement, Afrasiab, predates the medieval city.",
+				"Registan Square is framed by monumental madrasas.",
+				"Ulugh Beg’s observatory reflects the city’s history of astronomy."
+			],
+			"it": [
+				"L’antico insediamento di Afrasiab precede la città medievale.",
+				"La piazza Registan è incorniciata da madrase monumentali.",
+				"L’osservatorio di Ulugh Beg testimonia la storia astronomica della città."
+			],
+			"de": [
+				"Die alte Siedlung Afrasiab ist älter als die mittelalterliche Stadt.",
+				"Monumentale Madrasen säumen den Registan-Platz.",
+				"Ulugh Begs Observatorium zeugt von der astronomischen Geschichte der Stadt."
+			]
+		}
+	},
+	"kashkadarya": {
+		"region": {
+			"en": [
+				"Named after the Kashkadarya River.",
+				"Shahrisabz preserves the ruins of Timur’s Ak-Saray palace.",
+				"Kitab hosted a station of the International Latitude Service."
+			],
+			"it": [
+				"Prende il nome dal fiume Kashkadarya.",
+				"Shahrisabz conserva i resti del palazzo Ak-Saray di Timur.",
+				"Kitab ospitò una stazione del Servizio internazionale delle latitudini."
+			],
+			"de": [
+				"Benannt nach dem Fluss Kashkadarya.",
+				"Shahrisabz bewahrt die Ruinen von Timurs Palast Ak-Saray.",
+				"Kitab beherbergte eine Station des Internationalen Breitendienstes."
+			]
+		}
+	},
+	"surkhandarya": {
+		"region": {
+			"en": [
+				"Named after the Surkhan Darya River.",
+				"Old Termez preserves traces of a major Buddhist centre.",
+				"Boysun’s cultural traditions are recognised by UNESCO."
+			],
+			"it": [
+				"Prende il nome dal fiume Surkhan Darya.",
+				"L’antica Termez conserva tracce di un importante centro buddista.",
+				"Le tradizioni culturali di Boysun sono riconosciute dall’UNESCO."
+			],
+			"de": [
+				"Benannt nach dem Fluss Surkhan Darya.",
+				"Alt-Termez bewahrt Spuren eines bedeutenden buddhistischen Zentrums.",
+				"Boysuns Kulturtraditionen sind von der UNESCO anerkannt."
+			]
+		}
+	},
+	"nukus": {
+		"city": {
+			"en": [
+				"It became Karakalpakstan’s capital in 1932.",
+				"The Savitsky Museum opened here in 1966.",
+				"Its collections preserve Russian avant-garde art and Karakalpak heritage."
+			],
+			"it": [
+				"Divenne la capitale del Karakalpakstan nel 1932.",
+				"Il Museo Savitsky aprì qui nel 1966.",
+				"Le collezioni conservano arte dell’avanguardia russa e patrimonio karakalpako."
+			],
+			"de": [
+				"Die Stadt wurde 1932 Hauptstadt Karakalpakstans.",
+				"Das Sawizki-Museum wurde hier 1966 eröffnet.",
+				"Seine Sammlungen bewahren russische Avantgardekunst und karakalpakisches Kulturerbe."
+			]
+		}
+	},
+	"urgench": {
+		"city": {
+			"en": [
+				"It shares its name with Old Urgench, now across the border in Turkmenistan.",
+				"It developed from a trading settlement of the Khiva Khanate.",
+				"Cotton motifs decorate parts of the modern city."
+			],
+			"it": [
+				"Condivide il nome con Vecchia Urgench, oggi oltre confine in Turkmenistan.",
+				"Si sviluppò da un insediamento commerciale del khanato di Khiva.",
+				"Motivi ispirati al cotone decorano parti della città moderna."
+			],
+			"de": [
+				"Die Stadt teilt ihren Namen mit Alt-Urgench im heutigen Turkmenistan.",
+				"Sie entwickelte sich aus einer Handelssiedlung des Khanats Chiwa.",
+				"Baumwollmotive schmücken Teile der modernen Stadt."
+			]
+		}
+	},
+	"khiva": {
+		"city": {
+			"en": [
+				"It was a capital of the Khiva Khanate.",
+				"Its walled inner town, Itchan Kala, is a World Heritage Site.",
+				"Caravans rested here before crossing the desert towards Iran."
+			],
+			"it": [
+				"Fu una capitale del khanato di Khiva.",
+				"La città interna fortificata, Itchan Kala, è patrimonio mondiale.",
+				"Le carovane sostavano qui prima di attraversare il deserto verso l’Iran."
+			],
+			"de": [
+				"Die Stadt war eine Hauptstadt des Khanats Chiwa.",
+				"Die ummauerte Innenstadt Itchan Kala gehört zum Welterbe.",
+				"Karawanen rasteten hier vor der Wüstendurchquerung in Richtung Iran."
+			]
+		}
+	},
+	"angren": {
+		"city": {
+			"en": [
+				"The city was created in 1946 from several mining settlements.",
+				"Coal mining shaped its industrial growth.",
+				"Construction materials and power generation also became important industries."
+			],
+			"it": [
+				"La città nacque nel 1946 da diversi insediamenti minerari.",
+				"L’estrazione del carbone ne plasmò la crescita industriale.",
+				"Anche i materiali da costruzione e la produzione elettrica divennero attività importanti."
+			],
+			"de": [
+				"Die Stadt entstand 1946 aus mehreren Bergbausiedlungen.",
+				"Der Kohlebergbau prägte ihr industrielles Wachstum.",
+				"Auch Baustoffe und Stromerzeugung wurden zu wichtigen Wirtschaftszweigen."
+			]
+		}
+	},
+	"olmaliq": {
+		"city": {
+			"en": [
+				"It developed as a Soviet mining town in the 1930s.",
+				"Copper and other metal deposits shaped its economy.",
+				"Large smelting plants form part of its industrial landscape."
+			],
+			"it": [
+				"Si sviluppò come città mineraria sovietica negli anni Trenta.",
+				"Il rame e altri giacimenti metallici ne plasmarono l’economia.",
+				"Grandi impianti di fusione fanno parte del paesaggio industriale."
+			],
+			"de": [
+				"Der Ort entwickelte sich in den 1930er Jahren zu einer sowjetischen Bergbaustadt.",
+				"Kupfer und andere Metallvorkommen prägten seine Wirtschaft.",
+				"Große Hüttenwerke gehören zu seiner Industrielandschaft."
+			]
+		}
+	},
+	"asaka": {
+		"city": {
+			"en": [
+				"The origin of its name is uncertain, with several competing explanations.",
+				"A horse statue recalls one interpretation linking the name to horsemen.",
+				"Automobile assembly became a major local industry."
+			],
+			"it": [
+				"L’origine del nome è incerta e ha diverse spiegazioni concorrenti.",
+				"Una statua di cavallo ricorda un’interpretazione che collega il nome ai cavalieri.",
+				"L’assemblaggio di automobili divenne un’importante industria locale."
+			],
+			"de": [
+				"Die Herkunft des Namens ist unklar; es gibt mehrere Erklärungen.",
+				"Eine Pferdestatue erinnert an eine Deutung, die den Namen mit Reitern verbindet.",
+				"Die Automobilmontage wurde zu einem wichtigen örtlichen Industriezweig."
+			]
+		}
+	},
+	"qo-qon": {
+		"city": {
+			"en": [
+				"Also written Kokand, it was the seat of a powerful khanate.",
+				"It stood at the meeting of ancient routes into the Fergana Valley.",
+				"Its bazaars continue the valley’s trading traditions."
+			],
+			"it": [
+				"Scritto anche Kokand, il nome identifica l’antica sede di un potente khanato.",
+				"Sorgeva all’incrocio di antiche vie verso la valle di Fergana.",
+				"I suoi bazar continuano le tradizioni commerciali della valle."
+			],
+			"de": [
+				"Auch Kokand geschrieben, bezeichnet der Name den früheren Sitz eines mächtigen Khanats.",
+				"Die Stadt lag am Schnittpunkt alter Wege ins Ferghanatal.",
+				"Ihre Basare führen die Handelstraditionen des Tals fort."
+			]
+		}
+	},
+	"margilan": {
+		"city": {
+			"en": [
+				"It was an important Silk Road stop by the ninth century.",
+				"The city became renowned for silk production.",
+				"Kumtepa Bazaar sells ikat fabrics and traditional clothing."
+			],
+			"it": [
+				"Era un’importante tappa della Via della seta già nel IX secolo.",
+				"La città divenne celebre per la produzione della seta.",
+				"Il bazar di Kumtepa vende tessuti ikat e abiti tradizionali."
+			],
+			"de": [
+				"Die Stadt war bereits im 9. Jahrhundert eine wichtige Station der Seidenstraße.",
+				"Sie wurde für ihre Seidenherstellung bekannt.",
+				"Auf dem Kumtepa-Basar werden Ikat-Stoffe und traditionelle Kleidung verkauft."
+			]
+		}
+	},
+	"navoiy": {
+		"city": {
+			"en": [
+				"It was named after the poet and statesman Alisher Navoiy.",
+				"The modern city developed as a mining and metallurgical centre.",
+				"The surrounding region preserves ancient rock art at Sarmishsay."
+			],
+			"it": [
+				"Prese il nome dal poeta e statista Alisher Navoiy.",
+				"La città moderna si sviluppò come centro minerario e metallurgico.",
+				"La regione circostante conserva antiche incisioni rupestri a Sarmishsay."
+			],
+			"de": [
+				"Die Stadt wurde nach dem Dichter und Staatsmann Alischer Nawoi benannt.",
+				"Die moderne Stadt entwickelte sich als Bergbau- und Metallurgiezentrum.",
+				"Die Umgebung bewahrt alte Felsbilder bei Sarmischsai."
+			]
+		}
+	},
+	"kagan": {
+		"city": {
+			"en": [
+				"Formerly New Bukhara, it grew around a railway station in 1888.",
+				"Bukhara’s main railway station remains in this separate town.",
+				"An ornate palace was built here for the emir of Bukhara in the 1890s."
+			],
+			"it": [
+				"Già Nuova Bukhara, crebbe attorno a una stazione ferroviaria nel 1888.",
+				"La principale stazione ferroviaria di Bukhara si trova ancora in questa città distinta.",
+				"Negli anni Novanta dell’Ottocento vi fu costruito un palazzo decorato per l’emiro di Bukhara."
+			],
+			"de": [
+				"Das frühere Neu-Buchara wuchs 1888 um einen Bahnhof.",
+				"Bucharas Hauptbahnhof liegt noch heute in dieser eigenständigen Stadt.",
+				"In den 1890er Jahren entstand hier ein prächtiger Palast für den Emir von Buchara."
+			]
+		}
+	},
+	"shahrisabz": {
+		"city": {
+			"en": [
+				"Its name means green city.",
+				"Timur’s Ak-Saray Palace remains a landmark of its historic centre.",
+				"Its monuments recall the city’s importance under the Timurid dynasty."
+			],
+			"it": [
+				"Il nome significa città verde.",
+				"Il palazzo Ak-Saray di Tamerlano rimane un simbolo del centro storico.",
+				"I monumenti ricordano l’importanza della città sotto la dinastia timuride."
+			],
+			"de": [
+				"Der Name bedeutet grüne Stadt.",
+				"Timurs Ak-Sarai-Palast bleibt ein Wahrzeichen der Altstadt.",
+				"Die Bauwerke erinnern an die Bedeutung der Stadt unter der Timuriden-Dynastie."
+			]
+		}
+	},
+	"qarshi": {
+		"city": {
+			"en": [
+				"Its older names include Nasaf.",
+				"Caravan trade linked its oasis with Bukhara and Balkh.",
+				"Its monuments include the Kok Gumbaz mosque and historic madrasas."
+			],
+			"it": [
+				"Tra i nomi antichi vi è Nasaf.",
+				"Il commercio carovaniero collegava la sua oasi a Bukhara e Balkh.",
+				"Tra i monumenti vi sono la moschea Kok Gumbaz e madrase storiche."
+			],
+			"de": [
+				"Zu den älteren Namen gehört Nasaf.",
+				"Der Karawanenhandel verband die Oase mit Buchara und Balch.",
+				"Zu den Baudenkmälern gehören die Kok-Gumbaz-Moschee und historische Madrasen."
+			]
+		}
+	},
+	"termez": {
+		"city": {
+			"en": [
+				"The ancient town was an important centre of Buddhism.",
+				"Fayaz Tepe preserves remains of a Buddhist monastic complex.",
+				"Sultan Saodat is a historic necropolis of the local Sayyid dynasty."
+			],
+			"it": [
+				"La città antica fu un importante centro del buddhismo.",
+				"Fayaz Tepe conserva i resti di un complesso monastico buddhista.",
+				"Sultan Saodat è una storica necropoli della dinastia locale dei sayyid."
+			],
+			"de": [
+				"Die alte Stadt war ein bedeutendes Zentrum des Buddhismus.",
+				"Fayaz Tepe bewahrt Reste einer buddhistischen Klosteranlage.",
+				"Sultan Saodat ist eine historische Nekropole der örtlichen Sayyid-Dynastie."
 			]
 		}
 	}

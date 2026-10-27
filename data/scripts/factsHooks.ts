@@ -35,7 +35,11 @@ export function hooksForCountry(country: string | undefined): Record<string, Aut
  * Earth's admin-1 layer, which says "Czech Republic"; Europe's maps take the
  * admin-0 layer's short name, "Czechia". One country, one file (FT-69).
  */
-const SAME_FILE_AS: Record<string, string> = { 'Czech Republic': 'Czechia' };
+const SAME_FILE_AS: Record<string, string> = {
+	'Czech Republic': 'Czechia',
+	'Democratic Republic of the Congo': 'Congo-Kinshasa',
+	'Congo (Kinshasa)': 'Congo-Kinshasa'
+};
 
 /**
  * Where a whole country's sentences are, on a continent's Countries map

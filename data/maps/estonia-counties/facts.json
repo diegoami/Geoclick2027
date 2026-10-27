@@ -1,0 +1,502 @@
+{
+	"harju": {
+		"kind": "region",
+		"borders": [
+			"Järva",
+			"Lääne",
+			"Lääne-Viru",
+			"Rapla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tallinn",
+			"nameDe": "Tallinn",
+			"nameIt": "Tallinn",
+			"population": 457572
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Harju’s name is probably related to a word for a ridge.",
+				"The Jägala River reaches the Gulf of Finland here.",
+				"Its lower course includes the Jägala waterfall."
+			],
+			"it": [
+				"Il nome Harju è probabilmente legato a una parola che indica un crinale.",
+				"Qui il fiume Jägala raggiunge il Golfo di Finlandia.",
+				"Il suo corso inferiore comprende la cascata di Jägala."
+			],
+			"de": [
+				"Der Name Harju hängt wahrscheinlich mit einem Wort für einen Höhenrücken zusammen.",
+				"Hier mündet der Fluss Jägala in den Finnischen Meerbusen.",
+				"An seinem Unterlauf liegt der Jägala-Wasserfall."
+			]
+		}
+	},
+	"laane-viru": {
+		"kind": "region",
+		"borders": [
+			"Harju",
+			"Ida-Viru",
+			"Järva",
+			"Jõgeva"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rakvere",
+			"nameDe": "Rakvere",
+			"nameIt": "Rakvere",
+			"population": 15695
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Lääne-Viru means western Viru, preserving an old regional name.",
+				"Sagadi Manor lies in its part of Lahemaa National Park.",
+				"The manor complex houses a forest museum."
+			],
+			"it": [
+				"Lääne-Viru significa Viru occidentale e conserva un antico nome regionale.",
+				"Il maniero di Sagadi si trova nella sua parte del Parco nazionale di Lahemaa.",
+				"Il complesso del maniero ospita un museo forestale."
+			],
+			"de": [
+				"Lääne-Viru bedeutet westliches Viru und bewahrt einen alten Landschaftsnamen.",
+				"Das Gut Sagadi liegt in seinem Teil des Lahemaa-Nationalparks.",
+				"Der Gutskomplex beherbergt ein Waldmuseum."
+			]
+		}
+	},
+	"ida-viru": {
+		"kind": "region",
+		"borders": [
+			"Jõgeva",
+			"Lääne-Viru"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Narva",
+			"nameDe": "Narwa",
+			"nameIt": "Narva",
+			"population": 53360
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Ida-Viru means eastern Viru, preserving an old regional name.",
+				"The Narva River marks its border with Russia.",
+				"Oil-shale mining has shaped its industrial landscape."
+			],
+			"it": [
+				"Ida-Viru significa Viru orientale e conserva un antico nome regionale.",
+				"Il fiume Narva segna il suo confine con la Russia.",
+				"L’estrazione di scisti bituminosi ha modellato il suo paesaggio industriale."
+			],
+			"de": [
+				"Ida-Viru bedeutet östliches Viru und bewahrt einen alten Landschaftsnamen.",
+				"Der Fluss Narva bildet seine Grenze zu Russland.",
+				"Der Ölschieferabbau hat seine Industrielandschaft geprägt."
+			]
+		}
+	},
+	"laane": {
+		"kind": "region",
+		"borders": [
+			"Harju",
+			"Pärnu",
+			"Rapla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Haapsalu",
+			"nameDe": "Haapsalu",
+			"nameIt": "Haapsalu",
+			"population": 9812
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Lääne’s name refers to its western position among Estonia’s mainland counties.",
+				"Its coast includes birdwatching sites around Matsalu Bay.",
+				"Migrating geese and cranes gather on the coastal meadows."
+			],
+			"it": [
+				"Il nome Lääne richiama la sua posizione occidentale tra le contee continentali estoni.",
+				"La sua costa comprende punti di osservazione degli uccelli attorno alla baia di Matsalu.",
+				"Oche e gru migratrici si radunano nei prati costieri."
+			],
+			"de": [
+				"Der Name Lääne verweist auf seine westliche Lage unter Estlands Festlandkreisen.",
+				"An seiner Küste liegen Vogelbeobachtungsplätze an der Matsalu-Bucht.",
+				"Zugvögel wie Gänse und Kraniche sammeln sich auf den Küstenwiesen."
+			]
+		}
+	},
+	"rapla": {
+		"kind": "region",
+		"borders": [
+			"Harju",
+			"Järva",
+			"Lääne",
+			"Pärnu"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Rapla",
+			"nameDe": "Rapla",
+			"nameIt": "Rapla",
+			"population": 5355
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from the town of Rapla.",
+				"Rapla’s church has an unusual pair of towers.",
+				"The Mahtra Peasant Museum recalls the peasant uprising of 1858."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Rapla.",
+				"La chiesa di Rapla ha un’insolita coppia di torri.",
+				"Il Museo contadino di Mahtra ricorda la rivolta contadina del 1858."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Rapla benannt.",
+				"Raplas Kirche hat ein ungewöhnliches Turmpaar.",
+				"Das Bauernmuseum Mahtra erinnert an den Bauernaufstand von 1858."
+			]
+		}
+	},
+	"jarva": {
+		"kind": "region",
+		"borders": [
+			"Harju",
+			"Jõgeva",
+			"Lääne-Viru",
+			"Pärnu",
+			"Rapla",
+			"Viljandi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Paide",
+			"nameDe": "Paide",
+			"nameIt": "Paide",
+			"population": 8073
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Järva’s name is usually linked to järv, the Estonian word for lake.",
+				"Paide’s castle tower recalls the medieval Livonian Order.",
+				"Türi’s flower fair brings gardeners to the county each spring."
+			],
+			"it": [
+				"Il nome Järva viene solitamente collegato a järv, la parola estone per lago.",
+				"La torre del castello di Paide ricorda l’Ordine di Livonia medievale.",
+				"La fiera dei fiori di Türi richiama gli appassionati di giardinaggio ogni primavera."
+			],
+			"de": [
+				"Der Name Järva wird meist mit järv, dem estnischen Wort für See, verbunden.",
+				"Paides Burgturm erinnert an den mittelalterlichen Livländischen Orden.",
+				"Türis Blumenmesse zieht jeden Frühling Gartenfreunde in den Kreis."
+			]
+		}
+	},
+	"hiiu": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Kärdla",
+			"nameDe": "Kärdla",
+			"nameIt": "Kärdla",
+			"population": 2921
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Hiiu takes its name from the island of Hiiumaa.",
+				"Hiiumaa is Estonia’s second-largest island.",
+				"Kõpu’s lighthouse recalls the island’s long seafaring history."
+			],
+			"it": [
+				"Hiiu prende il nome dall’isola di Hiiumaa.",
+				"Hiiumaa è la seconda isola più grande dell’Estonia.",
+				"Il faro di Kõpu ricorda la lunga storia marinara dell’isola."
+			],
+			"de": [
+				"Hiiu ist nach der Insel Hiiumaa benannt.",
+				"Hiiumaa ist Estlands zweitgrößte Insel.",
+				"Der Leuchtturm Kõpu erinnert an die lange Seefahrtsgeschichte der Insel."
+			]
+		}
+	},
+	"jogeva": {
+		"kind": "region",
+		"borders": [
+			"Ida-Viru",
+			"Järva",
+			"Lääne-Viru",
+			"Tartu",
+			"Viljandi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jõgeva",
+			"nameDe": "Jõgeva",
+			"nameIt": "Jõgeva",
+			"population": 5112
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county takes its name from the town of Jõgeva.",
+				"Palamuse preserves the parish-school world associated with Oskar Luts’s Spring.",
+				"Põltsamaa’s castle was founded in 1272."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Jõgeva.",
+				"Palamuse conserva il mondo della scuola parrocchiale legato a Primavera di Oskar Luts.",
+				"Il castello di Põltsamaa fu fondato nel 1272."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Jõgeva benannt.",
+				"Palamuse bewahrt die Pfarrschulwelt aus Oskar Luts’ Frühling.",
+				"Die Burg Põltsamaa wurde 1272 gegründet."
+			]
+		}
+	},
+	"tartu": {
+		"kind": "region",
+		"borders": [
+			"Jõgeva",
+			"Põlva",
+			"Valga",
+			"Viljandi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tartu",
+			"nameDe": "Tartu",
+			"nameIt": "Tartu",
+			"population": 97759
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The county takes its name from the town of Tartu.",
+				"Its university was founded in 1632 under Swedish rule.",
+				"The old observatory received a pioneering Fraunhofer telescope in 1824."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Tartu.",
+				"La sua università fu fondata nel 1632 sotto il dominio svedese.",
+				"Il vecchio osservatorio ricevette un innovativo telescopio Fraunhofer nel 1824."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Tartu benannt.",
+				"Seine Universität wurde 1632 unter schwedischer Herrschaft gegründet.",
+				"Die alte Sternwarte erhielt 1824 ein wegweisendes Fraunhofer-Teleskop."
+			]
+		}
+	},
+	"viljandi": {
+		"kind": "region",
+		"borders": [
+			"Järva",
+			"Jõgeva",
+			"Pärnu",
+			"Tartu",
+			"Valga"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Viljandi",
+			"nameDe": "Viljandi",
+			"nameIt": "Viljandi",
+			"population": 17255
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from the town of Viljandi.",
+				"Its folk-music festival celebrates traditional music.",
+				"The county reaches into Soomaa, famous for its flood-filled fifth season."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Viljandi.",
+				"Il suo festival folk celebra la musica tradizionale.",
+				"La contea si estende fino a Soomaa, celebre per la quinta stagione delle inondazioni."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Viljandi benannt.",
+				"Sein Folkfestival feiert die traditionelle Musik.",
+				"Der Kreis reicht bis nach Soomaa, bekannt für seine fünfte Jahreszeit mit Überschwemmungen."
+			]
+		}
+	},
+	"parnu": {
+		"kind": "region",
+		"borders": [
+			"Järva",
+			"Lääne",
+			"Rapla",
+			"Viljandi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pärnu",
+			"nameDe": "Pärnu",
+			"nameIt": "Pärnu",
+			"population": 41520
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The county takes its name from the town of Pärnu.",
+				"Soomaa’s landscape crosses the boundary between Pärnu and Viljandi counties.",
+				"During its fifth season, floods can turn forests and meadows into canoe routes."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Pärnu.",
+				"Il paesaggio di Soomaa attraversa il confine tra le contee di Pärnu e Viljandi.",
+				"Durante la quinta stagione, le inondazioni possono trasformare boschi e prati in percorsi per canoe."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Pärnu benannt.",
+				"Soomaas Landschaft erstreckt sich über die Grenze zwischen den Kreisen Pärnu und Viljandi.",
+				"In der fünften Jahreszeit können Überschwemmungen Wälder und Wiesen zu Kanurouten machen."
+			]
+		}
+	},
+	"saare": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Kuressaare",
+			"nameDe": "Kuressaare",
+			"nameIt": "Kuressaare",
+			"population": 13185
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Saare shares its name with the island of Saaremaa.",
+				"The Kaali craters on Saaremaa were formed by a meteorite impact.",
+				"Angla preserves traditional windmills."
+			],
+			"it": [
+				"Saare condivide il nome con l’isola di Saaremaa.",
+				"I crateri di Kaali, a Saaremaa, furono formati dall’impatto di un meteorite.",
+				"Angla conserva mulini a vento tradizionali."
+			],
+			"de": [
+				"Saare teilt seinen Namen mit der Insel Saaremaa.",
+				"Die Kaali-Krater auf Saaremaa entstanden durch einen Meteoriteneinschlag.",
+				"Angla bewahrt traditionelle Windmühlen."
+			]
+		}
+	},
+	"polva": {
+		"kind": "region",
+		"borders": [
+			"Tartu",
+			"Valga",
+			"Võru"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Põlva",
+			"nameDe": "Põlva",
+			"nameIt": "Põlva",
+			"population": 5498
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The county takes its name from the town of Põlva.",
+				"Taevaskoja’s sandstone cliffs rise above the Ahja River.",
+				"The Road Museum at Varbuse occupies a former horse post station."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Põlva.",
+				"Le pareti di arenaria di Taevaskoja si innalzano sul fiume Ahja.",
+				"Il Museo della strada di Varbuse occupa un’antica stazione di posta a cavalli."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Põlva benannt.",
+				"Die Sandsteinfelsen von Taevaskoja ragen über dem Fluss Ahja auf.",
+				"Das Straßenmuseum in Varbuse nutzt eine ehemalige Pferdepoststation."
+			]
+		}
+	},
+	"valga": {
+		"kind": "region",
+		"borders": [
+			"Põlva",
+			"Tartu",
+			"Viljandi",
+			"Võru"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Valga",
+			"nameDe": "Valga",
+			"nameIt": "Valga",
+			"population": 12173
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The county takes its name from the town of Valga.",
+				"The county includes Otepää’s winter-sports landscape.",
+				"Sangaste Castle and its park were inspired by Windsor Castle."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Valga.",
+				"La contea comprende il paesaggio degli sport invernali di Otepää.",
+				"Il castello di Sangaste e il suo parco furono ispirati al castello di Windsor."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Valga benannt.",
+				"Zum Kreis gehört die Wintersportlandschaft von Otepää.",
+				"Schloss Sangaste und sein Park wurden von Windsor Castle inspiriert."
+			]
+		}
+	},
+	"voru": {
+		"kind": "region",
+		"borders": [
+			"Põlva",
+			"Valga"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Võru",
+			"nameDe": "Võru",
+			"nameIt": "Võru",
+			"population": 12112
+		},
+		"peak": {
+			"name": "Suur Munamagi",
+			"elevation": 318
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The county takes its name from the town of Võru.",
+				"The smoke-sauna tradition of Old Võromaa entered UNESCO’s intangible heritage list in 2014.",
+				"These traditional saunas have no chimney."
+			],
+			"it": [
+				"La contea prende il nome dalla città di Võru.",
+				"La tradizione della sauna a fumo della Vecchia Võromaa entrò nella lista UNESCO del patrimonio immateriale nel 2014.",
+				"Queste saune tradizionali non hanno camino."
+			],
+			"de": [
+				"Der Kreis ist nach der Stadt Võru benannt.",
+				"Die Rauchsaunatradition des alten Võromaa wurde 2014 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen.",
+				"Diese traditionellen Saunen haben keinen Schornstein."
+			]
+		}
+	}
+}

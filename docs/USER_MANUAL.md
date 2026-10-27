@@ -47,7 +47,7 @@ Geoclick is a game for learning geography: where a country's regions, states
 or provinces are, where its main towns and cities are, and where the countries
 and capitals of a continent are.
 
-- **173 maps across 58 countries and the six continents.** Most countries have
+- **217 maps across 79 countries and the six continents.** Most countries have
   two maps: its regions (called states, provinces, prefectures or districts,
   depending on the country) and its larger towns. Some also have finer, more
   detailed maps. See [The maps](#20-the-maps).
@@ -770,19 +770,23 @@ The apps are the same game as the website, packaged to install:
 
 ## 20. The maps
 
-173 maps across 58 countries and the six continents.
+217 maps across 79 countries and the six continents.
 
 - **Continents.** Each continent has a **Countries** map and a **Capitals** map.
   Europe's cities also come in five parts (north, south, east, west and centre).
-- **Countries.** 58 countries have maps of their own: Algeria, Argentina, Australia,
-  Austria, Bangladesh, Belgium, Brazil, Bulgaria, Canada, Chile, China, Colombia,
-  Croatia, Czechia, Denmark, Ecuador, Egypt, Finland, France, Germany, Great Britain, Greece,
-  India, Indonesia, Iran, Ireland, Italy, Japan, Kazakhstan, Kenya, Malaysia,
-  Mexico, Morocco, Netherlands, New Zealand, Nigeria, Norway, Pakistan, Peru, Philippines, Poland,
-  Portugal, Romania, Russia, Saudi Arabia, Serbia, South Africa, South Korea,
-  Spain, Sweden, Switzerland, Thailand, Turkey, Ukraine, USA,
-  Venezuela and Vietnam (as the start screen lists them in English). Most have **regions** (states,
-  provinces, prefectures…) and **towns**.
+- **Countries.** 79 country groups have maps of their own:
+  Algeria, Angola, Argentina, Australia, Austria, Bangladesh, Belgium, Brazil,
+  Bulgaria, Canada, Chile, China, Colombia, Congo-Kinshasa, Costa Rica, Croatia,
+  Czechia, Denmark, Ecuador, Egypt, Estonia, Ethiopia, Finland, France, Germany, Ghana,
+  Great Britain, Greece, Hungary, Iceland, India, Indonesia, Iran, Iraq, Ireland,
+  Israel, Italy, Japan, Kazakhstan, Kenya, Latvia, Lithuania, Malaysia, Mexico,
+  Morocco, Nepal, Netherlands, New Zealand, Nigeria, Norway, Pakistan, Peru,
+  Philippines, Poland, Portugal, Romania, Russia, Saudi Arabia, Serbia, Singapore,
+  Slovakia, Slovenia, South Africa, South Korea, Spain, Sri Lanka, Sweden, Switzerland,
+  Taiwan, Tanzania, Thailand, Turkey, Uganda, Ukraine, United Arab Emirates, USA,
+  Uzbekistan, Venezuela, Vietnam.
+  Most have **regions** (states, provinces, prefectures…) and **towns**.
+  Singapore has regions and a detailed map of its 55 planning areas.
 - **Detailed maps** (behind the *Show detailed maps* tick): Germany's districts
   and its towns of 50 000 and up, Italy's 110 provinces (also in north, centre and
   south thirds) and its towns of 50 000 and up, Poland's counties, the

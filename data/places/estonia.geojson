@@ -1,0 +1,1064 @@
+{
+	"type": "FeatureCollection",
+	"source": "Wikidata (CC0)",
+	"fetchedAt": "2026-10-26T12:34:06.635Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"EST\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country; wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2011-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"et\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  OPTIONAL {\n    ?item wdt:P131* ?region .\n    ?region wdt:P31 wd:Q189672; wdt:P17 ?country;\n      rdfs:label ?regionName . FILTER(LANG(?regionName)=\"et\")\n  }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.358611111,
+					58.125833333
+				]
+			},
+			"properties": {
+				"NAME": "Abja-Paluoja",
+				"NAME_EN": "Abja-Paluoja",
+				"NAME_IT": "Abja-Paluoja",
+				"NAME_DE": "Abja-Paluoja",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Viljandi maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1056,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q321784"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.528888888,
+					57.829166666
+				]
+			},
+			"properties": {
+				"NAME": "Antsla",
+				"NAME_EN": "Antsla",
+				"NAME_IT": "Antsla",
+				"NAME_DE": "Antsla",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Võru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1211,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q154994"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.415833333,
+					58.2275
+				]
+			},
+			"properties": {
+				"NAME": "Elva",
+				"NAME_EN": "Elva",
+				"NAME_IT": "Elva",
+				"NAME_DE": "Elva",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Tartu maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5692,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q213071"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.536944444,
+					58.946944444
+				]
+			},
+			"properties": {
+				"NAME": "Haapsalu",
+				"NAME_EN": "Haapsalu",
+				"NAME_IT": "Haapsalu",
+				"NAME_DE": "Haapsalu",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Lääne maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 9812,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q191106"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.395555555,
+					58.746111111
+				]
+			},
+			"properties": {
+				"NAME": "Jõgeva",
+				"NAME_EN": "Jõgeva",
+				"NAME_IT": "Jõgeva",
+				"NAME_DE": "Jõgeva",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Jõgeva maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5112,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q117513"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.412222222,
+					59.3575
+				]
+			},
+			"properties": {
+				"NAME": "Jõhvi",
+				"NAME_EN": "Jõhvi",
+				"NAME_IT": "Jõhvi",
+				"NAME_DE": "Jõhvi",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Ida-Viru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10880,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q211059"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.75,
+					58.994444444
+				]
+			},
+			"properties": {
+				"NAME": "Kärdla",
+				"NAME_EN": "Kärdla",
+				"NAME_IT": "Kärdla",
+				"NAME_DE": "Kärdla",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Hiiu maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2921,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q155066"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.5475,
+					58.104722222
+				]
+			},
+			"properties": {
+				"NAME": "Karksi-Nuia",
+				"NAME_EN": "Karksi-Nuia",
+				"NAME_IT": "Karksi-Nuia",
+				"NAME_DE": "Karksi-Nuia",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Viljandi maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1436,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1023750"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.328333333,
+					59.336944444
+				]
+			},
+			"properties": {
+				"NAME": "Kehra",
+				"NAME_EN": "Kehra",
+				"NAME_IT": "Kehra",
+				"NAME_DE": "Kehra",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Harju maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2873,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q985464"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.4225,
+					59.308611111
+				]
+			},
+			"properties": {
+				"NAME": "Keila",
+				"NAME_EN": "Keila",
+				"NAME_IT": "Keila",
+				"NAME_DE": "Keila",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Harju maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 10964,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q207275"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.961388888,
+					58.149722222
+				]
+			},
+			"properties": {
+				"NAME": "Kilingi-Nõmme",
+				"NAME_EN": "Kilingi-Nõmme",
+				"NAME_IT": "Kilingi-Nõmme",
+				"NAME_DE": "Kilingi-Nõmme",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Pärnu maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1623,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1146736"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.961111111,
+					59.351666666
+				]
+			},
+			"properties": {
+				"NAME": "Kiviõli",
+				"NAME_EN": "Kiviõli",
+				"NAME_IT": "Kiviõli",
+				"NAME_DE": "Kiviõli",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Ida-Viru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4792,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q216119"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.283333333,
+					59.4
+				]
+			},
+			"properties": {
+				"NAME": "Kohtla-Järve",
+				"NAME_EN": "Kohtla-Järve",
+				"NAME_IT": "Kohtla-Järve",
+				"NAME_DE": "Kohtla-Järve",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Ida-Viru maakond",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 33434,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q201391"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.5275,
+					59.500833333
+				]
+			},
+			"properties": {
+				"NAME": "Kunda",
+				"NAME_EN": "Kunda",
+				"NAME_IT": "Kunda",
+				"NAME_DE": "Kunda",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Lääne-Viru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2990,
+				"POP1950": 0,
+				"populationDate": "2025-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q213178"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.486111111,
+					58.253333333
+				]
+			},
+			"properties": {
+				"NAME": "Kuressaare",
+				"NAME_EN": "Kuressaare",
+				"NAME_IT": "Kuressaare",
+				"NAME_DE": "Kuressaare",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Saare maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13185,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q188179"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.834166666,
+					58.687777777
+				]
+			},
+			"properties": {
+				"NAME": "Lihula",
+				"NAME_EN": "Lihula",
+				"NAME_IT": "Lihula",
+				"NAME_DE": "Lihula",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Pärnu maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1250,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q375497"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.713611111,
+					59.584166666
+				]
+			},
+			"properties": {
+				"NAME": "Loksa",
+				"NAME_EN": "Loksa",
+				"NAME_IT": "Loksa",
+				"NAME_DE": "Loksa",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Harju maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2536,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q213740"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.016111111,
+					59.478055555
+				]
+			},
+			"properties": {
+				"NAME": "Maardu",
+				"NAME_EN": "Maardu",
+				"NAME_IT": "Maardu",
+				"NAME_DE": "Maardu",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Harju maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17017,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q206555"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.947777777,
+					58.847777777
+				]
+			},
+			"properties": {
+				"NAME": "Mustvee",
+				"NAME_EN": "Mustvee",
+				"NAME_IT": "Mustvee",
+				"NAME_DE": "Mustvee",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Jõgeva maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1153,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842021"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					28.200555555,
+					59.379166666
+				]
+			},
+			"properties": {
+				"NAME": "Narva",
+				"NAME_EN": "Narva",
+				"NAME_IT": "Narva",
+				"NAME_DE": "Narwa",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Ida-Viru maakond",
+				"coordinatePrecision": 0.000277778,
+				"ADM0CAP": 0,
+				"POP_MAX": 53360,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q102158"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					28.041944444,
+					59.4625
+				]
+			},
+			"properties": {
+				"NAME": "Narva-Jõesuu",
+				"NAME_EN": "Narva-Jõesuu",
+				"NAME_IT": "Narva-Jõesuu",
+				"NAME_DE": "Narva-Jõesuu",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Ida-Viru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2622,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q723372"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.498333333,
+					58.057222222
+				]
+			},
+			"properties": {
+				"NAME": "Otepää",
+				"NAME_EN": "Otepää",
+				"NAME_IT": "Otepää",
+				"NAME_DE": "Otepää",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Valga maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2155,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q339347"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.566666666,
+					58.883333333
+				]
+			},
+			"properties": {
+				"NAME": "Paide",
+				"NAME_EN": "Paide",
+				"NAME_IT": "Paide",
+				"NAME_DE": "Paide",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Järva maakond",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 8073,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q45114"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.05,
+					59.35
+				]
+			},
+			"properties": {
+				"NAME": "Paldiski",
+				"NAME_EN": "Paldiski",
+				"NAME_IT": "Paldiski",
+				"NAME_DE": "Baltisch-Port (Paldiski)",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Harju maakond",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 4073,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q204091"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.498888888,
+					58.384444444
+				]
+			},
+			"properties": {
+				"NAME": "Pärnu",
+				"NAME_EN": "Pärnu",
+				"NAME_IT": "Pärnu",
+				"NAME_DE": "Pärnu",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Pärnu maakond",
+				"coordinatePrecision": 0.000277778,
+				"ADM0CAP": 0,
+				"POP_MAX": 41520,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q102365"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.972222222,
+					58.653333333
+				]
+			},
+			"properties": {
+				"NAME": "Põltsamaa",
+				"NAME_EN": "Põltsamaa",
+				"NAME_IT": "Põltsamaa",
+				"NAME_DE": "Põltsamaa",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Jõgeva maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4106,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q642660"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.055555555,
+					58.053611111
+				]
+			},
+			"properties": {
+				"NAME": "Põlva",
+				"NAME_EN": "Põlva",
+				"NAME_IT": "Põlva",
+				"NAME_DE": "Põlva",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Põlva maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5498,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q45100"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.361111111,
+					59.350555555
+				]
+			},
+			"properties": {
+				"NAME": "Rakvere",
+				"NAME_EN": "Rakvere",
+				"NAME_IT": "Rakvere",
+				"NAME_DE": "Rakvere",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Lääne-Viru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15695,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q191889"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.464166666,
+					58.097777777
+				]
+			},
+			"properties": {
+				"NAME": "Räpina",
+				"NAME_EN": "Räpina",
+				"NAME_IT": "Räpina",
+				"NAME_DE": "Räpina",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Põlva maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2126,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1483558"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.801111111,
+					58.994444444
+				]
+			},
+			"properties": {
+				"NAME": "Rapla",
+				"NAME_EN": "Rapla",
+				"NAME_IT": "Rapla",
+				"NAME_DE": "Rapla",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Rapla maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5355,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q215971"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.562222222,
+					59.323055555
+				]
+			},
+			"properties": {
+				"NAME": "Saue",
+				"NAME_EN": "Saue",
+				"NAME_IT": "Saue",
+				"NAME_DE": "Saue",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Harju maakond",
+				"coordinatePrecision": 0.000277778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6227,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q86206"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					27.774166666,
+					59.393055555
+				]
+			},
+			"properties": {
+				"NAME": "Sillamäe",
+				"NAME_EN": "Sillamäe",
+				"NAME_IT": "Sillamäe",
+				"NAME_DE": "Sillamäe",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Ida-Viru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12352,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q207748"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.647777777,
+					58.403055555
+				]
+			},
+			"properties": {
+				"NAME": "Sindi",
+				"NAME_EN": "Sindi",
+				"NAME_IT": "Sindi",
+				"NAME_DE": "Sindi",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Pärnu maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3836,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q730707"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.466666666,
+					58.535555555
+				]
+			},
+			"properties": {
+				"NAME": "Suure-Jaani",
+				"NAME_EN": "Suure-Jaani",
+				"NAME_IT": "Suure-Jaani",
+				"NAME_DE": "Suure-Jaani",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Viljandi maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1168,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q370242"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.745,
+					59.437222222
+				]
+			},
+			"properties": {
+				"NAME": "Tallinn",
+				"NAME_EN": "Tallinn",
+				"NAME_IT": "Tallinn",
+				"NAME_DE": "Tallinn",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Harju maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 457572,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1770"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.108055555,
+					59.158888888
+				]
+			},
+			"properties": {
+				"NAME": "Tamsalu",
+				"NAME_EN": "Tamsalu",
+				"NAME_IT": "Tamsalu",
+				"NAME_DE": "Tamsalu",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Lääne-Viru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2397,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q217682"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.962777777,
+					59.264444444
+				]
+			},
+			"properties": {
+				"NAME": "Tapa",
+				"NAME_EN": "Tapa",
+				"NAME_IT": "Tapa",
+				"NAME_DE": "Tapa",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Lääne-Viru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5492,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q650577"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.7225,
+					58.38
+				]
+			},
+			"properties": {
+				"NAME": "Tartu",
+				"NAME_EN": "Tartu",
+				"NAME_IT": "Tartu",
+				"NAME_DE": "Tartu",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Tartu maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 97759,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q13972"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.922777777,
+					58.002777777
+				]
+			},
+			"properties": {
+				"NAME": "Tõrva",
+				"NAME_EN": "Tõrva",
+				"NAME_IT": "Tõrva",
+				"NAME_DE": "Tõrva",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Valga maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2631,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q819514"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.429166666,
+					58.809444444
+				]
+			},
+			"properties": {
+				"NAME": "Türi",
+				"NAME_EN": "Türi",
+				"NAME_IT": "Türi",
+				"NAME_DE": "Türi",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Järva maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5186,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q141796"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.031111111,
+					57.776944444
+				]
+			},
+			"properties": {
+				"NAME": "Valga",
+				"NAME_EN": "Valga",
+				"NAME_IT": "Valga",
+				"NAME_DE": "Valga",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Valga maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12173,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q193905"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.595555555,
+					58.363333333
+				]
+			},
+			"properties": {
+				"NAME": "Viljandi",
+				"NAME_EN": "Viljandi",
+				"NAME_IT": "Viljandi",
+				"NAME_DE": "Viljandi",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Viljandi maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 17255,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q44840"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.557777777,
+					58.629166666
+				]
+			},
+			"properties": {
+				"NAME": "Võhma",
+				"NAME_EN": "Võhma",
+				"NAME_IT": "Võhma",
+				"NAME_DE": "Võhma",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Viljandi maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1272,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q171333"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.992777777,
+					57.848611111
+				]
+			},
+			"properties": {
+				"NAME": "Võru",
+				"NAME_EN": "Võru",
+				"NAME_IT": "Võru",
+				"NAME_DE": "Võru",
+				"ADM0NAME": "Estonia",
+				"ADM1NAME": "Võru maakond",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12112,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q205271"
+			}
+		}
+	]
+}

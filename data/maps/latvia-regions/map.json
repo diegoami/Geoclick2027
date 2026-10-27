@@ -1,0 +1,194 @@
+{
+	"id": "latvia-regions",
+	"name": "Latvia — Regions",
+	"country": "Latvia",
+	"attribution": "Latvian Ministry of Smart Administration and Regional Development; planning regions from 2021-07-01; 2021; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/latvia-regions-2021.geojson",
+	"placesSource": "data/places/latvia.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "vidzeme",
+			"name": "Vidzeme",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.0135,
+				57.310249999999996
+			],
+			"bbox": [
+				24.3343,
+				56.5349,
+				27.6927,
+				58.0856
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						24.5538,
+						57.6671
+					],
+					[
+						25.7013,
+						57.2392
+					],
+					[
+						26.8488,
+						57.1286
+					]
+				],
+				"aspect": 1.27
+			}
+		},
+		{
+			"id": "riga",
+			"name": "Rīga",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.31525,
+				57.0342
+			],
+			"bbox": [
+				23.4734,
+				56.6595,
+				25.1571,
+				57.4089
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						23.8767,
+						56.8267
+					],
+					[
+						24.4694,
+						56.9213
+					],
+					[
+						24.904,
+						57.1657
+					]
+				],
+				"aspect": 1.98
+			}
+		},
+		{
+			"id": "kurzeme",
+			"name": "Kurzeme",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.2575,
+				56.914
+			],
+			"bbox": [
+				20.9621,
+				56.0692,
+				23.5529,
+				57.7588
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						21.2176,
+						56.7195
+					],
+					[
+						22.1375,
+						57.1617
+					],
+					[
+						23.0574,
+						57.1224
+					]
+				],
+				"aspect": 0.85
+			}
+		},
+		{
+			"id": "latgale",
+			"name": "Latgale",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.030949999999997,
+				56.5226
+			],
+			"bbox": [
+				25.8204,
+				55.6747,
+				28.2415,
+				57.3705
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						26.5959,
+						55.8527
+					],
+					[
+						27.5934,
+						56.3174
+					],
+					[
+						27.5676,
+						57.0315
+					]
+				],
+				"aspect": 1.74
+			}
+		},
+		{
+			"id": "zemgale",
+			"name": "Zemgale",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.667749999999998,
+				56.47385
+			],
+			"bbox": [
+				22.7106,
+				56.052,
+				26.6249,
+				56.8957
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						25.0382,
+						56.4693
+					],
+					[
+						25.5887,
+						56.5656
+					],
+					[
+						26.0907,
+						56.3816
+					]
+				],
+				"aspect": 1.03
+			}
+		}
+	],
+	"tourOrder": [
+		"vidzeme",
+		"riga",
+		"kurzeme",
+		"latgale",
+		"zemgale"
+	]
+}

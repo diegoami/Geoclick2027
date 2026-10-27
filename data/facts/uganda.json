@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Uganda (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"kampala": {
 		"city": {
@@ -20,6 +21,538 @@
 				"Ihr Name wird oft als „Hügel der Impala“ gedeutet.",
 				"Wie Rom wurde sie zuerst auf sieben Hügeln gebaut.",
 				"Die Kasubi-Gräber, wo die Könige von Buganda begraben sind, sind ein UNESCO-Welterbe."
+			]
+		}
+	},
+	"_sources": {
+		"central:region": [
+			"https://whc.unesco.org/en/list/1022",
+			"https://ich.unesco.org/en/RL/barkcloth-making-in-uganda-00139?RL=00139"
+		],
+		"northern:region": [
+			"https://en.wikipedia.org/wiki/Gulu",
+			"https://www.liracity.go.ug/about-lira",
+			"https://en.wikipedia.org/wiki/Kidepo_Valley_National_Park"
+		],
+		"eastern:region": [
+			"https://en.wikipedia.org/wiki/Busoga",
+			"https://en.wikipedia.org/wiki/Jinja,_Uganda",
+			"https://museums.tourism.go.ug/nyero-rock-paintings-site/"
+		],
+		"western:region": [
+			"https://en.wikipedia.org/wiki/Western_Region,_Uganda",
+			"https://whc.unesco.org/en/list/682/",
+			"https://whc.unesco.org/en/statesparties/ug"
+		],
+		"adjumani:city": [
+			"https://en.wikipedia.org/wiki/Adjumani",
+			"https://www.adjumani.go.ug/tourism/cultural-sites",
+			"https://www.jica.go.jp/Resource/jica-ri/publication/workingpaper/l75nbg000019bp0t-att/JICA-RI_WP_No.205.pdf"
+		],
+		"kitgum:city": [
+			"https://en.wikipedia.org/wiki/Kitgum,_Uganda",
+			"https://gu.ac.ug/about-us/vision-mission-and-core-values/"
+		],
+		"arua:city": [
+			"https://www.aruacity.go.ug/page/about-arua-city",
+			"https://madiwestnilediocese.ug/about/history/"
+		],
+		"gulu:city": [
+			"https://en.wikipedia.org/wiki/Gulu",
+			"https://gu.ac.ug/about-us/our-history/"
+		],
+		"lira:city": [
+			"https://en.wikipedia.org/wiki/Lira,_Uganda",
+			"https://www.liracity.go.ug/about-lira",
+			"https://lirauni.ac.ug/wp-content/uploads/2022/03/Strategic-Plan_2020-2025.pdf"
+		],
+		"masindi:city": [
+			"https://www.masindihotel.com/legacy",
+			"https://en.wikipedia.org/wiki/Masindi"
+		],
+		"mbale:city": [
+			"https://iuiu.ac.ug/about-iuiu.php?a=iuiu-at-a-glance&i=20",
+			"https://en.wikipedia.org/wiki/Mbale",
+			"https://en.wikipedia.org/wiki/Mount_Elgon"
+		],
+		"tororo:city": [
+			"https://en.wikipedia.org/wiki/Tororo"
+		],
+		"fort-portal:city": [
+			"https://en.wikipedia.org/wiki/Fort_Portal"
+		],
+		"iganga:city": [
+			"https://en.wikipedia.org/wiki/Iganga",
+			"https://en.wikipedia.org/wiki/Busoga_University"
+		],
+		"bombo:city": [
+			"https://en.wikipedia.org/wiki/Bombo,_Uganda",
+			"https://en.wikipedia.org/wiki/Nubi_language"
+		],
+		"busia:city": [
+			"https://en.wikipedia.org/wiki/Busia,_Uganda",
+			"https://www.eac.int/?id=1002%3Aefficient-border-crossing-to-boost-trade-between-kenya-and-uganda-with-launch-of-busia-one-stop-border-post"
+		],
+		"jinja:city": [
+			"https://en.wikipedia.org/wiki/Jinja,_Uganda",
+			"https://en.wikipedia.org/wiki/Nalubaale_Hydroelectric_Power_Station"
+		],
+		"mityana:city": [
+			"https://en.wikipedia.org/wiki/Roman_Catholic_Diocese_of_Kiyinda%E2%80%93Mityana",
+			"https://en.wikipedia.org/wiki/Mityana"
+		],
+		"kasese:city": [
+			"https://en.wikipedia.org/wiki/Kasese"
+		],
+		"entebbe:city": [
+			"https://en.wikipedia.org/wiki/Entebbe",
+			"https://opm.go.ug/entebbe-botanical-gardens-transferred-to-ministry-of-tourism/"
+		],
+		"masaka:city": [
+			"https://unhabitat.org/sites/default/files/download-manager-files/Strategic%20Urban%20Development%20Plan%20for%20Masaka%20Municipality.pdf"
+		],
+		"mbarara:city": [
+			"https://en.wikipedia.org/wiki/Mbarara"
+		],
+		"kabale:city": [
+			"https://en.wikipedia.org/wiki/Kabale",
+			"https://en.wikipedia.org/wiki/Kigezi_sub-region"
+		]
+	},
+	"central": {
+		"region": {
+			"en": [
+				"The region includes the historic heartland of the Buganda kingdom.",
+				"Kasubi is a royal burial site and spiritual centre for the Baganda.",
+				"Traditional barkcloth is made by beating the inner bark of the mutuba tree."
+			],
+			"it": [
+				"La regione comprende il cuore storico del regno del Buganda.",
+				"Kasubi è un luogo di sepoltura reale e un centro spirituale per i baganda.",
+				"Il tradizionale tessuto di corteccia si ottiene battendo la corteccia interna dell’albero mutuba."
+			],
+			"de": [
+				"Die Region umfasst das historische Kernland des Königreichs Buganda.",
+				"Kasubi ist eine königliche Begräbnisstätte und ein spirituelles Zentrum der Baganda.",
+				"Traditioneller Rindenstoff entsteht durch das Klopfen der inneren Rinde des Mutuba-Baums."
+			]
+		}
+	},
+	"northern": {
+		"region": {
+			"en": [
+				"Its historic cultural areas include Acholi and Lango.",
+				"Kidepo Valley became a national park in 1962.",
+				"The Narus Valley attracts wildlife to its water during the dry season."
+			],
+			"it": [
+				"Tra le sue aree culturali storiche vi sono Acholi e Lango.",
+				"La valle di Kidepo divenne un parco nazionale nel 1962.",
+				"La valle del Narus attira la fauna presso le sue acque durante la stagione secca."
+			],
+			"de": [
+				"Zu ihren historischen Kulturräumen gehören Acholi und Lango.",
+				"Das Kidepo-Tal wurde 1962 zum Nationalpark.",
+				"Das Narus-Tal zieht in der Trockenzeit Wildtiere an seine Wasserstellen."
+			]
+		}
+	},
+	"eastern": {
+		"region": {
+			"en": [
+				"Busoga preserves the traditions of a historic kingdom.",
+				"At Jinja, the Nile begins its journey from Lake Victoria.",
+				"Nyero’s painted rock shelters preserve evidence of prehistoric human activity."
+			],
+			"it": [
+				"Busoga conserva le tradizioni di un regno storico.",
+				"A Jinja il Nilo inizia il suo viaggio dal lago Vittoria.",
+				"I ripari rocciosi dipinti di Nyero conservano testimonianze dell’attività umana preistorica."
+			],
+			"de": [
+				"Busoga bewahrt die Traditionen eines historischen Königreichs.",
+				"Bei Jinja beginnt der Nil seinen Weg aus dem Victoriasee.",
+				"Nyeros bemalte Felsunterstände bewahren Spuren prähistorischer menschlicher Tätigkeit."
+			]
+		}
+	},
+	"western": {
+		"region": {
+			"en": [
+				"Its historic cultural areas include Bunyoro, Tooro and Ankole.",
+				"Bwindi’s forests shelter mountain gorillas and exceptional plant diversity.",
+				"The Rwenzori Mountains are protected as a World Heritage Site."
+			],
+			"it": [
+				"Tra le sue aree culturali storiche vi sono Bunyoro, Tooro e Ankole.",
+				"Le foreste di Bwindi ospitano gorilla di montagna e un’eccezionale diversità vegetale.",
+				"I monti Rwenzori sono protetti come patrimonio mondiale."
+			],
+			"de": [
+				"Zu ihren historischen Kulturräumen gehören Bunyoro, Tooro und Ankole.",
+				"Bwindis Wälder beherbergen Berggorillas und eine außergewöhnliche Pflanzenvielfalt.",
+				"Das Ruwenzori-Gebirge ist als Welterbestätte geschützt."
+			]
+		}
+	},
+	"adjumani": {
+		"city": {
+			"en": [
+				"The surrounding district takes its name from this town.",
+				"The area is a centre of Ma’di cultural traditions.",
+				"Nearby communities have a long history of hosting refugees from Sudan and South Sudan."
+			],
+			"it": [
+				"Il distretto circostante prende il nome da questa città.",
+				"La zona è un centro delle tradizioni culturali ma’di.",
+				"Le comunità vicine hanno una lunga storia di accoglienza dei rifugiati dal Sudan e dal Sudan del Sud."
+			],
+			"de": [
+				"Der umliegende Distrikt ist nach dieser Stadt benannt.",
+				"Die Gegend ist ein Zentrum der kulturellen Traditionen der Ma’di.",
+				"Die Nachbargemeinden nehmen seit Langem Flüchtlinge aus Sudan und Südsudan auf."
+			]
+		}
+	},
+	"kitgum": {
+		"city": {
+			"en": [
+				"The town is part of the historic Acholi cultural area.",
+				"Irene Gleeson’s educational charity established its headquarters here.",
+				"Gulu University also developed a campus in Kitgum."
+			],
+			"it": [
+				"La città fa parte della storica area culturale acholi.",
+				"L’organizzazione educativa di Irene Gleeson vi stabilì la propria sede.",
+				"Anche l’Università di Gulu sviluppò un campus a Kitgum."
+			],
+			"de": [
+				"Die Stadt gehört zum historischen Kulturraum der Acholi.",
+				"Irene Gleesons Bildungsorganisation richtete hier ihren Hauptsitz ein.",
+				"Auch die Universität Gulu baute einen Campus in Kitgum auf."
+			]
+		}
+	},
+	"arua": {
+		"city": {
+			"en": [
+				"It gained city status in 2020.",
+				"Its markets link trade with South Sudan and the Democratic Republic of the Congo.",
+				"Missionaries established a base at nearby Mvara in 1918."
+			],
+			"it": [
+				"Ottenne lo status di città nel 2020.",
+				"I mercati collegano il commercio con il Sudan del Sud e la Repubblica Democratica del Congo.",
+				"I missionari stabilirono una base nella vicina Mvara nel 1918."
+			],
+			"de": [
+				"Der Ort erhielt 2020 Stadtstatus.",
+				"Seine Märkte verbinden den Handel mit Südsudan und der Demokratischen Republik Kongo.",
+				"Missionare gründeten 1918 einen Stützpunkt im nahen Mvara."
+			]
+		}
+	},
+	"gulu": {
+		"city": {
+			"en": [
+				"It developed as an important urban centre of Acholi society.",
+				"Gulu University opened in 2002.",
+				"Its station lies on the historic Tororo–Pakwach railway."
+			],
+			"it": [
+				"Si sviluppò come importante centro urbano della società acholi.",
+				"L’Università di Gulu aprì nel 2002.",
+				"La stazione si trova sulla storica ferrovia Tororo–Pakwach."
+			],
+			"de": [
+				"Die Stadt entwickelte sich zu einem bedeutenden städtischen Zentrum der Acholi.",
+				"Die Universität Gulu wurde 2002 eröffnet.",
+				"Ihr Bahnhof liegt an der historischen Bahnstrecke Tororo–Pakwach."
+			]
+		}
+	},
+	"lira": {
+		"city": {
+			"en": [
+				"The modern town was founded in 1919.",
+				"Its cultural heritage is closely connected with the Lango people.",
+				"Lira University became an autonomous public university in 2015."
+			],
+			"it": [
+				"La città moderna fu fondata nel 1919.",
+				"Il suo patrimonio culturale è strettamente legato al popolo lango.",
+				"L’Università di Lira divenne un’università pubblica autonoma nel 2015."
+			],
+			"de": [
+				"Die moderne Stadt wurde 1919 gegründet.",
+				"Ihr kulturelles Erbe ist eng mit dem Volk der Lango verbunden.",
+				"Die Universität Lira wurde 2015 eine eigenständige öffentliche Universität."
+			]
+		}
+	},
+	"masindi": {
+		"city": {
+			"en": [
+				"It belongs to the historic cultural landscape of Bunyoro.",
+				"Masindi Hotel was established in 1923 as a railway-company stopover.",
+				"The town is a gateway to Murchison Falls National Park."
+			],
+			"it": [
+				"Appartiene al paesaggio culturale storico del Bunyoro.",
+				"Il Masindi Hotel fu fondato nel 1923 come tappa della compagnia ferroviaria.",
+				"La città è una porta di accesso al Parco nazionale delle cascate Murchison."
+			],
+			"de": [
+				"Die Stadt gehört zur historischen Kulturlandschaft Bunyoro.",
+				"Das Masindi Hotel entstand 1923 als Zwischenstation der Eisenbahngesellschaft.",
+				"Die Stadt ist ein Ausgangspunkt zum Murchison-Falls-Nationalpark."
+			]
+		}
+	},
+	"mbale": {
+		"city": {
+			"en": [
+				"The Islamic University in Uganda opened here in 1988.",
+				"The city is an urban centre of the Bugisu cultural area.",
+				"Nearby Mount Elgon rises above the landscape as an ancient volcanic massif."
+			],
+			"it": [
+				"L’Università islamica dell’Uganda aprì qui nel 1988.",
+				"La città è un centro urbano dell’area culturale del Bugisu.",
+				"Il vicino monte Elgon domina il paesaggio come antico massiccio vulcanico."
+			],
+			"de": [
+				"Die Islamische Universität in Uganda wurde hier 1988 eröffnet.",
+				"Die Stadt ist ein städtisches Zentrum des Kulturraums Bugisu.",
+				"Der nahe Mount Elgon erhebt sich als altes Vulkanmassiv über die Landschaft."
+			]
+		}
+	},
+	"tororo": {
+		"city": {
+			"en": [
+				"It developed into a junction on Uganda’s railway network.",
+				"Cement manufacturing became a major local industry.",
+				"The prominent Tororo Rock is a landmark above the town."
+			],
+			"it": [
+				"Si sviluppò come nodo della rete ferroviaria ugandese.",
+				"La produzione di cemento divenne un’importante industria locale.",
+				"La vistosa roccia di Tororo è un simbolo che domina la città."
+			],
+			"de": [
+				"Der Ort entwickelte sich zu einem Knotenpunkt des ugandischen Bahnnetzes.",
+				"Zementherstellung wurde zu einem bedeutenden örtlichen Industriezweig.",
+				"Der markante Tororo Rock ist ein Wahrzeichen über der Stadt."
+			]
+		}
+	},
+	"fort-portal": {
+		"city": {
+			"en": [
+				"Its name honours the British diplomat Gerald Portal.",
+				"Its older name Kabarole is commonly translated as let them see.",
+				"The town was a historic seat of the Tooro kingdom."
+			],
+			"it": [
+				"Il nome onora il diplomatico britannico Gerald Portal.",
+				"Il nome più antico Kabarole è comunemente tradotto come lascia che vedano.",
+				"La città fu una sede storica del regno di Tooro."
+			],
+			"de": [
+				"Der Name ehrt den britischen Diplomaten Gerald Portal.",
+				"Der ältere Name Kabarole wird gewöhnlich als Lasst sie sehen übersetzt.",
+				"Die Stadt war ein historischer Sitz des Königreichs Tooro."
+			]
+		}
+	},
+	"iganga": {
+		"city": {
+			"en": [
+				"It grew as a trading centre in the Busoga area.",
+				"Its railway station connects it with Uganda’s historic rail network.",
+				"Busoga University opened to students nearby in 1999."
+			],
+			"it": [
+				"Crebbe come centro commerciale nell’area del Busoga.",
+				"La stazione ferroviaria la collega alla storica rete ferroviaria ugandese.",
+				"La vicina Università del Busoga aprì agli studenti nel 1999."
+			],
+			"de": [
+				"Die Stadt wuchs als Handelszentrum im Gebiet Busoga.",
+				"Ihr Bahnhof verbindet sie mit Ugandas historischem Schienennetz.",
+				"Die nahe Universität Busoga öffnete 1999 für Studierende."
+			]
+		}
+	},
+	"bombo": {
+		"city": {
+			"en": [
+				"Its history is closely linked to military settlement.",
+				"The town has a longstanding Ugandan Nubian community.",
+				"Nubi, an Arabic-based creole, forms part of its linguistic heritage."
+			],
+			"it": [
+				"La sua storia è strettamente legata agli insediamenti militari.",
+				"La città ospita una comunità nubiana ugandese di lunga tradizione.",
+				"Il nubi, un creolo a base araba, fa parte del patrimonio linguistico locale."
+			],
+			"de": [
+				"Die Geschichte des Ortes ist eng mit Militärsiedlungen verbunden.",
+				"Die Stadt besitzt eine seit Langem ansässige ugandisch-nubische Gemeinschaft.",
+				"Nubi, eine arabisch basierte Kreolsprache, gehört zu ihrem sprachlichen Erbe."
+			]
+		}
+	},
+	"busia": {
+		"city": {
+			"en": [
+				"It shares its name with the neighbouring town across the Kenyan border.",
+				"A one-stop border post was officially launched here in 2018.",
+				"The shared border facilities bring the two countries’ clearance agencies together."
+			],
+			"it": [
+				"Condivide il nome con la città vicina oltre il confine keniota.",
+				"Nel 2018 vi fu inaugurato ufficialmente un posto di frontiera a sportello unico.",
+				"Le strutture condivise riuniscono le agenzie dei due paesi per le formalità di confine."
+			],
+			"de": [
+				"Die Stadt teilt ihren Namen mit dem Nachbarort jenseits der kenianischen Grenze.",
+				"Hier wurde 2018 offiziell eine gemeinsame Grenzabfertigung eröffnet.",
+				"Die gemeinsamen Einrichtungen bündeln die Abfertigungsbehörden beider Länder."
+			]
+		}
+	},
+	"jinja": {
+		"city": {
+			"en": [
+				"The modern town was established in 1906.",
+				"It stands near the Nile’s outlet from Lake Victoria.",
+				"The nearby Owen Falls hydroelectric station opened in 1954."
+			],
+			"it": [
+				"La città moderna fu fondata nel 1906.",
+				"Sorge presso l’uscita del Nilo dal lago Vittoria.",
+				"La vicina centrale idroelettrica di Owen Falls aprì nel 1954."
+			],
+			"de": [
+				"Die moderne Stadt entstand 1906.",
+				"Sie liegt nahe dem Ausfluss des Nils aus dem Victoriasee.",
+				"Das nahe Wasserkraftwerk Owen Falls wurde 1954 eröffnet."
+			]
+		}
+	},
+	"mityana": {
+		"city": {
+			"en": [
+				"The Kiyinda–Mityana diocese was established in 1981.",
+				"Its cathedral is dedicated to the Ugandan martyr Noa Mawaggali.",
+				"The town developed on the road linking Kampala with Fort Portal."
+			],
+			"it": [
+				"La diocesi di Kiyinda–Mityana fu istituita nel 1981.",
+				"La cattedrale è dedicata al martire ugandese Noa Mawaggali.",
+				"La città si sviluppò sulla strada che collega Kampala a Fort Portal."
+			],
+			"de": [
+				"Die Diözese Kiyinda–Mityana entstand 1981.",
+				"Ihre Kathedrale ist dem ugandischen Märtyrer Noa Mawaggali geweiht.",
+				"Die Stadt entwickelte sich an der Straße zwischen Kampala und Fort Portal."
+			]
+		}
+	},
+	"kasese": {
+		"city": {
+			"en": [
+				"Its industrial growth was closely linked to the Kilembe copper mines.",
+				"Cobalt recovery also became part of the local mining industry.",
+				"The town is a seat of the Rwenzururu kingdom."
+			],
+			"it": [
+				"La crescita industriale fu strettamente legata alle miniere di rame di Kilembe.",
+				"Anche il recupero del cobalto entrò a far parte dell’industria mineraria locale.",
+				"La città è una sede del regno del Rwenzururu."
+			],
+			"de": [
+				"Das industrielle Wachstum war eng mit den Kupferminen von Kilembe verbunden.",
+				"Auch die Rückgewinnung von Kobalt wurde Teil des örtlichen Bergbaus.",
+				"Die Stadt ist ein Sitz des Königreichs Rwenzururu."
+			]
+		}
+	},
+	"entebbe": {
+		"city": {
+			"en": [
+				"Its Luganda name means seat or chair.",
+				"It served as the British protectorate’s seat of government before independence.",
+				"Its botanical gardens were established in 1898."
+			],
+			"it": [
+				"Il nome luganda significa sedile o sedia.",
+				"Fu sede del governo del protettorato britannico prima dell’indipendenza.",
+				"I giardini botanici furono fondati nel 1898."
+			],
+			"de": [
+				"Der Luganda-Name bedeutet Sitz oder Stuhl.",
+				"Vor der Unabhängigkeit war die Stadt Regierungssitz des britischen Protektorats.",
+				"Ihr botanischer Garten wurde 1898 gegründet."
+			]
+		}
+	},
+	"masaka": {
+		"city": {
+			"en": [
+				"The town grew around a late nineteenth-century colonial administrative centre.",
+				"It was declared a township authority in 1953.",
+				"Its road connections link routes towards Tanzania, Rwanda and the Democratic Republic of the Congo."
+			],
+			"it": [
+				"La città crebbe attorno a un centro amministrativo coloniale del tardo Ottocento.",
+				"Fu dichiarata autorità urbana nel 1953.",
+				"I collegamenti stradali uniscono itinerari verso Tanzania, Ruanda e Repubblica Democratica del Congo."
+			],
+			"de": [
+				"Die Stadt wuchs um ein koloniales Verwaltungszentrum des späten 19. Jahrhunderts.",
+				"Sie erhielt 1953 den Status einer Township-Verwaltung.",
+				"Ihre Straßen verbinden Routen nach Tansania, Ruanda und in die Demokratische Republik Kongo."
+			]
+		}
+	},
+	"mbarara": {
+		"city": {
+			"en": [
+				"Its name is linked to emburara, a tall grass that once covered the area.",
+				"It developed as a major trading centre of the Ankole area.",
+				"Its University of Science and Technology was founded in 1989."
+			],
+			"it": [
+				"Il nome è collegato a emburara, un’erba alta che un tempo ricopriva la zona.",
+				"Si sviluppò come importante centro commerciale dell’area di Ankole.",
+				"L’Università di scienze e tecnologia fu fondata nel 1989."
+			],
+			"de": [
+				"Der Name wird mit Emburara verbunden, einem hohen Gras, das die Gegend einst bedeckte.",
+				"Die Stadt entwickelte sich zu einem bedeutenden Handelszentrum im Gebiet Ankole.",
+				"Ihre Universität für Wissenschaft und Technologie wurde 1989 gegründet."
+			]
+		}
+	},
+	"kabale": {
+		"city": {
+			"en": [
+				"Its Rukiga name means a small stone.",
+				"The town is a gateway to nearby Lake Bunyonyi.",
+				"The wider Kigezi area preserves the cultural traditions of the Bakiga and neighbouring peoples."
+			],
+			"it": [
+				"Il nome rukiga significa una piccola pietra.",
+				"La città è una porta di accesso al vicino lago Bunyonyi.",
+				"La più ampia area del Kigezi conserva le tradizioni culturali dei bakiga e dei popoli vicini."
+			],
+			"de": [
+				"Der Rukiga-Name bedeutet kleiner Stein.",
+				"Die Stadt ist ein Ausgangspunkt zum nahen Bunyonyi-See.",
+				"Das weitere Kigezi-Gebiet bewahrt die kulturellen Traditionen der Bakiga und benachbarter Völker."
 			]
 		}
 	}
