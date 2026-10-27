@@ -35,6 +35,12 @@ metadata bundle per map, reducing the export to 743 files for 217 maps.
 PMTiles require HTTP byte-range support. Fonts may still use external glyph
 services, so the portable browser ZIP does not promise offline operation.
 
+`MapNav.svelte` owns localized map/mode document titles and detail-map
+navigation. `mapControlsLanguage.svelte.ts` supplies the initial MapLibre UI
+locale and follows later language changes through scoped DOM labels; its
+reactive subscription and observer end when that map is removed. It does not
+replace maps, alter camera state or access private MapLibre locale fields.
+
 ## Map rendering: MapLibre GL JS + PMTiles
 
 - **MapLibre GL JS** — open-source WebGL vector-tile renderer. Gives custom

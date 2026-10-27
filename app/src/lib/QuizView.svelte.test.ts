@@ -201,6 +201,29 @@ describe('QuizView (FT-59)', () => {
 	});
 	afterEach(() => forgetRound(MAP_ID));
 
+	it('describes the actual answer targets and follows the selected language (#253)', async () => {
+		const region = await mount();
+		expect(region.container.querySelector('.subtitle')?.textContent).toContain('matching area');
+		region.unmount();
+		forgetRound(MAP_ID);
+		for (const target of fake.mapDef.targets) (target as { type: string }).type = 'city';
+		try {
+			const towns = await mount();
+			expect(towns.container.querySelector('.subtitle')?.textContent).toContain('town marker');
+			setLanguage('de');
+			await expect
+				.poll(() => towns.container.querySelector('.subtitle')?.textContent)
+				.toContain('Stadtmarkierung');
+			setLanguage('it');
+			await expect
+				.poll(() => towns.container.querySelector('.subtitle')?.textContent)
+				.toContain('indicatore della città');
+		} finally {
+			for (const target of fake.mapDef.targets) (target as { type: string }).type = 'region';
+			setLanguage('en');
+		}
+	});
+
 	// The hand is dealt at random, so each test plays the names it was dealt:
 	// the first placed right, the second dropped on the first's region.
 	it('keeps quiz slips on the pointer-driven drag path, not native browser drag', async () => {

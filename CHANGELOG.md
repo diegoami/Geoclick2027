@@ -19,6 +19,7 @@ For players:
 - **German and Italian user manuals**, selected by the app language, accompany the English manual.
 - **Refreshed detailed geography** includes the Netherlands’ 342 municipalities, Hanau’s independent-city status, Norway’s fifteen counties, and rebuilt Danish and Serbian towns maps. The maps retain source-edition and disputed-territory notices where applicable.
 - **A portable HTML5 browser ZIP** supports embedded play at a recommended 1280 × 800, map tours, quizzes and all three manuals. Windows also opens at 1280 × 800. Progress stays on the device; no account is required.
+- **Clearer map controls:** detailed-map choices remain discoverable, browser tabs identify the current map and mode, map controls follow the selected language, language menus stay readable above the version badge, and town quizzes ask for town markers.
 - **Source and downloads share the Geoclick2027 repository.** About links to the source and the [itch.io page](https://diegoami.itch.io/geoclick).
 
 Under the hood:

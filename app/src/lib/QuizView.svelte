@@ -796,7 +796,7 @@
 			{#snippet subtitle()}
 				{#if session}
 					<span data-tutorial="quiz-progress"
-						>{t('quiz.subtitle', {
+						>{t(mapDef?.targets[0]?.type === 'city' ? 'quiz.townSubtitle' : 'quiz.subtitle', {
 							placed: session.items.filter((i) => i.status !== 'pending').length,
 							total: session.items.length
 						})}</span

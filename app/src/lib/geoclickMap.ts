@@ -15,6 +15,7 @@ import { HideButtonsControl } from './hideButtonsControl.svelte';
 import { tutorialMapGesture } from './tutorial.svelte';
 import { ensurePmtilesProtocol, registerTilesArchive } from './pmtilesSource';
 import { styleForMapFamily } from './mapFamilyStyle';
+import { followMapControlLanguage, mapControlLocale } from './mapControlsLanguage.svelte';
 
 export async function fetchMapDefAndStyle(
 	mapId: string
@@ -88,6 +89,7 @@ export function createMap(
 	ensurePmtilesProtocol();
 	const map = new maplibregl.Map({
 		container,
+		locale: mapControlLocale(),
 		style,
 		bounds: overallExtent(mapDef),
 		// The map bar is already on screen, so the opening fit can keep the
@@ -106,6 +108,7 @@ export function createMap(
 	});
 	foldCreditOnNarrowScreens(map, container);
 	map.addControl(new maplibregl.NavigationControl(), 'top-right');
+	followMapControlLanguage(map);
 	// Under the zoom buttons: hides the map bar for a clear map (tablet play).
 	map.addControl(new HideButtonsControl(), 'top-right');
 	// The tutorial rings the +/- buttons in its zoom-and-pan step (FT-11).

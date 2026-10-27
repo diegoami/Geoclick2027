@@ -59,6 +59,7 @@
 </script>
 
 <svelte:head>
+	<title>Geoclick</title>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 

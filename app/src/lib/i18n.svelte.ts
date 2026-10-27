@@ -155,6 +155,12 @@ export type TranslationKey =
 	| 'mapPart.southWest'
 	| 'mapArt.hereBeDragons'
 	| 'mapPart.southEast'
+	| 'mapControl.zoomIn'
+	| 'mapControl.zoomOut'
+	| 'mapControl.resetBearing'
+	| 'mapControl.map'
+	| 'mapControl.attribution'
+	| 'quiz.townSubtitle'
 	| 'quiz.subtitle'
 	| 'quiz.closeAriaLabel'
 	| 'quiz.known'
@@ -351,7 +357,13 @@ const en: Dictionary = {
 	'mapArt.hereBeDragons': 'Here be dragons',
 	'mapPart.southEast': 'South-East',
 
-	'quiz.subtitle': 'Drag each name onto its region — {placed} / {total} placed',
+	'mapControl.zoomIn': 'Zoom in',
+	'mapControl.zoomOut': 'Zoom out',
+	'mapControl.resetBearing': 'Drag to rotate map, click to reset north',
+	'mapControl.map': 'Map',
+	'mapControl.attribution': 'Toggle attribution',
+	'quiz.townSubtitle': 'Drag each name onto its town marker — {placed} / {total} placed',
+	'quiz.subtitle': 'Drag each name onto its matching area — {placed} / {total} placed',
 	'quiz.closeAriaLabel': 'Close and view the map',
 	'quiz.known': '{known} / {total} known',
 	'quiz.done': 'Done!',
@@ -563,7 +575,13 @@ const de: Dictionary = {
 	'mapArt.hereBeDragons': 'Hier sind Drachen',
 	'mapPart.southEast': 'Südosten',
 
-	'quiz.subtitle': 'Ziehe jeden Namen auf seine Region — {placed} / {total} platziert',
+	'mapControl.zoomIn': 'Vergrößern',
+	'mapControl.zoomOut': 'Verkleinern',
+	'mapControl.resetBearing': 'Zum Drehen ziehen, zum Ausrichten nach Norden klicken',
+	'mapControl.map': 'Karte',
+	'mapControl.attribution': 'Quellenangaben ein- oder ausblenden',
+	'quiz.townSubtitle': 'Ziehe jeden Namen auf seine Stadtmarkierung — {placed} / {total} platziert',
+	'quiz.subtitle': 'Ziehe jeden Namen auf das passende Gebiet — {placed} / {total} platziert',
 	'quiz.closeAriaLabel': 'Schließen und Karte ansehen',
 	'quiz.known': '{known} / {total} gewusst',
 	'quiz.done': 'Fertig!',
@@ -777,7 +795,14 @@ const it: Dictionary = {
 	'mapArt.hereBeDragons': 'Qui ci sono i draghi',
 	'mapPart.southEast': 'Sud-est',
 
-	'quiz.subtitle': 'Trascina ogni nome sulla sua regione — {placed} / {total} posizionati',
+	'mapControl.zoomIn': 'Ingrandisci',
+	'mapControl.zoomOut': 'Riduci',
+	'mapControl.resetBearing': 'Trascina per ruotare, fai clic per orientare a nord',
+	'mapControl.map': 'Mappa',
+	'mapControl.attribution': 'Mostra o nascondi le attribuzioni',
+	'quiz.townSubtitle':
+		'Trascina ogni nome sul relativo indicatore della città — {placed} / {total} posizionati',
+	'quiz.subtitle': 'Trascina ogni nome sull’area corrispondente — {placed} / {total} posizionati',
 	'quiz.closeAriaLabel': 'Chiudi e guarda la mappa',
 	'quiz.known': 'Sai {known} / {total}',
 	'quiz.done': 'Fatto!',

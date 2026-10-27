@@ -20,7 +20,7 @@
 	const SHORT: Record<Language, string> = { en: 'EN', de: 'DE', it: 'IT' };
 	const NATIVE: Record<Language, string> = { en: 'English', de: 'Deutsch', it: 'Italiano' };
 
-	let open = $state(false);
+	let { open = $bindable(false) }: { open?: boolean } = $props();
 	// Which option the keyboard is on. Kept separate from the CHOSEN language:
 	// arrowing through the list must not change the app's language until the
 	// player commits, or every keystroke would re-render the whole UI.

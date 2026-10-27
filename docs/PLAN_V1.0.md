@@ -15,7 +15,7 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | Content completion | DE/IT manuals and all three town rebuilds complete; 120/120 playable country slots pass | Deferred thin towns maps and German/Italian manual checked against agreed scope |
 | itch.io | Candidate pack exported: four 1280×800 screenshots, cover/banner, EN/DE/IT descriptions and tags; tagged refresh pending; owner uploads | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
 | Release preparation | All facts complete; 1.0.0 manifests and candidate CHANGELOG prepared; all four local gates pass; final review: no blockers, two comma-space typos corrected | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
-| Milestone and publication | Pending | Owner-approved merge, milestone review, installers tried, exact tag and publication |
+| Milestone and publication | #243/#245 merged; #246 AGREE on 0b026e1; owner-authorized QA fixes #249–#253 pending; native checks/tag/publication remain | Owner-approved merge, milestone review, installers tried, exact tag and publication |
 | Retirement | Pending | Delete old release repository only after migration verification and merged replacement links |
 
 Code PRs receive the required external-family review and owner merge approval.
@@ -700,9 +700,44 @@ Clean candidate assets and playable ZIP are separately exported at
 C:/Users/diego/projects/Geoclick2027-itchio-assets/candidate-1.0.0-c057ff6-20261027T083655Z.
 This supersedes the earlier dirty promotional draft; tagged final refresh remains.
 
-Remaining: explicit owner merge
-approval for #243/#245, candidate milestone issue and owner-started review,
-installer/device checks, exact reviewed tag, final artifacts/screenshots and
-publication, then verified old-repository retirement. No tag, publication,
-merge or deployment was performed. Android SDK/signing configuration is ready
-in this worktree; no Android device or AVD was available during preflight.
+PRs #243 and #245 were merged with explicit owner approval without the owner's
+local gameplay test. Milestone #246 names main candidate 0b026e1 and received
+AGREE from the independent Claude Sonnet 5.5 reviewer. Its separate findings
+#247/#248 remain in that thread. The owner subsequently approved the five
+implementing play-test fixes below. A merged fix PR will move the candidate;
+the earlier AGREE does not cover later code. Installer/device checks, exact
+reviewed tag, final artifacts/screenshots, publication and old-repository
+retirement remain. No tag, publication or deployment was performed; no Android
+device or AVD was available during preflight.
+
+### Owner-authorized play-test fixes (#249–#253, 2026-10-27)
+
+The implementing agent completed the fourteen-step tutorial, three desktop
+Singapore quiz rounds and one emulated-touch round, saved-progress/favourites
+checks, translated facts/manual navigation and Serbian town placements. This
+was additional QA, not an independent milestone review. The owner approved
+fixing the new Singapore issue and the four older usability findings before 1.0.
+
+- Singapore's detailed-map toggle remains available when its only currently
+  visible map is Regions, and after Planning areas is hidden again (#249).
+- Home has a fallback title; map titles name the map, mode and game and follow
+  the selected language (#250).
+- MapLibre's initial locale and a scoped, disposed live-label observer keep
+  zoom/compass, attribution and canvas labels synchronized without
+  recreating the map or changing its camera/progress (#251).
+- Only an open language menu raises the toolbar above the version badge;
+  ordinary toolbar/tray stacking stays unchanged (#252).
+- Town quizzes describe town markers, while polygon quizzes describe matching
+  areas, in EN/DE/IT (#253).
+
+All four local gates pass with 2882 app tests (nine new regressions). Twenty-eight
+focused browser tests cover the affected components and map cleanup. Actual
+production-build Playwright replay passes Singapore discovery before visit,
+after hiding and after reload; live EN/DE/IT titles/control labels with the same
+canvas; return-home title restoration; normal route announcements; Serbian town
+instructions; and desktop/phone menu stacking. The world-picker fake now
+implements the public map container/removal APIs used by localization.
+The fix PR still requires external-family review and explicit owner merge
+approval; candidate gates and milestone re-review follow any merge. Browser
+QA uses separate local storage. Deployment testing remains stopped, and the
+owner retains all itch.io navigation/upload.

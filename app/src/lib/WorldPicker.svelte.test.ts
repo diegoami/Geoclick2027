@@ -7,6 +7,7 @@
 // and the test fires it by hand, which is the one ordering the bug was in.
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
+import { setLanguage } from './i18n.svelte';
 import WorldPicker from './WorldPicker.svelte';
 import { pickerGoUp, setPickerShown, setPickerView } from './mapPrefs.svelte';
 
@@ -15,7 +16,8 @@ const fake = vi.hoisted(() => {
 		load: undefined as (() => void) | undefined,
 		mapClick: undefined as ((event: unknown) => void) | undefined,
 		countryFeatures: [] as { properties: Record<string, string> }[],
-		mapOptions: undefined as { doubleClickZoom?: boolean } | undefined,
+		mapOptions: undefined as
+			{ doubleClickZoom?: boolean; locale?: Record<string, string> } | undefined,
 		countryLabels: {} as Record<string, HTMLElement>,
 		countryLabelPosition: undefined as [number, number] | undefined
 	};
@@ -59,8 +61,14 @@ const fake = vi.hoisted(() => {
 			}
 		]
 	};
-	function createMap() {
+	function createMap(container: HTMLElement) {
+		const removed: (() => void)[] = [];
 		const map = {
+			getContainer: () => container,
+			once: (event: string, callback: () => void) => {
+				if (event === 'remove') removed.push(callback);
+				return map;
+			},
 			on: (type: string, layerOrCallback: string | ((event: unknown) => void)) => {
 				if (type === 'load' && typeof layerOrCallback === 'function')
 					state.load = () => layerOrCallback(undefined);
@@ -68,14 +76,18 @@ const fake = vi.hoisted(() => {
 					state.mapClick = layerOrCallback;
 				return map;
 			},
-			addControl: () => map,
+			addControl: (control: { onAdd?: () => HTMLElement }) => {
+				const element = control.onAdd?.();
+				if (element) container.append(element);
+				return map;
+			},
 			setFeatureState: () => {},
 			queryRenderedFeatures: () => state.countryFeatures,
 			setPaintProperty: () => {},
 			fitBounds: () => map,
 			getCanvas: () => ({ style: {} }),
 			resize: () => map,
-			remove: () => {}
+			remove: () => removed.forEach((callback) => callback())
 		};
 		return map;
 	}
@@ -124,14 +136,27 @@ vi.mock('$app/paths', () => ({
 
 vi.mock('maplibre-gl', () => ({
 	Map: class {
-		constructor(options: { doubleClickZoom?: boolean }) {
+		constructor(options: {
+			container: HTMLElement;
+			doubleClickZoom?: boolean;
+			locale?: Record<string, string>;
+		}) {
 			fake.state.mapOptions = options;
-			Object.assign(this, fake.createMap());
+			Object.assign(this, fake.createMap(options.container));
 		}
 	},
 	Marker: fake.Marker,
 	Popup: fake.Popup,
-	NavigationControl: class {}
+	NavigationControl: class {
+		onAdd() {
+			const host = document.createElement('div');
+			const button = document.createElement('button');
+			button.className = 'maplibregl-ctrl-zoom-in';
+			button.title = fake.state.mapOptions?.locale?.['NavigationControl.ZoomIn'] ?? 'Zoom in';
+			host.append(button);
+			return host;
+		}
+	}
 }));
 vi.mock('./geoclickMap', () => ({ foldCreditOnNarrowScreens: () => {} }));
 vi.mock('./labelCollision', () => ({
@@ -148,6 +173,7 @@ vi.mock('./worldPicker', () => ({
 
 describe('WorldPicker (FT-83, FT-86, #87)', () => {
 	beforeEach(() => {
+		setLanguage('en');
 		fake.state.load = undefined;
 		fake.state.mapClick = undefined;
 		fake.state.countryFeatures = [];
@@ -160,8 +186,21 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		setPickerView('europe');
 	});
 	afterEach(() => {
+		setLanguage('en');
 		setPickerShown(false);
 		setPickerView('world');
+	});
+
+	it('wires the initial and live control locale into the created world map (#251)', async () => {
+		setLanguage('de');
+		const screen = await render(WorldPicker, { groups: [], masteries: {}, targetCount: () => 0 });
+		await expect.poll(() => fake.state.load !== undefined).toBe(true);
+		expect(fake.state.mapOptions?.locale?.['NavigationControl.ZoomIn']).toBe('Vergrößern');
+		const zoom = screen.container.querySelector<HTMLButtonElement>('.maplibregl-ctrl-zoom-in')!;
+		await expect.poll(() => zoom.title).toBe('Vergrößern');
+		setLanguage('it');
+		await expect.poll(() => zoom.title).toBe('Ingrandisci');
+		expect(zoom.getAttribute('aria-label')).toBe('Ingrandisci');
 	});
 
 	it('is shown only once the map has loaded, so Back exits during a slow load', async () => {
