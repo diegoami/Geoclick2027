@@ -4,7 +4,7 @@
 	// the table; Escape does the same, and Android's back button already does
 	// (backNavigation.ts sends any other route home).
 	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
+	import { resolve } from '$lib/appPaths';
 	import { t } from './i18n.svelte';
 
 	let { title }: { title: string } = $props();

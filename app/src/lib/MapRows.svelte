@@ -5,7 +5,7 @@
 	// The same rows in the start screen's panel and in the list, so both read
 	// alike. Germany's fourteen maps are one row.
 	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
+	import { resolve } from '$lib/appPaths';
 	import { rowNameOf } from './catalogSections';
 	import { groupProgress, type Mastery } from './homeProgress';
 	import KnownProgress from './KnownProgress.svelte';

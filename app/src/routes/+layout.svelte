@@ -2,7 +2,7 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { afterNavigate, goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
+	import { resolve } from '$lib/appPaths';
 	import { pickerGoUp } from '$lib/mapPrefs.svelte';
 	import favicon from '$lib/assets/favicon.svg';
 	import VersionBadge from '$lib/VersionBadge.svelte';

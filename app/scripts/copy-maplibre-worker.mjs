@@ -12,18 +12,14 @@
 // needs to land alongside it for the same reason.
 import { copyFileSync, mkdirSync } from 'node:fs';
 import { createRequire } from 'node:module';
-import { dirname, join } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const require = createRequire(import.meta.url);
-const outDir = join(
-	dirname(fileURLToPath(import.meta.url)),
-	'..',
-	'build',
-	'_app',
-	'immutable',
-	'chunks'
-);
+const buildDir = process.argv[2]
+	? resolve(process.argv[2])
+	: join(dirname(fileURLToPath(import.meta.url)), '..', 'build');
+const outDir = join(buildDir, '_app', 'immutable', 'chunks');
 mkdirSync(outDir, { recursive: true });
 
 for (const file of ['maplibre-gl-worker.mjs', 'maplibre-gl-shared.mjs']) {

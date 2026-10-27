@@ -5,7 +5,7 @@
 // nothing while no tutorial is running.
 
 import { goto } from '$app/navigation';
-import { resolve } from '$app/paths';
+import { resolve } from '$lib/appPaths';
 import {
 	initialState,
 	placeOf,

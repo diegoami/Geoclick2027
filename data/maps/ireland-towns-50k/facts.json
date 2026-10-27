@@ -4,14 +4,48 @@
 		"population": 2513,
 		"populationRank": 15,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Donegal is the English form of Dún na nGall, meaning fort of the strangers.",
+				"Donegal Castle’s tower house was built for the O’Donnell dynasty in the late fifteenth century.",
+				"The Brooke family added a Jacobean manor house to Donegal Castle in the early seventeenth century."
+			],
+			"it": [
+				"Donegal è la forma inglese di Dún na nGall, che significa forte degli stranieri.",
+				"La casa-torre del castello di Donegal fu costruita per la dinastia O’Donnell alla fine del Quattrocento.",
+				"La famiglia Brooke aggiunse al castello di Donegal una residenza signorile di stile giacobiano agli inizi del Seicento."
+			],
+			"de": [
+				"Donegal ist die englische Form von Dún na nGall und bedeutet Festung der Fremden.",
+				"Der Wohnturm von Donegal Castle wurde im späten 15. Jahrhundert für die Dynastie O’Donnell erbaut.",
+				"Die Familie Brooke ergänzte Donegal Castle im frühen 17. Jahrhundert um ein Herrenhaus im jakobäischen Stil."
+			]
+		}
 	},
 	"sligo": {
 		"kind": "city",
 		"population": 20228,
 		"populationRank": 10,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Sligo comes from Irish Sligeach, meaning a shelly place or a place abounding in shells.",
+				"The Dominican priory known as Sligo Abbey was founded in the mid-thirteenth century and preserves a fifteenth-century cloister.",
+				"The Yeats Society was founded in Sligo in 1958 and went on to organise an international summer school devoted to the poet’s work."
+			],
+			"it": [
+				"Sligo deriva dall’irlandese Sligeach, che significa luogo ricco di conchiglie.",
+				"Il priorato domenicano conosciuto come abbazia di Sligo fu fondato a metà del Duecento e conserva un chiostro quattrocentesco.",
+				"La Società Yeats fu fondata a Sligo nel 1958 e in seguito organizzò una scuola estiva internazionale dedicata all’opera del poeta."
+			],
+			"de": [
+				"Sligo stammt vom irischen Sligeach und bedeutet muschelreicher Ort.",
+				"Das als Sligo Abbey bekannte Dominikanerpriorat wurde Mitte des 13. Jahrhunderts gegründet und bewahrt einen Kreuzgang aus dem 15. Jahrhundert.",
+				"Die Yeats Society wurde 1958 in Sligo gegründet und organisierte später eine internationale Sommerschule zum Werk des Dichters."
+			]
+		}
 	},
 	"muineachan": {
 		"kind": "city",
@@ -19,7 +53,24 @@
 		"populationRank": 13,
 		"region": "Monaghan",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Monaghan is the English form of the Irish place-name Muineachán.",
+				"Monaghan County Museum opened in the town in 1974 and moved to the Peace Campus in 2024.",
+				"Monaghan’s Dawson Monument was designed in 1857 to commemorate Thomas Vesey Dawson, killed at Inkerman in the Crimean War."
+			],
+			"it": [
+				"Monaghan è la forma inglese del toponimo irlandese Muineachán.",
+				"Il Museo della Contea di Monaghan aprì nella città nel 1974 e si trasferì al Peace Campus nel 2024.",
+				"Il monumento Dawson di Monaghan fu progettato nel 1857 per commemorare Thomas Vesey Dawson, caduto a Inkerman durante la guerra di Crimea."
+			],
+			"de": [
+				"Monaghan ist die englische Form des irischen Ortsnamens Muineachán.",
+				"Das Monaghan County Museum wurde 1974 in der Stadt eröffnet und zog 2024 auf den Peace Campus um.",
+				"Monaghans Dawson-Denkmal wurde 1857 zum Gedenken an Thomas Vesey Dawson entworfen, der im Krimkrieg bei Inkerman fiel."
+			]
+		}
 	},
 	"dundalk": {
 		"kind": "city",
@@ -27,7 +78,24 @@
 		"populationRank": 6,
 		"region": "Louth",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Dundalk comes from Irish Dún Dealgan, meaning the fort of Dealga.",
+				"Dundalk’s County Museum opened in 1994 in a restored late-eighteenth-century warehouse.",
+				"Dundalk’s Saint Patrick’s Church was designed by Thomas Duff and opened in 1842."
+			],
+			"it": [
+				"Dundalk deriva dall’irlandese Dún Dealgan, che significa forte di Dealga.",
+				"Il Museo della Contea a Dundalk aprì nel 1994 in un magazzino restaurato della fine del Settecento.",
+				"La chiesa di San Patrizio a Dundalk fu progettata da Thomas Duff e aperta nel 1842."
+			],
+			"de": [
+				"Dundalk geht auf das irische Dún Dealgan zurück und bedeutet Festung des Dealga.",
+				"Dundalks County Museum wurde 1994 in einem restaurierten Lagerhaus aus dem späten 18. Jahrhundert eröffnet.",
+				"Die Sankt-Patricks-Kirche in Dundalk wurde von Thomas Duff entworfen und 1842 eröffnet."
+			]
+		}
 	},
 	"drogheda": {
 		"kind": "city",
@@ -35,7 +103,24 @@
 		"populationRank": 7,
 		"region": "Louth",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Drogheda comes from Irish Droichead Átha, meaning bridge of the ford.",
+				"Drogheda’s medieval Saint Laurence’s Gate has two circular towers joined by a wall above an archway.",
+				"Drogheda’s Saint Peter’s Church houses relics of Oliver Plunkett, the archbishop of Armagh executed in 1681."
+			],
+			"it": [
+				"Drogheda deriva dall’irlandese Droichead Átha, che significa ponte del guado.",
+				"La porta medievale di San Lorenzo a Drogheda ha due torri circolari unite da un muro sopra un passaggio ad arco.",
+				"La chiesa di San Pietro a Drogheda custodisce reliquie di Oliver Plunkett, arcivescovo di Armagh giustiziato nel 1681."
+			],
+			"de": [
+				"Drogheda stammt vom irischen Droichead Átha und bedeutet Brücke der Furt.",
+				"Droghedas mittelalterliches Saint Laurence’s Gate besitzt zwei Rundtürme, die durch eine Mauer über einem Torbogen verbunden sind.",
+				"Droghedas Sankt-Peters-Kirche bewahrt Reliquien Oliver Plunketts, des 1681 hingerichteten Erzbischofs von Armagh."
+			]
+		}
 	},
 	"ros-comain": {
 		"kind": "city",
@@ -43,7 +128,24 @@
 		"populationRank": 14,
 		"region": "Roscommon",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Roscommon comes from Irish Ros Comáin, meaning Saint Comán’s wood.",
+				"Roscommon Castle was built in 1269 by Robert de Ufford, the justiciar of Ireland.",
+				"The Dominican priory known as Roscommon Abbey was founded in 1253 by Felim O’Conor, king of Connacht."
+			],
+			"it": [
+				"Roscommon deriva dall’irlandese Ros Comáin, che significa bosco di san Comán.",
+				"Il castello di Roscommon fu costruito nel 1269 da Robert de Ufford, giustiziere d’Irlanda.",
+				"Il priorato domenicano conosciuto come abbazia di Roscommon fu fondato nel 1253 da Felim O’Conor, re del Connacht."
+			],
+			"de": [
+				"Roscommon geht auf das irische Ros Comáin zurück und bedeutet Wald des heiligen Comán.",
+				"Roscommon Castle wurde 1269 von Robert de Ufford, dem Justiciar von Irland, erbaut.",
+				"Das als Roscommon Abbey bekannte Dominikanerpriorat wurde 1253 von Felim O’Conor, König von Connacht, gegründet."
+			]
+		}
 	},
 	"dublin": {
 		"kind": "city",
@@ -76,7 +178,24 @@
 		"population": 75594,
 		"populationRank": 4,
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Galway takes its name from Gaillimh, an older Irish name of the River Corrib.",
+				"Galway’s Spanish Arch was built in 1584 to protect the city’s quays and fish market.",
+				"Galway’s Saint Nicholas’ Collegiate Church was completed in 1320 and remains a place of worship."
+			],
+			"it": [
+				"Galway prende il nome da Gaillimh, un antico nome irlandese del fiume Corrib.",
+				"L’Arco Spagnolo di Galway fu costruito nel 1584 per proteggere le banchine e il mercato del pesce della città.",
+				"La chiesa collegiata di San Nicola a Galway fu completata nel 1320 e rimane un luogo di culto."
+			],
+			"de": [
+				"Galway ist nach Gaillimh benannt, einem älteren irischen Namen des Flusses Corrib.",
+				"Galways Spanischer Bogen wurde 1584 zum Schutz der städtischen Kais und des Fischmarkts errichtet.",
+				"Galways Kollegiatkirche Sankt Nikolaus wurde 1320 fertiggestellt und dient weiterhin als Gotteshaus."
+			]
+		}
 	},
 	"shannon": {
 		"kind": "city",
@@ -84,21 +203,72 @@
 		"populationRank": 12,
 		"region": "Clare",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The new town of Shannon was named after the River Shannon.",
+				"Shannon was planned and built in the 1960s to provide housing for workers in the industrial free zone.",
+				"Shannon Free Zone was established in 1959 to support the airport as a transport hub and attract industrial activity."
+			],
+			"it": [
+				"La nuova città di Shannon prese il nome dal fiume Shannon.",
+				"Shannon fu progettata e costruita negli anni Sessanta per fornire alloggi ai lavoratori della zona franca industriale.",
+				"La zona franca di Shannon fu istituita nel 1959 per sostenere l’aeroporto come nodo dei trasporti e attirare attività industriali."
+			],
+			"de": [
+				"Die neu geplante Stadt Shannon wurde nach dem Fluss Shannon benannt.",
+				"Shannon wurde in den 1960er-Jahren geplant und gebaut, um Beschäftigten der industriellen Freizone Wohnraum zu bieten.",
+				"Die Shannon Free Zone wurde 1959 eingerichtet, um den Flughafen als Verkehrsknoten zu unterstützen und Industrie anzusiedeln."
+			]
+		}
 	},
 	"limerick": {
 		"kind": "city",
 		"population": 90054,
 		"populationRank": 3,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Limerick comes from Irish Luimneach, meaning bare or barren land, a name once applied more broadly to the Shannon estuary.",
+				"Limerick’s King John’s Castle was completed in 1210.",
+				"Saint Mary’s Cathedral in Limerick was founded in 1168 and is still used for worship."
+			],
+			"it": [
+				"Limerick deriva dall’irlandese Luimneach, che significa terra spoglia o brulla, un nome un tempo applicato più ampiamente all’estuario dello Shannon.",
+				"Il castello di re Giovanni a Limerick fu completato nel 1210.",
+				"La cattedrale di Santa Maria a Limerick fu fondata nel 1168 ed è ancora usata per il culto."
+			],
+			"de": [
+				"Limerick geht auf das irische Luimneach für kahles oder karges Land zurück, einen Namen, der früher auch größere Teile der Shannonmündung bezeichnete.",
+				"Limericks King John’s Castle wurde 1210 fertiggestellt.",
+				"Die Marienkathedrale in Limerick wurde 1168 gegründet und wird weiterhin als Gotteshaus genutzt."
+			]
+		}
 	},
 	"kilkenny": {
 		"kind": "city",
 		"population": 21589,
 		"populationRank": 9,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Kilkenny comes from Irish Cill Chainnigh, meaning the church of Canice.",
+				"James Butler, Earl of Ormond, acquired Kilkenny Castle in 1391, beginning its long association with the Butler family.",
+				"Kilkenny’s Rothe House was built between 1594 and 1610 as the home and business premises of merchant John Rothe and Rose Archer."
+			],
+			"it": [
+				"Kilkenny deriva dall’irlandese Cill Chainnigh, che significa chiesa di Canice.",
+				"James Butler, conte di Ormond, acquistò il castello di Kilkenny nel 1391, iniziando il lungo legame del castello con la famiglia Butler.",
+				"La Rothe House di Kilkenny fu costruita tra il 1594 e il 1610 come abitazione e sede degli affari del mercante John Rothe e di Rose Archer."
+			],
+			"de": [
+				"Kilkenny geht auf das irische Cill Chainnigh zurück und bedeutet Kirche des Canice.",
+				"James Butler, Earl of Ormond, erwarb Kilkenny Castle 1391 und begründete damit dessen lange Verbindung mit der Familie Butler.",
+				"Kilkennys Rothe House entstand zwischen 1594 und 1610 als Wohn- und Geschäftshaus des Kaufmanns John Rothe und Rose Archers."
+			]
+		}
 	},
 	"tralee": {
 		"kind": "city",
@@ -106,7 +276,24 @@
 		"populationRank": 8,
 		"region": "Kerry",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Tralee comes from Irish Trá Lí, meaning the strand of the River Lee.",
+				"The Rose of Tralee festival began in 1959, bringing representatives of Irish communities at home and abroad to the town.",
+				"Tralee’s Siamsa Tíre theatre and arts centre opened in 1991 as the purpose-built home of the National Folk Theatre."
+			],
+			"it": [
+				"Tralee deriva dall’irlandese Trá Lí, che significa spiaggia del fiume Lee.",
+				"Il festival della Rosa di Tralee iniziò nel 1959, portando nella città rappresentanti delle comunità irlandesi in patria e all’estero.",
+				"Il teatro e centro artistico Siamsa Tíre di Tralee aprì nel 1991 come sede appositamente costruita per il Teatro Nazionale del Folclore."
+			],
+			"de": [
+				"Tralee geht auf das irische Trá Lí zurück und bedeutet Strand des Flusses Lee.",
+				"Das Rose-of-Tralee-Festival begann 1959 und brachte Vertreterinnen irischer Gemeinschaften aus dem In- und Ausland in die Stadt.",
+				"Tralees Theater und Kunstzentrum Siamsa Tíre wurde 1991 als eigens gebautes Haus des National Folk Theatre eröffnet."
+			]
+		}
 	},
 	"waterford": {
 		"kind": "city",
@@ -114,7 +301,24 @@
 		"populationRank": 5,
 		"region": "Kilkenny",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Waterford derives from the Norse place-name Vedrarfjord, used for the Viking settlement.",
+				"Waterford’s Reginald’s Tower was a medieval defensive strongpoint and later served as a mint and prison.",
+				"George and William Penrose established a glassmaking factory in Waterford in 1783."
+			],
+			"it": [
+				"Waterford deriva dal toponimo norreno Vedrarfjord, usato per l’insediamento vichingo.",
+				"La torre di Reginald a Waterford fu un caposaldo difensivo medievale e in seguito servì come zecca e prigione.",
+				"George e William Penrose fondarono una fabbrica di vetro a Waterford nel 1783."
+			],
+			"de": [
+				"Waterford geht auf den nordischen Ortsnamen Vedrarfjord für die Wikingersiedlung zurück.",
+				"Waterfords Reginald’s Tower war ein mittelalterlicher Verteidigungsstützpunkt und diente später als Münzstätte und Gefängnis.",
+				"George und William Penrose gründeten 1783 eine Glasmanufaktur in Waterford."
+			]
+		}
 	},
 	"killarney": {
 		"kind": "city",
@@ -122,7 +326,24 @@
 		"populationRank": 11,
 		"region": "Kerry",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Killarney comes from Irish Cill Airne, meaning church of the sloes, the fruit of blackthorn bushes.",
+				"Killarney’s Saint Mary’s Cathedral was designed by Augustus Pugin and consecrated in 1855.",
+				"Belgian Franciscan friars settled in Killarney in 1860 and opened their church in the town in 1867."
+			],
+			"it": [
+				"Killarney deriva dall’irlandese Cill Airne, che significa chiesa delle prugnole, i frutti del prugnolo.",
+				"La cattedrale di Santa Maria a Killarney fu progettata da Augustus Pugin e consacrata nel 1855.",
+				"Frati francescani belgi si stabilirono a Killarney nel 1860 e aprirono la loro chiesa nella città nel 1867."
+			],
+			"de": [
+				"Killarney geht auf das irische Cill Airne zurück und bedeutet Kirche der Schlehen, der Früchte des Schwarzdorns.",
+				"Killarneys Marienkathedrale wurde von Augustus Pugin entworfen und 1855 geweiht.",
+				"Belgische Franziskaner ließen sich 1860 in Killarney nieder und eröffneten 1867 ihre Kirche in der Stadt."
+			]
+		}
 	},
 	"cork": {
 		"kind": "city",
@@ -132,16 +353,19 @@
 		"position": "south",
 		"hooks": {
 			"en": [
-				"From Irish Corcach, \"marsh\".",
-				"The Titanic’s last port of call, in 1912, was Queenstown, now Cobh, in Cork harbour."
+				"Cork derives from the Irish corcach, meaning marsh, reflected in the city’s Irish name Corcaigh.",
+				"Cork’s English Market was created in 1788 by the city’s Protestant corporation.",
+				"Cork’s Saint Fin Barre’s Cathedral was designed by William Burges and consecrated in 1870."
 			],
 			"it": [
-				"Dall’irlandese Corcach, \"palude\".",
-				"L’ultimo scalo del Titanic, nel 1912, fu Queenstown, oggi Cobh, nel porto di Cork."
+				"Cork deriva dall’irlandese corcach, che significa palude e si riflette nel nome irlandese della città, Corcaigh.",
+				"Il mercato di Cork chiamato English Market fu creato nel 1788 dall’amministrazione cittadina protestante.",
+				"La cattedrale di San Fin Barre a Cork fu progettata da William Burges e consacrata nel 1870."
 			],
 			"de": [
-				"Vom irischen Corcach, „Sumpf“.",
-				"Der letzte Anlaufhafen der Titanic war 1912 Queenstown, heute Cobh, im Hafen von Cork."
+				"Cork geht auf das irische Wort corcach für Sumpf zurück, das sich im irischen Stadtnamen Corcaigh widerspiegelt.",
+				"Corks English Market wurde 1788 von der protestantischen Stadtverwaltung gegründet.",
+				"Corks Kathedrale Saint Fin Barre wurde von William Burges entworfen und 1870 geweiht."
 			]
 		}
 	}

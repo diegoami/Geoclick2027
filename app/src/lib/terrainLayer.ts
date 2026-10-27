@@ -29,7 +29,7 @@
 
 import * as maplibregl from 'maplibre-gl';
 import type { LayerSpecification } from 'maplibre-gl';
-import { asset } from '$app/paths';
+import { asset } from '$lib/appPaths';
 import { registerTilesArchive } from './pmtilesSource';
 import { registerLabel } from './labelCollision';
 import { isNativeShell } from './platform';

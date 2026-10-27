@@ -5,7 +5,24 @@
 		"populationRank": 16,
 		"region": "Schleswig-Holstein",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"A local legend links Flensburg’s name to a knight called Fleno.",
+				"Duke Waldemar IV of Schleswig confirmed Flensburg’s town rights in 1284.",
+				"From 1755, Flensburg ships brought rum and sugar from the Danish Caribbean colonies."
+			],
+			"it": [
+				"Una leggenda locale collega il nome di Flensburg a un cavaliere chiamato Fleno.",
+				"Il duca Valdemaro IV di Schleswig confermò i diritti di città di Flensburg nel 1284.",
+				"Dal 1755 le navi di Flensburg trasportarono rum e zucchero dalle colonie danesi dei Caraibi."
+			],
+			"de": [
+				"Eine örtliche Sage verbindet den Namen Flensburg mit einem Ritter namens Fleno.",
+				"Herzog Waldemar IV. von Schleswig bestätigte 1284 Flensburgs Stadtrecht.",
+				"Seit 1755 brachten Flensburger Schiffe Rum und Zucker aus den dänischen Karibikkolonien."
+			]
+		}
 	},
 	"kiel": {
 		"kind": "city",
@@ -38,7 +55,24 @@
 		"populationRank": 29,
 		"region": "Mecklenburg-Vorpommern",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Stralsund was documented as Stralesund in 1240.",
+				"The old towns of Stralsund and Wismar jointly became a UNESCO World Heritage Site in 2002.",
+				"Stralsund’s OZEANEUM aquarium opened in 2008."
+			],
+			"it": [
+				"Stralsund fu documentata come Stralesund nel 1240.",
+				"I centri storici di Stralsund e Wismar entrarono insieme nel patrimonio mondiale UNESCO nel 2002.",
+				"L’acquario OZEANEUM di Stralsund aprì nel 2008."
+			],
+			"de": [
+				"Stralsund wurde 1240 als Stralesund urkundlich erwähnt.",
+				"Die Altstädte von Stralsund und Wismar wurden 2002 gemeinsam UNESCO-Welterbe.",
+				"Das Stralsunder Aquarium OZEANEUM wurde 2008 eröffnet."
+			]
+		}
 	},
 	"rostock": {
 		"kind": "city",
@@ -71,7 +105,24 @@
 		"populationRank": 28,
 		"region": "Mecklenburg-Vorpommern",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Greifswald appears as oppidum Gripheswald in a document from 1248.",
+				"Greifswald’s university opened in 1456 following an initiative by Mayor Heinrich Rubenow.",
+				"Painter Caspar David Friedrich was born in Greifswald in 1774."
+			],
+			"it": [
+				"Greifswald compare come oppidum Gripheswald in un documento del 1248.",
+				"L’università di Greifswald aprì nel 1456 su iniziativa del borgomastro Heinrich Rubenow.",
+				"Il pittore Caspar David Friedrich nacque a Greifswald nel 1774."
+			],
+			"de": [
+				"Greifswald erscheint in einer Urkunde von 1248 als oppidum Gripheswald.",
+				"Die Universität Greifswald wurde 1456 auf Initiative des Bürgermeisters Heinrich Rubenow eröffnet.",
+				"Der Maler Caspar David Friedrich wurde 1774 in Greifswald geboren."
+			]
+		}
 	},
 	"neumunster": {
 		"kind": "city",
@@ -79,7 +130,24 @@
 		"populationRank": 19,
 		"region": "Schleswig-Holstein",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Neumünster was recorded as Wippendorp in 1127.",
+				"Neumünster received town rights in 1870.",
+				"The Tuch + Technik Museum explains the transition from handwoven cloth to industrial textile production."
+			],
+			"it": [
+				"Neumünster è attestata come Wippendorp nel 1127.",
+				"Neumünster ricevette i diritti di città nel 1870.",
+				"Il museo Tuch + Technik illustra il passaggio dai tessuti lavorati al telaio a mano alla produzione tessile industriale."
+			],
+			"de": [
+				"Neumünster ist 1127 als Wippendorp belegt.",
+				"Neumünster erhielt 1870 das Stadtrecht.",
+				"Das Museum Tuch + Technik erklärt den Übergang von der handwerklichen Tuchherstellung zur industriellen Textilproduktion."
+			]
+		}
 	},
 	"wismar": {
 		"kind": "city",
@@ -128,7 +196,24 @@
 		"populationRank": 32,
 		"region": "Schleswig-Holstein",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Elmshorn was first recorded as Elmeshorne in 1141.",
+				"Mathematician Hermann Weyl was born in Elmshorn in 1885.",
+				"Elmshorn’s water tower was built in 1902 to provide pressure for the municipal water supply."
+			],
+			"it": [
+				"Elmshorn fu registrata per la prima volta come Elmeshorne nel 1141.",
+				"Il matematico Hermann Weyl nacque a Elmshorn nel 1885.",
+				"La torre idrica di Elmshorn fu costruita nel 1902 per fornire pressione alla rete idrica comunale."
+			],
+			"de": [
+				"Elmshorn wurde 1141 erstmals als Elmeshorne erwähnt.",
+				"Der Mathematiker Hermann Weyl wurde 1885 in Elmshorn geboren.",
+				"Der Elmshorner Wasserturm wurde 1902 errichtet, um den nötigen Druck für die städtische Wasserversorgung zu liefern."
+			]
+		}
 	},
 	"norderstedt": {
 		"kind": "city",
@@ -136,7 +221,24 @@
 		"populationRank": 17,
 		"region": "Schleswig-Holstein",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The name Norderstedt was adopted for the city formed on 1 January 1970 from Friedrichsgabe, Garstedt, Glashütte and Harksheide.",
+				"Cattle driven through Harksheide were once taxed at Ochsenzoll, whose customs post closed in 1867.",
+				"Norderstedt’s city park was created for the 2011 State Garden Show and reopened as a public park in 2012."
+			],
+			"it": [
+				"Il nome Norderstedt fu adottato per la città formata il 1° gennaio 1970 da Friedrichsgabe, Garstedt, Glashütte e Harksheide.",
+				"I bovini condotti attraverso Harksheide erano un tempo tassati a Ochsenzoll, la cui dogana chiuse nel 1867.",
+				"Il parco cittadino di Norderstedt fu creato per l’esposizione florovivaistica regionale del 2011 e riaprì come parco pubblico nel 2012."
+			],
+			"de": [
+				"Der Name Norderstedt wurde für die am 1. Januar 1970 aus Friedrichsgabe, Garstedt, Glashütte und Harksheide gebildete Stadt gewählt.",
+				"Durch Harksheide getriebene Rinder wurden einst am Ochsenzoll verzollt, dessen Zollstelle 1867 geschlossen wurde.",
+				"Der Norderstedter Stadtpark entstand für die Landesgartenschau 2011 und wurde 2012 als öffentlicher Park wiedereröffnet."
+			]
+		}
 	},
 	"ahrensburg": {
 		"kind": "city",
@@ -160,7 +262,24 @@
 		"populationRank": 15,
 		"region": "Mecklenburg-Vorpommern",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Schwerin was recorded as Zuarin in the chronicle of Thietmar of Merseburg around 1018.",
+				"Henry the Lion founded the city of Schwerin in 1160.",
+				"Schwerin’s Residence Ensemble became a UNESCO World Heritage Site in 2024."
+			],
+			"it": [
+				"Schwerin è attestata come Zuarin nella cronaca di Tietmaro di Merseburgo intorno al 1018.",
+				"Enrico il Leone fondò la città di Schwerin nel 1160.",
+				"Il complesso residenziale di Schwerin divenne patrimonio mondiale dell’UNESCO nel 2024."
+			],
+			"de": [
+				"Schwerin ist um 1018 in der Chronik Thietmars von Merseburg als Zuarin belegt.",
+				"Heinrich der Löwe gründete 1160 die Stadt Schwerin.",
+				"Das Residenzensemble Schwerin wurde 2024 UNESCO-Welterbe."
+			]
+		}
 	},
 	"stade": {
 		"kind": "city",
@@ -184,7 +303,24 @@
 		"populationRank": 24,
 		"region": "Mecklenburg-Vorpommern",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Neubrandenburg appears as Brandenborch Novam in its foundation charter of 1248.",
+				"Writer Fritz Reuter lived and worked in Neubrandenburg from 1856 to 1863.",
+				"Neubrandenburg’s St Mary’s Church reopened as a concert hall in 2001."
+			],
+			"it": [
+				"Neubrandenburg compare come Brandenborch Novam nella carta di fondazione del 1248.",
+				"Lo scrittore Fritz Reuter visse e lavorò a Neubrandenburg dal 1856 al 1863.",
+				"La chiesa di Santa Maria di Neubrandenburg riaprì come sala da concerto nel 2001."
+			],
+			"de": [
+				"Neubrandenburg erscheint in seiner Gründungsurkunde von 1248 als Brandenborch Novam.",
+				"Der Schriftsteller Fritz Reuter lebte und arbeitete von 1856 bis 1863 in Neubrandenburg.",
+				"Die Neubrandenburger Marienkirche wurde 2001 als Konzertsaal wiedereröffnet."
+			]
+		}
 	},
 	"hamburg": {
 		"kind": "city",
@@ -241,7 +377,24 @@
 		"populationRank": 20,
 		"region": "Niedersachsen",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Wilhelmshaven received its name in 1869 in honor of King Wilhelm I of Prussia.",
+				"Prussia bought land from Oldenburg for its naval port under the Jade Treaty of 1853.",
+				"Wilhelmshaven’s Kaiser Wilhelm Bridge, a double swing bridge, entered service in 1907."
+			],
+			"it": [
+				"Wilhelmshaven ricevette il suo nome nel 1869 in onore del re Guglielmo I di Prussia.",
+				"La Prussia acquistò da Oldenburg il terreno per il proprio porto militare con il trattato della Jade del 1853.",
+				"Il ponte Kaiser Wilhelm di Wilhelmshaven, un ponte girevole doppio, entrò in servizio nel 1907."
+			],
+			"de": [
+				"Wilhelmshaven erhielt seinen Namen 1869 zu Ehren König Wilhelms I. von Preußen.",
+				"Preußen erwarb 1853 mit dem Jadevertrag von Oldenburg Land für seinen Marinehafen.",
+				"Die Kaiser-Wilhelm-Brücke in Wilhelmshaven, eine Doppel-Drehbrücke, wurde 1907 in Betrieb genommen."
+			]
+		}
 	},
 	"buxtehude": {
 		"kind": "city",
@@ -305,7 +458,24 @@
 		"populationRank": 21,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Lüneburg was recorded as Luniburc in 956.",
+				"Lüneburg’s saltworks closed in 1980.",
+				"Construction of Lüneburg’s town hall began around 1230."
+			],
+			"it": [
+				"Lüneburg fu registrata come Luniburc nel 956.",
+				"Le saline di Lüneburg chiusero nel 1980.",
+				"La costruzione del municipio di Lüneburg iniziò intorno al 1230."
+			],
+			"de": [
+				"Lüneburg wurde 956 als Luniburc erwähnt.",
+				"Die Lüneburger Saline wurde 1980 geschlossen.",
+				"Der Bau des Lüneburger Rathauses begann um 1230."
+			]
+		}
 	},
 	"leer": {
 		"kind": "city",
@@ -378,7 +548,24 @@
 		"populationRank": 18,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Delmenhorst’s name first appears in a document from 1254.",
+				"Delmenhorst received town rights around 1371.",
+				"The Nordwolle wool-combing and spinning company was founded at Delmenhorst in 1884."
+			],
+			"it": [
+				"Il nome Delmenhorst compare per la prima volta in un documento del 1254.",
+				"Delmenhorst ricevette i diritti di città intorno al 1371.",
+				"L’azienda di pettinatura e filatura della lana Nordwolle fu fondata a Delmenhorst nel 1884."
+			],
+			"de": [
+				"Der Name Delmenhorst erscheint erstmals 1254 in einer Urkunde.",
+				"Delmenhorst erhielt um 1371 das Stadtrecht.",
+				"Die Wollkämmerei und Kammgarnspinnerei Nordwolle wurde 1884 in Delmenhorst gegründet."
+			]
+		}
 	},
 	"stuhr": {
 		"kind": "city",
@@ -418,7 +605,24 @@
 		"populationRank": 22,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Celle’s name was recorded as Kellu in 993 at the site now known as Altencelle.",
+				"Duke Otto the Strict moved Celle to its present site in 1292.",
+				"Celle’s palace theatre was created during the palace’s Baroque rebuilding between 1670 and 1680."
+			],
+			"it": [
+				"Il nome Celle è attestato come Kellu nel 993 nel sito oggi noto come Altencelle.",
+				"Il duca Ottone il Severo trasferì Celle nel sito attuale nel 1292.",
+				"Il teatro del palazzo di Celle fu realizzato durante la trasformazione barocca del palazzo tra il 1670 e il 1680."
+			],
+			"de": [
+				"Der Name Celle ist 993 am heutigen Ort Altencelle als Kellu belegt.",
+				"Herzog Otto der Strenge verlegte Celle 1292 an den heutigen Standort.",
+				"Das Celler Schlosstheater entstand während des barocken Schlossumbaus zwischen 1670 und 1680."
+			]
+		}
 	},
 	"lingen": {
 		"kind": "city",
@@ -426,7 +630,24 @@
 		"populationRank": 27,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Lingen was first recorded as Linga in 975.",
+				"Lingen hosted its first World Festival of Children’s Theatre in 1990.",
+				"The Hohe Schule, Lingen’s former institution of higher learning, was founded in 1697."
+			],
+			"it": [
+				"Lingen fu registrata per la prima volta come Linga nel 975.",
+				"Lingen ospitò il suo primo Festival mondiale del teatro dei bambini nel 1990.",
+				"La Hohe Schule, l’ex istituto di studi superiori di Lingen, fu fondata nel 1697."
+			],
+			"de": [
+				"Lingen wurde 975 erstmals als Linga erwähnt.",
+				"1990 fand in Lingen das erste Welt-Kindertheater-Fest statt.",
+				"Die Hohe Schule, Lingens frühere Hochschule, wurde 1697 gegründet."
+			]
+		}
 	},
 	"neustadt-am-rubenberge": {
 		"kind": "city",
@@ -450,7 +671,24 @@
 		"populationRank": 30,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The medieval settlement that became Langenhagen was originally called Nienhagen.",
+				"Hannover Airport opened at its site in Langenhagen in 1952.",
+				"Bacteriologist Robert Koch worked as a doctor in Langenhagen from 1866 to 1868."
+			],
+			"it": [
+				"L’insediamento medievale da cui nacque Langenhagen si chiamava originariamente Nienhagen.",
+				"L’aeroporto di Hannover aprì nella sua sede di Langenhagen nel 1952.",
+				"Il batteriologo Robert Koch lavorò come medico a Langenhagen dal 1866 al 1868."
+			],
+			"de": [
+				"Die mittelalterliche Siedlung, aus der Langenhagen hervorging, hieß ursprünglich Nienhagen.",
+				"Der Flughafen Hannover wurde 1952 an seinem Standort in Langenhagen eröffnet.",
+				"Der Bakteriologe Robert Koch arbeitete von 1866 bis 1868 als Arzt in Langenhagen."
+			]
+		}
 	},
 	"nordhorn": {
 		"kind": "city",
@@ -458,7 +696,24 @@
 		"populationRank": 26,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Nordhorn was recorded as Northornon in Werden Abbey’s revenue registers around 900.",
+				"Count Bernhard I of Bentheim granted Nordhorn town rights in 1379.",
+				"Nordhorn’s Old Church on the market square was consecrated in 1445."
+			],
+			"it": [
+				"Nordhorn fu registrata come Northornon nei registri delle rendite dell’abbazia di Werden intorno al 900.",
+				"Il conte Bernardo I di Bentheim concesse a Nordhorn i diritti di città nel 1379.",
+				"La Chiesa Vecchia sulla piazza del mercato di Nordhorn fu consacrata nel 1445."
+			],
+			"de": [
+				"Nordhorn wurde um 900 als Northornon in den Heberegistern des Klosters Werden erwähnt.",
+				"Graf Bernhard I. von Bentheim verlieh Nordhorn 1379 die Stadtrechte.",
+				"Die Alte Kirche am Markt in Nordhorn wurde 1445 geweiht."
+			]
+		}
 	},
 	"wunstorf": {
 		"kind": "city",
@@ -474,7 +729,24 @@
 		"populationRank": 11,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The city adopted the name Wolfsburg in 1945, taking it from the castle of the same name.",
+				"Wolfsburg was established in 1938 to house workers of the new Volkswagen factory.",
+				"The poet Hoffmann von Fallersleben was born in today’s Wolfsburg district of Fallersleben in 1798."
+			],
+			"it": [
+				"La città adottò il nome Wolfsburg nel 1945, prendendolo dal castello omonimo.",
+				"Wolfsburg fu fondata nel 1938 per ospitare i lavoratori della nuova fabbrica Volkswagen.",
+				"Il poeta Hoffmann von Fallersleben nacque nel 1798 a Fallersleben, oggi quartiere di Wolfsburg."
+			],
+			"de": [
+				"Die Stadt erhielt 1945 nach dem gleichnamigen Schloss den Namen Wolfsburg.",
+				"Wolfsburg wurde 1938 als Wohnstadt für die Beschäftigten des neuen Volkswagenwerks gegründet.",
+				"Der Dichter Hoffmann von Fallersleben wurde 1798 im heutigen Wolfsburger Stadtteil Fallersleben geboren."
+			]
+		}
 	},
 	"garbsen": {
 		"kind": "city",
@@ -482,7 +754,24 @@
 		"populationRank": 23,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Garbsen was recorded as Gerbernessen in 1304.",
+				"Garbsen received the official designation of a town in 1968.",
+				"Leibniz University Hannover opened its mechanical engineering campus in Garbsen in 2019."
+			],
+			"it": [
+				"Garbsen fu registrata come Gerbernessen nel 1304.",
+				"Garbsen ricevette ufficialmente il titolo di città nel 1968.",
+				"L’Università Leibniz di Hannover inaugurò il suo campus di ingegneria meccanica a Garbsen nel 2019."
+			],
+			"de": [
+				"Garbsen wurde 1304 als Gerbernessen erwähnt.",
+				"Garbsen erhielt 1968 offiziell die Bezeichnung Stadt.",
+				"Die Leibniz Universität Hannover eröffnete 2019 ihren Campus Maschinenbau in Garbsen."
+			]
+		}
 	},
 	"hannover": {
 		"kind": "city",
@@ -523,7 +812,24 @@
 		"populationRank": 33,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The name Peine appears as Pagin in 1130 through the nobleman Berthold von Pagin.",
+				"Gunzelin of Wolfenbüttel founded Peine in the early thirteenth century.",
+				"The Peiner Walzwerk company was founded in 1872, and its new rolling mill began production in 1873."
+			],
+			"it": [
+				"Il nome Peine compare come Pagin nel 1130 attraverso il nobile Berthold von Pagin.",
+				"Gunzelin di Wolfenbüttel fondò Peine all’inizio del XIII secolo.",
+				"La società Peiner Walzwerk fu fondata nel 1872 e il nuovo laminatoio iniziò la produzione nel 1873."
+			],
+			"de": [
+				"Der Name Peine erscheint 1130 durch den Adligen Berthold von Pagin in der Form Pagin.",
+				"Gunzelin von Wolfenbüttel gründete Peine im frühen 13. Jahrhundert.",
+				"Die Aktiengesellschaft Peiner Walzwerk wurde 1872 gegründet; das neue Walzwerk nahm 1873 den Betrieb auf."
+			]
+		}
 	},
 	"laatzen": {
 		"kind": "city",
@@ -605,7 +911,24 @@
 		"populationRank": 31,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Wolfenbüttel appears as Wulferesbutle in a document of 1118.",
+				"Gotthold Ephraim Lessing worked as librarian in Wolfenbüttel from 1770 to 1781.",
+				"Wolfenbüttel remained a residence of the dukes of Brunswick-Lüneburg until 1754."
+			],
+			"it": [
+				"Wolfenbüttel compare come Wulferesbutle in un documento del 1118.",
+				"Gotthold Ephraim Lessing lavorò come bibliotecario a Wolfenbüttel dal 1770 al 1781.",
+				"Wolfenbüttel rimase una residenza dei duchi di Brunswick-Lüneburg fino al 1754."
+			],
+			"de": [
+				"Wolfenbüttel erscheint 1118 in einer Urkunde als Wulferesbutle.",
+				"Gotthold Ephraim Lessing arbeitete von 1770 bis 1781 als Bibliothekar in Wolfenbüttel.",
+				"Wolfenbüttel blieb bis 1754 Residenz der Herzöge von Braunschweig-Lüneburg."
+			]
+		}
 	},
 	"salzgitter": {
 		"kind": "city",
@@ -613,7 +936,24 @@
 		"populationRank": 13,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The city created as Watenstedt-Salzgitter was renamed Salzgitter in 1951.",
+				"Watenstedt-Salzgitter was formed in 1942 by combining 28 communities.",
+				"Salder Palace was built in the Renaissance style in 1608."
+			],
+			"it": [
+				"La città creata con il nome Watenstedt-Salzgitter fu ribattezzata Salzgitter nel 1951.",
+				"Watenstedt-Salzgitter fu costituita nel 1942 riunendo 28 comuni.",
+				"Il castello di Salder fu costruito in stile rinascimentale nel 1608."
+			],
+			"de": [
+				"Die als Watenstedt-Salzgitter gegründete Stadt wurde 1951 in Salzgitter umbenannt.",
+				"Watenstedt-Salzgitter entstand 1942 durch den Zusammenschluss von 28 Gemeinden.",
+				"Schloss Salder wurde 1608 im Renaissancestil erbaut."
+			]
+		}
 	},
 	"hildesheim": {
 		"kind": "city",
@@ -621,7 +961,24 @@
 		"populationRank": 14,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Hildesheim was recorded as Hiltenesheim in 1004.",
+				"Bishop Bernward began building Saint Michael’s Church in Hildesheim in 1010.",
+				"Hildesheim’s cathedral and St Michael’s Church entered the UNESCO World Heritage List in 1985."
+			],
+			"it": [
+				"Hildesheim fu registrata come Hiltenesheim nel 1004.",
+				"Il vescovo Bernward iniziò nel 1010 la costruzione della chiesa di San Michele a Hildesheim.",
+				"Il duomo e la chiesa di San Michele di Hildesheim entrarono nella Lista del Patrimonio Mondiale UNESCO nel 1985."
+			],
+			"de": [
+				"Hildesheim wurde 1004 als Hiltenesheim erwähnt.",
+				"Bischof Bernward begann 1010 mit dem Bau der Hildesheimer Michaeliskirche.",
+				"Der Hildesheimer Dom und die Michaeliskirche wurden 1985 in die UNESCO-Welterbeliste aufgenommen."
+			]
+		}
 	},
 	"hameln": {
 		"kind": "city",
@@ -629,7 +986,24 @@
 		"populationRank": 25,
 		"region": "Niedersachsen",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Historic spellings of Hameln include Hamela and Hameloa.",
+				"Hameln’s Pied Piper legend developed around the story of the departure of the town’s children in 1284.",
+				"Hameln’s fortifications were demolished in 1808 on Napoleon’s orders."
+			],
+			"it": [
+				"Tra le grafie storiche di Hameln figurano Hamela e Hameloa.",
+				"La leggenda del Pifferaio di Hameln si sviluppò intorno al racconto della partenza dei bambini della città nel 1284.",
+				"Le fortificazioni di Hameln furono demolite nel 1808 per ordine di Napoleone."
+			],
+			"de": [
+				"Zu den historischen Schreibweisen von Hameln gehören Hamela und Hameloa.",
+				"Die Hamelner Rattenfängersage entwickelte sich um die Erzählung vom Auszug der Kinder der Stadt im Jahr 1284.",
+				"Hamelns Befestigungen wurden 1808 auf Befehl Napoleons geschleift."
+			]
+		}
 	},
 	"goslar": {
 		"kind": "city",

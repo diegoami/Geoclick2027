@@ -5,7 +5,7 @@
 	// in one bar of icons, so the map has the screen. Each icon's name is its
 	// aria-label and title. My maps and About are pages of their own, as the
 	// games' History and About are views, so Back and Escape need no code.
-	import { resolve } from '$app/paths';
+	import { resolve } from '$lib/appPaths';
 	import { t } from './i18n.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import { exitApp } from './platform';

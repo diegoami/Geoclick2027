@@ -3,171 +3,232 @@
 		"Name-facts for Iran (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"FT-73 added the thirty-one provinces (\"region\") and the towns of iran-towns-100k (\"city\"); where a province and its capital share an id, each has its own sentences. Most province names are their capital's, and many of those names are of uncertain origin."
+		"FT-73 added the thirty-one provinces (\"region\") and the towns of iran-towns-100k (\"city\"); where a province and its capital share an id, each has its own sentences. Most province names are their capital's, and many of those names are of uncertain origin.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"abadan": {
 		"city": {
 			"en": [
-				"Its oil refinery, opened in 1912, was for decades one of the largest in the world."
+				"Abadan’s name appears in the Arabic form Abbadan in the ninth-century geography of Ibn Khordadbeh.",
+				"Abadan’s oil refinery opened in 1912, supplied by a pipeline from the Khuzestan oilfields.",
+				"Abadan’s Armenian Surp Karapet Church was reconstructed after suffering severe damage during the Iran–Iraq War."
 			],
 			"it": [
-				"La sua raffineria di petrolio, aperta nel 1912, fu per decenni una delle più grandi del mondo."
+				"Il nome di Abadan compare nella forma araba Abbadan nell’opera geografica del IX secolo di Ibn Khordadbeh.",
+				"La raffineria di petrolio di Abadan aprì nel 1912, rifornita da un oleodotto dai giacimenti del Khuzestan.",
+				"La chiesa armena Surp Karapet di Abadan fu ricostruita dopo aver subito gravi danni durante la guerra Iran–Iraq."
 			],
 			"de": [
-				"Ihre 1912 eröffnete Ölraffinerie war jahrzehntelang eine der größten der Welt."
+				"Abadans Name erscheint in der arabischen Form Abbadan im geografischen Werk Ibn Khordadbehs aus dem neunten Jahrhundert.",
+				"Abadans Erdölraffinerie wurde 1912 eröffnet und über eine Pipeline aus den Ölfeldern Khuzestans versorgt.",
+				"Abadans armenische Surp-Karapet-Kirche wurde nach schweren Schäden im Iran-Irak-Krieg wiederaufgebaut."
 			]
 		}
 	},
 	"ahar": {
 		"city": {
 			"en": [
-				"The forests of Arasbaran, to its north, are a UNESCO biosphere reserve."
+				"Ahar is recorded under its present name by medieval geographers including Yaqut.",
+				"Shah Abbas I patronised the shrine of Sheikh Shihab al-Din in Ahar and visited it in 1605 and 1611–1612.",
+				"Ahar’s Friday Mosque underwent documented repairs in 1614–1615, 1643–1644 and 1803–1804."
 			],
 			"it": [
-				"Le foreste dell’Arasbaran, a nord della città, sono una riserva della biosfera UNESCO."
+				"Ahar è registrata con il nome attuale dai geografi medievali, tra cui Yaqut.",
+				"Lo scià Abbas I patrocinò il santuario dello sceicco Shihab al-Din ad Ahar e lo visitò nel 1605 e nel 1611–1612.",
+				"La moschea del venerdì di Ahar fu sottoposta a restauri documentati nel 1614–1615, nel 1643–1644 e nel 1803–1804."
 			],
 			"de": [
-				"Die Wälder von Arasbaran nördlich der Stadt sind ein UNESCO-Biosphärenreservat."
+				"Ahar wird von mittelalterlichen Geografen wie Yaqut unter seinem heutigen Namen erwähnt.",
+				"Schah Abbas I. förderte das Heiligtum von Scheich Shihab al-Din in Ahar und besuchte es 1605 und 1611–1612.",
+				"Die Freitagsmoschee von Ahar wurde nachweislich 1614–1615, 1643–1644 und 1803–1804 instand gesetzt."
 			]
 		}
 	},
 	"ahvaz": {
 		"city": {
 			"en": [
-				"Summer temperatures here often pass 50 °C.",
-				"The Karun, Iran’s largest river, runs through the city under a string of bridges."
+				"Ahvaz takes its name from the ancient Khuzi people, who also gave their name to Khuzestan.",
+				"Ahvaz’s White Bridge was built in the 1930s with two large steel arches across the Karun.",
+				"The Lashkar Abad quarter of Ahvaz is known for its falafel shops."
 			],
 			"it": [
-				"D’estate qui le temperature superano spesso i 50 °C.",
-				"Il Karun, il fiume più grande dell’Iran, attraversa la città sotto una serie di ponti."
+				"Ahvaz prende il nome dall’antico popolo dei Khuzi, che diede il nome anche al Khuzestan.",
+				"Il Ponte Bianco di Ahvaz fu costruito negli anni Trenta con due grandi archi d’acciaio sopra il Karun.",
+				"Il quartiere Lashkar Abad di Ahvaz è conosciuto per le sue botteghe di falafel."
 			],
 			"de": [
-				"Die Sommertemperaturen liegen hier oft über 50 °C.",
-				"Der Karun, Irans größter Fluss, fließt unter einer Reihe von Brücken durch die Stadt."
+				"Ahvaz ist nach dem antiken Volk der Khuzi benannt, das auch Khuzestan seinen Namen gab.",
+				"Die Weiße Brücke von Ahvaz wurde in den 1930er-Jahren mit zwei großen Stahlbögen über den Karun gebaut.",
+				"Das Viertel Lashkar Abad in Ahvaz ist für seine Falafelläden bekannt."
 			]
 		}
 	},
 	"alborz": {
 		"region": {
 			"en": [
-				"Named for the Alborz mountains, from the Avestan Hara Berezaiti, \"high Hara\"; the province was split from Tehran in 2010."
+				"Alborz Province takes its name from the Alborz Mountains and was separated from Tehran Province in 2010.",
+				"Karaj’s Shah Abbasi Bridge preserves a structure rebuilt during the Safavid period.",
+				"Karaj’s Shah Abbasi caravanserai was built during the reign of the Safavid shah Soleiman and later served as a military base and agricultural school."
 			],
 			"it": [
-				"Prende il nome dai monti Alborz, dall’avestico Hara Berezaiti, \"l’alta Hara\"; la provincia fu separata da quella di Teheran nel 2010."
+				"La provincia di Alborz prende il nome dai monti Alborz e fu separata dalla provincia di Teheran nel 2010.",
+				"Il ponte Shah Abbasi di Karaj conserva una struttura ricostruita in epoca safavide.",
+				"Il caravanserraglio Shah Abbasi di Karaj fu costruito durante il regno dello scià safavide Soleiman e in seguito servì come base militare e scuola agraria."
 			],
 			"de": [
-				"Nach dem Alborz-Gebirge benannt, vom avestischen Hara Berezaiti, „die hohe Hara“; die Provinz wurde 2010 von Teheran abgetrennt."
+				"Die Provinz Alborz ist nach dem Alborz-Gebirge benannt und wurde 2010 von der Provinz Teheran abgetrennt.",
+				"Die Shah-Abbasi-Brücke in Karaj bewahrt eine während der Safawidenzeit erneuerte Konstruktion.",
+				"Die Shah-Abbasi-Karawanserei in Karaj entstand unter dem safawidischen Schah Soleiman und diente später als Militärstützpunkt und Landwirtschaftsschule."
 			]
 		}
 	},
 	"amol": {
 		"city": {
 			"en": [
-				"The historian al-Tabari, author of a great history of the world, was born here in 839."
+				"Amol’s name has been tentatively connected with the ancient Amardoi people.",
+				"The historian and Quran commentator al-Tabari was born in Amol around 839–840.",
+				"Medieval Amol was known for producing textiles and carpets, with its silks particularly praised by geographical writers."
 			],
 			"it": [
-				"Qui nacque nell’839 lo storico al-Tabari, autore di una grande storia universale."
+				"Il nome di Amol è stato collegato in via ipotetica all’antico popolo degli Amardoi.",
+				"Lo storico e commentatore del Corano al-Tabari nacque ad Amol intorno all’839–840.",
+				"Amol medievale era conosciuta per la produzione di tessuti e tappeti, con sete particolarmente lodate dagli scrittori di geografia."
 			],
 			"de": [
-				"Der Historiker al-Tabari, Verfasser einer großen Weltgeschichte, wurde hier 839 geboren."
+				"Amols Name wurde versuchsweise mit dem antiken Volk der Amardoi in Verbindung gebracht.",
+				"Der Historiker und Korankommentator al-Tabari wurde um 839–840 in Amol geboren.",
+				"Das mittelalterliche Amol war für Textilien und Teppiche bekannt, wobei geografische Autoren besonders seine Seidenstoffe lobten."
 			]
 		}
 	},
 	"arak": {
 		"city": {
 			"en": [
-				"It was called Sultanabad until the 1930s, and was a great centre of the carpet trade."
+				"Arak was formerly officially named Sultanabad, while Arak was already its popular name.",
+				"Arak’s carpet industry expanded in the late nineteenth century through export trade, including the activities of Ziegler and Company.",
+				"Arak’s Four Seasons Bath takes its name from tile paintings representing the seasons and now serves as a museum."
 			],
 			"it": [
-				"Si chiamò Sultanabad fino agli anni Trenta del Novecento, e fu un grande centro del commercio di tappeti."
+				"Arak si chiamava ufficialmente Sultanabad, mentre Arak era già il nome usato dalla popolazione.",
+				"L’industria dei tappeti di Arak si ampliò alla fine dell’Ottocento grazie al commercio d’esportazione, comprese le attività della Ziegler e Compagnia.",
+				"Il Bagno delle Quattro Stagioni di Arak prende il nome dalle pitture su piastrelle che rappresentano le stagioni e oggi ospita un museo."
 			],
 			"de": [
-				"Sie hieß bis in die 1930er-Jahre Sultanabad und war ein großes Zentrum des Teppichhandels."
+				"Arak hieß früher amtlich Sultanabad, während Arak bereits der volkstümliche Name war.",
+				"Araks Teppichindustrie wuchs im späten 19. Jahrhundert durch den Exporthandel, unter anderem durch die Tätigkeit von Ziegler und Company.",
+				"Araks Vier-Jahreszeiten-Bad ist nach Fliesenmalereien der Jahreszeiten benannt und dient heute als Museum."
 			]
 		}
 	},
 	"ardabil": {
 		"region": {
 			"en": [
-				"Named for its city, a name of uncertain origin.",
-				"Sarein, with its hot springs, is one of Iran’s best-known spa towns."
+				"Ardabil Province bears the name of its capital, recorded as Ardavil in the medieval geography Hudud al-Alam.",
+				"Sareyn in Ardabil Province is a spa town whose hot mineral springs attract visitors seeking traditional bathing treatments.",
+				"The Sheikh Safi al-din shrine ensemble in Ardabil Province entered UNESCO’s World Heritage List in 2010."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Sarein, con le sue sorgenti calde, è una delle località termali più note dell’Iran."
+				"La provincia di Ardabil porta il nome del suo capoluogo, registrato come Ardavil nell’opera geografica medievale Hudud al-Alam.",
+				"Sareyn, nella provincia di Ardabil, è una località termale le cui sorgenti minerali calde attirano visitatori interessati alle cure tradizionali con i bagni.",
+				"Il complesso del santuario dello sceicco Safi al-din nella provincia di Ardabil entrò nella Lista del Patrimonio Mondiale dell’UNESCO nel 2010."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Sarein mit seinen heißen Quellen ist eine der bekanntesten Kurstädte Irans."
+				"Die Provinz Ardabil trägt den Namen ihrer Hauptstadt, die im mittelalterlichen geografischen Werk Hudud al-Alam als Ardavil erscheint.",
+				"Sareyn in der Provinz Ardabil ist ein Kurort, dessen heiße Mineralquellen Besucher für traditionelle Badekuren anziehen.",
+				"Das Heiligtumsensemble von Scheich Safi al-din in der Provinz Ardabil wurde 2010 in die UNESCO-Welterbeliste aufgenommen."
 			]
 		},
 		"city": {
 			"en": [
-				"Its shrine of Sheikh Safi al-Din, ancestor of the Safavid shahs, is a UNESCO site.",
-				"The Ardabil Carpet, woven for the shrine in 1539 and 1540, is now in the Victoria and Albert Museum in London."
+				"Ardabil appears as Ardavil in the medieval geographical work Hudud al-Alam.",
+				"Ardabil’s shrine of Sheikh Safi al-din, an ancestor of the Safavid shahs, is a UNESCO World Heritage site.",
+				"The Ardabil Carpet, dated 1539–1540 and believed to have been commissioned for Sheikh Safi’s shrine, is preserved in London’s Victoria and Albert Museum."
 			],
 			"it": [
-				"Il suo santuario dello sceicco Safi al-Din, antenato degli scià safavidi, è un sito UNESCO.",
-				"Il tappeto di Ardabil, tessuto per il santuario nel 1539 e 1540, oggi è al Victoria and Albert Museum di Londra."
+				"Ardabil compare come Ardavil nell’opera geografica medievale Hudud al-Alam.",
+				"Il santuario di Ardabil dello sceicco Safi al-din, antenato degli scià safavidi, è un sito del Patrimonio Mondiale dell’UNESCO.",
+				"Il tappeto di Ardabil, datato 1539–1540 e ritenuto commissionato per il santuario dello sceicco Safi, è conservato al Victoria and Albert Museum di Londra."
 			],
 			"de": [
-				"Der Schrein des Scheichs Safi al-Din hier, eines Vorfahren der safawidischen Schahs, ist ein UNESCO-Welterbe.",
-				"Der Ardabil-Teppich, 1539 und 1540 für den Schrein geknüpft, befindet sich heute im Victoria and Albert Museum in London."
+				"Ardabil erscheint im mittelalterlichen geografischen Werk Hudud al-Alam als Ardavil.",
+				"Ardabils Heiligtum von Scheich Safi al-din, einem Vorfahren der safawidischen Schahs, gehört zum UNESCO-Welterbe.",
+				"Der auf 1539–1540 datierte Ardabil-Teppich, vermutlich für Scheich Safis Heiligtum in Auftrag gegeben, wird im Londoner Victoria and Albert Museum bewahrt."
 			]
 		}
 	},
 	"bandar-abbas": {
 		"city": {
 			"en": [
-				"\"The port of Abbas\", for Shah Abbas the Great, who took the coast from the Portuguese in 1622.",
-				"It is Iran’s busiest port."
+				"Bandar Abbas means port of Abbas, named for the Safavid ruler Shah Abbas I.",
+				"Indian merchants established Bandar Abbas’s Hindu temple, whose dome and wall paintings reflect South Asian religious traditions.",
+				"The Persian Gulf Ethnography Museum in Bandar Abbas opened in 2007 and includes displays devoted to the traditional bazaar."
 			],
 			"it": [
-				"\"Il porto di Abbas\", per Abbas il Grande, che strappò la costa ai Portoghesi nel 1622.",
-				"È il porto più trafficato dell’Iran."
+				"Bandar Abbas significa porto di Abbas e prende il nome dal sovrano safavide scià Abbas I.",
+				"Mercanti indiani fondarono il tempio induista di Bandar Abbas, la cui cupola e i dipinti murali riflettono le tradizioni religiose dell’Asia meridionale.",
+				"Il Museo Etnografico del Golfo Persico a Bandar Abbas aprì nel 2007 e comprende esposizioni dedicate al bazar tradizionale."
 			],
 			"de": [
-				"„Der Hafen des Abbas“, nach Schah Abbas dem Großen, der 1622 die Küste den Portugiesen abnahm.",
-				"Bandar Abbas ist Irans verkehrsreichster Hafen."
+				"Bandar Abbas bedeutet Hafen des Abbas und ist nach dem safawidischen Herrscher Schah Abbas I. benannt.",
+				"Indische Kaufleute gründeten Bandar Abbas’ Hindutempel, dessen Kuppel und Wandmalereien südasiatische religiöse Traditionen widerspiegeln.",
+				"Das Volkskundemuseum des Persischen Golfs in Bandar Abbas wurde 2007 eröffnet und zeigt unter anderem Ausstellungen zum traditionellen Basar."
 			]
 		}
 	},
 	"birjand": {
 		"city": {
 			"en": [
-				"The capital of South Khorasan, a town of saffron and barberries."
+				"Birjand appears as Berjand in the fourteenth-century geography of Hamdallah Mustawfi.",
+				"Birjand’s Akbariyeh Garden is a component of UNESCO’s Persian Garden World Heritage property.",
+				"Birjand’s Kolah Farangi citadel has a hexagonal plan and a distinctive white conical upper structure."
 			],
 			"it": [
-				"Il capoluogo del Khorasan meridionale, una città di zafferano e crespini."
+				"Birjand compare come Berjand nell’opera geografica del XIV secolo di Hamdallah Mustawfi.",
+				"Il giardino Akbariyeh di Birjand è una componente del sito del Patrimonio Mondiale dell’UNESCO dedicato al giardino persiano.",
+				"La cittadella Kolah Farangi di Birjand ha una pianta esagonale e una caratteristica struttura superiore bianca e conica."
 			],
 			"de": [
-				"Die Hauptstadt von Süd-Chorasan, eine Stadt des Safrans und der Berberitzen."
+				"Birjand erscheint als Berjand im geografischen Werk Hamdallah Mustawfis aus dem 14. Jahrhundert.",
+				"Birjands Akbariyeh-Garten gehört zur UNESCO-Welterbestätte Persischer Garten.",
+				"Die Kolah-Farangi-Zitadelle in Birjand besitzt einen sechseckigen Grundriss und einen markanten weißen kegelförmigen Oberbau."
 			]
 		}
 	},
 	"bojnurd": {
 		"city": {
 			"en": [
-				"The capital of North Khorasan since the province was created in 2004."
+				"Bojnurd was written Bujnurd in travel accounts around 1900 and became the capital of North Khorasan in 2004.",
+				"Bojnurd’s Mofakham Mirror House was a Qajar administrative building decorated with mirror work and ornamental tiles.",
+				"Bojnurd was rebuilt on a modern street grid after destructive earthquakes in 1896 and 1929."
 			],
 			"it": [
-				"Il capoluogo del Khorasan settentrionale da quando la provincia fu creata nel 2004."
+				"Bojnurd era scritta Bujnurd nei resoconti di viaggio intorno al 1900 e divenne il capoluogo del Khorasan settentrionale nel 2004.",
+				"La Casa degli Specchi Mofakham di Bojnurd era un edificio amministrativo qajaro decorato con specchi e piastrelle ornamentali.",
+				"Bojnurd fu ricostruita con una moderna rete stradale a griglia dopo i terremoti distruttivi del 1896 e del 1929."
 			],
 			"de": [
-				"Die Hauptstadt von Nord-Chorasan, seit die Provinz 2004 geschaffen wurde."
+				"Bojnurd wurde in Reiseberichten um 1900 als Bujnurd geschrieben und wurde 2004 Hauptstadt von Nord-Chorasan.",
+				"Das Mofakham-Spiegelhaus in Bojnurd war ein Verwaltungsbau der Kadscharenzeit mit Spiegeldekorationen und Zierfliesen.",
+				"Bojnurd wurde nach den zerstörerischen Erdbeben von 1896 und 1929 mit einem modernen Straßenraster wiederaufgebaut."
 			]
 		}
 	},
 	"borujerd": {
 		"city": {
 			"en": [
-				"A market town of the Zagros, in Lorestan."
+				"Borujerd appears on Qajar coins with the honorific Dar al-Surur.",
+				"Borujerd maintains the craft of varsho, working nickel silver into metalware.",
+				"Borujerd became a major garrison under Qajar rulers seeking control over the western tribal districts."
 			],
 			"it": [
-				"Una città mercato degli Zagros, nel Lorestan."
+				"Borujerd compare sulle monete qajare con il titolo onorifico Dar al-Surur.",
+				"Borujerd conserva l’arte del varsho, lavorando l’alpacca per produrre oggetti metallici.",
+				"Borujerd divenne un’importante guarnigione sotto i sovrani qajari che cercavano di controllare i distretti tribali occidentali."
 			],
 			"de": [
-				"Eine Marktstadt im Zagros, in Lorestan."
+				"Borujerd erscheint auf kadscharischen Münzen mit dem Ehrentitel Dar al-Surur.",
+				"Borujerd bewahrt das Varsho-Handwerk, bei dem Metallwaren aus Neusilber gefertigt werden.",
+				"Borujerd wurde unter den Kadscharen zu einer bedeutenden Garnison zur Kontrolle der westlichen Stammesgebiete."
 			]
 		}
 	},
@@ -191,45 +252,57 @@
 		},
 		"city": {
 			"en": [
-				"In the 19th century the British Resident for the Persian Gulf had his seat here."
+				"Bushehr appears as Bushire in eighteenth-century British correspondence.",
+				"The East India Company established a trading factory and residency at Bushehr under a decree issued by Karim Khan Zand in 1763.",
+				"Traditional houses in Bushehr have projecting balconies called shanashir, helping circulate air and connect upper-floor rooms."
 			],
 			"it": [
-				"Nell’Ottocento qui aveva sede il Residente britannico per il Golfo Persico."
+				"Bushehr compare come Bushire nella corrispondenza britannica del Settecento.",
+				"La Compagnia delle Indie Orientali istituì un emporio e una residenza diplomatica a Bushehr in base a un decreto di Karim Khan Zand del 1763.",
+				"Le case tradizionali di Bushehr hanno balconi sporgenti chiamati shanashir, che aiutano a far circolare l’aria e a collegare le stanze dei piani superiori."
 			],
 			"de": [
-				"Im 19. Jahrhundert hatte der britische Resident für den Persischen Golf hier seinen Sitz."
+				"Bushehr erscheint in britischer Korrespondenz des 18. Jahrhunderts als Bushire.",
+				"Die Ostindien-Kompanie errichtete 1763 aufgrund eines Erlasses von Karim Khan Zand eine Handelsniederlassung und Residentur in Bushehr.",
+				"Traditionelle Häuser in Bushehr besitzen vorspringende Balkone namens Shanashir, die die Luftzirkulation fördern und Räume der Obergeschosse verbinden."
 			]
 		}
 	},
 	"chaharmahal-and-bakhtiari": {
 		"region": {
 			"en": [
-				"\"Four districts\" and the Bakhtiari, a tribe whose nomads still move their flocks between summer and winter pastures.",
-				"Both the Karun, Iran’s largest river, and the Zayandeh Rud, the river of Isfahan, rise in its mountains."
+				"Chaharmahal means four regions, referring to historical districts, while Bakhtiari names the province’s tribal community.",
+				"Bakhtiari pastoral traditions include seasonal migration between summer grazing grounds around Shahrekord and winter quarters in Khuzestan.",
+				"Chaleshtar in Chaharmahal and Bakhtiari maintains a traditional padlock-making craft, with locks sometimes used as protective talismans."
 			],
 			"it": [
-				"\"Quattro distretti\" e i Bakhtiari, una tribù i cui nomadi spostano ancora le greggi fra i pascoli estivi e invernali.",
-				"Sui suoi monti nascono sia il Karun, il fiume più grande dell’Iran, sia lo Zayandeh Rud, il fiume di Isfahan."
+				"Chaharmahal significa quattro regioni e si riferisce a distretti storici, mentre Bakhtiari indica la comunità tribale della provincia.",
+				"Le tradizioni pastorali bakhtiari comprendono migrazioni stagionali tra i pascoli estivi intorno a Shahrekord e le sedi invernali nel Khuzestan.",
+				"Chaleshtar, nella provincia di Chaharmahal e Bakhtiari, conserva l’arte tradizionale di fabbricare lucchetti, talvolta usati come talismani protettivi."
 			],
 			"de": [
-				"„Vier Bezirke“ und die Bachtiaren, ein Stamm, dessen Nomaden ihre Herden noch immer zwischen Sommer- und Winterweiden treiben.",
-				"Sowohl der Karun, Irans größter Fluss, als auch der Zayandeh Rud, der Fluss von Isfahan, entspringen in ihren Bergen."
+				"Chaharmahal bedeutet vier Regionen und verweist auf historische Bezirke, während Bakhtiari die Stammesgemeinschaft der Provinz bezeichnet.",
+				"Zu den Hirtentraditionen der Bachtiaren gehören saisonale Wanderungen zwischen Sommerweiden um Shahrekord und Winterquartieren in Khuzestan.",
+				"Chaleshtar in der Provinz Chaharmahal und Bakhtiari bewahrt das traditionelle Vorhängeschlosshandwerk, dessen Erzeugnisse auch als schützende Talismane dienten."
 			]
 		}
 	},
 	"dezful": {
 		"city": {
 			"en": [
-				"\"The bridge of the fort\", for its bridge, whose oldest parts go back to the Sasanians.",
-				"Iraqi missiles and shells struck it again and again in the war of 1980 to 1988."
+				"Dezful’s name is linked to a Sasanian bridge and the fortress built to defend it.",
+				"Dezful suffered repeated Iraqi missile attacks during the Iran–Iraq War of 1980–1988.",
+				"Dezful has a historical reputation for making fine reed pens for calligraphy."
 			],
 			"it": [
-				"\"Il ponte della fortezza\", per il suo ponte, le cui parti più antiche risalgono ai Sasanidi.",
-				"Missili e granate irachene la colpirono più e più volte nella guerra dal 1980 al 1988."
+				"Il nome di Dezful è collegato a un ponte sasanide e alla fortezza costruita per difenderlo.",
+				"Dezful subì ripetuti attacchi missilistici iracheni durante la guerra Iran–Iraq del 1980–1988.",
+				"Dezful gode di una reputazione storica per la produzione di pregiati calami di canna per la calligrafia."
 			],
 			"de": [
-				"„Die Brücke der Festung“, nach ihrer Brücke, deren älteste Teile auf die Sasaniden zurückgehen.",
-				"Irakische Raketen und Granaten trafen sie im Krieg von 1980 bis 1988 immer wieder."
+				"Dezfuls Name ist mit einer sasanidischen Brücke und der zu ihrer Verteidigung errichteten Festung verbunden.",
+				"Dezful erlitt im Iran-Irak-Krieg von 1980–1988 wiederholt irakische Raketenangriffe.",
+				"Dezful ist historisch für die Herstellung feiner Schilfrohrfedern für die Kalligrafie bekannt."
 			]
 		}
 	},
@@ -274,13 +347,19 @@
 	"fasa": {
 		"city": {
 			"en": [
-				"A farming town of Fars, south-east of Shiraz."
+				"Fasa is the Arabic-adapted form of the earlier name Pasa, which continued to appear in medieval geographical works.",
+				"Fasa was the birthplace of the Sufi scholar and poet Ruzbihan Baqli, who later taught in Shiraz.",
+				"The scholar of Arabic grammar Abu Ali al-Farisi was born in Fasa and later taught the Buyid ruler Adud al-Dawla."
 			],
 			"it": [
-				"Una città agricola del Fars, a sud-est di Shiraz."
+				"Fasa è la forma adattata all’arabo del nome precedente Pasa, che continuò a comparire nelle opere geografiche medievali.",
+				"Fasa fu il luogo di nascita dello studioso e poeta sufi Ruzbihan Baqli, che in seguito insegnò a Shiraz.",
+				"Lo studioso della grammatica araba Abu Ali al-Farisi nacque a Fasa e in seguito insegnò al sovrano buyide Adud al-Dawla."
 			],
 			"de": [
-				"Eine Bauernstadt in Fars, südöstlich von Schiras."
+				"Fasa ist die an das Arabische angepasste Form des älteren Namens Pasa, der weiterhin in mittelalterlichen geografischen Werken erschien.",
+				"Fasa war der Geburtsort des Sufi-Gelehrten und Dichters Ruzbihan Baqli, der später in Shiraz lehrte.",
+				"Der Gelehrte der arabischen Grammatik Abu Ali al-Farisi wurde in Fasa geboren und unterrichtete später den buyidischen Herrscher Adud al-Dawla."
 			]
 		}
 	},
@@ -325,29 +404,38 @@
 	"gonbad-e-kavus": {
 		"city": {
 			"en": [
-				"\"The tower of Qabus\", for the tomb tower of the ruler Qabus, built in 1006 and more than 50 m high.",
-				"The tower, of plain brick, is a UNESCO site."
+				"Gonbad-e Kavus takes its name from the tower of Qabus, commemorating the Ziyarid ruler Qabus ibn Voshmgir in an inscription dated 1006.",
+				"The Gonbad-e Qabus tower has an unglazed brick shaft based on a ten-pointed star plan and capped by a conical roof.",
+				"The Gonbad-e Qabus tower entered UNESCO’s World Heritage List in 2012."
 			],
 			"it": [
-				"\"La torre di Qabus\", per la torre funeraria del sovrano Qabus, costruita nel 1006 e alta più di 50 m.",
-				"La torre, di semplice mattone, è un sito UNESCO."
+				"Gonbad-e Kavus prende il nome dalla torre di Qabus, che commemora il sovrano ziyaride Qabus ibn Voshmgir con un’iscrizione datata 1006.",
+				"La torre Gonbad-e Qabus ha un fusto di mattoni non smaltati con pianta a stella a dieci punte e copertura conica.",
+				"La torre Gonbad-e Qabus entrò nella Lista del Patrimonio Mondiale dell’UNESCO nel 2012."
 			],
 			"de": [
-				"„Der Turm des Qabus“, nach dem Grabturm des Herrschers Qabus, 1006 erbaut und über 50 m hoch.",
-				"Der Turm aus schlichtem Backstein ist ein UNESCO-Welterbe."
+				"Gonbad-e Kavus ist nach dem Turm des Qabus benannt, dessen Inschrift von 1006 an den ziyaridischen Herrscher Qabus ibn Voshmgir erinnert.",
+				"Der Turm Gonbad-e Qabus besitzt einen Schaft aus unglasierten Ziegeln auf einem zehnzackigen Sternengrundriss mit einem Kegeldach.",
+				"Der Turm Gonbad-e Qabus wurde 2012 in die UNESCO-Welterbeliste aufgenommen."
 			]
 		}
 	},
 	"gorgan": {
 		"city": {
 			"en": [
-				"Called Astarabad until 1937, when it took the name of the old province of Gorgan, Hyrcania to the Greeks."
+				"Modern Gorgan was formerly called Astarabad and received the name of the historical province and its older, separate capital under Reza Shah.",
+				"Gorgan’s Palace Museum occupies a former Pahlavi royal residence built on the foundations of a Safavid structure.",
+				"The Amir Latifi House in Gorgan, once the residence of a late-Qajar governor, now houses a handicrafts museum."
 			],
 			"it": [
-				"Si chiamò Astarabad fino al 1937, quando prese il nome dell’antica provincia di Gorgan, l’Ircania dei Greci."
+				"L’odierna Gorgan si chiamava Astarabad e sotto Reza Shah ricevette il nome della provincia storica e della sua più antica capitale, situata altrove.",
+				"Il Museo del Palazzo di Gorgan occupa un’ex residenza reale pahlavi costruita sulle fondamenta di una struttura safavide.",
+				"La casa Amir Latifi di Gorgan, già residenza di un governatore della tarda epoca qajara, ospita oggi un museo dell’artigianato."
 			],
 			"de": [
-				"Bis 1937 hieß sie Astarabad, dann nahm sie den Namen der alten Provinz Gorgan an, für die Griechen Hyrkanien."
+				"Das heutige Gorgan hieß früher Astarabad und erhielt unter Reza Schah den Namen der historischen Provinz und ihrer älteren, getrennt gelegenen Hauptstadt.",
+				"Gorgans Palastmuseum befindet sich in einer ehemaligen königlichen Pahlavi-Residenz auf den Fundamenten eines safawidischen Bauwerks.",
+				"Das Amir-Latifi-Haus in Gorgan, einst Wohnsitz eines Gouverneurs der späten Kadscharenzeit, beherbergt heute ein Handwerksmuseum."
 			]
 		}
 	},
@@ -371,16 +459,19 @@
 		},
 		"city": {
 			"en": [
-				"Avicenna, the physician and philosopher, is buried here.",
-				"By tradition, the tomb of Esther and Mordecai of the Bible is here."
+				"Hamadan’s name is recorded as Hamgmatana in Darius I’s Bisotun inscription and as Ecbatana by classical Greek authors.",
+				"The physician and philosopher Avicenna is buried in Hamadan.",
+				"A Jewish shrine in Hamadan is traditionally regarded by Persian Jews as the tomb of Esther and Mordecai."
 			],
 			"it": [
-				"Qui è sepolto Avicenna, il medico e filosofo.",
-				"Per tradizione qui si trova la tomba di Ester e Mardocheo, della Bibbia."
+				"Il nome di Hamadan è registrato come Hamgmatana nell’iscrizione di Dario I a Bisotun e come Ecbatana dagli autori greci classici.",
+				"Il medico e filosofo Avicenna è sepolto a Hamadan.",
+				"Un santuario ebraico di Hamadan è tradizionalmente considerato dagli ebrei persiani la tomba di Ester e Mardocheo."
 			],
 			"de": [
-				"Avicenna, der Arzt und Philosoph, ist hier begraben.",
-				"Der Überlieferung nach befindet sich hier das Grab von Esther und Mordechai aus der Bibel."
+				"Hamadans Name erscheint als Hamgmatana in der Bisotun-Inschrift von Darius I. und als Ekbatana bei klassischen griechischen Autoren.",
+				"Der Arzt und Philosoph Avicenna ist in Hamadan begraben.",
+				"Ein jüdisches Heiligtum in Hamadan gilt persischen Juden traditionell als Grab von Esther und Mordechai."
 			]
 		}
 	},
@@ -406,43 +497,55 @@
 	"ilam": {
 		"region": {
 			"en": [
-				"The name is sometimes linked to ancient Elam, but this is uncertain.",
-				"It saw heavy fighting in the war with Iraq, from 1980 to 1988."
+				"The territory of Ilam Province was historically known as Poshtkuh-e Lorestan before the Pahlavi-era adoption of the name Ilam.",
+				"Vali Castle and Falahati Palace in Ilam are monuments of the Qajar period.",
+				"The archaeological mound of Ali Kosh near Dehloran in Ilam Province preserves evidence of Neolithic settlement."
 			],
 			"it": [
-				"Il nome è talvolta collegato all’antico Elam, ma non è certo.",
-				"Fu teatro di duri combattimenti nella guerra con l’Iraq, dal 1980 al 1988."
+				"Il territorio della provincia di Ilam era storicamente conosciuto come Poshtkuh-e Lorestan prima dell’adozione del nome Ilam in epoca pahlavi.",
+				"Il castello Vali e il palazzo Falahati a Ilam sono monumenti dell’epoca qajara.",
+				"La collina archeologica di Ali Kosh presso Dehloran, nella provincia di Ilam, conserva testimonianze di un insediamento neolitico."
 			],
 			"de": [
-				"Der Name wird manchmal mit dem antiken Elam verbunden, aber das ist ungewiss.",
-				"Im Krieg mit dem Irak von 1980 bis 1988 war sie Schauplatz schwerer Kämpfe."
+				"Das Gebiet der Provinz Ilam war historisch als Poshtkuh-e Lorestan bekannt, bevor in der Pahlavi-Zeit der Name Ilam eingeführt wurde.",
+				"Die Vali-Burg und der Falahati-Palast in Ilam sind Bauwerke aus der Kadscharenzeit.",
+				"Der archäologische Hügel Ali Kosh bei Dehloran in der Provinz Ilam bewahrt Zeugnisse einer neolithischen Siedlung."
 			]
 		},
 		"city": {
 			"en": [
-				"The capital of Ilam province, in the Zagros."
+				"Ilam was formerly known as Hosaynabad-e Vali and received its present name in 1936.",
+				"Vali Castle in Ilam was built as a fortified seat of the local governors during the Qajar period.",
+				"Ilam’s Falahati Palace, built for governor Gholamreza Khan in 1908, was converted into an agricultural museum in 2011."
 			],
 			"it": [
-				"Il capoluogo della provincia di Ilam, sugli Zagros."
+				"Ilam era precedentemente conosciuta come Hosaynabad-e Vali e ricevette il nome attuale nel 1936.",
+				"Il castello Vali di Ilam fu costruito come sede fortificata dei governatori locali in epoca qajara.",
+				"Il palazzo Falahati di Ilam, costruito per il governatore Gholamreza Khan nel 1908, fu trasformato in museo dell’agricoltura nel 2011."
 			],
 			"de": [
-				"Die Hauptstadt der Provinz Ilam, im Zagros."
+				"Ilam hieß früher Hosaynabad-e Vali und erhielt seinen heutigen Namen 1936.",
+				"Die Vali-Burg in Ilam entstand in der Kadscharenzeit als befestigter Sitz der örtlichen Gouverneure.",
+				"Ilams Falahati-Palast, 1908 für Gouverneur Gholamreza Khan errichtet, wurde 2011 in ein Landwirtschaftsmuseum umgewandelt."
 			]
 		}
 	},
 	"isfahan": {
 		"region": {
 			"en": [
-				"Named for its city, a name usually traced to an old word for army, as a gathering place of troops.",
-				"In the village of Abyaneh, the houses are built of red earth and the women wear rose-patterned scarves."
+				"The name Isfahan appears as Spahan in Sasanian inscriptions describing a province, before it became established as a city name.",
+				"Abyaneh in Isfahan Province is known for houses coated in red earth.",
+				"Kashan in Isfahan Province maintains rose-growing and rose-water-making traditions celebrated at an annual festival."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome fatto risalire di solito a un’antica parola per \"esercito\", come luogo di raduno delle truppe.",
-				"Nel villaggio di Abyaneh le case sono di terra rossa e le donne portano foulard a fiori di rosa."
+				"Il nome Isfahan compare come Spahan nelle iscrizioni sasanidi che descrivono una provincia, prima di affermarsi come nome di una città.",
+				"Abyaneh, nella provincia di Isfahan, è conosciuta per le case rivestite di terra rossa.",
+				"Kashan, nella provincia di Isfahan, conserva tradizioni di coltivazione delle rose e produzione di acqua di rose celebrate in una festa annuale."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name, der meist auf ein altes Wort für Heer zurückgeführt wird, weil sie ein Sammelplatz von Truppen war.",
-				"Im Dorf Abyaneh sind die Häuser aus roter Erde gebaut, und die Frauen tragen Kopftücher mit Rosenmuster."
+				"Der Name Isfahan erscheint als Spahan in sasanidischen Inschriften für eine Provinz, bevor er sich als Stadtname durchsetzte.",
+				"Abyaneh in der Provinz Isfahan ist für seine mit roter Erde verputzten Häuser bekannt.",
+				"Kashan in der Provinz Isfahan bewahrt Traditionen des Rosenanbaus und der Rosenwasserherstellung, die bei einem jährlichen Fest gefeiert werden."
 			]
 		},
 		"city": {
@@ -466,13 +569,19 @@
 	"karaj": {
 		"city": {
 			"en": [
-				"It grew in a few decades from a small town into one of Iran’s largest cities, next to the capital."
+				"Karaj’s name is also written Kerej or Karadj.",
+				"The reception room of Karaj’s Soleymaniyeh Palace was decorated with two large paintings by Abdollah Khan Naqqashbashi depicting the shah and his relatives.",
+				"A farming school was established in the gardens and surviving buildings of Karaj’s Soleymaniyeh Palace in 1917."
 			],
 			"it": [
-				"In pochi decenni è cresciuta da piccola città a una delle più grandi dell’Iran, accanto alla capitale."
+				"Il nome di Karaj è scritto anche Kerej o Karadj.",
+				"La sala di ricevimento del palazzo Soleymaniyeh di Karaj fu decorata con due grandi dipinti di Abdollah Khan Naqqashbashi raffiguranti lo scià e i suoi parenti.",
+				"Una scuola agraria fu istituita nei giardini e negli edifici superstiti del palazzo Soleymaniyeh di Karaj nel 1917."
 			],
 			"de": [
-				"Die Stadt gleich neben der Hauptstadt wuchs in wenigen Jahrzehnten von einer Kleinstadt zu einer der größten Städte Irans."
+				"Karajs Name wird auch Kerej oder Karadj geschrieben.",
+				"Der Empfangsraum des Soleymaniyeh-Palastes in Karaj wurde mit zwei großen Gemälden von Abdollah Khan Naqqashbashi geschmückt, die den Schah und seine Angehörigen zeigen.",
+				"In den Gärten und erhaltenen Gebäuden des Soleymaniyeh-Palastes in Karaj wurde 1917 eine Landwirtschaftsschule eingerichtet."
 			]
 		}
 	},
@@ -498,13 +607,19 @@
 	"kashmar": {
 		"city": {
 			"en": [
-				"A legendary cypress here, said to have been planted by Zoroaster, was cut down on a caliph’s orders in the 9th century."
+				"Kashmar was previously known as Torshiz before receiving its present name in the Pahlavi period.",
+				"Zoroastrian tradition connects the famous cypress of the historical Kashmar area with Zoroaster and King Vishtaspa.",
+				"The political cleric Hasan Modarres was murdered in police custody in Kashmar in 1937."
 			],
 			"it": [
-				"Un leggendario cipresso di qui, che si diceva piantato da Zoroastro, fu abbattuto per ordine di un califfo nel IX secolo."
+				"Kashmar era precedentemente conosciuta come Torshiz prima di ricevere il nome attuale in epoca pahlavi.",
+				"La tradizione zoroastriana collega il celebre cipresso dell’area storica di Kashmar a Zoroastro e al re Vishtaspa.",
+				"Il religioso e politico Hasan Modarres fu assassinato mentre era sotto custodia della polizia a Kashmar nel 1937."
 			],
 			"de": [
-				"Eine legendäre Zypresse, die Zarathustra gepflanzt haben soll, wurde hier im 9. Jahrhundert auf Befehl eines Kalifen gefällt."
+				"Kashmar hieß früher Torshiz, bevor es in der Pahlavi-Zeit seinen heutigen Namen erhielt.",
+				"Die zoroastrische Überlieferung verbindet die berühmte Zypresse des historischen Gebiets Kashmar mit Zarathustra und König Vishtaspa.",
+				"Der politische Geistliche Hasan Modarres wurde 1937 in Polizeigewahrsam in Kashmar ermordet."
 			]
 		}
 	},
@@ -528,69 +643,93 @@
 		},
 		"city": {
 			"en": [
-				"The Ganjali Khan complex, a square with a bathhouse and a bazaar, was built in the early 17th century.",
-				"Its carpets have been famous since Safavid times."
+				"Early Muslim geographers knew Kerman as Bardasir or Gowashir, forms derived from the older name Beh-Ardashir.",
+				"Kerman’s Ganjali Khan complex was built under a Safavid governor and includes a square, bazaar, bathhouse, mosque and mint.",
+				"Kerman’s knotted-pile carpets are associated with fine down wool and vibrant colours produced by skilled local dyers."
 			],
 			"it": [
-				"Il complesso di Ganjali Khan, una piazza con un bagno e un bazar, fu costruito all’inizio del Seicento.",
-				"I suoi tappeti sono famosi dall’epoca safavide."
+				"I primi geografi musulmani conoscevano Kerman come Bardasir o Gowashir, forme derivate dal nome precedente Beh-Ardashir.",
+				"Il complesso Ganjali Khan di Kerman fu costruito sotto un governatore safavide e comprende una piazza, un bazar, un bagno, una moschea e una zecca.",
+				"I tappeti annodati di Kerman sono associati a lana finissima e colori vivaci prodotti da abili tintori locali."
 			],
 			"de": [
-				"Die Anlage Ganjali Khan, ein Platz mit Badehaus und Basar, wurde im frühen 17. Jahrhundert erbaut.",
-				"Ihre Teppiche sind seit der Safawidenzeit berühmt."
+				"Frühe muslimische Geografen kannten Kerman als Bardasir oder Gowashir, Formen des älteren Namens Beh-Ardashir.",
+				"Kermans Ganjali-Khan-Komplex entstand unter einem safawidischen Gouverneur und umfasst einen Platz, Basar, ein Badehaus, eine Moschee und eine Münzstätte.",
+				"Kermans Knüpfteppiche sind mit feiner Flaumwolle und leuchtenden Farben geschickter örtlicher Färber verbunden."
 			]
 		}
 	},
 	"kermanshah": {
 		"region": {
 			"en": [
-				"Named for its city, often said to take its name from a Sasanian king, Bahram IV, called Kermanshah; the derivation is uncertain.",
-				"The inscription of Darius I at Behistun, in three languages, was the key to reading cuneiform; it is a UNESCO site."
+				"Kermanshah Province was officially called Bakhtaran after the 1979 revolution before its historical name was restored in the early 1990s.",
+				"Darius I’s inscription at Bisotun in Kermanshah Province records his victories in Old Persian, Elamite and Babylonian and helped scholars decipher cuneiform.",
+				"Taq-e Bostan in Kermanshah Province preserves Sasanian rock reliefs, including scenes of royal hunting and investiture."
 			],
 			"it": [
-				"Prende il nome dalla sua città, che si dice lo debba a un re sasanide, Bahram IV, chiamato Kermanshah; l’etimologia è incerta.",
-				"L’iscrizione di Dario I a Behistun, in tre lingue, fu la chiave per decifrare il cuneiforme; è un sito UNESCO."
+				"La provincia di Kermanshah fu chiamata ufficialmente Bakhtaran dopo la rivoluzione del 1979, prima del ripristino del nome storico agli inizi degli anni Novanta.",
+				"L’iscrizione di Dario I a Bisotun, nella provincia di Kermanshah, racconta le sue vittorie in antico persiano, elamico e babilonese e aiutò gli studiosi a decifrare il cuneiforme.",
+				"Taq-e Bostan, nella provincia di Kermanshah, conserva rilievi rupestri sasanidi, comprese scene di caccia e investitura reale."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, deren Name oft auf einen sasanidischen König, Bahram IV., zurückgeführt wird, der Kermanschah hieß; die Herleitung ist ungewiss.",
-				"Die Inschrift von Darius I. bei Bisotun in drei Sprachen war der Schlüssel zur Entzifferung der Keilschrift; sie ist ein UNESCO-Welterbe."
+				"Die Provinz Kermanshah hieß nach der Revolution von 1979 amtlich Bakhtaran, bevor ihr historischer Name Anfang der 1990er-Jahre wiederhergestellt wurde.",
+				"Die Inschrift von Darius I. in Bisotun in der Provinz Kermanshah schildert seine Siege auf Altpersisch, Elamisch und Babylonisch und half bei der Entzifferung der Keilschrift.",
+				"Taq-e Bostan in der Provinz Kermanshah bewahrt sasanidische Felsreliefs, darunter Szenen königlicher Jagd und Investitur."
 			]
 		},
 		"city": {
 			"en": [
-				"At Taq-e Bostan, Sasanian kings had their hunts and their coronations carved into the rock."
+				"Kermanshah was officially called Bakhtaran after the 1979 revolution before its historical name was restored in the early 1990s.",
+				"Taq-e Bostan in Kermanshah preserves Sasanian rock reliefs showing royal hunting and investiture scenes.",
+				"Kermanshah’s Tekyeh Moaven al-Molk is decorated with tiles depicting the Karbala story alongside Persian kings and imagery inspired by Persepolis."
 			],
 			"it": [
-				"A Taq-e Bostan i re sasanidi fecero scolpire nella roccia le loro cacce e le loro incoronazioni."
+				"Kermanshah fu chiamata ufficialmente Bakhtaran dopo la rivoluzione del 1979, prima del ripristino del nome storico agli inizi degli anni Novanta.",
+				"Taq-e Bostan a Kermanshah conserva rilievi rupestri sasanidi raffiguranti scene di caccia e investitura reale.",
+				"Il Tekyeh Moaven al-Molk di Kermanshah è decorato con piastrelle raffiguranti la storia di Karbala accanto a re persiani e immagini ispirate a Persepoli."
 			],
 			"de": [
-				"In Taq-e Bostan ließen sasanidische Könige ihre Jagden und Krönungen in den Fels meißeln."
+				"Kermanshah hieß nach der Revolution von 1979 amtlich Bakhtaran, bevor sein historischer Name Anfang der 1990er-Jahre wiederhergestellt wurde.",
+				"Taq-e Bostan in Kermanshah bewahrt sasanidische Felsreliefs mit königlichen Jagd- und Investiturszenen.",
+				"Kermanshahs Tekyeh Moaven al-Molk ist mit Fliesen geschmückt, die die Geschichte von Kerbela neben persischen Königen und von Persepolis angeregten Motiven darstellen."
 			]
 		}
 	},
 	"khomeini-shahr": {
 		"city": {
 			"en": [
-				"It was called Homayunshahr until the revolution of 1979, when it was renamed for Ayatollah Khomeini."
+				"Khomeini Shahr was previously called Homayunshahr and was renamed after Ayatollah Khomeini following the 1979 revolution.",
+				"The communities of Khouzan, Foroushan and Varnosfaderan formed the basis of Khomeini Shahr’s urban settlement.",
+				"The Qajar-era Sartip Sedehi House in Khomeini Shahr preserves stucco, mirror work, carved wood and coloured sash windows."
 			],
 			"it": [
-				"Si chiamava Homayunshahr fino alla rivoluzione del 1979, quando fu ribattezzata in onore dell’ayatollah Khomeini."
+				"Khomeini Shahr si chiamava precedentemente Homayunshahr e fu ribattezzata in onore dell’ayatollah Khomeini dopo la rivoluzione del 1979.",
+				"Le comunità di Khouzan, Foroushan e Varnosfaderan formarono la base dell’insediamento urbano di Khomeini Shahr.",
+				"La casa Sartip Sedehi di Khomeini Shahr, di epoca qajara, conserva stucchi, specchi, legno intagliato e finestre a saliscendi colorate."
 			],
 			"de": [
-				"Bis zur Revolution von 1979 hieß sie Homayunschahr; dann wurde sie nach Ayatollah Khomeini umbenannt."
+				"Khomeini Shahr hieß früher Homayunshahr und wurde nach der Revolution von 1979 nach Ayatollah Khomeini benannt.",
+				"Die Gemeinschaften Khouzan, Foroushan und Varnosfaderan bildeten die Grundlage der städtischen Siedlung Khomeini Shahr.",
+				"Das Sartip-Sedehi-Haus aus der Kadscharenzeit in Khomeini Shahr bewahrt Stuck, Spiegelarbeiten, Holzschnitzereien und farbige Schiebefenster."
 			]
 		}
 	},
 	"khorramabad": {
 		"city": {
 			"en": [
-				"The castle of Falak-ol-Aflak, on a hill in the middle of the town, goes back to Sasanian times."
+				"Khorramabad is a Persian name meaning a pleasant or flourishing settlement.",
+				"Khorramabad’s Falak-ol-Aflak Castle has served as a military headquarters and prison and now houses archaeological and ethnographic museums.",
+				"Khorramabad was a capital of the atabegs of Little Lorestan from the twelfth to the late sixteenth century."
 			],
 			"it": [
-				"Il castello di Falak-ol-Aflak, su una collina in mezzo alla città, risale all’epoca sasanide."
+				"Khorramabad è un nome persiano che significa insediamento piacevole o fiorente.",
+				"Il castello Falak-ol-Aflak di Khorramabad servì come quartier generale militare e prigione e oggi ospita musei archeologici ed etnografici.",
+				"Khorramabad fu una capitale degli atabeg del Piccolo Lorestan dal XII alla fine del XVI secolo."
 			],
 			"de": [
-				"Die Burg Falak-ol-Aflak auf einem Hügel mitten in der Stadt geht auf die Sasanidenzeit zurück."
+				"Khorramabad ist ein persischer Name mit der Bedeutung angenehme oder blühende Siedlung.",
+				"Die Burg Falak-ol-Aflak in Khorramabad diente als Militärhauptquartier und Gefängnis und beherbergt heute archäologische und volkskundliche Museen.",
+				"Khorramabad war vom zwölften bis ins späte 16. Jahrhundert eine Hauptstadt der Atabegs von Klein-Lorestan."
 			]
 		}
 	},
@@ -616,180 +755,228 @@
 	"khvoy": {
 		"city": {
 			"en": [
-				"The battle of Chaldiran, in 1514, in which the Ottomans defeated the Safavids, was fought not far from the town.",
-				"A tower in the town is said to mark the grave of Shams of Tabriz, the teacher of Rumi."
+				"Khvoy was recorded as Khowayy by ninth-century geographers and is also commonly written Khoy.",
+				"A tomb in Khvoy is traditionally associated with Shams of Tabriz, the spiritual teacher of Rumi.",
+				"Thirteenth-century accounts describe Khvoy as a walled city producing silk goods."
 			],
 			"it": [
-				"La battaglia di Chaldiran, nel 1514, in cui gli Ottomani sconfissero i Safavidi, fu combattuta non lontano dalla città.",
-				"Si dice che una torre della città segni la tomba di Shams di Tabriz, il maestro di Rumi."
+				"Khvoy fu registrata come Khowayy dai geografi del IX secolo ed è comunemente scritta anche Khoy.",
+				"Una tomba di Khvoy è tradizionalmente associata a Shams di Tabriz, il maestro spirituale di Rumi.",
+				"Le testimonianze del XIII secolo descrivono Khvoy come una città fortificata che produceva manufatti di seta."
 			],
 			"de": [
-				"Die Schlacht von Tschaldiran 1514, in der die Osmanen die Safawiden besiegten, wurde nicht weit von der Stadt ausgetragen.",
-				"Ein Turm in der Stadt soll das Grab von Schams von Täbris markieren, dem Lehrer Rumis."
+				"Khvoy wurde von Geografen des neunten Jahrhunderts als Khowayy verzeichnet und wird häufig auch Khoy geschrieben.",
+				"Ein Grab in Khvoy wird traditionell mit Schams von Täbris verbunden, dem spirituellen Lehrer Rumis.",
+				"Berichte aus dem 13. Jahrhundert beschreiben Khvoy als ummauerte Stadt mit einer Produktion von Seidenwaren."
 			]
 		}
 	},
 	"kohgiluyeh-and-boyer-ahmad": {
 		"region": {
 			"en": [
-				"Named for the land of Kohgiluyeh and the Boyer-Ahmad tribe.",
-				"Its mountains are covered in the oak forests of the Zagros."
+				"Kohgiluyeh and Boyer-Ahmad combines the historical regional name Kohgiluyeh with that of the Boyer-Ahmadi tribal group.",
+				"The Boyer-Ahmadi communities speak a Luri variety belonging to the Southwestern Iranian language group.",
+				"Dogur Dopa near Shush village in Kohgiluyeh and Boyer-Ahmad consists of two limestone pillars whose original function remains debated."
 			],
 			"it": [
-				"Prende il nome dalla regione del Kohgiluyeh e dalla tribù Boyer-Ahmad.",
-				"I suoi monti sono coperti dai querceti degli Zagros."
+				"Kohgiluyeh e Boyer-Ahmad unisce il nome della regione storica del Kohgiluyeh a quello del gruppo tribale Boyer-Ahmadi.",
+				"Le comunità Boyer-Ahmadi parlano una varietà luri appartenente al gruppo delle lingue iraniche sudoccidentali.",
+				"Dogur Dopa, presso il villaggio di Shush nel Kohgiluyeh e Boyer-Ahmad, consiste in due pilastri calcarei la cui funzione originaria rimane discussa."
 			],
 			"de": [
-				"Nach dem Land Kohgiluyeh und dem Stamm der Boyer-Ahmad benannt.",
-				"Ihre Berge sind mit den Eichenwäldern des Zagros bedeckt."
+				"Kohgiluyeh und Boyer-Ahmad verbindet den historischen Regionalnamen Kohgiluyeh mit dem Namen der Stammesgruppe Boyer-Ahmadi.",
+				"Die Boyer-Ahmadi sprechen eine Luri-Varietät aus der Gruppe der südwestiranischen Sprachen.",
+				"Dogur Dopa beim Dorf Shush in Kohgiluyeh und Boyer-Ahmad besteht aus zwei Kalksteinpfeilern, deren ursprüngliche Funktion umstritten ist."
 			]
 		}
 	},
 	"kurdistan": {
 		"region": {
 			"en": [
-				"\"The land of the Kurds\".",
-				"The stepped villages of Hawraman, cut into steep valleys, are a UNESCO site."
+				"Kurdistan means land of the Kurds.",
+				"The stepped villages and agricultural terraces of Hawraman in Kurdistan Province form part of a UNESCO World Heritage cultural landscape shared with Kermanshah Province.",
+				"Sanandaj in Kurdistan Province joined UNESCO’s Creative Cities Network for music in 2019, reflecting traditions including the daf frame drum."
 			],
 			"it": [
-				"\"La terra dei curdi\".",
-				"I villaggi a gradoni dell’Hawraman, incastonati in valli ripide, sono un sito UNESCO."
+				"Kurdistan significa terra dei curdi.",
+				"I villaggi a gradoni e i terrazzamenti agricoli dell’Hawraman nella provincia del Kurdistan fanno parte di un paesaggio culturale del Patrimonio Mondiale dell’UNESCO condiviso con la provincia di Kermanshah.",
+				"Sanandaj, nella provincia del Kurdistan, entrò nella Rete delle Città Creative dell’UNESCO per la musica nel 2019, esprimendo tradizioni che comprendono il tamburo a cornice daf."
 			],
 			"de": [
-				"„Das Land der Kurden“.",
-				"Die Stufendörfer von Hawraman, in steile Täler gebaut, sind ein UNESCO-Welterbe."
+				"Kurdistan bedeutet Land der Kurden.",
+				"Die Stufendörfer und landwirtschaftlichen Terrassen von Hawraman in der Provinz Kurdistan gehören zu einer UNESCO-Kulturlandschaft, die sich auch in die Provinz Kermanshah erstreckt.",
+				"Sanandaj in der Provinz Kurdistan wurde 2019 UNESCO-Kreativstadt der Musik und vertritt dabei Traditionen wie die Rahmentrommel Daf."
 			]
 		}
 	},
 	"lorestan": {
 		"region": {
 			"en": [
-				"\"The land of the Lurs\", the people who live here.",
-				"The Luristan bronzes, horse bits, weapons and idols of the early first millennium BC, are in museums around the world."
+				"Lorestan means land of the Lurs.",
+				"The Iron Age metalwork known as Luristan bronzes includes decorated weapons and horse equipment from a historical region spanning modern Lorestan and Ilam.",
+				"Falak-ol-Aflak Castle in Khorramabad was historically known as Shapur Khast Castle before its present name became common in Qajar times."
 			],
 			"it": [
-				"\"La terra dei Luri\", il popolo che vi abita.",
-				"I bronzi del Luristan, morsi di cavallo, armi e idoli dell’inizio del I millennio a.C., sono nei musei di tutto il mondo."
+				"Lorestan significa terra dei Luri.",
+				"La produzione metallurgica dell’età del ferro conosciuta come bronzi del Luristan comprende armi decorate e finimenti per cavalli provenienti da una regione storica estesa tra gli attuali Lorestan e Ilam.",
+				"Il castello Falak-ol-Aflak di Khorramabad era storicamente conosciuto come castello di Shapur Khast prima che il nome attuale si diffondesse in epoca qajara."
 			],
 			"de": [
-				"„Das Land der Luren“, des Volkes, das hier lebt.",
-				"Die Luristan-Bronzen – Pferdegebisse, Waffen und Götzenbilder aus dem frühen ersten Jahrtausend v. Chr. – befinden sich in Museen auf der ganzen Welt."
+				"Lorestan bedeutet Land der Luren.",
+				"Die als Luristan-Bronzen bekannten Metallarbeiten der Eisenzeit umfassen verzierte Waffen und Pferdegeschirr aus einer historischen Region, die das heutige Lorestan und Ilam einschloss.",
+				"Die Burg Falak-ol-Aflak in Khorramabad hieß historisch Shapur-Khast-Burg, bevor ihr heutiger Name in der Kadscharenzeit gebräuchlich wurde."
 			]
 		}
 	},
 	"mahabad": {
 		"city": {
 			"en": [
-				"In 1946 it was the capital of the Republic of Mahabad, a short-lived Kurdish state."
+				"Mahabad was formerly known as Sauj Bulaq, also called Sablakh in Kurdish.",
+				"Mahabad was the centre of a short-lived Kurdish republic proclaimed in January 1946 and ended by the Iranian army’s return that December.",
+				"Kurdish halparke dancing in Mahabad accompanies ceremonies with traditional instruments including flutes and the surna."
 			],
 			"it": [
-				"Nel 1946 fu la capitale della Repubblica di Mahabad, uno stato curdo di breve durata."
+				"Mahabad era precedentemente conosciuta come Sauj Bulaq, chiamata anche Sablakh in curdo.",
+				"Mahabad fu il centro di una repubblica curda di breve durata, proclamata nel gennaio 1946 e terminata con il ritorno dell’esercito iraniano nel dicembre dello stesso anno.",
+				"La danza curda halparke a Mahabad accompagna le cerimonie con strumenti tradizionali, tra cui flauti e surna."
 			],
 			"de": [
-				"1946 war sie die Hauptstadt der Republik Mahabad, eines kurzlebigen kurdischen Staates."
+				"Mahabad hieß früher Sauj Bulaq und wurde auf Kurdisch auch Sablakh genannt.",
+				"Mahabad war das Zentrum einer kurzlebigen kurdischen Republik, die im Januar 1946 ausgerufen wurde und mit der Rückkehr der iranischen Armee im Dezember endete.",
+				"Der kurdische Halparke-Tanz begleitet in Mahabad Zeremonien mit traditionellen Instrumenten wie Flöten und Surna."
 			]
 		}
 	},
 	"malayer": {
 		"city": {
 			"en": [
-				"It is known for its grapes and raisins."
+				"Malayer was formerly known as Dowlatabad.",
+				"The World Crafts Council recognises Malayer as a World Craft City for carved wooden furniture.",
+				"Malayer is known for its grapes and raisins, alongside its traditional woodworking crafts."
 			],
 			"it": [
-				"È nota per la sua uva e la sua uvetta."
+				"Malayer era precedentemente conosciuta come Dowlatabad.",
+				"Il Consiglio Mondiale dell’Artigianato riconosce Malayer come Città Mondiale dell’Artigianato per i mobili in legno intagliato.",
+				"Malayer è conosciuta per l’uva e l’uvetta, oltre che per i mestieri tradizionali della lavorazione del legno."
 			],
 			"de": [
-				"Sie ist für ihre Trauben und Rosinen bekannt."
+				"Malayer hieß früher Dowlatabad.",
+				"Der World Crafts Council erkennt Malayer als Weltstadt des Kunsthandwerks für geschnitzte Holzmöbel an.",
+				"Malayer ist neben seinem traditionellen Holzhandwerk für Trauben und Rosinen bekannt."
 			]
 		}
 	},
 	"maragheh": {
 		"city": {
 			"en": [
-				"The Mongol ruler Hulagu built an observatory here in 1259 for the astronomer Nasir al-Din Tusi."
+				"The medieval geographer Yaqut recorded an older name of Maragheh as Afrazahrud.",
+				"Hulagu funded Maragheh’s observatory, established in 1259 under the astronomer Nasir al-Din Tusi.",
+				"Maragheh served as a summer capital of the Mongol Ilkhanid rulers."
 			],
 			"it": [
-				"Il sovrano mongolo Hulagu vi costruì nel 1259 un osservatorio per l’astronomo Nasir al-Din Tusi."
+				"Il geografo medievale Yaqut registrò un nome precedente di Maragheh come Afrazahrud.",
+				"Hulagu finanziò l’osservatorio di Maragheh, fondato nel 1259 sotto la direzione dell’astronomo Nasir al-Din Tusi.",
+				"Maragheh fu una capitale estiva dei sovrani mongoli ilkhanidi."
 			],
 			"de": [
-				"Der mongolische Herrscher Hülegü ließ hier 1259 für den Astronomen Nasir al-Din Tusi eine Sternwarte bauen."
+				"Der mittelalterliche Geograf Yaqut überlieferte Afrazahrud als älteren Namen von Maragheh.",
+				"Hülegü finanzierte das 1259 unter dem Astronomen Nasir al-Din Tusi gegründete Observatorium von Maragheh.",
+				"Maragheh diente den mongolischen Ilchanen als Sommerhauptstadt."
 			]
 		}
 	},
 	"markazi": {
 		"region": {
 			"en": [
-				"\"Central\", for its place in the middle of Iran.",
-				"Its Farahan and Sarouk carpets were among the Persian carpets most prized in the West around 1900."
+				"Markazi means central in Persian.",
+				"Farahan in Markazi Province is associated with carpets bearing the Sarouk design, named after a local village.",
+				"The archaeological site of Khorheh near Mahallat preserves two stone columns with Ionic-style capitals."
 			],
 			"it": [
-				"\"Centrale\", per la sua posizione al centro dell’Iran.",
-				"I suoi tappeti Farahan e Sarouk erano, intorno al 1900, tra i tappeti persiani più apprezzati in Occidente."
+				"Markazi significa centrale in persiano.",
+				"Il Farahan nella provincia di Markazi è associato ai tappeti con il motivo Sarouk, che prende il nome da un villaggio locale.",
+				"Il sito archeologico di Khorheh presso Mahallat conserva due colonne di pietra con capitelli di stile ionico."
 			],
 			"de": [
-				"„Zentral“, nach ihrer Lage in der Mitte Irans.",
-				"Ihre Farahan- und Sarouk-Teppiche gehörten um 1900 zu den im Westen begehrtesten persischen Teppichen."
+				"Markazi bedeutet auf Persisch zentral.",
+				"Farahan in der Provinz Markazi ist mit Teppichen im Sarouk-Muster verbunden, das nach einem örtlichen Dorf benannt ist.",
+				"Die archäologische Stätte Khorheh bei Mahallat bewahrt zwei Steinsäulen mit Kapitellen im ionischen Stil."
 			]
 		}
 	},
 	"marvdasht": {
 		"city": {
 			"en": [
-				"Persepolis lies on its edge."
+				"Modern Marvdasht shares its name with the historical plain recorded as Merdasht by nineteenth-century travellers.",
+				"Modern Marvdasht developed around a sugar factory established in the mid-1930s.",
+				"Persepolis near Marvdasht was founded by Darius I in 518 BC and preserves the monumental remains of Achaemenid royal architecture."
 			],
 			"it": [
-				"Persepoli si trova alle sue porte."
+				"La moderna Marvdasht condivide il nome con la pianura storica registrata come Merdasht dai viaggiatori dell’Ottocento.",
+				"La moderna Marvdasht si sviluppò intorno a uno zuccherificio fondato a metà degli anni Trenta.",
+				"Persepoli, presso Marvdasht, fu fondata da Dario I nel 518 a.C. e conserva resti monumentali dell’architettura reale achemenide."
 			],
 			"de": [
-				"Persepolis liegt an ihrem Rand."
+				"Das moderne Marvdasht teilt seinen Namen mit der historischen Ebene, die Reisende des 19. Jahrhunderts als Merdasht bezeichneten.",
+				"Das moderne Marvdasht entwickelte sich um eine Mitte der 1930er-Jahre gegründete Zuckerfabrik.",
+				"Persepolis bei Marvdasht wurde 518 vor Christus von Darius I. gegründet und bewahrt monumentale Reste achämenidischer Königsarchitektur."
 			]
 		}
 	},
 	"mashhad": {
 		"city": {
 			"en": [
-				"\"The place of martyrdom\", for Imam Reza, who died here in 818.",
-				"His shrine draws millions of pilgrims a year, more than any other place in Iran."
+				"Mashhad means place of martyrdom, referring to Imam Reza, whose tomb gave the growing city its name.",
+				"Gowhar Shad, wife of the Timurid ruler Shahrukh, funded Mashhad’s Goharshad Mosque, whose foundation inscription is dated 1418.",
+				"The naqqara-khana tradition at Mashhad’s Imam Reza shrine uses long trumpets and kettledrums for ceremonial music."
 			],
 			"it": [
-				"\"Il luogo del martirio\", per l’imam Reza, che vi morì nell’818.",
-				"Il suo santuario attira milioni di pellegrini ogni anno, più di qualsiasi altro luogo dell’Iran."
+				"Mashhad significa luogo del martirio e si riferisce all’imam Reza, la cui tomba diede il nome alla città che vi si sviluppò.",
+				"Gowhar Shad, moglie del sovrano timuride Shahrukh, finanziò la moschea Goharshad di Mashhad, la cui iscrizione di fondazione è datata 1418.",
+				"La tradizione della naqqara-khana nel santuario dell’imam Reza a Mashhad usa lunghe trombe e timpani per la musica cerimoniale."
 			],
 			"de": [
-				"„Der Ort des Martyriums“, nach Imam Reza, der hier 818 starb.",
-				"Sein Schrein zieht jährlich Millionen Pilger an, mehr als jeder andere Ort in Iran."
+				"Mashhad bedeutet Ort des Martyriums und bezieht sich auf Imam Reza, dessen Grab der heranwachsenden Stadt ihren Namen gab.",
+				"Gowhar Shad, die Frau des timuridischen Herrschers Shahrukh, finanzierte Mashhads Goharshad-Moschee, deren Stiftungsinschrift auf 1418 datiert ist.",
+				"Die Naqqara-Khana-Tradition am Imam-Reza-Heiligtum in Mashhad verwendet lange Trompeten und Kesselpauken für Zeremonialmusik."
 			]
 		}
 	},
 	"masjed-soleyman": {
 		"city": {
 			"en": [
-				"In 1908, oil was struck here, the first in the Middle East.",
-				"\"Solomon’s mosque\", said to be a name given to the ruins of an ancient temple on the site."
+				"Masjed Soleyman means Solomon’s mosque, a name associated with ancient temple ruins near the oilfield.",
+				"Oil was struck at Masjed Soleyman on 26 May 1908, beginning the development of Iran’s commercial petroleum industry.",
+				"Masjed Soleyman’s Well Number One is preserved as a museum site with historic drilling equipment."
 			],
 			"it": [
-				"Nel 1908 qui fu trovato il petrolio, il primo del Medio Oriente.",
-				"\"La moschea di Salomone\", un nome che si dice dato alle rovine di un antico tempio sul luogo."
+				"Masjed Soleyman significa moschea di Salomone, un nome associato alle rovine di un antico tempio presso il giacimento petrolifero.",
+				"Il petrolio fu trovato a Masjed Soleyman il 26 maggio 1908, avviando lo sviluppo dell’industria petrolifera commerciale iraniana.",
+				"Il Pozzo Numero Uno di Masjed Soleyman è conservato come sito museale con attrezzature storiche di perforazione."
 			],
 			"de": [
-				"1908 stieß man hier als Erstes im Nahen Osten auf Öl.",
-				"„Moschee Salomos“, angeblich ein Name, der den Ruinen eines antiken Tempels an dieser Stelle gegeben wurde."
+				"Masjed Soleyman bedeutet Salomons Moschee, ein Name, der mit antiken Tempelruinen beim Ölfeld verbunden ist.",
+				"Am 26. Mai 1908 wurde in Masjed Soleyman Erdöl gefunden, womit die Entwicklung der kommerziellen iranischen Erdölindustrie begann.",
+				"Bohrloch Nummer Eins in Masjed Soleyman ist als Museumsstätte mit historischen Bohrgeräten erhalten."
 			]
 		}
 	},
 	"mazandaran": {
 		"region": {
 			"en": [
-				"In the Shahnameh, Iran’s national epic, Mazandaran is the land of the demons; its older name was Tabaristan.",
-				"Rice and oranges grow on its humid plain, a green world unlike the dry plateau beyond the mountains."
+				"Mazandaran was historically known as Tabaristan, a region whose boundaries differed from those of the modern province.",
+				"Parts of Mazandaran’s Hyrcanian forests belong to a UNESCO World Heritage property protecting ancient temperate broad-leaved forest ecosystems.",
+				"The Veresk Bridge carries the Trans-Iranian Railway through Mazandaran’s mountains."
 			],
 			"it": [
-				"Nello Shahnameh, l’epica nazionale iraniana, il Mazandaran è la terra dei demoni; il suo nome più antico era Tabaristan.",
-				"Sulla sua pianura umida crescono riso e arance, un mondo verde diverso dall’altopiano arido oltre i monti."
+				"Il Mazandaran era storicamente conosciuto come Tabaristan, una regione dai confini diversi da quelli della provincia moderna.",
+				"Parti delle foreste ircaniche del Mazandaran appartengono a un sito del Patrimonio Mondiale dell’UNESCO che protegge antichi ecosistemi forestali temperati di latifoglie.",
+				"Il ponte di Veresk permette alla ferrovia transiraniana di attraversare i monti del Mazandaran."
 			],
 			"de": [
-				"Im Schahname, Irans Nationalepos, ist Mazandaran das Land der Dämonen; sein älterer Name war Tabaristan.",
-				"Auf seiner feuchten Ebene wachsen Reis und Orangen, eine grüne Welt, die so ganz anders ist als die trockene Hochebene jenseits der Berge."
+				"Mazandaran war historisch als Tabaristan bekannt, eine Region mit anderen Grenzen als die heutige Provinz.",
+				"Teile von Mazandarans hyrkanischen Wäldern gehören zu einer UNESCO-Welterbestätte zum Schutz alter gemäßigter Laubwaldökosysteme.",
+				"Die Veresk-Brücke führt die Transiranische Eisenbahn durch die Berge Mazandarans."
 			]
 		}
 	},
@@ -815,102 +1002,129 @@
 	"north-khorasan": {
 		"region": {
 			"en": [
-				"Khorasan is Middle Persian for \"where the sun comes from\", the east; the old province was split in three in 2004.",
-				"Many of its people are Kurds whose ancestors were moved here by the Safavid shahs to guard the frontier."
+				"North Khorasan was created in 2004 from historical Khorasan, whose name refers to the rising sun or the east.",
+				"Kurdish communities around Bojnurd and Shirvan include descendants of tribes relocated to Khorasan under the Safavids.",
+				"Esfarayen hosts traditional bachokheh wrestling contests, in which competitors wear a strong jacket called a chukha."
 			],
 			"it": [
-				"Khorasan in medio persiano significa \"da dove viene il sole\", l’oriente; l’antica provincia fu divisa in tre nel 2004.",
-				"Molti dei suoi abitanti sono curdi, i cui antenati furono trasferiti qui dagli scià safavidi per sorvegliare la frontiera."
+				"Il Khorasan settentrionale fu creato nel 2004 dal Khorasan storico, il cui nome richiama il sole nascente o l’oriente.",
+				"Le comunità curde intorno a Bojnurd e Shirvan comprendono discendenti di tribù trasferite nel Khorasan sotto i Safavidi.",
+				"Esfarayen ospita gare tradizionali di lotta bachokheh, in cui i concorrenti indossano una robusta giacca chiamata chukha."
 			],
 			"de": [
-				"Chorasan ist mittelpersisch für „woher die Sonne kommt“, den Osten; die alte Provinz wurde 2004 in drei geteilt.",
-				"Viele ihrer Bewohner sind Kurden, deren Vorfahren von den safawidischen Schahs hierher umgesiedelt wurden, um die Grenze zu bewachen."
+				"Nord-Chorasan entstand 2004 aus dem historischen Chorasan, dessen Name auf die aufgehende Sonne oder den Osten verweist.",
+				"Zu den kurdischen Gemeinschaften um Bojnurd und Shirvan gehören Nachfahren von Stämmen, die unter den Safawiden nach Chorasan umgesiedelt wurden.",
+				"In Esfarayen finden traditionelle Bachokheh-Ringkämpfe statt, bei denen die Teilnehmer eine feste Jacke namens Chukha tragen."
 			]
 		}
 	},
 	"qazvin": {
 		"region": {
 			"en": [
-				"Named for its city, a name of uncertain origin.",
-				"Alamut, the mountain castle of Hassan-i Sabbah and his Assassins, taken in 1090, is here."
+				"Qazvin Province, named for its capital, became a separate province in 1997.",
+				"Hasan Sabbah took control of Alamut Castle in present-day Qazvin Province in 1090 and made it a base of the Nizari Ismailis.",
+				"The Chehel Sotoun pavilion in Qazvin preserves Safavid architecture and displays Persian calligraphy."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Qui si trova Alamut, il castello di montagna di Hassan-i Sabbah e dei suoi Assassini, conquistato nel 1090."
+				"La provincia di Qazvin, che prende il nome dal suo capoluogo, divenne una provincia autonoma nel 1997.",
+				"Hasan Sabbah prese il controllo del castello di Alamut, nell’attuale provincia di Qazvin, nel 1090 e ne fece una base degli ismailiti nizariti.",
+				"Il padiglione Chehel Sotoun di Qazvin conserva l’architettura safavide ed espone opere di calligrafia persiana."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name ungewissen Ursprungs.",
-				"Alamut, die Bergfestung von Hassan-i Sabbah und seinen Assassinen, 1090 eingenommen, liegt hier."
+				"Die nach ihrer Hauptstadt benannte Provinz Qazvin wurde 1997 zu einer eigenen Provinz.",
+				"Hasan Sabbah übernahm 1090 die Burg Alamut in der heutigen Provinz Qazvin und machte sie zu einem Stützpunkt der nizaritischen Ismailiten.",
+				"Der Pavillon Chehel Sotoun in Qazvin bewahrt safawidische Architektur und zeigt persische Kalligrafie."
 			]
 		},
 		"city": {
 			"en": [
-				"It was the capital of Safavid Iran from 1548 to 1598."
+				"Qazvin’s name may preserve the name of the ancient Caspian people, although the connection is uncertain.",
+				"Qazvin served as the Safavid capital from 1548 until Shah Abbas I moved the court to Isfahan in the late sixteenth century.",
+				"Qazvin’s Chehel Sotoun pavilion belonged to the Safavid palace complex and underwent major interior changes during the Qajar period."
 			],
 			"it": [
-				"Fu la capitale dell’Iran safavide dal 1548 al 1598."
+				"Il nome di Qazvin potrebbe conservare quello dell’antico popolo dei Caspi, anche se il collegamento è incerto.",
+				"Qazvin fu capitale safavide dal 1548 fino al trasferimento della corte a Isfahan da parte dello scià Abbas I alla fine del Cinquecento.",
+				"Il padiglione Chehel Sotoun di Qazvin apparteneva al complesso del palazzo safavide e subì importanti modifiche interne in epoca qajara."
 			],
 			"de": [
-				"Sie war von 1548 bis 1598 die Hauptstadt des safawidischen Iran."
+				"Qazvins Name bewahrt möglicherweise den Namen des antiken Volkes der Kaspier, doch ist die Verbindung unsicher.",
+				"Qazvin war von 1548 bis zur Verlegung des Hofes nach Isfahan durch Schah Abbas I. im späten 16. Jahrhundert safawidische Hauptstadt.",
+				"Qazvins Pavillon Chehel Sotoun gehörte zum safawidischen Palastkomplex und wurde im Inneren während der Kadscharenzeit stark verändert."
 			]
 		}
 	},
 	"qom": {
 		"region": {
 			"en": [
-				"Named for its holy city; the province was split from Tehran in 1995.",
-				"Its salt lake, the Daryacheh-ye Namak, is a dry white crust for most of the year."
+				"Qom Province is named after its capital; the law approving its separation from Tehran Province was passed in 1996.",
+				"The shrine of Fatima Masumeh in Qom Province honours the sister of Imam Reza and has shaped the city’s pilgrimage traditions.",
+				"Qom Province is known for sohan, a sweet made in local workshops and sold in several varieties."
 			],
 			"it": [
-				"Prende il nome dalla sua città santa; la provincia fu separata da quella di Teheran nel 1995.",
-				"Il suo lago salato, il Daryacheh-ye Namak, è per gran parte dell’anno una crosta bianca e asciutta."
+				"La provincia di Qom prende il nome dal capoluogo; una legge del 1996 ne approvò la separazione dalla provincia di Teheran.",
+				"Il santuario di Fatima Masumeh nella provincia di Qom onora la sorella dell’imam Reza e ha plasmato le tradizioni di pellegrinaggio della città.",
+				"La provincia di Qom è conosciuta per il sohan, un dolce prodotto nei laboratori locali e venduto in diverse varietà."
 			],
 			"de": [
-				"Nach ihrer heiligen Stadt benannt; die Provinz wurde 1995 von Teheran abgetrennt.",
-				"Ihr Salzsee, der Daryacheh-ye Namak, ist den größten Teil des Jahres eine trockene weiße Kruste."
+				"Die Provinz Qom ist nach ihrer Hauptstadt benannt; ein 1996 verabschiedetes Gesetz genehmigte ihre Trennung von der Provinz Teheran.",
+				"Das Heiligtum der Fatima Masuma in der Provinz Qom ehrt die Schwester von Imam Reza und prägte die Wallfahrtstraditionen der Stadt.",
+				"Die Provinz Qom ist für Sohan bekannt, eine in örtlichen Werkstätten hergestellte und in mehreren Varianten verkaufte Süßigkeit."
 			]
 		},
 		"city": {
 			"en": [
-				"Its shrine of Fatima Masumeh, sister of Imam Reza, is one of the holiest places of Shia Islam.",
-				"Its religious seminaries are the largest in Iran."
+				"Qom’s name forms the title of the Tarikh-e Qom, a local history compiled in the late tenth century.",
+				"Qom’s shrine of Fatima Masumeh honours the sister of Imam Reza and is a centre of Shia pilgrimage.",
+				"Abd al-Karim Haeri settled in Qom in 1922 and reorganised religious teaching through restored madrasas, a regular curriculum and student stipends."
 			],
 			"it": [
-				"Il suo santuario di Fatima Masumeh, sorella dell’imam Reza, è uno dei luoghi più santi dell’islam sciita.",
-				"I suoi seminari religiosi sono i più grandi dell’Iran."
+				"Il nome di Qom forma il titolo del Tarikh-e Qom, una storia locale compilata alla fine del X secolo.",
+				"Il santuario di Fatima Masumeh a Qom onora la sorella dell’imam Reza ed è un centro di pellegrinaggio sciita.",
+				"Abd al-Karim Haeri si stabilì a Qom nel 1922 e riorganizzò l’insegnamento religioso restaurando madrase, regolarizzando il programma di studi e istituendo sussidi per gli studenti."
 			],
 			"de": [
-				"Der Schrein der Fatima Masuma hier, der Schwester von Imam Reza, ist einer der heiligsten Orte des schiitischen Islam.",
-				"Ihre religiösen Seminare sind die größten Irans."
+				"Qoms Name bildet den Titel des Tarikh-e Qom, einer im späten zehnten Jahrhundert verfassten Lokalgeschichte.",
+				"Das Fatima-Masuma-Heiligtum in Qom ehrt die Schwester von Imam Reza und ist ein Zentrum schiitischer Wallfahrt.",
+				"Abd al-Karim Haeri ließ sich 1922 in Qom nieder und ordnete den religiösen Unterricht durch restaurierte Medresen, einen geregelten Lehrplan und Stipendien neu."
 			]
 		}
 	},
 	"quchan": {
 		"city": {
 			"en": [
-				"Many of its people are Kurds, whose ancestors were settled here by the Safavids."
+				"Quchan’s rebuilt settlement was initially named Nasseriyeh after Naser al-Din Shah, before becoming better known as New Quchan.",
+				"Quchan’s Kurdish communities include descendants of tribes settled in Khorasan under the Safavids.",
+				"After the destructive earthquake of 1895, survivors rebuilt Quchan east of the old town with broad streets and spacious bazaars."
 			],
 			"it": [
-				"Molti dei suoi abitanti sono curdi, i cui antenati furono insediati qui dai Safavidi."
+				"Il nuovo insediamento di Quchan fu inizialmente chiamato Nasseriyeh in onore di Naser al-Din Shah, prima di diventare più noto come Nuova Quchan.",
+				"Le comunità curde di Quchan comprendono discendenti di tribù insediate nel Khorasan sotto i Safavidi.",
+				"Dopo il terremoto distruttivo del 1895, i sopravvissuti ricostruirono Quchan a est della città vecchia con strade ampie e grandi bazar."
 			],
 			"de": [
-				"Viele ihrer Bewohner sind Kurden, deren Vorfahren von den Safawiden hier angesiedelt wurden."
+				"Quchans neu errichtete Siedlung hieß zunächst Nasseriyeh nach Naser al-Din Schah, bevor sie als Neu-Quchan bekannter wurde.",
+				"Zu Quchans kurdischen Gemeinschaften gehören Nachfahren von Stämmen, die unter den Safawiden in Chorasan angesiedelt wurden.",
+				"Nach dem zerstörerischen Erdbeben von 1895 errichteten Überlebende Quchan östlich der Altstadt neu, mit breiten Straßen und geräumigen Basaren."
 			]
 		}
 	},
 	"rasht": {
 		"city": {
 			"en": [
-				"One of the rainiest cities in Iran.",
-				"UNESCO named it a Creative City of Gastronomy in 2015."
+				"Rasht appears under the spelling Resht on a 1917 map held by the Library of Congress.",
+				"Rasht joined UNESCO’s Creative Cities Network for gastronomy in 2015.",
+				"Rasht’s traditional bazaar has open streets protected by canopies rather than the continuous vaulted roofs common in many Iranian bazaars."
 			],
 			"it": [
-				"Una delle città più piovose dell’Iran.",
-				"L’UNESCO l’ha nominata Città creativa della gastronomia nel 2015."
+				"Rasht compare con la grafia Resht in una carta del 1917 conservata alla Biblioteca del Congresso degli Stati Uniti.",
+				"Rasht entrò nella Rete delle Città Creative dell’UNESCO per la gastronomia nel 2015.",
+				"Il bazar tradizionale di Rasht ha vie aperte protette da tettoie anziché dalle coperture a volta continue comuni in molti bazar iraniani."
 			],
 			"de": [
-				"Eine der regenreichsten Städte Irans.",
-				"Die UNESCO ernannte sie 2015 zur Kreativstadt der Gastronomie."
+				"Rasht erscheint auf einer Karte von 1917 in der Library of Congress unter der Schreibweise Resht.",
+				"Rasht wurde 2015 in das UNESCO-Netzwerk der Kreativstädte für Gastronomie aufgenommen.",
+				"Rashts traditioneller Basar besitzt offene Straßen mit Vordächern anstelle der durchgehenden Gewölbedächer vieler iranischer Basare."
 			]
 		}
 	},
@@ -936,52 +1150,76 @@
 	"sabzevar": {
 		"city": {
 			"en": [
-				"In the 14th century it was the seat of the Sarbadars, a local dynasty born of a rebellion against the Mongols."
+				"Sabzevar was historically also called Bayhaq, a name properly belonging to the wider rural district around the town.",
+				"Sabzevar became the seat of the Sarbadar rulers in the fourteenth century.",
+				"Medieval geographers described Sabzevar’s market centre as covered with timber arches and noted its silk textiles."
 			],
 			"it": [
-				"Nel Trecento fu la sede dei Sarbadar, una dinastia locale nata da una rivolta contro i Mongoli."
+				"Sabzevar era storicamente chiamata anche Bayhaq, un nome propriamente riferito al più ampio distretto rurale intorno alla città.",
+				"Sabzevar divenne la sede dei sovrani sarbadar nel Trecento.",
+				"I geografi medievali descrivevano il centro del mercato di Sabzevar come coperto da archi di legno e ne segnalavano i tessuti di seta."
 			],
 			"de": [
-				"Im 14. Jahrhundert war sie der Sitz der Sarbadaren, einer örtlichen Dynastie, die aus einem Aufstand gegen die Mongolen hervorging."
+				"Sabzevar wurde historisch auch Bayhaq genannt, obwohl dieser Name eigentlich den größeren ländlichen Bezirk um die Stadt bezeichnete.",
+				"Sabzevar wurde im 14. Jahrhundert zum Sitz der Sarbadar-Herrscher.",
+				"Mittelalterliche Geografen beschrieben Sabzevars Marktzentrum mit Holzbögen als Überdachung und erwähnten seine Seidentextilien."
 			]
 		}
 	},
 	"sanandaj": {
 		"city": {
 			"en": [
-				"The Kurds call it Sine; it was founded as a governor’s seat in the 17th century."
+				"Sanandaj, known as Sna or Sine in Kurdish, developed as a seat of the Ardalan governors in the seventeenth century.",
+				"Sanandaj joined UNESCO’s Creative Cities Network for music in 2019, with the daf frame drum central to its musical heritage.",
+				"Sanandaj’s Khosroabad mansion served the Ardalan rulers and preserves stucco decoration, ornamental brickwork and coloured sash windows."
 			],
 			"it": [
-				"I curdi la chiamano Sine; fu fondata come sede di un governatore nel Seicento."
+				"Sanandaj, conosciuta come Sna o Sine in curdo, si sviluppò come sede dei governatori Ardalan nel Seicento.",
+				"Sanandaj entrò nella Rete delle Città Creative dell’UNESCO per la musica nel 2019, con il tamburo a cornice daf al centro del suo patrimonio musicale.",
+				"La dimora Khosroabad di Sanandaj servì i sovrani Ardalan e conserva decorazioni in stucco, murature ornamentali in mattoni e finestre a saliscendi colorate."
 			],
 			"de": [
-				"Die Kurden nennen sie Sine; sie wurde im 17. Jahrhundert als Sitz eines Statthalters gegründet."
+				"Sanandaj, auf Kurdisch Sna oder Sine genannt, entwickelte sich im 17. Jahrhundert zum Sitz der Ardalan-Gouverneure.",
+				"Sanandaj wurde 2019 UNESCO-Kreativstadt der Musik, wobei die Rahmentrommel Daf eine zentrale Rolle in seinem musikalischen Erbe spielt.",
+				"Das Khosroabad-Anwesen in Sanandaj diente den Ardalan-Herrschern und bewahrt Stuck, Ziegelornamente und farbige Schiebefenster."
 			]
 		}
 	},
 	"sari": {
 		"city": {
 			"en": [
-				"The capital of Mazandaran, on the plain between the Alborz and the Caspian."
+				"Sari appears in medieval geographical writing under the form Sariya.",
+				"Sari’s Kolbadi House is a Qajar residence with coloured sash windows that was converted into a museum.",
+				"Sari’s Fazeli House combines residential sections from the Qajar and Pahlavi periods, with patterned brickwork decorating its courtyard."
 			],
 			"it": [
-				"Il capoluogo del Mazandaran, nella pianura fra l’Alborz e il Caspio."
+				"Sari compare negli scritti geografici medievali nella forma Sariya.",
+				"La casa Kolbadi di Sari è una residenza qajara con finestre a saliscendi colorate, trasformata in museo.",
+				"La casa Fazeli di Sari comprende sezioni residenziali delle epoche qajara e pahlavi, con murature decorative in mattoni nel cortile."
 			],
 			"de": [
-				"Die Hauptstadt von Mazandaran, auf der Ebene zwischen dem Alborz und dem Kaspischen Meer."
+				"Sari erscheint in mittelalterlichen geografischen Schriften in der Form Sariya.",
+				"Das Kolbadi-Haus in Sari ist eine kadscharische Residenz mit farbigen Schiebefenstern, die zu einem Museum umgewandelt wurde.",
+				"Das Fazeli-Haus in Sari vereint Wohnbereiche aus der Kadscharen- und Pahlavi-Zeit mit gemustertem Ziegelmauerwerk im Hof."
 			]
 		}
 	},
 	"saveh": {
 		"city": {
 			"en": [
-				"Marco Polo wrote that the three Magi were buried here."
+				"Saveh appears as Sava in medieval Persian geographical writing.",
+				"Marco Polo recorded a tradition identifying Saveh as the burial place of the Three Magi.",
+				"Saveh’s Friday Mosque preserves prayer niches with Kufic inscriptions and later Safavid decoration."
 			],
 			"it": [
-				"Marco Polo scrisse che qui erano sepolti i tre Magi."
+				"Saveh compare come Sava negli scritti geografici persiani medievali.",
+				"Marco Polo riportò una tradizione che identificava Saveh come luogo di sepoltura dei tre Magi.",
+				"La moschea del venerdì di Saveh conserva nicchie di preghiera con iscrizioni cufiche e successive decorazioni safavidi."
 			],
 			"de": [
-				"Marco Polo schrieb, dass hier die Heiligen Drei Könige begraben seien."
+				"Saveh erscheint in mittelalterlichen persischen geografischen Schriften als Sava.",
+				"Marco Polo überlieferte eine Tradition, die Saveh als Begräbnisort der Heiligen Drei Könige identifizierte.",
+				"Savehs Freitagsmoschee bewahrt Gebetsnischen mit kufischen Inschriften und späterer safawidischer Dekoration."
 			]
 		}
 	},
@@ -1005,52 +1243,76 @@
 		},
 		"city": {
 			"en": [
-				"A town on the northern edge of the great salt desert, the Dasht-e Kavir."
+				"Semnan is recorded as Simnan in medieval accounts of the historical province of Qumis.",
+				"Semnan’s Qajar Arg Gate displays colourful tiles depicting Rostam’s battle with the White Demon from the Shahnameh.",
+				"The traditional game of tipcat, played by striking a wooden peg with a bat, has been recorded in Semnan under the local name halakuta."
 			],
 			"it": [
-				"Una città sul margine settentrionale del grande deserto salato, il Dasht-e Kavir."
+				"Semnan è registrata come Simnan nei resoconti medievali della provincia storica di Qumis.",
+				"La porta Arg di Semnan, di epoca qajara, mostra piastrelle colorate raffiguranti la battaglia di Rostam contro il Demone Bianco dello Shahnameh.",
+				"Il gioco tradizionale della lippa, in cui si colpisce un piccolo pezzo di legno con un bastone, è stato documentato a Semnan con il nome locale halakuta."
 			],
 			"de": [
-				"Eine Stadt am Nordrand der großen Salzwüste, der Dascht-e Kawir."
+				"Semnan erscheint als Simnan in mittelalterlichen Berichten über die historische Provinz Qumis.",
+				"Semnans Arg-Tor aus der Kadscharenzeit zeigt farbige Fliesen mit Rostams Kampf gegen den Weißen Dämon aus dem Schahname.",
+				"Das traditionelle Schlagspiel, bei dem ein Holzpflock mit einem Stock geschlagen wird, wurde in Semnan unter dem örtlichen Namen Halakuta dokumentiert."
 			]
 		}
 	},
 	"shahrekord": {
 		"city": {
 			"en": [
-				"At about 2,000 m, it is the highest provincial capital in Iran."
+				"Shahrekord was formerly known as Dehkord.",
+				"Shahrekord’s Archaeology Museum occupies the former Parhizgar Bath and displays Neolithic stone and bone tools excavated in the province.",
+				"Kakoli is among the traditional baked sweets associated with Shahrekord."
 			],
 			"it": [
-				"A circa 2.000 m, è il capoluogo di provincia più alto dell’Iran."
+				"Shahrekord era precedentemente conosciuta come Dehkord.",
+				"Il Museo Archeologico di Shahrekord occupa l’ex bagno Parhizgar ed espone utensili neolitici in pietra e osso rinvenuti nella provincia.",
+				"Il kakoli è tra i dolci tradizionali da forno associati a Shahrekord."
 			],
 			"de": [
-				"Auf etwa 2.000 m ist sie die höchstgelegene Provinzhauptstadt Irans."
+				"Shahrekord hieß früher Dehkord.",
+				"Das Archäologische Museum von Shahrekord befindet sich im ehemaligen Parhizgar-Bad und zeigt in der Provinz ausgegrabene neolithische Stein- und Knochenwerkzeuge.",
+				"Kakoli gehört zu den traditionellen süßen Backwaren von Shahrekord."
 			]
 		}
 	},
 	"shahreza": {
 		"city": {
 			"en": [
-				"It was called Qomsheh until the 20th century."
+				"Shahreza was formerly known as Qomsheh before its Pahlavi-era renaming.",
+				"Shahreza’s potters decorate white-bodied ceramics with black plant, fish and bird motifs under transparent blue-green or clear glazes.",
+				"In Shahreza’s forty-one-pulpits ritual, participants visit sacred places and light candles on the day before Ashura."
 			],
 			"it": [
-				"Si chiamava Qomsheh fino al Novecento."
+				"Shahreza era precedentemente conosciuta come Qomsheh prima del cambiamento di nome in epoca pahlavi.",
+				"I ceramisti di Shahreza decorano ceramiche a impasto bianco con motivi neri di piante, pesci e uccelli sotto smalti trasparenti verde-azzurri o incolori.",
+				"Nel rito dei quarantuno pulpiti di Shahreza, i partecipanti visitano luoghi sacri e accendono candele il giorno prima dell’Ashura."
 			],
 			"de": [
-				"Sie hieß bis ins 20. Jahrhundert Qomsche."
+				"Shahreza hieß vor seiner Umbenennung in der Pahlavi-Zeit Qomsheh.",
+				"Shahrezas Töpfer verzieren weißtonige Keramik mit schwarzen Pflanzen-, Fisch- und Vogelmotiven unter transparenten blaugrünen oder farblosen Glasuren.",
+				"Beim Ritual der einundvierzig Kanzeln in Shahreza besuchen die Teilnehmer heilige Orte und entzünden am Tag vor Aschura Kerzen."
 			]
 		}
 	},
 	"shahrud": {
 		"city": {
 			"en": [
-				"A town on the old road from Tehran to Mashhad, at the edge of the desert."
+				"Shahrud has also been recorded under the name Emamshahr.",
+				"Shahrud’s former municipal building, built in 1928, was converted into a museum with archaeological and ethnographic collections.",
+				"The Yaghmaei House in Shahrud was built by an architect from Yazd and incorporates a windcatcher beside its courtyard rooms."
 			],
 			"it": [
-				"Una città sull’antica strada fra Teheran e Mashhad, ai margini del deserto."
+				"Shahrud è stata registrata anche con il nome Emamshahr.",
+				"L’ex edificio municipale di Shahrud, costruito nel 1928, fu trasformato in un museo con collezioni archeologiche ed etnografiche.",
+				"La casa Yaghmaei di Shahrud fu costruita da un architetto di Yazd e comprende una torre del vento accanto alle stanze che circondano il cortile."
 			],
 			"de": [
-				"Eine Stadt an der alten Straße von Teheran nach Maschhad, am Rand der Wüste."
+				"Shahrud wurde auch unter dem Namen Emamshahr verzeichnet.",
+				"Shahruds ehemaliges Verwaltungsgebäude von 1928 wurde zu einem Museum mit archäologischen und volkskundlichen Sammlungen umgewandelt.",
+				"Das Yaghmaei-Haus in Shahrud wurde von einem Architekten aus Yazd erbaut und besitzt einen Windfänger neben den Hofräumen."
 			]
 		}
 	},
@@ -1076,45 +1338,57 @@
 	"sirjan": {
 		"city": {
 			"en": [
-				"A town of pistachio orchards."
+				"Modern Sirjan grew from the settlement of Saidabad, established in the 1790s, rather than on the exact site of ancient Sirjan.",
+				"The World Crafts Council recognises Sirjan as a World Craft City for kilim weaving.",
+				"Sirjan’s Chopoghi windcatcher survives from a Pahlavi-era house and uses bent brick tubes to channel cooling air indoors."
 			],
 			"it": [
-				"Una città di pistacchieti."
+				"La moderna Sirjan si sviluppò dall’insediamento di Saidabad, fondato negli anni Novanta del Settecento, anziché nel sito esatto dell’antica Sirjan.",
+				"Il Consiglio Mondiale dell’Artigianato riconosce Sirjan come Città Mondiale dell’Artigianato per la tessitura dei kilim.",
+				"La torre del vento Chopoghi di Sirjan sopravvive da una casa di epoca pahlavi e usa tubi ricurvi in mattoni per convogliare aria fresca all’interno."
 			],
 			"de": [
-				"Eine Stadt der Pistazienplantagen."
+				"Das moderne Sirjan entstand aus der in den 1790er-Jahren gegründeten Siedlung Saidabad und liegt nicht genau am Standort des antiken Sirjan.",
+				"Der World Crafts Council erkennt Sirjan als Weltstadt des Kunsthandwerks für Kelimweberei an.",
+				"Sirjans Chopoghi-Windfänger ist von einem Haus der Pahlavi-Zeit erhalten und leitet durch gebogene Ziegelröhren kühlende Luft ins Innere."
 			]
 		}
 	},
 	"sistan-and-baluchestan": {
 		"region": {
 			"en": [
-				"Sistan comes from Sakastan, \"land of the Saka\", a people of the steppe; Baluchestan is the land of the Baluch.",
-				"At Shahr-e Sukhteh, the \"Burnt City\" of the Bronze Age, archaeologists found an artificial eyeball about 4,800 years old."
+				"Sistan derives from Sakastan, land of the Saka, while Baluchestan is named for the Baluch people.",
+				"At Shahr-i Sokhta in Sistan and Baluchestan, archaeologists found a prosthetic eye in a grave dated to about 2900–2800 BC.",
+				"Baluch embroidery in Sistan and Baluchestan decorates clothing with geometric patterns, often using vivid orange and red."
 			],
 			"it": [
-				"Sistan viene da Sakastan, \"terra dei Saka\", un popolo della steppa; il Belucistan è la terra dei Beluci.",
-				"A Shahr-e Sukhteh, la \"Città bruciata\" dell’età del bronzo, gli archeologi trovarono un bulbo oculare artificiale di circa 4.800 anni."
+				"Sistan deriva da Sakastan, terra dei Saka, mentre il Belucistan prende il nome dal popolo beluci.",
+				"A Shahr-i Sokhta, nel Sistan e Belucistan, gli archeologi hanno trovato una protesi oculare in una tomba datata intorno al 2900–2800 a.C.",
+				"Il ricamo beluci del Sistan e Belucistan decora gli abiti con motivi geometrici, usando spesso arancione e rosso vivaci."
 			],
 			"de": [
-				"Sistan kommt von Sakastan, „Land der Saka“, eines Steppenvolkes; Belutschistan ist das Land der Belutschen.",
-				"In Schahr-e Suchte, der „Verbrannten Stadt“ der Bronzezeit, fanden Archäologen ein künstliches Auge, etwa 4.800 Jahre alt."
+				"Sistan geht auf Sakastan, Land der Saka, zurück, während Belutschistan nach den Belutschen benannt ist.",
+				"In Shahr-i Sokhta in Sistan und Belutschistan fanden Archäologen eine Augenprothese in einem Grab aus der Zeit um 2900–2800 vor Christus.",
+				"Belutschische Stickereien in Sistan und Belutschistan schmücken Kleidung mit geometrischen Mustern, häufig in kräftigem Orange und Rot."
 			]
 		}
 	},
 	"south-khorasan": {
 		"region": {
 			"en": [
-				"The southern part of old Khorasan, \"where the sun comes from\", split off in 2004.",
-				"It grows most of Iran’s barberries, the sour red berries of Persian rice dishes."
+				"South Khorasan was created in 2004 from Khorasan, a historical name referring to the rising sun or the east.",
+				"Akbariyeh Garden in Birjand is one of the nine gardens inscribed in UNESCO’s Persian Garden World Heritage property.",
+				"Qaen in South Khorasan is associated with saffron growing, whose autumn harvest involves gathering the crocus flowers."
 			],
 			"it": [
-				"La parte meridionale dell’antico Khorasan, \"da dove viene il sole\", separata nel 2004.",
-				"Produce la maggior parte dei crespini dell’Iran, le bacche rosse e aspre dei piatti di riso persiani."
+				"Il Khorasan meridionale fu creato nel 2004 dal Khorasan, un nome storico che richiama il sole nascente o l’oriente.",
+				"Il giardino Akbariyeh di Birjand è uno dei nove giardini iscritti nel sito del Patrimonio Mondiale dell’UNESCO dedicato al giardino persiano.",
+				"Qaen, nel Khorasan meridionale, è associata alla coltivazione dello zafferano, il cui raccolto autunnale prevede la raccolta dei fiori di croco."
 			],
 			"de": [
-				"Der südliche Teil des alten Chorasan, „woher die Sonne kommt“, 2004 abgetrennt.",
-				"Sie baut die meisten Berberitzen Irans an, die sauren roten Beeren der persischen Reisgerichte."
+				"Süd-Chorasan entstand 2004 aus Chorasan, einem historischen Namen mit Bezug auf die aufgehende Sonne oder den Osten.",
+				"Der Akbariyeh-Garten in Birjand ist einer der neun Gärten der UNESCO-Welterbestätte Persischer Garten.",
+				"Qaen in Süd-Chorasan ist mit dem Safrananbau verbunden, bei dessen Herbsternte die Krokusblüten gepflückt werden."
 			]
 		}
 	},
@@ -1140,16 +1414,19 @@
 	"tehran": {
 		"region": {
 			"en": [
-				"Named for the capital, which grew from a village near the old city of Rey.",
-				"Rey, the Rhages of the Greeks, is far older than Tehran and is now swallowed by it."
+				"Tehran Province is named for its capital, which developed from a settlement near the older city of Rey.",
+				"The early-twelfth-century Fars-nama praises pomegranates from Tehran, providing an early written reference to the settlement.",
+				"Golestan Palace in Tehran became a Qajar royal residence whose nineteenth-century decoration combines Persian craftsmanship with European influences."
 			],
 			"it": [
-				"Prende il nome dalla capitale, nata da un villaggio vicino all’antica città di Rey.",
-				"Rey, la Rhagae dei Greci, è molto più antica di Teheran e oggi ne è inghiottita."
+				"La provincia di Teheran prende il nome dal suo capoluogo, sviluppatosi da un insediamento vicino alla più antica città di Rey.",
+				"Il Fars-nama degli inizi del XII secolo elogia i melograni di Teheran, offrendo un’antica testimonianza scritta dell’insediamento.",
+				"Il Palazzo Golestan di Teheran divenne una residenza reale qajara, le cui decorazioni ottocentesche combinano l’artigianato persiano con influenze europee."
 			],
 			"de": [
-				"Nach der Hauptstadt benannt, die aus einem Dorf nahe der alten Stadt Rey hervorging.",
-				"Rey, das Rhagai der Griechen, ist weit älter als Teheran und heute in ihm aufgegangen."
+				"Die Provinz Teheran ist nach ihrer Hauptstadt benannt, die aus einer Siedlung nahe der älteren Stadt Rey hervorging.",
+				"Das Fars-nama aus dem frühen zwölften Jahrhundert lobt Teherans Granatäpfel und liefert damit eine frühe schriftliche Erwähnung der Siedlung.",
+				"Der Golestan-Palast in Teheran wurde zu einer königlichen Residenz der Kadscharen, deren Ausstattung aus dem 19. Jahrhundert persisches Handwerk mit europäischen Einflüssen verbindet."
 			]
 		},
 		"city": {
@@ -1173,42 +1450,57 @@
 	"torbat-e-jam": {
 		"city": {
 			"en": [
-				"Torbat means \"tomb\": the town grew around the tomb of the Sufi Sheikh Ahmad-e Jam."
+				"Torbat-e Jam means the tomb of Jam, referring to the Sufi Sheikh Ahmad-e Jam, around whose burial place the town developed.",
+				"Torbat-e Jam is associated with dotar music and local stick-dancing traditions.",
+				"The Kermani Mosque in Torbat-e Jam’s Ahmad-e Jam shrine complex preserves an elaborately carved stucco prayer niche in the Ilkhanid style."
 			],
 			"it": [
-				"Torbat significa \"tomba\": la città crebbe intorno alla tomba dello sceicco sufi Ahmad-e Jam."
+				"Torbat-e Jam significa la tomba di Jam e si riferisce al sufi Sheikh Ahmad-e Jam, intorno al cui luogo di sepoltura si sviluppò la città.",
+				"Torbat-e Jam è associata alla musica del dotar e alle tradizioni locali di danza con i bastoni.",
+				"La moschea Kermani nel complesso del santuario di Ahmad-e Jam a Torbat-e Jam conserva una nicchia di preghiera in stucco finemente intagliato di stile ilkhanide."
 			],
 			"de": [
-				"Torbat bedeutet „Grab“: Die Stadt wuchs um das Grab des Sufi-Scheichs Ahmad-e Jam."
+				"Torbat-e Jam bedeutet Grab des Jam und bezieht sich auf den Sufi-Scheich Ahmad-e Jam, um dessen Grabstätte die Stadt entstand.",
+				"Torbat-e Jam ist mit Dotar-Musik und örtlichen Stocktanztraditionen verbunden.",
+				"Die Kermani-Moschee im Ahmad-e-Jam-Heiligtum von Torbat-e Jam bewahrt eine aufwendig geschnitzte Gebetsnische aus Stuck im ilchanischen Stil."
 			]
 		}
 	},
 	"urmia": {
 		"city": {
 			"en": [
-				"It is an old centre of Iran’s Assyrian Christians.",
-				"Some traditions make it the birthplace of Zoroaster, though this is not established."
+				"Urmia was officially known as Rezaieh before its older name was restored in 1979.",
+				"Urmia was an important centre of Assyrian Christian life, with nineteenth-century missions establishing schools and printing houses.",
+				"Urmia’s Seh Gonbadan tower preserves an inscription dating its construction to the sixth century of the Islamic calendar."
 			],
 			"it": [
-				"È un antico centro dei cristiani assiri dell’Iran.",
-				"Alcune tradizioni la indicano come luogo di nascita di Zoroastro, ma non è accertato."
+				"Urmia era ufficialmente conosciuta come Rezaieh prima del ripristino del nome precedente nel 1979.",
+				"Urmia fu un importante centro della vita cristiana assira, con missioni ottocentesche che fondarono scuole e tipografie.",
+				"La torre Seh Gonbadan di Urmia conserva un’iscrizione che ne data la costruzione al VI secolo del calendario islamico."
 			],
 			"de": [
-				"Sie ist ein altes Zentrum der assyrischen Christen Irans.",
-				"Manche Überlieferungen machen sie zum Geburtsort Zarathustras, doch das ist nicht gesichert."
+				"Urmia hieß amtlich Rezaieh, bevor 1979 sein älterer Name wiederhergestellt wurde.",
+				"Urmia war ein wichtiges Zentrum des assyrischen Christentums, in dem Missionen im 19. Jahrhundert Schulen und Druckereien gründeten.",
+				"Urmias Turm Seh Gonbadan bewahrt eine Inschrift, die seine Errichtung ins sechste Jahrhundert des islamischen Kalenders datiert."
 			]
 		}
 	},
 	"varamin": {
 		"city": {
 			"en": [
-				"Its Friday mosque was built in 1322, under the Mongol Ilkhans."
+				"Varamin’s name appears in tenth-century geographical texts describing a large village in the Rey region.",
+				"Varamin’s Friday Mosque was built between 1322 and 1326 under Ilkhanid rule, with four iwans arranged around a courtyard.",
+				"The Emamzadeh Yahya shrine in Varamin once had lustre tiles dated to 1262–1263, many of which were later removed from the building."
 			],
 			"it": [
-				"La sua moschea del venerdì fu costruita nel 1322, sotto gli Ilkhanidi mongoli."
+				"Il nome di Varamin compare nei testi geografici del X secolo che descrivono un grande villaggio nella regione di Rey.",
+				"La moschea del venerdì di Varamin fu costruita tra il 1322 e il 1326 sotto il dominio ilkhanide, con quattro iwan disposti intorno a un cortile.",
+				"Il santuario Emamzadeh Yahya di Varamin aveva piastrelle a lustro datate 1262–1263, molte delle quali furono successivamente rimosse dall’edificio."
 			],
 			"de": [
-				"Ihre Freitagsmoschee wurde 1322 unter den mongolischen Ilchanen erbaut."
+				"Varamins Name erscheint in geografischen Texten des zehnten Jahrhunderts als Bezeichnung eines großen Dorfes in der Region Rey.",
+				"Varamins Freitagsmoschee entstand zwischen 1322 und 1326 unter den Ilchanen mit vier Iwanen um einen Innenhof.",
+				"Das Emamzadeh-Yahya-Heiligtum in Varamin besaß Lüsterfliesen mit Datierungen von 1262–1263, von denen viele später aus dem Gebäude entfernt wurden."
 			]
 		}
 	},
@@ -1234,56 +1526,74 @@
 	"yazd": {
 		"region": {
 			"en": [
-				"Named for its city, a name often linked to yazata, \"worthy of worship\", or to the king Yazdegerd; it is uncertain.",
-				"Chak Chak, a Zoroastrian shrine in a cliff, draws pilgrims every June."
+				"Yazd Province bears the name of its capital, whose name is possibly connected with the Sasanian king Yazdegerd I.",
+				"The Zoroastrian shrine of Chak Chak near Ardakan in Yazd Province attracts an annual pilgrimage in mid-June.",
+				"Meybod in Yazd Province maintains the craft of zilu weaving, using cotton yarn to make patterned floor coverings."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome spesso collegato a yazata, \"degno di culto\", o al re Yazdegerd; è incerto.",
-				"Chak Chak, un santuario zoroastriano in una parete di roccia, attira pellegrini ogni giugno."
+				"La provincia di Yazd porta il nome del suo capoluogo, il cui nome potrebbe essere collegato al re sasanide Yazdegerd I.",
+				"Il santuario zoroastriano di Chak Chak presso Ardakan, nella provincia di Yazd, attira un pellegrinaggio annuale a metà giugno.",
+				"Meybod, nella provincia di Yazd, conserva l’arte della tessitura degli zilu, usando filati di cotone per realizzare tappeti decorati."
 			],
 			"de": [
-				"Nach ihrer Stadt benannt, ein Name, der oft mit yazata, „der Verehrung würdig“, oder mit dem König Yazdegerd verbunden wird; die Herleitung ist ungewiss.",
-				"Chak Chak, ein zoroastrischer Schrein in einer Felswand, zieht jedes Jahr im Juni Pilger an."
+				"Die Provinz Yazd trägt den Namen ihrer Hauptstadt, der möglicherweise mit dem sasanidischen König Yazdegerd I. zusammenhängt.",
+				"Das zoroastrische Heiligtum Chak Chak bei Ardakan in der Provinz Yazd zieht alljährlich Mitte Juni Pilger an.",
+				"Meybod in der Provinz Yazd bewahrt das Zilu-Webhandwerk, bei dem gemusterte Bodenbeläge aus Baumwollgarn entstehen."
 			]
 		},
 		"city": {
 			"en": [
-				"Its old town, full of windcatchers, towers that draw cool air into the houses, is a UNESCO site.",
-				"It is the centre of Iran’s Zoroastrians, whose fire temple here keeps a flame said to have burned for centuries."
+				"Yazd’s name is possibly connected with the Sasanian king Yazdegerd I, though the derivation is uncertain.",
+				"Yazd’s UNESCO-listed earthen old town uses windcatchers, courtyards and thick walls to create cooler indoor conditions.",
+				"Yazd’s Zoroastrian Fire Temple guards a sacred flame traditionally said to have been kept burning for centuries."
 			],
 			"it": [
-				"La sua città vecchia, piena di torri del vento che portano aria fresca nelle case, è un sito UNESCO.",
-				"È il centro degli zoroastriani dell’Iran, il cui tempio del fuoco custodisce una fiamma che si dice arda da secoli."
+				"Il nome di Yazd potrebbe essere collegato al re sasanide Yazdegerd I, ma la derivazione è incerta.",
+				"Il centro storico in terra cruda di Yazd, iscritto dall’UNESCO, usa torri del vento, cortili e muri spessi per creare ambienti interni più freschi.",
+				"Il Tempio del Fuoco zoroastriano di Yazd custodisce una fiamma sacra che, secondo la tradizione, arde ininterrottamente da secoli."
 			],
 			"de": [
-				"Ihre Altstadt mit ihren vielen Windtürmen, die kühle Luft in die Häuser leiten, ist ein UNESCO-Welterbe.",
-				"Sie ist das Zentrum der Zoroastrier Irans, deren Feuertempel hier eine Flamme bewahrt, die angeblich seit Jahrhunderten brennt."
+				"Yazds Name hängt möglicherweise mit dem sasanidischen König Yazdegerd I. zusammen, doch ist die Herleitung unsicher.",
+				"Yazds UNESCO-geschützte Lehmaltstadt nutzt Windfänger, Höfe und dicke Mauern, um kühlere Innenräume zu schaffen.",
+				"Yazds zoroastrischer Feuertempel bewahrt eine heilige Flamme, die der Überlieferung nach seit Jahrhunderten ununterbrochen brennt."
 			]
 		}
 	},
 	"zabol": {
 		"city": {
 			"en": [
-				"In summer the \"wind of 120 days\" blows sand across it without a break."
+				"Zabol was formerly known as Nusratabad, as recorded in an Iranian foreign-ministry notice announcing the name change.",
+				"Zabol’s anthropology museum occupies a former British consulate building.",
+				"Zabol’s seasonal Levar wind is traditionally known as the 120-day wind, although its duration varies."
 			],
 			"it": [
-				"D’estate il \"vento dei 120 giorni\" vi soffia sabbia senza sosta."
+				"Zabol era precedentemente conosciuta come Nusratabad, come documenta una nota del ministero degli Esteri iraniano che annunciava il cambiamento di nome.",
+				"Il museo antropologico di Zabol occupa un ex edificio del consolato britannico.",
+				"Il vento stagionale Levar di Zabol è tradizionalmente chiamato vento dei centoventi giorni, anche se la sua durata varia."
 			],
 			"de": [
-				"Im Sommer weht der „Wind der 120 Tage“ ohne Unterbrechung Sand über sie hinweg."
+				"Zabol hieß früher Nusratabad, wie eine Mitteilung des iranischen Außenministeriums über die Umbenennung belegt.",
+				"Das Volkskundemuseum von Zabol befindet sich in einem ehemaligen britischen Konsulatsgebäude.",
+				"Zabols saisonaler Levar-Wind heißt traditionell Wind der hundertzwanzig Tage, obwohl seine Dauer schwankt."
 			]
 		}
 	},
 	"zahedan": {
 		"city": {
 			"en": [
-				"Once called Duzdab, it grew in the 20th century as a railway and trading town."
+				"Zahedan was formerly called Duzdap, as recorded in British consular reports and an Iranian notice announcing the name change.",
+				"Zahedan was connected by rail with British Baluchistan in the early twentieth century.",
+				"A British consular diary records the celebration of Guru Gobind Singh’s birthday at Zahedan’s Sikh gurdwara in December 1930."
 			],
 			"it": [
-				"Un tempo chiamata Duzdab, crebbe nel Novecento come città di ferrovia e di commerci."
+				"Zahedan si chiamava precedentemente Duzdap, come documentano i rapporti consolari britannici e una nota iraniana che annunciava il cambiamento di nome.",
+				"Zahedan fu collegata per ferrovia al Belucistan britannico agli inizi del Novecento.",
+				"Un diario consolare britannico documenta la celebrazione del compleanno di Guru Gobind Singh nel gurdwara sikh di Zahedan nel dicembre 1930."
 			],
 			"de": [
-				"Einst Duzdab genannt, wuchs sie im 20. Jahrhundert als Eisenbahn- und Handelsstadt."
+				"Zahedan hieß früher Duzdap, wie britische Konsularberichte und eine iranische Mitteilung über die Umbenennung belegen.",
+				"Zahedan wurde im frühen 20. Jahrhundert durch eine Eisenbahn mit Britisch-Belutschistan verbunden.",
+				"Ein britisches Konsulartagebuch dokumentiert die Feier von Guru Gobind Singhs Geburtstag in Zahedans Sikh-Gurdwara im Dezember 1930."
 			]
 		}
 	},
@@ -1307,14 +1617,374 @@
 		},
 		"city": {
 			"en": [
-				"The town is known for its knives, made here for centuries."
+				"Zanjan is the Arabic-adapted form of the older name Zangan.",
+				"Zanjan maintains traditional crafts including knife-making, copperworking and silver filigree.",
+				"Zanjan’s Rakhtshooy Khaneh was built as a sheltered public laundry for women and later became an ethnographic museum."
 			],
 			"it": [
-				"La città è nota per i suoi coltelli, fabbricati qui da secoli."
+				"Zanjan è la forma adattata all’arabo del nome precedente Zangan.",
+				"Zanjan conserva mestieri tradizionali che comprendono la fabbricazione di coltelli, la lavorazione del rame e la filigrana d’argento.",
+				"Il Rakhtshooy Khaneh di Zanjan fu costruito come lavatoio pubblico coperto per le donne e in seguito divenne un museo etnografico."
 			],
 			"de": [
-				"Die Stadt ist für ihre Messer bekannt, die hier seit Jahrhunderten hergestellt werden."
+				"Zanjan ist die an das Arabische angepasste Form des älteren Namens Zangan.",
+				"Zanjan bewahrt traditionelle Handwerke wie Messerschmiedekunst, Kupferverarbeitung und Silberfiligran.",
+				"Zanjans Rakhtshooy Khaneh entstand als überdachte öffentliche Wäscherei für Frauen und wurde später zum Volkskundemuseum."
 			]
 		}
+	},
+	"_sources": {
+		"ardabil:region": [
+			"https://www.iranicaonline.org/articles/ardabil/ardabil-i-history-of-ardabil/",
+			"https://visitiran.ir/attraction/sareyn-hot-springs",
+			"https://whc.unesco.org/en/decisions/3997/"
+		],
+		"north-khorasan:region": [
+			"https://www.iranicaonline.org/articles/khorasan/",
+			"https://www.iranicaonline.org/articles/kurdish-tribes/",
+			"https://visitiran.ir/fa/attraction/%DA%A9%D9%8F%D8%B4%D8%AA%DB%8C-%D8%A8%D8%A7-%DA%86%D9%88%D8%AE%D9%87-%DA%A9%D8%B4%D8%AA%DB%8C-%DA%A9%D9%8F%D8%B1%D8%AF%DB%8C"
+		],
+		"mazandaran:region": [
+			"https://api.pageplace.de/preview/DT0400.9781909724952_A34174728/preview-9781909724952_A34174728.pdf",
+			"https://whc.unesco.org/en/list/1584/",
+			"https://whc.unesco.org/document/172293",
+			"https://whc.unesco.org/en/list/1585/gallery/"
+		],
+		"qazvin:region": [
+			"https://visitiran.ir/en/province/qazvin-province",
+			"https://www.iranicaonline.org/articles/hasan-sabbah/"
+		],
+		"alborz:region": [
+			"https://visitiran.ir/es/province/Provincia-de-Alborz",
+			"https://www.ecoi.net/en/file/local/2093299/Iran_Toponymic_Factfile.pdf",
+			"https://visitiran.ir/attraction/Karaj-Shah-Abbasi-Bridge",
+			"https://visitiran.ir/attraction/shah-abbasi-inn"
+		],
+		"kurdistan:region": [
+			"https://visitiran.ir/fa/province/%D8%A7%D8%B3%D8%AA%D8%A7%D9%86-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86",
+			"https://whc.unesco.org/document/189279",
+			"https://www.unesco.org/en/creative-cities/sanandaj?hub=80094",
+			"https://www.unesco.org/sites/default/files/medias/fichiers/2025/01/Sanandaj_Monitoring_Report_2023.pdf"
+		],
+		"tehran:region": [
+			"https://visitiran.ir/es/province/Provincia-de-Teher%C3%A1n",
+			"https://www.iranicaonline.org/articles/tehran/i-a-persian-city/",
+			"https://whc.unesco.org/en/list/1422/"
+		],
+		"qom:region": [
+			"https://amagestate.com/legal/qom-province-creation-law/",
+			"https://visitiran.ir/province/qom-province",
+			"https://en.wikipedia.org/wiki/Qom_province"
+		],
+		"markazi:region": [
+			"https://www.iranicaonline.org/articles/farahan/",
+			"https://www.iranicaonline.org/articles/dushanbe/",
+			"https://visitiran.ir/attraction/Khorheh"
+		],
+		"kermanshah:region": [
+			"https://www.iranicaonline.org/articles/kermanshah-01-geography/",
+			"https://whc.unesco.org/en/list/1222/",
+			"https://www.iranicaonline.org/articles/belts/belts-ii-in-the-parthian-and-sasanian-periods/",
+			"https://whc.unesco.org/en/tentativelists/5182/"
+		],
+		"lorestan:region": [
+			"https://en.wikipedia.org/wiki/Lorestan_province",
+			"https://www.iranicaonline.org/articles/luristan-bronzes/i-the-field-research/",
+			"https://www.iranicaonline.org/articles/luristan-bronzes/",
+			"https://whc.unesco.org/document/206088"
+		],
+		"ilam:region": [
+			"https://visitiran.ir/en/province/Ilam-Province",
+			"https://visitiran.ir/destination/dehloran"
+		],
+		"isfahan:region": [
+			"https://www.iranicaonline.org/articles/isfahan-iv-pre-islamic-period/",
+			"https://visitiran.ir/attraction/abyaneh-village",
+			"https://visitiran.ir/en/province/Isfahan-Province"
+		],
+		"yazd:region": [
+			"https://whc.unesco.org/document/155835",
+			"https://www.iranicaonline.org/articles/zoroastrian-rituals/",
+			"https://visitiran.ir/handicraft/zilu-yazd"
+		],
+		"south-khorasan:region": [
+			"https://www.iranicaonline.org/articles/khorasan/",
+			"https://whc.unesco.org/uploads/nominations/1372.pdf",
+			"https://whc.unesco.org/fr/list/1372/cartes/",
+			"https://visitiran.ir/province/south-khorasan-province"
+		],
+		"chaharmahal-and-bakhtiari:region": [
+			"https://www.cambridge.org/core/services/aop-cambridge-core/content/view/AAF3993006AA25C5F0B76709A0D91CEB/S2049754721000081a.pdf/toward_a_picture_of_chahar_mahal_va_bakhtiari_province_iran_as_a_linguistic_area.pdf",
+			"https://www.iranicaonline.org/articles/asayer-tribes/",
+			"https://visitiran.ir/en/handicraft/ghoflsazi-locksmithing-chaleshtar"
+		],
+		"kohgiluyeh-and-boyer-ahmad:region": [
+			"https://www.iranicaonline.org/articles/boir-ahmadi/",
+			"https://visitiran.ir/en/attraction/dogur-dopa"
+		],
+		"sistan-and-baluchestan:region": [
+			"https://www.iranicaonline.org/articles/kushan-dynasty-i-history/",
+			"https://www.iranicaonline.org/articles/baluchistan-index/baluchistan-i/",
+			"https://whc.unesco.org/uploads/nominations/1456.pdf",
+			"https://visitiran.ir/en/handicraft/embroidery-sistan-and-baluchestan"
+		],
+		"khvoy:city": [
+			"https://www.iranicaonline.org/articles/khoy-%E1%B8%B5oy/",
+			"https://visitiran.ir/north-northwest"
+		],
+		"ahar:city": [
+			"https://www.iranicaonline.org/articles/ahar/"
+		],
+		"ardabil:city": [
+			"https://www.iranicaonline.org/articles/ardabil/ardabil-i-history-of-ardabil/",
+			"https://whc.unesco.org/en/list/1345/",
+			"https://www.vam.ac.uk/articles/the-ardabil-carpet"
+		],
+		"urmia:city": [
+			"https://www.iranicaonline.org/articles/azerbaijan-ii/",
+			"https://www.iranicaonline.org/articles/assyrians-in-iran-i-community/",
+			"https://visitiran.ir/index.php/attraction/seh-gonbadan-tower"
+		],
+		"bojnurd:city": [
+			"https://www.iranicaonline.org/articles/bojnurd-a-town-and-district-in-khorasan/",
+			"https://www.iranicaonline.org/articles/khorasan/",
+			"https://visitiran.ir/attraction/ayneh-khaneh-museum-bojnurd"
+		],
+		"maragheh:city": [
+			"https://islamansiklopedisi.org.tr/meraga",
+			"https://en.wikipedia.org/wiki/Maragheh",
+			"https://www.iranicaonline.org/articles/il-khanids-ii-architecture/"
+		],
+		"rasht:city": [
+			"https://findingaids.loc.gov/exist_collections/ead3pdf/gmd/2014/gm014002.pdf",
+			"https://www.unesco.org/sites/default/files/medias/fichiers/2025/01/Rasht_Monitoring_Report_2023.pdf",
+			"https://www.iranicaonline.org/articles/rasht/"
+		],
+		"gonbad-e-kavus:city": [
+			"https://visitiran.ir/en/province/golestan-province",
+			"https://whc.unesco.org/en/list/1398/",
+			"https://whc.unesco.org/en/decisions/4795/"
+		],
+		"quchan:city": [
+			"https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Kuch%C4%81n",
+			"https://www.iranicaonline.org/articles/khorasan-xvii-the-kurdish-communities-of-khorasan/",
+			"https://www.iranicaonline.org/articles/earthquakes-iii-in-persia/"
+		],
+		"gorgan:city": [
+			"https://www.iranicaonline.org/articles/astarabad/astarabad-i-history/",
+			"https://visitiran.ir/attraction/gorgan-palace-museum",
+			"https://visitiran.ir/attraction/house-latifi-museum-handicrafts-golestan"
+		],
+		"mahabad:city": [
+			"https://www.iranicaonline.org/articles/kurdish-language-ii-history-of-kurdish-studies/",
+			"https://www.iranicaonline.org/articles/qasemlu/",
+			"https://visitiran.ir/fa/destination/%D9%85%D9%87%D8%A7%D8%A8%D8%A7%D8%AF"
+		],
+		"zanjan:city": [
+			"https://islamansiklopedisi.org.tr/zencan",
+			"https://www.researchgate.net/publication/369421847_7_Ebb_and_Flow_of_Azeri_and_Persian_in_Iran_A_Longitudinal_Study_in_the_City_of_Zanjan",
+			"https://visitiran.ir/destination/zanjan",
+			"https://visitiran.ir/attraction/rakhtshooy-khaneh-edifice-laundry"
+		],
+		"sari:city": [
+			"https://www.iranicaonline.org/articles/baduspan-mountainous-district-caspian/",
+			"https://www.ecieco.org/Content/media/digitallibrary/2023/3/book64/64.pdf",
+			"https://visitiran.ir/fa/destination/%D8%B3%D8%A7%D8%B1%DB%8C",
+			"https://www.tasnimnews.ir/en/news/2021/03/07/2460510/fazeli-house-in-iran-s-sari"
+		],
+		"amol:city": [
+			"https://www.iranicaonline.org/articles/amol-amuya/",
+			"https://www.iranicaonline.org/articles/amol-a-town-on-the-caspian-shore/",
+			"https://www.iranicaonline.org/articles/tabari-abu-jafar/",
+			"https://assets.press.princeton.edu/B_ATLAS/BATL096_.pdf"
+		],
+		"shahrud:city": [
+			"https://www.getty.edu/vow/TGNFullDisplay?english=N&find=Washington&nation=&place=national+capital&subjectid=1079068",
+			"https://www.toiran.com/en/city-shahroud/museums/%D9%85%D9%88%D8%B2%D9%87-%D8%B4%D8%A7%D9%87%D8%B1%D9%88%D8%AF/8492",
+			"https://www.toiran.com/index.php/en/city-shahroud/historical_sites/Yaghmaei-House/8513"
+		],
+		"mashhad:city": [
+			"https://www.iranicaonline.org/articles/astan-e-qods-e-razawi/",
+			"https://www.iranicaonline.org/articles/gowhar-sad-mosque/",
+			"https://www.iranicaonline.org/articles/karna-karrenay/"
+		],
+		"qazvin:city": [
+			"https://www.iranicaonline.org/articles/caspians-gk/",
+			"https://www.iranicaonline.org/articles/cehel-sotun-qazvin-a-safavid-pavilion-that-stands-amid-gardens-in-the-central-meydan-square-of-the-old-city-and-in-w/"
+		],
+		"sabzevar:city": [
+			"https://www.iranicaonline.org/articles/bayhaq-town/",
+			"https://www.iranicaonline.org/articles/sarbedars/"
+		],
+		"karaj:city": [
+			"https://www.iranicaonline.org/articles/karaj-city/",
+			"https://www.iranicaonline.org/articles/karaj-city-modern-city/"
+		],
+		"semnan:city": [
+			"https://islamansiklopedisi.org.tr/simnan",
+			"https://visitiran.ir/attraction/darvazeh-arg",
+			"https://www.iranicaonline.org/articles/alak-dolak-the-game-of-tipcat-played-for-centuries-in-iran-afghanistan-and-surrounding-countries/"
+		],
+		"varamin:city": [
+			"https://khamseen-emamzadeh-yahya-varamin.web.itd.umich.edu/EYV4KO%26CG/en_varamin_history.php",
+			"https://www.iranicaonline.org/articles/il-khanids-ii-architecture/",
+			"https://khamseen-emamzadeh-yahya-varamin.web.itd.umich.edu/EYV4KO%26CG/en_building_evolution.php"
+		],
+		"sanandaj:city": [
+			"https://www.unesco.org/sites/default/files/medias/fichiers/2025/01/Sanandaj_Monitoring_Report_2023.pdf",
+			"https://www.iranicaonline.org/articles/bani-ardalan-a-kurdish-tribe-of-northwestern-iran-now-dispersed-in-sanandaj-senna-and-surrounding-villages/",
+			"https://www.unesco.org/en/creative-cities/sanandaj?hub=80094",
+			"https://visitiran.ir/fa/attraction/%D8%B9%D9%85%D8%A7%D8%B1%D8%AA-%D8%AE%D8%B3%D8%B1%D9%88-%D8%A2%D8%A8%D8%A7%D8%AF"
+		],
+		"torbat-e-jam:city": [
+			"https://www.iranicaonline.org/articles/ahmad-e-jam/",
+			"https://visitiran.ir/en/province/Razavi-Khorasan-province",
+			"https://www.iranicaonline.org/articles/khorasan-xxiv-monuments-of-khorasan/"
+		],
+		"kashmar:city": [
+			"https://en.wikipedia.org/wiki/Kashmar",
+			"https://abdimedia.net/en/social/iranian-city-name-changes-1935",
+			"https://www.iranicaonline.org/articles/cypress-sarv-cupressus-tourn/",
+			"https://www.iranicaonline.org/articles/chronology-of-iranian-history-part-3/"
+		],
+		"saveh:city": [
+			"https://www.iranicaonline.org/articles/ava-the-basic-modern-form-and-the-older-spoken-form-of-the-name-of-two-small-towns-of-northern-persia-normally-written-ab/",
+			"https://www.gutenberg.org/cache/epub/79345/pg79345-images.html",
+			"https://en.wikipedia.org/wiki/Saveh",
+			"https://visitiran.ir/attraction/masjed-e-jame-saveh"
+		],
+		"hamadan:city": [
+			"https://www.iranicaonline.org/articles/hamadan-iii/",
+			"https://www.iranicaonline.org/articles/avicenna-ii/",
+			"https://www.iranicaonline.org/articles/esther-and-mordechai/",
+			"https://visitiran.ir/en/attraction/tomb-esther-and-mordechai"
+		],
+		"qom:city": [
+			"https://www.iranicaonline.org/articles/tarik-e-qom/",
+			"https://visitiran.ir/province/qom-province",
+			"https://www.iranicaonline.org/articles/haeri/",
+			"https://www.iranicaonline.org/articles/iran-ix1-religions-in-iran/iran-ix2-islam-in-iran/iran-ix23-shiism-in-iran-since-the-safavids/"
+		],
+		"kermanshah:city": [
+			"https://www.iranicaonline.org/articles/kermanshah-01-geography/",
+			"https://www.iranicaonline.org/articles/belts/belts-ii-in-the-parthian-and-sasanian-periods/",
+			"https://whc.unesco.org/en/tentativelists/5182/",
+			"https://visitiran.ir/attraction/tekyeh-moaven-al-molk"
+		],
+		"malayer:city": [
+			"https://www.iranicaonline.org/articles/borujerd-town-and-sahrestan-in-lorestan/",
+			"https://www.wccinternational.org/craft-cities/craft-cities-asia-pacific",
+			"https://visitiran.ir/destination/malayer"
+		],
+		"arak:city": [
+			"https://www.iranicaonline.org/articles/arak/",
+			"https://visitiran.ir/en/attraction/four-season-museum"
+		],
+		"borujerd:city": [
+			"https://www.iranicaonline.org/articles/coins-and-coinage/",
+			"https://visitiran.ir/province/lorestan-province",
+			"https://www.iranicaonline.org/articles/borujerd-town-and-sahrestan-in-lorestan/"
+		],
+		"ilam:city": [
+			"https://www.iranicaonline.org/articles/ilam/ilam-i/",
+			"https://visitiran.ir/en/province/Ilam-Province",
+			"https://en.icro.ir/Architecture/Falahati-%28Agricultural%29-Palace"
+		],
+		"khorramabad:city": [
+			"https://en.wikipedia.org/wiki/Khorramabad",
+			"https://visitiran.ir/attraction/falak-ol-aflak-castle",
+			"https://www.iranicaonline.org/articles/khorramabad/"
+		],
+		"birjand:city": [
+			"https://www.iranicaonline.org/articles/birjand-parent/birjand-town-and-district/",
+			"https://whc.unesco.org/uploads/nominations/1372.pdf",
+			"https://whc.unesco.org/fr/list/1372/cartes/",
+			"https://visitiran.ir/index.php/en/attraction/arg-e-kolah-farangi"
+		],
+		"khomeini-shahr:city": [
+			"https://snl.no/Khomeinishahr",
+			"https://unstats.un.org/unsd/geoinfo/ungegn/docs/12th-gegn-docs/12th_gegn_WP55.pdf",
+			"https://www.tasnimnews.ir/en/news/2020/09/15/2346991/sartip-sedehi-historical-house-in-iran-s-khomeini-shahr"
+		],
+		"dezful:city": [
+			"https://www.iranicaonline.org/articles/dezful/",
+			"https://www.iranicaonline.org/articles/iraq-vii-iran-iraq-war/",
+			"https://visitiran.ir/destination/Dezful-%28World-Kapubafi-City%29"
+		],
+		"shahrekord:city": [
+			"https://visitiran.ir/en/province/Chaharmahal-and-Bakhtiari-Province",
+			"https://visitiran.ir/attraction/shahr-e-kord-archaeology-museum",
+			"https://visitiran.ir/fa/%D9%87%D9%85%D8%B3%D9%81%D8%B1-%D8%B2%D8%A7%DA%AF%D8%B1%D8%B3-%D8%B4%D8%B1%D9%82%DB%8C"
+		],
+		"shahreza:city": [
+			"https://www.iranicaonline.org/articles/crafts/",
+			"https://en.icro.ir/Drawing-and-visualization/Iranian-Pottery-and-Ceramics%3A-A-Cohesive-Union-of-Art-and-Craft",
+			"https://www.magiran.com/volume/170737"
+		],
+		"masjed-soleyman:city": [
+			"https://www.iranicaonline.org/articles/oil-agreements-in-iran/",
+			"https://www.iranicaonline.org/articles/oil-industry-ii/",
+			"https://www.bp.com/content/dam/bp/country-sites/de_de/germany/home/pdfs/bp-zahlen-und-fakten-2017-2018.pdf",
+			"https://mischb.ir/en/st_location/the-well-number-one/"
+		],
+		"yazd:city": [
+			"https://whc.unesco.org/document/155835",
+			"https://whc.unesco.org/en/list/1544/",
+			"https://visitiran.ir/attraction/yazd-fire-temple"
+		],
+		"ahvaz:city": [
+			"https://www.iranicaonline.org/articles/ahvaz/i_history/",
+			"https://visitiran.ir/attraction/ahvaz-pol-sefid-white-bridge",
+			"https://visitiran.ir/province/khuzestan-province"
+		],
+		"zabol:city": [
+			"https://www.qdl.qa/en/archive/81055/vdc_100060732608.0x00006e",
+			"https://www.researchgate.net/publication/393062186_Between_Representation_and_Materiality_The_British_Consulate_in_Sistan_Iran_1900-1903",
+			"https://www.sciencedirect.com/science/article/pii/S0169809521002672"
+		],
+		"abadan:city": [
+			"https://www.iranicaonline.org/articles/abadan/abadan-i-history/",
+			"https://www.iranicaonline.org/articles/abadan/abadan-ii-modern/",
+			"https://visitiran.ir/attraction/armenian-church-surp-karapet-church"
+		],
+		"kerman:city": [
+			"https://www.iranicaonline.org/articles/kerman-historical-geography/",
+			"https://visitiran.ir/en/attraction/ganjali-khan-complex",
+			"https://www.iranicaonline.org/articles/kerman-15-carpet-industry/"
+		],
+		"marvdasht:city": [
+			"https://oceanrep.geomar.de/31077/1/Kortum_Diss.pdf",
+			"https://en.wikipedia.org/wiki/Marvdasht",
+			"https://www.iranicaonline.org/articles/beet-beta-vulgaris-l/",
+			"https://openjicareport.jica.go.jp/pdf/11378452_02.pdf",
+			"https://whc.unesco.org/en/list/114/",
+			"https://visitiran.ir/attraction/persepolis"
+		],
+		"zahedan:city": [
+			"https://www.qdl.qa/en/archive/81055/vdc_100060732608.0x00006e",
+			"https://www.qdl.qa/en/archive/81055/vdc_100038131764.0x0000b5",
+			"https://www.iranicaonline.org/articles/economy-i/"
+		],
+		"sirjan:city": [
+			"https://www.iranicaonline.org/articles/kerman-09-qajar-period/",
+			"https://www.iranicaonline.org/articles/kerman-historical-geography/",
+			"https://www.wccinternational.org/craft-cities/craft-cities-asia-pacific",
+			"https://visitiran.ir/attraction/chopoghi-wind-catcher"
+		],
+		"fasa:city": [
+			"https://www.iranicaonline.org/articles/fasa-i/",
+			"https://islamansiklopedisi.org.tr/bakli",
+			"https://islamansiklopedisi.org.tr/ebu-ali-el-farisi"
+		],
+		"bushehr:city": [
+			"https://qdl.qa/en/archive/81055/vdc_100024189854.0x0001c8",
+			"https://www.iranicaonline.org/articles/malcolm-sir-john/",
+			"https://visitiran.ir/attraction/bushehr-historical-area"
+		],
+		"bandar-abbas:city": [
+			"https://www.iranicaonline.org/articles/bandar-e-abbasi/",
+			"https://visitiran.ir/en/attraction/hindus-temple",
+			"https://visitiran.ir/attraction/ethnography-museum-persian-gulf"
+		]
 	}
 }

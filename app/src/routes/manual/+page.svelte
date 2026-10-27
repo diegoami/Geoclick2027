@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Authored EN/DE/IT manuals are rendered at build time and bundled offline.
-	import { asset } from '$app/paths';
+	import { asset } from '$lib/appPaths';
 	import { getLanguage, t } from '$lib/i18n.svelte';
 	import PageBar from '$lib/PageBar.svelte';
 
