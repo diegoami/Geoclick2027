@@ -723,7 +723,7 @@ fixing the new Singapore issue and the four older usability findings before 1.0.
 - Home has a fallback title; map titles name the map, mode and game and follow
   the selected language (#250).
 - MapLibre's initial locale and a scoped, disposed live-label observer keep
-  zoom/compass, attribution, canvas labels synchronized without
+  zoom/compass, attribution and canvas labels synchronized without
   recreating the map or changing its camera/progress (#251).
 - Only an open language menu raises the toolbar above the version badge;
   ordinary toolbar/tray stacking stays unchanged (#252).
