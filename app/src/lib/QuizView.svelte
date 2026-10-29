@@ -834,7 +834,8 @@
 			levelsAtStart: Object.fromEntries(levelsAtStart),
 			practice,
 			mode,
-			elapsedMs: timed ? elapsed() : undefined
+			elapsedMs: timed ? elapsed() : undefined,
+			confusions: roundConfusions
 		});
 
 		if (item.status === 'correct' || item.status === 'revealed') {
@@ -1022,7 +1023,8 @@
 		mode = inTutorialMap() ? 'place' : (round.mode ?? 'place');
 		asking = undefined;
 		timeResult = undefined;
-		roundConfusions = [];
+		// A trip to the Overview keeps the round's mix-ups, as it keeps its answers (#276).
+		roundConfusions = round.confusions ?? [];
 		lastAnswered = undefined;
 		timed = !practice && isTimedRound([...levelsAtStart.keys()], levelsAtStart);
 		elapsedBefore = round.elapsedMs ?? 0;
