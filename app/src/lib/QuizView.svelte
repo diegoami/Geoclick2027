@@ -10,6 +10,7 @@
 	import { resolveDrop } from './quizDrop';
 	import { aimPoint, movedPastSlop } from './touchDrag';
 	import { forgetLearned, partnersOf, recordConfusion } from './confusions';
+	import { answerFeedback } from './feedback';
 	import MapNav from './MapNav.svelte';
 	import { getLanguage, t, tPlural } from './i18n.svelte';
 	import { targetName } from './targetName';
@@ -729,6 +730,7 @@
 		// The tutorial's drop steps (FT-11) wait for a scored drop; does nothing
 		// when no tutorial is running.
 		tutorialDrop(isCorrect);
+		answerFeedback(isCorrect);
 
 		session = attemptMatch(session, targetId, isCorrect ? targetId : undefined);
 		lastAnswered = targetId;

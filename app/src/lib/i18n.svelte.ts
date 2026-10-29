@@ -64,6 +64,7 @@ export type TranslationKey =
 	| 'nav.quiz'
 	| 'nav.tour'
 	| 'nav.terrain'
+	| 'nav.sound'
 	| 'fact.position.north'
 	| 'fact.position.south'
 	| 'fact.position.east'
@@ -289,6 +290,7 @@ const en: Dictionary = {
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.terrain': 'Terrain',
+	'nav.sound': 'Sound',
 	'fact.position.north': 'In the north of the country.',
 	'fact.position.south': 'In the south of the country.',
 	'fact.position.east': 'On the east side of the country.',
@@ -531,6 +533,7 @@ const de: Dictionary = {
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.terrain': 'Gelände',
+	'nav.sound': 'Ton',
 	'fact.position.north': 'Im Norden des Landes.',
 	'fact.position.south': 'Im Süden des Landes.',
 	'fact.position.east': 'Im Osten des Landes.',
@@ -777,6 +780,7 @@ const it: Dictionary = {
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.terrain': 'Rilievo',
+	'nav.sound': 'Suono',
 	'fact.position.north': 'Nel nord del paese.',
 	'fact.position.south': 'Nel sud del paese.',
 	'fact.position.east': 'Nella parte est del paese.',
