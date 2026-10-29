@@ -2200,7 +2200,10 @@ answers:
 
 ## The scheduler keeps running, out of sight (2026-09-18, FT-26)
 
-- **A round is always the whole map.** Due-only rounds were the reason
+- **A round is always the whole map.** *Amended 2026-10-29 (v1.1.0, #265):
+  the whole map stays the default, and a practice round of the names not yet
+  known is offered beside it - see "1.1.0: a map you complete" below.*
+  Due-only rounds were the reason
   the app had a practice mode, an "Up to date!" screen and a home page
   full of dates - three pieces of interface explaining a schedule the
   player never asked for. The product owner's call for v0.6.0 (decision 1
@@ -2391,6 +2394,9 @@ answers:
 - **Any mistake resets it to 0**, including a `hard` grade (right, but only
   after a wrong drop) which still passes for scheduling. Getting it right
   eventually is a pass; it is not evidence of knowing it.
+  *Amended 2026-10-29 (v1.1.0, #256): a mistake lowers it **one step**, not
+  to 0, and it no longer counts past 3 - it is an earned level 0-3 now, kept
+  in the same field and column. See "1.1.0: a map you complete" below.*
 - **Cards saved before v0.6.0 start at 0.** The browser store fills the field
   in on read, and both SQLite backends get a migration that adds the column
   with a default. Guessing a streak from the existing review history would be
@@ -2632,3 +2638,50 @@ would break links and isolate saved progress. The suffix is an internal legacy
 identifier; the displayed title is Towns, and MAPS.md documents the real recipe.
 New or split Norwegian counties receive their actual current identities; no
 knowledge is invented for them by transferring a retired county's streaks.
+
+## 1.1.0: a map you complete (2026-10-29, #256, #270)
+
+The product owner's plan for 1.1.0 (#270) turns the quiz from a review
+schedule into a map you complete, and adds ways to play it. Every open
+question was answered "as recommended" in the issues.
+
+- **Known fades one step at a time, never with time (#256).** The owner
+  first asked for permanent levels, then for names to "fade slower than we
+  do": a mistake lowers a name one level (Known -> Nearly -> Seen ->
+  nothing) instead of wiping it, and a right answer raises it again. The
+  field stays `cleanStreak`, so no saved progress needed a migration; an old
+  streak above 3 reads as Known. The scheduler still writes its dates,
+  unread, as before.
+- **A per-map reset, behind an in-app confirmation.** It forgets the map's
+  levels and records, the chosen names and any half-played round, and keeps
+  the last score. It is the one repository write that throws on failure, so
+  the player is never told a reset worked when it did not. `window.confirm`
+  was ruled out: it blocks the WebView and every test that drives it.
+- **One JSON record per map, not a table per feature.** Best times (#267),
+  mix-ups (#266) and the last round's slipped count (#263) live in
+  `map_records` (migration 3 on desktop and Android) as one validated JSON
+  object, so the next small per-map fact needs no schema change.
+- **A practice round beside the whole map (#265)** reverses v0.6.0's
+  whole-map-only rule as an option, not a replacement: big maps took 15-20
+  minutes a round. With one-step fading, "the names not yet known" is exactly
+  the right set, so it has no cap.
+- **Name places (#264) is a switch on the Quiz, not a fifth tab,** and both
+  directions feed the same level: one Known keeps the map honest and simple.
+  Wrong choices are the nearest places, so the choice is made on knowledge.
+  It is also the quiz's first keyboard-only way to play (number keys).
+- **Tap-to-place (#260) beside dragging, with no setting;** a touch drag
+  aims a fingertip above the finger (#261). Both go through the same drop
+  rules (quizDrop.ts), so tolerance and the nearest-town rule are unchanged.
+- **Best times only for a known map, and only clean rounds set one (#267).**
+  No running clock: a beginner never sees a timer, and guessing fast does not
+  pay.
+- **Sounds are made, not shipped (#268).** Two Web Audio notes need no files,
+  licence or credit, which the issue's CC0-files plan would have needed.
+  Sounds are off by default; Android haptics are on and follow the system's
+  reduce-motion setting.
+- **The start screen speaks completion (#262, #263):** countries shaded by
+  what is known (detailed maps excluded, so a country can be completed), and
+  one suggestion line rather than a new home section, which would have
+  reopened the home-order decision (FEATURE_PLAN.md decision 15).
+- **Out of scope, on purpose:** leaderboards, accounts, coins or XP, daily
+  streaks, typed answers, and saving an unfinished round across restarts.

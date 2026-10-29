@@ -297,9 +297,12 @@ No backend for the POC. Progress (per-target SRS card state, last quiz
 result per map) lives behind one `ProgressRepository` interface
 (`app/src/lib/progressRepository.ts`) so the rest of the app never
 touches platform-specific storage code. Besides the scheduler state, each
-card carries a clean streak: how often in a row that target was placed right
-with no mistake (FT-19, DECISIONS.md) — see ROADMAP.md's Iteration 5 for
-the concrete data shape. Three implementations exist behind it today,
+card carries an earned level, 0 to 3 (the `cleanStreak` field, FT-19): one
+up for a clean placement, one down for a mistake since v1.1.0 (#256,
+DECISIONS.md) — see ROADMAP.md's Iteration 5 for the concrete data shape.
+Since v1.1.0 each map also has one JSON record (`MapRecords`: best time,
+mix-ups, the last round's slipped count; the `map_records` table on SQLite)
+and a `resetKnown` that forgets a map's levels and records. Three implementations exist behind it today,
 picked automatically at runtime by `createProgressRepository()`:
 `localStorage` in the plain browser; SQLite via `tauri-plugin-sql` on
 desktop (Iteration 7, `desktop/src-tauri/src/lib.rs`'s `migrations()` is
@@ -392,11 +395,20 @@ card and the map bar has a star (`FavouriteStar.svelte`). A map card opens that 
 |---|---|---|
 | Overview | `/map/<id>/overview` | `OverviewView`: every name labelled |
 | Progress | `/map/<id>` | `MapView`: every name you know, drawn as strongly as you know it (FT-22); clicking a region still names it |
-| Quiz | `/map/<id>/quiz` | `QuizView`: drag the names onto the map |
+| Quiz | `/map/<id>/quiz` | `QuizView`: place the names (drag, or tap then tap) or, in Name places, pick the name of the lit-up place |
 | Tour | `/map/<id>/tour` | `TourView`: a guided tour |
 
 Until v0.4.0 a map opened on Explore. FT-13 made Overview the first
 screen (DECISIONS.md, "Feature programme decisions").
+
+**The quiz's helpers (v1.1.0, #270)** are pure modules beside `QuizView`,
+each unit-tested: `quizDrop.ts` (is a drop right), `touchDrag.ts` (where a
+finger's drag aims, tap or drag), `difficulty.ts` (the hand), `nameIt.ts`
+(Name places' choices), `confusions.ts` (mix-ups), `roundReport.ts` (what a
+round changed, best times) and `feedback.ts` (sound and haptics).
+`ScorePanel.svelte` shows the end of a round. The start screen's suggestion
+comes from `suggestion.ts`, and `homeProgress.ts`'s `worldProgress` colours
+the world map.
 
 **The tutorial** (FT-11, script in `docs/TUTORIAL.md`) runs over these
 same screens rather than copies of them. A Tutorial button sits on the
