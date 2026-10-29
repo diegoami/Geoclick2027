@@ -16,6 +16,31 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## Reviews are manual prompts; the repository is model-agnostic (2026-10-29)
+
+- **Decision (owner):** nothing in the repository runs a review automatically
+  or names a model. `scripts/external-review.ps1` and its helpers
+  (`ReviewerBrief`, `ReviewerFamily`, `ReviewParser`,
+  `Invoke-OpenCodeWatched`), `.opencode/reviewer-model`, the
+  `external-reviewer` agent, the `switch-reviewer` skill,
+  `docs/EXTERNAL_REVIEW.md` and the quota notes in `docs/environment.md` are
+  gone, and so are the model chains and the "Choosing a model" rule in
+  `AGENTS.md`.
+- **What replaces it:** every code-PR handoff ends with a ready-to-paste prompt
+  for an optional review, and a milestone gets one too. The owner runs it in a
+  fresh session of whatever tool and model they pick, preferably not the
+  implementer's. The reviewer instructions live once, tool-neutral, in
+  `docs/review/{pr,release}-reviewer.md`; the `.opencode` agents and the
+  `/review-pr` and `/review-release` commands remain as thin shortcuts to them.
+  The "What counts as blocking" rules of the deleted brief moved into
+  `docs/review/pr-reviewer.md`. The milestone process is otherwise unchanged:
+  the tag still waits for an AGREE, unless the owner tags without one.
+- **Kept:** commit trailers still name the model that did the work; that is
+  attribution, not a dependency.
+- **Supersedes** the 2026-10-04 amendment below (every code PR reviewed by
+  another family through the script) and the "Automatic pull-request reviews"
+  entry.
+
 ## Instructions file and review process (2026-09-27, updated 2026-09-30)
 
 - **One instructions file.** `CLAUDE.md`'s content moved into `AGENTS.md`, and
@@ -39,6 +64,7 @@ or amend an entry here as part of that change, not as an afterthought.
   and `/review-pr` command; the `review-pr` skill prepares the prompt and
   processes findings. The PR reviewer posts a neutral review to the PR and
   removes its own review worktree; this is not a merge approval or release gate.
+  *Superseded 2026-10-29 by the entry above: reviews are manual prompts.*
   **Amended 2026-10-04 (owner):** every code PR is reviewed by another model
   family before it is handed to the owner, through
   `scripts/external-review.ps1` with DeepSeek V4.1 Flash; a PR Claude
@@ -2543,6 +2569,8 @@ answers:
   Skip action says "Exit tutorial". Keep Escape as a keyboard shortcut.
 ## Automatic pull-request reviews (2026-09-30)
 
+- *Superseded 2026-10-29 by "Reviews are manual prompts; the repository is
+  model-agnostic": the workflow, the script and the model chains are gone.*
 - The product owner asked for each PR to receive an automatic review from a
   different model; use OpenCode / GLM-5.3-Flash. The review posts one advisory
   PR comment, refreshed when new commits arrive. It is not a GitHub approval

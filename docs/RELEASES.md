@@ -47,10 +47,10 @@ that explains it.
    gate results on a clean checkout of the candidate (the `review-handoff`
    skill has the full list). Until the tag, `main` takes only fixes for this
    milestone's findings.
-3. **Review.** Start it from OpenCode, on a model the owner picks:
-   `/review-release <milestone issue>` in the desktop app or the TUI, or
-   `opencode run -m <provider/model> --command review-release <issue>` from a
-   shell. The reviewer follows `.opencode/agents/release-reviewer.md`: it
+3. **Review.** The agent gives the owner a ready-to-paste prompt
+   (`review-handoff` skill); the owner runs it in a fresh session of any tool,
+   on a model they pick. The reviewer follows
+   `docs/review/release-reviewer.md`: it
    fetches first (`git fetch origin --tags <candidate SHA>`, not `git pull`),
    works in a fresh detached worktree of its own at the candidate SHA, never
    the checkout it started in (`AGENTS.md`, *Releases*; under
@@ -59,7 +59,7 @@ that explains it.
    `git diff <previous tag>..<candidate>`. Its verdict names that worktree,
    as a relative path, and the SHA. It posts AGREE or BLOCK on the milestone
    issue. **The tag waits.** On BLOCK the fixes land as ordinary PRs, the
-   candidate moves to the new `main` commit, and a re-review starts unasked;
+   candidate moves to the new `main` commit, and the re-review prompt comes unasked;
    a third round without AGREE goes to the owner. The owner may also
    tag without a review, and the issue records that.
 4. **Beta, if one is wanted** (it can run alongside the review). On a
