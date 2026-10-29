@@ -47,8 +47,7 @@ or `tagged without review (owner)`.
 
 Standing owner decisions:
 
-- Deploys are stopped: a merge to `main` publishes nothing. Do not check or
-  trigger the live site.
+- Deploys are the owner's: do not trigger one or check its status.
 - There is no GitHub CI; the gates run locally. Failed "Workers Builds" checks
   on commits up to 2026-09-26 came from a Cloudflare project since
   disconnected; they are not a gate.

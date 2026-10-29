@@ -674,6 +674,9 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   merge to `main` no longer publishes the web app, so "push and let the
   git-triggered build run" no longer produces a live site to check. Never
   trigger a deploy yourself; restarting them is the product owner's call.
+  *Amended 2026-10-29: deploys run again* (owner): a merge to `main`
+  publishes the web app. The agent still never triggers one and does not
+  check or report its status.
 
 ## A milestone is a release tag, reviewed before it is created (2026-09-23)
 

@@ -167,16 +167,14 @@ the gate.
   to be found first.
 - **"Test locally" and "test the deployment" are two separately labelled
   steps.** Verify locally first and say so; only then check the live site, and
-  say that too. While deploys are stopped (below) there is no live step — say
-  so rather than skipping it silently. (Why: see `DECISIONS.md` — "Two labelled
-  test steps".)
+  say that too. (Why: see `DECISIONS.md` — "Two labelled test steps".)
 - Don't debug what the user can fix in two dashboard clicks. Try the direct
   tool once or twice, then hand it back. (Why: see `DECISIONS.md` — "Hand a
   dashboard problem back".)
-- **Deploys are stopped** (product owner, 2026-09-22): a merge to `main` no
-  longer publishes the web app. Never trigger a deploy yourself; restarting
-  them is the product owner's call. (Why: see `DECISIONS.md` — "Netlify build
-  cost".)
+- **Deploys are the owner's.** Never trigger a deploy yourself; whether and
+  when the web app deploys is the owner's call, and its status is not checked
+  or reported (*Working agreements*). (Why: see `DECISIONS.md` — "Netlify
+  build cost".)
 - Roles: the user is Product Manager; the implementing model is the Developer.
   Finish by telling the user exactly what to run/click and what to expect.
 - Whenever a PR is handed to the owner for testing, include its direct GitHub
@@ -316,7 +314,6 @@ installation's memory. They bind every agent.
   confirmation. "Nobody apart me is downloading it anyway." Still say plainly
   in the notes what was not tried.
 - **Don't check or report Netlify deploy status.** The owner tracks it.
-  (Deploys are stopped anyway, *Workflow*.)
 - **"Worktree" from the owner means a real worktree** (*Worktrees*): every
   session that implements makes one, even when the owner says only "a branch",
   because another session may be working in the main checkout. After its merge
