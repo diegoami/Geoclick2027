@@ -199,6 +199,10 @@ export type TranslationKey =
 	| 'quiz.bestNeedsClean'
 	| 'quiz.confusions'
 	| 'quiz.confusedWith'
+	| 'quiz.nameSubtitle'
+	| 'quiz.modeAria'
+	| 'quiz.modePlace'
+	| 'quiz.modeName'
 	| 'quiz.resizeTrayAriaLabel'
 	| 'quiz.storageWarning'
 	| 'tour.prev'
@@ -317,13 +321,15 @@ const en: Dictionary = {
 	'known.chosen': 'Chosen',
 	'known.reset': 'Reset progress',
 	'known.resetTitle': 'Reset your progress on {map}?',
-	'known.resetBody': 'Every name on this map goes back to unknown. Your other maps, your favourites and your last score stay as they are.',
+	'known.resetBody':
+		'Every name on this map goes back to unknown. Your other maps, your favourites and your last score stay as they are.',
 	'known.resetConfirm': 'Reset',
 	'known.resetCancel': 'Cancel',
 	'known.resetDone': 'Your progress on {map} is reset.',
 	'known.resetFailed': 'The reset did not finish. Try again.',
 	'known.emptyTitle': 'Nothing known yet',
-	'known.emptyBody': 'Every name you place right in the quiz is written here. Study them in the Overview, or start the quiz.',
+	'known.emptyBody':
+		'Every name you place right in the quiz is written here. Study them in the Overview, or start the quiz.',
 	'nav.loading': 'Loading…',
 	'nav.detailedMaps': 'Show detailed maps',
 	'nav.hideDetailedMap': 'Hide {name}',
@@ -428,6 +434,10 @@ const en: Dictionary = {
 	'quiz.bestNeedsClean': 'Only a round with no mistakes sets a best time.',
 	'quiz.confusions': 'Mixed up',
 	'quiz.confusedWith': '{a} placed on {b}',
+	'quiz.nameSubtitle': 'Which place is lit up? — {placed} / {total} named',
+	'quiz.modeAria': 'Which way the quiz asks',
+	'quiz.modePlace': 'Place names',
+	'quiz.modeName': 'Name places',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
 	'quiz.storageWarning':
 		'Progress cannot be saved on this device right now, so this round will not be remembered.',
@@ -560,13 +570,15 @@ const de: Dictionary = {
 	'known.chosen': 'Gewählt',
 	'known.reset': 'Fortschritt zurücksetzen',
 	'known.resetTitle': 'Deinen Fortschritt auf {map} zurücksetzen?',
-	'known.resetBody': 'Alle Namen dieser Karte gelten wieder als unbekannt. Deine anderen Karten, deine Favoriten und dein letztes Ergebnis bleiben, wie sie sind.',
+	'known.resetBody':
+		'Alle Namen dieser Karte gelten wieder als unbekannt. Deine anderen Karten, deine Favoriten und dein letztes Ergebnis bleiben, wie sie sind.',
 	'known.resetConfirm': 'Zurücksetzen',
 	'known.resetCancel': 'Abbrechen',
 	'known.resetDone': 'Dein Fortschritt auf {map} ist zurückgesetzt.',
 	'known.resetFailed': 'Das Zurücksetzen hat nicht geklappt. Versuch es noch einmal.',
 	'known.emptyTitle': 'Noch nichts gewusst',
-	'known.emptyBody': 'Jeder Name, den du im Quiz richtig platzierst, steht dann hier. Lerne sie in der Übersicht oder starte das Quiz.',
+	'known.emptyBody':
+		'Jeder Name, den du im Quiz richtig platzierst, steht dann hier. Lerne sie in der Übersicht oder starte das Quiz.',
 	'nav.loading': 'Lädt…',
 	'nav.detailedMaps': 'Detaillierte Karten anzeigen',
 	'nav.hideDetailedMap': '{name} ausblenden',
@@ -673,6 +685,10 @@ const de: Dictionary = {
 	'quiz.bestNeedsClean': 'Nur eine Runde ohne Fehler zählt als Bestzeit.',
 	'quiz.confusions': 'Verwechselt',
 	'quiz.confusedWith': '{a} auf {b} gelegt',
+	'quiz.nameSubtitle': 'Welcher Ort leuchtet? — {placed} / {total} benannt',
+	'quiz.modeAria': 'Wie das Quiz fragt',
+	'quiz.modePlace': 'Namen platzieren',
+	'quiz.modeName': 'Orte benennen',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
 	'quiz.storageWarning':
 		'Fortschritt kann auf diesem Gerät gerade nicht gespeichert werden — diese Runde wird nicht gemerkt.',
@@ -807,13 +823,15 @@ const it: Dictionary = {
 	'known.chosen': 'Scelto',
 	'known.reset': 'Azzera i progressi',
 	'known.resetTitle': 'Azzerare i tuoi progressi su {map}?',
-	'known.resetBody': 'Tutti i nomi di questa mappa tornano sconosciuti. Le altre mappe, i preferiti e l\'ultimo punteggio restano come sono.',
+	'known.resetBody':
+		"Tutti i nomi di questa mappa tornano sconosciuti. Le altre mappe, i preferiti e l'ultimo punteggio restano come sono.",
 	'known.resetConfirm': 'Azzera',
 	'known.resetCancel': 'Annulla',
 	'known.resetDone': 'I tuoi progressi su {map} sono stati azzerati.',
-	'known.resetFailed': 'L\'azzeramento non è riuscito. Riprova.',
+	'known.resetFailed': "L'azzeramento non è riuscito. Riprova.",
 	'known.emptyTitle': 'Ancora niente di imparato',
-	'known.emptyBody': 'Ogni nome che posizioni giusto nel quiz viene scritto qui. Studiali nella Panoramica o inizia il quiz.',
+	'known.emptyBody':
+		'Ogni nome che posizioni giusto nel quiz viene scritto qui. Studiali nella Panoramica o inizia il quiz.',
 	'nav.loading': 'Caricamento…',
 	'nav.detailedMaps': 'Mostra le mappe dettagliate',
 	'nav.hideDetailedMap': 'Nascondi {name}',
@@ -921,6 +939,10 @@ const it: Dictionary = {
 	'quiz.bestNeedsClean': 'Solo un giro senza errori vale come record.',
 	'quiz.confusions': 'Confusi',
 	'quiz.confusedWith': '{a} messo su {b}',
+	'quiz.nameSubtitle': 'Quale luogo è evidenziato? — {placed} / {total} nominati',
+	'quiz.modeAria': 'Come chiede il quiz',
+	'quiz.modePlace': 'Posiziona i nomi',
+	'quiz.modeName': 'Dai i nomi',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
 	'quiz.storageWarning':
 		'Al momento non è possibile salvare i progressi su questo dispositivo, quindi questa partita non verrà ricordata.',

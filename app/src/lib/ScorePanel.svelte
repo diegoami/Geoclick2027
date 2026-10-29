@@ -102,7 +102,8 @@
 		<div class="names" data-testid="newly-known">
 			<h3>{t('quiz.newlyKnown')}</h3>
 			{#each known.shown as item (item.id)}
-				<button type="button" class="name known" onclick={() => onfact(item.id)}>{item.name}</button>
+				<button type="button" class="name known" onclick={() => onfact(item.id)}>{item.name}</button
+				>
 			{/each}
 			{#if known.more > 0}<span class="more">{t('quiz.more', { count: known.more })}</span>{/if}
 		</div>

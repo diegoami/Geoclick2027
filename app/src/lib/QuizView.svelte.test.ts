@@ -14,6 +14,7 @@ import { setLanguage } from './i18n.svelte';
 import { createInMemoryProgressRepository, todayLocalDate } from './progressRepository';
 import type { ProgressRepository } from './progressRepository';
 import { forgetRound } from './quizRound';
+import { quizMode, setQuizMode } from './mapPrefs.svelte';
 
 const fake = vi.hoisted(() => {
 	type Point = [number, number];
@@ -58,7 +59,9 @@ const fake = vi.hoisted(() => {
 		container: undefined as HTMLElement | undefined,
 		repository: undefined as ProgressRepository | undefined,
 		// The map's own listeners (a tap on the map, #260), by event type.
-		handlers: {} as Record<string, ((e: { point: { x: number; y: number } }) => void)[]>
+		handlers: {} as Record<string, ((e: { point: { x: number; y: number } }) => void)[]>,
+		// The place lit up by quizHover: the one Name-it mode asks about (#264).
+		hovered: undefined as string | undefined
 	};
 
 	const inRect = (x0: number, y0: number, x1: number, y1: number) =>
@@ -85,7 +88,11 @@ const fake = vi.hoisted(() => {
 				return inRect(x0, y0, x1, y1);
 			},
 			project: ([x, y]: [number, number]) => ({ x, y }),
-			setFeatureState: () => {},
+			setFeatureState: ({ id }: { id: string }, value: { quizHover?: boolean }) => {
+				if (value.quizHover) state.hovered = id;
+				else if (value.quizHover === false && state.hovered === id) state.hovered = undefined;
+			},
+			easeTo: () => map,
 			fitBounds: () => map,
 			remove: () => {}
 		};
@@ -205,6 +212,7 @@ describe('QuizView (FT-59)', () => {
 
 	beforeEach(() => {
 		setLanguage('en');
+		setQuizMode('place');
 		forgetRound(MAP_ID);
 		const repository = createInMemoryProgressRepository();
 		saveCardState = vi.spyOn(repository, 'saveCardState');
@@ -398,5 +406,26 @@ describe('QuizView (FT-59)', () => {
 			/Time: \d+:\d\d/
 		);
 		expect(saveRecords).toHaveBeenCalledWith(MAP_ID, { bestTimeMs: expect.any(Number) });
+	});
+	it('asks for the name of a lit-up place in Name-it mode, and keeps the choice (#264)', async () => {
+		const screen = await mount();
+		await screen.getByRole('button', { name: 'Name places' }).click();
+		const choices = () => [...document.querySelectorAll<HTMLElement>('[data-testid="choice"]')];
+		await expect.poll(() => choices().length).toBe(4);
+		await expect.poll(() => fake.state.hovered).toBeDefined();
+		const asked = fake.state.hovered!;
+		expect(choices().some((c) => c.textContent?.includes(asked))).toBe(true);
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 16 named');
+
+		// The number key of the right name answers it.
+		const index = choices().findIndex((c) => c.textContent?.includes(asked));
+		window.dispatchEvent(new KeyboardEvent('keydown', { key: String(index + 1) }));
+		await expect.poll(() => saveCardState.mock.calls.length).toBe(1);
+		expect(saveCardState).toHaveBeenLastCalledWith(MAP_ID, {
+			targetId: asked.toLowerCase(),
+			...rate(undefined, 'good', todayLocalDate())
+		});
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('1 / 16 named');
+		expect(quizMode()).toBe('name');
 	});
 });

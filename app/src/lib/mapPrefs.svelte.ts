@@ -254,6 +254,39 @@ export function setSoundOn(on: boolean): void {
 	}
 }
 
+// --- which way the quiz asks (#264) ---
+//
+// 'place': drag (or tap) each name onto its place, as the quiz always has.
+// 'name': a place lights up and the player picks its name. Kept like the
+// other settings, one choice for every map.
+
+const QUIZ_MODE_KEY = 'geoclick:quiz-mode:v1';
+
+function readQuizMode(): 'place' | 'name' {
+	if (typeof localStorage === 'undefined') return 'place';
+	try {
+		return localStorage.getItem(QUIZ_MODE_KEY) === 'name' ? 'name' : 'place';
+	} catch {
+		return 'place';
+	}
+}
+
+let quizModeChoice = $state<'place' | 'name'>(readQuizMode());
+
+export function quizMode(): 'place' | 'name' {
+	return quizModeChoice;
+}
+
+export function setQuizMode(mode: 'place' | 'name'): void {
+	quizModeChoice = mode;
+	if (typeof localStorage === 'undefined') return;
+	try {
+		localStorage.setItem(QUIZ_MODE_KEY, mode);
+	} catch {
+		// Full or blocked storage: the choice still holds for this session.
+	}
+}
+
 // --- detailed maps in the map bar (v0.17, #162) ---
 //
 // The small divisions and slices (districts, provinces, the parts of a

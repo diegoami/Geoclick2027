@@ -403,7 +403,12 @@
 			<button type="button" class="clear-btn" onclick={() => resetDialog?.close()}>
 				{t('known.resetCancel')}
 			</button>
-			<button type="button" class="reset-confirm" data-testid="reset-confirm" onclick={resetProgress}>
+			<button
+				type="button"
+				class="reset-confirm"
+				data-testid="reset-confirm"
+				onclick={resetProgress}
+			>
 				{t('known.resetConfirm')}
 			</button>
 		</div>

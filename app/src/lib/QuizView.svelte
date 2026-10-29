@@ -11,6 +11,8 @@
 	import { aimPoint, movedPastSlop } from './touchDrag';
 	import { forgetLearned, partnersOf, recordConfusion } from './confusions';
 	import { answerFeedback } from './feedback';
+	import { choiceCount, choicesFor } from './nameIt';
+	import { quizMode, setQuizMode } from './mapPrefs.svelte';
 	import MapNav from './MapNav.svelte';
 	import { getLanguage, t, tPlural } from './i18n.svelte';
 	import { targetName } from './targetName';
@@ -106,7 +108,9 @@
 		| undefined
 	>(undefined);
 	/** Where the dragged name would land: the pointer, or the pin above a finger. */
-	const aim = $derived(dragging?.moved ? aimPoint(dragging.x, dragging.y, dragging.touch) : undefined);
+	const aim = $derived(
+		dragging?.moved ? aimPoint(dragging.x, dragging.y, dragging.touch) : undefined
+	);
 	// Tap-to-place (#260): a slip pressed without moving is selected, and the
 	// next tap on the map answers for it.
 	let selectedId = $state<string | undefined>(undefined);
@@ -131,6 +135,13 @@
 	// the tray shows.
 	let level = $state<Level>(0);
 	let hand = $state<string[]>([]);
+	// Which way the round asks (#264). In 'name' mode there is no hand: one
+	// place is lit up (`asking`) and the tray offers a few names (`choices`).
+	// The tutorial always teaches the drag, so it plays in 'place' mode.
+	let mode = $state<'place' | 'name'>(quizMode());
+	let asking = $state<string | undefined>(undefined);
+	let choices = $state<string[]>([]);
+	const inTutorialMap = () => tutorialState().status !== 'idle' && mapId === TUTORIAL_MAP_ID;
 	const pendingIds = () =>
 		session ? session.items.filter((i) => i.status === 'pending').map((i) => i.target.id) : [];
 
@@ -144,7 +155,51 @@
 		const preferred = inTutorial
 			? tutorialSlipIds()
 			: partnersOf(records.confusions ?? [], [...hand, ...(lastAnswered ? [lastAnswered] : [])]);
+		if (mode === 'name') {
+			askNext(preferred);
+			return;
+		}
 		hand = refillHand(pendingIds(), hand, handSize(level), Math.random, preferred);
+	}
+
+	/** Name-it mode (#264): lights up the next place and lays out its choices. */
+	function askNext(preferred: readonly string[]) {
+		const [next] = refillHand(pendingIds(), [], 1, Math.random, preferred);
+		asking = next;
+		choices = next && mapDef ? choicesFor(mapDef.targets, next, choiceCount(level)) : [];
+		showAsked();
+	}
+
+	/** Lights up the place being asked about, and brings it into view if the
+	 * map bar or the tray would hide it. */
+	function showAsked() {
+		if (!map || !styleLoaded || !container) return;
+		const target = asking ? targetsById.get(asking) : undefined;
+		setHover(target?.name);
+		if (!target) return;
+		const at = map.project(target.centroid);
+		const rect = container.getBoundingClientRect();
+		const trayTop = rect.height - (trayHeightPx ?? trayMinPx);
+		if (at.x < 0 || at.x > rect.width || at.y < 80 || at.y > trayTop)
+			map.easeTo({ center: target.centroid, duration: 400 });
+	}
+
+	/** A name picked in Name-it mode. */
+	function onChoice(id: string) {
+		if (!asking || !mapDef || complete) return;
+		const chosen = mapDef.targets.find((t) => t.id === id);
+		resolveAnswer(asking, id === asking, id === asking ? undefined : chosen?.name);
+	}
+
+	/** Switches the quiz's direction; the round starts again in the new one. */
+	function switchMode(next: 'place' | 'name') {
+		if (next === mode || !mapDef) return;
+		mode = next;
+		setQuizMode(next);
+		selectedId = undefined;
+		setHover(undefined);
+		clearAllVisuals();
+		startRound(practice);
 	}
 
 	/** The map's level from the clean streaks of its targets; a target with no
@@ -375,7 +430,9 @@
 
 	/** Every target's earned level right now. */
 	function currentLevels(def: MapDefinition): Map<string, number> {
-		return new Map(def.targets.map((t) => [t.id, cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0]));
+		return new Map(
+			def.targets.map((t) => [t.id, cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0])
+		);
 	}
 
 	/** The names this round could not place, for the panel and "Study these". */
@@ -432,6 +489,7 @@
 			}
 			// The last drop's card would cover the panel; its names open it again.
 			told = undefined;
+			setHover(undefined);
 
 			// What the round did to the map: how many names are known now, and
 			// whether that moved the tray to a smaller hand (FT-21).
@@ -727,6 +785,17 @@
 			closestName
 		});
 		if (!scored) return false;
+		resolveAnswer(targetId, isCorrect, exactName ?? closestName);
+		return true;
+	}
+
+	/**
+	 * One scored answer, from either direction: a drop or tap (`answerAt`), or
+	 * a name picked in Name-it mode (#264). `wrongName` is the place the answer
+	 * went to instead, if any: it flashes red and is remembered as a mix-up.
+	 */
+	function resolveAnswer(targetId: string, isCorrect: boolean, wrongName: string | undefined) {
+		if (!session || !mapDef) return;
 		// The tutorial's drop steps (FT-11) wait for a scored drop; does nothing
 		// when no tutorial is running.
 		tutorialDrop(isCorrect);
@@ -734,7 +803,7 @@
 
 		session = attemptMatch(session, targetId, isCorrect ? targetId : undefined);
 		lastAnswered = targetId;
-		if (!isCorrect) noteConfusion(targetId, exactName ?? closestName);
+		if (!isCorrect) noteConfusion(targetId, wrongName);
 		const item = session.items.find((i) => i.target.id === targetId)!;
 		const target = mapDef.targets.find((t) => t.id === targetId)!;
 		// This name is resolved either way now (one miss reveals, FT-20), so
@@ -748,6 +817,7 @@
 			hand,
 			levelsAtStart: Object.fromEntries(levelsAtStart),
 			practice,
+			mode,
 			elapsedMs: timed ? elapsed() : undefined
 		});
 
@@ -757,8 +827,8 @@
 			// hit still flashes red, and then the name is shown where it really
 			// belongs, so a mistake teaches the answer instead of buying two
 			// more guesses (FT-20).
-			if (revealed) flashWrongRegion(targetId, exactName);
-			markSolved(targetId, name, target.centroid, revealed, target.type === 'city');
+			if (revealed) flashWrongRegion(targetId, wrongName);
+			markSolved(targetId, target.name, target.centroid, revealed, target.type === 'city');
 			// Every answer is graded, in every round (FT-26 - there are no
 			// ungraded practice rounds any more): clean is "good", a name that
 			// had to be shown is "again" (same-day repeat). "hard" (right, but
@@ -775,9 +845,8 @@
 				.saveCardState(mapId, { targetId, ...next })
 				.catch((e) => console.error('Failed to save quiz progress:', e));
 		} else {
-			flashWrongRegion(targetId, exactName);
+			flashWrongRegion(targetId, wrongName);
 		}
-		return true;
 	}
 
 	/** Remembers that `targetId`'s name went to the place called `chosenName` (#266). */
@@ -902,6 +971,8 @@
 		forgetRound(mapId);
 		levelsAtStart = currentLevels(mapDef);
 		practice = practiceRound && canPractise;
+		if (inTutorialMap()) mode = 'place';
+		asking = undefined;
 		timeResult = undefined;
 		roundConfusions = [];
 		lastAnswered = undefined;
@@ -932,6 +1003,8 @@
 			: currentLevels(mapDef);
 		session = round.session;
 		practice = round.practice ?? false;
+		mode = inTutorialMap() ? 'place' : (round.mode ?? 'place');
+		asking = undefined;
 		timeResult = undefined;
 		roundConfusions = [];
 		lastAnswered = undefined;
@@ -1032,6 +1105,7 @@
 			map.once('load', () => {
 				if (cancelled) return;
 				styleLoaded = true;
+				showAsked();
 				if (resumed) {
 					repaintResolved(loadedMapDef);
 					paintKnown(loadedMapDef);
@@ -1074,6 +1148,11 @@
 <svelte:window
 	onkeydown={(e) => {
 		if (e.key === 'Escape') selectedId = undefined;
+		// Name-it mode is played from the keyboard too: 1-6 pick a name (#264).
+		if (mode === 'name' && /^[1-9]$/.test(e.key) && !e.ctrlKey && !e.metaKey && !e.altKey) {
+			const id = choices[Number(e.key) - 1];
+			if (id) onChoice(id);
+		}
 	}}
 />
 
@@ -1086,25 +1165,44 @@
 				{#if session}
 					{#if practice}<span class="practice-label">{t('quiz.practiceLabel')} ·</span>{/if}
 					<span data-tutorial="quiz-progress"
-						>{t(mapDef?.targets[0]?.type === 'city' ? 'quiz.townSubtitle' : 'quiz.subtitle', {
-							placed: session.items.filter((i) => i.status !== 'pending').length,
-							total: session.items.length
-						})}</span
+						>{t(
+							mode === 'name'
+								? 'quiz.nameSubtitle'
+								: mapDef?.targets[0]?.type === 'city'
+									? 'quiz.townSubtitle'
+									: 'quiz.subtitle',
+							{
+								placed: session.items.filter((i) => i.status !== 'pending').length,
+								total: session.items.length
+							}
+						)}</span
 					>
 					<!-- Only once the map is known well enough for the hand to
 					     shrink (FT-21); level 0's hand of ten is the default and
 					     there is nothing to explain (FT-60). -->
-					{#if level > 0}
+					{#if level > 0 && mode === 'place'}
 						<span class="level"
 							>· {tPlural('quiz.namesAtATime', handSize(level), { count: handSize(level) })}</span
 						>
 					{/if}
+					{#if !inTutorialMap()}
+						<span class="mode-switch" role="group" aria-label={t('quiz.modeAria')}>
+							<button
+								type="button"
+								aria-pressed={mode === 'place'}
+								data-testid="mode-place"
+								onclick={() => switchMode('place')}>{t('quiz.modePlace')}</button
+							><button
+								type="button"
+								aria-pressed={mode === 'name'}
+								data-testid="mode-name"
+								onclick={() => switchMode('name')}>{t('quiz.modeName')}</button
+							>
+						</span>
+					{/if}
 					{#if canPractise && !practice && roundFresh}
-						<button
-							type="button"
-							class="practise-btn"
-							data-testid="practise"
-							onclick={practise}>{t('quiz.practise', { count: practiseCount })}</button
+						<button type="button" class="practise-btn" data-testid="practise" onclick={practise}
+							>{t('quiz.practise', { count: practiseCount })}</button
 						>
 					{/if}
 				{/if}
@@ -1213,7 +1311,19 @@
 					if (e.target === e.currentTarget) selectedId = undefined;
 				}}
 			>
-				{#each session.items.filter((i) => i.status === 'pending' && hand.includes(i.target.id)) as item (item.target.id)}
+				{#if mode === 'name'}
+					{#each choices as id, i (id)}
+						<button
+							type="button"
+							class="slip choice"
+							data-testid="choice"
+							onclick={() => onChoice(id)}
+							><span class="choice-key" aria-hidden="true">{i + 1}</span>
+							{shownName(id, id)}</button
+						>
+					{/each}
+				{/if}
+				{#each mode === 'name' ? [] : session.items.filter((i) => i.status === 'pending' && hand.includes(i.target.id)) as item (item.target.id)}
 					{@const isDragging = dragging?.targetId === item.target.id && !!aim}
 					<button
 						class="slip"
@@ -1420,6 +1530,46 @@
 		font: inherit;
 		font-weight: 600;
 		cursor: pointer;
+	}
+	/* Which way the quiz asks (#264): two small joined pills. */
+	.mode-switch {
+		display: inline-flex;
+		margin-left: 0.4rem;
+		vertical-align: middle;
+	}
+	.mode-switch button {
+		padding: 0 0.45rem;
+		border: 1px solid rgba(181, 105, 31, 0.45);
+		background: #ffffff;
+		color: #b5691f;
+		font: inherit;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	.mode-switch button:first-child {
+		border-radius: 5px 0 0 5px;
+	}
+	.mode-switch button:last-child {
+		border-left: none;
+		border-radius: 0 5px 5px 0;
+	}
+	.mode-switch button[aria-pressed='true'] {
+		background: #b5691f;
+		color: #ffffff;
+	}
+	.slip.choice {
+		cursor: pointer;
+	}
+	/* The number key that picks it. */
+	.choice-key {
+		display: inline-block;
+		min-width: 1.1em;
+		margin-right: 0.3rem;
+		border-radius: 3px;
+		background: rgba(0, 0, 0, 0.07);
+		color: rgba(0, 0, 0, 0.5);
+		font-size: 0.75rem;
+		text-align: center;
 	}
 	.practice-label {
 		margin-right: 0.3rem;
