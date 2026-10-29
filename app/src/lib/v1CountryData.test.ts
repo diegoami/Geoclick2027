@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { authoredResolver, storedHooksFor } from '../../../data/scripts/factsHooks';
 import { V1_COUNTRIES, v1MapIds } from '../../../data/scripts/v1CountrySpecs';
+import { correctPlaces } from '../../../data/scripts/placeCorrections';
 
 interface MapData {
 	country: string;
@@ -13,7 +14,10 @@ interface MapData {
 	targets: { id: string; name: string; type: string; centroid: number[] }[];
 }
 interface Snapshot {
-	features: { properties: { NAME: string; POP_MAX: number; ADM1NAME: string } }[];
+	features: {
+		properties: { NAME: string; POP_MAX: number; ADM1NAME: string };
+		geometry: unknown;
+	}[];
 }
 interface Fact {
 	largestCity?: { name: string; population: number };
@@ -25,7 +29,9 @@ const cases = [
 	{ country: 'hungary', region: 'hungary-counties', towns: 'hungary-towns-10k' },
 	{ country: 'slovakia', region: 'slovakia-regions', towns: 'slovakia-towns-10k' },
 	{ country: 'estonia', region: 'estonia-counties', towns: 'estonia-towns-5k' },
-	{ country: 'lithuania', region: 'lithuania-counties', towns: 'lithuania-towns-10k' }
+	{ country: 'lithuania', region: 'lithuania-counties', towns: 'lithuania-towns-10k' },
+	{ country: 'bolivia', region: 'bolivia-departments', towns: 'bolivia-towns-100k' },
+	{ country: 'cuba', region: 'cuba-provinces', towns: 'cuba-towns-100k' }
 ];
 describe('v1.0 country expansion data', () => {
 	it.each(V1_COUNTRIES)(
@@ -64,12 +70,14 @@ describe('v1.0 country expansion data', () => {
 			const map = read<MapData>('maps/' + region + '/map.json');
 			const facts = read<Record<string, Fact>>('maps/' + region + '/facts.json');
 			const snapshot = read<Snapshot>('places/' + country + '.geojson');
+			// The builders apply reviewed corrections (placeCorrections.ts) first.
+			const corrected = correctPlaces(snapshot.features);
 			expect(map.placesSource).toBe('data/places/' + country + '.geojson');
 			expect(map.attribution).toContain('Wikidata');
 			for (const target of map.targets) {
 				const largest = facts[target.id]?.largestCity;
 				expect(largest, region + '/' + target.id).toBeDefined();
-				const source = snapshot.features.find((f) => f.properties.NAME === largest?.name);
+				const source = corrected.find((f) => f.properties.NAME === largest?.name);
 				expect(source, largest?.name).toBeDefined();
 				expect(largest?.population).toBe(source?.properties.POP_MAX);
 			}
@@ -98,6 +106,18 @@ describe('v1.0 country expansion data', () => {
 		['tanzania-towns-10k', 'musoma', 'Mara']
 	])('%s/%s keeps its reviewed region association', (map, town, expected) => {
 		expect(read<Record<string, Fact>>('maps/' + map + '/facts.json')[town]?.region).toBe(expected);
+	});
+	it('uses the 2024 census for Bolivia and keeps the 2011 Cuban provinces', () => {
+		const bolivia = read<MapData>('maps/bolivia-towns-100k/map.json');
+		const facts = read<Record<string, Fact & { population?: number }>>(
+			'maps/bolivia-towns-100k/facts.json'
+		);
+		expect(facts['santa-cruz-de-la-sierra']?.population).toBe(1606671);
+		expect(bolivia.targets.map((t) => t.name)).toContain('El Alto');
+		const cuba = read<MapData>('maps/cuba-provinces/map.json').targets.map((t) => t.name);
+		for (const name of ['Artemisa', 'Mayabeque', 'La Habana', 'Isla de la Juventud'])
+			expect(cuba).toContain(name);
+		expect(cuba).not.toContain('Ciudad de la Habana');
 	});
 	it('places Dome by Accra and never calls it Western North’s largest city', () => {
 		const towns = read<MapData>('maps/ghana-towns-10k/map.json');

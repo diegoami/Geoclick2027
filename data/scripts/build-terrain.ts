@@ -42,6 +42,8 @@ const LABEL_MARGIN = 0.05;
 
 interface MapJson {
 	name: string;
+	regionsMap?: string;
+	extent?: 'regions';
 	targets: { bbox: [number, number, number, number]; crossesAntimeridian?: boolean }[];
 }
 
@@ -56,6 +58,16 @@ function buildOne(mapId: string, force: boolean): { built: boolean; bytes: numbe
 	// makes a naive min/max box span the globe the long way round, which
 	// would clip the whole world's ocean into one map (see
 	// crossesAntimeridian's note). Those targets are left out of the box.
+	// A towns map built with --extent=regions covers its whole regions map.
+	if (mapJson.extent === 'regions' && mapJson.regionsMap)
+		mapJson.targets = [
+			...mapJson.targets,
+			...(
+				JSON.parse(
+					readFileSync(path.join(MAPS_DIR, mapJson.regionsMap, 'map.json'), 'utf8')
+				) as MapJson
+			).targets
+		];
 	const usable = mapJson.targets.filter(
 		(t) => !t.crossesAntimeridian && !crossesAntimeridian(t.bbox)
 	);

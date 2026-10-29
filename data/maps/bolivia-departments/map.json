@@ -1,0 +1,322 @@
+{
+	"id": "bolivia-departments",
+	"name": "Bolivia — Departments",
+	"country": "Bolivia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/bolivia.geojson",
+	"boundaryRenames": {
+		"El Beni": "Beni"
+	},
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "pando",
+			"name": "Pando",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.43285,
+				-11.087399999999999
+			],
+			"bbox": [
+				-69.5776,
+				-12.4934,
+				-65.2881,
+				-9.6814
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-68.8367,
+						-11.6929
+					],
+					[
+						-67.0454,
+						-11.4345
+					],
+					[
+						-65.8419,
+						-10.0692
+					]
+				],
+				"aspect": 2.55
+			}
+		},
+		{
+			"id": "beni",
+			"name": "Beni",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.5769,
+				-13.428899999999999
+			],
+			"bbox": [
+				-67.5607,
+				-16.4657,
+				-61.5931,
+				-10.3921
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-67.0139,
+						-13.7932
+					],
+					[
+						-65.1622,
+						-13.6802
+					],
+					[
+						-63.3104,
+						-13.869
+					]
+				],
+				"aspect": 0.97
+			}
+		},
+		{
+			"id": "la-paz",
+			"name": "La Paz",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.1921,
+				-14.9742
+			],
+			"bbox": [
+				-69.6228,
+				-18.0391,
+				-66.7614,
+				-11.9093
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-68.175,
+						-17.2746
+					],
+					[
+						-68.2743,
+						-14.9134
+					],
+					[
+						-67.9685,
+						-12.5468
+					]
+				],
+				"aspect": 2.52
+			}
+		},
+		{
+			"id": "santa-cruz",
+			"name": "Santa Cruz",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-61.179100000000005,
+				-16.9844
+			],
+			"bbox": [
+				-64.8071,
+				-20.4751,
+				-57.5511,
+				-13.4937
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-63.8404,
+						-17.3605
+					],
+					[
+						-61.0628,
+						-16.2508
+					],
+					[
+						-58.2851,
+						-17.6923
+					]
+				],
+				"aspect": 1.31
+			}
+		},
+		{
+			"id": "cochabamba",
+			"name": "Cochabamba",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.62445,
+				-17.18025
+			],
+			"bbox": [
+				-67.0152,
+				-18.6612,
+				-64.2337,
+				-15.6993
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-66.6602,
+						-16.9715
+					],
+					[
+						-65.7141,
+						-17.3146
+					],
+					[
+						-64.7681,
+						-17.3324
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "oruro",
+			"name": "Oruro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.62625,
+				-18.60445
+			],
+			"bbox": [
+				-69.1554,
+				-19.8079,
+				-66.0971,
+				-17.401
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-68.778,
+						-18.5375
+					],
+					[
+						-67.8164,
+						-18.8537
+					],
+					[
+						-66.8548,
+						-18.5595
+					]
+				],
+				"aspect": 0.91
+			}
+		},
+		{
+			"id": "chuquisaca",
+			"name": "Chuquisaca",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.91965,
+				-19.979
+			],
+			"bbox": [
+				-65.6287,
+				-21.5354,
+				-62.2106,
+				-18.4226
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "potosi",
+			"name": "Potosí",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.7612,
+				-20.37735
+			],
+			"bbox": [
+				-68.7755,
+				-22.8925,
+				-64.7469,
+				-17.8622
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-68.2659,
+						-21.3374
+					],
+					[
+						-66.948,
+						-21.337
+					],
+					[
+						-65.6301,
+						-20.1535
+					]
+				],
+				"aspect": 0.84
+			}
+		},
+		{
+			"id": "tarija",
+			"name": "Tarija",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.800200000000004,
+				-21.80725
+			],
+			"bbox": [
+				-65.3285,
+				-22.6909,
+				-62.2719,
+				-20.9236
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-65.0231,
+						-21.6675
+					],
+					[
+						-63.8171,
+						-21.651
+					],
+					[
+						-62.635,
+						-21.443
+					]
+				],
+				"aspect": 2.09
+			}
+		}
+	],
+	"tourOrder": [
+		"pando",
+		"beni",
+		"la-paz",
+		"santa-cruz",
+		"cochabamba",
+		"oruro",
+		"chuquisaca",
+		"potosi",
+		"tarija"
+	]
+}

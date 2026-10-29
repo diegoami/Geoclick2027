@@ -99,6 +99,7 @@ for (const country of selected) {
 		...(country.townSource ? ['--source=' + country.townSource] : []),
 		...(country.townExclude ? ['--exclude=' + country.townExclude] : []),
 		...(country.retainTowns ? ['--retain=' + country.retainTowns] : []),
+		...(country.townsExtentFromRegions ? ['--extent=regions'] : []),
 		...(country.clip ? ['--lat-min=7.8', '--lon-min=-86.1', '--lon-max=-82.3'] : [])
 	]);
 	run('build-terrain.ts', ['--map=' + townsId, '--force']);

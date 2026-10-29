@@ -165,11 +165,17 @@ async function main() {
 				boundarySource?: string;
 				boundaryFacts?: boolean;
 				boundaryRenames?: Record<string, string>;
-				targets: { name: string }[];
+				targets: { name: string; bbox: [number, number, number, number] }[];
 			})
 		: undefined;
 	if (regionsMap && (multiCountry || regionsMap.country !== country))
 		throw new Error('regions-map must belong to this one country');
+	// --extent=regions draws land, lakes and terrain out to the whole
+	// administrative map, not only around the towns: Bolivia's 100k towns
+	// leave its eastern third bare, which otherwise rendered as sea.
+	const regionsExtent = args.extent === 'regions';
+	if (args.extent !== undefined && !regionsExtent) throw new Error('--extent takes only "regions"');
+	if (regionsExtent && !regionsMap) throw new Error('--extent=regions needs --regions-map');
 	if (regionsMap) attribution = combineAttributions(attribution, regionsMap.attribution);
 	const correctionCredit = placeCorrectionAttribution(country);
 	if (correctionCredit) attribution = combineAttributions(attribution, correctionCredit);
@@ -435,6 +441,7 @@ async function main() {
 		// reads the same file to match each town to its row.
 		...(placesSource ? { placesSource } : {}),
 		...(regionsMapId ? { regionsMap: regionsMapId } : {}),
+		...(regionsExtent ? { extent: 'regions' } : {}),
 		tiles: 'tiles.pmtiles',
 		targets,
 		tourOrder: targets.map((t) => t.id)
@@ -467,10 +474,13 @@ async function main() {
 	writeFileSync(targetsPath, JSON.stringify(targetsGeojson));
 
 	console.log('[3/5] Selecting nearby lakes, country/region context and terrain...');
-	selectNearbyLakes(overallBboxOf(targets), lakesPath);
+	const extent = overallBboxOf(
+		regionsExtent && regionsMap ? [...targets, ...regionsMap.targets] : targets
+	);
+	selectNearbyLakes(extent, lakesPath);
 	// Sea, rivers and named terrain (FT-33) - off by default in the app,
 	// behind the map bar's Terrain button.
-	selectPhysical(padBbox(overallBboxOf(targets)), physical, padBbox(overallBboxOf(targets), 0.05));
+	selectPhysical(padBbox(extent), physical, padBbox(extent, 0.05));
 	// A point map's markers otherwise float with nothing showing the
 	// country's outline or internal admin-1 borders - a polygon map doesn't
 	// have this problem (the targets themselves, filled edge to edge,
@@ -479,7 +489,7 @@ async function main() {
 	// MAPS.md's "Point-target implementation" section.
 	if (multiCountry) {
 		// Country outlines rather than one country's admin-1 lines (#39).
-		selectAdmin0Context(padBbox(overallBboxOf(targets)), contextPath);
+		selectAdmin0Context(padBbox(extent), contextPath);
 	} else {
 		let neutralContext: unknown[] = [];
 		if (regionsMap?.boundarySource && regionsMap.boundaryFacts) {
@@ -520,11 +530,7 @@ async function main() {
 
 		// Separate the mapped country's context (colored for city maps) from
 		// neighboring land, which stays subdued and distinct from the sea.
-		selectAdmin0Context(
-			padBbox(overallBboxOf(targets)),
-			landPath,
-			regionsMap?.boundarySource ? [] : [country]
-		);
+		selectAdmin0Context(padBbox(extent), landPath, regionsMap?.boundarySource ? [] : [country]);
 		appendNeutralBoundaryContext(landPath, neutralContext);
 	}
 
@@ -560,7 +566,7 @@ async function main() {
 	buildTerrainTileset(physical, {
 		absOutDir,
 		mapName,
-		bbox: padBbox(overallBboxOf(targets))
+		bbox: padBbox(extent)
 	});
 
 	console.log('[5/5] Cleaning up...');
