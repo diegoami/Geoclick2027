@@ -56,7 +56,9 @@ const fake = vi.hoisted(() => {
 
 	const state = {
 		container: undefined as HTMLElement | undefined,
-		repository: undefined as ProgressRepository | undefined
+		repository: undefined as ProgressRepository | undefined,
+		// The map's own listeners (a tap on the map, #260), by event type.
+		handlers: {} as Record<string, ((e: { point: { x: number; y: number } }) => void)[]>
 	};
 
 	const inRect = (x0: number, y0: number, x1: number, y1: number) =>
@@ -72,7 +74,10 @@ const fake = vi.hoisted(() => {
 			once: (type: string, fn: () => void) => {
 				if (type === 'load') queueMicrotask(fn);
 			},
-			on: () => map,
+			on: (type: string, fn: unknown) => {
+				if (typeof fn === 'function') (state.handlers[type] ??= []).push(fn as never);
+				return map;
+			},
 			off: () => map,
 			// A point, or a box [[x0, y0], [x1, y1]] for the drop tolerance.
 			queryRenderedFeatures: (at: Point | [Point, Point]) => {
@@ -174,6 +179,13 @@ async function drop(name: string, onto: string) {
 		event('pointerup', box.left + target.centroid[0], box.top + target.centroid[1])
 	);
 	await expect.poll(() => slipNames()).not.toContain(name);
+}
+
+/** A tap on the map at a target's centroid, as MapLibre reports it (#260). */
+function tapMap(onto: string) {
+	const target = fake.mapDef.targets.find((t) => t.name === onto)!;
+	const point = { x: target.centroid[0], y: target.centroid[1] };
+	for (const fn of fake.state.handlers.click ?? []) fn({ point });
 }
 
 /** Places every name left, each on its own region. */
@@ -304,5 +316,43 @@ describe('QuizView (FT-59)', () => {
 		expect(screen.container.querySelector('.map-again')).toBeNull();
 		await finish();
 		await expect.poll(() => saveSummary.mock.calls.length).toBe(2);
+	});
+	it('places a name with a tap on the slip and a tap on the map (#260)', async () => {
+		const screen = await mount();
+		const [name] = slipNames();
+		const slip = screen.getByRole('button', { name, exact: true });
+		await slip.click();
+		await expect.element(slip).toHaveAttribute('aria-pressed', 'true');
+		await expect.element(screen.getByText('Now tap its place on the map')).toBeVisible();
+		tapMap(name);
+		await expect.poll(slipNames).not.toContain(name);
+		expect(saveCardState).toHaveBeenLastCalledWith(MAP_ID, {
+			targetId: name.toLowerCase(),
+			...rate(undefined, 'good', todayLocalDate())
+		});
+	});
+
+	it('lets a selected slip go on a second tap, and ignores map taps with none selected', async () => {
+		const screen = await mount();
+		const [name] = slipNames();
+		const slip = screen.getByRole('button', { name, exact: true });
+		await slip.click();
+		await slip.click();
+		await expect.element(slip).toHaveAttribute('aria-pressed', 'false');
+		tapMap(name);
+		expect(slipNames()).toContain(name);
+		expect(saveCardState).not.toHaveBeenCalled();
+	});
+
+	it('lists the names to work on at the end of a round (#259)', async () => {
+		const screen = await mount();
+		const [right, wrong] = slipNames();
+		await drop(right, right);
+		await drop(wrong, right);
+		await finish();
+		const toWorkOn = screen.container.querySelector('[data-testid="to-work-on"]');
+		expect(toWorkOn?.textContent).toContain(wrong);
+		expect(toWorkOn?.textContent).not.toContain(right);
+		await expect.element(screen.getByRole('button', { name: 'Study these' })).toBeVisible();
 	});
 });

@@ -8,6 +8,7 @@
 	import { terrainShown } from './mapPrefs.svelte';
 	import { mapFitPadding } from './mapFit';
 	import { resolveDrop } from './quizDrop';
+	import { aimPoint, movedPastSlop } from './touchDrag';
 	import MapNav from './MapNav.svelte';
 	import { getLanguage, t, tPlural } from './i18n.svelte';
 	import { targetName } from './targetName';
@@ -80,9 +81,30 @@
 	// True when saved progress could not be opened and the round is running on
 	// the in-memory stand-in: playable, but nothing will be remembered (FT-57).
 	let storageWarning = $state(false);
-	let dragging = $state<{ targetId: string; name: string; x: number; y: number } | undefined>(
-		undefined
-	);
+	// A press on a slip: where the pointer is and where it started, whether it
+	// is a finger or pen (#261 - those aim a fingertip above), and whether it
+	// has moved far enough to be a drag rather than a tap (#260).
+	let dragging = $state<
+		| {
+				targetId: string;
+				name: string;
+				x: number;
+				y: number;
+				startX: number;
+				startY: number;
+				touch: boolean;
+				moved: boolean;
+		  }
+		| undefined
+	>(undefined);
+	/** Where the dragged name would land: the pointer, or the pin above a finger. */
+	const aim = $derived(dragging?.moved ? aimPoint(dragging.x, dragging.y, dragging.touch) : undefined);
+	// Tap-to-place (#260): a slip pressed without moving is selected, and the
+	// next tap on the map answers for it.
+	let selectedId = $state<string | undefined>(undefined);
+	// A drag ends with a click on the slip it started on; that click must not
+	// select it as well. Reset on the next press in case the browser sends none.
+	let suppressClick = false;
 	let wrongFlashId = $state<string | undefined>(undefined);
 
 	// The fact box (FT-35). It can only ever appear AFTER a name is resolved,
@@ -473,13 +495,36 @@
 
 	function onSlipPointerDown(e: PointerEvent, targetId: string, name: string) {
 		(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
-		dragging = { targetId, name, x: e.clientX, y: e.clientY };
+		suppressClick = false;
+		dragging = {
+			targetId,
+			name,
+			x: e.clientX,
+			y: e.clientY,
+			startX: e.clientX,
+			startY: e.clientY,
+			touch: e.pointerType !== 'mouse',
+			moved: false
+		};
 	}
 
 	function onSlipPointerMove(e: PointerEvent) {
 		if (!dragging) return;
-		dragging = { ...dragging, x: e.clientX, y: e.clientY };
-		setHover(regionAtPoint(e.clientX, e.clientY));
+		const moved =
+			dragging.moved || movedPastSlop(dragging.startX, dragging.startY, e.clientX, e.clientY);
+		dragging = { ...dragging, x: e.clientX, y: e.clientY, moved };
+		if (!moved) return;
+		const at = aimPoint(e.clientX, e.clientY, dragging.touch);
+		setHover(regionAtPoint(at.x, at.y));
+	}
+
+	/** A tap on a slip (or Enter on it) selects it; a second tap lets it go. */
+	function onSlipClick(targetId: string) {
+		if (suppressClick) {
+			suppressClick = false;
+			return;
+		}
+		selectedId = selectedId === targetId ? undefined : targetId;
 	}
 
 	function onSlipPointerCancel() {
@@ -559,21 +604,38 @@
 
 	function onSlipPointerUp(e: PointerEvent) {
 		if (!dragging || !map || !session || !mapDef) return;
-		if (!isOverMap(e.clientX, e.clientY) || isOverTray(e.clientX, e.clientY)) {
-			// Dropped outside the map, or back over the tray - treat as
-			// "changed my mind", not a wrong attempt: no error recorded, slip
-			// just returns to the tray.
-			setHover(undefined);
+		// Measured here too: a quick flick can arrive with no move in between.
+		if (!dragging.moved && !movedPastSlop(dragging.startX, dragging.startY, e.clientX, e.clientY)) {
+			// A tap, not a drag: the click that follows selects the slip (#260).
 			dragging = undefined;
 			return;
 		}
-		const { targetId, name } = dragging;
-		const isPointMap = mapDef?.targets[0]?.type === 'city';
-		const exactName = regionAtPoint(e.clientX, e.clientY);
-		const tolerance = isPointMap ? POINT_DROP_TOLERANCE_PX : DROP_TOLERANCE_PX;
-		const nearbyNames = regionsNear(e.clientX, e.clientY, tolerance);
+		suppressClick = true;
+		const { targetId, name, touch } = dragging;
+		const at = aimPoint(e.clientX, e.clientY, touch);
 		setHover(undefined);
 		dragging = undefined;
+		if (!isOverMap(at.x, at.y) || isOverTray(at.x, at.y)) {
+			// Dropped outside the map, or back over the tray - treat as
+			// "changed my mind", not a wrong attempt: no error recorded, slip
+			// just returns to the tray.
+			return;
+		}
+		selectedId = undefined;
+		answerAt(targetId, name, at.x, at.y);
+	}
+
+	/**
+	 * Answers for one name at a point on the screen: the end of a drag, or a
+	 * tap on the map with a slip selected (#260). Returns false when the point
+	 * was no plausible guess (open sea, a gap), which records nothing.
+	 */
+	function answerAt(targetId: string, name: string, clientX: number, clientY: number): boolean {
+		if (!map || !session || !mapDef) return false;
+		const isPointMap = mapDef?.targets[0]?.type === 'city';
+		const exactName = regionAtPoint(clientX, clientY);
+		const tolerance = isPointMap ? POINT_DROP_TOLERANCE_PX : DROP_TOLERANCE_PX;
+		const nearbyNames = regionsNear(clientX, clientY, tolerance);
 
 		// The decision itself lives in quizDrop.ts (pure, unit-tested); this
 		// component only does the hit-testing it needs.
@@ -582,9 +644,9 @@
 			nearbyNames,
 			draggedName: name,
 			isPointMap,
-			closestName: isPointMap ? closestNameAmong(nearbyNames, e.clientX, e.clientY) : undefined
+			closestName: isPointMap ? closestNameAmong(nearbyNames, clientX, clientY) : undefined
 		});
-		if (!scored) return;
+		if (!scored) return false;
 		// The tutorial's drop steps (FT-11) wait for a scored drop; does nothing
 		// when no tutorial is running.
 		tutorialDrop(isCorrect);
@@ -595,6 +657,7 @@
 		// This name is resolved either way now (one miss reveals, FT-20), so
 		// the tray draws a replacement for it.
 		dealHand();
+		if (selectedId && !hand.includes(selectedId)) selectedId = undefined;
 		// Keep the round in case the player steps out to the Overview and back
 		// (quizRound.ts); the completion effect throws it away at the end.
 		rememberRound(mapId, { session, hand, levelsAtStart: Object.fromEntries(levelsAtStart) });
@@ -625,6 +688,29 @@
 		} else {
 			flashWrongRegion(targetId, exactName);
 		}
+		return true;
+	}
+
+	/** A tap on the map with a slip selected answers for that slip (#260). */
+	function onMapTap(e: maplibregl.MapMouseEvent) {
+		if (!selectedId || !session || complete) return;
+		const item = session.items.find((i) => i.target.id === selectedId && i.status === 'pending');
+		if (!item) {
+			selectedId = undefined;
+			return;
+		}
+		const rect = container.getBoundingClientRect();
+		if (answerAt(item.target.id, item.target.name, rect.left + e.point.x, rect.top + e.point.y)) {
+			selectedId = undefined;
+			setHover(undefined);
+		}
+	}
+
+	/** With a slip selected, the region under the mouse lights up as in a drag. */
+	function onMapHover(e: maplibregl.MapMouseEvent) {
+		if (!selectedId || dragging) return;
+		const rect = container.getBoundingClientRect();
+		setHover(regionAtPoint(rect.left + e.point.x, rect.top + e.point.y));
 	}
 
 	// The red flash on the region a wrong drop landed on, plus the slip's own
@@ -802,6 +888,9 @@
 			({ map, terrain } = createMap(container, loadedMapDef, style));
 			if (loadedMapDef.targets.some((target) => target.spine && target.type !== 'city'))
 				stretched = new StretchedNames(map);
+			// MapLibre sends 'click' only for a tap that did not pan the map.
+			map.on('click', onMapTap);
+			map.on('mousemove', onMapHover);
 			fetchFacts(mapId).then((loaded) => {
 				if (!cancelled) facts = loaded;
 			});
@@ -846,6 +935,12 @@
 		map = undefined;
 	});
 </script>
+
+<svelte:window
+	onkeydown={(e) => {
+		if (e.key === 'Escape') selectedId = undefined;
+	}}
+/>
 
 <div class="quiz-view" data-map-fit-root>
 	{#if error}
@@ -924,6 +1019,15 @@
 		/>
 	{/if}
 
+	{#if dragging?.touch && aim}
+		<!-- Where a finger's drag lands (#261): a fingertip above the finger. -->
+		<div class="drop-pin" style="left: {aim.x}px; top: {aim.y}px" aria-hidden="true"></div>
+	{/if}
+	{#if selectedId && !complete}
+		<p class="tap-hint" role="status" style="bottom: calc({trayHeightPx ?? trayMinPx}px + 0.5rem)">
+			{t('quiz.tapPlace')}
+		</p>
+	{/if}
 	{#if session}
 		<div
 			class="tray"
@@ -947,16 +1051,29 @@
 					onkeydown={onTrayHandleKeydown}
 				></div>
 			</div>
-			<div class="tray-slips" bind:this={traySlipsEl}>
+			<!-- A tap on the tray's own background lets a selected slip go (#260);
+			     Escape does the same from the keyboard. -->
+			<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
+			<div
+				class="tray-slips"
+				bind:this={traySlipsEl}
+				onclick={(e) => {
+					if (e.target === e.currentTarget) selectedId = undefined;
+				}}
+			>
 				{#each session.items.filter((i) => i.status === 'pending' && hand.includes(i.target.id)) as item (item.target.id)}
-					{@const isDragging = dragging?.targetId === item.target.id}
+					{@const isDragging = dragging?.targetId === item.target.id && !!aim}
 					<button
 						class="slip"
 						draggable="false"
 						data-tutorial="slip-{item.target.id}"
 						class:slip-dragging={isDragging}
+						class:slip-lifted={isDragging && dragging?.touch}
+						class:selected={selectedId === item.target.id}
 						class:wrong={wrongFlashId === item.target.id}
-						style={isDragging && dragging ? `left: ${dragging.x}px; top: ${dragging.y}px;` : ''}
+						aria-pressed={selectedId === item.target.id}
+						style={isDragging && aim ? `left: ${aim.x}px; top: ${aim.y}px;` : ''}
+						onclick={() => onSlipClick(item.target.id)}
 						onpointerdown={(e) => onSlipPointerDown(e, item.target.id, item.target.name)}
 						onpointermove={onSlipPointerMove}
 						onpointerup={onSlipPointerUp}
@@ -1066,6 +1183,46 @@
 		z-index: 10;
 		cursor: grabbing;
 		pointer-events: auto;
+	}
+	/* A finger's drag (#261): the name sits just above the pin, which is the
+	   point that counts, so neither is under the finger. */
+	.slip-dragging.slip-lifted {
+		transform: translate(-50%, calc(-100% - 10px));
+	}
+	.drop-pin {
+		position: fixed;
+		z-index: 11;
+		width: 12px;
+		height: 12px;
+		box-sizing: border-box;
+		border: 3px solid #b5691f;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.85);
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+	}
+	/* Tap-to-place (#260): the slip waiting for a tap on the map. */
+	.slip.selected {
+		border-color: #b5691f;
+		box-shadow:
+			0 0 0 2px rgba(181, 105, 31, 0.45),
+			0 3px 8px rgba(0, 0, 0, 0.15);
+		transform: translateY(-2px);
+	}
+	.tap-hint {
+		position: absolute;
+		left: 50%;
+		z-index: 2;
+		transform: translateX(-50%);
+		margin: 0;
+		padding: 0.3rem 0.7rem;
+		border-radius: 0.5rem;
+		background: rgba(31, 61, 42, 0.88);
+		color: #ffffff;
+		font-family: system-ui, sans-serif;
+		font-size: 0.85rem;
+		pointer-events: none;
+		white-space: nowrap;
 	}
 	@keyframes shake {
 		0%,

@@ -187,6 +187,7 @@ export type TranslationKey =
 	| 'quiz.toWorkOn'
 	| 'quiz.more'
 	| 'quiz.studyThese'
+	| 'quiz.tapPlace'
 	| 'quiz.resizeTrayAriaLabel'
 	| 'quiz.storageWarning'
 	| 'tour.prev'
@@ -404,6 +405,7 @@ const en: Dictionary = {
 	'quiz.toWorkOn': 'To work on',
 	'quiz.more': '+{count} more',
 	'quiz.studyThese': 'Study these',
+	'quiz.tapPlace': 'Now tap its place on the map',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
 	'quiz.storageWarning':
 		'Progress cannot be saved on this device right now, so this round will not be remembered.',
@@ -637,6 +639,7 @@ const de: Dictionary = {
 	'quiz.toWorkOn': 'Zum Üben',
 	'quiz.more': '+{count} weitere',
 	'quiz.studyThese': 'Diese lernen',
+	'quiz.tapPlace': 'Tippe jetzt auf seinen Ort auf der Karte',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
 	'quiz.storageWarning':
 		'Fortschritt kann auf diesem Gerät gerade nicht gespeichert werden — diese Runde wird nicht gemerkt.',
@@ -873,6 +876,7 @@ const it: Dictionary = {
 	'quiz.toWorkOn': 'Da ripassare',
 	'quiz.more': '+ altri {count}',
 	'quiz.studyThese': 'Studia questi',
+	'quiz.tapPlace': 'Ora tocca il suo posto sulla mappa',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
 	'quiz.storageWarning':
 		'Al momento non è possibile salvare i progressi su questo dispositivo, quindi questa partita non verrà ricordata.',
