@@ -1,0 +1,318 @@
+{
+	"id": "cuba-towns-100k",
+	"name": "Cuba — Towns",
+	"country": "Cuba",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/cuba.geojson",
+	"regionsMap": "cuba-provinces",
+	"extent": "regions",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "la-habana",
+			"name": "La Habana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.358888888,
+				23.136666666
+			],
+			"bbox": [
+				-82.358888888,
+				23.136666666,
+				-82.358888888,
+				23.136666666
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "matanzas",
+			"name": "Matanzas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.573611,
+				23.049444
+			],
+			"bbox": [
+				-81.573611,
+				23.049444,
+				-81.573611,
+				23.049444
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pinar-del-rio",
+			"name": "Pinar del Río",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.671944444,
+				22.412222222
+			],
+			"bbox": [
+				-83.671944444,
+				22.412222222,
+				-83.671944444,
+				22.412222222
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "santa-clara",
+			"name": "Santa Clara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.953055555,
+				22.406666666
+			],
+			"bbox": [
+				-79.953055555,
+				22.406666666,
+				-79.953055555,
+				22.406666666
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "cienfuegos",
+			"name": "Cienfuegos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.436388888,
+				22.145555555
+			],
+			"bbox": [
+				-80.436388888,
+				22.145555555,
+				-80.436388888,
+				22.145555555
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sancti-spiritus",
+			"name": "Sancti Spíritus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.443888888,
+				21.933888888
+			],
+			"bbox": [
+				-79.443888888,
+				21.933888888,
+				-79.443888888,
+				21.933888888
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ciego-de-avila",
+			"name": "Ciego de Ávila",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.763055555,
+				21.848055555
+			],
+			"bbox": [
+				-78.763055555,
+				21.848055555,
+				-78.763055555,
+				21.848055555
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "camaguey",
+			"name": "Camagüey",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.918611111,
+				21.378611111
+			],
+			"bbox": [
+				-77.918611111,
+				21.378611111,
+				-77.918611111,
+				21.378611111
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "las-tunas",
+			"name": "Las Tunas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.95,
+				20.966666666
+			],
+			"bbox": [
+				-76.95,
+				20.966666666,
+				-76.95,
+				20.966666666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "holguin",
+			"name": "Holguín",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.263055555,
+				20.887222222
+			],
+			"bbox": [
+				-76.263055555,
+				20.887222222,
+				-76.263055555,
+				20.887222222
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "mayari",
+			"name": "Mayarí",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.67637268,
+				20.655209184
+			],
+			"bbox": [
+				-75.67637268,
+				20.655209184,
+				-75.67637268,
+				20.655209184
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bayamo",
+			"name": "Bayamo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.642777777,
+				20.381666666
+			],
+			"bbox": [
+				-76.642777777,
+				20.381666666,
+				-76.642777777,
+				20.381666666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "manzanillo",
+			"name": "Manzanillo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.108611111,
+				20.339722222
+			],
+			"bbox": [
+				-77.108611111,
+				20.339722222,
+				-77.108611111,
+				20.339722222
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "palma-soriano",
+			"name": "Palma Soriano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.991944444,
+				20.213888888
+			],
+			"bbox": [
+				-75.991944444,
+				20.213888888,
+				-75.991944444,
+				20.213888888
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "guantanamo",
+			"name": "Guantánamo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.206111,
+				20.138333
+			],
+			"bbox": [
+				-75.206111,
+				20.138333,
+				-75.206111,
+				20.138333
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "santiago-de-cuba",
+			"name": "Santiago de Cuba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.829444444,
+				20.021666666
+			],
+			"bbox": [
+				-75.829444444,
+				20.021666666,
+				-75.829444444,
+				20.021666666
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"la-habana",
+		"matanzas",
+		"pinar-del-rio",
+		"santa-clara",
+		"cienfuegos",
+		"sancti-spiritus",
+		"ciego-de-avila",
+		"camaguey",
+		"las-tunas",
+		"holguin",
+		"mayari",
+		"bayamo",
+		"manzanillo",
+		"palma-soriano",
+		"guantanamo",
+		"santiago-de-cuba"
+	]
+}

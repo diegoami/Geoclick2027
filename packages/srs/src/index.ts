@@ -18,21 +18,31 @@ export interface CardState {
 	easeFactor: number;
 	interval: number; // days
 	repetitions: number;
-	/** Consecutive clean reviews: how often in a row this target was placed
-	 * right with no mistake ('good'). Any mistake ('hard') or fail ('again')
-	 * puts it back to 0. `repetitions` can't answer this - it counts passes,
-	 * including ones that needed a second try. v0.6.0 uses it for how
-	 * prominently a name is drawn on the retention map, and for how many names
-	 * a quiz offers at once (docs/PLAN_V0.6.md). Cards saved before v0.6.0
-	 * have no streak; they read as 0 and rebuild one over the next rounds. */
+	/** The earned level, 0 to KNOWN_CLEAN_STREAK (#256, v1.1.0): a clean
+	 * review ('good') raises it by one, up to Known; a mistake ('hard') or a
+	 * fail ('again') lowers it by one, never below 0. Time never lowers it.
+	 * Until v1.1.0 it was a true streak - any mistake put it back to 0 and it
+	 * could count past 3 - and the field keeps that name so saved progress
+	 * needs no migration: an old streak above 3 reads as Known. Drives how
+	 * prominently a name is drawn on the Known map and how many names a quiz
+	 * offers at once (docs/PLAN_V0.6.md). Cards saved before v0.6.0 have no
+	 * streak; they read as 0. */
 	cleanStreak: number;
 	dueDate: string; // local calendar date, YYYY-MM-DD
 	lastReviewedAt: string; // local calendar date, YYYY-MM-DD
 }
 
-/** A name counts as known once it has been placed right this many times in a
- * row with no mistake (docs/PLAN_V0.6.md). */
+/** The earned level at which a name counts as known: three clean placements
+ * more than mistakes (docs/PLAN_V0.6.md, #256). Also the highest level. */
 export const KNOWN_CLEAN_STREAK = 3;
+
+/** The earned level after one review: one up for a clean placement, one down
+ * for anything else, kept within 0..KNOWN_CLEAN_STREAK (#256). A level saved
+ * above the ceiling (an old streak) counts from the ceiling. */
+export function nextLevel(previous: number | undefined, grade: Grade): number {
+	const level = Math.min(KNOWN_CLEAN_STREAK, previous ?? 0);
+	return grade === 'good' ? Math.min(KNOWN_CLEAN_STREAK, level + 1) : Math.max(0, level - 1);
+}
 
 export const DEFAULT_EASE_FACTOR = 2.5;
 export const MIN_EASE_FACTOR = 1.3;
@@ -105,7 +115,8 @@ export function rate(previous: CardState | undefined, grade: Grade, today: strin
 			easeFactor: Math.max(MIN_EASE_FACTOR, prevEase - 0.2),
 			interval: 0,
 			repetitions: 0,
-			cleanStreak: 0,
+			// A fail costs one level, not all of them (#256).
+			cleanStreak: nextLevel(previous?.cleanStreak, grade),
 			dueDate: today,
 			lastReviewedAt: today
 		};
@@ -131,9 +142,9 @@ export function rate(previous: CardState | undefined, grade: Grade, today: strin
 		easeFactor,
 		interval,
 		repetitions,
-		// Only a clean answer builds the streak; an eventual success after a
-		// wrong drop ('hard') starts it over, the same way it costs ease.
-		cleanStreak: grade === 'good' ? (previous?.cleanStreak ?? 0) + 1 : 0,
+		// Only a clean answer raises the level; an eventual success after a
+		// wrong drop ('hard') lowers it one step, the same way it costs ease.
+		cleanStreak: nextLevel(previous?.cleanStreak, grade),
 		dueDate: addDaysLocal(today, interval),
 		lastReviewedAt: today
 	};

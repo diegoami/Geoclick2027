@@ -62,6 +62,7 @@
 						label={mapDisplayName(mapId) ?? mapId}
 						summary={lastSessions[mapId]}
 						mastery={masteries[mapId]}
+						targetCount={targetIdsByMap.get(mapId)?.length}
 					/>
 				{/each}
 			</ul>
@@ -95,6 +96,7 @@
 						label={mapDisplayName(mapId) ?? mapId}
 						summary={lastSessions[mapId]}
 						mastery={masteries[mapId]}
+						targetCount={targetIdsByMap.get(mapId)?.length}
 					/>
 				{/each}
 			</ul>

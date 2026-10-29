@@ -48,6 +48,8 @@ export type TranslationKey =
 	| 'picker.continents'
 	| 'picker.label'
 	| 'picker.world'
+	| 'picker.namesKnown'
+	| 'picker.complete'
 	| 'picker.close'
 	| 'picker.noMaps'
 	| 'continent.europe'
@@ -64,6 +66,7 @@ export type TranslationKey =
 	| 'nav.quiz'
 	| 'nav.tour'
 	| 'nav.terrain'
+	| 'nav.sound'
 	| 'fact.position.north'
 	| 'fact.position.south'
 	| 'fact.position.east'
@@ -88,6 +91,15 @@ export type TranslationKey =
 	| 'fact.close'
 	| 'known.clear'
 	| 'known.chosen'
+	| 'known.reset'
+	| 'known.resetTitle'
+	| 'known.resetBody'
+	| 'known.resetConfirm'
+	| 'known.resetCancel'
+	| 'known.resetDone'
+	| 'known.resetFailed'
+	| 'known.emptyTitle'
+	| 'known.emptyBody'
 	| 'nav.loading'
 	| 'nav.detailedMaps'
 	| 'nav.hideDetailedMap'
@@ -109,6 +121,12 @@ export type TranslationKey =
 	| 'home.download.link'
 	| 'home.known'
 	| 'home.lastResult'
+	| 'home.nameCount'
+	| 'home.mastered'
+	| 'home.bestTime'
+	| 'home.suggestContinue'
+	| 'home.suggestSlipped'
+	| 'home.suggestNext'
 	| 'home.mistakeCount.one'
 	| 'home.mistakeCount.other'
 	| 'mapType.planningAreas'
@@ -147,6 +165,7 @@ export type TranslationKey =
 	| 'mapType.municipalities'
 	| 'mapType.polishCounties'
 	| 'mapType.croatianCounties'
+	| 'mapType.boliviaDepartments'
 	| 'mapPart.north'
 	| 'mapPart.south'
 	| 'mapPart.east'
@@ -172,10 +191,30 @@ export type TranslationKey =
 	| 'quiz.namesAtATime.one'
 	| 'quiz.namesAtATime.other'
 	| 'quiz.playAgain'
+	| 'quiz.lastTime'
+	| 'quiz.newlyKnown'
+	| 'quiz.slipped'
+	| 'quiz.toWorkOn'
+	| 'quiz.more'
+	| 'quiz.studyThese'
+	| 'quiz.tapPlace'
+	| 'quiz.practise'
+	| 'quiz.practiceLabel'
+	| 'quiz.time'
+	| 'quiz.newBest'
+	| 'quiz.best'
+	| 'quiz.bestNeedsClean'
+	| 'quiz.confusions'
+	| 'quiz.confusedWith'
+	| 'quiz.nameSubtitle'
+	| 'quiz.modeAria'
+	| 'quiz.modePlace'
+	| 'quiz.modeName'
 	| 'quiz.resizeTrayAriaLabel'
 	| 'quiz.storageWarning'
 	| 'tour.prev'
 	| 'tour.replay'
+	| 'tour.tryQuiz'
 	| 'tour.pause'
 	| 'tour.play'
 	| 'tour.next'
@@ -247,6 +286,8 @@ const en: Dictionary = {
 	'picker.continents': 'Continents',
 	'picker.label': 'World map: choose a continent, then a country',
 	'picker.world': 'World',
+	'picker.namesKnown': '{known} / {total} names known',
+	'picker.complete': 'complete',
 	'picker.close': 'Close',
 	'picker.noMaps': 'No maps of {country} yet: these are {continent}’s.',
 	'continent.europe': 'Europe',
@@ -263,6 +304,7 @@ const en: Dictionary = {
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.terrain': 'Terrain',
+	'nav.sound': 'Sound',
 	'fact.position.north': 'In the north of the country.',
 	'fact.position.south': 'In the south of the country.',
 	'fact.position.east': 'On the east side of the country.',
@@ -287,6 +329,17 @@ const en: Dictionary = {
 	'fact.close': 'Close',
 	'known.clear': 'Clear',
 	'known.chosen': 'Chosen',
+	'known.reset': 'Reset progress',
+	'known.resetTitle': 'Reset your progress on {map}?',
+	'known.resetBody':
+		'Every name on this map goes back to unknown. Your other maps, your favourites and your last score stay as they are.',
+	'known.resetConfirm': 'Reset',
+	'known.resetCancel': 'Cancel',
+	'known.resetDone': 'Your progress on {map} is reset.',
+	'known.resetFailed': 'The reset did not finish. Try again.',
+	'known.emptyTitle': 'Nothing known yet',
+	'known.emptyBody':
+		'Every name you place right in the quiz is written here. Study them in the Overview, or start the quiz.',
 	'nav.loading': 'Loading…',
 	'nav.detailedMaps': 'Show detailed maps',
 	'nav.hideDetailedMap': 'Hide {name}',
@@ -309,6 +362,12 @@ const en: Dictionary = {
 	'home.download.link': 'Download for Windows or Android',
 	'home.known': '{known} / {total} known',
 	'home.lastResult': 'Last: {perfect}/{total}',
+	'home.nameCount': '{count} names',
+	'home.mastered': 'Mastered',
+	'home.bestTime': 'best {time}',
+	'home.suggestContinue': 'Continue {map} — {known} / {total} known',
+	'home.suggestSlipped': 'Play {map} again — {count} slipped a level last time',
+	'home.suggestNext': 'Next: {map} — you know all of {from}',
 	'home.mistakeCount.one': '({count} mistake)',
 	'home.mistakeCount.other': '({count} mistakes)',
 
@@ -348,6 +407,7 @@ const en: Dictionary = {
 	'mapType.municipalities': 'Municipalities',
 	'mapType.polishCounties': 'Counties',
 	'mapType.croatianCounties': 'Counties',
+	'mapType.boliviaDepartments': 'Departments',
 	'mapPart.north': 'North',
 	'mapPart.south': 'South',
 	'mapPart.east': 'East',
@@ -374,12 +434,32 @@ const en: Dictionary = {
 	'quiz.namesAtATime.one': 'one name at a time',
 	'quiz.namesAtATime.other': '{count} names at a time',
 	'quiz.playAgain': 'Play again',
+	'quiz.lastTime': 'Last time: {perfect} / {total}.',
+	'quiz.newlyKnown': 'Newly known',
+	'quiz.slipped': 'Slipped a level: {count}',
+	'quiz.toWorkOn': 'To work on',
+	'quiz.more': '+{count} more',
+	'quiz.studyThese': 'Study these',
+	'quiz.tapPlace': 'Now tap its place on the map',
+	'quiz.practise': 'Practise the {count} not yet known',
+	'quiz.practiceLabel': 'Practice',
+	'quiz.time': 'Time: {time}',
+	'quiz.newBest': 'New best!',
+	'quiz.best': 'Best: {time}',
+	'quiz.bestNeedsClean': 'Only a round with no mistakes sets a best time.',
+	'quiz.confusions': 'Mixed up',
+	'quiz.confusedWith': '{a} placed on {b}',
+	'quiz.nameSubtitle': 'Which place is lit up? — {placed} / {total} named',
+	'quiz.modeAria': 'Which way the quiz asks',
+	'quiz.modePlace': 'Place names',
+	'quiz.modeName': 'Name places',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
 	'quiz.storageWarning':
 		'Progress cannot be saved on this device right now, so this round will not be remembered.',
 
 	'tour.prev': '‹ Prev',
 	'tour.replay': 'Replay',
+	'tour.tryQuiz': 'Try the quiz',
 	'tour.pause': 'Pause',
 	'tour.play': '▶ Play',
 	'tour.next': 'Next ›',
@@ -430,7 +510,7 @@ const en: Dictionary = {
 	'tutorial.step8': 'Not sure where a region is? Look it up in the **overview**.',
 	'tutorial.step9': 'Found Sardegna? Go back to the **Quiz**.',
 	'tutorial.step10':
-		'The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Known** shows how far you have got.',
+		'The regions you placed are still marked. Place a name right three times and it counts as known; a mistake takes it back one step — **Known** shows how far you have got.',
 	'tutorial.step11':
 		'Last one: the **Tour** flies you to each region in turn and shows its name. Open it.'
 };
@@ -463,6 +543,8 @@ const de: Dictionary = {
 	'picker.continents': 'Kontinente',
 	'picker.label': 'Weltkarte: wähle einen Kontinent, dann ein Land',
 	'picker.world': 'Welt',
+	'picker.namesKnown': '{known} / {total} Namen gewusst',
+	'picker.complete': 'vollständig',
 	'picker.close': 'Schließen',
 	'picker.noMaps': 'Noch keine Karten von {country}: hier die von {continent}.',
 	'continent.europe': 'Europa',
@@ -479,6 +561,7 @@ const de: Dictionary = {
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.terrain': 'Gelände',
+	'nav.sound': 'Ton',
 	'fact.position.north': 'Im Norden des Landes.',
 	'fact.position.south': 'Im Süden des Landes.',
 	'fact.position.east': 'Im Osten des Landes.',
@@ -503,6 +586,17 @@ const de: Dictionary = {
 	'fact.close': 'Schließen',
 	'known.clear': 'Zurücksetzen',
 	'known.chosen': 'Gewählt',
+	'known.reset': 'Fortschritt zurücksetzen',
+	'known.resetTitle': 'Deinen Fortschritt auf {map} zurücksetzen?',
+	'known.resetBody':
+		'Alle Namen dieser Karte gelten wieder als unbekannt. Deine anderen Karten, deine Favoriten und dein letztes Ergebnis bleiben, wie sie sind.',
+	'known.resetConfirm': 'Ja, zurücksetzen',
+	'known.resetCancel': 'Abbrechen',
+	'known.resetDone': 'Dein Fortschritt auf {map} ist zurückgesetzt.',
+	'known.resetFailed': 'Das Zurücksetzen hat nicht geklappt. Versuch es noch einmal.',
+	'known.emptyTitle': 'Noch nichts gewusst',
+	'known.emptyBody':
+		'Jeder Name, den du im Quiz richtig platzierst, steht dann hier. Lerne sie in der Übersicht oder starte das Quiz.',
 	'nav.loading': 'Lädt…',
 	'nav.detailedMaps': 'Detaillierte Karten anzeigen',
 	'nav.hideDetailedMap': '{name} ausblenden',
@@ -525,6 +619,12 @@ const de: Dictionary = {
 	'home.download.link': 'Für Windows oder Android herunterladen',
 	'home.known': '{known} / {total} gewusst',
 	'home.lastResult': 'Zuletzt: {perfect}/{total}',
+	'home.nameCount': '{count} Namen',
+	'home.mastered': 'Gemeistert',
+	'home.bestTime': 'Bestzeit {time}',
+	'home.suggestContinue': 'Weiter mit {map} — {known} / {total} gewusst',
+	'home.suggestSlipped': '{map} nochmal spielen — letztes Mal {count} eine Stufe verloren',
+	'home.suggestNext': 'Als Nächstes: {map} — {from} kannst du ganz',
 	'home.mistakeCount.one': '({count} Fehler)',
 	'home.mistakeCount.other': '({count} Fehler)',
 
@@ -566,6 +666,7 @@ const de: Dictionary = {
 	// A powiat is a Kreis in German, a županija a Gespanschaft.
 	'mapType.polishCounties': 'Kreise',
 	'mapType.croatianCounties': 'Gespanschaften',
+	'mapType.boliviaDepartments': 'Departamentos',
 	'mapPart.north': 'Norden',
 	'mapPart.south': 'Süden',
 	'mapPart.east': 'Osten',
@@ -592,12 +693,32 @@ const de: Dictionary = {
 	'quiz.namesAtATime.one': 'ein Name auf einmal',
 	'quiz.namesAtATime.other': '{count} Namen auf einmal',
 	'quiz.playAgain': 'Nochmal spielen',
+	'quiz.lastTime': 'Letztes Mal: {perfect} von {total}.',
+	'quiz.newlyKnown': 'Neu gewusst',
+	'quiz.slipped': 'Eine Stufe verloren: {count}',
+	'quiz.toWorkOn': 'Zum Üben',
+	'quiz.more': '+{count} weitere',
+	'quiz.studyThese': 'Diese lernen',
+	'quiz.tapPlace': 'Tippe jetzt auf seinen Ort auf der Karte',
+	'quiz.practise': 'Die {count} noch nicht gewussten üben',
+	'quiz.practiceLabel': 'Übung',
+	'quiz.time': 'Zeit: {time}',
+	'quiz.newBest': 'Neue Bestzeit!',
+	'quiz.best': 'Bestzeit: {time}',
+	'quiz.bestNeedsClean': 'Nur eine Runde ohne Fehler zählt als Bestzeit.',
+	'quiz.confusions': 'Verwechselt',
+	'quiz.confusedWith': '{a} auf {b} gelegt',
+	'quiz.nameSubtitle': 'Welcher Ort leuchtet? — {placed} / {total} benannt',
+	'quiz.modeAria': 'Wie das Quiz fragt',
+	'quiz.modePlace': 'Namen platzieren',
+	'quiz.modeName': 'Orte benennen',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
 	'quiz.storageWarning':
 		'Fortschritt kann auf diesem Gerät gerade nicht gespeichert werden — diese Runde wird nicht gemerkt.',
 
 	'tour.prev': '‹ Zurück',
 	'tour.replay': 'Nochmal',
+	'tour.tryQuiz': 'Zum Quiz',
 	'tour.pause': 'Pause',
 	'tour.play': '▶ Abspielen',
 	'tour.next': 'Weiter ›',
@@ -650,7 +771,7 @@ const de: Dictionary = {
 	'tutorial.step8': 'Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach.',
 	'tutorial.step9': 'Sardegna gefunden? Dann zurück zum **Quiz**.',
 	'tutorial.step10':
-		'Deine platzierten Regionen sind noch markiert. Dreimal hintereinander richtig, und ein Name gilt als gewusst — **Gewusst** zeigt, wie weit du bist.',
+		'Deine platzierten Regionen sind noch markiert. Dreimal richtig, und ein Name gilt als gewusst; ein Fehler setzt ihn eine Stufe zurück — **Gewusst** zeigt, wie weit du bist.',
 	'tutorial.step11':
 		'Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie.'
 };
@@ -683,6 +804,8 @@ const it: Dictionary = {
 	'picker.continents': 'Continenti',
 	'picker.label': 'Mappa del mondo: scegli un continente, poi un paese',
 	'picker.world': 'Mondo',
+	'picker.namesKnown': 'Sai {known} / {total} nomi',
+	'picker.complete': 'completa',
 	'picker.close': 'Chiudi',
 	'picker.noMaps': 'Ancora nessuna mappa di {country}: ecco quelle dell’{continent}.',
 	'continent.europe': 'Europa',
@@ -699,6 +822,7 @@ const it: Dictionary = {
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.terrain': 'Rilievo',
+	'nav.sound': 'Suono',
 	'fact.position.north': 'Nel nord del paese.',
 	'fact.position.south': 'Nel sud del paese.',
 	'fact.position.east': 'Nella parte est del paese.',
@@ -723,6 +847,17 @@ const it: Dictionary = {
 	'fact.close': 'Chiudi',
 	'known.clear': 'Azzera',
 	'known.chosen': 'Scelto',
+	'known.reset': 'Azzera i progressi',
+	'known.resetTitle': 'Azzerare i tuoi progressi su {map}?',
+	'known.resetBody':
+		"Tutti i nomi di questa mappa tornano sconosciuti. Le altre mappe, i preferiti e l'ultimo punteggio restano come sono.",
+	'known.resetConfirm': 'Sì, azzera',
+	'known.resetCancel': 'Annulla',
+	'known.resetDone': 'I tuoi progressi su {map} sono stati azzerati.',
+	'known.resetFailed': "L'azzeramento non è riuscito. Riprova.",
+	'known.emptyTitle': 'Ancora niente di imparato',
+	'known.emptyBody':
+		'Ogni nome che posizioni giusto nel quiz viene scritto qui. Studiali nella Panoramica o inizia il quiz.',
 	'nav.loading': 'Caricamento…',
 	'nav.detailedMaps': 'Mostra le mappe dettagliate',
 	'nav.hideDetailedMap': 'Nascondi {name}',
@@ -745,6 +880,12 @@ const it: Dictionary = {
 	'home.download.link': 'Scarica per Windows o Android',
 	'home.known': 'Sai {known} / {total}',
 	'home.lastResult': 'Ultimo: {perfect}/{total}',
+	'home.nameCount': '{count} nomi',
+	'home.mastered': 'Padroneggiata',
+	'home.bestTime': 'record {time}',
+	'home.suggestContinue': 'Continua {map} — sai {known} / {total}',
+	'home.suggestSlipped': 'Rigioca {map} — l’ultima volta {count} sono scesi di un gradino',
+	'home.suggestNext': 'Prossima: {map} — conosci tutta {from}',
 	'home.mistakeCount.one': '({count} errore)',
 	'home.mistakeCount.other': '({count} errori)',
 
@@ -786,6 +927,7 @@ const it: Dictionary = {
 	// A powiat is a distretto in Italian, a županija a regione.
 	'mapType.polishCounties': 'Distretti',
 	'mapType.croatianCounties': 'Regioni',
+	'mapType.boliviaDepartments': 'Dipartimenti',
 	'mapPart.north': 'Nord',
 	'mapPart.south': 'Sud',
 	'mapPart.east': 'Est',
@@ -813,12 +955,32 @@ const it: Dictionary = {
 	'quiz.namesAtATime.one': 'un nome alla volta',
 	'quiz.namesAtATime.other': '{count} nomi alla volta',
 	'quiz.playAgain': 'Gioca ancora',
+	'quiz.lastTime': 'L’ultima volta: {perfect} su {total}.',
+	'quiz.newlyKnown': 'Imparati ora',
+	'quiz.slipped': 'Scesi di un gradino: {count}',
+	'quiz.toWorkOn': 'Da ripassare',
+	'quiz.more': '+ altri {count}',
+	'quiz.studyThese': 'Studia questi',
+	'quiz.tapPlace': 'Ora tocca il suo posto sulla mappa',
+	'quiz.practise': 'Esercitati sui {count} non ancora imparati',
+	'quiz.practiceLabel': 'Esercizio',
+	'quiz.time': 'Tempo: {time}',
+	'quiz.newBest': 'Nuovo record!',
+	'quiz.best': 'Record: {time}',
+	'quiz.bestNeedsClean': 'Solo un giro senza errori vale come record.',
+	'quiz.confusions': 'Confusi',
+	'quiz.confusedWith': '{a} messo su {b}',
+	'quiz.nameSubtitle': 'Quale luogo è evidenziato? — {placed} / {total} nominati',
+	'quiz.modeAria': 'Come chiede il quiz',
+	'quiz.modePlace': 'Posiziona i nomi',
+	'quiz.modeName': 'Dai i nomi',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
 	'quiz.storageWarning':
 		'Al momento non è possibile salvare i progressi su questo dispositivo, quindi questa partita non verrà ricordata.',
 
 	'tour.prev': '‹ Indietro',
 	'tour.replay': 'Riguarda',
+	'tour.tryQuiz': 'Prova il quiz',
 	'tour.pause': 'Pausa',
 	'tour.play': '▶ Riproduci',
 	'tour.next': 'Avanti ›',
@@ -871,7 +1033,7 @@ const it: Dictionary = {
 	'tutorial.step8': "Non sai dov'è una regione? Controlla nella **panoramica**.",
 	'tutorial.step9': 'Trovata la Sardegna? Torna al **Quiz**.',
 	'tutorial.step10':
-		'Le regioni che hai posizionato restano segnate. Tre volte di fila giuste e un nome conta come imparato — **Conoscenza** mostra a che punto sei.',
+		'Le regioni che hai posizionato restano segnate. Tre volte giusto e un nome conta come imparato; un errore lo fa scendere di un gradino — **Conoscenza** mostra a che punto sei.',
 	'tutorial.step11':
 		"Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo."
 };

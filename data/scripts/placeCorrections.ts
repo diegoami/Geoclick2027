@@ -45,6 +45,44 @@ const corrections: Record<string, Record<string, Correction>> = {
 				'https://unhabitat.org/sites/default/files/download-manager-files/City%20Prosperity%20Index%20Ethiopian%20City%20%E2%80%93%20Mekelle.pdf'
 		}
 	},
+	// One count for every larger town: the 2024 census (23 March), municipal
+	// results as INE published them. Wikidata mixed projections from 2012-2021
+	// and gave Santa Cruz de la Sierra its department's population.
+	Bolivia: Object.fromEntries(
+		(
+			[
+				['Santa Cruz de la Sierra', 1606671, 3122605],
+				['Cochabamba', 661484, 632013],
+				['Sucre', 296125, 360544],
+				['Warnes', 150803, 214216],
+				['Potosí', 218336, 189652],
+				['Tarija', 238942, 179528],
+				['Sacaba', 218502, 172466],
+				['Quillacollo', 165830, 137182],
+				['Montero', 127544, 126886],
+				['Riberalta', 107141, 78100],
+				['Cobija', 54386, 78555]
+			] as const
+		).map(([name, population, replacesPopulation]) => [
+			name,
+			{
+				population,
+				replacesPopulation,
+				populationDate: '2024-03-23',
+				source:
+					'https://eju.tv/2024/08/conozca-la-poblacion-de-bolivia-por-departamento-y-municipio-censo-2024/'
+			}
+		])
+	),
+	Cuba: {
+		// The 2012 census, the date of the other Cuban rows, not an unexplained 2022 value.
+		'La Habana': {
+			population: 2106146,
+			replacesPopulation: 2492618,
+			populationDate: '2012-09-14',
+			source: 'https://en.wikipedia.org/wiki/2012_Cuba_census'
+		}
+	},
 	Norway: {
 		// Bærum is a municipality, not a separately named city.
 		Bærum: { exclude: true, source: 'https://snl.no/B%C3%A6rum' }

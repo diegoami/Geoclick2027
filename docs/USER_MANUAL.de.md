@@ -1,6 +1,6 @@
 # Geoclick — Handbuch
 
-Geoclick ist ein Geografiespiel von Diego Amicabile. Dieses Handbuch beschreibt **Geoclick v1.0.0**, den Kandidaten für die Veröffentlichung der Version 1.0.0. Die tatsächlich laufende Version und ihre Build-Kennung stehen im kleinen Versionsfeld und auf der Informationsseite.
+Geoclick ist ein Geografiespiel von Diego Amicabile. Dieses Handbuch beschreibt **Geoclick v1.1.0**, den Kandidaten für die Veröffentlichung der Version 1.1.0. Die tatsächlich laufende Version und ihre Build-Kennung stehen im kleinen Versionsfeld und auf der Informationsseite.
 
 Die gemeinsam mit dem englischen Handbuch verwendeten Bilder zeigen englische Beschriftungen und beispielhafte Lernstände. Die Schaltflächennamen in diesem Text entsprechen der deutschen Oberfläche. Die Abbildungen der Windows- und Android-App stammen aus früheren Versionen; die beschriebenen Funktionen entsprechen dem aktuellen Spiel.
 
@@ -31,7 +31,7 @@ Die gemeinsam mit dem englischen Handbuch verwendeten Bilder zeigen englische Be
 
 ## 1. Was ist Geoclick?
 
-Du lernst, wo Länder, Hauptstädte, Regionen und Städte liegen, indem du ihre Namen auf der Karte platzierst. Der Katalog umfasst **217 Karten in 79 Ländern und auf den sechs Kontinenten**. Jede Karte bietet Gewusst, Übersicht, Quiz und Tour. Das Spiel merkt sich deinen Lernstand auf dem Gerät. Ein Konto brauchst du nicht. Oberfläche und geschriebene Ortsinformationen gibt es auf Englisch, Deutsch und Italienisch.
+Du lernst, wo Länder, Hauptstädte, Regionen und Städte liegen, indem du ihre Namen auf der Karte platzierst. Der Katalog umfasst **221 Karten in 81 Ländern und auf den sechs Kontinenten**. Jede Karte bietet Gewusst, Übersicht, Quiz und Tour. Das Spiel merkt sich deinen Lernstand auf dem Gerät: Jede richtige Antwort beim ersten Versuch hebt einen Namen eine Stufe, jeder Fehler senkt ihn eine Stufe. Ein Konto brauchst du nicht. Oberfläche und geschriebene Ortsinformationen gibt es auf Englisch, Deutsch und Italienisch.
 
 Du kannst im Browser oder mit der Windows- beziehungsweise Android-App spielen. Ein Tutorial führt durch die wichtigsten Handgriffe und kann später wiederholt werden, ohne den wirklichen Lernstand zu verändern.
 
@@ -57,6 +57,10 @@ Du kannst zwischen Weltkarte und Liste wählen. Auf der Weltkarte öffnest du zu
 
 Drücke auf den gewünschten Kartentyp, um ihn zu öffnen. Die Prozentzahl oder Anzahl bei einer Karte zeigt, wie viele ihrer Orte du kennst. Sie ist keine Bewertung der letzten Runde. Die Darstellung und deine Einstellungen werden gespeichert. Das Angebot für das Tutorial erscheint einmal; der Tutorial-Knopf bleibt auch danach erreichbar.
 
+Auf der Weltkarte ist ein Land, das du gespielt hast, von blassem bis kräftigem Grün gefärbt, je nachdem, wie viel du davon weißt. Es zählen seine Regionen- und Städtekarten, keine Detailkarten. Ein Land, das du ganz kennst, bekommt einen **goldenen Rand**; nie gespielte Länder behalten die Farbe ihres Kontinents. Eine kleine Legende zeigt die Farbstufen und deine Summe über alle Karten, etwa „1 240 / 9 800 Namen gewusst“.
+
+Eine Zeile über Karte oder Liste schlägt vor, was du als Nächstes spielen kannst, zum Beispiel „Weiter mit Italy — Regionen — 14 / 20 gewusst“, „Italy — Regionen nochmal spielen — letztes Mal 3 eine Stufe verloren“ oder „Als Nächstes: Italy — Städte — Italy — Regionen kannst du ganz“. Ein Druck darauf öffnet das Quiz dieser Karte. Gibt es nichts vorzuschlagen, oder läuft das Tutorial, fehlt die Zeile.
+
 ## 5. Bedienelemente auf der Karte
 
 | Schaltfläche | Wirkung |
@@ -67,6 +71,7 @@ Drücke auf den gewünschten Kartentyp, um ihn zu öffnen. Die Prozentzahl oder 
 | **Quiz** | Eine Runde beginnen oder fortsetzen |
 | **Tour** | Orte automatisch kennenlernen |
 | **Gelände** | Zusätzliche geografische Details ein- oder ausblenden |
+| **Ton** | Nur im Quiz: Antworttöne ein- oder ausschalten (anfangs aus) |
 | **Tutorial** | Die Einführung starten, fortsetzen oder wiederholen |
 
 Die Zeile darunter wechselt zwischen den Karten desselben Landes oder Kontinents. Der Stern gilt für die gerade geöffnete Karte. **Detaillierte Karten anzeigen** ergänzt feinere Unterteilungen. Eine bereits geöffnete Detailkarte bleibt mit einem **roten X** erreichbar, wenn das Häkchen wieder ausgeschaltet ist. Das X entfernt diesen zusätzlichen Knopf aus der Zeile, ohne den Lernstand der Karte zu löschen.
@@ -79,11 +84,15 @@ Rechts ändern **+** und **−** den Zoom. Der Kompass richtet die Karte wieder 
 
 ![Namen mit unterschiedlichen Lernständen](manual/known.jpg)
 
-Hier entsteht deine persönliche Karte. Die Stärke eines Namens folgt deiner Serie richtiger Antworten: dreimal hintereinander bedeutet gewusst, zweimal fast gewusst, einmal schon gesehen. Ohne eine richtige Serie wird ein Name nicht automatisch angezeigt.
+Hier entsteht deine persönliche Karte. Die Stärke eines Namens folgt seiner Stufe (siehe Abschnitt 9): **Gewusst** ist die oberste Stufe, **Fast** eine darunter, **Einmal** zwei darunter. Ein Name ohne Stufe wird nicht automatisch angezeigt.
 
-Klicke oder tippe auf einen Ort, um seinen Namen hinzuzufügen; noch einmal nimmt ihn wieder weg. Du kannst mehrere Namen gleichzeitig wählen. **Gewählt** unterscheidet solche Namen von denen, die du im Quiz verdient hast. **Zurücksetzen** entfernt die vorübergehenden Auswahlen und zeigt wieder den erworbenen Lernstand. Es löscht keine richtigen Serien. Die Auswahlen gelten für die laufende Sitzung.
+Klicke oder tippe auf einen Ort, um seinen Namen hinzuzufügen; noch einmal nimmt ihn wieder weg. Du kannst mehrere Namen gleichzeitig wählen. **Gewählt** unterscheidet solche Namen von denen, die du im Quiz verdient hast. **Zurücksetzen** entfernt die vorübergehenden Auswahlen und zeigt wieder den erworbenen Lernstand. Es löscht keine erreichten Stufen. Die Auswahlen gelten für die laufende Sitzung.
 
 Wenn Informationen verfügbar sind, öffnet die Auswahl auch eine Ortskarte mit Wissenswertem. Auf einer Städtekarte tippst du auf den Punkt. Das erneute Ausblenden des Namens schließt die Ortskarte. In dieser Ansicht gibt es keine Bewertung.
+
+Auf einer nie gespielten Karte erscheint eine kleine Karte **Noch nichts gewusst** mit den Knöpfen **Übersicht** und **Quiz**.
+
+Sobald du auf der Karte etwas erreicht hast, steht in der Legende auch **Fortschritt zurücksetzen**. Ein Dialog fragt nach: „Deinen Fortschritt auf Italy — Regionen zurücksetzen?“. **Abbrechen** ändert nichts; **Ja, zurücksetzen** macht alle Namen dieser Karte wieder unbekannt und löscht auch die gewählten Namen und eine halb gespielte Runde. Deine anderen Karten, deine Favoriten und dein letztes Ergebnis bleiben. Das ist etwas anderes als **Zurücksetzen** in der Legende, das nur die gewählten Namen entfernt.
 
 ## 7. Übersicht
 
@@ -97,12 +106,15 @@ Mit der Maus kannst du auf einen Namen zeigen, um ihn zu vergrößern. Auf einem
 
 ![Namen in der unteren Ablage](manual/quiz-start.jpg)
 
-Drücke auf einen Namen in der Ablage, ziehe ihn auf seine Region oder den Stadtpunkt und lass los. Der Name folgt dem Zeiger. Die blaue Hervorhebung zeigt nur, über welchem Gebiet du bist, nicht ob die Antwort stimmt.
+Drücke auf einen Namen in der Ablage, ziehe ihn auf seine Region oder den Stadtpunkt und lass los. Der Name folgt dem Zeiger. Die blaue Hervorhebung zeigt nur, über welchem Gebiet du bist, nicht ob die Antwort stimmt. Auf einem Touchscreen schwebt der Name über deinem Finger, mit einer kleinen orange umrandeten Nadel darunter; die Nadel ist der Punkt, der zählt, damit dein Finger den Ort nicht verdeckt. Am oberen Bildschirmrand steht die Nadel unter dem Finger. Mit der Maus zählt die Zeigerspitze.
+
+Statt zu ziehen kannst du einen Namen in der Ablage antippen oder anklicken: Er hebt sich ab, wird umrandet, und „Tippe jetzt auf seinen Ort auf der Karte“ erscheint. Tippe dann auf seinen Ort. Ein zweiter Tipp auf den Namen, ein Tipp auf die leere Ablage oder Esc lässt ihn wieder los. Es gelten dieselben Regeln wie beim Ziehen. Die Karte zu verschieben zählt nicht als Antwort.
 
 - Richtig platziert bleibt der Name auf der Karte und verschwindet aus der Ablage.
 - Ein falscher Abwurf beendet den Zug dieses Namens; in derselben Runde gibt es keinen zweiten Versuch. Der getroffene Ort blinkt rot, und der Name wird an der richtigen Stelle gezeigt, goldbraun statt grün. Die Ortsinformation bleibt bis zum nächsten Abwurf stehen.
 - Ein Abwurf aufs Meer, außerhalb der Karte oder zurück in die Ablage zählt nicht als Antwort. Der Name bleibt verfügbar.
 - Kleine Ziele lassen sich durch Hineinzoomen leichter treffen. Ein kleiner Toleranzbereich erleichtert den richtigen Treffer.
+- Verwechslungen merkt sich das Spiel: Ein Name, den du auf einen anderen Ort gelegt hast, kommt in späteren Runden zusammen mit dessen Namen in die Ablage, damit du beide unterscheiden lernst. Das Paar wird vergessen, sobald du beide Namen weißt.
 
 ![Eine falsche Antwort zeigt anschließend die richtige Lage](manual/quiz-wrong.jpg)
 
@@ -117,23 +129,31 @@ Eine Runde fragt alle Namen der Karte ab. Je mehr du bereits weißt, desto wenig
 
 Die Ablage füllt sich während der Runde nach. Ziehe den grauen Griff nach oben oder unten, um ihre Höhe anzupassen. Mit der Tastatur erreichst du ihn über Tab und verwendest die Pfeiltasten. Wenn nicht alles hineinpasst, kannst du die Ablage scrollen. Beim Öffnen wird die Karte zunächst in den Platz oberhalb der Ablage eingepasst.
 
-Am Ende erscheint **Fertig!** mit den beim ersten Versuch richtigen Antworten, der gesamten Fehlerzahl, gegebenenfalls gezeigten Namen und dem erreichten Lernstand. Nur ein sofort richtiger erster Abwurf zählt zur ersten Zahl. Das X schließt die Ergebnisanzeige; **Nochmal spielen** beginnt eine neue Runde. Jede Runde behandelt wieder die gesamte Karte.
+Am Ende erscheint **Fertig!** mit den beim ersten Versuch richtigen Antworten, dem Wert der vorigen Runde („Letztes Mal: 14 von 20.“), der gesamten Fehlerzahl, gegebenenfalls gezeigten Namen und dem erreichten Lernstand, bei Bedarf mit „Eine Stufe verloren: 2“. Nur ein sofort richtiger erster Abwurf zählt zur ersten Zahl. Darunter stehen die Listen **Neu gewusst**, **Zum Üben** und **Verwechselt** („Molise auf Abruzzo gelegt“); ein Druck auf einen Namen öffnet seine Ortskarte, lange Listen enden mit „+4 weitere“. **Diese lernen** öffnet Gewusst mit den Namen zum Üben als **Gewählt**. Das X schließt die Ergebnisanzeige; **Nochmal spielen** beginnt eine neue Runde.
+
+Eine Runde behandelt normalerweise die gesamte Karte. Kennst du einige Namen, aber nicht alle, bietet **Die 6 noch nicht gewussten üben** eine Übungsrunde an: neben der Fortschrittszeile (nur vor der ersten Antwort einer Runde), in der Ergebnisanzeige und neben **Nochmal spielen**. Darin stehen die gewussten Namen schon auf der Karte, gefragt werden nur die übrigen; die Fortschrittszeile beginnt mit „Übung ·“. Gewertet wird wie sonst.
+
+Weißt du alle Namen einer Karte, wird jede Runde gestoppt. Es zählt nur die Zeit im Quiz, und beim Spielen ist keine Uhr zu sehen. Die Ergebnisanzeige zeigt etwa „Zeit: 1:42“ und **Neue Bestzeit!**, wenn eine fehlerfreie Runde deine Bestzeit schlägt. Nach einer Runde mit Fehlern steht dort „Nur eine Runde ohne Fehler zählt als Bestzeit.“
+
+**Namen platzieren** und **Orte benennen**, zwei verbundene Knöpfe in der Fortschrittszeile, wählen, wie das Quiz fragt. Bei **Orte benennen** leuchtet ein Ort blau auf, und die Ablage bietet seinen Namen unter vier Namen an; die anderen sind seine nächsten Nachbarn. Ab 60 % gewusst sind es fünf, ab 85 % sechs Namen. Wähle durch Tippen, Klicken oder mit den Zifferntasten 1 bis 6; jeder Name zeigt seine Ziffer. Die Fortschrittszeile lautet „Welcher Ort leuchtet? — 0 / 20 benannt“. Eine falsche Wahl wirkt wie im Ziehquiz: Der gewählte Ort blinkt rot, der richtige Name wird gezeigt, die Ortskarte öffnet sich. Beide Arten zählen für dieselben Stufen. Ein Wechsel beginnt eine neue Runde; die Wahl wird gespeichert. Das Tutorial verwendet immer **Namen platzieren**.
+
+Zum Platzieren brauchst du Maus, Touchpad, Finger oder Stift; einen Namen in der Ablage kannst du auch mit Tab und Enter aufnehmen. **Orte benennen** lässt sich ganz mit der Tastatur spielen.
 
 Du kannst in die Übersicht schauen und zum Quiz zurückkehren, ohne die laufende Runde zu verlieren. Bereits beantwortete Orte ändern ihren Lernstand sofort. Wenn du die Karte ganz verlässt, wird für noch nicht bearbeitete Namen kein abgeschlossener Rundenausgang erfunden.
 
 ## 9. Wann ein Ort als gewusst zählt
 
-Du musst ihn **dreimal hintereinander beim ersten Versuch ohne gezeigte Lösung richtig platzieren**. Ein Ort kommt in jeder Runde einmal vor; die Serie entsteht also über mehrere Runden. Ein Fehler oder eine gezeigte Lösung setzt seine Serie auf null zurück.
+Jeder Ort hat eine **Stufe**: keine, Einmal, Fast oder Gewusst. Jede richtige Antwort beim ersten Versuch hebt sie um eine Stufe; ein Fehler oder eine gezeigte Lösung senkt sie um eine Stufe, von Gewusst über Fast und Einmal bis zu keiner. Gewusst ist ein Ort nach drei Stufen nach oben, grob gesagt also, wenn du ihn dreimal öfter richtig als falsch platziert hast. Ein Ort kommt in jeder Runde einmal vor; die Stufen entstehen also über mehrere Runden. Die Zeit allein senkt keine Stufe.
 
-Nachschlagen, Informationen lesen und Namen in Gewusst auswählen machen einen Ort nicht von selbst gewusst. Deine Gesamtzahl kann sinken, wenn du einen bereits gelernten Ort falsch platzierst. Danach braucht dieser Ort wieder drei saubere Antworten. Die Anzeige folgt deinem im Spiel gezeigten Wissen.
+Nachschlagen, Informationen lesen und Namen in Gewusst auswählen machen einen Ort nicht von selbst gewusst. Deine Gesamtzahl kann sinken, wenn du einen bereits gelernten Ort falsch platzierst; eine richtige Antwort in einer späteren Runde macht ihn wieder gewusst. Lernstände früherer Versionen gelten weiter. Die Anzeige folgt deinem im Spiel gezeigten Wissen.
 
 ## 10. Tour
 
 ![Die Tour mit ihren unteren Bedienelementen](manual/tour.jpg)
 
-Die Tour startet von selbst und besucht die Orte ungefähr von Norden nach Süden. Sie hebt jeden Ort hervor und zeigt Namen und verfügbare Informationen. Sie ändert keine Punktzahlen oder Serien.
+Die Tour startet von selbst und besucht die Orte ungefähr von Norden nach Süden. Sie hebt jeden Ort hervor und zeigt Namen und verfügbare Informationen. Sie ändert keine Punktzahlen oder Stufen.
 
-Die Pfeile springen zum vorherigen oder nächsten Ort. Wiedergabe und Pause starten oder stoppen den Ablauf. Am Ende beginnt der kreisförmige Pfeil wieder von vorn. Ein Zähler wie „3 / 20“ bezeichnet den aktuellen Halt. Das Tempo bietet 0,5×, 0,75×, 1×, 1,5×, 2× und 3×. Normalerweise beginnt eine Tour mit 0,75×; auf sehr großen Karten wird das Starttempo so angepasst, dass sie nicht unnötig lange dauert. Du kannst weiterhin selbst zoomen und die Karte verschieben.
+Die Pfeile springen zum vorherigen oder nächsten Ort. Wiedergabe und Pause starten oder stoppen den Ablauf. Am Ende beginnt der kreisförmige Pfeil wieder von vorn. Ein Zähler wie „3 / 20“ bezeichnet den aktuellen Halt. Am Ende erscheint neben dem Wiederholen-Knopf **Zum Quiz**, das das Quiz der Karte öffnet. Das Tempo bietet 0,5×, 0,75×, 1×, 1,5×, 2× und 3×. Normalerweise beginnt eine Tour mit 0,75×; auf sehr großen Karten wird das Starttempo so angepasst, dass sie nicht unnötig lange dauert. Du kannst weiterhin selbst zoomen und die Karte verschieben.
 
 ## 11. Städtekarten
 
@@ -159,7 +179,7 @@ Die geschriebenen Texte sind in alle drei Sprachen übersetzt. Auf detaillierten
 
 ![Favoriten und zuletzt geöffnete Karten](manual/my-maps.jpg)
 
-Der Stern fügt eine Karte den Favoriten hinzu; ein weiterer Druck nimmt sie wieder heraus. **Meine Karten** zeigt Favoriten und zuletzt verwendete Karten mit direktem Zugang. Ein gefüllter Stern kennzeichnet einen Favoriten. Das Entfernen aus den Favoriten löscht weder Ergebnisse noch Serien. Ist die Seite leer, öffne eine Karte oder wähle ihren Stern.
+Der Stern fügt eine Karte den Favoriten hinzu; ein weiterer Druck nimmt sie wieder heraus. **Meine Karten** zeigt Favoriten und zuletzt verwendete Karten mit direktem Zugang. Ein gefüllter Stern kennzeichnet einen Favoriten. Das Entfernen aus den Favoriten löscht weder Ergebnisse noch Stufen. Eine Karte, deren Namen du alle weißt, zeigt „★ Gemeistert · Bestzeit 1:42“; eine nie gespielte Karte nennt die Zahl ihrer Namen, etwa „20 Namen“. Ist die Seite leer, öffne eine Karte oder wähle ihren Stern.
 
 ## 15. Das Tutorial
 
@@ -181,7 +201,7 @@ Das Tutorial verwendet Italien — Regionen als getrennte Übung, die den echten
 | 10 | Absichtlich falsch antworten und die Korrektur ansehen |
 | 11 | In der Übersicht nachschlagen |
 | 12 | Zum Quiz zurückkehren |
-| 13 | Die Erklärung zur richtigen Serie lesen und weitergehen |
+| 13 | Die Erklärung zu den Stufen lesen und weitergehen |
 | 14 | Tour öffnen |
 
 Erfolgreiche Handlungen führen zum nächsten Schritt. Eine reine Erklärung nutzt den Knopf zum Weitergehen. Zurück führt zum vorherigen Schritt. **Tutorial beenden** oder Esc beendet die Übung und stellt das normale Spiel wieder her, ohne Übungsergebnisse zu übernehmen. Die letzte Karte bietet **Fertig** zum Beenden und **Nochmal** zum Wiederholen. Wenn du während der Übung anderswohin wechselst, kannst du zum vorgesehenen Ablauf zurückkehren. Auf Touchscreens sprechen die Hinweise von Tippen und Gesten anstelle der Maus.
@@ -194,25 +214,25 @@ Das Sprachmenü bietet English, Deutsch und Italiano. Die Wahl betrifft Oberflä
 
 ![Das Quiz auf einem Telefon](manual/phone-quiz.jpg)
 
-Tippen wählt Länder und Orte aus. Mit einem Finger verschiebst du die Karte, mit zwei Fingern zoomst du. Beginne einen Quiz-Zug direkt auf einem Namen in der Ablage; Ziehen auf der freien Karte bewegt stattdessen die Karte. Die Höhe der Ablage lässt sich anpassen. Zoome kleine Ziele bei Bedarf heran. Ein Tipp auf einen Namen in der Übersicht vergrößert ihn; ein weiterer Tipp oder ein Tipp daneben verkleinert ihn.
+Tippen wählt Länder und Orte aus. Mit einem Finger verschiebst du die Karte, mit zwei Fingern zoomst du. Beginne einen Quiz-Zug direkt auf einem Namen in der Ablage; Ziehen auf der freien Karte bewegt stattdessen die Karte. Beim Ziehen schwebt der Name über dem Finger, und die orange umrandete Nadel darunter markiert den Punkt, der zählt. Du kannst einen Namen auch antippen und dann seinen Ort antippen. Die Höhe der Ablage lässt sich anpassen. Zoome kleine Ziele bei Bedarf heran. Ein Tipp auf einen Namen in der Übersicht vergrößert ihn; ein weiterer Tipp oder ein Tipp daneben verkleinert ihn.
 
-Androids Zurück-Taste führt innerhalb einer Karte zur Startseite. Auf der Startseite steigt sie zunächst aus einer tieferen geografischen Ansicht zur Welt auf; wenn nichts mehr geschlossen werden muss, kann sie die App verlassen. Native Apps haben zusätzlich einen Beenden-Knopf. Ein Wechsel der Geräteausrichtung erfordert keinen Neustart der Quizrunde.
+Androids Zurück-Taste führt innerhalb einer Karte zur Startseite. Auf der Startseite steigt sie zunächst aus einer tieferen geografischen Ansicht zur Welt auf; wenn nichts mehr geschlossen werden muss, kann sie die App verlassen. Native Apps haben zusätzlich einen Beenden-Knopf. In der Android-App gibt das Telefon bei einer richtigen Antwort einen leichten Tipp, bei einer falschen ein doppeltes Brummen, außer wenn es auf reduzierte Bewegung eingestellt ist. Ein Wechsel der Geräteausrichtung erfordert keinen Neustart der Quizrunde.
 
 ## 18. Windows und Android
 
-Die Apps besitzen dieselben Spielansichten, Sprachen, Favoriten und das Tutorial wie die Browserfassung. Karten und weitere Ressourcen liegen im Installationspaket und stehen ohne Verbindung bereit. Der App-Lernstand ist vom Browser getrennt, auch auf demselben Gerät. Installiere ein Update über die vorhandene App, um ihre Daten zu behalten. Eine Deinstallation einschließlich der Daten kann diese entfernen.
+Die Apps besitzen dieselben Spielansichten, Sprachen, Favoriten und das Tutorial wie die Browserfassung. Die Android-App vibriert zusätzlich bei Quizantworten; Töne gibt es überall erst nach einem Druck auf **Ton**. Karten und weitere Ressourcen liegen im Installationspaket und stehen ohne Verbindung bereit. Der App-Lernstand ist vom Browser getrennt, auch auf demselben Gerät. Installiere ein Update über die vorhandene App, um ihre Daten zu behalten. Eine Deinstallation einschließlich der Daten kann diese entfernen.
 
 Unter Windows startet das Fenster normalerweise mit 1280 × 800 und kann verkleinert oder vergrößert werden. Auf dem Telefon passen sich Leisten und Ablage dem Platz an. Versionsfeld und Informationsseite nennen die installierte Build.
 
 ## 19. Daten und Privatsphäre
 
-Es gibt kein Benutzerkonto und keine Synchronisierung des Lernstands zwischen Geräten. Lokal gespeichert werden richtige Serien, Kartenergebnisse, Favoriten, zuletzt verwendete Karten, Sprach- und Geländeeinstellung sowie der Zustand des Tutorial-Angebots. Unterschiedliche Browser und native Apps haben getrennte Speicher.
+Es gibt kein Benutzerkonto und keine Synchronisierung des Lernstands zwischen Geräten. Lokal gespeichert werden die Stufen jedes Ortes, Kartenergebnisse und Bestzeiten, Verwechslungen, Favoriten, zuletzt verwendete Karten, Sprach-, Gelände- und Toneinstellung, die gewählte Quizart sowie der Zustand des Tutorial-Angebots. Unterschiedliche Browser und native Apps haben getrennte Speicher.
 
 Das Löschen der Webseitendaten löscht den Lernstand dieses Browsers. Eine Deinstallation samt App-Daten entfernt ihn aus der App. Normales Spielen und falsche Antworten löschen nicht das gesamte Archiv. Die Browserfassung lädt benötigte Spieldateien von der Webseite; externe Links benötigen die entsprechende Netzwerkverbindung. Quellen und Lizenzen stehen in den Karteninformationen.
 
 ## 20. Der Kartenkatalog
 
-Die 217 Karten umfassen Länder und Hauptstädte der sechs Kontinente, nationale Verwaltungsgebiete, Städte und detaillierte Unterteilungen. Suche auf der Startseite nach einem Land; für feinere Unterteilungen aktiviere Detaillierte Karten anzeigen. Singapur verwendet Regionen und 55 Planungsgebiete. Sehr weit entfernte Überseegebiete werden weggelassen, wenn sie das Hauptgebiet zu stark verkleinern würden.
+Die 221 Karten umfassen Länder und Hauptstädte der sechs Kontinente, nationale Verwaltungsgebiete, Städte und detaillierte Unterteilungen. Suche auf der Startseite nach einem Land; für feinere Unterteilungen aktiviere Detaillierte Karten anzeigen. Singapur verwendet Regionen und 55 Planungsgebiete. Sehr weit entfernte Überseegebiete werden weggelassen, wenn sie das Hauptgebiet zu stark verkleinern würden.
 
 Zu den Quellen gehören Natural Earth, Wikidata und offen nutzbare Verwaltungsregister oder Grenzdaten mit den jeweils angegebenen Lizenzen. Eine Städteauswahl ist keine vollständige Liste sämtlicher Siedlungen. Grenzen und statistische Angaben ändern sich; die verwendeten Quellen werden beim Kartenbau festgehalten.
 
@@ -220,7 +240,9 @@ Zu den Quellen gehören Natural Earth, Wikidata und offen nutzbare Verwaltungsre
 
 **Warum sehe ich einen Namen nicht?** Zoome hinein: Beschriftungen ohne genügend Platz werden ausgeblendet. In Gewusst bleiben ungelernte Namen verborgen, bis du sie selbst auswählst.
 
-**Warum sinkt die Zahl gewusster Orte?** Eine falsche Antwort setzt die Serie des betroffenen Ortes zurück. Er braucht wieder drei richtige Antworten in Folge.
+**Warum sinkt die Zahl gewusster Orte?** Eine falsche Antwort senkt den betroffenen Ort um eine Stufe, von Gewusst auf Fast. Eine richtige Antwort in einer späteren Runde macht ihn wieder gewusst.
+
+**Wie fange ich eine Karte neu an?** In Gewusst über **Fortschritt zurücksetzen** in der Legende, bestätigt mit **Ja, zurücksetzen**. Das betrifft nur diese Karte.
 
 **Warum bietet das Quiz nur einen Namen an?** Du kennst mindestens 85% der Karte. Das Quiz zeigt dann weniger Hinweise gleichzeitig.
 
@@ -238,8 +260,10 @@ Zu den Quellen gehören Natural Earth, Wikidata und offen nutzbare Verwaltungsre
 |---|---|
 | Ort oder Ziel | Region, Stadt, Hauptstadt oder Land, das du erkennen sollst |
 | Karte | Eine Auswahl mit eigenem Lernstand |
-| Serie | Aufeinanderfolgende richtige Antworten für einen Ort |
-| Gewusst | Dreimal in Folge beim ersten Versuch richtig platziert |
+| Stufe | Wie gut du einen Ort weißt: keine, Einmal, Fast, Gewusst; eine Stufe hoch je richtiger erster Antwort, eine herunter je Fehler |
+| Gewusst | Die oberste Stufe, drei Stufen über keiner |
+| Übungsrunde | Eine Runde nur mit den noch nicht gewussten Namen |
+| Gemeistert | Eine Karte, deren Namen du alle weißt; ihre Runden werden gestoppt |
 | Ablage | Unterer Bereich mit den zu ziehenden Namen |
 | Gewählt | Vorübergehend selbst eingeblendeter Name in Gewusst |
 | Übersicht | Lernansicht ohne Bewertung |

@@ -14,6 +14,7 @@ import { setLanguage } from './i18n.svelte';
 import { createInMemoryProgressRepository, todayLocalDate } from './progressRepository';
 import type { ProgressRepository } from './progressRepository';
 import { forgetRound } from './quizRound';
+import { quizMode, setQuizMode } from './mapPrefs.svelte';
 
 const fake = vi.hoisted(() => {
 	type Point = [number, number];
@@ -56,7 +57,11 @@ const fake = vi.hoisted(() => {
 
 	const state = {
 		container: undefined as HTMLElement | undefined,
-		repository: undefined as ProgressRepository | undefined
+		repository: undefined as ProgressRepository | undefined,
+		// The map's own listeners (a tap on the map, #260), by event type.
+		handlers: {} as Record<string, ((e: { point: { x: number; y: number } }) => void)[]>,
+		// The place lit up by quizHover: the one Name-it mode asks about (#264).
+		hovered: undefined as string | undefined
 	};
 
 	const inRect = (x0: number, y0: number, x1: number, y1: number) =>
@@ -72,7 +77,10 @@ const fake = vi.hoisted(() => {
 			once: (type: string, fn: () => void) => {
 				if (type === 'load') queueMicrotask(fn);
 			},
-			on: () => map,
+			on: (type: string, fn: unknown) => {
+				if (typeof fn === 'function') (state.handlers[type] ??= []).push(fn as never);
+				return map;
+			},
 			off: () => map,
 			// A point, or a box [[x0, y0], [x1, y1]] for the drop tolerance.
 			queryRenderedFeatures: (at: Point | [Point, Point]) => {
@@ -80,7 +88,11 @@ const fake = vi.hoisted(() => {
 				return inRect(x0, y0, x1, y1);
 			},
 			project: ([x, y]: [number, number]) => ({ x, y }),
-			setFeatureState: () => {},
+			setFeatureState: ({ id }: { id: string }, value: { quizHover?: boolean }) => {
+				if (value.quizHover) state.hovered = id;
+				else if (value.quizHover === false && state.hovered === id) state.hovered = undefined;
+			},
+			easeTo: () => map,
 			fitBounds: () => map,
 			remove: () => {}
 		};
@@ -121,7 +133,26 @@ const fake = vi.hoisted(() => {
 	return { mapDef, state, createMap, Popup };
 });
 
-vi.mock('maplibre-gl', () => ({ Popup: fake.Popup }));
+vi.mock('maplibre-gl', () => ({
+	Popup: fake.Popup,
+	// Name places' "?" on the asked place (#264): an element in the container.
+	Marker: class {
+		private readonly el: HTMLElement;
+		constructor({ element }: { element: HTMLElement }) {
+			this.el = element;
+		}
+		setLngLat() {
+			return this;
+		}
+		addTo(map: { getContainer(): HTMLElement }) {
+			map.getContainer().append(this.el);
+			return this;
+		}
+		remove() {
+			this.el.remove();
+		}
+	}
+}));
 vi.mock('./geoclickMap', () => ({
 	fetchMapDefAndStyle: async () => ({ mapDef: fake.mapDef, style: {} }),
 	createMap: fake.createMap
@@ -176,6 +207,13 @@ async function drop(name: string, onto: string) {
 	await expect.poll(() => slipNames()).not.toContain(name);
 }
 
+/** A tap on the map at a target's centroid, as MapLibre reports it (#260). */
+function tapMap(onto: string) {
+	const target = fake.mapDef.targets.find((t) => t.name === onto)!;
+	const point = { x: target.centroid[0], y: target.centroid[1] };
+	for (const fn of fake.state.handlers.click ?? []) fn({ point });
+}
+
 /** Places every name left, each on its own region. */
 async function finish() {
 	for (let left = slipNames(); left.length > 0; left = slipNames()) await drop(left[0], left[0]);
@@ -193,6 +231,7 @@ describe('QuizView (FT-59)', () => {
 
 	beforeEach(() => {
 		setLanguage('en');
+		setQuizMode('place');
 		forgetRound(MAP_ID);
 		const repository = createInMemoryProgressRepository();
 		saveCardState = vi.spyOn(repository, 'saveCardState');
@@ -304,5 +343,109 @@ describe('QuizView (FT-59)', () => {
 		expect(screen.container.querySelector('.map-again')).toBeNull();
 		await finish();
 		await expect.poll(() => saveSummary.mock.calls.length).toBe(2);
+	});
+	it('places a name with a tap on the slip and a tap on the map (#260)', async () => {
+		const screen = await mount();
+		const [name] = slipNames();
+		const slip = screen.getByRole('button', { name, exact: true });
+		await slip.click();
+		await expect.element(slip).toHaveAttribute('aria-pressed', 'true');
+		await expect.element(screen.getByText('Now tap its place on the map')).toBeVisible();
+		tapMap(name);
+		await expect.poll(slipNames).not.toContain(name);
+		expect(saveCardState).toHaveBeenLastCalledWith(MAP_ID, {
+			targetId: name.toLowerCase(),
+			...rate(undefined, 'good', todayLocalDate())
+		});
+	});
+
+	it('lets a selected slip go on a second tap, and ignores map taps with none selected', async () => {
+		const screen = await mount();
+		const [name] = slipNames();
+		const slip = screen.getByRole('button', { name, exact: true });
+		await slip.click();
+		await slip.click();
+		await expect.element(slip).toHaveAttribute('aria-pressed', 'false');
+		tapMap(name);
+		expect(slipNames()).toContain(name);
+		expect(saveCardState).not.toHaveBeenCalled();
+	});
+
+	it('lists the names to work on and the mix-ups at the end of a round (#259, #266)', async () => {
+		const saveRecords = vi.spyOn(fake.state.repository!, 'saveMapRecords');
+		const screen = await mount();
+		const [right, wrong] = slipNames();
+		await drop(right, right);
+		await drop(wrong, right);
+		expect(saveRecords).toHaveBeenLastCalledWith(MAP_ID, {
+			confusions: [{ targetId: wrong.toLowerCase(), chosenId: right.toLowerCase(), count: 1 }]
+		});
+		await finish();
+		const toWorkOn = screen.container.querySelector('[data-testid="to-work-on"]');
+		expect(toWorkOn?.textContent).toContain(wrong);
+		expect(toWorkOn?.textContent).not.toContain(right);
+		await expect.element(screen.getByRole('button', { name: 'Study these' })).toBeVisible();
+		expect(screen.container.querySelector('[data-testid="confusions"]')?.textContent).toContain(
+			`${wrong} placed on ${right}`
+		);
+	});
+	it('offers a practice round of the names not yet known, with the known ones placed (#265)', async () => {
+		const today = todayLocalDate();
+		const known = fake.mapDef.targets.slice(0, 12);
+		const repository = fake.state.repository!;
+		for (const target of known) {
+			let card = rate(undefined, 'good', today);
+			card = rate(rate(card, 'good', today), 'good', today);
+			await repository.saveCardState(MAP_ID, { targetId: target.id, ...card });
+		}
+		const screen = await render(QuizView, { mapId: MAP_ID });
+		const practise = screen.getByRole('button', { name: 'Practise the 4 not yet known' });
+		await practise.click();
+		// 12 of 16 known is level 2: the four left are dealt three at a time.
+		await expect.poll(() => slipNames().length).toBe(3);
+		expect(slipNames().some((n) => known.some((t) => t.name === n))).toBe(false);
+		await expect.poll(placedNames).toHaveLength(known.length);
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('Practice');
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 4');
+		await expect.element(practise).not.toBeInTheDocument();
+	});
+	it('times a round on a fully known map and keeps a clean best (#267)', async () => {
+		const today = todayLocalDate();
+		const repository = fake.state.repository!;
+		const saveRecords = vi.spyOn(repository, 'saveMapRecords');
+		for (const target of fake.mapDef.targets) {
+			const card = rate(rate(rate(undefined, 'good', today), 'good', today), 'good', today);
+			await repository.saveCardState(MAP_ID, { targetId: target.id, ...card });
+		}
+		const screen = await render(QuizView, { mapId: MAP_ID });
+		await expect.poll(() => slipNames().length).toBe(1);
+		await finish();
+		await expect.element(screen.getByText('New best!')).toBeVisible();
+		expect(screen.container.querySelector('[data-testid="round-time"]')?.textContent).toMatch(
+			/Time: \d+:\d\d/
+		);
+		expect(saveRecords).toHaveBeenCalledWith(MAP_ID, { bestTimeMs: expect.any(Number) });
+	});
+	it('asks for the name of a lit-up place in Name-it mode, and keeps the choice (#264)', async () => {
+		const screen = await mount();
+		await screen.getByRole('button', { name: 'Name places' }).click();
+		const choices = () => [...document.querySelectorAll<HTMLElement>('[data-testid="choice"]')];
+		await expect.poll(() => choices().length).toBe(4);
+		await expect.poll(() => fake.state.hovered).toBeDefined();
+		const asked = fake.state.hovered!;
+		expect(choices().some((c) => c.textContent?.includes(asked))).toBe(true);
+		expect(document.querySelectorAll('.ask-marker')).toHaveLength(1);
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 16 named');
+
+		// The number key of the right name answers it.
+		const index = choices().findIndex((c) => c.textContent?.includes(asked));
+		window.dispatchEvent(new KeyboardEvent('keydown', { key: String(index + 1) }));
+		await expect.poll(() => saveCardState.mock.calls.length).toBe(1);
+		expect(saveCardState).toHaveBeenLastCalledWith(MAP_ID, {
+			targetId: asked.toLowerCase(),
+			...rate(undefined, 'good', todayLocalDate())
+		});
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('1 / 16 named');
+		expect(quizMode()).toBe('name');
 	});
 });

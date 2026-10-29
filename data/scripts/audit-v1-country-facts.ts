@@ -54,7 +54,13 @@ if (args.json)
 	writeFileSync(
 		path.resolve(REPO_ROOT, args.json),
 		JSON.stringify(
-			{ countries: V1_COUNTRIES.length, maps: 44, total, complete, missing },
+			{
+				countries: V1_COUNTRIES.length,
+				maps: V1_COUNTRIES.flatMap(v1MapIds).length,
+				total,
+				complete,
+				missing
+			},
 			null,
 			2
 		) + '\n'
@@ -62,7 +68,9 @@ if (args.json)
 console.log(
 	'Full scope: ' +
 		V1_COUNTRIES.length +
-		' countries, 44 maps; ' +
+		' countries, ' +
+		V1_COUNTRIES.flatMap(v1MapIds).length +
+		' maps; ' +
 		complete +
 		'/' +
 		total +

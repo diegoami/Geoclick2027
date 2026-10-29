@@ -111,6 +111,13 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Bolivia',
+		maps: [
+			{ id: 'bolivia-departments', labelKey: 'mapType.boliviaDepartments' },
+			{ id: 'bolivia-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Brazil',
 		maps: [
 			{ id: 'brazil-regions', labelKey: 'mapType.states' },
@@ -172,6 +179,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'croatia-counties', labelKey: 'mapType.croatianCounties' },
 			{ id: 'croatia-towns-50k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Cuba',
+		maps: [
+			{ id: 'cuba-provinces', labelKey: 'mapType.provinces' },
+			{ id: 'cuba-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{

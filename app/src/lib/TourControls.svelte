@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$lib/appPaths';
 	import { t } from './i18n.svelte';
 	import { TOUR_SPEEDS } from './tourSpeed';
 
@@ -11,7 +12,8 @@
 		onback,
 		ontoggleplay,
 		onadvance,
-		onsetspeed
+		onsetspeed,
+		mapId
 	}: {
 		stepIndex: number;
 		stepCount: number;
@@ -22,6 +24,8 @@
 		ontoggleplay: () => void;
 		onadvance: () => void;
 		onsetspeed: (speed: number) => void;
+		/** The map toured, for the quiz the end of the tour offers (#269). */
+		mapId: string;
 	} = $props();
 
 	let playLabel = $derived(
@@ -95,9 +99,25 @@
 			<option value={s}>{s}×</option>
 		{/each}
 	</select>
+	{#if finished}
+		<!-- The tour has shown every name; the quiz is the next step (#269). -->
+		<a class="try-quiz" data-testid="tour-quiz" href={resolve('/map/[mapId]/quiz', { mapId })}
+			>{t('tour.tryQuiz')}</a
+		>
+	{/if}
 </div>
 
 <style>
+	.try-quiz {
+		margin-left: 0.25rem;
+		padding: 0.45rem 0.8rem;
+		border-radius: 0.6rem;
+		background: #5a9c6f;
+		color: #ffffff;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
 	.controls-inner {
 		box-sizing: border-box;
 		max-width: calc(100vw - 1rem);

@@ -21,7 +21,8 @@ describe('TourControls', () => {
 			onback,
 			ontoggleplay,
 			onadvance,
-			onsetspeed: onsetSpeed
+			onsetspeed: onsetSpeed,
+			mapId: 'italy-regions'
 		});
 
 		const previous = screen.getByRole('button', { name: '‹ Prev' });
@@ -55,7 +56,8 @@ describe('TourControls', () => {
 			onback: callback,
 			ontoggleplay: callback,
 			onadvance: callback,
-			onsetspeed: callback
+			onsetspeed: callback,
+			mapId: 'italy-regions'
 		});
 		expect(playing.getByRole('button', { name: 'Pause' })).toBeVisible();
 		playing.unmount();
@@ -69,9 +71,15 @@ describe('TourControls', () => {
 			onback: callback,
 			ontoggleplay: callback,
 			onadvance: callback,
-			onsetspeed: callback
+			onsetspeed: callback,
+			mapId: 'italy-regions'
 		});
 		expect(finished.getByRole('button', { name: 'Replay' })).toBeVisible();
 		expect(finished.getByRole('button', { name: 'Next ›' })).toBeDisabled();
+		// The end of the tour offers the quiz (#269).
+		expect(finished.getByRole('link', { name: 'Try the quiz' })).toHaveAttribute(
+			'href',
+			expect.stringContaining('/map/italy-regions/quiz')
+		);
 	});
 });

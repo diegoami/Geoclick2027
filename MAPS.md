@@ -1851,6 +1851,61 @@ fact generation; regional largest-city selection uses the same bounded resolver
 as town associations. expectedLargest checks guard Cape Coast, Kalemie, Musoma,
 Kigoma and Mekele. Taiwan excludes four Taoyuan boroughs by the owner's decision.
 
+### v1.1 Bolivia and Cuba (#270)
+
+Two more countries in the v1 batch (`v1CountrySpecs.ts`), built in the WSL
+toolchain like the v1.0 expansion:
+
+    node --import tsx data/scripts/fetch-v1-towns.ts --country=bolivia
+    node --import tsx data/scripts/fetch-v1-towns.ts --country=cuba
+    node --import tsx data/scripts/build-v1-country-maps.ts --country=bolivia
+    node --import tsx data/scripts/build-v1-country-maps.ts --country=cuba
+    node --import tsx data/scripts/build-map-index.ts
+    node --import tsx data/scripts/audit-v1-country-facts.ts --strict
+
+| Country | Administrative map (targets) | Towns map (targets) |
+| --- | --- | --- |
+| Bolivia | bolivia-departments (9) | bolivia-towns-100k (14) |
+| Cuba | cuba-provinces (16) | cuba-towns-100k (16) |
+
+**Boundaries:** Natural Earth 10m admin-1 (public domain), already current
+for both. Bolivia's nine departments have not changed; "El Beni" is renamed
+Beni (`--rename`, so derived facts use the same name). Cuba's source has the
+2011 reform: fifteen provinces, Artemisa and Mayabeque in place of the old La
+Habana, plus the special municipality of Isla de la Juventud, which stays in
+(it lies just south of the main island, across the Gulf of Batabanó).
+"Ciudad de la Habana" is renamed La Habana, its name since 2011. Neither
+country has a distant territory to leave out. Natural Earth draws the
+US-leased Guantánamo Bay naval base as a separate admin-0 unit, outside the
+Guantánamo province polygon, so it is not part of any target.
+
+**Towns:** committed Wikidata snapshots (CC0), `data/places/bolivia.geojson`
+and `data/places/cuba.geojson`, fetched from 1,000 population with Spanish
+labels so regional largest-city facts see small capitals such as Cobija; the
+playable maps start at 100,000. Regions come from point-in-polygon against the
+same renamed Natural Earth polygons (`naturalEarthRegions` in the fetcher), and
+towns outside them are recorded as excluded (Puerto Quijarro and Yacuiba, on
+the borders). Cobija, Pando's capital, takes Natural Earth's representative
+centre because Wikidata's point falls just across the Acre river in the
+generalized outline. Implausible values are excluded with a reason in the
+snapshot: San Joaquín (Beni, 97,625) and Carlos Manuel de Céspedes (Camagüey,
+224,488). `placeCorrections.ts` sets every larger Bolivian town to its 2024
+census municipal count (Wikidata mixed 2012-2021 figures and gave Santa Cruz de
+la Sierra its department's 3.1 million), which adds Riberalta and leaves
+Yacuiba (97,577) just below the threshold; Havana takes its 2012 census count,
+the year of the other Cuban rows. Cuban counts are municipal, as Wikidata
+records them, so Mayarí (102,354) qualifies as a municipality. Authored facts:
+EN/IT/DE, three each, for all 55 targets.
+
+Both towns maps are built with the new opt-in `build-points-map.ts
+--extent=regions` (spec field `townsExtentFromRegions`): land, lakes and
+terrain are selected for the whole administrative map, not only around the
+towns, and `build-terrain.ts` follows the `extent` recorded in map.json.
+Without it, Bolivia's eastern third, which has no town of 100,000, rendered
+as sea. Existing towns maps are unchanged unless rebuilt with the flag.
+Checked locally in the dev server (Overview of all four maps, no console
+errors).
+
 ### v1.0 older towns and current Norwegian counties (#236, #244)
 
 Run in the same Linux toolchain as the country expansion:

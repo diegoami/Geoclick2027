@@ -5,6 +5,33 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v1.1.0 — candidate — A map you complete, and new ways to play it
+
+**Known fades slowly instead of collapsing, every round says what it changed, and the quiz can be played by tapping, by naming places, or as a short practice round.**
+
+Plan #270. Gameplay in #272, the Bolivia and Cuba maps in #271.
+This entry describes the candidate; no v1.1.0 tag or release has been published.
+
+For players:
+
+- **Known fades one step at a time.** A mistake lowers a name one level (Known → Nearly → Seen → nothing) instead of wiping it, and time never lowers it. Known has a **Reset progress** button to start a map over.
+- **The score panel says what the round did:** newly known names, names to work on, names you mixed up, how many slipped a level, last time's score, and **Study these**.
+- **New ways to play:** tap a name and then its place; **Name places**, where a place lights up and you pick its name (playable with the number keys); and **Practise the names not yet known** beside the whole-map round.
+- **On a touch screen** a dragged name aims at a pin above your finger, so your finger no longer hides the place.
+- **Goals beyond Known:** mixed-up pairs come back together until you can tell them apart; a fully known map is timed, keeps a best time and shows **Mastered**.
+- **The start screen** colours the world by how much of each country you know and suggests what to play next. The tour ends on **Try the quiz**.
+- **Sound and touch:** optional answer sounds (off by default) and haptics in the Android app.
+- **Two new countries:** Bolivia (9 departments, 14 towns) and Cuba (16 provinces, 16 towns), with facts in English, German and Italian — 221 maps across 81 countries.
+
+Under the hood:
+
+- Saved progress needs no migration: the stored streak becomes an earned level. One JSON record per map (`map_records`, migration 3 on desktop and Android) holds best times, mix-ups and the last round's slipped count.
+- Adds `@capacitor/haptics` 8.0.2. New pure, unit-tested quiz modules: `touchDrag`, `nameIt`, `confusions`, `roundReport`, `suggestion`, `feedback`.
+
+Not covered:
+
+- Windows and Android installers, haptics on a device and the sounds have not been tried yet; that happens before the tag (docs/RELEASES.md).
+
 ## v1.0.0 — in preparation — More of the world, facts throughout, portable browser play
 
 **Explore 217 maps, learn with facts in English, German and Italian, and play in a browser or with the Windows and Android apps.**

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { groupProgress, loadHomeProgress } from './homeProgress';
+import { groupProgress, loadHomeProgress, worldProgress } from './homeProgress';
 import {
 	createInMemoryProgressRepository,
 	type CardState,
@@ -48,6 +48,24 @@ describe('loadHomeProgress', () => {
 		// One of two names known: 3 is the known streak, 0 is "never played".
 		expect(masteries['italy-regions']).toEqual({ known: 1, total: 2, level: 1 });
 		expect(masteries['usa-states']).toBeUndefined();
+	});
+
+	it('reads the best time of a mastered map only (#267)', async () => {
+		const repository = createInMemoryProgressRepository();
+		await repository.saveCardState('italy-regions', card('piemonte', 3));
+		await repository.saveMapRecords('italy-regions', { bestTimeMs: 42_000 });
+		await repository.saveCardState('usa-states', card('texas', 2));
+		await repository.saveMapRecords('usa-states', { bestTimeMs: 9_000 });
+		const { masteries } = await loadHomeProgress(
+			repository,
+			['italy-regions', 'usa-states'],
+			new Map([
+				['italy-regions', ['piemonte']],
+				['usa-states', ['texas']]
+			])
+		);
+		expect(masteries['italy-regions']?.bestTimeMs).toBe(42_000);
+		expect(masteries['usa-states']?.bestTimeMs).toBeUndefined();
 	});
 
 	it('lets one map fail without losing the others', async () => {
@@ -114,5 +132,43 @@ describe("groupProgress (a country's row, FT-78)", () => {
 
 	it('says nothing until a name is known', () => {
 		expect(groupProgress(['a', 'c'], {}, count)).toBeUndefined();
+	});
+});
+
+describe('worldProgress (#262)', () => {
+	const counts: Record<string, number> = {
+		'italy-regions': 20,
+		'italy-towns': 40,
+		'italy-provinces': 107,
+		'spain-regions': 17,
+		'japan-regions': 47
+	};
+	const groups = [
+		{ id: 'italy', mapIds: ['italy-regions', 'italy-towns', 'italy-provinces'] },
+		{ id: 'spain', mapIds: ['spain-regions'] },
+		{ id: 'japan', mapIds: ['japan-regions'] }
+	];
+	const run = (masteries: Parameters<typeof worldProgress>[1]) =>
+		worldProgress(
+			groups,
+			masteries,
+			(id) => counts[id],
+			(id) => id === 'italy-provinces'
+		);
+
+	it('lists only countries with a map played, without their detailed maps', () => {
+		const { byGroup, known, total } = run({
+			'italy-regions': { known: 20, total: 20, level: 3 },
+			'italy-provinces': { known: 50, total: 107, level: 1 },
+			'spain-regions': { known: 0, total: 17, level: 0 }
+		});
+		expect(byGroup.get('italy')).toEqual({ known: 20, total: 60 });
+		expect(byGroup.get('spain')).toEqual({ known: 0, total: 17 });
+		expect(byGroup.has('japan')).toBe(false);
+		expect({ known, total }).toEqual({ known: 20, total: 124 });
+	});
+
+	it('is empty before any map is played', () => {
+		expect(run({}).byGroup.size).toBe(0);
 	});
 });

@@ -1,0 +1,540 @@
+{
+	"la-habana": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Artemisa",
+			"Mayabeque"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "La Habana",
+			"nameDe": "Havanna",
+			"nameIt": "L'Avana",
+			"population": 2106146
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"La Habana is the Spanish name of Havana; it is usually linked to a Taíno chief called Habaguanex, though this is uncertain.",
+				"The province and the city are a single unit, divided into 15 municipalities.",
+				"Until 2011 it was called Ciudad de La Habana, to tell it apart from the province around it."
+			],
+			"it": [
+				"La Habana è il nome spagnolo dell’Avana; di solito è collegato a un capo taíno di nome Habaguanex, ma non è certo.",
+				"La provincia e la città formano un’unica entità, divisa in 15 comuni.",
+				"Fino al 2011 si chiamava Ciudad de La Habana, per distinguerla dalla provincia che la circondava."
+			],
+			"de": [
+				"La Habana ist der spanische Name Havannas; er wird meist mit einem Taíno-Häuptling namens Habaguanex verbunden, doch das ist unsicher.",
+				"Provinz und Stadt bilden eine Einheit, gegliedert in 15 Gemeinden.",
+				"Bis 2011 hieß sie Ciudad de La Habana, zur Unterscheidung von der sie umgebenden Provinz."
+			]
+		}
+	},
+	"mayabeque": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Artemisa",
+			"La Habana",
+			"Matanzas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "San José de las Lajas",
+			"nameDe": "San José de las Lajas",
+			"nameIt": "San José de las Lajas",
+			"population": 80960
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It is named after the Mayabeque River, whose name is probably of Taíno origin.",
+				"It was created in 2011 from the eastern part of the old La Habana province.",
+				"The chocolate maker Hershey built a sugar town there, and an electric railway to Matanzas, in the 1910s."
+			],
+			"it": [
+				"Prende il nome dal fiume Mayabeque, il cui nome è probabilmente di origine taíno.",
+				"Fu creata nel 2011 dalla parte orientale della vecchia provincia di La Habana.",
+				"Negli anni Dieci del Novecento il produttore di cioccolato Hershey vi costruì una città dello zucchero e una ferrovia elettrica per Matanzas."
+			],
+			"de": [
+				"Sie ist nach dem Fluss Mayabeque benannt, dessen Name wahrscheinlich aus dem Taíno stammt.",
+				"Sie wurde 2011 aus dem Ostteil der alten Provinz La Habana gebildet.",
+				"Der Schokoladenhersteller Hershey baute dort in den 1910er-Jahren eine Zuckerstadt und eine elektrische Bahn nach Matanzas."
+			]
+		}
+	},
+	"artemisa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"La Habana",
+			"Mayabeque",
+			"Pinar del Río"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Artemisa",
+			"nameDe": "Artemisa",
+			"nameIt": "Artemisa",
+			"population": 86444
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It is named after its capital, Artemisa; the name is linked either to the Greek goddess Artemis or to Artemisia, an ancient queen, and the origin is disputed.",
+				"It was created in 2011 from the western part of the old La Habana province and three municipalities of Pinar del Río.",
+				"The port of Mariel, from which about 125,000 Cubans left for Florida in 1980, lies in it."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, Artemisa; il nome è collegato alla dea greca Artemide o ad Artemisia, un’antica regina, e l’origine è discussa.",
+				"Fu creata nel 2011 dalla parte occidentale della vecchia provincia di La Habana e da tre comuni di Pinar del Río.",
+				"Vi si trova il porto di Mariel, da cui nel 1980 circa 125.000 cubani partirono per la Florida."
+			],
+			"de": [
+				"Sie ist nach ihrer Hauptstadt Artemisa benannt; der Name wird mit der griechischen Göttin Artemis oder mit Artemisia, einer antiken Königin, verbunden, die Herkunft ist umstritten.",
+				"Sie wurde 2011 aus dem Westteil der alten Provinz La Habana und drei Gemeinden von Pinar del Río gebildet.",
+				"In ihr liegt der Hafen Mariel, von dem 1980 rund 125.000 Kubaner nach Florida aufbrachen."
+			]
+		}
+	},
+	"matanzas": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cienfuegos",
+			"Mayabeque",
+			"Villa Clara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Matanzas",
+			"nameDe": "Matanzas",
+			"nameIt": "Matanzas",
+			"population": 151624
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Matanzas means “slaughters”; the usual account links it to a killing of Spaniards by local people in the early 16th century.",
+				"Its Varadero beach, on the Hicacos Peninsula, is Cuba’s best-known resort.",
+				"The Bay of Pigs, scene of the failed invasion of 1961, lies on its south coast."
+			],
+			"it": [
+				"Matanzas significa “massacri”; il racconto più diffuso lo collega a un’uccisione di spagnoli da parte degli abitanti all’inizio del XVI secolo.",
+				"La sua spiaggia di Varadero, sulla penisola di Hicacos, è la località balneare più nota di Cuba.",
+				"La Baia dei Porci, teatro della fallita invasione del 1961, si trova sulla sua costa meridionale."
+			],
+			"de": [
+				"Matanzas bedeutet „Gemetzel“; die übliche Erklärung verbindet es mit einer Tötung von Spaniern durch Einheimische im frühen 16. Jahrhundert.",
+				"Ihr Strand Varadero auf der Halbinsel Hicacos ist der bekannteste Badeort Kubas.",
+				"Die Schweinebucht, Schauplatz der gescheiterten Invasion von 1961, liegt an ihrer Südküste."
+			]
+		}
+	},
+	"villa-clara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cienfuegos",
+			"Matanzas",
+			"Sancti Spíritus"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Santa Clara",
+			"nameDe": "Santa Clara",
+			"nameIt": "Santa Clara",
+			"population": 247436
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It takes its name from its capital, Santa Clara, named after Saint Clare of Assisi.",
+				"Che Guevara’s mausoleum and memorial stand in Santa Clara.",
+				"Its town of Remedios holds the Parrandas, a Christmas festival of rival neighbourhoods."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, Santa Clara, intitolato a santa Chiara d’Assisi.",
+				"A Santa Clara sorgono il mausoleo e il memoriale di Che Guevara.",
+				"La sua cittadina di Remedios celebra le Parrandas, una festa natalizia di quartieri rivali."
+			],
+			"de": [
+				"Sie trägt den Namen ihrer Hauptstadt Santa Clara, benannt nach der heiligen Klara von Assisi.",
+				"In Santa Clara stehen das Mausoleum und die Gedenkstätte Che Guevaras.",
+				"In ihrer Stadt Remedios feiert man die Parrandas, ein Weihnachtsfest rivalisierender Stadtviertel."
+			]
+		}
+	},
+	"pinar-del-rio": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Artemisa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pinar del Río",
+			"nameDe": "Pinar del Río",
+			"nameIt": "Pinar del Río",
+			"population": 188614
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It is named after its capital, Pinar del Río, “pine grove by the river”.",
+				"Its Viñales Valley, ringed by steep limestone hills called mogotes, is a UNESCO site.",
+				"Its Vuelta Abajo district grows the tobacco for many of Cuba’s finest cigars."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, Pinar del Río, “pineta sul fiume”.",
+				"La sua valle di Viñales, cinta da ripide colline calcaree dette mogotes, è un sito UNESCO.",
+				"Il suo distretto di Vuelta Abajo coltiva il tabacco per molti dei migliori sigari cubani."
+			],
+			"de": [
+				"Sie ist nach ihrer Hauptstadt Pinar del Río benannt, „Kiefernhain am Fluss“.",
+				"Ihr Viñales-Tal, umgeben von steilen Kalksteinhügeln, den Mogotes, ist UNESCO-Welterbe.",
+				"In ihrem Gebiet Vuelta Abajo wächst der Tabak für viele der besten kubanischen Zigarren."
+			]
+		}
+	},
+	"cienfuegos": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Matanzas",
+			"Sancti Spíritus",
+			"Villa Clara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cienfuegos",
+			"nameDe": "Cienfuegos",
+			"nameIt": "Cienfuegos",
+			"population": 164924
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It is named after its capital, which honours José Cienfuegos, a Spanish governor of Cuba.",
+				"The Jagua fortress, built in the 18th century, guards the narrow entrance to its bay.",
+				"Its botanical garden, begun by the Atkins sugar family in 1901, is one of the oldest in Cuba."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, che onora José Cienfuegos, un governatore spagnolo di Cuba.",
+				"La fortezza di Jagua, costruita nel XVIII secolo, sorveglia lo stretto ingresso della sua baia.",
+				"Il suo orto botanico, avviato dalla famiglia Atkins, produttori di zucchero, nel 1901, è uno dei più antichi di Cuba."
+			],
+			"de": [
+				"Sie ist nach ihrer Hauptstadt benannt, die José Cienfuegos ehrt, einen spanischen Gouverneur Kubas.",
+				"Die Festung Jagua aus dem 18. Jahrhundert bewacht die schmale Einfahrt ihrer Bucht.",
+				"Ihr botanischer Garten, 1901 von der Zuckerfamilie Atkins angelegt, ist einer der ältesten Kubas."
+			]
+		}
+	},
+	"ciego-de-avila": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Camagüey",
+			"Sancti Spíritus"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ciego de Ávila",
+			"nameDe": "Ciego de Ávila",
+			"nameIt": "Ciego de Ávila",
+			"population": 143449
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It is named after its capital; a ciego was a clearing in the forest, and this one is said to have belonged to a settler named Ávila.",
+				"In the wars of independence, the Spanish cut the island here with a fortified line, the Trocha from Júcaro to Morón.",
+				"Its northern cays, Cayo Coco and Cayo Guillermo, are major beach resorts."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo; un ciego era una radura nella foresta, e questa sarebbe appartenuta a un colono di nome Ávila.",
+				"Nelle guerre d’indipendenza gli spagnoli tagliarono qui l’isola con una linea fortificata, la Trocha da Júcaro a Morón.",
+				"Le sue isole settentrionali, Cayo Coco e Cayo Guillermo, sono importanti località balneari."
+			],
+			"de": [
+				"Sie ist nach ihrer Hauptstadt benannt; ein ciego war eine Waldlichtung, und diese soll einem Siedler namens Ávila gehört haben.",
+				"In den Unabhängigkeitskriegen durchtrennten die Spanier die Insel hier mit einer befestigten Linie, der Trocha von Júcaro nach Morón.",
+				"Ihre nördlichen Inseln Cayo Coco und Cayo Guillermo sind große Badeorte."
+			]
+		}
+	},
+	"sancti-spiritus": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ciego de Ávila",
+			"Cienfuegos",
+			"Villa Clara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sancti Spíritus",
+			"nameDe": "Sancti Spíritus",
+			"nameIt": "Sancti Spíritus",
+			"population": 138504
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It is named after its capital; Sancti Spíritus is Latin for “of the Holy Spirit”.",
+				"The old sugar town of Trinidad and the nearby Valle de los Ingenios are a UNESCO site.",
+				"The Zaza reservoir, the largest in Cuba, lies in it."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo; Sancti Spíritus è latino per “dello Spirito Santo”.",
+				"L’antica città dello zucchero di Trinidad e la vicina Valle de los Ingenios sono un sito UNESCO.",
+				"Vi si trova il bacino di Zaza, il più grande di Cuba."
+			],
+			"de": [
+				"Sie ist nach ihrer Hauptstadt benannt; Sancti Spíritus ist Latein für „des Heiligen Geistes“.",
+				"Die alte Zuckerstadt Trinidad und das nahe Valle de los Ingenios sind UNESCO-Welterbe.",
+				"In ihr liegt der Zaza-Stausee, der größte Kubas."
+			]
+		}
+	},
+	"isla-de-la-juventud": {
+		"kind": "region",
+		"type": "Special Municipality",
+		"coastal": true,
+		"largestCity": {
+			"name": "Nueva Gerona",
+			"nameDe": "Nueva Gerona",
+			"nameIt": "Nueva Gerona",
+			"population": 45577
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Isla de la Juventud means “Isle of Youth”; it was given that name in 1978.",
+				"It was earlier called Isla de Pinos, the “Isle of Pines”.",
+				"Fidel Castro was held in its Presidio Modelo prison after the 1953 attack on the Moncada Barracks."
+			],
+			"it": [
+				"Isla de la Juventud significa “isola della gioventù”; ricevette questo nome nel 1978.",
+				"In precedenza si chiamava Isla de Pinos, “isola dei pini”.",
+				"Fidel Castro fu detenuto nel suo carcere, il Presidio Modelo, dopo l’assalto alla caserma Moncada del 1953."
+			],
+			"de": [
+				"Isla de la Juventud bedeutet „Insel der Jugend“; diesen Namen erhielt sie 1978.",
+				"Früher hieß sie Isla de Pinos, „Kieferninsel“.",
+				"Fidel Castro saß nach dem Angriff auf die Moncada-Kaserne 1953 in ihrem Gefängnis Presidio Modelo."
+			]
+		}
+	},
+	"camaguey": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ciego de Ávila",
+			"Las Tunas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Camagüey",
+			"nameDe": "Camagüey",
+			"nameIt": "Camagüey",
+			"population": 321992
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It is named after its capital, whose Taíno name is usually linked to a local chief called Camagüebax.",
+				"Its wide grasslands make it Cuba’s main cattle-ranching province.",
+				"Its north coast faces the Sabana-Camagüey archipelago, a long chain of cays."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, il cui nome taíno è di solito collegato a un capo locale di nome Camagüebax.",
+				"Le sue vaste praterie ne fanno la principale provincia d’allevamento di Cuba.",
+				"La sua costa settentrionale si affaccia sull’arcipelago di Sabana-Camagüey, una lunga catena di isolotti."
+			],
+			"de": [
+				"Sie ist nach ihrer Hauptstadt benannt, deren Taíno-Name meist mit einem örtlichen Häuptling namens Camagüebax verbunden wird.",
+				"Ihr weites Grasland macht sie zur wichtigsten Rinderzuchtprovinz Kubas.",
+				"Ihre Nordküste blickt auf den Sabana-Camagüey-Archipel, eine lange Kette kleiner Inseln."
+			]
+		}
+	},
+	"las-tunas": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Camagüey",
+			"Granma",
+			"Holguín"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Las Tunas",
+			"nameDe": "Las Tunas",
+			"nameIt": "Victoria de Las Tunas",
+			"population": 202105
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"It is named after its capital, Las Tunas, “the prickly pears”, the fruit of a cactus.",
+				"It was formed in 1976, when the old Oriente province was divided.",
+				"Its capital is known as the “city of sculptures” for its many public statues."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, Las Tunas, “i fichi d’India”, il frutto di un cactus.",
+				"Fu creata nel 1976, quando la vecchia provincia di Oriente fu divisa.",
+				"Il suo capoluogo è noto come “città delle sculture” per le sue molte statue pubbliche."
+			],
+			"de": [
+				"Sie ist nach ihrer Hauptstadt Las Tunas benannt, „die Kaktusfeigen“, die Frucht eines Kaktus.",
+				"Sie entstand 1976, als die alte Provinz Oriente aufgeteilt wurde.",
+				"Ihre Hauptstadt ist wegen ihrer vielen Denkmäler als „Stadt der Skulpturen“ bekannt."
+			]
+		}
+	},
+	"holguin": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Granma",
+			"Guantánamo",
+			"Las Tunas",
+			"Santiago de Cuba"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Holguín",
+			"nameDe": "Holguín",
+			"nameIt": "Holguín",
+			"population": 350191
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"It is named after its capital, which takes its name from García Holguín, a Spanish captain who held land there in the 16th century.",
+				"Columbus first landed in Cuba on its coast in 1492, at Bariay Bay or near Gibara; the exact spot is debated.",
+				"Moa and Nicaro, in its east, are centres of the nickel industry, one of Cuba’s main exports."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, che deve il nome a García Holguín, un capitano spagnolo che vi possedeva terre nel XVI secolo.",
+				"Colombo sbarcò per la prima volta a Cuba sulla sua costa nel 1492, nella baia di Bariay o vicino a Gibara; il punto esatto è discusso.",
+				"Moa e Nicaro, nella sua parte orientale, sono centri dell’industria del nichel, una delle principali esportazioni di Cuba."
+			],
+			"de": [
+				"Sie ist nach ihrer Hauptstadt benannt, die ihren Namen von García Holguín hat, einem spanischen Hauptmann, der dort im 16. Jahrhundert Land besaß.",
+				"Kolumbus landete 1492 an ihrer Küste zum ersten Mal auf Kuba, in der Bucht von Bariay oder bei Gibara; die genaue Stelle ist umstritten.",
+				"Moa und Nicaro in ihrem Osten sind Zentren der Nickelindustrie, eines der wichtigsten Exportgüter Kubas."
+			]
+		}
+	},
+	"granma": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Holguín",
+			"Las Tunas",
+			"Santiago de Cuba"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bayamo",
+			"nameDe": "Bayamo",
+			"nameIt": "Bayamo",
+			"population": 235107
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"It is named after the Granma, the yacht that brought Fidel Castro and his rebels from Mexico in 1956.",
+				"The yacht’s English name is said to come from an earlier owner’s grandmother.",
+				"The Desembarco del Granma National Park, near where the yacht landed, is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome dal Granma, lo yacht che nel 1956 portò Fidel Castro e i suoi ribelli dal Messico.",
+				"Il nome inglese dello yacht verrebbe dalla nonna (“granma”) di un precedente proprietario.",
+				"Il parco nazionale Desembarco del Granma, vicino al luogo dello sbarco, è un sito UNESCO."
+			],
+			"de": [
+				"Sie ist nach der Granma benannt, der Jacht, die 1956 Fidel Castro und seine Rebellen aus Mexiko brachte.",
+				"Der englische Name der Jacht soll von der Großmutter („granma“) eines früheren Besitzers stammen.",
+				"Der Nationalpark Desembarco del Granma, nahe der Landestelle der Jacht, ist UNESCO-Welterbe."
+			]
+		}
+	},
+	"guantanamo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Holguín",
+			"Santiago de Cuba"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Guantánamo",
+			"nameDe": "Guantánamo",
+			"nameIt": "Guantánamo",
+			"population": 228436
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its name is Taíno, first given to a river and the land around it; its meaning is uncertain.",
+				"The United States has held a naval base on its bay since 1903.",
+				"Baracoa, founded in 1511, the first Spanish town in Cuba, lies in it."
+			],
+			"it": [
+				"Il nome è taíno, dato dapprima a un fiume e alle terre intorno; il suo significato è incerto.",
+				"Gli Stati Uniti hanno una base navale nella sua baia dal 1903.",
+				"Vi si trova Baracoa, fondata nel 1511, la prima città spagnola di Cuba."
+			],
+			"de": [
+				"Ihr Name stammt aus dem Taíno und galt zuerst einem Fluss und dem Land um ihn; seine Bedeutung ist unsicher.",
+				"Die Vereinigten Staaten unterhalten seit 1903 einen Marinestützpunkt an ihrer Bucht.",
+				"In ihr liegt Baracoa, 1511 gegründet, die erste spanische Stadt auf Kuba."
+			]
+		}
+	},
+	"santiago-de-cuba": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Granma",
+			"Guantánamo",
+			"Holguín"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Santiago de Cuba",
+			"nameDe": "Santiago de Cuba",
+			"nameIt": "Santiago di Cuba",
+			"population": 506037
+		},
+		"peak": {
+			"name": "Pico Turquino",
+			"elevation": 1974
+		},
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"It is named after its capital, which honours Saint James, the patron saint of Spain.",
+				"The fortress of San Pedro de la Roca, at the mouth of its bay, is a UNESCO site.",
+				"The basilica of El Cobre, shrine of Cuba’s patron saint, stands in its hills."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, che onora san Giacomo, patrono della Spagna.",
+				"La fortezza di San Pedro de la Roca, all’imbocco della sua baia, è un sito UNESCO.",
+				"La basilica di El Cobre, santuario della patrona di Cuba, sorge sulle sue colline."
+			],
+			"de": [
+				"Sie ist nach ihrer Hauptstadt benannt, die den heiligen Jakobus ehrt, den Schutzpatron Spaniens.",
+				"Die Festung San Pedro de la Roca an der Einfahrt ihrer Bucht ist UNESCO-Welterbe.",
+				"Die Basilika von El Cobre, Heiligtum der Schutzpatronin Kubas, steht in ihren Hügeln."
+			]
+		}
+	}
+}

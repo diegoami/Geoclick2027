@@ -22,6 +22,8 @@ export interface Country {
 	boundaryFacts?: boolean;
 	townExclude?: string;
 	retainTowns?: string;
+	// Towns map land and terrain cover the whole regions map (--extent=regions).
+	townsExtentFromRegions?: boolean;
 	expectedLargest?: Record<string, string>;
 }
 // Natural Earth separates county-right cities; merge them into their counties.
@@ -337,6 +339,37 @@ export const V1_COUNTRIES: Country[] = [
 		expectedRegions: 21,
 		population: 10000,
 		townNameField: 'NAME'
+	},
+	// v1.1 (#270): Natural Earth admin-1 units with dated Wikidata towns.
+	{
+		country: 'Bolivia',
+		id: 'bolivia',
+		type: 'province',
+		label: 'Departments',
+		expectedRegions: 9,
+		rename: 'El Beni=Beni',
+		townSource: 'data/places/bolivia.geojson',
+		expectedLargest: { 'la-paz': 'El Alto', beni: 'Trinidad', pando: 'Cobija' },
+		townsExtentFromRegions: true,
+		population: 100000
+	},
+	{
+		// Fifteen provinces after the 2011 split of La Habana into Artemisa and
+		// Mayabeque, plus the special municipality of Isla de la Juventud.
+		country: 'Cuba',
+		id: 'cuba',
+		type: 'province',
+		label: 'Provinces',
+		expectedRegions: 16,
+		rename: 'Ciudad de la Habana=La Habana',
+		townSource: 'data/places/cuba.geojson',
+		expectedLargest: {
+			artemisa: 'Artemisa',
+			mayabeque: 'San José de las Lajas',
+			'isla-de-la-juventud': 'Nueva Gerona'
+		},
+		townsExtentFromRegions: true,
+		population: 100000
 	}
 ];
 export function v1MapIds(country: Country): [string, string] {

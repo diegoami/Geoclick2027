@@ -1,0 +1,591 @@
+{
+	"id": "cuba-provinces",
+	"name": "Cuba — Provinces",
+	"country": "Cuba",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/cuba.geojson",
+	"boundaryRenames": {
+		"Ciudad de la Habana": "La Habana"
+	},
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "la-habana",
+			"name": "La Habana",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.3194,
+				23.07575
+			],
+			"bbox": [
+				-82.5387,
+				22.9573,
+				-82.1001,
+				23.1942
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-82.4761,
+						23.0406
+					],
+					[
+						-82.3146,
+						23.038
+					],
+					[
+						-82.2022,
+						23.1425
+					]
+				],
+				"aspect": 1.63
+			}
+		},
+		{
+			"id": "mayabeque",
+			"name": "Mayabeque",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.02795,
+				22.881349999999998
+			],
+			"bbox": [
+				-82.4578,
+				22.5751,
+				-81.5981,
+				23.1876
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-82.3703,
+						22.8529
+					],
+					[
+						-82.0414,
+						22.9991
+					],
+					[
+						-81.7125,
+						22.8544
+					]
+				],
+				"aspect": 1.28
+			}
+		},
+		{
+			"id": "artemisa",
+			"name": "Artemisa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.68175,
+				22.842100000000002
+			],
+			"bbox": [
+				-82.9719,
+				22.6106,
+				-82.3916,
+				23.0736
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-82.8797,
+						22.8518
+					],
+					[
+						-82.6817,
+						22.8636
+					],
+					[
+						-82.4838,
+						22.8708
+					]
+				],
+				"aspect": 1.01
+			}
+		},
+		{
+			"id": "matanzas",
+			"name": "Matanzas",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.34185,
+				22.601950000000002
+			],
+			"bbox": [
+				-82.164,
+				22.0461,
+				-80.5197,
+				23.1578
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-81.6091,
+						22.7291
+					],
+					[
+						-81.137,
+						22.4919
+					],
+					[
+						-80.665,
+						22.673
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "villa-clara",
+			"name": "Villa Clara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.05015,
+				22.50325
+			],
+			"bbox": [
+				-80.7468,
+				21.9385,
+				-79.3535,
+				23.068
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-80.4094,
+						22.8271
+					],
+					[
+						-79.975,
+						22.5727
+					],
+					[
+						-79.6229,
+						22.2219
+					]
+				],
+				"aspect": 1.87
+			}
+		},
+		{
+			"id": "pinar-del-rio",
+			"name": "Pinar del Río",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.88595000000001,
+				22.395049999999998
+			],
+			"bbox": [
+				-84.9473,
+				21.7705,
+				-82.8246,
+				23.0196
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-84.2418,
+						22.1905
+					],
+					[
+						-83.6615,
+						22.5041
+					],
+					[
+						-83.0514,
+						22.7693
+					]
+				],
+				"aspect": 2.25
+			}
+		},
+		{
+			"id": "cienfuegos",
+			"name": "Cienfuegos",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.48240000000001,
+				22.2047
+			],
+			"bbox": [
+				-80.9407,
+				21.8248,
+				-80.0241,
+				22.5846
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-80.8016,
+						22.3999
+					],
+					[
+						-80.3481,
+						22.367
+					],
+					[
+						-80.0946,
+						22.022
+					]
+				],
+				"aspect": 2.05
+			}
+		},
+		{
+			"id": "ciego-de-avila",
+			"name": "Ciego de Ávila",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.59870000000001,
+				22.04795
+			],
+			"bbox": [
+				-79.1221,
+				21.5339,
+				-78.0753,
+				22.562
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-78.9591,
+						21.9738
+					],
+					[
+						-78.6309,
+						21.9649
+					],
+					[
+						-78.3027,
+						21.9519
+					]
+				],
+				"aspect": 0.83
+			}
+		},
+		{
+			"id": "sancti-spiritus",
+			"name": "Sancti Spíritus",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.5141,
+				22.0121
+			],
+			"bbox": [
+				-80.101,
+				21.5517,
+				-78.9272,
+				22.4725
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-79.9151,
+						21.8725
+					],
+					[
+						-79.5135,
+						21.8801
+					],
+					[
+						-79.112,
+						22.037
+					]
+				],
+				"aspect": 1.4
+			}
+		},
+		{
+			"id": "isla-de-la-juventud",
+			"name": "Isla de la Juventud",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.8561,
+				21.69295
+			],
+			"bbox": [
+				-83.1714,
+				21.4375,
+				-82.5408,
+				21.9484
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-83.0148,
+						21.7628
+					],
+					[
+						-82.8347,
+						21.6513
+					],
+					[
+						-82.6545,
+						21.6748
+					]
+				],
+				"aspect": 0.77
+			}
+		},
+		{
+			"id": "camaguey",
+			"name": "Camagüey",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.7932,
+				21.56345
+			],
+			"bbox": [
+				-78.6416,
+				20.698,
+				-76.9448,
+				22.4289
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-78.4248,
+						21.3314
+					],
+					[
+						-77.8487,
+						21.3497
+					],
+					[
+						-77.2726,
+						21.3816
+					]
+				],
+				"aspect": 1.24
+			}
+		},
+		{
+			"id": "las-tunas",
+			"name": "Las Tunas",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.07230000000001,
+				21.0676
+			],
+			"bbox": [
+				-77.8311,
+				20.6775,
+				-76.3135,
+				21.4577
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-77.6674,
+						20.7699
+					],
+					[
+						-77.0696,
+						20.985
+					],
+					[
+						-76.483,
+						21.2249
+					]
+				],
+				"aspect": 3.56
+			}
+		},
+		{
+			"id": "holguin",
+			"name": "Holguín",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.71855,
+				20.82435
+			],
+			"bbox": [
+				-76.7219,
+				20.3968,
+				-74.7152,
+				21.2519
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-76.5395,
+						20.8978
+					],
+					[
+						-75.7383,
+						20.7191
+					],
+					[
+						-74.9434,
+						20.5157
+					]
+				],
+				"aspect": 5.05
+			}
+		},
+		{
+			"id": "granma",
+			"name": "Granma",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.95845,
+				20.30655
+			],
+			"bbox": [
+				-77.7372,
+				19.8289,
+				-76.1797,
+				20.7842
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-77.4717,
+						19.929
+					],
+					[
+						-77.0227,
+						20.3609
+					],
+					[
+						-76.3984,
+						20.4886
+					]
+				],
+				"aspect": 2.9
+			}
+		},
+		{
+			"id": "guantanamo",
+			"name": "Guantánamo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.81395,
+				20.2193
+			],
+			"bbox": [
+				-75.4883,
+				19.8825,
+				-74.1396,
+				20.5561
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-75.3613,
+						20.145
+					],
+					[
+						-74.8708,
+						20.3043
+					],
+					[
+						-74.3578,
+						20.2154
+					]
+				],
+				"aspect": 2.09
+			}
+		},
+		{
+			"id": "santiago-de-cuba",
+			"name": "Santiago de Cuba",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.2073,
+				20.2167
+			],
+			"bbox": [
+				-77.0391,
+				19.8825,
+				-75.3755,
+				20.5509
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-76.3429,
+						20.1743
+					],
+					[
+						-75.9133,
+						20.1981
+					],
+					[
+						-75.4863,
+						20.2361
+					]
+				],
+				"aspect": 1.73
+			}
+		}
+	],
+	"tourOrder": [
+		"la-habana",
+		"mayabeque",
+		"artemisa",
+		"matanzas",
+		"villa-clara",
+		"pinar-del-rio",
+		"cienfuegos",
+		"ciego-de-avila",
+		"sancti-spiritus",
+		"isla-de-la-juventud",
+		"camaguey",
+		"las-tunas",
+		"holguin",
+		"granma",
+		"guantanamo",
+		"santiago-de-cuba"
+	]
+}

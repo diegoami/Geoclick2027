@@ -8,18 +8,22 @@
 	import type { Mastery } from './homeProgress';
 	import { t, tPlural } from './i18n.svelte';
 	import KnownProgress from './KnownProgress.svelte';
+	import { formatDuration } from './roundReport';
 	import type { SessionSummary } from './progressRepository';
 
 	let {
 		mapId,
 		label,
 		summary,
-		mastery
+		mastery,
+		targetCount
 	}: {
 		mapId: string;
 		label: string;
 		summary?: SessionSummary;
 		mastery?: Mastery;
+		/** How many names the map has, said on a map never played (#269). */
+		targetCount?: number;
 	} = $props();
 </script>
 
@@ -28,6 +32,9 @@
 	     onto it. Overview, which labels everything at once, is a tab away. -->
 	<a href={resolve('/map/[mapId]', { mapId })}>
 		<span class="map-name">{label}</span>
+		{#if !mastery && targetCount}
+			<span class="size" data-testid="map-size">{t('home.nameCount', { count: targetCount })}</span>
+		{/if}
 		{#if mastery}
 			<span class="mastery" class:all-known={mastery.known === mastery.total}>
 				<!-- A bar, not the number (FT-65); it renders nothing until the
@@ -40,7 +47,14 @@
 				<!-- The ladder, but only once the hand has started shrinking
 				     (FT-21): level 0's hand of ten is the default and there is
 				     nothing to explain (FT-60). -->
-				{#if mastery.level > 0}
+				{#if mastery.known === mastery.total}
+					<!-- Every name known (#267): the map is mastered, and what is
+					     left to improve is the time. -->
+					<span class="mastered" data-testid="mastered"
+						>★ {t('home.mastered')}{#if mastery.bestTimeMs !== undefined}
+							· {t('home.bestTime', { time: formatDuration(mastery.bestTimeMs) })}{/if}</span
+					>
+				{:else if mastery.level > 0}
 					· {tPlural('quiz.namesAtATime', handSize(mastery.level), {
 						count: handSize(mastery.level)
 					})}
@@ -100,5 +114,15 @@
 	.last-result {
 		font-size: 0.8rem;
 		opacity: 0.7;
+	}
+	.mastered {
+		margin-left: 0.3rem;
+		color: #b5691f;
+		font-weight: 600;
+		white-space: nowrap;
+	}
+	.size {
+		font-size: 0.8rem;
+		opacity: 0.65;
 	}
 </style>

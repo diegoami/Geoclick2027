@@ -27,6 +27,7 @@
 	import FavouriteStar from './FavouriteStar.svelte';
 	import TutorialButton from './TutorialButton.svelte';
 	import TerrainButton from './TerrainButton.svelte';
+	import SoundButton from './SoundButton.svelte';
 	import { tutorialState } from './tutorial.svelte';
 
 	let {
@@ -238,6 +239,7 @@
 	<div class="prefs-row">
 		<LanguageSwitcher bind:open={languageMenuOpen} />
 		<TerrainButton />
+		{#if active === 'quiz'}<SoundButton />{/if}
 		<TutorialButton />
 	</div>
 </div>
