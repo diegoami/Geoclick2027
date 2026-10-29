@@ -2552,6 +2552,12 @@ answers:
   Skip action says "Exit tutorial". Keep Escape as a keyboard shortcut.
 ## Automatic pull-request reviews (2026-09-30)
 
+*Amended 2026-10-29 (owner): OpenCode is no longer used here. Its review
+tooling - `.opencode/`, `scripts/external-review.ps1` and its helpers,
+`docs/EXTERNAL_REVIEW.md`, the `switch-reviewer` skill - is removed (#281); the
+reviewer's instructions moved to `docs/release-reviewer.md`, which any tool
+follows. Mentions of OpenCode elsewhere in this file are history.*
+
 *Amended 2026-10-29 (owner): **no per-PR review any more.** Features and
 fixes are tested and merged by the owner; the only independent review is the
 milestone review of the release, at the end. Per-PR review is legacy - the

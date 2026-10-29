@@ -47,10 +47,9 @@ that explains it.
    gate results on a clean checkout of the candidate (the `review-handoff`
    skill has the full list). Until the tag, `main` takes only fixes for this
    milestone's findings.
-3. **Review.** Start it from OpenCode, on a model the owner picks:
-   `/review-release <milestone issue>` in the desktop app or the TUI, or
-   `opencode run -m <provider/model> --command review-release <issue>` from a
-   shell. The reviewer follows `.opencode/agents/release-reviewer.md`: it
+3. **Review.** The owner starts it in a fresh session of a model family that
+   implemented none of the release: "Follow `docs/release-reviewer.md` for
+   milestone issue #n." The reviewer follows `docs/release-reviewer.md`: it
    fetches first (`git fetch origin --tags <candidate SHA>`, not `git pull`),
    works in a fresh detached worktree of its own at the candidate SHA, never
    the checkout it started in (`AGENTS.md`, *Releases*; under

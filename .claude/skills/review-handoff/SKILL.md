@@ -9,7 +9,7 @@ This skill handles the formal release-milestone review (`AGENTS.md`, *Releases*)
 There are no PR reviews (owner, 2026-10-29). Proposals and ordinary PRs do not
 trigger a release review.
 
-The reviewer's job is written once, in `.opencode/agents/release-reviewer.md`.
+The reviewer's job is written once, in `docs/release-reviewer.md`.
 It starts with no context and reads everything from the milestone issue, so the
 issue has to carry everything it needs.
 
@@ -60,24 +60,16 @@ Make sure the `review` label exists (`gh label list`).
 
 The agent never starts the milestone review: not with the script, not with a
 subagent (owner, 2026-10-29). It files the version-bump PR and the milestone
-issue, then gives the owner a short prompt to paste, such as
-`/review-release <milestone issue>`. `pwsh scripts/external-review.ps1 -Issue <n>
--Kind release` stays available for the owner to run. When the owner says the
+issue, then gives the owner a short prompt to paste: "Follow
+`docs/release-reviewer.md` for milestone issue #n." When the owner says the
 review is in, read it from GitHub, reproduce each finding and open the issues.
 
-## Give the owner the command (manual route)
+## The prompt
 
-Pick a reviewer model that implemented none of the release. Then, from the main
-checkout, start it in a fresh session:
+The owner picks a model family that implemented none of the release and pastes,
+in a fresh session started in the main checkout:
 
-```sh
-opencode run -m <provider/model> --command review-release <issue number>
-```
-
-In the TUI, use `/new`, pick the model with `/models`, then run
-`/review-release <issue number>`. Neither the command nor the agent sets a
-model, so the one picked here is the one used. With another tool, tell it:
-"Follow `.opencode/agents/release-reviewer.md` for milestone issue #n."
+    Follow docs/release-reviewer.md for milestone issue #n.
 
 For a re-review, first move **Candidate** to the new `main` commit, and add the
 earlier verdict and the fix PRs to the issue. Then give the same command again,

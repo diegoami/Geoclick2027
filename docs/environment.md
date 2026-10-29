@@ -1,8 +1,7 @@
 # Environment: model quota (quota-tracker)
 
 A local service, quota-tracker, reports how much subscription quota is left on
-claude, openai (ChatGPT plan, used via OpenCode), zai (GLM Coding Plan),
-opencode_go (OpenCode Go) and openrouter (prepaid credit). Check it before
+each configured provider (claude, openai, zai, openrouter). Check it before
 choosing, recommending or delegating to a model (harness_imperial L50).
 
 Read-only, localhost, no auth, cached 60 s (`?refresh` bypasses the cache):
@@ -17,17 +16,10 @@ more: not used until `available_at`), `error` or `not_configured`.
 `headroom_pct` is what is left on the most-used window; `windows[]` lists every
 limit with `used_pct` and `resets_in`.
 
-| provider    | heavy                                             | light                                                 |
-|-------------|---------------------------------------------------|-------------------------------------------------------|
-| claude      | `claude --model opus`                             | `claude --model sonnet`                               |
-| openai      | `opencode -m openai/gpt-6.1-sol`                  | `opencode -m openai/gpt-5.6-luna`                     |
-| zai         | `opencode -m zai-coding-plan/glm-5.3`             | `opencode -m zai-coding-plan/glm-5.3-flash`           |
-| opencode_go | `opencode -m opencode-go/deepseek-v4-pro`         | `opencode -m opencode-go/deepseek-v4.1-flash`         |
-| openrouter  | `opencode -m openrouter/deepseek/deepseek-v4-pro` | `opencode -m openrouter/deepseek/deepseek-v4.1-flash` |
+| provider | heavy                 | light                   |
+|----------|-----------------------|-------------------------|
+| claude   | `claude --model opus` | `claude --model sonnet` |
 
-- `gpt-5.6-luna` has its own weekly window (`gpt-5.6-luna:7d` in
-  `/quota/openai`): for light tasks openai is usable while it is under 95%,
-  even if openai itself is exhausted.
 - openrouter is prepaid: its windows never reset; `remaining_usd` is the balance.
 
 If the service is down (`curl -sf localhost:8765/health` fails):
