@@ -149,7 +149,12 @@ describe('worldProgress (#262)', () => {
 		{ id: 'japan', mapIds: ['japan-regions'] }
 	];
 	const run = (masteries: Parameters<typeof worldProgress>[1]) =>
-		worldProgress(groups, masteries, (id) => counts[id], (id) => id === 'italy-provinces');
+		worldProgress(
+			groups,
+			masteries,
+			(id) => counts[id],
+			(id) => id === 'italy-provinces'
+		);
 
 	it('lists only countries with a map played, without their detailed maps', () => {
 		const { byGroup, known, total } = run({
