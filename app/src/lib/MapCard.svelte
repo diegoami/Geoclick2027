@@ -8,6 +8,7 @@
 	import type { Mastery } from './homeProgress';
 	import { t, tPlural } from './i18n.svelte';
 	import KnownProgress from './KnownProgress.svelte';
+	import { formatDuration } from './roundReport';
 	import type { SessionSummary } from './progressRepository';
 
 	let {
@@ -40,7 +41,14 @@
 				<!-- The ladder, but only once the hand has started shrinking
 				     (FT-21): level 0's hand of ten is the default and there is
 				     nothing to explain (FT-60). -->
-				{#if mastery.level > 0}
+				{#if mastery.known === mastery.total}
+					<!-- Every name known (#267): the map is mastered, and what is
+					     left to improve is the time. -->
+					<span class="mastered" data-testid="mastered"
+						>★ {t('home.mastered')}{#if mastery.bestTimeMs !== undefined}
+							· {t('home.bestTime', { time: formatDuration(mastery.bestTimeMs) })}{/if}</span
+					>
+				{:else if mastery.level > 0}
 					· {tPlural('quiz.namesAtATime', handSize(mastery.level), {
 						count: handSize(mastery.level)
 					})}
@@ -100,5 +108,11 @@
 	.last-result {
 		font-size: 0.8rem;
 		opacity: 0.7;
+	}
+	.mastered {
+		margin-left: 0.3rem;
+		color: #b5691f;
+		font-weight: 600;
+		white-space: nowrap;
 	}
 </style>

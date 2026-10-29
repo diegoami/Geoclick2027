@@ -20,7 +20,7 @@
 	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
 	import FactCard from './FactCard.svelte';
 	import ScorePanel from './ScorePanel.svelte';
-	import { roundChange, type RoundChange } from './roundReport';
+	import { isNewBest, isTimedRound, roundChange, type RoundChange } from './roundReport';
 	import { goto } from '$app/navigation';
 	import { resolve } from '$lib/appPaths';
 	import { setNameOverride } from './mapPrefs.svelte';
@@ -39,6 +39,7 @@
 	import {
 		loadPlayableCardStates,
 		todayLocalDate,
+		type MapRecords,
 		type ProgressRepository,
 		type SessionSummary
 	} from './progressRepository';
@@ -344,6 +345,24 @@
 	let lastTime: SessionSummary | undefined;
 	let panelLastTime = $state<SessionSummary | undefined>(undefined);
 
+	// This map's other records (best time #267, mix-ups #266), read on mount.
+	let records: MapRecords = {};
+	function saveRecords(next: MapRecords) {
+		records = next;
+		progressRepository
+			.saveMapRecords(mapId, next)
+			.catch((e) => console.error('Failed to save map records:', e));
+	}
+
+	// A round on a map whose every name is known is timed (#267). Only time
+	// spent in the quiz counts: what a resumed round had played is carried in
+	// `elapsedBefore`, and the clock restarts from `activeSince` on return.
+	let timed = false;
+	let elapsedBefore = 0;
+	let activeSince = 0;
+	let timeResult = $state<{ ms: number; bestMs?: number; newBest: boolean; clean: boolean }>();
+	const elapsed = () => elapsedBefore + (performance.now() - activeSince);
+
 	/** Every target's earned level right now. */
 	function currentLevels(def: MapDefinition): Map<string, number> {
 		return new Map(def.targets.map((t) => [t.id, cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0]));
@@ -390,6 +409,17 @@
 				.catch((e) => console.error('Failed to save quiz progress:', e));
 			panelLastTime = lastTime;
 			lastTime = summary;
+			if (timed) {
+				const ms = elapsed();
+				const newBest = isNewBest(ms, score.totalErrors, records.bestTimeMs);
+				if (newBest) saveRecords({ ...records, bestTimeMs: ms });
+				timeResult = {
+					ms,
+					bestMs: records.bestTimeMs,
+					newBest,
+					clean: score.totalErrors === 0
+				};
+			}
 			// The last drop's card would cover the panel; its names open it again.
 			told = undefined;
 
@@ -698,7 +728,8 @@
 			session,
 			hand,
 			levelsAtStart: Object.fromEntries(levelsAtStart),
-			practice
+			practice,
+			elapsedMs: timed ? elapsed() : undefined
 		});
 
 		if (item.status === 'correct' || item.status === 'revealed') {
@@ -840,6 +871,10 @@
 		forgetRound(mapId);
 		levelsAtStart = currentLevels(mapDef);
 		practice = practiceRound && canPractise;
+		timeResult = undefined;
+		timed = !practice && isTimedRound([...levelsAtStart.keys()], levelsAtStart);
+		elapsedBefore = 0;
+		activeSince = performance.now();
 		const asked = practice ? notKnown(mapDef) : mapDef.targets;
 		session = createQuizSession(asked.map((t) => ({ id: t.id, name: t.name })));
 		refreshLevel(mapDef);
@@ -864,6 +899,10 @@
 			: currentLevels(mapDef);
 		session = round.session;
 		practice = round.practice ?? false;
+		timeResult = undefined;
+		timed = !practice && isTimedRound([...levelsAtStart.keys()], levelsAtStart);
+		elapsedBefore = round.elapsedMs ?? 0;
+		activeSince = performance.now();
 		refreshLevel(mapDef);
 		hand = round.hand;
 		dealHand();
@@ -933,6 +972,7 @@
 			cardStatesByTargetId = new Map(loaded.cardStates.map((c) => [c.targetId, c]));
 			storageWarning = loaded.failed;
 			lastTime = await progressRepository.getLastSessionSummary(mapId).catch(() => undefined);
+			records = await progressRepository.getMapRecords(mapId).catch(() => ({}));
 
 			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
@@ -981,6 +1021,10 @@
 	});
 
 	onDestroy(() => {
+		// A timed round left half-played keeps the time played so far (#267).
+		const round = timed ? roundInProgress(mapId) : undefined;
+		if (round && session && !isSessionComplete(session))
+			rememberRound(mapId, { ...round, elapsedMs: elapsed() });
 		// Clear pending flash resets before removing the map: a removed map is
 		// still a truthy reference, so their `if (map)` guard would pass and
 		// setFeatureState would throw on it.
@@ -1056,6 +1100,7 @@
 				onfact={showFact}
 				onstudy={studyMissed}
 				practiseCount={canPractise ? practiseCount : 0}
+				time={timeResult}
 				onpractise={practise}
 			/>
 		{/if}

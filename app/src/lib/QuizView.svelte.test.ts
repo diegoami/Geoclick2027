@@ -357,7 +357,7 @@ describe('QuizView (FT-59)', () => {
 	});
 	it('offers a practice round of the names not yet known, with the known ones placed (#265)', async () => {
 		const today = todayLocalDate();
-		const [unknown, ...known] = fake.mapDef.targets.slice(0, 13).map((t) => t);
+		const known = fake.mapDef.targets.slice(0, 12);
 		const repository = fake.state.repository!;
 		for (const target of known) {
 			let card = rate(undefined, 'good', today);
@@ -367,11 +367,29 @@ describe('QuizView (FT-59)', () => {
 		const screen = await render(QuizView, { mapId: MAP_ID });
 		const practise = screen.getByRole('button', { name: 'Practise the 4 not yet known' });
 		await practise.click();
-		await expect.poll(slipNames).toContain(unknown.name);
+		// 12 of 16 known is level 2: the four left are dealt three at a time.
+		await expect.poll(() => slipNames().length).toBe(3);
 		expect(slipNames().some((n) => known.some((t) => t.name === n))).toBe(false);
 		await expect.poll(placedNames).toHaveLength(known.length);
 		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('Practice');
 		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 4');
 		await expect.element(practise).not.toBeInTheDocument();
+	});
+	it('times a round on a fully known map and keeps a clean best (#267)', async () => {
+		const today = todayLocalDate();
+		const repository = fake.state.repository!;
+		const saveRecords = vi.spyOn(repository, 'saveMapRecords');
+		for (const target of fake.mapDef.targets) {
+			const card = rate(rate(rate(undefined, 'good', today), 'good', today), 'good', today);
+			await repository.saveCardState(MAP_ID, { targetId: target.id, ...card });
+		}
+		const screen = await render(QuizView, { mapId: MAP_ID });
+		await expect.poll(() => slipNames().length).toBe(1);
+		await finish();
+		await expect.element(screen.getByText('New best!')).toBeVisible();
+		expect(screen.container.querySelector('[data-testid="round-time"]')?.textContent).toMatch(
+			/Time: \d+:\d\d/
+		);
+		expect(saveRecords).toHaveBeenCalledWith(MAP_ID, { bestTimeMs: expect.any(Number) });
 	});
 });

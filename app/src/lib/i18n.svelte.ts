@@ -118,6 +118,8 @@ export type TranslationKey =
 	| 'home.download.link'
 	| 'home.known'
 	| 'home.lastResult'
+	| 'home.mastered'
+	| 'home.bestTime'
 	| 'home.mistakeCount.one'
 	| 'home.mistakeCount.other'
 	| 'mapType.planningAreas'
@@ -190,6 +192,10 @@ export type TranslationKey =
 	| 'quiz.tapPlace'
 	| 'quiz.practise'
 	| 'quiz.practiceLabel'
+	| 'quiz.time'
+	| 'quiz.newBest'
+	| 'quiz.best'
+	| 'quiz.bestNeedsClean'
 	| 'quiz.resizeTrayAriaLabel'
 	| 'quiz.storageWarning'
 	| 'tour.prev'
@@ -336,6 +342,8 @@ const en: Dictionary = {
 	'home.download.link': 'Download for Windows or Android',
 	'home.known': '{known} / {total} known',
 	'home.lastResult': 'Last: {perfect}/{total}',
+	'home.mastered': 'Mastered',
+	'home.bestTime': 'best {time}',
 	'home.mistakeCount.one': '({count} mistake)',
 	'home.mistakeCount.other': '({count} mistakes)',
 
@@ -410,6 +418,10 @@ const en: Dictionary = {
 	'quiz.tapPlace': 'Now tap its place on the map',
 	'quiz.practise': 'Practise the {count} not yet known',
 	'quiz.practiceLabel': 'Practice',
+	'quiz.time': 'Time: {time}',
+	'quiz.newBest': 'New best!',
+	'quiz.best': 'Best: {time}',
+	'quiz.bestNeedsClean': 'Only a round with no mistakes sets a best time.',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
 	'quiz.storageWarning':
 		'Progress cannot be saved on this device right now, so this round will not be remembered.',
@@ -570,6 +582,8 @@ const de: Dictionary = {
 	'home.download.link': 'Für Windows oder Android herunterladen',
 	'home.known': '{known} / {total} gewusst',
 	'home.lastResult': 'Zuletzt: {perfect}/{total}',
+	'home.mastered': 'Gemeistert',
+	'home.bestTime': 'Bestzeit {time}',
 	'home.mistakeCount.one': '({count} Fehler)',
 	'home.mistakeCount.other': '({count} Fehler)',
 
@@ -646,6 +660,10 @@ const de: Dictionary = {
 	'quiz.tapPlace': 'Tippe jetzt auf seinen Ort auf der Karte',
 	'quiz.practise': 'Die {count} noch nicht gewussten üben',
 	'quiz.practiceLabel': 'Übung',
+	'quiz.time': 'Zeit: {time}',
+	'quiz.newBest': 'Neue Bestzeit!',
+	'quiz.best': 'Bestzeit: {time}',
+	'quiz.bestNeedsClean': 'Nur eine Runde ohne Fehler zählt als Bestzeit.',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
 	'quiz.storageWarning':
 		'Fortschritt kann auf diesem Gerät gerade nicht gespeichert werden — diese Runde wird nicht gemerkt.',
@@ -808,6 +826,8 @@ const it: Dictionary = {
 	'home.download.link': 'Scarica per Windows o Android',
 	'home.known': 'Sai {known} / {total}',
 	'home.lastResult': 'Ultimo: {perfect}/{total}',
+	'home.mastered': 'Padroneggiata',
+	'home.bestTime': 'record {time}',
 	'home.mistakeCount.one': '({count} errore)',
 	'home.mistakeCount.other': '({count} errori)',
 
@@ -885,6 +905,10 @@ const it: Dictionary = {
 	'quiz.tapPlace': 'Ora tocca il suo posto sulla mappa',
 	'quiz.practise': 'Esercitati sui {count} non ancora imparati',
 	'quiz.practiceLabel': 'Esercizio',
+	'quiz.time': 'Tempo: {time}',
+	'quiz.newBest': 'Nuovo record!',
+	'quiz.best': 'Record: {time}',
+	'quiz.bestNeedsClean': 'Solo un giro senza errori vale come record.',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
 	'quiz.storageWarning':
 		'Al momento non è possibile salvare i progressi su questo dispositivo, quindi questa partita non verrà ricordata.',

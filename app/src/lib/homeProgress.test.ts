@@ -50,6 +50,24 @@ describe('loadHomeProgress', () => {
 		expect(masteries['usa-states']).toBeUndefined();
 	});
 
+	it('reads the best time of a mastered map only (#267)', async () => {
+		const repository = createInMemoryProgressRepository();
+		await repository.saveCardState('italy-regions', card('piemonte', 3));
+		await repository.saveMapRecords('italy-regions', { bestTimeMs: 42_000 });
+		await repository.saveCardState('usa-states', card('texas', 2));
+		await repository.saveMapRecords('usa-states', { bestTimeMs: 9_000 });
+		const { masteries } = await loadHomeProgress(
+			repository,
+			['italy-regions', 'usa-states'],
+			new Map([
+				['italy-regions', ['piemonte']],
+				['usa-states', ['texas']]
+			])
+		);
+		expect(masteries['italy-regions']?.bestTimeMs).toBe(42_000);
+		expect(masteries['usa-states']?.bestTimeMs).toBeUndefined();
+	});
+
 	it('lets one map fail without losing the others', async () => {
 		const logged = vi.spyOn(console, 'error').mockImplementation(() => {});
 		const repository = createInMemoryProgressRepository();

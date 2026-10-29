@@ -5,7 +5,8 @@
 import { knownCount, mapLevel, type Level } from './difficulty';
 import type { ProgressRepository, SessionSummary } from './progressRepository';
 
-export type Mastery = { known: number; total: number; level: Level };
+/** `bestTimeMs` only once every name is known and a clean round was timed (#267). */
+export type Mastery = { known: number; total: number; level: Level; bestTimeMs?: number };
 
 export interface HomeProgress {
 	summaries: Record<string, SessionSummary | undefined>;
@@ -25,7 +26,13 @@ async function readMastery(
 	// unknown, and progress for a since-renamed or removed target is ignored -
 	// the same semantics the due counts had.
 	const streaks = targetIds.map((id) => byId.get(id)?.cleanStreak ?? 0);
-	return { known: knownCount(streaks), total: targetIds.length, level: mapLevel(streaks) };
+	const known = knownCount(streaks);
+	// Records are read only for a mastered map: the rest have no best time.
+	const bestTimeMs =
+		known === targetIds.length && known > 0
+			? (await repository.getMapRecords(mapId)).bestTimeMs
+			: undefined;
+	return { known, total: targetIds.length, level: mapLevel(streaks), bestTimeMs };
 }
 
 /**

@@ -4,7 +4,7 @@
 	// last round. QuizView works the numbers out (roundReport.ts); this only
 	// shows them.
 	import { t, tPlural } from './i18n.svelte';
-	import { capped } from './roundReport';
+	import { capped, formatDuration } from './roundReport';
 	import type { SessionSummary } from './progressRepository';
 
 	type Named = { id: string; name: string };
@@ -23,7 +23,8 @@
 		onfact,
 		onstudy,
 		practiseCount,
-		onpractise
+		onpractise,
+		time
 	}: {
 		perfect: number;
 		total: number;
@@ -44,6 +45,8 @@
 		/** Names a practice round would ask for (#265); 0 offers none. */
 		practiseCount: number;
 		onpractise: () => void;
+		/** A timed round on a fully known map (#267). */
+		time?: { ms: number; bestMs?: number; newBest: boolean; clean: boolean };
 	} = $props();
 
 	const known = $derived(capped(newlyKnown));
@@ -65,6 +68,19 @@
 		</p>
 	{/if}
 	<p>{tPlural('quiz.totalMistakes', totalErrors, { count: totalErrors })}</p>
+	{#if time}
+		<p class="time" data-testid="round-time">
+			{t('quiz.time', { time: formatDuration(time.ms) })}
+			{#if time.newBest}
+				· <strong class="new-best">{t('quiz.newBest')}</strong>
+			{:else if time.bestMs !== undefined}
+				· {t('quiz.best', { time: formatDuration(time.bestMs) })}
+			{/if}
+		</p>
+		{#if !time.clean}
+			<p class="known-note">{t('quiz.bestNeedsClean')}</p>
+		{/if}
+	{/if}
 	{#if revealedCount > 0}
 		<p class="revealed-note">{t('quiz.revealedNote', { count: revealedCount })}</p>
 	{/if}
@@ -166,6 +182,12 @@
 		margin-top: -0.5rem;
 		font-size: 0.85rem;
 		opacity: 0.7;
+	}
+	.time {
+		font-variant-numeric: tabular-nums;
+	}
+	.new-best {
+		color: #2f6b45;
 	}
 	.revealed-note {
 		font-size: 0.85rem;
