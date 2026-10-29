@@ -4,6 +4,7 @@ import {
 	createLocalStorageProgressRepository,
 	createSandboxedProgressRepository,
 	loadPlayableCardStates,
+	parseMapRecords,
 	todayLocalDate,
 	type CardState,
 	type ProgressRepository,
@@ -148,6 +149,64 @@ describe('localStorage progress repository - clearing (GC-041)', () => {
 		expect(localStorage.getItem('geoclick:language:v1')).toBe('de');
 		expect(localStorage.getItem('someone-else:key')).toBe('x');
 		expect(localStorage.length).toBe(2);
+	});
+});
+
+describe('map records and resetting known progress (#256, v1.1.0)', () => {
+	const records = {
+		bestTimeMs: 61_500,
+		confusions: [{ targetId: 'Molise', chosenId: 'Abruzzo', count: 2 }]
+	};
+
+	for (const [name, create] of [
+		['localStorage', createLocalStorageProgressRepository],
+		['in-memory', createInMemoryProgressRepository]
+	] as const) {
+		it(`${name}: map records round-trip, and a map with none reads as empty`, async () => {
+			const repo = create();
+			expect(await repo.getMapRecords('italy-regions')).toEqual({});
+			await repo.saveMapRecords('italy-regions', records);
+			expect(await repo.getMapRecords('italy-regions')).toEqual(records);
+			expect(await repo.getMapRecords('germany-states')).toEqual({});
+		});
+
+		it(`${name}: resetKnown forgets cards and records but keeps the last score and other maps`, async () => {
+			const repo = create();
+			for (const mapId of ['italy-regions', 'germany-states']) {
+				await repo.saveCardState(mapId, sampleCard);
+				await repo.saveLastSessionSummary(mapId, sampleSummary);
+				await repo.saveMapRecords(mapId, records);
+			}
+			await repo.resetKnown('italy-regions');
+			expect(await repo.getCardStates('italy-regions')).toEqual([]);
+			expect(await repo.getMapRecords('italy-regions')).toEqual({});
+			expect(await repo.getLastSessionSummary('italy-regions')).toEqual(sampleSummary);
+			expect(await repo.getCardStates('germany-states')).toEqual([sampleCard]);
+			expect(await repo.getMapRecords('germany-states')).toEqual(records);
+		});
+
+		it(`${name}: clearMap forgets the records too`, async () => {
+			const repo = create();
+			await repo.saveMapRecords('italy-regions', records);
+			await repo.clearMap('italy-regions');
+			expect(await repo.getMapRecords('italy-regions')).toEqual({});
+		});
+	}
+
+	it('localStorage: resetKnown throws when storage fails, so a failed reset is never reported done', async () => {
+		const repo = createLocalStorageProgressRepository();
+		vi.spyOn(localStorage, 'removeItem').mockImplementation(() => {
+			throw new Error('denied');
+		});
+		await expect(repo.resetKnown('italy-regions')).rejects.toThrow('denied');
+	});
+
+	it('reads a record of the wrong shape, or unparseable text, as nothing saved', async () => {
+		const repo = createLocalStorageProgressRepository();
+		localStorage.setItem('geoclick:progress:v1:italy-regions:records', '{"bestTimeMs":"fast"}');
+		expect(await repo.getMapRecords('italy-regions')).toEqual({});
+		expect(parseMapRecords('{not json')).toEqual({});
+		expect(parseMapRecords(JSON.stringify(records))).toEqual(records);
 	});
 });
 

@@ -88,6 +88,15 @@ export type TranslationKey =
 	| 'fact.close'
 	| 'known.clear'
 	| 'known.chosen'
+	| 'known.reset'
+	| 'known.resetTitle'
+	| 'known.resetBody'
+	| 'known.resetConfirm'
+	| 'known.resetCancel'
+	| 'known.resetDone'
+	| 'known.resetFailed'
+	| 'known.emptyTitle'
+	| 'known.emptyBody'
 	| 'nav.loading'
 	| 'nav.detailedMaps'
 	| 'nav.hideDetailedMap'
@@ -287,6 +296,15 @@ const en: Dictionary = {
 	'fact.close': 'Close',
 	'known.clear': 'Clear',
 	'known.chosen': 'Chosen',
+	'known.reset': 'Reset progress',
+	'known.resetTitle': 'Reset your progress on {map}?',
+	'known.resetBody': 'Every name on this map goes back to unknown. Your other maps, your favourites and your last score stay as they are.',
+	'known.resetConfirm': 'Reset',
+	'known.resetCancel': 'Cancel',
+	'known.resetDone': 'Your progress on {map} is reset.',
+	'known.resetFailed': 'The reset did not finish. Try again.',
+	'known.emptyTitle': 'Nothing known yet',
+	'known.emptyBody': 'Every name you place right in the quiz is written here. Study them in the Overview, or start the quiz.',
 	'nav.loading': 'Loading…',
 	'nav.detailedMaps': 'Show detailed maps',
 	'nav.hideDetailedMap': 'Hide {name}',
@@ -430,7 +448,7 @@ const en: Dictionary = {
 	'tutorial.step8': 'Not sure where a region is? Look it up in the **overview**.',
 	'tutorial.step9': 'Found Sardegna? Go back to the **Quiz**.',
 	'tutorial.step10':
-		'The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Known** shows how far you have got.',
+		'The regions you placed are still marked. Place a name right three times and it counts as known; a mistake takes it back one step — **Known** shows how far you have got.',
 	'tutorial.step11':
 		'Last one: the **Tour** flies you to each region in turn and shows its name. Open it.'
 };
@@ -503,6 +521,15 @@ const de: Dictionary = {
 	'fact.close': 'Schließen',
 	'known.clear': 'Zurücksetzen',
 	'known.chosen': 'Gewählt',
+	'known.reset': 'Fortschritt zurücksetzen',
+	'known.resetTitle': 'Deinen Fortschritt auf {map} zurücksetzen?',
+	'known.resetBody': 'Alle Namen dieser Karte gelten wieder als unbekannt. Deine anderen Karten, deine Favoriten und dein letztes Ergebnis bleiben, wie sie sind.',
+	'known.resetConfirm': 'Zurücksetzen',
+	'known.resetCancel': 'Abbrechen',
+	'known.resetDone': 'Dein Fortschritt auf {map} ist zurückgesetzt.',
+	'known.resetFailed': 'Das Zurücksetzen hat nicht geklappt. Versuch es noch einmal.',
+	'known.emptyTitle': 'Noch nichts gewusst',
+	'known.emptyBody': 'Jeder Name, den du im Quiz richtig platzierst, steht dann hier. Lerne sie in der Übersicht oder starte das Quiz.',
 	'nav.loading': 'Lädt…',
 	'nav.detailedMaps': 'Detaillierte Karten anzeigen',
 	'nav.hideDetailedMap': '{name} ausblenden',
@@ -650,7 +677,7 @@ const de: Dictionary = {
 	'tutorial.step8': 'Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach.',
 	'tutorial.step9': 'Sardegna gefunden? Dann zurück zum **Quiz**.',
 	'tutorial.step10':
-		'Deine platzierten Regionen sind noch markiert. Dreimal hintereinander richtig, und ein Name gilt als gewusst — **Gewusst** zeigt, wie weit du bist.',
+		'Deine platzierten Regionen sind noch markiert. Dreimal richtig, und ein Name gilt als gewusst; ein Fehler setzt ihn eine Stufe zurück — **Gewusst** zeigt, wie weit du bist.',
 	'tutorial.step11':
 		'Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie.'
 };
@@ -723,6 +750,15 @@ const it: Dictionary = {
 	'fact.close': 'Chiudi',
 	'known.clear': 'Azzera',
 	'known.chosen': 'Scelto',
+	'known.reset': 'Azzera i progressi',
+	'known.resetTitle': 'Azzerare i tuoi progressi su {map}?',
+	'known.resetBody': 'Tutti i nomi di questa mappa tornano sconosciuti. Le altre mappe, i preferiti e l\'ultimo punteggio restano come sono.',
+	'known.resetConfirm': 'Azzera',
+	'known.resetCancel': 'Annulla',
+	'known.resetDone': 'I tuoi progressi su {map} sono stati azzerati.',
+	'known.resetFailed': 'L\'azzeramento non è riuscito. Riprova.',
+	'known.emptyTitle': 'Ancora niente di imparato',
+	'known.emptyBody': 'Ogni nome che posizioni giusto nel quiz viene scritto qui. Studiali nella Panoramica o inizia il quiz.',
 	'nav.loading': 'Caricamento…',
 	'nav.detailedMaps': 'Mostra le mappe dettagliate',
 	'nav.hideDetailedMap': 'Nascondi {name}',
@@ -871,7 +907,7 @@ const it: Dictionary = {
 	'tutorial.step8': "Non sai dov'è una regione? Controlla nella **panoramica**.",
 	'tutorial.step9': 'Trovata la Sardegna? Torna al **Quiz**.',
 	'tutorial.step10':
-		'Le regioni che hai posizionato restano segnate. Tre volte di fila giuste e un nome conta come imparato — **Conoscenza** mostra a che punto sei.',
+		'Le regioni che hai posizionato restano segnate. Tre volte giusto e un nome conta come imparato; un errore lo fa scendere di un gradino — **Conoscenza** mostra a che punto sei.',
 	'tutorial.step11':
 		"Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo."
 };

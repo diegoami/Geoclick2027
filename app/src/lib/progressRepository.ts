@@ -22,12 +22,37 @@ export interface SessionSummary {
 	completedAt: string; // ISO date
 }
 
+/** One mix-up the quiz remembers (#266): the name of `targetId` was dropped
+ * on `chosenId`'s place, `count` times. */
+export interface Confusion {
+	targetId: string;
+	chosenId: string;
+	count: number;
+}
+
+/** What else a map remembers besides its cards and last summary (v1.1.0),
+ * kept as one record per map so a new kind needs no new table: the best
+ * time on a fully known map (#267) and the mix-ups (#266). */
+export interface MapRecords {
+	bestTimeMs?: number;
+	confusions?: Confusion[];
+}
+
 export interface ProgressRepository {
 	getCardStates(mapId: string): Promise<CardState[]>;
 	saveCardState(mapId: string, state: CardState): Promise<void>;
 	getLastSessionSummary(mapId: string): Promise<SessionSummary | undefined>;
 	saveLastSessionSummary(mapId: string, summary: SessionSummary): Promise<void>;
-	/** Forget one map's card states and last-session summary. Other maps untouched. */
+	/** This map's other records; an empty object when nothing is saved. */
+	getMapRecords(mapId: string): Promise<MapRecords>;
+	/** Replaces this map's other records. */
+	saveMapRecords(mapId: string, records: MapRecords): Promise<void>;
+	/** "Reset known progress" (#256): forget one map's card states and other
+	 * records, keeping its last-session summary. Unlike the other writes it
+	 * throws when it fails, so the player is never told a reset worked when it
+	 * did not. */
+	resetKnown(mapId: string): Promise<void>;
+	/** Forget one map's card states, records and last-session summary. Other maps untouched. */
 	clearMap(mapId: string): Promise<void>;
 	/** Forget ALL quiz progress on this device/backend. Progress only - UI
 	 * preferences such as the chosen language are not progress and survive. */
@@ -42,6 +67,10 @@ function cardsKey(mapId: string): string {
 
 function lastSessionKey(mapId: string): string {
 	return `${STORAGE_PREFIX}:${mapId}:lastSession`;
+}
+
+function recordsKey(mapId: string): string {
+	return `${STORAGE_PREFIX}:${mapId}:records`;
 }
 
 // Local calendar date, not `toISOString().slice(0, 10)` - that's UTC, which
@@ -75,6 +104,37 @@ function isCardState(value: unknown): value is CardState {
 		typeof value.lastReviewedAt === 'string' &&
 		(value.cleanStreak === undefined || typeof value.cleanStreak === 'number')
 	);
+}
+
+function isConfusion(value: unknown): value is Confusion {
+	return (
+		isRecord(value) &&
+		typeof value.targetId === 'string' &&
+		typeof value.chosenId === 'string' &&
+		typeof value.count === 'number'
+	);
+}
+
+function isMapRecords(value: unknown): value is MapRecords {
+	if (!isRecord(value)) return false;
+	return (
+		(value.bestTimeMs === undefined || typeof value.bestTimeMs === 'number') &&
+		(value.confusions === undefined ||
+			(Array.isArray(value.confusions) && value.confusions.every(isConfusion)))
+	);
+}
+
+/** A stored record that will not parse, or has the wrong shape, reads as
+ * nothing saved - the same rule as
+ * readJson. Shared by the two SQLite repositories, which store the JSON. */
+export function parseMapRecords(data: string | undefined): MapRecords {
+	if (!data) return {};
+	try {
+		const parsed: unknown = JSON.parse(data);
+		return isMapRecords(parsed) ? parsed : {};
+	} catch {
+		return {};
+	}
 }
 
 function isCardStateArray(value: unknown): value is CardState[] {
@@ -224,6 +284,21 @@ export function createLocalStorageProgressRepository(): ProgressRepository {
 			writeJson(lastSessionKey(mapId), summary);
 		},
 
+		async getMapRecords(mapId) {
+			return readJson<MapRecords>(recordsKey(mapId), isMapRecords) ?? {};
+		},
+
+		async saveMapRecords(mapId, records) {
+			writeJson(recordsKey(mapId), records);
+		},
+
+		async resetKnown(mapId) {
+			if (typeof localStorage === 'undefined') return;
+			// Not caught: the caller reports a failed reset (#256).
+			localStorage.removeItem(cardsKey(mapId));
+			localStorage.removeItem(recordsKey(mapId));
+		},
+
 		async clearMap(mapId) {
 			try {
 				if (typeof localStorage === 'undefined') return;
@@ -231,6 +306,7 @@ export function createLocalStorageProgressRepository(): ProgressRepository {
 				// never touch a map whose id merely starts with that.
 				localStorage.removeItem(cardsKey(mapId));
 				localStorage.removeItem(lastSessionKey(mapId));
+				localStorage.removeItem(recordsKey(mapId));
 			} catch (e) {
 				console.warn('Could not clear saved progress for this map.', e);
 			}
@@ -263,6 +339,7 @@ export function createLocalStorageProgressRepository(): ProgressRepository {
 export function createInMemoryProgressRepository(): ProgressRepository {
 	const cards = new Map<string, CardState[]>();
 	const summaries = new Map<string, SessionSummary>();
+	const records = new Map<string, MapRecords>();
 	return {
 		async getCardStates(mapId) {
 			return (cards.get(mapId) ?? []).map((s) => ({ ...s }));
@@ -285,14 +362,29 @@ export function createInMemoryProgressRepository(): ProgressRepository {
 			summaries.set(mapId, { ...summary });
 		},
 
+		async getMapRecords(mapId) {
+			return structuredClone(records.get(mapId) ?? {});
+		},
+
+		async saveMapRecords(mapId, next) {
+			records.set(mapId, structuredClone(next));
+		},
+
+		async resetKnown(mapId) {
+			cards.delete(mapId);
+			records.delete(mapId);
+		},
+
 		async clearMap(mapId) {
 			cards.delete(mapId);
 			summaries.delete(mapId);
+			records.delete(mapId);
 		},
 
 		async clearAll() {
 			cards.clear();
 			summaries.clear();
+			records.clear();
 		}
 	};
 }
@@ -312,6 +404,9 @@ export function createSandboxedProgressRepository(
 		saveCardState: (mapId, state) => pick(mapId).saveCardState(mapId, state),
 		getLastSessionSummary: (mapId) => pick(mapId).getLastSessionSummary(mapId),
 		saveLastSessionSummary: (mapId, summary) => pick(mapId).saveLastSessionSummary(mapId, summary),
+		getMapRecords: (mapId) => pick(mapId).getMapRecords(mapId),
+		saveMapRecords: (mapId, records) => pick(mapId).saveMapRecords(mapId, records),
+		resetKnown: (mapId) => pick(mapId).resetKnown(mapId),
 		clearMap: (mapId) => pick(mapId).clearMap(mapId),
 		// "Forget all progress" is a real request, so it reaches the real store
 		// too; nothing calls it during the tutorial today.

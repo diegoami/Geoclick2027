@@ -26,6 +26,8 @@
 	import { fetchFacts, placeFacts, type Facts } from './facts';
 	import { StretchedNames } from './stretchedNames';
 	import { publishBottomOverlay } from './mapBottomOverlay';
+	import { forgetRound } from './quizRound';
+	import { resolve } from '$lib/appPaths';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -60,6 +62,17 @@
 	let streaks = $state<Record<string, number>>({});
 	/** Whether anything is drawn, i.e. whether the legend has work to do. */
 	let anyShown = $state(false);
+	/** Whether the saved progress has been read, so an empty map really is one. */
+	let loaded = $state(false);
+	/** Whether any name has an earned level, i.e. whether there is anything to reset. */
+	const anyEarned = $derived(Object.values(streaks).some((level) => level > 0));
+	const mapTitle = $derived(mapDisplayName(mapId) ?? mapDef?.name ?? mapId);
+
+	// "Reset progress" (#256): a dialog of the app's own, not window.confirm,
+	// which would block the WebView and every test driving it.
+	let resetDialog = $state<HTMLDialogElement>();
+	let resetOutcome = $state<'done' | 'failed' | undefined>(undefined);
+	let resetOutcomeTimer: ReturnType<typeof setTimeout> | undefined;
 
 	// How the strengths rank when two names want the same spot (FT-23): a
 	// name you know beats one you half know, and one you asked for outright
@@ -177,7 +190,33 @@
 		const repository = await createProgressRepository();
 		const states = await repository.getCardStates(mapId);
 		streaks = Object.fromEntries(states.map((c) => [c.targetId, c.cleanStreak]));
+		loaded = true;
 		redrawNames(def);
+	}
+
+	/**
+	 * Forgets what this map has earned (#256), and everything that could bring
+	 * it back: the chosen names and a round left half-played. The last score
+	 * stays. Only a reset that was saved is reported as done.
+	 */
+	async function resetProgress() {
+		resetDialog?.close();
+		let outcome: 'done' | 'failed' = 'done';
+		try {
+			const repository = await createProgressRepository();
+			await repository.resetKnown(mapId);
+			forgetRound(mapId);
+			clearNameOverrides(mapId);
+			streaks = {};
+			asked = undefined;
+			if (mapDef) redrawNames(mapDef);
+		} catch (e) {
+			console.error('Could not reset progress for this map:', e);
+			outcome = 'failed';
+		}
+		resetOutcome = outcome;
+		clearTimeout(resetOutcomeTimer);
+		resetOutcomeTimer = setTimeout(() => (resetOutcome = undefined), 6000);
 	}
 
 	// Show or hide the Terrain layer as the preference changes (FT-33). An
@@ -286,6 +325,7 @@
 	});
 
 	onDestroy(() => {
+		clearTimeout(resetOutcomeTimer);
 		stretched?.destroy();
 		for (const p of shownPopups.values()) p.remove();
 		shownPopups.clear();
@@ -327,8 +367,47 @@
 					{t('known.clear')}
 				</button>
 			{/if}
+			{#if anyEarned}
+				<button
+					type="button"
+					class="clear-btn"
+					data-testid="reset-progress"
+					onclick={() => resetDialog?.showModal()}
+				>
+					{t('known.reset')}
+				</button>
+			{/if}
+		</div>
+	{:else if loaded && !anyEarned}
+		<!-- A map never played says what this screen is for (#269). -->
+		<div class="legend empty" bind:this={legendEl} data-testid="known-empty">
+			<strong>{t('known.emptyTitle')}</strong>
+			<p>{t('known.emptyBody')}</p>
+			<div class="empty-actions">
+				<a class="clear-btn" href={resolve('/map/[mapId]/overview', { mapId })}
+					>{t('nav.overview')}</a
+				>
+				<a class="clear-btn" href={resolve('/map/[mapId]/quiz', { mapId })}>{t('nav.quiz')}</a>
+			</div>
 		</div>
 	{/if}
+	{#if resetOutcome}
+		<p class="reset-outcome" role="status" data-testid="reset-outcome">
+			{resetOutcome === 'done' ? t('known.resetDone', { map: mapTitle }) : t('known.resetFailed')}
+		</p>
+	{/if}
+	<dialog class="reset-dialog" bind:this={resetDialog} aria-labelledby="reset-title">
+		<h2 id="reset-title">{t('known.resetTitle', { map: mapTitle })}</h2>
+		<p>{t('known.resetBody')}</p>
+		<div class="reset-actions">
+			<button type="button" class="clear-btn" onclick={() => resetDialog?.close()}>
+				{t('known.resetCancel')}
+			</button>
+			<button type="button" class="reset-confirm" data-testid="reset-confirm" onclick={resetProgress}>
+				{t('known.resetConfirm')}
+			</button>
+		</div>
+	</dialog>
 </div>
 
 <style>
@@ -403,5 +482,78 @@
 	.swatch.retention-seen {
 		font-size: 0.7rem;
 		opacity: 0.45;
+	}
+	/* A map never played (#269): the legend's corner, saying what goes there. */
+	.legend.empty {
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: min(22rem, calc(100% - 1.5rem));
+		color: #1f3d2a;
+		font-size: 0.875rem;
+	}
+	.legend.empty p {
+		margin: 0;
+	}
+	.empty-actions,
+	.reset-actions {
+		display: flex;
+		gap: 0.5rem;
+	}
+	.empty-actions a {
+		padding: 2px 10px;
+		font-size: 0.8125rem;
+		text-decoration: none;
+	}
+	/* What a reset did, under the map bar for a few seconds. */
+	.reset-outcome {
+		position: absolute;
+		top: 6.5rem;
+		left: 50%;
+		z-index: 3;
+		transform: translateX(-50%);
+		margin: 0;
+		padding: 0.4rem 0.8rem;
+		border-radius: 0.6rem;
+		background: #1f3d2a;
+		color: #ffffff;
+		font-family: system-ui, sans-serif;
+		font-size: 0.875rem;
+	}
+	.reset-dialog {
+		max-width: min(26rem, calc(100% - 2rem));
+		padding: 1rem 1.2rem;
+		border: none;
+		border-radius: 0.8rem;
+		color: #1f3d2a;
+		font-family: system-ui, sans-serif;
+	}
+	.reset-dialog::backdrop {
+		background: rgba(17, 24, 21, 0.45);
+	}
+	.reset-dialog h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1.05rem;
+	}
+	.reset-dialog p {
+		margin: 0 0 1rem;
+		font-size: 0.9rem;
+		line-height: 1.4;
+	}
+	.reset-actions {
+		justify-content: flex-end;
+	}
+	.reset-confirm {
+		padding: 4px 12px;
+		border: none;
+		border-radius: 5px;
+		background: #c0392b;
+		color: #ffffff;
+		font-family: inherit;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	.reset-confirm:focus-visible {
+		outline: 2px solid #c0392b;
+		outline-offset: 2px;
 	}
 </style>

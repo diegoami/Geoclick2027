@@ -7,7 +7,13 @@
 // build never touches this module or its @tauri-apps/plugin-sql import.
 
 import Database from '@tauri-apps/plugin-sql';
-import type { CardState, ProgressRepository, SessionSummary } from './progressRepository';
+import {
+	parseMapRecords,
+	type CardState,
+	type MapRecords,
+	type ProgressRepository,
+	type SessionSummary
+} from './progressRepository';
 
 let dbPromise: ReturnType<typeof Database.load> | undefined;
 
@@ -107,6 +113,32 @@ export function createSqliteProgressRepository(): ProgressRepository {
 			);
 		},
 
+		async getMapRecords(mapId) {
+			const db = await getDb();
+			const rows = await db.select<{ data: string }[]>(
+				'SELECT data FROM map_records WHERE map_id = $1',
+				[mapId]
+			);
+			return parseMapRecords(rows[0]?.data);
+		},
+
+		async saveMapRecords(mapId, records: MapRecords) {
+			const db = await getDb();
+			await db.execute(
+				`INSERT INTO map_records (map_id, data) VALUES ($1, $2)
+				 ON CONFLICT (map_id) DO UPDATE SET data = excluded.data`,
+				[mapId, JSON.stringify(records)]
+			);
+		},
+
+		// Two statements for the same reason as clearMap below; a failure
+		// throws, and the player is told the reset did not finish.
+		async resetKnown(mapId) {
+			const db = await getDb();
+			await db.execute('DELETE FROM card_states WHERE map_id = $1', [mapId]);
+			await db.execute('DELETE FROM map_records WHERE map_id = $1', [mapId]);
+		},
+
 		// Two statements, not one transaction: tauri-plugin-sql exposes no
 		// transaction API, and a hand-sent BEGIN can land on a different pooled
 		// connection than the DELETEs. Worst case on a mid-way failure is a map
@@ -116,12 +148,14 @@ export function createSqliteProgressRepository(): ProgressRepository {
 			const db = await getDb();
 			await db.execute('DELETE FROM card_states WHERE map_id = $1', [mapId]);
 			await db.execute('DELETE FROM last_session_summaries WHERE map_id = $1', [mapId]);
+			await db.execute('DELETE FROM map_records WHERE map_id = $1', [mapId]);
 		},
 
 		async clearAll() {
 			const db = await getDb();
 			await db.execute('DELETE FROM card_states');
 			await db.execute('DELETE FROM last_session_summaries');
+			await db.execute('DELETE FROM map_records');
 		}
 	};
 }

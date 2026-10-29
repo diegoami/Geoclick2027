@@ -54,7 +54,14 @@ export const MIGRATIONS: readonly string[] = [
 	// v0.6.0: how often in a row a target was placed right with no mistake
 	// (packages/srs, KNOWN_CLEAN_STREAK). Existing rows keep their schedule and
 	// start at 0, which reads as "not known yet".
-	`ALTER TABLE card_states ADD COLUMN clean_streak INTEGER NOT NULL DEFAULT 0;`
+	`ALTER TABLE card_states ADD COLUMN clean_streak INTEGER NOT NULL DEFAULT 0;`,
+	// v1.1.0: what else a map remembers (progressRepository.ts MapRecords) -
+	// the best time on a fully known map (#267) and the mix-ups (#266) - as
+	// one JSON record per map, so the next kind needs no new table.
+	`CREATE TABLE map_records (
+		map_id TEXT PRIMARY KEY,
+		data TEXT NOT NULL
+	);`
 ];
 
 export async function getUserVersion(db: MigratableDb): Promise<number> {
