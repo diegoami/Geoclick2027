@@ -5,12 +5,12 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## v1.1.0 — candidate — A map you complete, and new ways to play it
+## v1.1.0 — 2026-10-29 — A map you complete, and new ways to play it
 
 **Known fades slowly instead of collapsing, every round says what it changed, and the quiz can be played by tapping, by naming places, or as a short practice round.**
 
 Plan #270. Gameplay in #272, the Bolivia and Cuba maps in #271.
-This entry describes the candidate; no v1.1.0 tag or release has been published.
+Tag `v1.1.0` on `0f19f24`; [release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.1.0).
 
 For players:
 
@@ -28,9 +28,13 @@ Under the hood:
 - Saved progress needs no migration: the stored streak becomes an earned level. One JSON record per map (`map_records`, migration 3 on desktop and Android) holds best times, mix-ups and the last round's slipped count.
 - Adds `@capacitor/haptics` 8.0.2. New pure, unit-tested quiz modules: `touchDrag`, `nameIt`, `confusions`, `roundReport`, `suggestion`, `feedback`.
 
-Not covered:
+What shipped, and what was tried:
 
-- Windows and Android installers, haptics on a device and the sounds have not been tried yet; that happens before the tag (docs/RELEASES.md).
+- **Review:** an independent model (GPT-6, in Codex) reviewed [Milestone v1.1.0 (#275)](https://github.com/diegoami/Geoclick2027/issues/275) in one round: AGREE on `0f19f24`. #276 (SHOULD): a resumed round's score panel lost the mix-ups made before the trip away; fixed after the tag in #277, for the next release.
+- **Tagged before the installer checks**, by the owner's choice; they followed the tag.
+- **Built from the tag:** the Windows `.msi` and `-setup.exe`, the signed Android APK (current key, `CN=Diego, OU=Amicabile`) and the HTML5 ZIP (221 maps).
+- **Tried:** the Windows setup installed over 1.0.0; maps draw, Name places works, Cuba and Bolivia open. The HTML5 ZIP served from a nested folder: Bolivia's quiz, a reload, and the three manuals.
+- **Not tried:** the Android APK on a device (none connected), haptics, the answer sounds. The web app was not redeployed (deploys are stopped).
 
 ## v1.0.0 — in preparation — More of the world, facts throughout, portable browser play
 
