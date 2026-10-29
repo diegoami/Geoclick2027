@@ -86,3 +86,36 @@ export function groupProgress(
 	}
 	return known > 0 ? { known, total } : undefined;
 }
+
+/**
+ * How much of each country is known, for colouring the start screen's world
+ * map (#262), and the names known over the whole catalogue. Only a group with
+ * a map played is listed: the rest keep their plain colour. Detailed maps do
+ * not count, so a country can be completed from its main maps.
+ */
+export function worldProgress(
+	groups: readonly { id: string; mapIds: readonly string[] }[],
+	masteries: Record<string, Mastery | undefined>,
+	targetCount: (mapId: string) => number,
+	isDetailed: (mapId: string) => boolean
+): { byGroup: Map<string, { known: number; total: number }>; known: number; total: number } {
+	const byGroup = new Map<string, { known: number; total: number }>();
+	let known = 0;
+	let total = 0;
+	for (const group of groups) {
+		const mapIds = group.mapIds.filter((id) => !isDetailed(id));
+		let groupKnown = 0;
+		let groupTotal = 0;
+		let played = false;
+		for (const id of mapIds) {
+			const mastery = masteries[id];
+			if (mastery) played = true;
+			groupKnown += mastery?.known ?? 0;
+			groupTotal += targetCount(id);
+		}
+		known += groupKnown;
+		total += groupTotal;
+		if (played && groupTotal > 0) byGroup.set(group.id, { known: groupKnown, total: groupTotal });
+	}
+	return { byGroup, known, total };
+}

@@ -48,6 +48,8 @@ export type TranslationKey =
 	| 'picker.continents'
 	| 'picker.label'
 	| 'picker.world'
+	| 'picker.namesKnown'
+	| 'picker.complete'
 	| 'picker.close'
 	| 'picker.noMaps'
 	| 'continent.europe'
@@ -278,6 +280,8 @@ const en: Dictionary = {
 	'picker.continents': 'Continents',
 	'picker.label': 'World map: choose a continent, then a country',
 	'picker.world': 'World',
+	'picker.namesKnown': '{known} / {total} names known',
+	'picker.complete': 'complete',
 	'picker.close': 'Close',
 	'picker.noMaps': 'No maps of {country} yet: these are {continent}’s.',
 	'continent.europe': 'Europe',
@@ -527,6 +531,8 @@ const de: Dictionary = {
 	'picker.continents': 'Kontinente',
 	'picker.label': 'Weltkarte: wähle einen Kontinent, dann ein Land',
 	'picker.world': 'Welt',
+	'picker.namesKnown': '{known} / {total} Namen gewusst',
+	'picker.complete': 'vollständig',
 	'picker.close': 'Schließen',
 	'picker.noMaps': 'Noch keine Karten von {country}: hier die von {continent}.',
 	'continent.europe': 'Europa',
@@ -780,6 +786,8 @@ const it: Dictionary = {
 	'picker.continents': 'Continenti',
 	'picker.label': 'Mappa del mondo: scegli un continente, poi un paese',
 	'picker.world': 'Mondo',
+	'picker.namesKnown': 'Sai {known} / {total} nomi',
+	'picker.complete': 'completa',
 	'picker.close': 'Chiudi',
 	'picker.noMaps': 'Ancora nessuna mappa di {country}: ecco quelle dell’{continent}.',
 	'continent.europe': 'Europa',
