@@ -36,12 +36,12 @@ What shipped, and what was tried:
 - **Tried:** the Windows setup installed over 1.0.0; maps draw, Name places works, Cuba and Bolivia open. The HTML5 ZIP served from a nested folder: Bolivia's quiz, a reload, and the three manuals.
 - **Not tried:** the Android APK on a device (none connected), haptics, the answer sounds.
 
-## v1.0.0 — in preparation — More of the world, facts throughout, portable browser play
+## v1.0.0 — 2026-10-28 — More of the world, facts throughout, portable browser play
 
 **Explore 217 maps, learn with facts in English, German and Italian, and play in a browser or with the Windows and Android apps.**
 
 Proposals #241 and #244. Release preparation in PRs #243 and #245.
-This entry describes the candidate; no v1.0.0 tag or release has been published.
+Tag `v1.0.0` on `099752e`; [release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.0.0).
 
 For players:
 
