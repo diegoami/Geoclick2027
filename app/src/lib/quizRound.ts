@@ -21,6 +21,15 @@ import type { QuizSession } from '@geoclick/quiz-engine';
 export interface RoundInProgress {
 	session: QuizSession;
 	hand: string[];
+	/** Every target's earned level when the round started, so the score panel
+	 * can say what the round changed (#259). */
+	levelsAtStart?: Record<string, number>;
+	/** A round of only the names not yet known (#265). */
+	practice?: boolean;
+	/** Which way the round asks: place names, or name places (#264). */
+	mode?: 'place' | 'name';
+	/** Time played so far in a timed round (#267), without time spent away. */
+	elapsedMs?: number;
 }
 
 // Plain Map: nothing renders from it, QuizView copies what it needs into its
@@ -29,13 +38,13 @@ const rounds = new Map<string, RoundInProgress>();
 
 /** Keeps this map's round, replacing whatever was there. */
 export function rememberRound(mapId: string, round: RoundInProgress): void {
-	rounds.set(mapId, { session: round.session, hand: [...round.hand] });
+	rounds.set(mapId, { ...round, hand: [...round.hand] });
 }
 
 /** The round this map was left in the middle of, if there is one. */
 export function roundInProgress(mapId: string): RoundInProgress | undefined {
 	const round = rounds.get(mapId);
-	return round && { session: round.session, hand: [...round.hand] };
+	return round && { ...round, hand: [...round.hand] };
 }
 
 /** Throws this map's round away: it is finished, restarted, was played in

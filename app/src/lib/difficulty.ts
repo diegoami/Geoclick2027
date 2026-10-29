@@ -22,8 +22,8 @@ export const LEVEL_SHARES = [0, 0.25, 0.6, 0.85] as const;
  * 2026-09-23). The rest of the curve is a first guess, not measured. */
 export const HAND_SIZES = [10, 6, 3, 1] as const;
 
-/** A name counts towards the level once it has been placed right this many
- * times in a row with no mistake (packages/srs). */
+/** A name counts towards the level once its earned level reaches this: one up
+ * per clean placement, one down per mistake (packages/srs, #256). */
 export { KNOWN_CLEAN_STREAK };
 
 /** How many of a map's targets are known: their clean streak, in any order,

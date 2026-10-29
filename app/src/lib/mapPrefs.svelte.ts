@@ -230,6 +230,63 @@ export function setTerrainShown(shown: boolean): void {
 	}
 }
 
+// --- answer sounds (#268) ---
+//
+// Off until the player switches them on: a quiz played on a train or in a
+// classroom should not start making noise. One flag for every map, like
+// Terrain. Android's haptics need no switch and follow the system's
+// reduce-motion setting instead (feedback.ts).
+
+const SOUND_KEY = 'geoclick:sound:v1';
+let sound = $state<boolean>(readFlag(SOUND_KEY, false));
+
+export function soundOn(): boolean {
+	return sound;
+}
+
+export function setSoundOn(on: boolean): void {
+	sound = on;
+	if (typeof localStorage === 'undefined') return;
+	try {
+		localStorage.setItem(SOUND_KEY, on ? '1' : '0');
+	} catch {
+		// Full or blocked storage: the setting still holds for this session.
+	}
+}
+
+// --- which way the quiz asks (#264) ---
+//
+// 'place': drag (or tap) each name onto its place, as the quiz always has.
+// 'name': a place lights up and the player picks its name. Kept like the
+// other settings, one choice for every map.
+
+const QUIZ_MODE_KEY = 'geoclick:quiz-mode:v1';
+
+function readQuizMode(): 'place' | 'name' {
+	if (typeof localStorage === 'undefined') return 'place';
+	try {
+		return localStorage.getItem(QUIZ_MODE_KEY) === 'name' ? 'name' : 'place';
+	} catch {
+		return 'place';
+	}
+}
+
+let quizModeChoice = $state<'place' | 'name'>(readQuizMode());
+
+export function quizMode(): 'place' | 'name' {
+	return quizModeChoice;
+}
+
+export function setQuizMode(mode: 'place' | 'name'): void {
+	quizModeChoice = mode;
+	if (typeof localStorage === 'undefined') return;
+	try {
+		localStorage.setItem(QUIZ_MODE_KEY, mode);
+	} catch {
+		// Full or blocked storage: the choice still holds for this session.
+	}
+}
+
 // --- detailed maps in the map bar (v0.17, #162) ---
 //
 // The small divisions and slices (districts, provinces, the parts of a

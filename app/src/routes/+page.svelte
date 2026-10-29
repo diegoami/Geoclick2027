@@ -5,7 +5,9 @@
 	import { loadHomeProgress, type Mastery } from '$lib/homeProgress';
 	import { countMaps, filterGroups } from '$lib/mapSearch';
 	import { t } from '$lib/i18n.svelte';
-	import { mapGroups, mapTypeLabel } from '$lib/mapCatalog';
+	import { isAdvancedMap, mapDisplayName, mapGroups, mapTypeLabel } from '$lib/mapCatalog';
+	import { resolve } from '$lib/appPaths';
+	import { suggestNext, type Suggestion } from '$lib/suggestion';
 	import { withRowNameSearchAliases } from '$lib/catalogSections';
 	import { favouriteMaps, homeView, recentMaps, setHomeView } from '$lib/mapPrefs.svelte';
 	import { isNativeShell } from '$lib/platform';
@@ -31,6 +33,13 @@
 	// never played has no mastery at all and says nothing - it is a map to
 	// start, not a map at 0.
 	let masteries = $state<Record<string, Mastery | undefined>>({});
+	// What to play next (#263): read from the recent maps once progress is in.
+	let suggestion = $state<Suggestion | undefined>(undefined);
+	/** The other main maps of a map's country, for "Next: ..." */
+	function siblingsOf(mapId: string): string[] {
+		const group = mapGroups.find((g) => g.maps.some((m) => m.id === mapId));
+		return (group?.maps ?? []).map((m) => m.id).filter((id) => id !== mapId && !isAdvancedMap(id));
+	}
 
 	// What the player has typed into the search box (FT-31). Sixty maps in
 	// twenty-eight countries is too long a list to scroll through for one of
@@ -92,6 +101,16 @@
 			);
 			if (stale) return;
 			masteries = progress.masteries;
+			const recent = recentMaps();
+			const slipped: Record<string, number | undefined> = {};
+			for (const id of recent) {
+				slipped[id] = await repository
+					.getMapRecords(id)
+					.then((r) => r.slipped)
+					.catch(() => undefined);
+			}
+			if (stale) return;
+			suggestion = suggestNext({ recent, masteries, slipped, siblingsOf });
 		})();
 		return () => {
 			stale = true;
@@ -108,6 +127,30 @@
 	     since only the device knows (FT-12). -->
 	{#if mounted && showTutorialNudge() && tutorialState().status === 'idle'}
 		<TutorialNudge />
+	{/if}
+
+	<!-- One suggestion of what to play next, when there is one (#263). -->
+	{#if suggestion && !tutorialRuns}
+		{@const name = mapDisplayName(suggestion.mapId) ?? suggestion.mapId}
+		<p class="suggestion" data-testid="suggestion">
+			<a href={resolve('/map/[mapId]/quiz', { mapId: suggestion.mapId })}>
+				{#if suggestion.kind === 'continue'}
+					{t('home.suggestContinue', {
+						map: name,
+						known: suggestion.known,
+						total: suggestion.total
+					})}
+				{:else if suggestion.kind === 'slipped'}
+					{t('home.suggestSlipped', { map: name, count: suggestion.slipped })}
+				{:else}
+					{t('home.suggestNext', {
+						map: name,
+						from: mapDisplayName(suggestion.from) ?? suggestion.from
+					})}
+				{/if}
+				→
+			</a>
+		</p>
 	{/if}
 
 	<!-- The map or the list (FT-78, #58), switched in the toolbar and kept on
@@ -154,6 +197,26 @@
 </main>
 
 <style>
+	/* What to play next (#263): one quiet line, not a section. */
+	.suggestion {
+		margin: 0 0 0.75rem;
+		text-align: center;
+		font-family: system-ui, sans-serif;
+		font-size: 0.9rem;
+	}
+	.suggestion a {
+		display: inline-block;
+		padding: 0.35rem 0.8rem;
+		border: 1px solid rgba(181, 105, 31, 0.35);
+		border-radius: 999px;
+		background: #fbf4ec;
+		color: #8a4d12;
+		font-weight: 600;
+		text-decoration: none;
+	}
+	.suggestion a:hover {
+		background: #f6e6d3;
+	}
 	/* A flat white page read as "meh" (direct user feedback) - a soft,
 	   low-saturation gradient drawn from the same muted-earthy family as
 	   the map's own categorical target palette (base.json), just barely

@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
 	DEFAULT_EASE_FACTOR,
 	KNOWN_CLEAN_STREAK,
+	nextLevel,
 	MIN_EASE_FACTOR,
 	daysUntil,
 	isDue,
@@ -152,10 +153,11 @@ describe('rate - repeated reviews', () => {
 	});
 });
 
-describe('rate - clean streak (v0.6.0)', () => {
+describe('rate - earned level (v0.6.0, one-level fading since v1.1.0)', () => {
 	const TODAY = '2026-09-18';
+	const known = () => rate(rate(rate(undefined, 'good', TODAY), 'good', TODAY), 'good', TODAY);
 
-	it('counts consecutive clean reviews, and a name is known at three', () => {
+	it('rises one level per clean review, and a name is known at three', () => {
 		let card = rate(undefined, 'good', TODAY);
 		expect(card.cleanStreak).toBe(1);
 		card = rate(card, 'good', TODAY);
@@ -164,19 +166,35 @@ describe('rate - clean streak (v0.6.0)', () => {
 		expect(card.cleanStreak).toBe(KNOWN_CLEAN_STREAK);
 	});
 
-	it('starts over after a mistake, even though "hard" still passes', () => {
+	it('never rises past known', () => {
+		expect(rate(known(), 'good', TODAY).cleanStreak).toBe(KNOWN_CLEAN_STREAK);
+	});
+
+	it('drops one level after a mistake, even though "hard" still passes', () => {
 		let card = rate(rate(undefined, 'good', TODAY), 'good', TODAY);
 		expect(card.cleanStreak).toBe(2);
 		card = rate(card, 'hard', TODAY);
-		expect(card.cleanStreak).toBe(0);
-		// The pass itself still counts as a repetition, so only the streak resets.
+		expect(card.cleanStreak).toBe(1);
+		// The pass itself still counts as a repetition.
 		expect(card.repetitions).toBe(3);
-		expect(rate(card, 'good', TODAY).cleanStreak).toBe(1);
+		expect(rate(card, 'good', TODAY).cleanStreak).toBe(2);
 	});
 
-	it('starts over after a fail', () => {
-		const known = rate(rate(rate(undefined, 'good', TODAY), 'good', TODAY), 'good', TODAY);
-		expect(rate(known, 'again', TODAY).cleanStreak).toBe(0);
+	it('drops one level after a fail, from known to nearly to seen to nothing', () => {
+		let card = rate(known(), 'again', TODAY);
+		expect(card.cleanStreak).toBe(2);
+		card = rate(card, 'again', TODAY);
+		expect(card.cleanStreak).toBe(1);
+		card = rate(card, 'again', TODAY);
+		expect(card.cleanStreak).toBe(0);
+		expect(rate(card, 'again', TODAY).cleanStreak).toBe(0);
+	});
+
+	it('reads an old streak above three as known', () => {
+		const old = { ...known(), cleanStreak: 7 };
+		expect(nextLevel(7, 'good')).toBe(KNOWN_CLEAN_STREAK);
+		expect(rate(old, 'again', TODAY).cleanStreak).toBe(2);
+		expect(rate(old, 'good', TODAY).cleanStreak).toBe(KNOWN_CLEAN_STREAK);
 	});
 
 	it('treats a card saved before v0.6.0 (no streak) as zero', () => {

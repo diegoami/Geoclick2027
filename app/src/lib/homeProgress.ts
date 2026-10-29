@@ -5,7 +5,8 @@
 import { knownCount, mapLevel, type Level } from './difficulty';
 import type { ProgressRepository, SessionSummary } from './progressRepository';
 
-export type Mastery = { known: number; total: number; level: Level };
+/** `bestTimeMs` only once every name is known and a clean round was timed (#267). */
+export type Mastery = { known: number; total: number; level: Level; bestTimeMs?: number };
 
 export interface HomeProgress {
 	summaries: Record<string, SessionSummary | undefined>;
@@ -25,7 +26,13 @@ async function readMastery(
 	// unknown, and progress for a since-renamed or removed target is ignored -
 	// the same semantics the due counts had.
 	const streaks = targetIds.map((id) => byId.get(id)?.cleanStreak ?? 0);
-	return { known: knownCount(streaks), total: targetIds.length, level: mapLevel(streaks) };
+	const known = knownCount(streaks);
+	// Records are read only for a mastered map: the rest have no best time.
+	const bestTimeMs =
+		known === targetIds.length && known > 0
+			? (await repository.getMapRecords(mapId)).bestTimeMs
+			: undefined;
+	return { known, total: targetIds.length, level: mapLevel(streaks), bestTimeMs };
 }
 
 /**
@@ -78,4 +85,37 @@ export function groupProgress(
 		total += targetCount(id);
 	}
 	return known > 0 ? { known, total } : undefined;
+}
+
+/**
+ * How much of each country is known, for colouring the start screen's world
+ * map (#262), and the names known over the whole catalogue. Only a group with
+ * a map played is listed: the rest keep their plain colour. Detailed maps do
+ * not count, so a country can be completed from its main maps.
+ */
+export function worldProgress(
+	groups: readonly { id: string; mapIds: readonly string[] }[],
+	masteries: Record<string, Mastery | undefined>,
+	targetCount: (mapId: string) => number,
+	isDetailed: (mapId: string) => boolean
+): { byGroup: Map<string, { known: number; total: number }>; known: number; total: number } {
+	const byGroup = new Map<string, { known: number; total: number }>();
+	let known = 0;
+	let total = 0;
+	for (const group of groups) {
+		const mapIds = group.mapIds.filter((id) => !isDetailed(id));
+		let groupKnown = 0;
+		let groupTotal = 0;
+		let played = false;
+		for (const id of mapIds) {
+			const mastery = masteries[id];
+			if (mastery) played = true;
+			groupKnown += mastery?.known ?? 0;
+			groupTotal += targetCount(id);
+		}
+		known += groupKnown;
+		total += groupTotal;
+		if (played && groupTotal > 0) byGroup.set(group.id, { known: groupKnown, total: groupTotal });
+	}
+	return { byGroup, known, total };
 }

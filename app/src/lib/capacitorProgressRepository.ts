@@ -14,7 +14,13 @@ import {
 	type SQLiteDBConnection
 } from '@capacitor-community/sqlite';
 import { migrate } from './capacitorMigrations';
-import type { CardState, ProgressRepository, SessionSummary } from './progressRepository';
+import {
+	parseMapRecords,
+	type CardState,
+	type MapRecords,
+	type ProgressRepository,
+	type SessionSummary
+} from './progressRepository';
 
 const DB_NAME = 'geoclick';
 
@@ -136,6 +142,32 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 			);
 		},
 
+		async getMapRecords(mapId) {
+			const db = await getDb();
+			const result = await db.query('SELECT data FROM map_records WHERE map_id = ?', [mapId]);
+			return parseMapRecords((result.values as { data: string }[] | undefined)?.[0]?.data);
+		},
+
+		async saveMapRecords(mapId, records: MapRecords) {
+			const db = await getDb();
+			await db.run(
+				`INSERT INTO map_records (map_id, data) VALUES (?, ?)
+				 ON CONFLICT (map_id) DO UPDATE SET data = excluded.data`,
+				[mapId, JSON.stringify(records)]
+			);
+		},
+
+		async resetKnown(mapId) {
+			const db = await getDb();
+			await db.executeSet(
+				[
+					{ statement: 'DELETE FROM card_states WHERE map_id = ?', values: [mapId] },
+					{ statement: 'DELETE FROM map_records WHERE map_id = ?', values: [mapId] }
+				],
+				true
+			);
+		},
+
 		// executeSet with transaction=true: both DELETEs commit together or roll
 		// back together (the plugin wraps the whole set in one transaction).
 		async clearMap(mapId) {
@@ -143,7 +175,8 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 			await db.executeSet(
 				[
 					{ statement: 'DELETE FROM card_states WHERE map_id = ?', values: [mapId] },
-					{ statement: 'DELETE FROM last_session_summaries WHERE map_id = ?', values: [mapId] }
+					{ statement: 'DELETE FROM last_session_summaries WHERE map_id = ?', values: [mapId] },
+					{ statement: 'DELETE FROM map_records WHERE map_id = ?', values: [mapId] }
 				],
 				true
 			);

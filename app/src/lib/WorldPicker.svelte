@@ -19,10 +19,10 @@
 	import { followMapControlLanguage, mapControlLocale } from './mapControlsLanguage.svelte';
 	import { enableLabelCollision, registerLabel } from './labelCollision';
 	import { CROWDED_CLASS, MAGNIFIED_CLASS } from './labelMagnify';
-	import type { Mastery } from './homeProgress';
+	import { worldProgress, type Mastery } from './homeProgress';
 	import MapSections from './MapSections.svelte';
 	import ChartMapShell from './ChartMapShell.svelte';
-	import { pickerDefaultMapIdOf, pickerIdOf } from './mapCatalog';
+	import { isAdvancedMap, pickerDefaultMapIdOf, pickerIdOf } from './mapCatalog';
 	import { pickerView, setPickerShown, setPickerView } from './mapPrefs.svelte';
 	import { targetName } from './targetName';
 	import { tutorialContinentChosen, tutorialCountryChosen, tutorialState } from './tutorial.svelte';
@@ -93,6 +93,36 @@
 	] as unknown as maplibregl.ExpressionSpecification;
 
 	const continentName = (id: string) => t(`continent.${id}` as TranslationKey);
+
+	// The world map shows what is known (#262): a country with a map played is
+	// shaded from pale to full green by the share of its names known, and a
+	// completed one gets a gold outline. Countries never played keep their
+	// continent's colour, so the map looks as it always has until a first round.
+	const PROGRESS_PALE = '#e6efe0';
+	const PROGRESS_FULL = '#2f8f55';
+	const progress = $derived(
+		worldProgress(
+			groups.map((g) => ({ id: pickerIdOf(g), mapIds: g.maps.map((m) => m.id) })),
+			masteries,
+			targetCount,
+			isAdvancedMap
+		)
+	);
+	$effect(() => {
+		const { byGroup } = progress;
+		if (!loaded || !map || !picker) return;
+		for (const country of picker.countries) {
+			const p = byGroup.get(country.id);
+			map.setFeatureState(
+				{ source: 'picker', sourceLayer: 'countries', id: country.id },
+				{
+					played: !!p,
+					share: p ? p.known / p.total : 0,
+					complete: !!p && p.known === p.total
+				}
+			);
+		}
+	});
 
 	function boxOf(v: string): Box {
 		if (v === 'world' || !picker) return WORLD_VIEW;
@@ -349,6 +379,16 @@
 								paint: {
 									'fill-color': [
 										'case',
+										['boolean', ['feature-state', 'played'], false],
+										[
+											'interpolate',
+											['linear'],
+											['number', ['feature-state', 'share'], 0],
+											0,
+											PROGRESS_PALE,
+											1,
+											PROGRESS_FULL
+										],
 										['boolean', ['feature-state', 'hasMaps'], false],
 										CONTINENT_COLOUR,
 										NO_MAPS
@@ -362,6 +402,18 @@
 								source: 'picker',
 								'source-layer': 'countries',
 								paint: { 'line-color': '#7d7564', 'line-width': 0.5 }
+							},
+							{
+								// A country whose every name is known (#262).
+								id: 'countries-complete',
+								type: 'line',
+								source: 'picker',
+								'source-layer': 'countries',
+								paint: {
+									'line-color': '#d9a21b',
+									'line-width': 2,
+									'line-opacity': ['case', ['boolean', ['feature-state', 'complete'], false], 1, 0]
+								}
 							}
 						]
 					}
@@ -550,6 +602,17 @@
 		<ChartMapShell>
 			<div class="map" bind:this={container}></div>
 		</ChartMapShell>
+		{#if progress.byGroup.size > 0}
+			<!-- What the green means, and how much of the world is known (#262). -->
+			<div class="progress-legend" data-testid="world-progress">
+				<span class="ramp" aria-hidden="true"></span>
+				{t('picker.namesKnown', {
+					known: progress.known.toLocaleString(getLanguage()),
+					total: progress.total.toLocaleString(getLanguage())
+				})}
+				<span class="complete-key"><span aria-hidden="true"></span>{t('picker.complete')}</span>
+			</div>
+		{/if}
 		{#if view !== 'world'}
 			<div class="where">
 				<button type="button" class="world" onclick={() => setPickerView('world')}>
@@ -590,6 +653,42 @@
 		overflow: hidden;
 		border: 1px solid rgba(17, 24, 21, 0.12);
 		background: #cfe2ea;
+	}
+	.progress-legend {
+		position: absolute;
+		left: 0.5rem;
+		bottom: 0.5rem;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.4rem;
+		max-width: calc(100% - 1rem);
+		padding: 0.25rem 0.5rem;
+		border-radius: 0.5rem;
+		background: rgba(255, 255, 255, 0.9);
+		color: #1f3d2a;
+		font-family: system-ui, sans-serif;
+		font-size: 0.75rem;
+		font-weight: 600;
+	}
+	.ramp {
+		width: 2.5rem;
+		height: 0.6rem;
+		border-radius: 3px;
+		background: linear-gradient(to right, #e6efe0, #2f8f55);
+	}
+	.complete-key {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
+	.complete-key span {
+		width: 0.7rem;
+		height: 0.6rem;
+		border: 2px solid #d9a21b;
+		border-radius: 2px;
+		box-sizing: border-box;
 	}
 	.panel {
 		width: 22rem;

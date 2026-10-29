@@ -37,6 +37,20 @@ fn migrations() -> Vec<Migration> {
     // and start at 0, which reads as "not known yet".
     sql: "ALTER TABLE card_states ADD COLUMN clean_streak INTEGER NOT NULL DEFAULT 0;",
     kind: MigrationKind::Up,
+  },
+  Migration {
+    version: 3,
+    description: "add_map_records",
+    // v1.1.0: what else a map remembers (progressRepository.ts MapRecords) -
+    // the best time on a fully known map (#267) and the mix-ups (#266) - as
+    // one JSON record per map, so the next kind needs no new table.
+    sql: "
+      CREATE TABLE map_records (
+        map_id TEXT PRIMARY KEY,
+        data TEXT NOT NULL
+      );
+    ",
+    kind: MigrationKind::Up,
   }]
 }
 
