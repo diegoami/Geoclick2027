@@ -188,6 +188,8 @@ export type TranslationKey =
 	| 'quiz.more'
 	| 'quiz.studyThese'
 	| 'quiz.tapPlace'
+	| 'quiz.practise'
+	| 'quiz.practiceLabel'
 	| 'quiz.resizeTrayAriaLabel'
 	| 'quiz.storageWarning'
 	| 'tour.prev'
@@ -406,6 +408,8 @@ const en: Dictionary = {
 	'quiz.more': '+{count} more',
 	'quiz.studyThese': 'Study these',
 	'quiz.tapPlace': 'Now tap its place on the map',
+	'quiz.practise': 'Practise the {count} not yet known',
+	'quiz.practiceLabel': 'Practice',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
 	'quiz.storageWarning':
 		'Progress cannot be saved on this device right now, so this round will not be remembered.',
@@ -640,6 +644,8 @@ const de: Dictionary = {
 	'quiz.more': '+{count} weitere',
 	'quiz.studyThese': 'Diese lernen',
 	'quiz.tapPlace': 'Tippe jetzt auf seinen Ort auf der Karte',
+	'quiz.practise': 'Die {count} noch nicht gewussten üben',
+	'quiz.practiceLabel': 'Übung',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
 	'quiz.storageWarning':
 		'Fortschritt kann auf diesem Gerät gerade nicht gespeichert werden — diese Runde wird nicht gemerkt.',
@@ -877,6 +883,8 @@ const it: Dictionary = {
 	'quiz.more': '+ altri {count}',
 	'quiz.studyThese': 'Studia questi',
 	'quiz.tapPlace': 'Ora tocca il suo posto sulla mappa',
+	'quiz.practise': 'Esercitati sui {count} non ancora imparati',
+	'quiz.practiceLabel': 'Esercizio',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
 	'quiz.storageWarning':
 		'Al momento non è possibile salvare i progressi su questo dispositivo, quindi questa partita non verrà ricordata.',

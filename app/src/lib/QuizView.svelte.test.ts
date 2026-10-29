@@ -355,4 +355,23 @@ describe('QuizView (FT-59)', () => {
 		expect(toWorkOn?.textContent).not.toContain(right);
 		await expect.element(screen.getByRole('button', { name: 'Study these' })).toBeVisible();
 	});
+	it('offers a practice round of the names not yet known, with the known ones placed (#265)', async () => {
+		const today = todayLocalDate();
+		const [unknown, ...known] = fake.mapDef.targets.slice(0, 13).map((t) => t);
+		const repository = fake.state.repository!;
+		for (const target of known) {
+			let card = rate(undefined, 'good', today);
+			card = rate(rate(card, 'good', today), 'good', today);
+			await repository.saveCardState(MAP_ID, { targetId: target.id, ...card });
+		}
+		const screen = await render(QuizView, { mapId: MAP_ID });
+		const practise = screen.getByRole('button', { name: 'Practise the 4 not yet known' });
+		await practise.click();
+		await expect.poll(slipNames).toContain(unknown.name);
+		expect(slipNames().some((n) => known.some((t) => t.name === n))).toBe(false);
+		await expect.poll(placedNames).toHaveLength(known.length);
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('Practice');
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 4');
+		await expect.element(practise).not.toBeInTheDocument();
+	});
 });

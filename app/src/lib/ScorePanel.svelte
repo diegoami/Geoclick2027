@@ -21,7 +21,9 @@
 		slippedCount,
 		onclose,
 		onfact,
-		onstudy
+		onstudy,
+		practiseCount,
+		onpractise
 	}: {
 		perfect: number;
 		total: number;
@@ -39,6 +41,9 @@
 		onfact: (id: string) => void;
 		/** Opens Known with the names to work on chosen. */
 		onstudy: () => void;
+		/** Names a practice round would ask for (#265); 0 offers none. */
+		practiseCount: number;
+		onpractise: () => void;
 	} = $props();
 
 	const known = $derived(capped(newlyKnown));
@@ -89,9 +94,20 @@
 			{/each}
 			{#if work.more > 0}<span class="more">{t('quiz.more', { count: work.more })}</span>{/if}
 		</div>
-		<button type="button" class="action" data-testid="study-these" onclick={onstudy}>
-			{t('quiz.studyThese')}
-		</button>
+	{/if}
+	{#if toWorkOn.length > 0 || practiseCount > 0}
+		<div class="actions">
+			{#if toWorkOn.length > 0}
+				<button type="button" class="action" data-testid="study-these" onclick={onstudy}>
+					{t('quiz.studyThese')}
+				</button>
+			{/if}
+			{#if practiseCount > 0}
+				<button type="button" class="action" data-testid="practise-panel" onclick={onpractise}>
+					{t('quiz.practise', { count: practiseCount })}
+				</button>
+			{/if}
+		</div>
 	{/if}
 </div>
 
@@ -189,8 +205,14 @@
 		font-size: 0.8rem;
 		opacity: 0.7;
 	}
-	.action {
+	.actions {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
 		margin-top: 0.9rem;
+	}
+	.action {
 		padding: 0.5rem 1rem;
 		border: none;
 		border-radius: 0.5rem;

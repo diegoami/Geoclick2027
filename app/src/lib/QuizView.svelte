@@ -42,7 +42,12 @@
 		type ProgressRepository,
 		type SessionSummary
 	} from './progressRepository';
-	import { rate, type CardState as SchedulerState, type Grade } from '@geoclick/srs';
+	import {
+		KNOWN_CLEAN_STREAK,
+		rate,
+		type CardState as SchedulerState,
+		type Grade
+	} from '@geoclick/srs';
 	import { StretchedNames } from './stretchedNames';
 
 	let { mapId }: { mapId: string } = $props();
@@ -136,9 +141,38 @@
 	}
 
 	/** The map's level from the clean streaks of its targets; a target with no
-	 * card state has never been placed right, so it counts as 0. */
+	 * card state has never been placed right, so it counts as 0. Also counts
+	 * the names a practice round would ask for (#265). */
 	function refreshLevel(def: MapDefinition) {
 		level = mapLevel(def.targets.map((t) => cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0));
+		practiseCount = notKnown(def).length;
+	}
+
+	// A practice round (#265) asks only for the names not yet known; the known
+	// ones start out placed. The whole map stays the default round.
+	let practice = $state(false);
+	let practiseCount = $state(0);
+
+	function notKnown(def: MapDefinition) {
+		return def.targets.filter(
+			(t) => (cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0) < KNOWN_CLEAN_STREAK
+		);
+	}
+
+	/** Whether a practice round is worth offering: some names known, some not. */
+	const canPractise = $derived(
+		!!mapDef && practiseCount > 0 && practiseCount < mapDef.targets.length
+	);
+
+	/** Writes the known names on the map at the start of a practice round, as
+	 * if placed: they are not asked, but the map should still show them. */
+	function paintKnown(def: MapDefinition) {
+		if (!practice || !session) return;
+		const asked = new Set(session.items.map((i) => i.target.id));
+		for (const target of def.targets) {
+			if (asked.has(target.id)) continue;
+			markSolved(target.id, target.name, target.centroid, false, target.type === 'city');
+		}
 	}
 
 	// Tray height, in px - user-resizable via the drag handle (onTrayHandle*
@@ -660,7 +694,12 @@
 		if (selectedId && !hand.includes(selectedId)) selectedId = undefined;
 		// Keep the round in case the player steps out to the Overview and back
 		// (quizRound.ts); the completion effect throws it away at the end.
-		rememberRound(mapId, { session, hand, levelsAtStart: Object.fromEntries(levelsAtStart) });
+		rememberRound(mapId, {
+			session,
+			hand,
+			levelsAtStart: Object.fromEntries(levelsAtStart),
+			practice
+		});
 
 		if (item.status === 'correct' || item.status === 'revealed') {
 			const revealed = item.status === 'revealed';
@@ -788,10 +827,11 @@
 		told = undefined;
 	}
 
-	// Builds a round: the whole map, every time (FT-26). What changes from one
-	// round to the next is how much the tray gives away (FT-21), which is
-	// taken from the streaks the last round wrote.
-	function startRound() {
+	// Builds a round: the whole map by default (FT-26), or only the names not
+	// yet known when the player asks for a practice round (#265). What changes
+	// from one round to the next is how much the tray gives away (FT-21), which
+	// is taken from the streaks the last round wrote.
+	function startRound(practiceRound = false) {
 		if (!mapDef || !map) return;
 		knownAfterRound = undefined;
 		change = undefined;
@@ -799,10 +839,13 @@
 		summarySaved = false;
 		forgetRound(mapId);
 		levelsAtStart = currentLevels(mapDef);
-		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
+		practice = practiceRound && canPractise;
+		const asked = practice ? notKnown(mapDef) : mapDef.targets;
+		session = createQuizSession(asked.map((t) => ({ id: t.id, name: t.name })));
 		refreshLevel(mapDef);
 		hand = [];
 		dealHand();
+		if (styleLoaded) paintKnown(mapDef);
 	}
 
 	/** Picks a round back up where it was left, if the player only stepped out
@@ -820,6 +863,7 @@
 			? new Map(Object.entries(round.levelsAtStart))
 			: currentLevels(mapDef);
 		session = round.session;
+		practice = round.practice ?? false;
 		refreshLevel(mapDef);
 		hand = round.hand;
 		dealHand();
@@ -850,6 +894,15 @@
 		clearAllVisuals();
 		startRound();
 	}
+
+	/** "Practise the N not yet known" (#265), from the quiz or its score panel. */
+	function practise() {
+		clearAllVisuals();
+		startRound(true);
+	}
+
+	/** Whether the round has not been touched yet, so switching it costs nothing. */
+	const roundFresh = $derived(!!session && session.items.every((i) => i.status === 'pending'));
 
 	// Show or hide the Terrain layer as the preference changes (FT-33). An
 	// $effect rather than a call from the button: the button has no idea
@@ -904,7 +957,10 @@
 			map.once('load', () => {
 				if (cancelled) return;
 				styleLoaded = true;
-				if (resumed) repaintResolved(loadedMapDef);
+				if (resumed) {
+					repaintResolved(loadedMapDef);
+					paintKnown(loadedMapDef);
+				}
 			});
 		})().catch((e) => {
 			error = e instanceof Error ? e.message : String(e);
@@ -949,6 +1005,7 @@
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="quiz">
 			{#snippet subtitle()}
 				{#if session}
+					{#if practice}<span class="practice-label">{t('quiz.practiceLabel')} ·</span>{/if}
 					<span data-tutorial="quiz-progress"
 						>{t(mapDef?.targets[0]?.type === 'city' ? 'quiz.townSubtitle' : 'quiz.subtitle', {
 							placed: session.items.filter((i) => i.status !== 'pending').length,
@@ -961,6 +1018,14 @@
 					{#if level > 0}
 						<span class="level"
 							>· {tPlural('quiz.namesAtATime', handSize(level), { count: handSize(level) })}</span
+						>
+					{/if}
+					{#if canPractise && !practice && roundFresh}
+						<button
+							type="button"
+							class="practise-btn"
+							data-testid="practise"
+							onclick={practise}>{t('quiz.practise', { count: practiseCount })}</button
 						>
 					{/if}
 				{/if}
@@ -990,15 +1055,18 @@
 				onclose={() => (scorePanelDismissed = true)}
 				onfact={showFact}
 				onstudy={studyMissed}
+				practiseCount={canPractise ? practiseCount : 0}
+				onpractise={practise}
 			/>
 		{/if}
 	{/if}
 	{#if complete && scorePanelDismissed}
-		<button
-			class="map-again"
-			style="bottom: calc({trayHeightPx ?? trayMinPx}px + 1rem)"
-			onclick={playAgain}>{t('quiz.playAgain')}</button
-		>
+		<div class="map-again" style="bottom: calc({trayHeightPx ?? trayMinPx}px + 1rem)">
+			<button onclick={playAgain}>{t('quiz.playAgain')}</button>
+			{#if canPractise}
+				<button onclick={practise}>{t('quiz.practise', { count: practiseCount })}</button>
+			{/if}
+		</div>
 	{/if}
 
 	<ChartMapShell>
@@ -1245,7 +1313,7 @@
 			transform: translateX(-4px);
 		}
 	}
-	.map-again {
+	.map-again button {
 		font-family: inherit;
 		font-size: 0.9rem;
 		font-weight: 600;
@@ -1257,11 +1325,31 @@
 		text-decoration: none;
 		cursor: pointer;
 	}
+	/* The quiz's second way to play (#265), quiet beside the progress line. */
+	.practise-btn {
+		margin-left: 0.4rem;
+		padding: 0 0.4rem;
+		border: 1px solid rgba(181, 105, 31, 0.45);
+		border-radius: 5px;
+		background: #ffffff;
+		color: #b5691f;
+		font: inherit;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	.practice-label {
+		margin-right: 0.3rem;
+		font-weight: 600;
+		color: #b5691f;
+	}
 	.map-again {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 2;
+		display: flex;
+		gap: 0.5rem;
+		white-space: nowrap;
 	}
 	.error {
 		position: relative;
