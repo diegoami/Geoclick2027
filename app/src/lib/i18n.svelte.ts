@@ -196,6 +196,8 @@ export type TranslationKey =
 	| 'quiz.newBest'
 	| 'quiz.best'
 	| 'quiz.bestNeedsClean'
+	| 'quiz.confusions'
+	| 'quiz.confusedWith'
 	| 'quiz.resizeTrayAriaLabel'
 	| 'quiz.storageWarning'
 	| 'tour.prev'
@@ -422,6 +424,8 @@ const en: Dictionary = {
 	'quiz.newBest': 'New best!',
 	'quiz.best': 'Best: {time}',
 	'quiz.bestNeedsClean': 'Only a round with no mistakes sets a best time.',
+	'quiz.confusions': 'Mixed up',
+	'quiz.confusedWith': '{a} placed on {b}',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
 	'quiz.storageWarning':
 		'Progress cannot be saved on this device right now, so this round will not be remembered.',
@@ -664,6 +668,8 @@ const de: Dictionary = {
 	'quiz.newBest': 'Neue Bestzeit!',
 	'quiz.best': 'Bestzeit: {time}',
 	'quiz.bestNeedsClean': 'Nur eine Runde ohne Fehler zählt als Bestzeit.',
+	'quiz.confusions': 'Verwechselt',
+	'quiz.confusedWith': '{a} auf {b} gelegt',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
 	'quiz.storageWarning':
 		'Fortschritt kann auf diesem Gerät gerade nicht gespeichert werden — diese Runde wird nicht gemerkt.',
@@ -909,6 +915,8 @@ const it: Dictionary = {
 	'quiz.newBest': 'Nuovo record!',
 	'quiz.best': 'Record: {time}',
 	'quiz.bestNeedsClean': 'Solo un giro senza errori vale come record.',
+	'quiz.confusions': 'Confusi',
+	'quiz.confusedWith': '{a} messo su {b}',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
 	'quiz.storageWarning':
 		'Al momento non è possibile salvare i progressi su questo dispositivo, quindi questa partita non verrà ricordata.',

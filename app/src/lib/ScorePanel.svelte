@@ -24,7 +24,8 @@
 		onstudy,
 		practiseCount,
 		onpractise,
-		time
+		time,
+		confusions
 	}: {
 		perfect: number;
 		total: number;
@@ -47,7 +48,11 @@
 		onpractise: () => void;
 		/** A timed round on a fully known map (#267). */
 		time?: { ms: number; bestMs?: number; newBest: boolean; clean: boolean };
+		/** This round's mix-ups (#266): `a`'s name went to `b`'s place. */
+		confusions: { a: string; b: string }[];
 	} = $props();
+
+	const mixed = $derived(capped(confusions));
 
 	const known = $derived(capped(newlyKnown));
 	const work = $derived(capped(toWorkOn));
@@ -109,6 +114,15 @@
 				<button type="button" class="name" onclick={() => onfact(item.id)}>{item.name}</button>
 			{/each}
 			{#if work.more > 0}<span class="more">{t('quiz.more', { count: work.more })}</span>{/if}
+		</div>
+	{/if}
+	{#if confusions.length > 0}
+		<div class="names" data-testid="confusions">
+			<h3>{t('quiz.confusions')}</h3>
+			{#each mixed.shown as pair (pair.a + pair.b)}
+				<span class="pair">{t('quiz.confusedWith', { a: pair.a, b: pair.b })}</span>
+			{/each}
+			{#if mixed.more > 0}<span class="more">{t('quiz.more', { count: mixed.more })}</span>{/if}
 		</div>
 	{/if}
 	{#if toWorkOn.length > 0 || practiseCount > 0}
@@ -222,6 +236,13 @@
 		border-color: rgba(90, 156, 111, 0.5);
 		background: #eef6f0;
 		color: #2f6b45;
+	}
+	.pair {
+		font-size: 0.8125rem;
+	}
+	.pair + .pair::before {
+		content: '· ';
+		opacity: 0.5;
 	}
 	.more {
 		font-size: 0.8rem;

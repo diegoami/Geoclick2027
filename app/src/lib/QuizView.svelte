@@ -9,6 +9,7 @@
 	import { mapFitPadding } from './mapFit';
 	import { resolveDrop } from './quizDrop';
 	import { aimPoint, movedPastSlop } from './touchDrag';
+	import { forgetLearned, partnersOf, recordConfusion } from './confusions';
 	import MapNav from './MapNav.svelte';
 	import { getLanguage, t, tPlural } from './i18n.svelte';
 	import { targetName } from './targetName';
@@ -137,7 +138,11 @@
 	 * are dealt first, or "Try Sicilia" could point at an empty tray (FT-60). */
 	function dealHand() {
 		const inTutorial = tutorialState().status !== 'idle' && mapId === TUTORIAL_MAP_ID;
-		const preferred = inTutorial ? tutorialSlipIds() : [];
+		// Outside the tutorial, a name the player has mixed up with one on offer
+		// is dealt next to it (#266), so the two have to be told apart.
+		const preferred = inTutorial
+			? tutorialSlipIds()
+			: partnersOf(records.confusions ?? [], [...hand, ...(lastAnswered ? [lastAnswered] : [])]);
 		hand = refillHand(pendingIds(), hand, handSize(level), Math.random, preferred);
 	}
 
@@ -347,6 +352,10 @@
 
 	// This map's other records (best time #267, mix-ups #266), read on mount.
 	let records: MapRecords = {};
+	// The mix-ups of this round, for the score panel (#266), and the name just
+	// answered, whose partner is dealt next.
+	let roundConfusions = $state<{ targetId: string; chosenId: string }[]>([]);
+	let lastAnswered: string | undefined;
 	function saveRecords(next: MapRecords) {
 		records = next;
 		progressRepository
@@ -429,11 +438,16 @@
 				knownAfterRound = knownCount(
 					mapDef.targets.map((t) => cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0)
 				);
+				const levels = currentLevels(mapDef);
 				change = roundChange(
 					mapDef.targets.map((t) => t.id),
 					levelsAtStart,
-					currentLevels(mapDef)
+					levels
 				);
+				// A pair whose names are both known now has been told apart.
+				const kept = forgetLearned(records.confusions ?? [], levels);
+				if (kept.length !== (records.confusions ?? []).length)
+					saveRecords({ ...records, confusions: kept });
 				refreshLevel(mapDef);
 			}
 		}
@@ -700,6 +714,7 @@
 		const exactName = regionAtPoint(clientX, clientY);
 		const tolerance = isPointMap ? POINT_DROP_TOLERANCE_PX : DROP_TOLERANCE_PX;
 		const nearbyNames = regionsNear(clientX, clientY, tolerance);
+		const closestName = isPointMap ? closestNameAmong(nearbyNames, clientX, clientY) : undefined;
 
 		// The decision itself lives in quizDrop.ts (pure, unit-tested); this
 		// component only does the hit-testing it needs.
@@ -708,7 +723,7 @@
 			nearbyNames,
 			draggedName: name,
 			isPointMap,
-			closestName: isPointMap ? closestNameAmong(nearbyNames, clientX, clientY) : undefined
+			closestName
 		});
 		if (!scored) return false;
 		// The tutorial's drop steps (FT-11) wait for a scored drop; does nothing
@@ -716,6 +731,8 @@
 		tutorialDrop(isCorrect);
 
 		session = attemptMatch(session, targetId, isCorrect ? targetId : undefined);
+		lastAnswered = targetId;
+		if (!isCorrect) noteConfusion(targetId, exactName ?? closestName);
 		const item = session.items.find((i) => i.target.id === targetId)!;
 		const target = mapDef.targets.find((t) => t.id === targetId)!;
 		// This name is resolved either way now (one miss reveals, FT-20), so
@@ -759,6 +776,18 @@
 			flashWrongRegion(targetId, exactName);
 		}
 		return true;
+	}
+
+	/** Remembers that `targetId`'s name went to the place called `chosenName` (#266). */
+	function noteConfusion(targetId: string, chosenName: string | undefined) {
+		const chosen = chosenName && mapDef?.targets.find((t) => t.name === chosenName);
+		if (!chosen || chosen.id === targetId) return;
+		saveRecords({
+			...records,
+			confusions: recordConfusion(records.confusions ?? [], targetId, chosen.id)
+		});
+		if (!roundConfusions.some((c) => c.targetId === targetId && c.chosenId === chosen.id))
+			roundConfusions = [...roundConfusions, { targetId, chosenId: chosen.id }];
 	}
 
 	/** A tap on the map with a slip selected answers for that slip (#260). */
@@ -872,6 +901,8 @@
 		levelsAtStart = currentLevels(mapDef);
 		practice = practiceRound && canPractise;
 		timeResult = undefined;
+		roundConfusions = [];
+		lastAnswered = undefined;
 		timed = !practice && isTimedRound([...levelsAtStart.keys()], levelsAtStart);
 		elapsedBefore = 0;
 		activeSince = performance.now();
@@ -900,6 +931,8 @@
 		session = round.session;
 		practice = round.practice ?? false;
 		timeResult = undefined;
+		roundConfusions = [];
+		lastAnswered = undefined;
 		timed = !practice && isTimedRound([...levelsAtStart.keys()], levelsAtStart);
 		elapsedBefore = round.elapsedMs ?? 0;
 		activeSince = performance.now();
@@ -1101,6 +1134,10 @@
 				onstudy={studyMissed}
 				practiseCount={canPractise ? practiseCount : 0}
 				time={timeResult}
+				confusions={roundConfusions.map((c) => ({
+					a: shownName(c.targetId, c.targetId),
+					b: shownName(c.chosenId, c.chosenId)
+				}))}
 				onpractise={practise}
 			/>
 		{/if}

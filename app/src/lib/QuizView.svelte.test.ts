@@ -344,16 +344,23 @@ describe('QuizView (FT-59)', () => {
 		expect(saveCardState).not.toHaveBeenCalled();
 	});
 
-	it('lists the names to work on at the end of a round (#259)', async () => {
+	it('lists the names to work on and the mix-ups at the end of a round (#259, #266)', async () => {
+		const saveRecords = vi.spyOn(fake.state.repository!, 'saveMapRecords');
 		const screen = await mount();
 		const [right, wrong] = slipNames();
 		await drop(right, right);
 		await drop(wrong, right);
+		expect(saveRecords).toHaveBeenLastCalledWith(MAP_ID, {
+			confusions: [{ targetId: wrong.toLowerCase(), chosenId: right.toLowerCase(), count: 1 }]
+		});
 		await finish();
 		const toWorkOn = screen.container.querySelector('[data-testid="to-work-on"]');
 		expect(toWorkOn?.textContent).toContain(wrong);
 		expect(toWorkOn?.textContent).not.toContain(right);
 		await expect.element(screen.getByRole('button', { name: 'Study these' })).toBeVisible();
+		expect(screen.container.querySelector('[data-testid="confusions"]')?.textContent).toContain(
+			`${wrong} placed on ${right}`
+		);
 	});
 	it('offers a practice round of the names not yet known, with the known ones placed (#265)', async () => {
 		const today = todayLocalDate();
