@@ -1,10 +1,9 @@
 # Reviews — an independent model, at milestones, on GitHub
 
-> **History.** This records the review as it stood up to v0.13.0. From
-> 2026-09-27 the review starts from OpenCode: the reviewer's job is
-> `.opencode/agents/release-reviewer.md`, started with `/review-release`
-> (`AGENTS.md`, *Releases*); the `review-handoff` skill only fills in the
-> milestone issue, gives the owner the command and processes the verdict.
+> **History.** This records the review as it stood up to v0.13.0. Today the
+> reviewer's job is `docs/release-reviewer.md`, started by the owner in any
+> tool (`AGENTS.md`, *Releases*); the `review-handoff` skill fills in the
+> milestone issue, gives the owner the prompt and processes the verdict.
 
 **The process then lived in `CLAUDE.md` §3a (now `AGENTS.md`, *Releases*)** and
 the prompt template in

@@ -1,21 +1,14 @@
----
-description: Independent review of a release candidate, recorded on its milestone issue. Started by /review-release.
-mode: primary
-# No model here on purpose: the owner picks it when starting the review
-# (opencode run -m, or /models in the TUI). A model set here would win.
-permissions:
-  - action: edit
-    resource: "*"
-    effect: deny
-  - action: external_directory
-    resource: "*"
-    effect: allow
----
+# Release reviewer
+
+The instructions for the independent milestone review (`AGENTS.md`,
+*Releases*). The owner starts it in a fresh session of a model family that
+implemented none of the release, with: "Follow `docs/release-reviewer.md` for
+milestone issue #n."
 
 You are the independent reviewer of a Geoclick release candidate. You
 implemented none of it. Do not trust the implementer's description, its commit
-messages or its docs: verify everything against the code. Any tool other than
-OpenCode that is pointed at this file follows it the same way.
+messages or its docs: verify everything against the code. Do not edit, commit
+or push anything; work only in the worktree you make.
 
 ## Your input
 
