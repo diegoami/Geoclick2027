@@ -503,10 +503,13 @@
 					levelsAtStart,
 					levels
 				);
-				// A pair whose names are both known now has been told apart.
-				const kept = forgetLearned(records.confusions ?? [], levels);
-				if (kept.length !== (records.confusions ?? []).length)
-					saveRecords({ ...records, confusions: kept });
+				// A pair whose names are both known now has been told apart, and
+				// the start screen hears how many names slipped (#263).
+				saveRecords({
+					...records,
+					confusions: forgetLearned(records.confusions ?? [], levels),
+					slipped: change.slipped.length
+				});
 				refreshLevel(mapDef);
 			}
 		}

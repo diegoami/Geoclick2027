@@ -123,6 +123,9 @@ export type TranslationKey =
 	| 'home.lastResult'
 	| 'home.mastered'
 	| 'home.bestTime'
+	| 'home.suggestContinue'
+	| 'home.suggestSlipped'
+	| 'home.suggestNext'
 	| 'home.mistakeCount.one'
 	| 'home.mistakeCount.other'
 	| 'mapType.planningAreas'
@@ -358,6 +361,9 @@ const en: Dictionary = {
 	'home.lastResult': 'Last: {perfect}/{total}',
 	'home.mastered': 'Mastered',
 	'home.bestTime': 'best {time}',
+	'home.suggestContinue': 'Continue {map} — {known} / {total} known',
+	'home.suggestSlipped': 'Play {map} again — {count} slipped a level last time',
+	'home.suggestNext': 'Next: {map} — you know all of {from}',
 	'home.mistakeCount.one': '({count} mistake)',
 	'home.mistakeCount.other': '({count} mistakes)',
 
@@ -609,6 +615,9 @@ const de: Dictionary = {
 	'home.lastResult': 'Zuletzt: {perfect}/{total}',
 	'home.mastered': 'Gemeistert',
 	'home.bestTime': 'Bestzeit {time}',
+	'home.suggestContinue': 'Weiter mit {map} — {known} / {total} gewusst',
+	'home.suggestSlipped': '{map} nochmal spielen — letztes Mal {count} eine Stufe verloren',
+	'home.suggestNext': 'Als Nächstes: {map} — {from} kannst du ganz',
 	'home.mistakeCount.one': '({count} Fehler)',
 	'home.mistakeCount.other': '({count} Fehler)',
 
@@ -864,6 +873,9 @@ const it: Dictionary = {
 	'home.lastResult': 'Ultimo: {perfect}/{total}',
 	'home.mastered': 'Padroneggiata',
 	'home.bestTime': 'record {time}',
+	'home.suggestContinue': 'Continua {map} — sai {known} / {total}',
+	'home.suggestSlipped': 'Rigioca {map} — l’ultima volta {count} sono scesi di un gradino',
+	'home.suggestNext': 'Prossima: {map} — conosci tutta {from}',
 	'home.mistakeCount.one': '({count} errore)',
 	'home.mistakeCount.other': '({count} errori)',
 

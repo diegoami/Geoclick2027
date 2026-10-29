@@ -36,6 +36,9 @@ export interface Confusion {
 export interface MapRecords {
 	bestTimeMs?: number;
 	confusions?: Confusion[];
+	/** Names that lost a level in the last round, for the start screen's
+	 * suggestion (#263). */
+	slipped?: number;
 }
 
 export interface ProgressRepository {
@@ -119,6 +122,7 @@ function isMapRecords(value: unknown): value is MapRecords {
 	if (!isRecord(value)) return false;
 	return (
 		(value.bestTimeMs === undefined || typeof value.bestTimeMs === 'number') &&
+		(value.slipped === undefined || typeof value.slipped === 'number') &&
 		(value.confusions === undefined ||
 			(Array.isArray(value.confusions) && value.confusions.every(isConfusion)))
 	);
