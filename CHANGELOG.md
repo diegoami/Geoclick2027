@@ -34,7 +34,7 @@ What shipped, and what was tried:
 - **Tagged before the installer checks**, by the owner's choice; they followed the tag.
 - **Built from the tag:** the Windows `.msi` and `-setup.exe`, the signed Android APK (current key, `CN=Diego, OU=Amicabile`) and the HTML5 ZIP (221 maps).
 - **Tried:** the Windows setup installed over 1.0.0; maps draw, Name places works, Cuba and Bolivia open. The HTML5 ZIP served from a nested folder: Bolivia's quiz, a reload, and the three manuals.
-- **Not tried:** the Android APK on a device (none connected), haptics, the answer sounds. The web app was not redeployed (deploys are stopped).
+- **Not tried:** the Android APK on a device (none connected), haptics, the answer sounds.
 
 ## v1.0.0 — in preparation — More of the world, facts throughout, portable browser play
 
