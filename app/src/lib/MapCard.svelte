@@ -15,12 +15,15 @@
 		mapId,
 		label,
 		summary,
-		mastery
+		mastery,
+		targetCount
 	}: {
 		mapId: string;
 		label: string;
 		summary?: SessionSummary;
 		mastery?: Mastery;
+		/** How many names the map has, said on a map never played (#269). */
+		targetCount?: number;
 	} = $props();
 </script>
 
@@ -29,6 +32,9 @@
 	     onto it. Overview, which labels everything at once, is a tab away. -->
 	<a href={resolve('/map/[mapId]', { mapId })}>
 		<span class="map-name">{label}</span>
+		{#if !mastery && targetCount}
+			<span class="size" data-testid="map-size">{t('home.nameCount', { count: targetCount })}</span>
+		{/if}
 		{#if mastery}
 			<span class="mastery" class:all-known={mastery.known === mastery.total}>
 				<!-- A bar, not the number (FT-65); it renders nothing until the
@@ -114,5 +120,9 @@
 		color: #b5691f;
 		font-weight: 600;
 		white-space: nowrap;
+	}
+	.size {
+		font-size: 0.8rem;
+		opacity: 0.65;
 	}
 </style>

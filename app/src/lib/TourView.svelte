@@ -306,6 +306,7 @@
 					ontoggleplay={togglePlay}
 					onadvance={advance}
 					onsetspeed={setSpeed}
+					{mapId}
 				/>
 			</div>
 		{/if}

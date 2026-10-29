@@ -121,6 +121,7 @@ export type TranslationKey =
 	| 'home.download.link'
 	| 'home.known'
 	| 'home.lastResult'
+	| 'home.nameCount'
 	| 'home.mastered'
 	| 'home.bestTime'
 	| 'home.suggestContinue'
@@ -212,6 +213,7 @@ export type TranslationKey =
 	| 'quiz.storageWarning'
 	| 'tour.prev'
 	| 'tour.replay'
+	| 'tour.tryQuiz'
 	| 'tour.pause'
 	| 'tour.play'
 	| 'tour.next'
@@ -359,6 +361,7 @@ const en: Dictionary = {
 	'home.download.link': 'Download for Windows or Android',
 	'home.known': '{known} / {total} known',
 	'home.lastResult': 'Last: {perfect}/{total}',
+	'home.nameCount': '{count} names',
 	'home.mastered': 'Mastered',
 	'home.bestTime': 'best {time}',
 	'home.suggestContinue': 'Continue {map} — {known} / {total} known',
@@ -454,6 +457,7 @@ const en: Dictionary = {
 
 	'tour.prev': '‹ Prev',
 	'tour.replay': 'Replay',
+	'tour.tryQuiz': 'Try the quiz',
 	'tour.pause': 'Pause',
 	'tour.play': '▶ Play',
 	'tour.next': 'Next ›',
@@ -613,6 +617,7 @@ const de: Dictionary = {
 	'home.download.link': 'Für Windows oder Android herunterladen',
 	'home.known': '{known} / {total} gewusst',
 	'home.lastResult': 'Zuletzt: {perfect}/{total}',
+	'home.nameCount': '{count} Namen',
 	'home.mastered': 'Gemeistert',
 	'home.bestTime': 'Bestzeit {time}',
 	'home.suggestContinue': 'Weiter mit {map} — {known} / {total} gewusst',
@@ -710,6 +715,7 @@ const de: Dictionary = {
 
 	'tour.prev': '‹ Zurück',
 	'tour.replay': 'Nochmal',
+	'tour.tryQuiz': 'Zum Quiz',
 	'tour.pause': 'Pause',
 	'tour.play': '▶ Abspielen',
 	'tour.next': 'Weiter ›',
@@ -871,6 +877,7 @@ const it: Dictionary = {
 	'home.download.link': 'Scarica per Windows o Android',
 	'home.known': 'Sai {known} / {total}',
 	'home.lastResult': 'Ultimo: {perfect}/{total}',
+	'home.nameCount': '{count} nomi',
 	'home.mastered': 'Padroneggiata',
 	'home.bestTime': 'record {time}',
 	'home.suggestContinue': 'Continua {map} — sai {known} / {total}',
@@ -969,6 +976,7 @@ const it: Dictionary = {
 
 	'tour.prev': '‹ Indietro',
 	'tour.replay': 'Riguarda',
+	'tour.tryQuiz': 'Prova il quiz',
 	'tour.pause': 'Pausa',
 	'tour.play': '▶ Riproduci',
 	'tour.next': 'Avanti ›',
