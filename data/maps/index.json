@@ -606,6 +606,45 @@
 		]
 	},
 	{
+		"id": "bolivia-departments",
+		"country": "Bolivia",
+		"targetCount": 9,
+		"targetType": "province",
+		"targetIds": [
+			"pando",
+			"beni",
+			"la-paz",
+			"santa-cruz",
+			"cochabamba",
+			"oruro",
+			"chuquisaca",
+			"potosi",
+			"tarija"
+		]
+	},
+	{
+		"id": "bolivia-towns-100k",
+		"country": "Bolivia",
+		"targetCount": 14,
+		"targetType": "city",
+		"targetIds": [
+			"riberalta",
+			"trinidad",
+			"la-paz",
+			"el-alto",
+			"montero",
+			"cochabamba",
+			"quillacollo",
+			"sacaba",
+			"warnes",
+			"santa-cruz-de-la-sierra",
+			"oruro",
+			"sucre",
+			"potosi",
+			"tarija"
+		]
+	},
+	{
 		"id": "brazil-regions",
 		"country": "Brazil",
 		"targetCount": 27,
@@ -1192,6 +1231,54 @@
 			"sibenik",
 			"split",
 			"dubrovnik"
+		]
+	},
+	{
+		"id": "cuba-provinces",
+		"country": "Cuba",
+		"targetCount": 16,
+		"targetType": "province",
+		"targetIds": [
+			"la-habana",
+			"mayabeque",
+			"artemisa",
+			"matanzas",
+			"villa-clara",
+			"pinar-del-rio",
+			"cienfuegos",
+			"ciego-de-avila",
+			"sancti-spiritus",
+			"isla-de-la-juventud",
+			"camaguey",
+			"las-tunas",
+			"holguin",
+			"granma",
+			"guantanamo",
+			"santiago-de-cuba"
+		]
+	},
+	{
+		"id": "cuba-towns-100k",
+		"country": "Cuba",
+		"targetCount": 16,
+		"targetType": "city",
+		"targetIds": [
+			"la-habana",
+			"matanzas",
+			"pinar-del-rio",
+			"santa-clara",
+			"cienfuegos",
+			"sancti-spiritus",
+			"ciego-de-avila",
+			"camaguey",
+			"las-tunas",
+			"holguin",
+			"mayari",
+			"bayamo",
+			"manzanillo",
+			"palma-soriano",
+			"guantanamo",
+			"santiago-de-cuba"
 		]
 	},
 	{

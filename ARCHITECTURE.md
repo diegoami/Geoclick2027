@@ -560,7 +560,7 @@ Other candidates considered, not pursued further once Netlify worked:
   off, not instead of it.
 
 **Status**: deployed and verified — all three demo maps (as of Iteration 3.5;
-217 maps across 79 countries are in the working tree (Natural Earth labels Czech Republic and Czechia are joined), click-to-highlight,
+221 maps across 81 countries are in the working tree (Natural Earth labels Czech Republic and Czechia are joined), click-to-highlight,
 The v1.0 country pipeline is configured in `data/scripts/v1CountrySpecs.ts`.
 Its two source importers pin licensed boundary snapshots; current-source
 recipes and Angola's legal grouping reconstruction live beside the builders.

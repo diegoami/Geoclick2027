@@ -1,0 +1,2293 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": "Natural Earth 10m admin-1 states and provinces (public domain)",
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-29T08:10:03.492Z",
+	"reprocessedAt": "2026-10-29T08:12:00.134Z",
+	"bindingsSha256": "5a686088047ca3a70d756b13549a52b92a66f4653e9c860963fe14f43618f63d",
+	"querySha256": "52f1900ab7dad789d955933349a2e4814bfda7418b86e7946285610d08f01915",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"BOL\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country .\n  FILTER EXISTS { ?item p:P1082/ps:P1082 ?candidatePopulation . FILTER(?candidatePopulation >= 1000) }\n  ?item wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"es\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"coordinateOverrides": {
+		"Q34995": [
+			-68.7688265,
+			-11.0205201
+		]
+	},
+	"coordinateOverrideSource": "Natural Earth (public domain) populated-places centre, inside the generalized department",
+	"excluded": [
+		{
+			"item": "http://www.wikidata.org/entity/Q1026244",
+			"name": "San Joaquín",
+			"reason": "San Joaquín (Beni): 97,625 is not this town of a few thousand; implausible source value"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q2117434",
+			"name": "Puerto Quijarro",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		},
+		{
+			"item": "http://www.wikidata.org/entity/Q990743",
+			"name": "Yacuiba",
+			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+		}
+	],
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.685,
+					-16.044444444
+				]
+			},
+			"properties": {
+				"NAME": "Achacachi",
+				"NAME_EN": "Achacachi",
+				"NAME_IT": "Achacachi",
+				"NAME_DE": "Achacachi",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 8857,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1553175"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.166666666,
+					-18.166666666
+				]
+			},
+			"properties": {
+				"NAME": "Aiquile",
+				"NAME_EN": "Aiquile",
+				"NAME_IT": "Aiquile",
+				"NAME_DE": "Aiquile",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 7381,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1617416"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.983888888,
+					-15.239166666
+				]
+			},
+			"properties": {
+				"NAME": "Amarete",
+				"NAME_EN": "Amarete",
+				"NAME_IT": "Amarete",
+				"NAME_DE": "Amarete",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1741,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q454982"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.417777777,
+					-14.715833333
+				]
+			},
+			"properties": {
+				"NAME": "Apolo",
+				"NAME_EN": "Apolo",
+				"NAME_IT": "Apolo",
+				"NAME_DE": "Apolo",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2123,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2307341"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.768055555,
+					-17.573055555
+				]
+			},
+			"properties": {
+				"NAME": "Arani",
+				"NAME_EN": "Arani",
+				"NAME_IT": "Arani",
+				"NAME_DE": "Arani",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3512,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1026281"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.083333333,
+					-15.7
+				]
+			},
+			"properties": {
+				"NAME": "Ascensión de Guarayos",
+				"NAME_EN": "Ascención de Guarayos",
+				"NAME_IT": "Ascensión de Guarayos",
+				"NAME_DE": "Ascención de Guarayos",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 18816,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q721678"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.53166667,
+					-16.29944444
+				]
+			},
+			"properties": {
+				"NAME": "Batallas",
+				"NAME_EN": "Batallas",
+				"NAME_IT": "Batallas",
+				"NAME_DE": "Batallas",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 20607,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q810710"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.583333333,
+					-13.583333333
+				]
+			},
+			"properties": {
+				"NAME": "Baures",
+				"NAME_EN": "Baures",
+				"NAME_IT": "Baures",
+				"NAME_DE": "Baures",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Beni",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 2127,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q811831"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.3425,
+					-22.732222222
+				]
+			},
+			"properties": {
+				"NAME": "Bermejo",
+				"NAME_EN": "Bermejo",
+				"NAME_IT": "Bermejo",
+				"NAME_DE": "Bermejo",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Tarija",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28285,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q634479"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.21027778,
+					-20.64027778
+				]
+			},
+			"properties": {
+				"NAME": "Camargo",
+				"NAME_EN": "Camargo",
+				"NAME_IT": "Camargo",
+				"NAME_DE": "Camargo",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Chuquisaca",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4502,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1642851"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.518333333,
+					-20.038611111
+				]
+			},
+			"properties": {
+				"NAME": "Camiri",
+				"NAME_EN": "Camiri",
+				"NAME_IT": "Camiri",
+				"NAME_DE": "Camiri",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 35712,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1026256"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-62.95138889,
+					-17.73388889
+				]
+			},
+			"properties": {
+				"NAME": "Campanero",
+				"NAME_EN": "Campanero",
+				"NAME_IT": "Campanero",
+				"NAME_DE": "Campanero",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3020,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1030202"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.565833333,
+					-15.833888888
+				]
+			},
+			"properties": {
+				"NAME": "Caranavi",
+				"NAME_EN": "Caranavi",
+				"NAME_IT": "Caranavi",
+				"NAME_DE": "Caranavi",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 59676,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1014468"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.19864,
+					-19.79151
+				]
+			},
+			"properties": {
+				"NAME": "Charagua",
+				"NAME_EN": "Charagua Municipality",
+				"NAME_IT": "Charagua",
+				"NAME_DE": "Charagua",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 6780,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1712242"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.150277777,
+					-16.993888888
+				]
+			},
+			"properties": {
+				"NAME": "Chimoré",
+				"NAME_EN": "Chimoré",
+				"NAME_IT": "Chimoré",
+				"NAME_DE": "Chimoré",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21736,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q990746"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.52548,
+					-16.410171
+				]
+			},
+			"properties": {
+				"NAME": "Chulumani",
+				"NAME_EN": "Chulumani",
+				"NAME_IT": "Chulumani",
+				"NAME_DE": "Chulumani",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 13204,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1766619"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.934166666,
+					-17.591944444
+				]
+			},
+			"properties": {
+				"NAME": "Cliza",
+				"NAME_EN": "Cliza",
+				"NAME_IT": "Cliza",
+				"NAME_DE": "Cliza",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21743,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q780815"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.7688265,
+					-11.0205201
+				]
+			},
+			"properties": {
+				"NAME": "Cobija",
+				"NAME_EN": "Cobija",
+				"NAME_IT": "Cobija",
+				"NAME_DE": "Cobija",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Pando",
+				"coordinatePrecision": 0,
+				"coordinateSource": "Natural Earth (public domain), representative city centre",
+				"ADM0CAP": 0,
+				"POP_MAX": 78555,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q34995"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.1570139,
+					-17.3935419
+				]
+			},
+			"properties": {
+				"NAME": "Cochabamba",
+				"NAME_EN": "Cochabamba",
+				"NAME_IT": "Cochabamba",
+				"NAME_DE": "Cochabamba",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 1e-7,
+				"ADM0CAP": 0,
+				"POP_MAX": 632013,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q183124"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.238611111,
+					-17.390833333
+				]
+			},
+			"properties": {
+				"NAME": "Colcapirhua",
+				"NAME_EN": "Colcapirhua",
+				"NAME_IT": "Colcapirhua",
+				"NAME_DE": "Colcapirhua",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 48631,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1107673"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.28388889,
+					-16.90388889
+				]
+			},
+			"properties": {
+				"NAME": "Collana",
+				"NAME_EN": "Collana",
+				"NAME_IT": "Collana",
+				"NAME_DE": "Collana",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1936,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1108876"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.868333333,
+					-17.338333333
+				]
+			},
+			"properties": {
+				"NAME": "Colomi",
+				"NAME_EN": "Colomi",
+				"NAME_IT": "Colomi",
+				"NAME_DE": "Colomi",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3699,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q990698"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.24888889,
+					-16.93361111
+				]
+			},
+			"properties": {
+				"NAME": "Colquencha",
+				"NAME_EN": "Colquencha",
+				"NAME_IT": "Colquencha",
+				"NAME_DE": "Colquencha",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12490,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q491521"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.13055556,
+					-17.39722222
+				]
+			},
+			"properties": {
+				"NAME": "Colquiri",
+				"NAME_EN": "Colquiri",
+				"NAME_IT": "Colquiri",
+				"NAME_DE": "Colquiri",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6610,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1014448"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.529722222,
+					-17.913611111
+				]
+			},
+			"properties": {
+				"NAME": "Comarapa",
+				"NAME_EN": "Comarapa",
+				"NAME_IT": "Comarapa",
+				"NAME_DE": "Comarapa",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5793,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1002560"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-62.02611111,
+					-16.13194444
+				]
+			},
+			"properties": {
+				"NAME": "Concepción",
+				"NAME_EN": "Concepción",
+				"NAME_IT": "Concepción",
+				"NAME_DE": "Concepción",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5586,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q751077"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.7275,
+					-16.188611111
+				]
+			},
+			"properties": {
+				"NAME": "Coroico",
+				"NAME_EN": "Coroico",
+				"NAME_IT": "Coroico",
+				"NAME_DE": "Coroico",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2319,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1026263"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.51888889,
+					-20.45472222
+				]
+			},
+			"properties": {
+				"NAME": "Cuevo",
+				"NAME_EN": "Cuevo",
+				"NAME_IT": "Cuevo",
+				"NAME_DE": "Cuevo",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2317,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1143259"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.163333333,
+					-16.504722222
+				]
+			},
+			"properties": {
+				"NAME": "El Alto",
+				"NAME_EN": "El Alto",
+				"NAME_IT": "El Alto",
+				"NAME_DE": "El Alto",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 885035,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q30996"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.38118,
+					-17.98674
+				]
+			},
+			"properties": {
+				"NAME": "El Torno, santa cruz",
+				"NAME_EN": "El Torno",
+				"NAME_IT": "El Torno, santa cruz",
+				"NAME_DE": "El Torno",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 55697,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1002076"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.87944444,
+					-15.49777778
+				]
+			},
+			"properties": {
+				"NAME": "Guanay",
+				"NAME_EN": "Guanay",
+				"NAME_IT": "Guanay",
+				"NAME_DE": "Guanay",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3890,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q959746"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.356666666,
+					-10.826666666
+				]
+			},
+			"properties": {
+				"NAME": "Guayaramerín",
+				"NAME_EN": "Guayaramerín",
+				"NAME_IT": "Guayaramerín",
+				"NAME_DE": "Guayaramerín",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Beni",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 39010,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1026253"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.818055555,
+					-17.083888888
+				]
+			},
+			"properties": {
+				"NAME": "Independencia",
+				"NAME_EN": "Independencia",
+				"NAME_IT": "Independencia",
+				"NAME_DE": "Independencia",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 23658,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1661081"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.28361111,
+					-17.35833333
+				]
+			},
+			"properties": {
+				"NAME": "Ironcollo",
+				"NAME_EN": "Ironcollo",
+				"NAME_IT": "Ironcollo",
+				"NAME_DE": "Ironcollo",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4778,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q916733"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.283333333,
+					-17.716666666
+				]
+			},
+			"properties": {
+				"NAME": "Irpa Irpa",
+				"NAME_EN": "Irpa Irpa",
+				"NAME_IT": "Irpa Irpa",
+				"NAME_DE": "Irpa Irpa",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2721,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1673170"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.45472222,
+					-16.46611111
+				]
+			},
+			"properties": {
+				"NAME": "Irupana",
+				"NAME_EN": "Irupana",
+				"NAME_IT": "Irupana",
+				"NAME_DE": "Irupana",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1882,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1014423"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.8575,
+					-17.03361111
+				]
+			},
+			"properties": {
+				"NAME": "Ivirgarzama",
+				"NAME_EN": "Ivirgarzama",
+				"NAME_IT": "Ivirgarzama",
+				"NAME_DE": "Ivirgarzama",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6366,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1026224"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.125555555,
+					-13.768055555
+				]
+			},
+			"properties": {
+				"NAME": "Ixiamas",
+				"NAME_EN": "Ixiamas",
+				"NAME_IT": "Ixiamas",
+				"NAME_DE": "Ixiamas",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1733,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q2068157"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.133333333,
+					-16.495833333
+				]
+			},
+			"properties": {
+				"NAME": "La Paz",
+				"NAME_EN": "La Paz",
+				"NAME_IT": "La Paz",
+				"NAME_DE": "La Paz",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 755732,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1491"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.675,
+					-17.37694444
+				]
+			},
+			"properties": {
+				"NAME": "Lahuachaca",
+				"NAME_EN": "Lahuachaca",
+				"NAME_IT": "Lahuachaca",
+				"NAME_DE": "Lahuachaca",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5874,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1800652"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.95638889,
+					-18.11944444
+				]
+			},
+			"properties": {
+				"NAME": "Mairana",
+				"NAME_EN": "Mairana",
+				"NAME_IT": "Mairana",
+				"NAME_DE": "Mairana",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3884,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1003511"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.216111111,
+					-15.309722222
+				]
+			},
+			"properties": {
+				"NAME": "Mapiri",
+				"NAME_EN": "Mapiri",
+				"NAME_IT": "Mapiri",
+				"NAME_DE": "Mapiri",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2561,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1014433"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.341666666,
+					-17.942777777
+				]
+			},
+			"properties": {
+				"NAME": "Mizque",
+				"NAME_EN": "Mizque",
+				"NAME_IT": "Mizque",
+				"NAME_DE": "Mizque",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26659,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1896917"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.255277777,
+					-17.3425
+				]
+			},
+			"properties": {
+				"NAME": "Montero",
+				"NAME_EN": "Montero",
+				"NAME_IT": "Montero",
+				"NAME_DE": "Montero",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 126886,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q990706"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.116666666,
+					-17.966666666
+				]
+			},
+			"properties": {
+				"NAME": "Oruro",
+				"NAME_EN": "Oruro",
+				"NAME_IT": "Oruro",
+				"NAME_DE": "Oruro",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Oruro",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 297497,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q35246"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-57.79138889,
+					-18.99194444
+				]
+			},
+			"properties": {
+				"NAME": "Paradero",
+				"NAME_EN": "Paradero",
+				"NAME_IT": "Paradero",
+				"NAME_DE": "Paradero",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2022,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1149273"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.916666666,
+					-17.233333333
+				]
+			},
+			"properties": {
+				"NAME": "Patacamaya",
+				"NAME_EN": "Patacamaya",
+				"NAME_IT": "Patacamaya",
+				"NAME_DE": "Patacamaya",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 8414,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q490991"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.394722222,
+					-17.354722222
+				]
+			},
+			"properties": {
+				"NAME": "Portachuelo",
+				"NAME_EN": "Portachuelo",
+				"NAME_IT": "Portachuelo",
+				"NAME_DE": "Portachuelo",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 16408,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1626079"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.753333333,
+					-19.589166666
+				]
+			},
+			"properties": {
+				"NAME": "Potosí",
+				"NAME_EN": "Potosí",
+				"NAME_IT": "Potosí",
+				"NAME_DE": "Potosí",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Potosí",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 189652,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q35045"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-57.797777777,
+					-18.963333333
+				]
+			},
+			"properties": {
+				"NAME": "Puerto Suárez",
+				"NAME_EN": "Puerto Suárez",
+				"NAME_IT": "Puerto Suárez",
+				"NAME_DE": "Puerto Suárez",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19829,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1014456"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.783055555,
+					-16.866666666
+				]
+			},
+			"properties": {
+				"NAME": "Puerto Villarroel",
+				"NAME_EN": "Puerto Villarroel",
+				"NAME_IT": "Puerto Villarroel",
+				"NAME_DE": "Puerto Villarroel",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 46627,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2097756"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.836666666,
+					-17.546944444
+				]
+			},
+			"properties": {
+				"NAME": "Punata",
+				"NAME_EN": "Punata",
+				"NAME_IT": "Punata",
+				"NAME_DE": "Punata",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19559,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1026219"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.281666666,
+					-17.3975
+				]
+			},
+			"properties": {
+				"NAME": "Quillacollo",
+				"NAME_EN": "Quillacollo",
+				"NAME_IT": "Quillacollo",
+				"NAME_DE": "Quillacollo",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 137182,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1002090"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.335277777,
+					-14.295833333
+				]
+			},
+			"properties": {
+				"NAME": "Reyes",
+				"NAME_EN": "Reyes",
+				"NAME_IT": "Reyes",
+				"NAME_DE": "Reyes",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Beni",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 11478,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q913102"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.066111111,
+					-11.005
+				]
+			},
+			"properties": {
+				"NAME": "Riberalta",
+				"NAME_EN": "Riberalta",
+				"NAME_IT": "Riberalta",
+				"NAME_DE": "Riberalta",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Beni",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 78100,
+				"POP1950": 0,
+				"populationDate": "2018-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q941357"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.528333333,
+					-14.442222222
+				]
+			},
+			"properties": {
+				"NAME": "Rurrenabaque",
+				"NAME_EN": "Rurrenabaque",
+				"NAME_IT": "Rurrenabaque",
+				"NAME_DE": "Rurrenabaque",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Beni",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21240,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q749372"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.040833333,
+					-17.404166666
+				]
+			},
+			"properties": {
+				"NAME": "Sacaba",
+				"NAME_EN": "Sacaba",
+				"NAME_IT": "Sacaba",
+				"NAME_DE": "Sacaba",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 172466,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q995727"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.89416667,
+					-17.52305556
+				]
+			},
+			"properties": {
+				"NAME": "San Benito",
+				"NAME_EN": "San Benito",
+				"NAME_IT": "San Benito",
+				"NAME_DE": "San Benito",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13562,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1416961"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.85,
+					-14.816666666
+				]
+			},
+			"properties": {
+				"NAME": "San Borja",
+				"NAME_EN": "San Borja",
+				"NAME_IT": "San Borja",
+				"NAME_DE": "San Borja",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Beni",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 24610,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2307472"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.54083333,
+					-14.43472222
+				]
+			},
+			"properties": {
+				"NAME": "San Buenaventura",
+				"NAME_EN": "San Buenaventura",
+				"NAME_IT": "San Buenaventura",
+				"NAME_DE": "San Buenaventura",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2264,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q164003"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-60.96,
+					-16.374166666
+				]
+			},
+			"properties": {
+				"NAME": "San Ignacio de Velasco",
+				"NAME_EN": "San Ignacio de Velasco",
+				"NAME_IT": "San Ignacio de Velasco",
+				"NAME_DE": "San Ignacio de Velasco",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 31196,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q995752"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-60.75,
+					-17.85
+				]
+			},
+			"properties": {
+				"NAME": "San José de Chiquitos",
+				"NAME_EN": "San José de Chiquitos",
+				"NAME_IT": "San José de Chiquitos",
+				"NAME_DE": "San José de Chiquitos",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.0166667,
+				"ADM0CAP": 0,
+				"POP_MAX": 16942,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2143101"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-58.401111111,
+					-16.361388888
+				]
+			},
+			"properties": {
+				"NAME": "San Matías",
+				"NAME_EN": "San Matías",
+				"NAME_IT": "San Matías",
+				"NAME_DE": "Las Petas",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15378,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q176823"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-60.9681,
+					-16.6986
+				]
+			},
+			"properties": {
+				"NAME": "San Miguel de Velasco",
+				"NAME_EN": "San Miguel de Velasco",
+				"NAME_IT": "San Miguel de Velasco",
+				"NAME_DE": "San Miguel (Velasco)",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4484,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q473144"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.980833333,
+					-18.270555555
+				]
+			},
+			"properties": {
+				"NAME": "San Pedro de Buena Vista",
+				"NAME_EN": "San Pedro de Buena Vista",
+				"NAME_IT": "San Pedro de Buena Vista",
+				"NAME_DE": "San Pedro de Buena Vista",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Potosí",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 1100,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1001985"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-60.6738,
+					-16.7869
+				]
+			},
+			"properties": {
+				"NAME": "San Rafael de Velasco",
+				"NAME_EN": "San Rafael de Velasco",
+				"NAME_IT": "San Rafael de Velasco",
+				"NAME_DE": "San Rafael (Velasco)",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2057,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q746773"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.426944444,
+					-13.744444444
+				]
+			},
+			"properties": {
+				"NAME": "Santa Ana del Yacuma",
+				"NAME_EN": "Santa Ana del Yacuma",
+				"NAME_IT": "Santa Ana del Yacuma",
+				"NAME_DE": "Santa Ana del Yacuma",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Beni",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 12783,
+				"POP1950": 0,
+				"populationDate": "2008-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1819433"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.1975,
+					-17.789166666
+				]
+			},
+			"properties": {
+				"NAME": "Santa Cruz de la Sierra",
+				"NAME_EN": "Santa Cruz de la Sierra",
+				"NAME_IT": "Santa Cruz de la Sierra",
+				"NAME_DE": "Santa Cruz de la Sierra",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3122605,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q170688"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.245555555,
+					-16.996666666
+				]
+			},
+			"properties": {
+				"NAME": "Shinahota",
+				"NAME_EN": "Shinahota",
+				"NAME_IT": "Shinahota",
+				"NAME_DE": "Shinahota",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4291,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1014530"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.739166666,
+					-17.332777777
+				]
+			},
+			"properties": {
+				"NAME": "Sica Sica",
+				"NAME_EN": "Sica Sica",
+				"NAME_IT": "Sica Sica",
+				"NAME_DE": "Sica Sica",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3831,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q494377"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.38333333,
+					-17.45
+				]
+			},
+			"properties": {
+				"NAME": "Sipe Sipe",
+				"NAME_EN": "Sipe Sipe",
+				"NAME_IT": "Sipe Sipe",
+				"NAME_DE": "Sipe Sipe",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 55908,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q990709"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.648611111,
+					-15.773611111
+				]
+			},
+			"properties": {
+				"NAME": "Sorata",
+				"NAME_EN": "Sorata",
+				"NAME_IT": "Sorata",
+				"NAME_DE": "Sorata",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2217,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1428069"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.26,
+					-19.0475
+				]
+			},
+			"properties": {
+				"NAME": "Sucre",
+				"NAME_EN": "Sucre",
+				"NAME_IT": "Sucre",
+				"NAME_DE": "Sucre",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Chuquisaca",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 360544,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2907"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.915,
+					-19.1825
+				]
+			},
+			"properties": {
+				"NAME": "Tarabuco",
+				"NAME_EN": "Tarabuco",
+				"NAME_IT": "Tarabuco",
+				"NAME_DE": "Tarabuco",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Chuquisaca",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2442,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1982115"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.023333333,
+					-17.611388888
+				]
+			},
+			"properties": {
+				"NAME": "Tarata",
+				"NAME_EN": "Tarata",
+				"NAME_IT": "Tarata",
+				"NAME_DE": "Tarata",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3323,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1016289"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.734166666,
+					-21.533888888
+				]
+			},
+			"properties": {
+				"NAME": "Tarija",
+				"NAME_EN": "Tarija",
+				"NAME_IT": "Tarija",
+				"NAME_DE": "Tarija",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Tarija",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 179528,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q35004"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.21888889,
+					-17.33805556
+				]
+			},
+			"properties": {
+				"NAME": "Tiquipaya",
+				"NAME_EN": "Tiquipaya",
+				"NAME_IT": "Tiquipaya",
+				"NAME_DE": "Tiquipaya",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 58223,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1020288"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.9,
+					-14.833333333
+				]
+			},
+			"properties": {
+				"NAME": "Trinidad",
+				"NAME_EN": "Trinidad",
+				"NAME_IT": "Trinidad",
+				"NAME_DE": "Trinidad",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Beni",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 124357,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q34986"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.719,
+					-21.4423
+				]
+			},
+			"properties": {
+				"NAME": "Tupiza",
+				"NAME_EN": "Tupiza",
+				"NAME_IT": "Tupiza",
+				"NAME_DE": "Tupiza",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Potosí",
+				"coordinatePrecision": 0.0001,
+				"ADM0CAP": 0,
+				"POP_MAX": 43100,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1014481"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.56478056,
+					-18.46815
+				]
+			},
+			"properties": {
+				"NAME": "Uncía",
+				"NAME_EN": "Uncía",
+				"NAME_IT": "Uncía",
+				"NAME_DE": "Uncía",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Potosí",
+				"coordinatePrecision": 0.00000277777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 5709,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1642052"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.823888888,
+					-20.462777777
+				]
+			},
+			"properties": {
+				"NAME": "Uyuni",
+				"NAME_EN": "Uyuni",
+				"NAME_IT": "Uyuni",
+				"NAME_DE": "Uyuni",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Potosí",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29672,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1014511"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.108333333,
+					-18.489444444
+				]
+			},
+			"properties": {
+				"NAME": "Vallegrande",
+				"NAME_EN": "Vallegrande",
+				"NAME_IT": "Vallegrande",
+				"NAME_DE": "Vallegrande",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 6000,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q735765"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68.283333333,
+					-16.633333333
+				]
+			},
+			"properties": {
+				"NAME": "Viacha",
+				"NAME_EN": "Viacha",
+				"NAME_IT": "Viacha",
+				"NAME_DE": "Viacha",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "La Paz",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 38457,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1002035"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.263055555,
+					-17.714722222
+				]
+			},
+			"properties": {
+				"NAME": "Villa Capinota",
+				"NAME_EN": "Capinota",
+				"NAME_IT": "Villa Capinota",
+				"NAME_DE": "Capinota",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19477,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1034638"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.323611111,
+					-19.123055555
+				]
+			},
+			"properties": {
+				"NAME": "Villa Serrano",
+				"NAME_EN": "Villa Serrano",
+				"NAME_IT": "Villa Serrano",
+				"NAME_DE": "Villa Serrano",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Chuquisaca",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2877,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842355"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.42,
+					-16.9725
+				]
+			},
+			"properties": {
+				"NAME": "Villa Tunari",
+				"NAME_EN": "Villa Tunari",
+				"NAME_IT": "Villa Tunari",
+				"NAME_DE": "Villa Tunari",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 71386,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1860785"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.75,
+					-19.894444444
+				]
+			},
+			"properties": {
+				"NAME": "Villa Vaca Guzmán",
+				"NAME_EN": "Villa Vaca Guzmán",
+				"NAME_IT": "Villa Vaca Guzmán",
+				"NAME_DE": "Villa Vaca Guzmán",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Chuquisaca",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13282,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q842347"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.885,
+					-17.402777777
+				]
+			},
+			"properties": {
+				"NAME": "Villa Yapacaní",
+				"NAME_EN": "Villa Yapacaní",
+				"NAME_IT": "Villa Yapacaní",
+				"NAME_DE": "Yapacaní",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 14589,
+				"POP1950": 0,
+				"populationDate": "2001-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1506556"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.458611111,
+					-21.264722222
+				]
+			},
+			"properties": {
+				"NAME": "Villamontes",
+				"NAME_EN": "Villamontes",
+				"NAME_IT": "Villamontes",
+				"NAME_DE": "Villamontes",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Tarija",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 39800,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1014504"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65.596,
+					-22.091
+				]
+			},
+			"properties": {
+				"NAME": "Villazón",
+				"NAME_EN": "Villazón",
+				"NAME_IT": "Villazón",
+				"NAME_DE": "Villazón",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Potosí",
+				"coordinatePrecision": 0.001,
+				"ADM0CAP": 0,
+				"POP_MAX": 28045,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q431553"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66.313611111,
+					-17.397222222
+				]
+			},
+			"properties": {
+				"NAME": "Vinto",
+				"NAME_EN": "Vinto",
+				"NAME_IT": "Vinto",
+				"NAME_DE": "Vinto",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Cochabamba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 51968,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q125924"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63.16472222,
+					-17.51027778
+				]
+			},
+			"properties": {
+				"NAME": "Warnes",
+				"NAME_EN": "Warnes",
+				"NAME_IT": "Warnes",
+				"NAME_DE": "Warnes",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Santa Cruz",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 214216,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q973385"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-67.034166666,
+					-15.145555555
+				]
+			},
+			"properties": {
+				"NAME": "Yucumo",
+				"NAME_EN": "Yucumo",
+				"NAME_IT": "Yucumo",
+				"NAME_DE": "Yucumo",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Beni",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 4693,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1646153"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64.701388888,
+					-19.119166666
+				]
+			},
+			"properties": {
+				"NAME": "Zudáñez",
+				"NAME_EN": "Zudáñez",
+				"NAME_IT": "Zudáñez",
+				"NAME_DE": "Zudáñez",
+				"ADM0NAME": "Bolivia",
+				"ADM1NAME": "Chuquisaca",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 13694,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q228153"
+			}
+		}
+	]
+}

@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Bolivia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.1 (#270) adds the departments and towns maps: region and town facts in English, Italian and German."
 	],
 	"la-paz": {
 		"city": {
@@ -20,6 +21,23 @@
 				"Ihr Seilbahnnetz Mi Teleférico ist das längste städtische Seilbahnsystem der Welt.",
 				"Auf ihrem Hexenmarkt werden Kräuter und getrocknete Lamaföten für Opfergaben verkauft.",
 				"Sie liegt in einer Schlucht, mit der Stadt El Alto auf der Hochebene darüber."
+			]
+		},
+		"region": {
+			"en": [
+				"It is named after its capital, Nuestra Señora de La Paz, “Our Lady of Peace”, founded in 1548.",
+				"It holds the Bolivian shore of Lake Titicaca.",
+				"The ruins of Tiwanaku, centre of an Andean civilisation that flourished around 500 to 1000 AD, lie in it."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, Nuestra Señora de La Paz, “Nostra Signora della Pace”, fondato nel 1548.",
+				"Comprende la sponda boliviana del lago Titicaca.",
+				"Vi si trovano le rovine di Tiwanaku, centro di una civiltà andina fiorita all’incirca tra il 500 e il 1000 d.C."
+			],
+			"de": [
+				"Es ist nach seiner Hauptstadt benannt, Nuestra Señora de La Paz, „Unsere Liebe Frau des Friedens“, gegründet 1548.",
+				"Es umfasst das bolivianische Ufer des Titicacasees.",
+				"In ihm liegen die Ruinen von Tiwanaku, Zentrum einer Andenkultur, die etwa von 500 bis 1000 n. Chr. blühte."
 			]
 		}
 	},
@@ -39,6 +57,378 @@
 				"Boliviens Unabhängigkeit wurde hier 1825 erklärt; die Stadt ist nach Antonio José de Sucre benannt.",
 				"Ihr weißes Kolonialzentrum ist ein UNESCO-Welterbe.",
 				"Sie wird auch die Stadt der vier Namen genannt: Charcas, La Plata, Chuquisaca und Sucre."
+			]
+		}
+	},
+	"pando": {
+		"region": {
+			"en": [
+				"It is named after José Manuel Pando, president of Bolivia from 1899 to 1904.",
+				"It became a department in 1938, carved from the rubber lands of the far north.",
+				"Its forests supply much of the Brazil-nut harvest that makes Bolivia the leading exporter of the nuts."
+			],
+			"it": [
+				"Prende il nome da José Manuel Pando, presidente della Bolivia dal 1899 al 1904.",
+				"Divenne dipartimento nel 1938, ricavato dalle terre della gomma dell’estremo nord.",
+				"Le sue foreste forniscono gran parte del raccolto di noci del Brasile che fa della Bolivia il primo esportatore di queste noci."
+			],
+			"de": [
+				"Es ist nach José Manuel Pando benannt, Präsident Boliviens von 1899 bis 1904.",
+				"Es wurde 1938 ein Departamento, gebildet aus den Kautschukgebieten des hohen Nordens.",
+				"Seine Wälder liefern einen Großteil der Paranüsse, die Bolivien zum führenden Exporteur dieser Nüsse machen."
+			]
+		}
+	},
+	"beni": {
+		"region": {
+			"en": [
+				"It is named after the Beni River, whose name is often said to mean “wind” in a native language; the origin is uncertain.",
+				"Its Llanos de Moxos, vast grassy plains, lie flooded for months in the rainy season.",
+				"Pre-Columbian peoples built raised fields, causeways and mounds across these plains."
+			],
+			"it": [
+				"Prende il nome dal fiume Beni, il cui nome significherebbe “vento” in una lingua indigena; l’origine è incerta.",
+				"I suoi Llanos de Moxos, vaste pianure erbose, restano allagati per mesi nella stagione delle piogge.",
+				"I popoli precolombiani costruirono campi rialzati, strade rialzate e tumuli in queste pianure."
+			],
+			"de": [
+				"Es ist nach dem Río Beni benannt, dessen Name oft als „Wind“ in einer indigenen Sprache gedeutet wird; die Herkunft ist unsicher.",
+				"Seine Llanos de Moxos, weite Grasebenen, stehen in der Regenzeit monatelang unter Wasser.",
+				"Vorkolumbische Völker legten in diesen Ebenen Hochbeete, Dammwege und Hügel an."
+			]
+		}
+	},
+	"santa-cruz": {
+		"region": {
+			"en": [
+				"It takes its name from its capital, which Ñuflo de Chávez named in 1561 after his home town in Extremadura, Spain.",
+				"The Jesuit Missions of the Chiquitos, six mission towns in its east, are a UNESCO site.",
+				"Che Guevara was captured and killed at La Higuera, in its hills, in 1967."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, che Ñuflo de Chávez chiamò così nel 1561 dalla sua città natale in Estremadura, in Spagna.",
+				"Le missioni gesuitiche dei Chiquitos, sei cittadine di missione nella sua parte orientale, sono un sito UNESCO.",
+				"Che Guevara fu catturato e ucciso a La Higuera, sulle sue colline, nel 1967."
+			],
+			"de": [
+				"Es trägt den Namen seiner Hauptstadt, die Ñuflo de Chávez 1561 nach seiner Heimatstadt in der spanischen Extremadura benannte.",
+				"Die Jesuitenreduktionen der Chiquitos, sechs Missionsorte in seinem Osten, sind UNESCO-Welterbe.",
+				"Che Guevara wurde 1967 in La Higuera, in seinen Hügeln, gefangen genommen und getötet."
+			]
+		}
+	},
+	"cochabamba": {
+		"region": {
+			"en": [
+				"Its name is usually traced to the Quechua “qucha pampa”, “plain of lakes”.",
+				"Its fertile valleys have long been called the granary of Bolivia.",
+				"In its tropical Chapare lowlands, Evo Morales led the coca growers’ unions before he became president."
+			],
+			"it": [
+				"Il nome viene di solito ricondotto al quechua “qucha pampa”, “pianura dei laghi”.",
+				"Le sue valli fertili sono chiamate da tempo il granaio della Bolivia.",
+				"Nelle sue pianure tropicali del Chapare, Evo Morales guidò i sindacati dei coltivatori di coca prima di diventare presidente."
+			],
+			"de": [
+				"Der Name wird meist auf das Quechua „qucha pampa“ zurückgeführt, „Ebene der Seen“.",
+				"Seine fruchtbaren Täler gelten seit Langem als Kornkammer Boliviens.",
+				"Im tropischen Tiefland des Chapare führte Evo Morales die Gewerkschaften der Kokabauern, bevor er Präsident wurde."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name is usually traced to the Quechua “qucha pampa”, “plain of lakes”.",
+				"The Cristo de la Concordia, a statue of Christ taller than Rio de Janeiro’s, stands on a hill above it.",
+				"In 2000 its “Water War” protests reversed the privatisation of its water supply."
+			],
+			"it": [
+				"Il nome viene di solito ricondotto al quechua “qucha pampa”, “pianura dei laghi”.",
+				"Il Cristo de la Concordia, una statua di Cristo più alta di quella di Rio de Janeiro, sorge su una collina sopra la città.",
+				"Nel 2000 le proteste della sua “guerra dell’acqua” annullarono la privatizzazione dell’acquedotto."
+			],
+			"de": [
+				"Der Name wird meist auf das Quechua „qucha pampa“ zurückgeführt, „Ebene der Seen“.",
+				"Der Cristo de la Concordia, eine Christusstatue, höher als die von Rio de Janeiro, steht auf einem Hügel über der Stadt.",
+				"Im Jahr 2000 machten die Proteste ihres „Wasserkriegs“ die Privatisierung der Wasserversorgung rückgängig."
+			]
+		}
+	},
+	"oruro": {
+		"region": {
+			"en": [
+				"It is named after its capital, whose name is usually traced to the Uru people of the nearby lakes.",
+				"Lake Poopó, once Bolivia’s second-largest lake, had almost entirely dried out by 2015.",
+				"Sajama, Bolivia’s first national park, was created in it in 1939."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, il cui nome viene di solito ricondotto al popolo degli Uru dei laghi vicini.",
+				"Il lago Poopó, un tempo il secondo lago della Bolivia, nel 2015 si era quasi del tutto prosciugato.",
+				"Il Sajama, primo parco nazionale della Bolivia, vi fu istituito nel 1939."
+			],
+			"de": [
+				"Es ist nach seiner Hauptstadt benannt, deren Name meist auf das Volk der Uru an den nahen Seen zurückgeführt wird.",
+				"Der Poopó-See, einst der zweitgrößte See Boliviens, war 2015 fast vollständig ausgetrocknet.",
+				"Sajama, Boliviens erster Nationalpark, wurde 1939 in ihm eingerichtet."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name is usually traced to the Uru people, who lived around the nearby lakes.",
+				"Its Carnival, with the diablada devil dance, is on UNESCO’s list of intangible heritage.",
+				"Founded in 1606, it grew as a silver-mining town and later as a centre of tin mining."
+			],
+			"it": [
+				"Il nome viene di solito ricondotto al popolo degli Uru, che viveva attorno ai laghi vicini.",
+				"Il suo Carnevale, con la danza dei diavoli detta diablada, è nella lista UNESCO del patrimonio immateriale.",
+				"Fondata nel 1606, crebbe come città dell’argento e poi come centro delle miniere di stagno."
+			],
+			"de": [
+				"Ihr Name wird meist auf das Volk der Uru zurückgeführt, das an den nahen Seen lebte.",
+				"Ihr Karneval mit dem Teufelstanz Diablada steht auf der UNESCO-Liste des immateriellen Kulturerbes.",
+				"1606 gegründet, wuchs sie als Silberbergbaustadt und später als Zentrum des Zinnbergbaus."
+			]
+		}
+	},
+	"chuquisaca": {
+		"region": {
+			"en": [
+				"Chuquisaca is the old native name of its capital, Sucre; the meaning of the word is disputed.",
+				"Thousands of dinosaur footprints cover a near-vertical limestone wall at Cal Orck’o, outside Sucre.",
+				"A rising in its capital on 25 May 1809 was one of the first calls for independence in Spanish America."
+			],
+			"it": [
+				"Chuquisaca è l’antico nome indigeno del suo capoluogo, Sucre; il significato della parola è discusso.",
+				"Migliaia di impronte di dinosauro coprono una parete calcarea quasi verticale a Cal Orck’o, fuori Sucre.",
+				"Una rivolta nel suo capoluogo il 25 maggio 1809 fu uno dei primi appelli all’indipendenza nell’America spagnola."
+			],
+			"de": [
+				"Chuquisaca ist der alte indigene Name seiner Hauptstadt Sucre; die Bedeutung des Wortes ist umstritten.",
+				"Tausende Dinosaurierspuren bedecken bei Cal Orck’o, außerhalb von Sucre, eine fast senkrechte Kalksteinwand.",
+				"Ein Aufstand in seiner Hauptstadt am 25. Mai 1809 war einer der ersten Rufe nach Unabhängigkeit in Spanisch-Amerika."
+			]
+		}
+	},
+	"potosi": {
+		"region": {
+			"en": [
+				"It is named after its capital; the name is often linked to a Quechua or Aymara word for “thunder” or “burst”, but nobody is sure.",
+				"The Salar de Uyuni, the largest salt flat in the world, lies in it.",
+				"Its Eduardo Avaroa reserve holds the red Laguna Colorada, a breeding ground for flamingos."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo; il nome è spesso collegato a una parola quechua o aymara per “tuono” o “scoppio”, ma nessuno ne è certo.",
+				"Vi si trova il Salar de Uyuni, la più grande distesa salata del mondo.",
+				"La sua riserva Eduardo Avaroa comprende la rossa Laguna Colorada, luogo di riproduzione dei fenicotteri."
+			],
+			"de": [
+				"Es ist nach seiner Hauptstadt benannt; der Name wird oft mit einem Quechua- oder Aymara-Wort für „Donner“ oder „Knall“ verbunden, doch sicher ist das niemand.",
+				"In ihm liegt der Salar de Uyuni, die größte Salzpfanne der Welt.",
+				"Sein Reservat Eduardo Avaroa umfasst die rote Laguna Colorada, ein Brutgebiet für Flamingos."
+			]
+		},
+		"city": {
+			"en": [
+				"Its name is often linked to a Quechua or Aymara word for “thunder” or “burst”, but nobody is sure.",
+				"Silver from the Cerro Rico above it made it one of the largest cities in the world around 1600.",
+				"At about 4,000 m, it is one of the highest cities in the world."
+			],
+			"it": [
+				"Il nome è spesso collegato a una parola quechua o aymara per “tuono” o “scoppio”, ma nessuno ne è certo.",
+				"L’argento del Cerro Rico che la sovrasta ne fece una delle città più grandi del mondo intorno al 1600.",
+				"A circa 4.000 m, è una delle città più alte del mondo."
+			],
+			"de": [
+				"Ihr Name wird oft mit einem Quechua- oder Aymara-Wort für „Donner“ oder „Knall“ verbunden, doch sicher ist das niemand.",
+				"Silber aus dem Cerro Rico über ihr machte sie um 1600 zu einer der größten Städte der Welt.",
+				"Mit rund 4.000 m ist sie eine der höchstgelegenen Städte der Welt."
+			]
+		}
+	},
+	"tarija": {
+		"region": {
+			"en": [
+				"It is named after its capital, which is usually said to take its name from Francisco de Tarija, an early Spanish explorer of the valley.",
+				"It is Bolivia’s main wine region, with some of the highest vineyards in the world.",
+				"The gas fields of its Chaco hold most of Bolivia’s natural-gas reserves."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, che secondo la tradizione deve il nome a Francisco de Tarija, uno dei primi esploratori spagnoli della valle.",
+				"È la principale regione vinicola della Bolivia, con alcuni dei vigneti più alti del mondo.",
+				"I giacimenti del suo Chaco contengono la maggior parte delle riserve di gas naturale della Bolivia."
+			],
+			"de": [
+				"Es ist nach seiner Hauptstadt benannt, die ihren Namen der Überlieferung nach von Francisco de Tarija hat, einem frühen spanischen Erkunder des Tals.",
+				"Es ist Boliviens wichtigstes Weinbaugebiet, mit einigen der höchstgelegenen Weinberge der Welt.",
+				"Die Gasfelder seines Chaco bergen den Großteil der bolivianischen Erdgasreserven."
+			]
+		},
+		"city": {
+			"en": [
+				"It is usually said to take its name from Francisco de Tarija, an early Spanish explorer of the valley.",
+				"Luis de Fuentes y Vargas founded it in 1574.",
+				"It is known as Bolivia’s capital of wine and of singani, a grape brandy."
+			],
+			"it": [
+				"Secondo la tradizione deve il nome a Francisco de Tarija, uno dei primi esploratori spagnoli della valle.",
+				"La fondò Luis de Fuentes y Vargas nel 1574.",
+				"È nota come capitale boliviana del vino e del singani, un’acquavite d’uva."
+			],
+			"de": [
+				"Ihren Namen hat sie der Überlieferung nach von Francisco de Tarija, einem frühen spanischen Erkunder des Tals.",
+				"Luis de Fuentes y Vargas gründete sie 1574.",
+				"Sie gilt als Boliviens Hauptstadt des Weins und des Singani, eines Traubenbranntweins."
+			]
+		}
+	},
+	"santa-cruz-de-la-sierra": {
+		"city": {
+			"en": [
+				"It is named after Santa Cruz de la Sierra in Extremadura, Spain, the home town of its founder, Ñuflo de Chávez.",
+				"Founded in 1561 far to the east, it was moved to its present site at the end of the 16th century.",
+				"Its avenues are laid out in rings, the anillos, that circle the old centre."
+			],
+			"it": [
+				"Prende il nome da Santa Cruz de la Sierra, in Estremadura, in Spagna, città natale del suo fondatore, Ñuflo de Chávez.",
+				"Fondata nel 1561 molto più a est, fu trasferita nel sito attuale alla fine del XVI secolo.",
+				"I suoi viali sono disposti ad anelli, gli anillos, che circondano il centro storico."
+			],
+			"de": [
+				"Sie ist nach Santa Cruz de la Sierra in der spanischen Extremadura benannt, der Heimatstadt ihres Gründers Ñuflo de Chávez.",
+				"1561 weit im Osten gegründet, wurde sie Ende des 16. Jahrhunderts an ihren heutigen Ort verlegt.",
+				"Ihre Straßen sind in Ringen angelegt, den anillos, die das alte Zentrum umschließen."
+			]
+		}
+	},
+	"el-alto": {
+		"city": {
+			"en": [
+				"El Alto means “the high one”: it stands on the Altiplano at about 4,000 m, above La Paz.",
+				"It grew from La Paz’s edge into a separate municipality in 1985.",
+				"Its airport, which serves La Paz, is one of the highest international airports in the world."
+			],
+			"it": [
+				"El Alto significa “l’alta”: sorge sull’Altiplano a circa 4.000 m, sopra La Paz.",
+				"Cresciuta ai margini di La Paz, divenne un comune a sé nel 1985.",
+				"Il suo aeroporto, che serve La Paz, è uno degli aeroporti internazionali più alti del mondo."
+			],
+			"de": [
+				"El Alto bedeutet „die Hohe“: Es liegt auf dem Altiplano in etwa 4.000 m Höhe, oberhalb von La Paz.",
+				"Aus dem Rand von La Paz gewachsen, wurde es 1985 eine eigene Gemeinde.",
+				"Sein Flughafen, der La Paz bedient, ist einer der höchstgelegenen internationalen Flughäfen der Welt."
+			]
+		}
+	},
+	"sacaba": {
+		"city": {
+			"en": [
+				"The origin of its name is uncertain; it is probably Quechua or Aymara.",
+				"It lies just east of Cochabamba, within the city’s metropolitan area.",
+				"It is famous for chicharrón, fried pork, eaten especially on Sundays."
+			],
+			"it": [
+				"L’origine del nome è incerta; probabilmente è quechua o aymara.",
+				"Si trova subito a est di Cochabamba, nella sua area metropolitana.",
+				"È famosa per il chicharrón, maiale fritto, mangiato soprattutto la domenica."
+			],
+			"de": [
+				"Die Herkunft des Namens ist unsicher; er ist wahrscheinlich Quechua oder Aymara.",
+				"Es liegt direkt östlich von Cochabamba, im Ballungsraum der Stadt.",
+				"Es ist bekannt für Chicharrón, gebratenes Schweinefleisch, das vor allem sonntags gegessen wird."
+			]
+		}
+	},
+	"quillacollo": {
+		"city": {
+			"en": [
+				"The origin of its name is uncertain; it is probably Quechua or Aymara.",
+				"Its festival of the Virgin of Urkupiña, each August, draws hundreds of thousands of pilgrims.",
+				"It lies just west of Cochabamba, within the city’s metropolitan area."
+			],
+			"it": [
+				"L’origine del nome è incerta; probabilmente è quechua o aymara.",
+				"La sua festa della Vergine di Urkupiña, ogni agosto, richiama centinaia di migliaia di pellegrini.",
+				"Si trova subito a ovest di Cochabamba, nella sua area metropolitana."
+			],
+			"de": [
+				"Die Herkunft des Namens ist unsicher; er ist wahrscheinlich Quechua oder Aymara.",
+				"Sein Fest der Jungfrau von Urkupiña zieht jeden August Hunderttausende Pilger an.",
+				"Es liegt direkt westlich von Cochabamba, im Ballungsraum der Stadt."
+			]
+		}
+	},
+	"warnes": {
+		"city": {
+			"en": [
+				"It is named after Ignacio Warnes, a Buenos Aires-born leader of the war of independence in Santa Cruz.",
+				"Warnes was killed in 1816 at the battle of El Pari, near Santa Cruz de la Sierra.",
+				"It has grown fast as an industrial town just north of Santa Cruz de la Sierra."
+			],
+			"it": [
+				"Prende il nome da Ignacio Warnes, nato a Buenos Aires, capo della guerra d’indipendenza a Santa Cruz.",
+				"Warnes fu ucciso nel 1816 nella battaglia di El Pari, vicino a Santa Cruz de la Sierra.",
+				"È cresciuta in fretta come città industriale subito a nord di Santa Cruz de la Sierra."
+			],
+			"de": [
+				"Sie ist nach Ignacio Warnes benannt, einem in Buenos Aires geborenen Anführer des Unabhängigkeitskriegs in Santa Cruz.",
+				"Warnes fiel 1816 in der Schlacht von El Pari bei Santa Cruz de la Sierra.",
+				"Sie ist als Industriestadt direkt nördlich von Santa Cruz de la Sierra rasch gewachsen."
+			]
+		}
+	},
+	"montero": {
+		"city": {
+			"en": [
+				"It was named in 1912 after Colonel Marceliano Montero, who fought in the war of independence and at the battle of Ingavi.",
+				"It was founded in 1854 as San Ramón de la Víbora.",
+				"The Guabirá sugar mill makes it the centre of Santa Cruz’s sugar-cane country."
+			],
+			"it": [
+				"Nel 1912 prese il nome dal colonnello Marceliano Montero, che combatté nella guerra d’indipendenza e nella battaglia di Ingavi.",
+				"Fu fondata nel 1854 con il nome di San Ramón de la Víbora.",
+				"Lo zuccherificio di Guabirá ne fa il centro della zona della canna da zucchero di Santa Cruz."
+			],
+			"de": [
+				"Sie wurde 1912 nach Oberst Marceliano Montero benannt, der im Unabhängigkeitskrieg und in der Schlacht von Ingavi kämpfte.",
+				"Sie wurde 1854 als San Ramón de la Víbora gegründet.",
+				"Die Zuckerfabrik Guabirá macht sie zum Zentrum des Zuckerrohrgebiets von Santa Cruz."
+			]
+		}
+	},
+	"trinidad": {
+		"city": {
+			"en": [
+				"Its full name, La Santísima Trinidad, means “the Most Holy Trinity”.",
+				"The Jesuit Cipriano Barace founded it in 1686 as one of the missions of Moxos.",
+				"The savannas around it flood each rainy season, and cattle ranching is the main business."
+			],
+			"it": [
+				"Il suo nome completo, La Santísima Trinidad, significa “la Santissima Trinità”.",
+				"Il gesuita Cipriano Barace la fondò nel 1686 come una delle missioni di Moxos.",
+				"Le savane intorno si allagano a ogni stagione delle piogge, e l’allevamento di bestiame è l’attività principale."
+			],
+			"de": [
+				"Ihr voller Name, La Santísima Trinidad, bedeutet „die Heiligste Dreifaltigkeit“.",
+				"Der Jesuit Cipriano Barace gründete sie 1686 als eine der Missionen von Moxos.",
+				"Die Savannen ringsum werden in jeder Regenzeit überflutet, und Rinderzucht ist der wichtigste Erwerb."
+			]
+		}
+	},
+	"riberalta": {
+		"city": {
+			"en": [
+				"Its name, “high bank”, refers to its site on a bluff above the Beni River.",
+				"It was founded in 1894, during the rubber boom.",
+				"Processing Brazil nuts from the surrounding forests is its main industry."
+			],
+			"it": [
+				"Il nome, “riva alta”, si riferisce alla sua posizione su una scarpata sopra il fiume Beni.",
+				"Fu fondata nel 1894, durante il boom della gomma.",
+				"La lavorazione delle noci del Brasile delle foreste circostanti è la sua industria principale."
+			],
+			"de": [
+				"Ihr Name, „hohes Ufer“, bezieht sich auf ihre Lage auf einer Steilkante über dem Río Beni.",
+				"Sie wurde 1894 während des Kautschukbooms gegründet.",
+				"Die Verarbeitung von Paranüssen aus den umliegenden Wäldern ist ihre wichtigste Industrie."
 			]
 		}
 	}

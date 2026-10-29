@@ -1,0 +1,1795 @@
+{
+	"type": "FeatureCollection",
+	"regionSource": "Natural Earth 10m admin-1 states and provinces (public domain)",
+	"source": "Wikidata (CC0); regional associations under regionSource licence",
+	"fetchedAt": "2026-10-29T08:10:05.362Z",
+	"reprocessedAt": "2026-10-29T08:12:00.642Z",
+	"bindingsSha256": "ff7f68071fd5d65652b1418375a6fec717d0158d4e163457280ba068a3fc54e0",
+	"querySha256": "ead41f5a99947b6c1b71c6045ebf47502f2c2ee1b7633f56b3327aacb70725ce",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"CUB\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country .\n  FILTER EXISTS { ?item p:P1082/ps:P1082 ?candidatePopulation . FILTER(?candidatePopulation >= 1000) }\n  ?item wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2000-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"es\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"excluded": [
+		{
+			"item": "http://www.wikidata.org/entity/Q603146",
+			"name": "Carlos Manuel de Céspedes",
+			"reason": "Carlos Manuel de Céspedes: undated 224,488 is about ten times the municipality; implausible source value"
+		}
+	],
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-80.567777777,
+					22.280555555
+				]
+			},
+			"properties": {
+				"NAME": "Abreus",
+				"NAME_EN": "Abreus",
+				"NAME_IT": "Abreus",
+				"NAME_DE": "Abreus",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Cienfuegos",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 23144,
+				"POP1950": 0,
+				"populationDate": "2009-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q331384"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.582777777,
+					22.806666666
+				]
+			},
+			"properties": {
+				"NAME": "Alquízar",
+				"NAME_EN": "Alquízar",
+				"NAME_IT": "Alquízar",
+				"NAME_DE": "Alquízar",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Artemisa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29616,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q603163"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.763333333,
+					22.813611111
+				]
+			},
+			"properties": {
+				"NAME": "Artemisa",
+				"NAME_EN": "Artemisa",
+				"NAME_IT": "Artemisa",
+				"NAME_DE": "Artemisa",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Artemisa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 86444,
+				"POP1950": 0,
+				"populationDate": "2022-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q115006"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-83.163888888,
+					22.906388888
+				]
+			},
+			"properties": {
+				"NAME": "Bahía Honda",
+				"NAME_EN": "Bahía Honda",
+				"NAME_IT": "Bahía Honda",
+				"NAME_DE": "Bahía Honda",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Pinar del Río",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 43483,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q571968"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75.72287,
+					20.961719
+				]
+			},
+			"properties": {
+				"NAME": "Banes",
+				"NAME_EN": "Banes",
+				"NAME_IT": "Banes",
+				"NAME_DE": "Banes",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Holguín",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 66812,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q806424"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-78.624444444,
+					21.681944444
+				]
+			},
+			"properties": {
+				"NAME": "Baraguá",
+				"NAME_EN": "Baraguá",
+				"NAME_IT": "Baraguá",
+				"NAME_DE": "Baraguá",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Ciego de Ávila",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 32909,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1816192"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.28333,
+					22.71667
+				]
+			},
+			"properties": {
+				"NAME": "Batabanó",
+				"NAME_EN": "Batabanó",
+				"NAME_IT": "Batabanó",
+				"NAME_DE": "Batabanó",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Mayabeque",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 25664,
+				"POP1950": 0,
+				"populationDate": "2004-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q270305"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.549166666,
+					22.991944444
+				]
+			},
+			"properties": {
+				"NAME": "Bauta",
+				"NAME_EN": "Bauta",
+				"NAME_IT": "Bauta",
+				"NAME_DE": "Bauta",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Artemisa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 23557,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q114970"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-76.642777777,
+					20.381666666
+				]
+			},
+			"properties": {
+				"NAME": "Bayamo",
+				"NAME_EN": "Bayamo",
+				"NAME_IT": "Bayamo",
+				"NAME_DE": "Bayamo",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Granma",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 235107,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q115382"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-79.472222222,
+					22.515833333
+				]
+			},
+			"properties": {
+				"NAME": "Caibarién",
+				"NAME_EN": "Caibarién",
+				"NAME_IT": "Caibarién",
+				"NAME_DE": "Caibarién",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Villa Clara",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 38479,
+				"POP1950": 0,
+				"populationDate": "2008-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q289328"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75.15196,
+					19.99077
+				]
+			},
+			"properties": {
+				"NAME": "Caimanera",
+				"NAME_EN": "Caimanera",
+				"NAME_IT": "Caimanera",
+				"NAME_DE": "Caimanera",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Guantánamo",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 11273,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1025873"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.596388888,
+					22.9575
+				]
+			},
+			"properties": {
+				"NAME": "Caimito",
+				"NAME_EN": "Caimito",
+				"NAME_IT": "Caimito",
+				"NAME_DE": "Caimito",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Artemisa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 36813,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q559793"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-77.918611111,
+					21.378611111
+				]
+			},
+			"properties": {
+				"NAME": "Camagüey",
+				"NAME_EN": "Camagüey",
+				"NAME_IT": "Camagüey",
+				"NAME_DE": "Camagüey",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Camagüey",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 321992,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q115329"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.958055555,
+					22.743888888
+				]
+			},
+			"properties": {
+				"NAME": "Candelaria",
+				"NAME_EN": "Candelaria",
+				"NAME_IT": "Candelaria",
+				"NAME_DE": "Candelaria",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Pinar del Río",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 19523,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q603136"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81.203611111,
+					23.042777777
+				]
+			},
+			"properties": {
+				"NAME": "Cárdenas",
+				"NAME_EN": "Cárdenas",
+				"NAME_IT": "Cárdenas",
+				"NAME_DE": "Cárdenas",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Matanzas",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 86700,
+				"POP1950": 0,
+				"populationDate": "2008-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q986387"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-78.913333333,
+					22.196666666
+				]
+			},
+			"properties": {
+				"NAME": "Chambas",
+				"NAME_EN": "Chambas",
+				"NAME_IT": "Chambas",
+				"NAME_DE": "Chambas",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Ciego de Ávila",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 41000,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1060628"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-78.763055555,
+					21.848055555
+				]
+			},
+			"properties": {
+				"NAME": "Ciego de Ávila",
+				"NAME_EN": "Ciego de Ávila",
+				"NAME_IT": "Ciego de Ávila",
+				"NAME_DE": "Ciego de Ávila",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Ciego de Ávila",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 143449,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q115465"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-80.436388888,
+					22.145555555
+				]
+			},
+			"properties": {
+				"NAME": "Cienfuegos",
+				"NAME_EN": "Cienfuegos",
+				"NAME_IT": "Cienfuegos",
+				"NAME_DE": "Cienfuegos",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Cienfuegos",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 164924,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q190005"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-78.703056,
+					22.018889
+				]
+			},
+			"properties": {
+				"NAME": "Ciro Redondo",
+				"NAME_EN": "Ciro Redondo",
+				"NAME_IT": "Ciro Redondo",
+				"NAME_DE": "Ciro Redondo",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Ciego de Ávila",
+				"coordinatePrecision": 0.000001,
+				"ADM0CAP": 0,
+				"POP_MAX": 28370,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1020273"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-80.906666666,
+					22.7225
+				]
+			},
+			"properties": {
+				"NAME": "Colón",
+				"NAME_EN": "Colón",
+				"NAME_IT": "Colón",
+				"NAME_DE": "Colón",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Matanzas",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 72000,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q5029"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75.223055555,
+					20.209444444
+				]
+			},
+			"properties": {
+				"NAME": "El Salvador",
+				"NAME_EN": "El Salvador",
+				"NAME_IT": "El Salvador",
+				"NAME_DE": "El Salvador",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Guantánamo",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 45773,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1026982"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-76.9,
+					20.55
+				]
+			},
+			"properties": {
+				"NAME": "Fernando Echenique",
+				"NAME_EN": "Fernando Echenique",
+				"NAME_IT": "Fernando Echenique",
+				"NAME_DE": "Fernando Echenique",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Granma",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 4303,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q12890620"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-78.966944444,
+					22.1475
+				]
+			},
+			"properties": {
+				"NAME": "Florencia",
+				"NAME_EN": "Florencia",
+				"NAME_IT": "Florencia",
+				"NAME_DE": "Florencia",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Ciego de Ávila",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21150,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1007702"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-78.222777777,
+					21.529444444
+				]
+			},
+			"properties": {
+				"NAME": "Florida",
+				"NAME_EN": "Florida",
+				"NAME_IT": "Florida",
+				"NAME_DE": "Florida",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Camagüey",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 71676,
+				"POP1950": 0,
+				"populationDate": "2008-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q643617"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-76.132438696,
+					21.107737784
+				]
+			},
+			"properties": {
+				"NAME": "Gibara",
+				"NAME_EN": "Gibara",
+				"NAME_IT": "Gibara",
+				"NAME_DE": "Gibara",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Holguín",
+				"coordinatePrecision": 1e-8,
+				"ADM0CAP": 0,
+				"POP_MAX": 71126,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q281016"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.688055555,
+					22.930555555
+				]
+			},
+			"properties": {
+				"NAME": "Guanajay",
+				"NAME_EN": "Guanajay",
+				"NAME_IT": "Guanajay",
+				"NAME_DE": "Guanajay",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Artemisa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22839,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q114977"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75.206111,
+					20.138333
+				]
+			},
+			"properties": {
+				"NAME": "Guantánamo",
+				"NAME_EN": "Guantánamo",
+				"NAME_IT": "Guantánamo",
+				"NAME_DE": "Guantánamo",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Guantánamo",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 228436,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q185156"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.023611111,
+					22.8475
+				]
+			},
+			"properties": {
+				"NAME": "Güines",
+				"NAME_EN": "Güines",
+				"NAME_IT": "Güines",
+				"NAME_DE": "Güines",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Mayabeque",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 66892,
+				"POP1950": 0,
+				"populationDate": "2011-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q270297"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.504722222,
+					22.801944444
+				]
+			},
+			"properties": {
+				"NAME": "Güira de Melena",
+				"NAME_EN": "Güira de Melena",
+				"NAME_IT": "Güira de Melena",
+				"NAME_DE": "Güira de Melena",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Artemisa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 37838,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q603115"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-76.263055555,
+					20.887222222
+				]
+			},
+			"properties": {
+				"NAME": "Holguín",
+				"NAME_EN": "Holguin",
+				"NAME_IT": "Holguín",
+				"NAME_DE": "Holguín",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Holguín",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 350191,
+				"POP1950": 0,
+				"populationDate": "2014-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q244154"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74.6314,
+					20.06936
+				]
+			},
+			"properties": {
+				"NAME": "Imías",
+				"NAME_EN": "Imías",
+				"NAME_IT": "Imías",
+				"NAME_DE": "Imías",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Guantánamo",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 9699,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q287136"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81.1325,
+					22.529166666
+				]
+			},
+			"properties": {
+				"NAME": "Jagüey Grande",
+				"NAME_EN": "Jagüey Grande",
+				"NAME_IT": "Jagüey Grande",
+				"NAME_DE": "Jagüey Grande",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Matanzas",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 87771,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q2573456"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-77.28194,
+					20.90748
+				]
+			},
+			"properties": {
+				"NAME": "Jobabo",
+				"NAME_EN": "Jobabo",
+				"NAME_IT": "Jobabo",
+				"NAME_DE": "Jobabo",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Las Tunas",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 47350,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q600105"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81.198055555,
+					22.810555555
+				]
+			},
+			"properties": {
+				"NAME": "Jovellanos",
+				"NAME_EN": "Jovellanos",
+				"NAME_IT": "Jovellanos",
+				"NAME_DE": "Jovellanos",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Matanzas",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 58685,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q2573404"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.358888888,
+					23.136666666
+				]
+			},
+			"properties": {
+				"NAME": "La Habana",
+				"NAME_EN": "Havana",
+				"NAME_IT": "L'Avana",
+				"NAME_DE": "Havanna",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "La Habana",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 1,
+				"POP_MAX": 2492618,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1563"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-83.5525,
+					22.747222222
+				]
+			},
+			"properties": {
+				"NAME": "La Palma",
+				"NAME_EN": "La Palma",
+				"NAME_IT": "La Palma",
+				"NAME_DE": "La Palma",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Pinar del Río",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 35346,
+				"POP1950": 0,
+				"populationDate": "2011-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2234325"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-76.95,
+					20.966666666
+				]
+			},
+			"properties": {
+				"NAME": "Las Tunas",
+				"NAME_EN": "Las Tunas",
+				"NAME_IT": "Victoria de Las Tunas",
+				"NAME_DE": "Las Tunas",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Las Tunas",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 202105,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q115527"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81.923888888,
+					22.916388888
+				]
+			},
+			"properties": {
+				"NAME": "Madruga",
+				"NAME_EN": "Madruga",
+				"NAME_IT": "Madruga",
+				"NAME_DE": "Madruga",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Mayabeque",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 30640,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q270290"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74.15181,
+					20.24673
+				]
+			},
+			"properties": {
+				"NAME": "Maisí",
+				"NAME_EN": "Maisí",
+				"NAME_IT": "Maisí",
+				"NAME_DE": "Maisí",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Guantánamo",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 2938,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q911750"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-78.990555555,
+					21.924444444
+				]
+			},
+			"properties": {
+				"NAME": "Majagua",
+				"NAME_EN": "Majagua",
+				"NAME_IT": "Majagua",
+				"NAME_DE": "Majagua",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Ciego de Ávila",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 26830,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1886040"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75.051388888,
+					20.180277777
+				]
+			},
+			"properties": {
+				"NAME": "Manuel Tames",
+				"NAME_EN": "Manuel Tames",
+				"NAME_IT": "Manuel Tames",
+				"NAME_DE": "Manuel Tames",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Guantánamo",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21237,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q751418"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-77.108611111,
+					20.339722222
+				]
+			},
+			"properties": {
+				"NAME": "Manzanillo",
+				"NAME_EN": "Manzanillo",
+				"NAME_IT": "Manzanillo",
+				"NAME_DE": "Manzanillo",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Granma",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 150999,
+				"POP1950": 0,
+				"populationDate": "2005-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q115403"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.753888888,
+					22.993611111
+				]
+			},
+			"properties": {
+				"NAME": "Mariel",
+				"NAME_EN": "Mariel",
+				"NAME_IT": "Mariel",
+				"NAME_DE": "Mariel",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Artemisa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 42500,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q116156"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81.573611,
+					23.049444
+				]
+			},
+			"properties": {
+				"NAME": "Matanzas",
+				"NAME_EN": "Matanzas",
+				"NAME_IT": "Matanzas",
+				"NAME_DE": "Matanzas",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Matanzas",
+				"coordinatePrecision": 0.00001,
+				"ADM0CAP": 0,
+				"POP_MAX": 151624,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q272471"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75.67637268,
+					20.655209184
+				]
+			},
+			"properties": {
+				"NAME": "Mayarí",
+				"NAME_EN": "Mayarí",
+				"NAME_IT": "Mayarí",
+				"NAME_DE": "Mayarí",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Holguín",
+				"coordinatePrecision": 1e-8,
+				"ADM0CAP": 0,
+				"POP_MAX": 102354,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1020314"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.148611111,
+					22.781388888
+				]
+			},
+			"properties": {
+				"NAME": "Melena del Sur",
+				"NAME_EN": "Melena del Sur",
+				"NAME_IT": "Melena del Sur",
+				"NAME_DE": "Melena del Sur",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Mayabeque",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 20646,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q270310"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74.943011763,
+					20.655979291
+				]
+			},
+			"properties": {
+				"NAME": "Moa",
+				"NAME_EN": "Moa",
+				"NAME_IT": "Moa",
+				"NAME_DE": "Moa",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Holguín",
+				"coordinatePrecision": 1e-8,
+				"ADM0CAP": 0,
+				"POP_MAX": 73053,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q168965"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-78.627777777,
+					22.110833333
+				]
+			},
+			"properties": {
+				"NAME": "Morón",
+				"NAME_EN": "Morón",
+				"NAME_IT": "Morón",
+				"NAME_DE": "Morón",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Ciego de Ávila",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 59371,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q959528"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-77.747222222,
+					21.083611111
+				]
+			},
+			"properties": {
+				"NAME": "Najasa",
+				"NAME_EN": "Najasa",
+				"NAME_IT": "Najasa",
+				"NAME_DE": "Najasa",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Camagüey",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 15579,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q643028"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75.342222222,
+					20.1275
+				]
+			},
+			"properties": {
+				"NAME": "Niceto Pérez",
+				"NAME_EN": "Niceto Pérez",
+				"NAME_IT": "Niceto Pérez",
+				"NAME_DE": "Niceto Pérez",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Guantánamo",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 2873,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1026991"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.801111111,
+					21.884722222
+				]
+			},
+			"properties": {
+				"NAME": "Nueva Gerona",
+				"NAME_EN": "Nueva Gerona",
+				"NAME_IT": "Nueva Gerona",
+				"NAME_DE": "Nueva Gerona",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Isla de la Juventud",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 45577,
+				"POP1950": 0,
+				"populationDate": "2019-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q833946"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81.75,
+					22.766666666
+				]
+			},
+			"properties": {
+				"NAME": "Nueva Paz",
+				"NAME_EN": "Nueva Paz",
+				"NAME_IT": "Nueva Paz",
+				"NAME_DE": "Nueva Paz",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Mayabeque",
+				"coordinatePrecision": 0.016666666666667,
+				"ADM0CAP": 0,
+				"POP_MAX": 24277,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q270581"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-77.264444444,
+					21.540277777
+				]
+			},
+			"properties": {
+				"NAME": "Nuevitas",
+				"NAME_EN": "Nuevitas",
+				"NAME_IT": "Nuevitas",
+				"NAME_DE": "Nuevitas",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Camagüey",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 38995,
+				"POP1950": 0,
+				"populationDate": "2002-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q643081"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75.991944444,
+					20.213888888
+				]
+			},
+			"properties": {
+				"NAME": "Palma Soriano",
+				"NAME_EN": "Palma Soriano",
+				"NAME_IT": "Palma Soriano",
+				"NAME_DE": "Palma Soriano",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Santiago de Cuba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 119740,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q742835"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-83.671944444,
+					22.412222222
+				]
+			},
+			"properties": {
+				"NAME": "Pinar del Río",
+				"NAME_EN": "Pinar del Río",
+				"NAME_IT": "Pinar del Río",
+				"NAME_DE": "Pinar del Río",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Pinar del Río",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 188614,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q244139"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-79.655555555,
+					22.315833333
+				]
+			},
+			"properties": {
+				"NAME": "Placetas",
+				"NAME_EN": "Placetas",
+				"NAME_IT": "Placetas",
+				"NAME_DE": "Placetas",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Villa Clara",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 71208,
+				"POP1950": 0,
+				"populationDate": "2004-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q861701"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-78.418888888,
+					21.945277777
+				]
+			},
+			"properties": {
+				"NAME": "Primero de Enero",
+				"NAME_EN": "Primero de Enero",
+				"NAME_IT": "Primero de Enero",
+				"NAME_DE": "Primero de Enero",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Ciego de Ávila",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29117,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1020104"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.355833333,
+					22.824722222
+				]
+			},
+			"properties": {
+				"NAME": "Quivicán",
+				"NAME_EN": "Quivicán",
+				"NAME_IT": "Quivicán",
+				"NAME_DE": "Quivicán",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Mayabeque",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29253,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q2123580"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-80.071111111,
+					22.808611111
+				]
+			},
+			"properties": {
+				"NAME": "Sagua la Grande",
+				"NAME_EN": "Sagua La Grande",
+				"NAME_IT": "Sagua la Grande",
+				"NAME_DE": "Sagua la Grande",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Villa Clara",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 53077,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q5030"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.498888888,
+					22.888888888
+				]
+			},
+			"properties": {
+				"NAME": "San Antonio de los Baños",
+				"NAME_EN": "San Antonio de los Baños",
+				"NAME_IT": "San Antonio de los Baños",
+				"NAME_DE": "San Antonio de los Baños",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Artemisa",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 33811,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q114984"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74.807777777,
+					20.056944444
+				]
+			},
+			"properties": {
+				"NAME": "San Antonio del Sur",
+				"NAME_EN": "San Antonio del Sur",
+				"NAME_IT": "San Antonio del Sur",
+				"NAME_DE": "San Antonio del Sur",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Guantánamo",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 25752,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q167235"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-83.051111111,
+					22.716944444
+				]
+			},
+			"properties": {
+				"NAME": "San Cristóbal",
+				"NAME_EN": "San Cristóbal",
+				"NAME_IT": "San Cristóbal",
+				"NAME_DE": "San Cristóbal",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Pinar del Río",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 29119,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q559801"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82.155833333,
+					22.967777777
+				]
+			},
+			"properties": {
+				"NAME": "San José de las Lajas",
+				"NAME_EN": "San José de las Lajas",
+				"NAME_IT": "San José de las Lajas",
+				"NAME_DE": "San José de las Lajas",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Mayabeque",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 80960,
+				"POP1950": 0,
+				"populationDate": "2021-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1001941"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-83.768055555,
+					22.282777777
+				]
+			},
+			"properties": {
+				"NAME": "San Luis",
+				"NAME_EN": "San Luis",
+				"NAME_IT": "San Luis",
+				"NAME_DE": "San Luis",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Pinar del Río",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 33039,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1817531"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81.906944444,
+					22.781944444
+				]
+			},
+			"properties": {
+				"NAME": "San Nicolás de Bari",
+				"NAME_EN": "San Nicolás de Bari",
+				"NAME_IT": "San Nicolás de Bari",
+				"NAME_DE": "San Nicolás de Bari",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Mayabeque",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21563,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q270090"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-79.443888888,
+					21.933888888
+				]
+			},
+			"properties": {
+				"NAME": "Sancti Spíritus",
+				"NAME_EN": "Sancti Spíritus",
+				"NAME_IT": "Sancti Spíritus",
+				"NAME_DE": "Sancti Spíritus",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Sancti Spíritus",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 138504,
+				"POP1950": 0,
+				"populationDate": "2012-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q845720"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-79.953055555,
+					22.406666666
+				]
+			},
+			"properties": {
+				"NAME": "Santa Clara",
+				"NAME_EN": "Santa Clara",
+				"NAME_IT": "Santa Clara",
+				"NAME_DE": "Santa Clara",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Villa Clara",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 247436,
+				"POP1950": 0,
+				"populationDate": "2020-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q211590"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-80.290555555,
+					22.416388888
+				]
+			},
+			"properties": {
+				"NAME": "Santa Isabel de las Lajas",
+				"NAME_EN": "Lajas",
+				"NAME_IT": "Lajas",
+				"NAME_DE": "Lajas",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Cienfuegos",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 22602,
+				"POP1950": 0,
+				"populationDate": "2004-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q5045"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75.829444444,
+					20.021666666
+				]
+			},
+			"properties": {
+				"NAME": "Santiago de Cuba",
+				"NAME_EN": "Santiago de Cuba",
+				"NAME_IT": "Santiago di Cuba",
+				"NAME_DE": "Santiago de Cuba",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Santiago de Cuba",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 506037,
+				"POP1950": 0,
+				"populationDate": "2012-09-14T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q117040"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-77.521111111,
+					21.238888888
+				]
+			},
+			"properties": {
+				"NAME": "Sibanicú",
+				"NAME_EN": "Sibanicú",
+				"NAME_IT": "Sibanicú",
+				"NAME_DE": "Sibanicú",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Camagüey",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 28930,
+				"POP1950": 0,
+				"populationDate": "2022-12-31T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q537161"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-79.265,
+					22.005
+				]
+			},
+			"properties": {
+				"NAME": "Taguasco",
+				"NAME_EN": "Taguasco",
+				"NAME_IT": "Taguasco",
+				"NAME_DE": "Taguasco",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Sancti Spíritus",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 32968,
+				"POP1950": 0,
+				"populationDate": "2022-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q862734"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81.286111111,
+					23.139444444
+				]
+			},
+			"properties": {
+				"NAME": "Varadero",
+				"NAME_EN": "Varadero",
+				"NAME_IT": "Varadero",
+				"NAME_DE": "Varadero",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Matanzas",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 21170,
+				"POP1950": 0,
+				"populationDate": "2010-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q726751"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-76.946944444,
+					20.276666666
+				]
+			},
+			"properties": {
+				"NAME": "Yara",
+				"NAME_EN": "Yara",
+				"NAME_IT": "Yara",
+				"NAME_DE": "Yara",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Granma",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 59415,
+				"POP1950": 0,
+				"populationDate": "2004-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2061386"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74.924444444,
+					20.35
+				]
+			},
+			"properties": {
+				"NAME": "Yateras",
+				"NAME_EN": "Yateras",
+				"NAME_IT": "Yateras",
+				"NAME_DE": "Yateras",
+				"ADM0NAME": "Cuba",
+				"ADM1NAME": "Guantánamo",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3309,
+				"POP1950": 0,
+				"populationDate": null,
+				"wikidata": "http://www.wikidata.org/entity/Q1026971"
+			}
+		}
+	]
+}

@@ -1,0 +1,325 @@
+{
+	"pando": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Beni",
+			"La Paz"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cobija",
+			"nameDe": "Cobija",
+			"nameIt": "Cobija",
+			"population": 54386
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It is named after José Manuel Pando, president of Bolivia from 1899 to 1904.",
+				"It became a department in 1938, carved from the rubber lands of the far north.",
+				"Its forests supply much of the Brazil-nut harvest that makes Bolivia the leading exporter of the nuts."
+			],
+			"it": [
+				"Prende il nome da José Manuel Pando, presidente della Bolivia dal 1899 al 1904.",
+				"Divenne dipartimento nel 1938, ricavato dalle terre della gomma dell’estremo nord.",
+				"Le sue foreste forniscono gran parte del raccolto di noci del Brasile che fa della Bolivia il primo esportatore di queste noci."
+			],
+			"de": [
+				"Es ist nach José Manuel Pando benannt, Präsident Boliviens von 1899 bis 1904.",
+				"Es wurde 1938 ein Departamento, gebildet aus den Kautschukgebieten des hohen Nordens.",
+				"Seine Wälder liefern einen Großteil der Paranüsse, die Bolivien zum führenden Exporteur dieser Nüsse machen."
+			]
+		}
+	},
+	"beni": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cochabamba",
+			"La Paz",
+			"Pando",
+			"Santa Cruz"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Trinidad",
+			"nameDe": "Trinidad",
+			"nameIt": "Trinidad",
+			"population": 124357
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It is named after the Beni River, whose name is often said to mean “wind” in a native language; the origin is uncertain.",
+				"Its Llanos de Moxos, vast grassy plains, lie flooded for months in the rainy season.",
+				"Pre-Columbian peoples built raised fields, causeways and mounds across these plains."
+			],
+			"it": [
+				"Prende il nome dal fiume Beni, il cui nome significherebbe “vento” in una lingua indigena; l’origine è incerta.",
+				"I suoi Llanos de Moxos, vaste pianure erbose, restano allagati per mesi nella stagione delle piogge.",
+				"I popoli precolombiani costruirono campi rialzati, strade rialzate e tumuli in queste pianure."
+			],
+			"de": [
+				"Es ist nach dem Río Beni benannt, dessen Name oft als „Wind“ in einer indigenen Sprache gedeutet wird; die Herkunft ist unsicher.",
+				"Seine Llanos de Moxos, weite Grasebenen, stehen in der Regenzeit monatelang unter Wasser.",
+				"Vorkolumbische Völker legten in diesen Ebenen Hochbeete, Dammwege und Hügel an."
+			]
+		}
+	},
+	"la-paz": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Beni",
+			"Cochabamba",
+			"Oruro",
+			"Pando"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "El Alto",
+			"nameDe": "El Alto",
+			"nameIt": "El Alto",
+			"population": 885035
+		},
+		"peak": {
+			"name": "Nevado Illimani",
+			"elevation": 6402
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"It is named after its capital, Nuestra Señora de La Paz, “Our Lady of Peace”, founded in 1548.",
+				"It holds the Bolivian shore of Lake Titicaca.",
+				"The ruins of Tiwanaku, centre of an Andean civilisation that flourished around 500 to 1000 AD, lie in it."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, Nuestra Señora de La Paz, “Nostra Signora della Pace”, fondato nel 1548.",
+				"Comprende la sponda boliviana del lago Titicaca.",
+				"Vi si trovano le rovine di Tiwanaku, centro di una civiltà andina fiorita all’incirca tra il 500 e il 1000 d.C."
+			],
+			"de": [
+				"Es ist nach seiner Hauptstadt benannt, Nuestra Señora de La Paz, „Unsere Liebe Frau des Friedens“, gegründet 1548.",
+				"Es umfasst das bolivianische Ufer des Titicacasees.",
+				"In ihm liegen die Ruinen von Tiwanaku, Zentrum einer Andenkultur, die etwa von 500 bis 1000 n. Chr. blühte."
+			]
+		}
+	},
+	"santa-cruz": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Beni",
+			"Chuquisaca",
+			"Cochabamba"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Santa Cruz de la Sierra",
+			"nameDe": "Santa Cruz de la Sierra",
+			"nameIt": "Santa Cruz de la Sierra",
+			"population": 1606671
+		},
+		"peak": {
+			"name": "Serrania de Santiago",
+			"elevation": 1555
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"It takes its name from its capital, which Ñuflo de Chávez named in 1561 after his home town in Extremadura, Spain.",
+				"The Jesuit Missions of the Chiquitos, six mission towns in its east, are a UNESCO site.",
+				"Che Guevara was captured and killed at La Higuera, in its hills, in 1967."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, che Ñuflo de Chávez chiamò così nel 1561 dalla sua città natale in Estremadura, in Spagna.",
+				"Le missioni gesuitiche dei Chiquitos, sei cittadine di missione nella sua parte orientale, sono un sito UNESCO.",
+				"Che Guevara fu catturato e ucciso a La Higuera, sulle sue colline, nel 1967."
+			],
+			"de": [
+				"Es trägt den Namen seiner Hauptstadt, die Ñuflo de Chávez 1561 nach seiner Heimatstadt in der spanischen Extremadura benannte.",
+				"Die Jesuitenreduktionen der Chiquitos, sechs Missionsorte in seinem Osten, sind UNESCO-Welterbe.",
+				"Che Guevara wurde 1967 in La Higuera, in seinen Hügeln, gefangen genommen und getötet."
+			]
+		}
+	},
+	"cochabamba": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Beni",
+			"Chuquisaca",
+			"La Paz",
+			"Oruro",
+			"Potosí",
+			"Santa Cruz"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cochabamba",
+			"nameDe": "Cochabamba",
+			"nameIt": "Cochabamba",
+			"population": 661484
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name is usually traced to the Quechua “qucha pampa”, “plain of lakes”.",
+				"Its fertile valleys have long been called the granary of Bolivia.",
+				"In its tropical Chapare lowlands, Evo Morales led the coca growers’ unions before he became president."
+			],
+			"it": [
+				"Il nome viene di solito ricondotto al quechua “qucha pampa”, “pianura dei laghi”.",
+				"Le sue valli fertili sono chiamate da tempo il granaio della Bolivia.",
+				"Nelle sue pianure tropicali del Chapare, Evo Morales guidò i sindacati dei coltivatori di coca prima di diventare presidente."
+			],
+			"de": [
+				"Der Name wird meist auf das Quechua „qucha pampa“ zurückgeführt, „Ebene der Seen“.",
+				"Seine fruchtbaren Täler gelten seit Langem als Kornkammer Boliviens.",
+				"Im tropischen Tiefland des Chapare führte Evo Morales die Gewerkschaften der Kokabauern, bevor er Präsident wurde."
+			]
+		}
+	},
+	"oruro": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cochabamba",
+			"La Paz",
+			"Potosí"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Oruro",
+			"nameDe": "Oruro",
+			"nameIt": "Oruro",
+			"population": 297497
+		},
+		"peak": {
+			"name": "Nevado Sajama",
+			"elevation": 6542
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"It is named after its capital, whose name is usually traced to the Uru people of the nearby lakes.",
+				"Lake Poopó, once Bolivia’s second-largest lake, had almost entirely dried out by 2015.",
+				"Sajama, Bolivia’s first national park, was created in it in 1939."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, il cui nome viene di solito ricondotto al popolo degli Uru dei laghi vicini.",
+				"Il lago Poopó, un tempo il secondo lago della Bolivia, nel 2015 si era quasi del tutto prosciugato.",
+				"Il Sajama, primo parco nazionale della Bolivia, vi fu istituito nel 1939."
+			],
+			"de": [
+				"Es ist nach seiner Hauptstadt benannt, deren Name meist auf das Volk der Uru an den nahen Seen zurückgeführt wird.",
+				"Der Poopó-See, einst der zweitgrößte See Boliviens, war 2015 fast vollständig ausgetrocknet.",
+				"Sajama, Boliviens erster Nationalpark, wurde 1939 in ihm eingerichtet."
+			]
+		}
+	},
+	"chuquisaca": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cochabamba",
+			"Potosí",
+			"Santa Cruz",
+			"Tarija"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sucre",
+			"nameDe": "Sucre",
+			"nameIt": "Sucre",
+			"population": 296125
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Chuquisaca is the old native name of its capital, Sucre; the meaning of the word is disputed.",
+				"Thousands of dinosaur footprints cover a near-vertical limestone wall at Cal Orck’o, outside Sucre.",
+				"A rising in its capital on 25 May 1809 was one of the first calls for independence in Spanish America."
+			],
+			"it": [
+				"Chuquisaca è l’antico nome indigeno del suo capoluogo, Sucre; il significato della parola è discusso.",
+				"Migliaia di impronte di dinosauro coprono una parete calcarea quasi verticale a Cal Orck’o, fuori Sucre.",
+				"Una rivolta nel suo capoluogo il 25 maggio 1809 fu uno dei primi appelli all’indipendenza nell’America spagnola."
+			],
+			"de": [
+				"Chuquisaca ist der alte indigene Name seiner Hauptstadt Sucre; die Bedeutung des Wortes ist umstritten.",
+				"Tausende Dinosaurierspuren bedecken bei Cal Orck’o, außerhalb von Sucre, eine fast senkrechte Kalksteinwand.",
+				"Ein Aufstand in seiner Hauptstadt am 25. Mai 1809 war einer der ersten Rufe nach Unabhängigkeit in Spanisch-Amerika."
+			]
+		}
+	},
+	"potosi": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Chuquisaca",
+			"Cochabamba",
+			"Oruro",
+			"Tarija"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Potosí",
+			"nameDe": "Potosí",
+			"nameIt": "Potosí",
+			"population": 218336
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"It is named after its capital; the name is often linked to a Quechua or Aymara word for “thunder” or “burst”, but nobody is sure.",
+				"The Salar de Uyuni, the largest salt flat in the world, lies in it.",
+				"Its Eduardo Avaroa reserve holds the red Laguna Colorada, a breeding ground for flamingos."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo; il nome è spesso collegato a una parola quechua o aymara per “tuono” o “scoppio”, ma nessuno ne è certo.",
+				"Vi si trova il Salar de Uyuni, la più grande distesa salata del mondo.",
+				"La sua riserva Eduardo Avaroa comprende la rossa Laguna Colorada, luogo di riproduzione dei fenicotteri."
+			],
+			"de": [
+				"Es ist nach seiner Hauptstadt benannt; der Name wird oft mit einem Quechua- oder Aymara-Wort für „Donner“ oder „Knall“ verbunden, doch sicher ist das niemand.",
+				"In ihm liegt der Salar de Uyuni, die größte Salzpfanne der Welt.",
+				"Sein Reservat Eduardo Avaroa umfasst die rote Laguna Colorada, ein Brutgebiet für Flamingos."
+			]
+		}
+	},
+	"tarija": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Chuquisaca",
+			"Potosí"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tarija",
+			"nameDe": "Tarija",
+			"nameIt": "Tarija",
+			"population": 238942
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"It is named after its capital, which is usually said to take its name from Francisco de Tarija, an early Spanish explorer of the valley.",
+				"It is Bolivia’s main wine region, with some of the highest vineyards in the world.",
+				"The gas fields of its Chaco hold most of Bolivia’s natural-gas reserves."
+			],
+			"it": [
+				"Prende il nome dal suo capoluogo, che secondo la tradizione deve il nome a Francisco de Tarija, uno dei primi esploratori spagnoli della valle.",
+				"È la principale regione vinicola della Bolivia, con alcuni dei vigneti più alti del mondo.",
+				"I giacimenti del suo Chaco contengono la maggior parte delle riserve di gas naturale della Bolivia."
+			],
+			"de": [
+				"Es ist nach seiner Hauptstadt benannt, die ihren Namen der Überlieferung nach von Francisco de Tarija hat, einem frühen spanischen Erkunder des Tals.",
+				"Es ist Boliviens wichtigstes Weinbaugebiet, mit einigen der höchstgelegenen Weinberge der Welt.",
+				"Die Gasfelder seines Chaco bergen den Großteil der bolivianischen Erdgasreserven."
+			]
+		}
+	}
+}

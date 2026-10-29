@@ -165,6 +165,7 @@ export type TranslationKey =
 	| 'mapType.municipalities'
 	| 'mapType.polishCounties'
 	| 'mapType.croatianCounties'
+	| 'mapType.boliviaDepartments'
 	| 'mapPart.north'
 	| 'mapPart.south'
 	| 'mapPart.east'
@@ -406,6 +407,7 @@ const en: Dictionary = {
 	'mapType.municipalities': 'Municipalities',
 	'mapType.polishCounties': 'Counties',
 	'mapType.croatianCounties': 'Counties',
+	'mapType.boliviaDepartments': 'Departments',
 	'mapPart.north': 'North',
 	'mapPart.south': 'South',
 	'mapPart.east': 'East',
@@ -664,6 +666,7 @@ const de: Dictionary = {
 	// A powiat is a Kreis in German, a županija a Gespanschaft.
 	'mapType.polishCounties': 'Kreise',
 	'mapType.croatianCounties': 'Gespanschaften',
+	'mapType.boliviaDepartments': 'Departamentos',
 	'mapPart.north': 'Norden',
 	'mapPart.south': 'Süden',
 	'mapPart.east': 'Osten',
@@ -924,6 +927,7 @@ const it: Dictionary = {
 	// A powiat is a distretto in Italian, a županija a regione.
 	'mapType.polishCounties': 'Distretti',
 	'mapType.croatianCounties': 'Regioni',
+	'mapType.boliviaDepartments': 'Dipartimenti',
 	'mapPart.north': 'Nord',
 	'mapPart.south': 'Sud',
 	'mapPart.east': 'Est',

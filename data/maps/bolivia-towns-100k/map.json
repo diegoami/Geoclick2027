@@ -1,0 +1,280 @@
+{
+	"id": "bolivia-towns-100k",
+	"name": "Bolivia — Towns",
+	"country": "Bolivia",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/bolivia.geojson",
+	"regionsMap": "bolivia-departments",
+	"extent": "regions",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "riberalta",
+			"name": "Riberalta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.066111111,
+				-11.005
+			],
+			"bbox": [
+				-66.066111111,
+				-11.005,
+				-66.066111111,
+				-11.005
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "trinidad",
+			"name": "Trinidad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.9,
+				-14.833333333
+			],
+			"bbox": [
+				-64.9,
+				-14.833333333,
+				-64.9,
+				-14.833333333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "la-paz",
+			"name": "La Paz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.133333333,
+				-16.495833333
+			],
+			"bbox": [
+				-68.133333333,
+				-16.495833333,
+				-68.133333333,
+				-16.495833333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "el-alto",
+			"name": "El Alto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.163333333,
+				-16.504722222
+			],
+			"bbox": [
+				-68.163333333,
+				-16.504722222,
+				-68.163333333,
+				-16.504722222
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "montero",
+			"name": "Montero",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.255277777,
+				-17.3425
+			],
+			"bbox": [
+				-63.255277777,
+				-17.3425,
+				-63.255277777,
+				-17.3425
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cochabamba",
+			"name": "Cochabamba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.1570139,
+				-17.3935419
+			],
+			"bbox": [
+				-66.1570139,
+				-17.3935419,
+				-66.1570139,
+				-17.3935419
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "quillacollo",
+			"name": "Quillacollo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.281666666,
+				-17.3975
+			],
+			"bbox": [
+				-66.281666666,
+				-17.3975,
+				-66.281666666,
+				-17.3975
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sacaba",
+			"name": "Sacaba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.040833333,
+				-17.404166666
+			],
+			"bbox": [
+				-66.040833333,
+				-17.404166666,
+				-66.040833333,
+				-17.404166666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "warnes",
+			"name": "Warnes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.16472222,
+				-17.51027778
+			],
+			"bbox": [
+				-63.16472222,
+				-17.51027778,
+				-63.16472222,
+				-17.51027778
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "santa-cruz-de-la-sierra",
+			"name": "Santa Cruz de la Sierra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.1975,
+				-17.789166666
+			],
+			"bbox": [
+				-63.1975,
+				-17.789166666,
+				-63.1975,
+				-17.789166666
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "oruro",
+			"name": "Oruro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.116666666,
+				-17.966666666
+			],
+			"bbox": [
+				-67.116666666,
+				-17.966666666,
+				-67.116666666,
+				-17.966666666
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sucre",
+			"name": "Sucre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.26,
+				-19.0475
+			],
+			"bbox": [
+				-65.26,
+				-19.0475,
+				-65.26,
+				-19.0475
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "potosi",
+			"name": "Potosí",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.753333333,
+				-19.589166666
+			],
+			"bbox": [
+				-65.753333333,
+				-19.589166666,
+				-65.753333333,
+				-19.589166666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tarija",
+			"name": "Tarija",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.734166666,
+				-21.533888888
+			],
+			"bbox": [
+				-64.734166666,
+				-21.533888888,
+				-64.734166666,
+				-21.533888888
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"riberalta",
+		"trinidad",
+		"la-paz",
+		"el-alto",
+		"montero",
+		"cochabamba",
+		"quillacollo",
+		"sacaba",
+		"warnes",
+		"santa-cruz-de-la-sierra",
+		"oruro",
+		"sucre",
+		"potosi",
+		"tarija"
+	]
+}

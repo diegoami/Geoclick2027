@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { validateTownBindingsCache, type TownBindingsCache } from './townBindings.js';
 import { canonicalRegionAtPoint, type NamedRegion } from './boundaryRegions.js';
+import { applyBoundaryRenames } from './boundaryRenames.js';
 // Snapshot towns for the v1.0 batch where Natural Earth is incomplete.
 // Run in WSL with GDAL and Natural Earth inputs (Lithuanian county fallback).
 // Wikidata CC0 and Natural Earth public domain; refresh deliberately and commit.
@@ -20,10 +21,14 @@ interface Country {
 	population: number;
 	regionClass?: string;
 	boundarySource?: string;
+	// Natural Earth admin-1 polygons as the regional source, with the same
+	// renames the administrative map applies (v1.1: Bolivia and Cuba).
+	naturalEarthRegions?: Record<string, string>;
 	minimumYear?: number;
 	clipToBoundary?: boolean;
 	// A sourced representative centre when a detailed island is absent at map scale.
 	coordinateOverrides?: Record<string, [number, number]>;
+	coordinateOverrideSource?: string;
 	excludedItems?: Record<string, string>;
 }
 const countries: Country[] = [
@@ -144,8 +149,67 @@ const countries: Country[] = [
 		population: 1000,
 		minimumYear: 2000,
 		boundarySource: 'data/boundaries/uzbekistan-gb-9469f09.geojson'
+	},
+	{
+		id: 'bolivia',
+		name: 'Bolivia',
+		iso: 'BOL',
+		language: 'es',
+		population: 1000,
+		minimumYear: 2000,
+		naturalEarthRegions: { 'El Beni': 'Beni' },
+		clipToBoundary: true,
+		// Cobija, Pando's capital on the Acre river, falls just outside the
+		// generalized department; Natural Earth's own centre lies inside it.
+		coordinateOverrides: { Q34995: [-68.7688265, -11.0205201] },
+		coordinateOverrideSource:
+			'Natural Earth (public domain) populated-places centre, inside the generalized department',
+		excludedItems: {
+			Q1026244:
+				'San Joaquín (Beni): 97,625 is not this town of a few thousand; implausible source value'
+		}
+	},
+	{
+		id: 'cuba',
+		name: 'Cuba',
+		iso: 'CUB',
+		language: 'es',
+		population: 1000,
+		minimumYear: 2000,
+		naturalEarthRegions: { 'Ciudad de la Habana': 'La Habana' },
+		clipToBoundary: true,
+		excludedItems: {
+			Q603146:
+				'Carlos Manuel de Céspedes: undated 224,488 is about ten times the municipality; implausible source value'
+		}
 	}
 ];
+// The administrative map's own Natural Earth polygons, renamed as it renames them.
+function naturalEarthRegions(admin: string, renames: Record<string, string>) {
+	const rows = (
+		JSON.parse(
+			execFileSync(
+				'ogr2ogr',
+				[
+					'-f',
+					'GeoJSON',
+					'/vsistdout/',
+					ADMIN1_SHP,
+					'-where',
+					"admin = '" + admin + "'",
+					'-select',
+					'name'
+				],
+				{ encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }
+			)
+		) as { features: NamedRegion[] }
+	).features.map((f) => ({ properties: { name: f.properties.name, admin }, geometry: f.geometry }));
+	if (!rows.length) throw new Error('No Natural Earth admin-1 rows for ' + admin);
+	return {
+		source: 'Natural Earth 10m admin-1 states and provinces (public domain)',
+		features: applyBoundaryRenames(rows, admin, renames)
+	};
+}
 const args = parseArgs(process.argv.slice(2));
 if (Object.hasOwn(args, 'bindings') && (!args.bindings?.trim() || !args.country?.trim()))
 	throw new Error('--bindings requires one explicit --country and a cache file');
@@ -246,7 +310,9 @@ for (const country of selected) {
 				source: unknown;
 				features: NamedRegion[];
 			})
-		: undefined;
+		: country.naturalEarthRegions
+			? naturalEarthRegions(country.name, country.naturalEarthRegions)
+			: undefined;
 	const boundaryNames = new Set(boundary?.features.map((f) => String(f.properties.name)) ?? []);
 	const excluded: { item: string | undefined; name: string; reason: string }[] = [];
 	const pointOverride = (row: TownBinding) =>
@@ -411,6 +477,7 @@ for (const country of selected) {
 					? {
 							coordinateOverrides: country.coordinateOverrides,
 							coordinateOverrideSource:
+								country.coordinateOverrideSource ??
 								'Natural Earth (public domain); same representative centres as the existing maps'
 						}
 					: {}),

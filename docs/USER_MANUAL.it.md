@@ -31,7 +31,7 @@ Le immagini condivise con il manuale inglese mostrano l’interfaccia in inglese
 
 ## 1. Che cos’è Geoclick
 
-Impari dove si trovano paesi, capitali, regioni e città, trascinando i loro nomi sulla mappa. Il catalogo comprende **217 mappe in 79 paesi e nei sei continenti**. Ogni mappa offre Conoscenza, Panoramica, Quiz e Tour. L’applicazione ricorda i risultati sul dispositivo, senza account: ogni risposta giusta al primo tentativo fa salire un nome di un gradino, ogni errore lo fa scendere di uno. Pulsanti e curiosità sono disponibili in inglese, tedesco e italiano.
+Impari dove si trovano paesi, capitali, regioni e città, trascinando i loro nomi sulla mappa. Il catalogo comprende **221 mappe in 81 paesi e nei sei continenti**. Ogni mappa offre Conoscenza, Panoramica, Quiz e Tour. L’applicazione ricorda i risultati sul dispositivo, senza account: ogni risposta giusta al primo tentativo fa salire un nome di un gradino, ogni errore lo fa scendere di uno. Pulsanti e curiosità sono disponibili in inglese, tedesco e italiano.
 
 Puoi usare il browser oppure le applicazioni per Windows e Android. Il tutorial iniziale presenta i comandi; puoi ripeterlo in seguito senza modificare i tuoi progressi reali.
 
@@ -232,7 +232,7 @@ Cancellare i dati del sito elimina i progressi di quel browser; disinstallare l�
 
 ## 20. Il catalogo
 
-Il catalogo comprende 217 mappe: paesi e capitali dei sei continenti, regioni o altre suddivisioni nazionali, città e mappe dettagliate. Cerca il paese nella schermata iniziale e apri la casella delle mappe dettagliate quando cerchi suddivisioni più fitte. Singapore usa regioni e 55 aree di pianificazione. Le mappe privilegiano il territorio principale, evitando territori oltremare molto distanti che renderebbero il resto troppo piccolo.
+Il catalogo comprende 221 mappe: paesi e capitali dei sei continenti, regioni o altre suddivisioni nazionali, città e mappe dettagliate. Cerca il paese nella schermata iniziale e apri la casella delle mappe dettagliate quando cerchi suddivisioni più fitte. Singapore usa regioni e 55 aree di pianificazione. Le mappe privilegiano il territorio principale, evitando territori oltremare molto distanti che renderebbero il resto troppo piccolo.
 
 Le fonti includono Natural Earth, Wikidata e registri o confini aperti con le rispettive attribuzioni. Una selezione di città non costituisce un censimento completo di ogni centro abitato. Dati e suddivisioni cambiano nel tempo; il gioco registra le fonti usate per costruire le mappe.
 
