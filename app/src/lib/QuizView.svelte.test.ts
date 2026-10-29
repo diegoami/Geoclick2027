@@ -448,4 +448,17 @@ describe('QuizView (FT-59)', () => {
 		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('1 / 16 named');
 		expect(quizMode()).toBe('name');
 	});
+	it("keeps a round's mix-ups through a trip away and back (#276)", async () => {
+		const first = await mount();
+		const [right, wrong] = slipNames();
+		await drop(right, right);
+		await drop(wrong, right);
+		first.unmount();
+
+		const screen = await mount();
+		await finish();
+		expect(screen.container.querySelector('[data-testid="confusions"]')?.textContent).toContain(
+			`${wrong} placed on ${right}`
+		);
+	});
 });

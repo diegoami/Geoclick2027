@@ -30,6 +30,8 @@ export interface RoundInProgress {
 	mode?: 'place' | 'name';
 	/** Time played so far in a timed round (#267), without time spent away. */
 	elapsedMs?: number;
+	/** This round's mix-ups so far, for its score panel (#266, #276). */
+	confusions?: { targetId: string; chosenId: string }[];
 }
 
 // Plain Map: nothing renders from it, QuizView copies what it needs into its
