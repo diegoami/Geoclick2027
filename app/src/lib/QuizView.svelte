@@ -170,13 +170,25 @@
 		showAsked();
 	}
 
+	// A pulsing "?" on the place asked about. The hover blue alone sits too
+	// close to the map's own blue and violet slots to be unmistakable, and a
+	// town's dot is small; the marker works the same on both kinds of map.
+	let askMarker: maplibregl.Marker | undefined;
+
 	/** Lights up the place being asked about, and brings it into view if the
 	 * map bar or the tray would hide it. */
 	function showAsked() {
+		askMarker?.remove();
+		askMarker = undefined;
 		if (!map || !styleLoaded || !container) return;
 		const target = asking ? targetsById.get(asking) : undefined;
 		setHover(target?.name);
 		if (!target) return;
+		const el = document.createElement('div');
+		el.className = 'ask-marker';
+		el.textContent = '?';
+		el.setAttribute('aria-hidden', 'true');
+		askMarker = new maplibregl.Marker({ element: el }).setLngLat(target.centroid).addTo(map);
 		const at = map.project(target.centroid);
 		const rect = container.getBoundingClientRect();
 		const trayTop = rect.height - (trayHeightPx ?? trayMinPx);
@@ -197,7 +209,8 @@
 		mode = next;
 		setQuizMode(next);
 		selectedId = undefined;
-		setHover(undefined);
+		asking = undefined;
+		showAsked();
 		clearAllVisuals();
 		startRound(practice);
 	}
@@ -1142,6 +1155,7 @@
 		// setFeatureState would throw on it.
 		for (const timer of flashTimers) clearTimeout(timer);
 		flashTimers.clear();
+		askMarker?.remove();
 		stretched?.destroy();
 		map?.remove();
 		map = undefined;
@@ -1533,6 +1547,33 @@
 		font: inherit;
 		font-weight: 600;
 		cursor: pointer;
+	}
+	/* The place Name places asks about (#264). Global: MapLibre owns the
+	   marker's element, outside this component's scoped markup. */
+	:global(.ask-marker) {
+		display: grid;
+		place-items: center;
+		width: 1.6rem;
+		height: 1.6rem;
+		border: 2px solid #ffffff;
+		border-radius: 50%;
+		background: #b5691f;
+		color: #ffffff;
+		font-family: system-ui, sans-serif;
+		font-weight: 700;
+		box-shadow: 0 0 0 0 rgba(181, 105, 31, 0.6);
+		animation: ask-pulse 1.6s ease-out infinite;
+		pointer-events: none;
+	}
+	@keyframes ask-pulse {
+		to {
+			box-shadow: 0 0 0 14px rgba(181, 105, 31, 0);
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		:global(.ask-marker) {
+			animation: none;
+		}
 	}
 	/* Which way the quiz asks (#264): two small joined pills. */
 	.mode-switch {

@@ -588,7 +588,7 @@ const de: Dictionary = {
 	'known.resetTitle': 'Deinen Fortschritt auf {map} zurücksetzen?',
 	'known.resetBody':
 		'Alle Namen dieser Karte gelten wieder als unbekannt. Deine anderen Karten, deine Favoriten und dein letztes Ergebnis bleiben, wie sie sind.',
-	'known.resetConfirm': 'Zurücksetzen',
+	'known.resetConfirm': 'Ja, zurücksetzen',
 	'known.resetCancel': 'Abbrechen',
 	'known.resetDone': 'Dein Fortschritt auf {map} ist zurückgesetzt.',
 	'known.resetFailed': 'Das Zurücksetzen hat nicht geklappt. Versuch es noch einmal.',
@@ -848,7 +848,7 @@ const it: Dictionary = {
 	'known.resetTitle': 'Azzerare i tuoi progressi su {map}?',
 	'known.resetBody':
 		"Tutti i nomi di questa mappa tornano sconosciuti. Le altre mappe, i preferiti e l'ultimo punteggio restano come sono.",
-	'known.resetConfirm': 'Azzera',
+	'known.resetConfirm': 'Sì, azzera',
 	'known.resetCancel': 'Annulla',
 	'known.resetDone': 'I tuoi progressi su {map} sono stati azzerati.',
 	'known.resetFailed': "L'azzeramento non è riuscito. Riprova.",

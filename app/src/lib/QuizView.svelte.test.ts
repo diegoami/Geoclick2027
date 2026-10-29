@@ -133,7 +133,26 @@ const fake = vi.hoisted(() => {
 	return { mapDef, state, createMap, Popup };
 });
 
-vi.mock('maplibre-gl', () => ({ Popup: fake.Popup }));
+vi.mock('maplibre-gl', () => ({
+	Popup: fake.Popup,
+	// Name places' "?" on the asked place (#264): an element in the container.
+	Marker: class {
+		private readonly el: HTMLElement;
+		constructor({ element }: { element: HTMLElement }) {
+			this.el = element;
+		}
+		setLngLat() {
+			return this;
+		}
+		addTo(map: { getContainer(): HTMLElement }) {
+			map.getContainer().append(this.el);
+			return this;
+		}
+		remove() {
+			this.el.remove();
+		}
+	}
+}));
 vi.mock('./geoclickMap', () => ({
 	fetchMapDefAndStyle: async () => ({ mapDef: fake.mapDef, style: {} }),
 	createMap: fake.createMap
@@ -415,6 +434,7 @@ describe('QuizView (FT-59)', () => {
 		await expect.poll(() => fake.state.hovered).toBeDefined();
 		const asked = fake.state.hovered!;
 		expect(choices().some((c) => c.textContent?.includes(asked))).toBe(true);
+		expect(document.querySelectorAll('.ask-marker')).toHaveLength(1);
 		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 16 named');
 
 		// The number key of the right name answers it.

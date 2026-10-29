@@ -58,12 +58,14 @@ and capitals of a continent are.
     add its name and read a fact about it;
   - **Overview:** the whole map with the names written on it, to look at and
     learn from, as many as fit without overlapping, the rest a zoom away;
-  - **Quiz:** the game itself. Drag each name from a tray onto the map;
+  - **Quiz:** the game itself. Drag (or tap) each name from a tray onto the
+    map, or name the place that lights up;
   - **Tour:** the map flies from place to place on its own, showing each name
     in turn.
-- **It remembers what you know.** Place a name right three times in a row with
-  no mistake and it counts as known; one mistake and that name starts again.
-  The better you know a map, the fewer names its quiz offers at a time.
+- **It remembers what you know.** Each name climbs one step every time you
+  place it right on the first try, and counts as known after three steps; a
+  mistake takes it down one step. The better you know a map, the fewer names
+  its quiz offers at a time.
 - **Most places have something to say.** A name's origin and something about
   the place: see [Facts and name origins](#12-facts-and-name-origins).
 - **Three languages:** English, German and Italian, for the buttons and for
@@ -155,6 +157,31 @@ Standard maps come first in a country's menu, whole nations before their
 parts. The finer ones are listed below a line, after the standard ones (see
 [Detailed maps](#detailed-maps)).
 
+### What you know, on the world map
+
+Once you have played, the world map shows how far you have got:
+
+- A country you have played is painted from pale to full green, by how much of
+  it you know. Its regions and towns maps count; detailed maps don't.
+- A country you know completely gets a **gold outline**.
+- A country you have never played keeps its continent's colour.
+
+A small legend on the map shows the green ramp and your total across all
+maps, for example "1 240 / 9 800 names known".
+
+### What to play next
+
+One line above the map (or the list) suggests a map to play, for example:
+
+- "Continue Italy — Regions — 14 / 20 known": a map you have started;
+- "Play Italy — Regions again — 3 slipped a level last time": a map where your
+  last round lost ground;
+- "Next: Italy — Towns — you know all of Italy — Regions": the next map of a
+  country whose map you know completely.
+
+Press the line to open that map's quiz. It is hidden when there is nothing to
+suggest, and during the tutorial.
+
 ### The list
 
 The **List** view is the same rows without the map, in alphabetical groups, with
@@ -242,10 +269,17 @@ a second line rather than scrolling.
 
 - **Terrain**: shows or hides the landscape behind the map (see
   [Terrain](#13-terrain)).
+- **Sound**, on the quiz only, beside **Terrain**: turns the answer sounds on
+  or off. It starts off. When it is on, a right answer plays two short, quiet,
+  rising notes and a wrong one a low note. Your choice is kept.
 - **Tutorial**: starts the tutorial.
 - **On the quiz only**, a line showing your progress: "Drag each name onto its
   region — 5 / 20 placed", with a note such as "3 names at a time" when the
-  quiz holds names back.
+  quiz holds names back. On the same line, two joined buttons, **Place names**
+  and **Name places**, choose how the quiz asks (see
+  [Name places](#name-places)), and before your first answer of a round a
+  **Practise the 6 not yet known** button may appear (see
+  [Every round is the whole map](#every-round-is-the-whole-map)).
 
 **Top right:**
 
@@ -291,18 +325,19 @@ A map opens here. It shows the names you have earned, and the ones you choose:
 A name is written on the map for either of two reasons:
 
 - **You have placed it right in the quiz** at least once. It is drawn as
-  strongly as you know it:
+  strongly as you know it, by its *level* (see
+  [What counts as known](#9-what-counts-as-known)):
 
 | How the name looks | What it means |
 |---|---|
-| **Known**, solid | you have placed it right **three times in a row**, with no mistake |
-| **Nearly**, lighter | twice in a row |
-| **Seen once**, faint | once |
+| **Known**, solid | the top level: placed right on the first try three times more than you have missed it, roughly |
+| **Nearly**, lighter | one step below |
+| **Seen once**, faint | two steps below |
 
 - **You tapped it.** It is then drawn as **Chosen**.
 
-A small legend in the bottom-left corner names the four styles. Names you have
-never placed cleanly are left off until you tap their place.
+A small legend in the bottom-left corner names the four styles. A name with no
+level is left off until you tap its place.
 
 **Tap a place to put its name on the map; tap it again to take it off.** Tapping
 a place whose name is already shown hides it, so you decide which names are in
@@ -316,8 +351,24 @@ something about it (if there is anything to show; taking a name off closes the c
 
 ![Tapping Sicilia puts its name on the map and opens its fact card](manual/known-fact.jpg)
 
-Because a mistake sets a name back to nothing, this map is an honest picture of
+Because a mistake takes a name down a step, this map is an honest picture of
 what you actually know. Nothing here is scored. On a towns map, tap a town's dot.
+
+**A map you have never played** shows a small card, **"Nothing known yet"**,
+with an **Overview** button to study the names and a **Quiz** button to start
+playing.
+
+### Starting a map over
+
+When you have earned anything on the map, the legend also has a **Reset
+progress** button. It asks first, in a dialog: "Reset your progress on Italy —
+Regions?". **Cancel** leaves everything as it was; **Reset** sends every name
+of this map back to unknown. It also clears the names you tapped and a round
+you left half played. Your other maps, your favourites and the map's last
+score stay as they are.
+
+Do not confuse it with **Clear**, which only takes off the names you chose by
+tapping and changes nothing you have earned.
 
 ## 7. Overview: see every name
 
@@ -378,6 +429,24 @@ same colour on every region.
   forgiving: a drop just next to them still counts for them. The forgiveness
   only ever helps the right answer.
 
+**On a touch screen** your finger would hide the place you are aiming at, so
+while you drag, the name floats above your finger with a small orange-ringed
+pin below it. The pin is the point that counts: the region under the pin
+lights up, and the drop lands where the pin is. Near the top of the screen the
+pin goes below your finger instead. With a mouse, the name lands where the
+pointer is, as before.
+
+### Tapping instead of dragging
+
+You don't have to drag. Tap (or click) a name in the tray to pick it up: it
+lifts and is outlined, and the line "Now tap its place on the map" appears.
+Then tap its place on the map. To let the name go without answering, tap it
+again, tap the tray's empty space, or press Escape.
+
+A tap counts exactly like a drop: small regions are just as forgiving, and on a
+towns map the nearest town counts. Moving the map around while a name is
+picked up doesn't count as an answer.
+
 ### Right
 
 The region turns green, its name stays written on it, and the name leaves the
@@ -396,9 +465,16 @@ moment worth reading it.
 
 ![A wrong drop: Syddanmark dropped elsewhere is shown in its own place](manual/quiz-wrong.jpg)
 
-A name shown after a mistake counts as a mistake in your score, and sends that
-name's streak back to zero, so it has to be placed right three more rounds
-running to count as known again (see [What counts as known](#9-what-counts-as-known)).
+A name shown after a mistake counts as a mistake in your score, and takes that
+name down one step: a known name becomes "nearly" known, and one right answer in
+a later round brings it back (see [What counts as known](#9-what-counts-as-known)).
+
+### Names you mix up
+
+When you drop a name on the wrong place, Geoclick remembers the pair: the name,
+and the place you put it on. In later rounds, a name you mixed up comes into the
+tray together with the name it was mixed up with, so you have to tell the two
+apart. A pair is forgotten once you know both names.
 
 ### Fewer names as you improve
 
@@ -438,19 +514,49 @@ When the last name is placed, a panel appears over the map with your score:
 - **"Done!"**
 - **"5 / 5 placed correctly on the first try."** A name counts only if it was
   right on the very first drop.
+- **"Last time: 14 / 20."** The same count for your previous round on this
+  map, when there was one.
 - **"2 total mistakes."** All wrong drops together.
 - **"2 shown after a mistake."** Only when some names had to be shown.
+- **"Time: 1:42"**, on a timed round only (see [Best time](#best-time)).
 - **"14 / 20 known"** (with "· 3 names at a time" when it applies): where the
-  round leaves you.
+  round leaves you. "· Slipped a level: 2" is added when a mistake took names
+  down a step.
+- **Newly known**: the names this round made known.
+- **To work on**: the names you got wrong.
+- **Mixed up**: each wrong drop as a pair, for example "Molise placed on
+  Abruzzo".
+
+  Press a name in these lists to open its fact card. A long list ends with
+  "+4 more".
+- **Study these** opens Known with the names to work on written on the map as
+  **Chosen**, so you can look at them before the next round.
+- **Practise the 6 not yet known** starts a practice round (see
+  [Every round is the whole map](#every-round-is-the-whole-map)).
 - **×**, top-right, closes the panel so you can look at the finished map. To
   play a new round on that map, choose **Play again** on the map. The map bar's
   **Maps** button returns to the start screen.
 
 ### Every round is the whole map
 
-A quiz always asks for every name on the map. There is no shorter "review
-round" and no separate practice mode: you play the map, and Geoclick keeps track
-of how well you know each name as you go.
+A quiz normally asks for every name on the map, and Geoclick keeps track of how
+well you know each name as you go.
+
+When you know some of a map's names but not all of them, a **Practise the 6 not
+yet known** button offers a shorter round. It appears next to the progress line
+(only before your first answer of a round), on the score panel, and next to
+**Play again**. In a practice round the names you know start out already placed
+on the map, and only the others are asked. The progress line then starts with
+"Practice ·". Answers count exactly as in a full round.
+
+### Best time
+
+Once you know every name of a map, its rounds are timed. Only the time you
+spend in the quiz counts, and no clock shows while you play. The score panel
+then shows the time, for example "Time: 1:42", with **"New best!"** when a
+round with no mistakes beats your best. A round with mistakes says "Only a
+round with no mistakes sets a best time." The best time also shows in
+[My maps](#14-my-maps-favourites-and-recent).
 
 ### Leaving in the middle
 
@@ -459,32 +565,59 @@ You can step out of a round and come back to it. Looking a name up in the
 the names you placed are still marked, and the tray still holds the ones you
 haven't. Reloading the page, or coming back another day, starts a fresh round.
 
+### Name places
+
+The quiz can also ask the other way round. On the progress line, two joined
+buttons choose how it asks: **Place names** (the quiz described so far) and
+**Name places**. In **Name places**, one place on the map lights up blue, and
+the tray offers its name among four names. The other names are its nearest
+neighbours, so you can't guess by distance. As you learn the map, the choice
+grows to five names (from 60 % known) and six (from 85 %).
+
+Pick a name with a tap or a click, or with the number keys **1** to **6**: each
+name shows its number. The progress line reads "Which place is lit up? — 0 / 20
+named". A wrong pick works as in the drag quiz: the place you picked flashes
+red, the right name is shown on the lit-up place, and its fact card opens.
+Answers count towards the same levels as in **Place names**.
+
+Switching between the two starts a new round. Your choice is kept for next
+time. The tutorial always uses **Place names**.
+
 ### What the quiz needs
 
-The quiz is played by dragging, so it needs a mouse, a trackpad, a finger or a
-pen. It can't be played with the keyboard alone.
+**Place names** needs a mouse, a trackpad, a finger or a pen to choose the
+place, by dragging or by tapping. A name in the tray can be picked up with Tab
+and Enter, but its place is chosen with the pointer. **Name places** can be
+played with the keyboard alone, with the number keys.
 
 ## 9. What counts as known
 
-Geoclick keeps one number for every place on every map: how many times in a row
-you have placed it right **with no mistake**. That is its *clean streak*.
+Geoclick keeps one number for every place on every map: its *level*, from
+nothing up to known. It moves one step at a time:
 
-| What happened in the quiz | The place's streak |
+| What happened in the quiz | The place's level |
 |---|---|
-| **Right on the first try** | one higher |
-| **Shown after a mistake** | back to zero |
-| **Never played** | zero |
+| **Right on the first try** | one step up: nothing → Seen once → Nearly → Known |
+| **Shown after a mistake** | one step down: Known → Nearly → Seen once → nothing |
+| **Never played** | nothing |
 
-A place counts as **known** at a streak of three. That one number drives
-everything you see:
+A place counts as **known** at the top level, three steps up. Roughly, that
+means you have placed it right three times more than you have missed it. Time
+never lowers a level: a map you leave for a month is still known when you come
+back. That one number drives everything you see:
 
 - the bar on the map's card in [My maps](#14-my-maps-favourites-and-recent);
-- the Known map, where a known name is written at full strength, a streak of two
-  more lightly, and a streak of one faintly;
+- the colours of the world map on the start screen;
+- the Known map, where a known name is written at full strength, a nearly known
+  one more lightly, and one seen once faintly;
 - how many names the quiz offers at a time.
 
-Because one mistake resets a streak, a name becomes known only by being placed
-right three rounds running, and stops being known if you later fumble it.
+Because a mistake takes a name down only one step, one slip on a name you know
+well makes it "nearly" known, and the next right answer makes it known again.
+A name you keep missing goes down step by step until it has no level at all.
+Progress from earlier versions keeps working: a name that was known is still
+known. To start a map over, use **Reset progress** on Known (see
+[Starting a map over](#starting-a-map-over)).
 
 Underneath, Geoclick also keeps a review date for each place (the *spaced
 repetition* idea that flashcard apps such as Anki use). Nothing in the app shows
@@ -506,6 +639,8 @@ back one stop, the play/pause button starts or stops the tour (when the tour is
 over it becomes a circular arrow that replays it from the beginning), and the
 right arrow skips to the next stop. Previous and next are disabled at the
 beginning and end. Each icon has an accessible name (and a tooltip on hover).
+When the tour is over, a **Try the quiz** button appears next to the replay
+button and opens the map's quiz.
 
 - **"3 / 20"** shows the stop you're on, out of how many.
 - The speed menu offers 0.5×, 0.75×, 1×, 1.5×, 2× and 3×. A tour starts at 0.75×,
@@ -595,8 +730,9 @@ Each card shows the map's name, and once you have played it:
 |---|---|
 | a **bar** | how much of the map you know (orange, green when you know all of it); its accessible name says "14 / 20 known" |
 | **"· 3 names at a time"** | the quiz now holds names back (see [Fewer names as you improve](#fewer-names-as-you-improve)) |
+| **"★ Mastered · best 1:42"** | you know every name of the map; the time is your best round with no mistakes (see [Best time](#best-time)) |
 | **"Last: 17/20 (3 mistakes)"** | your last finished quiz on this map: 17 of 20 places right on the first try, 3 wrong drops in total. The mistakes part is left out when there were none |
-| *(nothing)* | you have never played this map's quiz |
+| **"20 names"** | you have never played this map's quiz; this is how many names it has |
 
 Both lists are kept on the device only. The number on the toolbar's star counts
 the maps in both.
@@ -649,7 +785,7 @@ stays in view), and the dimming is only there to draw the eye.
 | 10 | quiz | "Now get one wrong on purpose: drag **any** name onto a region it does not belong to — **Sardegna** onto the mainland, say. The region you hit flashes red, and the name is shown where it really belongs." | you make a wrong drop |
 | 11 | quiz | "Not sure where a region is? Look it up in the **overview**." | you open the Overview |
 | 12 | overview | "Found Sardegna? Go back to the **Quiz**." | you open the Quiz |
-| 13 | quiz | "The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Known** shows how far you have got." | you press **Next** |
+| 13 | quiz | "The regions you placed are still marked. Place a name right three times and it counts as known; a mistake takes it back one step — **Known** shows how far you have got." | you press **Next** |
 | 14 | quiz | "Last one: the **Tour** flies you to each region in turn and shows its name. Open it." | you open the Tour |
 
 The first three steps show the map even if you chose the list; the list comes
@@ -724,8 +860,17 @@ The quiz tray starts at up to about a third of the screen, and scrolls:
 
 - **Drag with one finger** to move the map; **pinch** to zoom; **double-tap** to
   zoom in one step.
-- **Drag a name** from the quiz tray with your finger.
+- **Drag a name** from the quiz tray with your finger. The name floats above
+  your finger, with a small orange-ringed pin below it; the pin marks the point
+  that counts, so your finger doesn't hide the place. Near the top of the
+  screen the pin goes below your finger.
+- Or **tap a name** in the tray, then tap its place on the map (see
+  [Tapping instead of dragging](#tapping-instead-of-dragging)).
 - **Tap** a name on the Overview to enlarge it.
+
+In the Android app the phone gives a light tap when an answer is right and a
+double buzz when it is wrong, unless the phone is set to reduce motion. The
+**Sound** button on the quiz adds sounds, on any device.
 
 ### The Android back button
 
@@ -748,6 +893,9 @@ The apps are the same game as the website, packaged to install:
   The differences are that the "Download for Windows or Android" link isn't shown
   inside the apps, and that they have an **Exit** button on the start screen.
 - **The maps are built in**, so the apps don't need the internet to play.
+- **The Android app vibrates** on quiz answers: a light tap when right, a
+  double buzz when wrong. It stays still when the phone is set to reduce
+  motion. Sounds are off until you press **Sound** on the quiz.
 - **Progress is kept inside the app**, separately from any browser on the same
   device (see [Your data and privacy](#19-your-data-and-privacy)).
 - **Updating:** install the new version over the old one. Progress, favourites
@@ -761,9 +909,11 @@ The apps are the same game as the website, packaged to install:
   Geoclick server holding it.
 - **Kept on the device, per browser or app.** Geoclick remembers, on the device
   where you play:
-  - how well you know each place, and each map's last result;
+  - how well you know each place, each map's last result and best time, and
+    the names you have mixed up;
   - your favourites and recent maps, and the detailed maps you have opened;
-  - the language you chose, and whether Terrain is on;
+  - the language you chose, whether Terrain and Sound are on, and how the quiz
+    asks (Place names or Name places);
   - whether you've seen or dismissed the tutorial offer.
 - **Consequences:**
   - playing on a phone and on a laptop gives two separate progress records; they
@@ -813,14 +963,24 @@ The apps are the same game as the website, packaged to install:
 
 ## 21. Questions and answers
 
-**Can I lose my progress?** Only by clearing the browser's data for the site, or
-by removing the app together with its data. There's no way to lose it by playing: the tutorial
-doesn't touch it, and a round you leave changes only the names you actually
-placed.
+**Can I lose my progress?** Only by clearing the browser's data for the site,
+by removing the app together with its data, or by pressing **Reset progress**
+on a map's Known screen (which asks first, and resets only that map). There's no
+way to lose it by playing: the tutorial doesn't touch it, and a round you leave
+changes only the names you actually placed.
 
-**Why did my "known" count go down?** A place stops counting as known the moment
-you get it wrong: its streak goes back to zero, and it takes three clean rounds
-to earn it again. See [What counts as known](#9-what-counts-as-known).
+**Why did my "known" count go down?** A mistake on a known name takes it down
+one step, to "nearly" known. One right answer in a later round makes it known
+again. Time alone never lowers it. See
+[What counts as known](#9-what-counts-as-known).
+
+**How do I start a map over?** On its Known screen, press **Reset progress** in
+the legend and confirm with **Reset**. **Clear** is different: it only takes
+off the names you tapped.
+
+**Can I practise only the names I don't know yet?** Yes: press **Practise the 6
+not yet known** (the number is yours) before your first answer, or on the score
+panel. See [Every round is the whole map](#every-round-is-the-whole-map).
 
 **The tray only offered me three names. Why?** Because you know most of that map.
 The better you know it, the fewer names the quiz puts in front of you, so the
@@ -865,15 +1025,18 @@ https://github.com/diegoami/Geoclick2027.
 | **Place** / **target** | One region, state, province, town or country on a map. |
 | **Known** | The map you build: each name earned in the quiz drawn as strongly as you know it, plus the names you tap. |
 | **Overview** | The map with its names shown, as many as fit without overlapping (a town's name sits beside its dot); zoom in for the rest. |
-| **Quiz** | The game: drag each name from the tray onto the map. |
+| **Quiz** | The game: drag or tap each name from the tray onto the map (**Place names**), or name the place that lights up (**Name places**). |
 | **Tour** | The automatic flight from place to place. |
 | **Tray** | The strip of names at the bottom of the quiz. |
 | **Slip** | One name in the tray. |
 | **Placed** | Dropped on the right place (green). |
-| **Shown** | Placed for you after a mistake (gold-brown); counts as not known. |
-| **Clean streak** | How many times in a row you have placed a name right with no mistake. |
-| **Known (place)** | A place with a clean streak of three or more. |
+| **Shown** | Placed for you after a mistake (gold-brown); takes the name down one level. |
+| **Level** | How well you know a name: nothing, Seen once, Nearly or Known. One step up for each right first try, one step down for each mistake. |
+| **Known (place)** | A place at the top level, three steps up. |
+| **Mastered** | A map whose every name is known; its rounds are timed. |
+| **Mix-up** | A name you dropped on another name's place; the two come into the tray together until you know both. |
 | **Round** | One playing of a map's quiz: every name, from blank to done. |
+| **Practice round** | A round that asks only the names not yet known; the known ones start out placed. |
 | **Detailed map** | A finer map (districts, provinces, towns of 50 000…) kept behind *Show detailed maps*. |
 | **Favourites** | Maps you've starred. |
 | **Recent** | The last five maps you opened. |

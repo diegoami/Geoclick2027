@@ -31,7 +31,7 @@ Le immagini condivise con il manuale inglese mostrano l’interfaccia in inglese
 
 ## 1. Che cos’è Geoclick
 
-Impari dove si trovano paesi, capitali, regioni e città, trascinando i loro nomi sulla mappa. Il catalogo comprende **217 mappe in 79 paesi e nei sei continenti**. Ogni mappa offre Conoscenza, Panoramica, Quiz e Tour. L’applicazione ricorda i risultati sul dispositivo, senza account. Pulsanti e curiosità sono disponibili in inglese, tedesco e italiano.
+Impari dove si trovano paesi, capitali, regioni e città, trascinando i loro nomi sulla mappa. Il catalogo comprende **217 mappe in 79 paesi e nei sei continenti**. Ogni mappa offre Conoscenza, Panoramica, Quiz e Tour. L’applicazione ricorda i risultati sul dispositivo, senza account: ogni risposta giusta al primo tentativo fa salire un nome di un gradino, ogni errore lo fa scendere di uno. Pulsanti e curiosità sono disponibili in inglese, tedesco e italiano.
 
 Puoi usare il browser oppure le applicazioni per Windows e Android. Il tutorial iniziale presenta i comandi; puoi ripeterlo in seguito senza modificare i tuoi progressi reali.
 
@@ -57,6 +57,10 @@ Puoi scegliere una vista geografica oppure un elenco. Nella vista geografica sce
 
 Premi il tipo di mappa che vuoi aprire. La percentuale o il conteggio accanto a una mappa indica quanti luoghi conosci; non rappresenta un voto dell’ultima partita. La scelta fra mappa ed elenco e le preferenze vengono ricordate. L’offerta del tutorial appare una volta, ma il comando Tutorial rimane disponibile.
 
+Sulla mappa del mondo, un paese su cui hai giocato è colorato da un verde pallido a un verde pieno, secondo quanto lo conosci. Contano le sue mappe delle regioni e delle città, non quelle dettagliate. Un paese che conosci del tutto riceve un **bordo dorato**; i paesi mai giocati mantengono il colore del loro continente. Una piccola legenda mostra la scala dei colori e il totale su tutte le mappe, per esempio «Sai 1 240 / 9 800 nomi».
+
+Una riga sopra la mappa o l’elenco suggerisce che cosa giocare: per esempio «Continua Italy — Regioni — sai 14 / 20», «Rigioca Italy — Regioni — l’ultima volta 3 sono scesi di un gradino» oppure «Prossima: Italy — Città — conosci tutta Italy — Regioni». Premendola si apre il quiz di quella mappa. La riga manca quando non c’è nulla da suggerire e durante il tutorial.
+
 ## 5. I comandi delle mappe
 
 | Comando | Effetto |
@@ -67,6 +71,7 @@ Premi il tipo di mappa che vuoi aprire. La percentuale o il conteggio accanto a 
 | **Quiz** | Avvia o riprende il gioco su quella mappa |
 | **Tour** | Presenta automaticamente i luoghi |
 | **Rilievo** | Mostra o nasconde dettagli geografici |
+| **Suono** | Solo nel quiz: attiva o disattiva i suoni delle risposte (spenti all’inizio) |
 | **Tutorial** | Avvia, riprende o ricomincia la spiegazione guidata |
 
 La riga sotto la barra cambia fra le mappe dello stesso paese o continente. La stella riguarda la mappa aperta. **Mostra le mappe dettagliate** aggiunge le suddivisioni più fitte. Una mappa dettagliata già aperta resta nella riga con una **X rossa** quando la casella non è selezionata: la X la nasconde dalla riga e non cancella i progressi.
@@ -79,11 +84,15 @@ A destra, **+** e **−** cambiano lo zoom; la bussola riporta l’orientamento 
 
 ![Nomi conosciuti e nomi ancora da imparare](manual/known.jpg)
 
-Qui costruisci la tua mappa. I nomi compaiono con evidenza diversa secondo la serie di risposte corrette: tre risposte consecutive indicano un luogo conosciuto; due indicano che ci sei quasi; una indica che lo hai già incontrato. I luoghi senza una serie corretta non sono etichettati automaticamente.
+Qui costruisci la tua mappa. I nomi compaiono con evidenza diversa secondo il loro gradino (vedi la sezione 9): **Sai** è il gradino più alto, **Quasi** quello sotto, **Una volta** due gradini sotto. I luoghi senza alcun gradino non sono etichettati automaticamente.
 
-Tocca o clicca un luogo per aggiungere il suo nome; ripeti per nasconderlo. Puoi scegliere più nomi insieme. Lo stile **Scelto** distingue queste scelte dai risultati del quiz. **Azzera** elimina le scelte temporanee e ripristina la visualizzazione dei nomi guadagnati: non cancella la conoscenza registrata. Le scelte durano per la sessione.
+Tocca o clicca un luogo per aggiungere il suo nome; ripeti per nasconderlo. Puoi scegliere più nomi insieme. Lo stile **Scelto** distingue queste scelte dai risultati del quiz. **Azzera** elimina le scelte temporanee e ripristina la visualizzazione dei nomi guadagnati: non cancella i gradini guadagnati. Le scelte durano per la sessione.
 
 Scegliere un luogo apre anche la sua scheda, quando ci sono informazioni disponibili. Nelle mappe delle città tocchi il punto. Nascondere di nuovo il nome chiude la scheda. Questa schermata non assegna punteggi.
+
+Su una mappa mai giocata compare un piccolo riquadro **Ancora niente di imparato**, con i pulsanti **Panoramica** e **Quiz**.
+
+Quando hai guadagnato qualcosa sulla mappa, la legenda contiene anche **Azzera i progressi**. Una finestra chiede conferma: «Azzerare i tuoi progressi su Italy — Regioni?». **Annulla** lascia tutto com’è; **Sì, azzera** riporta ogni nome di questa mappa a sconosciuto e cancella anche i nomi scelti e una prova lasciata a metà. Le altre mappe, i preferiti e l’ultimo punteggio restano. Il pulsante **Azzera** della legenda, invece, toglie soltanto i nomi scelti.
 
 ## 7. Panoramica
 
@@ -97,12 +106,15 @@ Con il mouse, passa sopra un nome per ingrandirlo. Sullo schermo tattile, toccal
 
 ![I nomi da trascinare, nel vassoio inferiore](manual/quiz-start.jpg)
 
-Premi un nome nel vassoio, trascinalo sulla regione o sul punto della città e rilascialo. Il nome segue il puntatore; il colore blu evidenzia il luogo sopra cui ti trovi, senza suggerire se la risposta sia corretta.
+Premi un nome nel vassoio, trascinalo sulla regione o sul punto della città e rilascialo. Il nome segue il puntatore; il colore blu evidenzia il luogo sopra cui ti trovi, senza suggerire se la risposta sia corretta. Sullo schermo tattile il nome resta sollevato sopra il dito, con un piccolo spillo cerchiato d’arancione sotto: conta il punto dello spillo, così il dito non nasconde il luogo. Vicino al bordo superiore lo spillo passa sotto il dito. Con il mouse conta la punta del puntatore.
+
+Invece di trascinare puoi toccare o cliccare un nome nel vassoio: si solleva, viene contornato e compare «Ora tocca il suo posto sulla mappa». Poi tocca il suo posto. Per lasciarlo andare tocca di nuovo il nome, lo spazio vuoto del vassoio o premi Esc. Valgono le stesse regole del rilascio. Spostare la mappa non conta come risposta.
 
 - Una risposta corretta colloca il nome e lo rimuove dal vassoio.
 - Una risposta errata conclude il turno di quel nome: non ci sono secondi tentativi nella stessa prova. Il luogo raggiunto lampeggia in rosso e il nome viene collocato nella posizione corretta, in marrone dorato anziché nel verde delle risposte giuste. La scheda rimane aperta fino al trascinamento successivo.
 - Rilasciare sul mare, fuori dalla mappa o nel vassoio non conta come risposta: il nome torna disponibile.
 - Per luoghi molto piccoli conviene ingrandire la mappa. Una piccola tolleranza aiuta a raggiungere il bersaglio corretto.
+- Il gioco ricorda le confusioni: un nome che hai messo sul posto di un altro arriva, nelle prove successive, nel vassoio insieme al nome con cui l’hai confuso, così impari a distinguerli. La coppia viene dimenticata quando conosci entrambi i nomi.
 
 ![Una risposta errata mostra la posizione corretta](manual/quiz-wrong.jpg)
 
@@ -117,15 +129,23 @@ La prova comprende tutti i nomi della mappa. Il numero presentato contemporaneam
 
 Il vassoio si riempie progressivamente. Trascina la maniglia grigia verso l’alto o il basso per regolarne l’altezza; da tastiera raggiungila con Tab e usa le frecce. Se i nomi non entrano, puoi scorrere il vassoio. La mappa viene inizialmente adattata allo spazio disponibile sopra di esso.
 
-Alla fine compare **Fatto!** con le risposte corrette al primo tentativo, gli errori totali, gli eventuali nomi mostrati e la conoscenza raggiunta. Solo una risposta giusta al primo rilascio conta nel primo conteggio. La X del pannello chiude il risultato; **Gioca ancora** avvia una nuova prova. Ogni prova ripercorre l’intera mappa.
+Alla fine compare **Fatto!** con le risposte corrette al primo tentativo, il risultato della prova precedente («L’ultima volta: 14 su 20.»), gli errori totali, gli eventuali nomi mostrati e la conoscenza raggiunta, con «Scesi di un gradino: 2» quando serve. Solo una risposta giusta al primo rilascio conta nel primo conteggio. Seguono gli elenchi **Imparati ora**, **Da ripassare** e **Confusi** («Molise messo su Abruzzo»); premendo un nome si apre la sua scheda, e gli elenchi lunghi finiscono con «+ altri 4». **Studia questi** apre Conoscenza con i nomi da ripassare segnati come **Scelto**. La X del pannello chiude il risultato; **Gioca ancora** avvia una nuova prova.
+
+Di norma una prova ripercorre l’intera mappa. Quando conosci alcuni nomi ma non tutti, **Esercitati sui 6 non ancora imparati** offre una prova più breve: accanto alla riga dei progressi (solo prima della prima risposta), nel pannello del risultato e accanto a **Gioca ancora**. I nomi che sai partono già collocati e vengono chiesti solo gli altri; la riga dei progressi comincia con «Esercizio ·». Il punteggio funziona come sempre.
+
+Quando conosci tutti i nomi di una mappa, le prove sono cronometrate. Conta solo il tempo passato nel quiz e durante il gioco non si vede alcun orologio. Il pannello mostra per esempio «Tempo: 1:42» e **Nuovo record!** quando una prova senza errori batte il tuo record; dopo una prova con errori dice «Solo un giro senza errori vale come record.»
+
+Due pulsanti uniti nella riga dei progressi, **Posiziona i nomi** e **Dai i nomi**, scelgono come chiede il quiz. In **Dai i nomi** un luogo si illumina di blu e il vassoio offre il suo nome fra quattro; gli altri sono i luoghi più vicini. Dal 60% conosciuto i nomi diventano cinque, dall’85% sei. Scegli con un tocco, un clic o i tasti numerici da 1 a 6: ogni nome mostra il suo numero. La riga dei progressi dice «Quale luogo è evidenziato? — 0 / 20 nominati». Una scelta sbagliata funziona come nel quiz a trascinamento: il luogo scelto lampeggia in rosso, viene mostrato il nome giusto e si apre la scheda. Entrambi i modi contano per gli stessi gradini. Cambiare modo avvia una nuova prova; la scelta viene ricordata. Il tutorial usa sempre **Posiziona i nomi**.
+
+Per posizionare i nomi servono mouse, touchpad, dito o penna; un nome del vassoio si può anche prendere con Tab e Invio. **Dai i nomi** si può giocare interamente da tastiera.
 
 Puoi consultare Panoramica e tornare al Quiz senza perdere la prova in corso. Le risposte già registrate aggiornano la conoscenza. Se lasci completamente la mappa, non viene inventato un risultato finale per i nomi non ancora affrontati.
 
 ## 9. Quando conosci un luogo
 
-Servono **tre risposte corrette consecutive, al primo tentativo e senza suggerimento**. Non occorrono tre trascinamenti nella stessa prova: ogni luogo compare una volta per prova, quindi la serie cresce attraverso più prove. Un errore o un nome mostrato interrompe la sua serie e la riporta a zero.
+Ogni luogo ha un **gradino**: nessuno, Una volta, Quasi o Sai. Ogni risposta corretta al primo tentativo lo fa salire di un gradino; un errore o un nome mostrato lo fa scendere di uno, da Sai a Quasi, a Una volta, a nessuno. Un luogo è conosciuto dopo tre gradini in su: in pratica, quando l’hai collocato bene circa tre volte più di quante l’hai sbagliato. Ogni luogo compare una volta per prova, quindi i gradini si salgono attraverso più prove. Il tempo, da solo, non fa scendere nessun gradino.
 
-Osservare Panoramica, leggere una curiosità o aggiungere un nome in Conoscenza non lo rende automaticamente conosciuto. Il totale può diminuire quando sbagli un luogo già imparato. Non è un errore dell’applicazione: la mappa segue la conoscenza dimostrata nel gioco.
+Osservare Panoramica, leggere una curiosità o aggiungere un nome in Conoscenza non lo rende automaticamente conosciuto. Il totale può diminuire quando sbagli un luogo già imparato; una risposta giusta in una prova successiva lo riporta a conosciuto. I progressi delle versioni precedenti restano validi. La mappa segue la conoscenza dimostrata nel gioco.
 
 ## 10. Tour
 
@@ -133,7 +153,7 @@ Osservare Panoramica, leggere una curiosità o aggiungere un nome in Conoscenza 
 
 Il Tour parte automaticamente e visita i luoghi in ordine approssimativo da nord a sud. Evidenzia ogni luogo e presenta nome e informazioni disponibili. Non modifica i punteggi.
 
-Le frecce vanno al luogo precedente o successivo; pausa e riproduzione fermano e riprendono la visita. Alla fine, la freccia circolare ricomincia il percorso. Il contatore, per esempio «3 / 20», indica la tappa corrente. Il menu offre 0,5×, 0,75×, 1×, 1,5×, 2× e 3×. Il valore iniziale è normalmente 0,75×; sulle mappe grandi viene adattato per evitare visite troppo lunghe. Puoi comunque spostare e ingrandire la mappa.
+Le frecce vanno al luogo precedente o successivo; pausa e riproduzione fermano e riprendono la visita. Alla fine, la freccia circolare ricomincia il percorso. Il contatore, per esempio «3 / 20», indica la tappa corrente. Alla fine, accanto al pulsante per ricominciare compare **Prova il quiz**, che apre il quiz della mappa. Il menu offre 0,5×, 0,75×, 1×, 1,5×, 2× e 3×. Il valore iniziale è normalmente 0,75×; sulle mappe grandi viene adattato per evitare visite troppo lunghe. Puoi comunque spostare e ingrandire la mappa.
 
 ## 11. Le mappe delle città
 
@@ -159,7 +179,7 @@ Le curiosità scritte dagli autori sono tradotte nelle tre lingue. Le mappe più
 
 ![Preferiti e mappe recenti](manual/my-maps.jpg)
 
-La stella di una mappa la aggiunge ai preferiti; premila di nuovo per rimuoverla. **Le mie mappe** mostra preferiti e mappe utilizzate di recente, con accesso diretto. Una stella piena distingue un preferito. Togliere una mappa dai preferiti non elimina risultati o conoscenza. Se l’elenco è vuoto, apri una mappa o aggiungine una con la stella.
+La stella di una mappa la aggiunge ai preferiti; premila di nuovo per rimuoverla. **Le mie mappe** mostra preferiti e mappe utilizzate di recente, con accesso diretto. Una stella piena distingue un preferito. Togliere una mappa dai preferiti non elimina risultati o conoscenza. Una mappa di cui sai tutti i nomi mostra «★ Padroneggiata · record 1:42»; una mappa mai giocata indica quanti nomi ha, per esempio «20 nomi». Se l’elenco è vuoto, apri una mappa o aggiungine una con la stella.
 
 ## 15. Il tutorial
 
@@ -181,7 +201,7 @@ Il Tutorial usa Italia — Regioni come esercitazione separata dai progressi rea
 | 10 | Sbaglia apposta per vedere la correzione |
 | 11 | Consulta Panoramica |
 | 12 | Torna al Quiz |
-| 13 | Leggi la spiegazione della serie di risposte e prosegui |
+| 13 | Leggi la spiegazione dei gradini e prosegui |
 | 14 | Apri Tour |
 
 Le azioni riuscite fanno avanzare il percorso; una spiegazione senza azione usa il comando per proseguire. Il pulsante indietro torna alla tappa precedente. **Termina il tutorial** o Esc interrompe l’esercitazione; la schermata torna al gioco normale senza trasferire i risultati di prova. All’ultima scheda **Fine** termina il tutorial e **Ricomincia** lo ripete. Se navighi altrove durante l’esercitazione, il tutorial offre il modo di riprendere il percorso. Sui dispositivi tattili le istruzioni parlano di tocchi e gesti anziché del mouse.
@@ -194,19 +214,19 @@ Dal menu della lingua scegli English, Deutsch o Italiano. La scelta cambia pulsa
 
 ![Il Quiz su uno schermo di telefono](manual/phone-quiz.jpg)
 
-Tocca per scegliere un paese o un luogo; trascina con un dito per spostare la mappa; usa due dita per ingrandire o ridurre. Nel Quiz inizia il trascinamento sul nome del vassoio: trascinare una zona libera sposta invece la mappa. Puoi regolare l’altezza del vassoio e ingrandire i bersagli piccoli. Toccare un’etichetta in Panoramica la ingrandisce; toccare altrove la riduce.
+Tocca per scegliere un paese o un luogo; trascina con un dito per spostare la mappa; usa due dita per ingrandire o ridurre. Nel Quiz inizia il trascinamento sul nome del vassoio: trascinare una zona libera sposta invece la mappa. Mentre trascini, il nome resta sopra il dito e lo spillo cerchiato d’arancione sotto di esso segna il punto che conta. Puoi anche toccare un nome e poi il suo posto. Puoi regolare l’altezza del vassoio e ingrandire i bersagli piccoli. Toccare un’etichetta in Panoramica la ingrandisce; toccare altrove la riduce.
 
-Il pulsante Indietro di Android torna alla schermata iniziale quando sei dentro una mappa. Dalla schermata iniziale, se è aperta una vista geografica più profonda, risale prima verso il mondo; quando non c’è più un livello da chiudere può uscire dall’applicazione. Il comando Esci è disponibile nelle applicazioni native. Ruotare il dispositivo non richiede ricominciare la prova.
+Il pulsante Indietro di Android torna alla schermata iniziale quando sei dentro una mappa. Dalla schermata iniziale, se è aperta una vista geografica più profonda, risale prima verso il mondo; quando non c’è più un livello da chiudere può uscire dall’applicazione. Il comando Esci è disponibile nelle applicazioni native. Nell’applicazione Android il telefono dà un leggero tocco a una risposta giusta e una doppia vibrazione a una sbagliata, a meno che sia impostato per ridurre il movimento. Ruotare il dispositivo non richiede ricominciare la prova.
 
 ## 18. Le applicazioni Windows e Android
 
-Le applicazioni offrono gli stessi modi di gioco, le lingue, i preferiti e il tutorial del browser. Le risorse sono incluse nel pacchetto per l’uso senza connessione. I progressi dell’applicazione sono separati da quelli del browser, anche sullo stesso dispositivo. Installa una nuova versione sopra la precedente per conservarli; disinstallare eliminando i dati può cancellarli.
+Le applicazioni offrono gli stessi modi di gioco, le lingue, i preferiti e il tutorial del browser. L’applicazione Android vibra alle risposte del quiz; i suoni, ovunque, si sentono solo dopo aver premuto **Suono**. Le risorse sono incluse nel pacchetto per l’uso senza connessione. I progressi dell’applicazione sono separati da quelli del browser, anche sullo stesso dispositivo. Installa una nuova versione sopra la precedente per conservarli; disinstallare eliminando i dati può cancellarli.
 
 La finestra Windows parte normalmente a 1280 × 800 e può essere ridimensionata. Sul telefono l’interfaccia adatta barre e vassoio allo spazio disponibile. Il badge della versione e la pagina Informazioni identificano la build installata.
 
 ## 19. Dati e riservatezza
 
-Non serve un account e non esiste una sincronizzazione dei progressi fra dispositivi. Il gioco conserva localmente serie corrette, risultati, preferiti, mappe recenti, impostazioni di lingua e terreno e stato dell’offerta del tutorial. Browser diversi e applicazioni native conservano archivi separati.
+Non serve un account e non esiste una sincronizzazione dei progressi fra dispositivi. Il gioco conserva localmente il gradino di ogni luogo, risultati e record di tempo, confusioni, preferiti, mappe recenti, impostazioni di lingua, rilievo e suono, il modo del quiz scelto e lo stato dell’offerta del tutorial. Browser diversi e applicazioni native conservano archivi separati.
 
 Cancellare i dati del sito elimina i progressi di quel browser; disinstallare l’applicazione con i suoi dati li elimina dall’applicazione. Il normale gioco e gli errori non cancellano l’archivio. Nel browser vengono richiesti al sito i file necessari per visualizzare il gioco; aprire un collegamento esterno richiede la relativa connessione. I crediti della mappa elencano fornitori e licenze dei dati.
 
@@ -220,7 +240,9 @@ Le fonti includono Natural Earth, Wikidata e registri o confini aperti con le ri
 
 **Perché un nome non si vede?** Aumenta lo zoom: le etichette vengono nascoste quando non hanno spazio. In Conoscenza, i nomi non ancora imparati restano nascosti finché non li scegli.
 
-**Perché il totale conosciuto diminuisce?** Un errore azzera la serie di quel luogo. Servono di nuovo tre risposte corrette consecutive.
+**Perché il totale conosciuto diminuisce?** Un errore fa scendere quel luogo di un gradino, da Sai a Quasi. Una risposta giusta in una prova successiva lo riporta a conosciuto.
+
+**Come ricomincio una mappa da capo?** In Conoscenza premi **Azzera i progressi** nella legenda e conferma con **Sì, azzera**. Riguarda solo quella mappa.
 
 **Perché vedo solo un nome da trascinare?** Conosci almeno l’85% della mappa: il Quiz limita gli indizi offerti contemporaneamente.
 
@@ -238,8 +260,10 @@ Le fonti includono Natural Earth, Wikidata e registri o confini aperti con le ri
 |---|---|
 | Luogo o bersaglio | Una regione, città, capitale o paese da riconoscere |
 | Mappa | Un insieme di luoghi con progressi propri |
-| Serie | Risposte corrette consecutive di un luogo |
-| Conosciuto | Luogo collocato correttamente tre volte di seguito |
+| Gradino | Quanto conosci un luogo: nessuno, Una volta, Quasi, Sai; sale di uno a ogni risposta giusta al primo tentativo, scende di uno a ogni errore |
+| Conosciuto | Luogo al gradino più alto, tre gradini sopra nessuno |
+| Esercizio | Prova che chiede solo i nomi non ancora imparati |
+| Padroneggiata | Mappa di cui sai tutti i nomi; le sue prove sono cronometrate |
 | Vassoio | Area inferiore con i nomi da trascinare |
 | Scelto | Nome aggiunto temporaneamente in Conoscenza |
 | Panoramica | Modalità di consultazione senza punteggio |
