@@ -2543,6 +2543,13 @@ answers:
   Skip action says "Exit tutorial". Keep Escape as a keyboard shortcut.
 ## Automatic pull-request reviews (2026-09-30)
 
+*Amended 2026-10-29 (owner): **no per-PR review any more.** Features and
+fixes are tested and merged by the owner; the only independent review is the
+milestone review of the release, at the end. Per-PR review is legacy - the
+entries below record why it existed. The trigger: two 1.1.0 PRs (#271, #272)
+waited on a review chain that OpenCode v2.1.4 had broken, for changes the
+milestone review covers anyway.*
+
 - The product owner asked for each PR to receive an automatic review from a
   different model; use OpenCode / GLM-5.3-Flash. The review posts one advisory
   PR comment, refreshed when new commits arrive. It is not a GitHub approval

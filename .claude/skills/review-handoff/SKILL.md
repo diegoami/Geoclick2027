@@ -1,13 +1,13 @@
 ---
 name: review-handoff
-description: Prepare and process independent release-milestone reviews only. Use when a milestone release is called or proposed, when a BLOCK requires re-review, or when the owner says a milestone review is in. For optional pull-request reviews, use review-pr instead.
+description: Prepare and process independent release-milestone reviews only. Use when a milestone release is called or proposed, when a BLOCK requires re-review, or when the owner says a milestone review is in.
 ---
 
 # Review handoff
 
 This skill handles the formal release-milestone review (`AGENTS.md`, *Releases*).
-It does not handle optional PR reviews; use `.claude/skills/review-pr/SKILL.md`
-for those. Proposals and ordinary PRs do not trigger a release review.
+There are no PR reviews (owner, 2026-10-29). Proposals and ordinary PRs do not
+trigger a release review.
 
 The reviewer's job is written once, in `.opencode/agents/release-reviewer.md`.
 It starts with no context and reads everything from the milestone issue, so the
@@ -57,18 +57,14 @@ Standing owner decisions:
 
 Make sure the `review` label exists (`gh label list`).
 
-## Run it with the script (preferred)
+## The owner starts it, never the agent
 
-`pwsh scripts/external-review.ps1 -Issue <n> -Kind release` runs the review in
-a detached worktree and posts one verdict comment on the milestone issue. The
-reviewer chain is GPT-5.6 Luna, then GLM 5.3 Flash (effort high, owner,
-2026-10-05); the implementer's family is left out. Run it in the background and watch
-the log. Exit 3 = no OpenCode review (nothing posted): run the Opus reviewer
-as a subagent on the printed brief in your own worktree. Exit 4 = posted but
-flagged ("verdict unreadable" / "may be cut off"), no label: read it and decide.
-A review already paid for is never discarded (`-FromFile` re-reads a saved one). The model never opens finding issues;
-reproduce each finding it lists and open the issues yourself. See
-`docs/EXTERNAL_REVIEW.md`.
+The agent never starts the milestone review: not with the script, not with a
+subagent (owner, 2026-10-29). It files the version-bump PR and the milestone
+issue, then gives the owner a short prompt to paste, such as
+`/review-release <milestone issue>`. `pwsh scripts/external-review.ps1 -Issue <n>
+-Kind release` stays available for the owner to run. When the owner says the
+review is in, read it from GitHub, reproduce each finding and open the issues.
 
 ## Give the owner the command (manual route)
 
