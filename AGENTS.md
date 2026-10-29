@@ -138,31 +138,13 @@ the gate. The separate PR-review workflow is advisory only.
   from a worktree, never by committing in the main checkout. There is no
   automerge exception: the remediation loop (`docs/ORCHESTRATION.md`) that had
   one closed with v0.2.0.
-- **Every code PR is reviewed by another model family** (owner, 2026-10-04)
-  before it is handed to the owner: `pwsh scripts/external-review.ps1 -Pr <n>`
-  from the Windows checkout, in the background. The reviewer chain is GPT-5.6
-  Luna, then GLM 5.3 Flash (`.opencode/reviewer-model`), never of the
-  implementer's family. On
-  exit 3 (no OpenCode review), a PR that Claude implemented goes to the owner:
-  no Claude reviewer reviews Claude's work; only a PR another family
-  implemented may fall back to the Claude Opus reviewer. Doc-only changes need
-  no review. The review does not replace the owner's test and explicit OK. The
-  GitHub Actions PR-review workflow stays removed; the milestone review remains
-  a separate process in *Releases* below.
-- **Choosing a model** (harness_imperial L50, L51; quota section in
-  `docs/environment.md`). Before choosing, recommending or delegating to a model
-  (an OpenCode implementer or reviewer, a Claude agent or subagent), check its
-  provider's quota: `curl -s localhost:8765/avoid`. An `exhausted` provider is
-  not used until usable again: take the next model of the chain whose provider
-  has quota, pass it explicitly (`-Model`, `opencode -m`), and say so in the PR
-  body ("GLM skipped: zai exhausted until 21:40; reviewed by Luna"). Where the
-  service is absent, go on and count a usage-limit error as `exhausted`. Model
-  ids come from `opencode models <provider>`, never memory. The light OpenAI
-  model, and the default reviewer, is GPT-5.6 Luna on the direct OpenAI route:
-  `openai/gpt-5.6-luna`, effort `high` (its own weekly pool). Not GPT-6 Luna
-  (`openai/gpt-6-luna`, which shares Sol's pool), and never a Luna on OpenCode
-  Go (`opencode-go/...`: a proxy returns `Bad Request` in long agent loops).
-  Heavy models run at effort `medium`, or lighter when medium is not needed.
+- **Reviews are manual and model-agnostic** (owner, 2026-10-29). Nothing in
+  this repository runs a review automatically or names a model to run one.
+  Every code-PR handoff ends with a ready-to-paste prompt for an optional
+  independent review (*PR reviews* below); a milestone gets a prompt too
+  (*Releases*). The owner picks the tool and model; a fresh session, preferably
+  not on the implementer's model. Doc-only changes need no review. A review
+  informs the owner's test and explicit OK; it never replaces them.
 - Keep `ROADMAP.md`, `ARCHITECTURE.md`, `ONBOARDING.md`, `DECISIONS.md`,
   `MAPS.md` current as work lands — each has a distinct charter (status / code
   map / newcomer guide / *why* / map build commands). Edit the relevant
@@ -193,19 +175,14 @@ the gate. The separate PR-review workflow is advisory only.
   what the owner should expect. For docs-only changes, give the applicable
   verification command and say runtime tests do not apply. End the handoff with
   the local test command block.
-- Also include the review's outcome: the posted comment's link, its verdict and
-  every finding. When the script could not review (exit 3 on a PR Claude
-  implemented), include instead a ready-to-paste prompt for a manual review by
-  another model family; do not create a reviewer worktree or start that review
-  unless the owner explicitly asks. The prompt must identify the PR and
-  exact head SHA, tell the reviewer to create its own detached worktree at that
-  SHA under the sibling `<project>-review` directory, read `AGENTS.md`, compare
-  the PR diff with its base, post the result as a GitHub PR review (not only in
-  chat), and remove only its own worktree. Point the prompt to
-  `.opencode/agents/pr-reviewer.md` or `/review-pr`. Request an evidence-backed
-  review without code edits, commits, or pushes. If posting fails, the reviewer
-  must return the complete review text and explain the failure. Include the
-  exact worktree path in the prompt.
+- For a code PR, also include the review prompt from the `review-pr` skill:
+  it identifies the PR and exact head SHA, tells the reviewer to follow
+  `docs/review/pr-reviewer.md` in its own detached worktree at that SHA under
+  the sibling `<project>-review` directory (exact path given), post the result
+  as a GitHub PR review (not only in chat), and remove only its own worktree.
+  Do not create a reviewer worktree or start the review unless the owner
+  explicitly asks. If a review is already in, give its link, verdict and every
+  finding instead.
 
 ### Worktrees
 
@@ -248,9 +225,9 @@ the release notes name the tagged commit. Say in the entry what was built and
 what was actually tried, rather than implying it.
 
 The implementing agent does the work itself and never spawns its own reviewer.
-The review runs in a **different model family from the implementer's**, in whatever
-tool the owner picks (OpenCode, Codex, or another), in a fresh session every
-time. Nothing here assumes one tool.
+The review runs in whatever tool and model the owner picks, preferably not the
+implementer's model, in a fresh session every time. Nothing here assumes one
+tool or one model.
 
 **How a milestone happens** (the steps in full: `docs/RELEASES.md`,
 "The milestone"):
@@ -264,12 +241,10 @@ time. Nothing here assumes one tool.
    full SHA, the previous milestone tag, the PRs merged since, and the gate
    results on the candidate. From then on, **`main` takes only fixes for the
    milestone's findings** until it is tagged.
-4. **The owner starts the milestone review**:
-   `/review-release <milestone issue>` in the
-   desktop app or the TUI, or
-   `opencode run -m <provider/model> --command review-release <issue>` from a
-   shell, on a model the owner picks. The reviewer follows
-   `.opencode/agents/release-reviewer.md`: it fetches first
+4. **The agent gives the owner a ready-to-paste review prompt** (the
+   `review-handoff` skill), and the owner starts the review in a fresh session
+   of whatever tool and model they pick. The reviewer follows
+   `docs/review/release-reviewer.md`: it fetches first
    (`git fetch origin --tags <candidate SHA>`, never `git pull`, which could
    move a checkout it must not touch), makes a fresh detached worktree of its
    own at the candidate SHA under
@@ -281,7 +256,7 @@ time. Nothing here assumes one tool.
    milestone issue. Nothing is pasted back.
 5. **The tag waits for the milestone review.** BLOCK: the findings are fixed in
    ordinary PRs, the candidate moves to the new `main` commit (the issue says
-   so), and a re-review follows without being asked. **Round ceiling:** if a
+   so), and the agent gives the re-review prompt without being asked. **Round ceiling:** if a
    third round
    does not end in AGREE, the decision goes to the owner.
 6. AGREE: the agent creates the tag on **exactly the reviewed SHA**, never on a
@@ -314,16 +289,15 @@ release tag, reviewed before it is created".)
 
 ### PR reviews
 
-Every code PR is reviewed by another model family before the owner tests it,
-separately from the release-milestone review. Follow
-`.claude/skills/review-pr/SKILL.md`: the implementing session runs
-`scripts/external-review.ps1`, which posts one review comment; the manual route
-(`/review-pr` in a fresh session of another family) is for when the script
-cannot review. The review informs the owner's decision and does not replace it;
+Separate from the release-milestone review. Follow
+`.claude/skills/review-pr/SKILL.md`: the implementing session ends each
+code-PR handoff with a ready-to-paste prompt pointing at
+`docs/review/pr-reviewer.md`; the owner decides whether to run it, where and on
+which model. The review informs the owner's decision and does not replace it;
 findings stay in the PR thread, not milestone issues.
 
 A PR body says in one line what the change protects ("Protects: ..."), and the
-brief's "Blocking means" section (scripts/ReviewerBrief.ps1) refers to it. When
+reviewer's "What counts as blocking" (`docs/review/pr-reviewer.md`) refers to it. When
 a review approves with findings marked non-blocking, read them before handing
 the PR over: if one is a proven way past what "Protects:" names, treat the review
 as rework, say so on the PR, and fix it first.

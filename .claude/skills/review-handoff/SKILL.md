@@ -9,8 +9,10 @@ This skill handles the formal release-milestone review (`AGENTS.md`, *Releases*)
 It does not handle optional PR reviews; use `.claude/skills/review-pr/SKILL.md`
 for those. Proposals and ordinary PRs do not trigger a release review.
 
-The reviewer's job is written once, in `.opencode/agents/release-reviewer.md`.
-It starts with no context and reads everything from the milestone issue, so the
+The reviewer's job is written once, in `docs/review/release-reviewer.md`.
+Nothing runs a review automatically: the implementing session hands the owner
+a prompt, and the owner starts the review in whatever tool and model they pick.
+The reviewer starts with no context and reads everything from the milestone issue, so the
 issue has to carry everything it needs.
 
 ## Open the milestone issue
@@ -57,36 +59,30 @@ Standing owner decisions:
 
 Make sure the `review` label exists (`gh label list`).
 
-## Run it with the script (preferred)
+## Give the owner the prompt
 
-`pwsh scripts/external-review.ps1 -Issue <n> -Kind release` runs the review in
-a detached worktree and posts one verdict comment on the milestone issue. The
-reviewer chain is GPT-5.6 Luna, then GLM 5.3 Flash (effort high, owner,
-2026-10-05); the implementer's family is left out. Run it in the background and watch
-the log. Exit 3 = no OpenCode review (nothing posted): run the Opus reviewer
-as a subagent on the printed brief in your own worktree. Exit 4 = posted but
-flagged ("verdict unreadable" / "may be cut off"), no label: read it and decide.
-A review already paid for is never discarded (`-FromFile` re-reads a saved one). The model never opens finding issues;
-reproduce each finding it lists and open the issues yourself. See
-`docs/EXTERNAL_REVIEW.md`.
+Once the issue is open, end the handoff with a ready-to-paste prompt, filled in
+from live data (no placeholders left), for a fresh session in any tool:
 
-## Give the owner the command (manual route)
-
-Pick a reviewer model that implemented none of the release. Then, from the main
-checkout, start it in a fresh session:
-
-```sh
-opencode run -m <provider/model> --command review-release <issue number>
+```text
+You are the independent reviewer of the Geoclick release candidate on
+milestone issue #<n> (https://github.com/diegoami/Geoclick2027/issues/<n>),
+candidate <full SHA>. Work from the main checkout at <main-checkout path>.
+Follow docs/review/release-reviewer.md in full: start with `gh issue view <n>`,
+review in a fresh detached worktree of your own under
+<main-checkout parent>/Geoclick2027-review/, post the finding issues and one
+AGREE/BLOCK verdict comment on the milestone issue yourself, and remove only
+your own worktree when done.
 ```
 
-In the TUI, use `/new`, pick the model with `/models`, then run
-`/review-release <issue number>`. Neither the command nor the agent sets a
-model, so the one picked here is the one used. With another tool, tell it:
-"Follow `.opencode/agents/release-reviewer.md` for milestone issue #n."
+Add one line: the review runs in a fresh session, preferably on a model that
+implemented none of the release (the issue's **Implementer** line says which).
+In OpenCode, `/review-release <n>` is a shortcut to the same instructions. Do
+not start the review yourself, and never spawn a reviewer of your own.
 
-For a re-review, first move **Candidate** to the new `main` commit, and add the
-earlier verdict and the fix PRs to the issue. Then give the same command again,
-in a fresh session.
+For a re-review, first move **Candidate** to the new `main` commit and add the
+earlier verdict and the fix PRs to the issue, then give the prompt again with
+the new SHA.
 
 ## When the review is in
 
@@ -99,7 +95,7 @@ in a fresh session.
   call: say which you took.
 - Reply on the milestone issue with what happened to each finding.
 - **BLOCK**: once the fixes merge, rerun the gates on the new candidate and
-  start the re-review without being asked. After a third round without AGREE,
-  the owner decides.
+  give the owner the re-review prompt without being asked. After a third
+  round without AGREE, the owner decides.
 - **AGREE**: run the checks `docs/RELEASES.md` requires before the tag, then
   tag exactly the reviewed SHA and build from the tag.
