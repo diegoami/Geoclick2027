@@ -171,10 +171,10 @@ the gate.
 - Don't debug what the user can fix in two dashboard clicks. Try the direct
   tool once or twice, then hand it back. (Why: see `DECISIONS.md` — "Hand a
   dashboard problem back".)
-- **Deploys run** (owner, 2026-10-29): a merge to `main` publishes the web
-  app; the stop of 2026-09-22 is over. Never trigger a deploy yourself, and do
-  not check or report its status (*Working agreements*). (Why: see
-  `DECISIONS.md` — "Netlify build cost".)
+- **Deploys are the owner's.** Never trigger a deploy yourself; whether and
+  when the web app deploys is the owner's call, and its status is not checked
+  or reported (*Working agreements*). (Why: see `DECISIONS.md` — "Netlify
+  build cost".)
 - Roles: the user is Product Manager; the implementing model is the Developer.
   Finish by telling the user exactly what to run/click and what to expect.
 - Whenever a PR is handed to the owner for testing, include its direct GitHub
