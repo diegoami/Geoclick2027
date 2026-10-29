@@ -181,6 +181,12 @@ export type TranslationKey =
 	| 'quiz.namesAtATime.one'
 	| 'quiz.namesAtATime.other'
 	| 'quiz.playAgain'
+	| 'quiz.lastTime'
+	| 'quiz.newlyKnown'
+	| 'quiz.slipped'
+	| 'quiz.toWorkOn'
+	| 'quiz.more'
+	| 'quiz.studyThese'
 	| 'quiz.resizeTrayAriaLabel'
 	| 'quiz.storageWarning'
 	| 'tour.prev'
@@ -392,6 +398,12 @@ const en: Dictionary = {
 	'quiz.namesAtATime.one': 'one name at a time',
 	'quiz.namesAtATime.other': '{count} names at a time',
 	'quiz.playAgain': 'Play again',
+	'quiz.lastTime': 'Last time: {perfect} / {total}.',
+	'quiz.newlyKnown': 'Newly known',
+	'quiz.slipped': 'Slipped a level: {count}',
+	'quiz.toWorkOn': 'To work on',
+	'quiz.more': '+{count} more',
+	'quiz.studyThese': 'Study these',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
 	'quiz.storageWarning':
 		'Progress cannot be saved on this device right now, so this round will not be remembered.',
@@ -619,6 +631,12 @@ const de: Dictionary = {
 	'quiz.namesAtATime.one': 'ein Name auf einmal',
 	'quiz.namesAtATime.other': '{count} Namen auf einmal',
 	'quiz.playAgain': 'Nochmal spielen',
+	'quiz.lastTime': 'Letztes Mal: {perfect} von {total}.',
+	'quiz.newlyKnown': 'Neu gewusst',
+	'quiz.slipped': 'Eine Stufe verloren: {count}',
+	'quiz.toWorkOn': 'Zum Üben',
+	'quiz.more': '+{count} weitere',
+	'quiz.studyThese': 'Diese lernen',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
 	'quiz.storageWarning':
 		'Fortschritt kann auf diesem Gerät gerade nicht gespeichert werden — diese Runde wird nicht gemerkt.',
@@ -849,6 +867,12 @@ const it: Dictionary = {
 	'quiz.namesAtATime.one': 'un nome alla volta',
 	'quiz.namesAtATime.other': '{count} nomi alla volta',
 	'quiz.playAgain': 'Gioca ancora',
+	'quiz.lastTime': 'L’ultima volta: {perfect} su {total}.',
+	'quiz.newlyKnown': 'Imparati ora',
+	'quiz.slipped': 'Scesi di un gradino: {count}',
+	'quiz.toWorkOn': 'Da ripassare',
+	'quiz.more': '+ altri {count}',
+	'quiz.studyThese': 'Studia questi',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
 	'quiz.storageWarning':
 		'Al momento non è possibile salvare i progressi su questo dispositivo, quindi questa partita non verrà ricordata.',

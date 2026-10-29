@@ -18,6 +18,11 @@
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
 	import FactCard from './FactCard.svelte';
+	import ScorePanel from './ScorePanel.svelte';
+	import { roundChange, type RoundChange } from './roundReport';
+	import { goto } from '$app/navigation';
+	import { resolve } from '$lib/appPaths';
+	import { setNameOverride } from './mapPrefs.svelte';
 	import ChartMapShell from './ChartMapShell.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
 	import {
@@ -33,7 +38,8 @@
 	import {
 		loadPlayableCardStates,
 		todayLocalDate,
-		type ProgressRepository
+		type ProgressRepository,
+		type SessionSummary
 	} from './progressRepository';
 	import { rate, type CardState as SchedulerState, type Grade } from '@geoclick/srs';
 	import { StretchedNames } from './stretchedNames';
@@ -272,6 +278,42 @@
 	// forcing a replay. Reset whenever a new session starts, so the next
 	// completion shows the panel again.
 	let scorePanelDismissed = $state(false);
+	// What the round changed (#259): every target's earned level as the round
+	// started, and the difference once it is over. Plain, like
+	// cardStatesByTargetId: only read when a round ends.
+	let levelsAtStart = new Map<string, number>();
+	let change = $state<RoundChange | undefined>(undefined);
+	// The round before this one, read once on mount and then replaced by each
+	// round as it ends; `panelLastTime` is what the open panel compares with.
+	let lastTime: SessionSummary | undefined;
+	let panelLastTime = $state<SessionSummary | undefined>(undefined);
+
+	/** Every target's earned level right now. */
+	function currentLevels(def: MapDefinition): Map<string, number> {
+		return new Map(def.targets.map((t) => [t.id, cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0]));
+	}
+
+	/** The names this round could not place, for the panel and "Study these". */
+	const toWorkOn = $derived(
+		session
+			? session.items
+					.filter((i) => i.status === 'revealed')
+					.map((i) => ({ id: i.target.id, name: shownName(i.target.id, i.target.name) }))
+			: []
+	);
+
+	/** Opens a name's fact card from the score panel. */
+	function showFact(targetId: string) {
+		const target = targetsById.get(targetId);
+		if (!target) return;
+		told = { id: targetId, name: target.name, ...placeFacts(mapId, targetId, facts[targetId]) };
+	}
+
+	/** "Study these": Known, with the names to work on chosen (FT-39's taps). */
+	function studyMissed() {
+		for (const item of toWorkOn) setNameOverride(mapId, item.id, 'shown');
+		goto(resolve('/map/[mapId]', { mapId }));
+	}
 
 	// Tell the tutorial when the tray is empty (FT-44). Its "get one wrong on
 	// purpose" step waits for a wrong drop, and a player who places every
@@ -286,15 +328,25 @@
 			summarySaved = true;
 			// Finished: there is nothing left to come back to.
 			forgetRound(mapId);
+			const summary = { ...score, completedAt: new Date().toISOString() };
 			progressRepository
-				.saveLastSessionSummary(mapId, { ...score, completedAt: new Date().toISOString() })
+				.saveLastSessionSummary(mapId, summary)
 				.catch((e) => console.error('Failed to save quiz progress:', e));
+			panelLastTime = lastTime;
+			lastTime = summary;
+			// The last drop's card would cover the panel; its names open it again.
+			told = undefined;
 
 			// What the round did to the map: how many names are known now, and
 			// whether that moved the tray to a smaller hand (FT-21).
 			if (mapDef) {
 				knownAfterRound = knownCount(
 					mapDef.targets.map((t) => cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0)
+				);
+				change = roundChange(
+					mapDef.targets.map((t) => t.id),
+					levelsAtStart,
+					currentLevels(mapDef)
 				);
 				refreshLevel(mapDef);
 			}
@@ -545,7 +597,7 @@
 		dealHand();
 		// Keep the round in case the player steps out to the Overview and back
 		// (quizRound.ts); the completion effect throws it away at the end.
-		rememberRound(mapId, { session, hand });
+		rememberRound(mapId, { session, hand, levelsAtStart: Object.fromEntries(levelsAtStart) });
 
 		if (item.status === 'correct' || item.status === 'revealed') {
 			const revealed = item.status === 'revealed';
@@ -656,9 +708,11 @@
 	function startRound() {
 		if (!mapDef || !map) return;
 		knownAfterRound = undefined;
+		change = undefined;
 		scorePanelDismissed = false;
 		summarySaved = false;
 		forgetRound(mapId);
+		levelsAtStart = currentLevels(mapDef);
 		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
 		refreshLevel(mapDef);
 		hand = [];
@@ -673,8 +727,12 @@
 		const round = roundInProgress(mapId);
 		if (!round || isSessionComplete(round.session)) return false;
 		knownAfterRound = undefined;
+		change = undefined;
 		scorePanelDismissed = false;
 		summarySaved = false;
+		levelsAtStart = round.levelsAtStart
+			? new Map(Object.entries(round.levelsAtStart))
+			: currentLevels(mapDef);
 		session = round.session;
 		refreshLevel(mapDef);
 		hand = round.hand;
@@ -735,6 +793,7 @@
 			progressRepository = loaded.repository;
 			cardStatesByTargetId = new Map(loaded.cardStates.map((c) => [c.targetId, c]));
 			storageWarning = loaded.failed;
+			lastTime = await progressRepository.getLastSessionSummary(mapId).catch(() => undefined);
 
 			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
@@ -818,38 +877,25 @@
 		{/if}
 
 		{#if complete && score && session && !scorePanelDismissed}
-			{@const revealedCount = session.items.filter((i) => i.status === 'revealed').length}
-			<div class="score-panel">
-				<button
-					class="score-panel-close"
-					aria-label={t('quiz.closeAriaLabel')}
-					onclick={() => (scorePanelDismissed = true)}
-				>
-					&times;
-				</button>
-				<h2>{t('quiz.done')}</h2>
-				<p>
-					<strong>{score.perfect}</strong>
-					{t('quiz.scoreLineRest', { total: score.total })}
-				</p>
-				<p>{tPlural('quiz.totalMistakes', score.totalErrors, { count: score.totalErrors })}</p>
-				{#if revealedCount > 0}
-					<p class="revealed-note">
-						{t('quiz.revealedNote', { count: revealedCount })}
-					</p>
-				{/if}
-				<!-- What the round left behind (FT-26). The map list shows a bar
-				     (FT-65); this panel keeps the number, because it records what
-				     this round left behind rather than the map's standing. -->
-				{#if knownAfterRound !== undefined && mapDef}
-					<p class="known-note">
-						{t('quiz.known', { known: knownAfterRound, total: mapDef.targets.length })}
-						{#if level > 0}
-							· {tPlural('quiz.namesAtATime', handSize(level), { count: handSize(level) })}
-						{/if}
-					</p>
-				{/if}
-			</div>
+			<ScorePanel
+				perfect={score.perfect}
+				total={score.total}
+				totalErrors={score.totalErrors}
+				revealedCount={toWorkOn.length}
+				knownLine={knownAfterRound !== undefined && mapDef
+					? t('quiz.known', { known: knownAfterRound, total: mapDef.targets.length }) +
+						(level > 0
+							? ` · ${tPlural('quiz.namesAtATime', handSize(level), { count: handSize(level) })}`
+							: '')
+					: undefined}
+				lastTime={panelLastTime}
+				newlyKnown={(change?.newlyKnown ?? []).map((id) => ({ id, name: shownName(id, id) }))}
+				{toWorkOn}
+				slippedCount={change?.slipped.length ?? 0}
+				onclose={() => (scorePanelDismissed = true)}
+				onfact={showFact}
+				onstudy={studyMissed}
+			/>
 		{/if}
 	{/if}
 	{#if complete && scorePanelDismissed}
@@ -867,7 +913,7 @@
 	<!-- Above the tray, whose height the player can drag (FT-35). Two clauses
 	     rather than three: the map is already sharing this screen with a tray
 	     full of names, and a paragraph here would be read by nobody. -->
-	{#if told && !complete}
+	{#if told}
 		<FactCard
 			name={shownName(told.id, told.name)}
 			fact={facts[told.id]}
@@ -1042,49 +1088,6 @@
 			transform: translateX(-4px);
 		}
 	}
-	.score-panel {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 2;
-		background: white;
-		border-radius: 0.75rem;
-		padding: 1.5rem 2rem;
-		text-align: center;
-		font-family: system-ui, sans-serif;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-	}
-	.score-panel button.score-panel-close {
-		position: absolute;
-		top: 0.4rem;
-		right: 0.4rem;
-		width: 1.75rem;
-		height: 1.75rem;
-		padding: 0;
-		border-radius: 50%;
-		background: transparent;
-		color: rgba(0, 0, 0, 0.45);
-		font-size: 1.3rem;
-		line-height: 1;
-		margin: 0;
-	}
-	.score-panel button.score-panel-close:hover {
-		background: rgba(0, 0, 0, 0.06);
-		color: rgba(0, 0, 0, 0.75);
-	}
-	.score-panel h2 {
-		margin: 0 0 0.75rem;
-	}
-	.revealed-note {
-		font-size: 0.85rem;
-		color: #8a6d3b;
-	}
-	.known-note {
-		font-size: 0.85rem;
-		opacity: 0.7;
-	}
-	.score-panel button,
 	.map-again {
 		font-family: inherit;
 		font-size: 0.9rem;
