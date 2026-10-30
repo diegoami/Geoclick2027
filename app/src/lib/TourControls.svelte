@@ -112,8 +112,8 @@
 		margin-left: 0.25rem;
 		padding: 0.45rem 0.8rem;
 		border-radius: 0.6rem;
-		background: #5a9c6f;
-		color: #ffffff;
+		background: var(--gc-success-strong, #5a9c6f);
+		color: var(--gc-on-strong, #ffffff);
 		font-size: 0.9rem;
 		font-weight: 600;
 		text-decoration: none;
@@ -128,7 +128,7 @@
 		gap: 0.25rem;
 		padding: 0.35rem 0.5rem;
 		border-radius: 1rem;
-		background: rgba(255, 255, 255, 0.94);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.94));
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 		font-family: system-ui, sans-serif;
 	}
@@ -142,15 +142,15 @@
 		border: none;
 		border-radius: 0.65rem;
 		background: transparent;
-		color: #304239;
+		color: var(--gc-text, #304239);
 		cursor: pointer;
 	}
 	.control-button:hover:not(:disabled) {
-		background: rgba(0, 0, 0, 0.07);
+		background: var(--gc-hover, rgba(0, 0, 0, 0.07));
 	}
 	.control-button:focus-visible,
 	.speed:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 2px;
 	}
 	.control-button:disabled {
@@ -178,7 +178,7 @@
 		font: inherit;
 		font-size: 0.85rem;
 		border: none;
-		background: rgba(0, 0, 0, 0.06);
+		background: var(--gc-hover, rgba(0, 0, 0, 0.06));
 		border-radius: 0.5rem;
 		padding: 0.25rem 0.4rem;
 		cursor: pointer;

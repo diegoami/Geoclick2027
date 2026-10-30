@@ -1,0 +1,197 @@
+/* Appearance roles (#284). Geographic/category colors stay in the map style.
+ * Classic retains the authored per-component fallbacks. Shared defaults also
+ * serve the preferences panel; alternate schemes replace every UI color role. */
+:root {
+	--gc-surface: #fff;
+	--gc-text: #1c2b22;
+	--gc-muted: #4a5650;
+	--gc-border: #c9d3cc;
+	--gc-accent: #965514;
+	--gc-success-strong: #39794c;
+}
+:root[data-scheme='ocean'] {
+	--gc-page: #e7f1fb;
+	--gc-surface: #f0f7ff;
+	--gc-text: #142e45;
+	--gc-muted: #435b70;
+	--gc-border: #728da5;
+	--gc-accent: #175b98;
+	--gc-on-strong: #fff;
+	--gc-accent-soft: #dcecff;
+	--gc-hover: #cddfed;
+	--gc-label-bg: #153d60;
+	--gc-map-ink: #173d60;
+	--gc-map-asked: #154c8a;
+	--gc-halo: #fff;
+}
+:root[data-scheme='forest'] {
+	--gc-page: #e7f0e4;
+	--gc-surface: #f2f8f1;
+	--gc-text: #193321;
+	--gc-muted: #455c49;
+	--gc-border: #7a927b;
+	--gc-accent: #27683b;
+	--gc-on-strong: #fff;
+	--gc-accent-soft: #dfecdc;
+	--gc-hover: #d5e5d1;
+	--gc-label-bg: #234c30;
+	--gc-map-ink: #234c30;
+	--gc-map-asked: #205729;
+	--gc-halo: #fff;
+}
+:root[data-scheme='ocean'],
+:root[data-scheme='forest'] {
+	--gc-success: #23623b;
+	--gc-success-strong: #286b40;
+	--gc-success-soft: #e0f1e5;
+	--gc-danger: #95251e;
+	--gc-danger-strong: #a52c24;
+	--gc-danger-soft: #ffe5e1;
+	--gc-warning: #725019;
+	--gc-warning-soft: #fff0cf;
+	--gc-warning-strong: #76541d;
+	--gc-revealed-bg: #70501d;
+	--gc-map-revealed: #70501d;
+}
+:root[data-scheme='contrast'] {
+	color-scheme: dark;
+	--gc-page: #080e14;
+	--gc-surface: #101820;
+	--gc-text: #fff;
+	--gc-muted: #d1dae2;
+	--gc-border: #b9c9d6;
+	--gc-accent: #ffdf70;
+	--gc-on-strong: #101820;
+	--gc-accent-soft: #393018;
+	--gc-hover: #2e4050;
+	--gc-success: #a1f0bd;
+	--gc-success-strong: #a1f0bd;
+	--gc-success-soft: #163c29;
+	--gc-danger: #ffb4ac;
+	--gc-danger-strong: #ffb4ac;
+	--gc-danger-soft: #4b2020;
+	--gc-warning: #ffdf90;
+	--gc-warning-soft: #3b2e15;
+	--gc-warning-strong: #ffdf90;
+	--gc-label-bg: #ffdf70;
+	--gc-revealed-bg: #ffb4ac;
+	--gc-map-ink: #fff;
+	--gc-map-asked: #ffdf70;
+	--gc-map-revealed: #ffb4ac;
+	--gc-halo: #101820;
+}
+body {
+	color: var(--gc-text);
+}
+html[data-scheme]:not([data-scheme='classic']) body {
+	background: var(--gc-page);
+}
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+}
+:focus-visible {
+	outline: 3px solid var(--gc-accent);
+	outline-offset: 2px;
+}
+.gc-bar {
+	flex-wrap: wrap;
+}
+.gc-tools {
+	flex-wrap: wrap;
+}
+/* The third-party attribution is text too; keep icons and map zoom targets
+ * fixed while allowing the credit line to follow the app/browser font size. */
+.maplibregl-map {
+	font-size: 0.75rem;
+}
+.maplibregl-ctrl-attrib {
+	font-size: 0.75rem;
+}
+html[data-scheme='contrast'] .maplibregl-ctrl-attrib {
+	background: #101820;
+	color: white;
+}
+html[data-scheme='contrast'] .maplibregl-ctrl-attrib a {
+	color: #ffdf70;
+}
+/* State remains visible through shape as well as hue. */
+.geoclick-solved-popup.revealed .maplibregl-popup-content {
+	text-decoration: underline dotted;
+}
+html[data-scheme='contrast'] .geoclick-retention.retention-seen .maplibregl-popup-content,
+html[data-scheme='contrast'] .geoclick-stretched text.retention-seen {
+	opacity: 0.85;
+}
+html[data-scheme='contrast'] .geoclick-retention.retention-nearly .maplibregl-popup-content,
+html[data-scheme='contrast'] .geoclick-stretched text.retention-nearly {
+	opacity: 0.95;
+}
+@media (max-height: 480px) {
+	.gc-bar {
+		padding: 4px;
+	}
+}
+
+/* MapLibre supplies white backgrounds; give our currentColor eye icon its
+ * own foreground and background so it remains visible in the dark scheme. */
+.maplibregl-ctrl-group.geoclick-hide-buttons button {
+	color: var(--gc-text);
+	background: var(--gc-surface);
+}
+
+/* Only enlarged text needs a scrolling toolbar. At normal size menus keep
+ * their existing ability to escape its box and paint above the build badge. */
+html[data-text-size='large'] .nav-overlay {
+	max-height: 48dvh;
+	overflow-y: auto;
+	max-width: calc(100% - 4.5rem);
+}
+
+html[data-text-size='large'] .nav-overlay .subtitle {
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow-wrap: anywhere;
+}
+html[data-text-size='large'] .mode-switch {
+	max-width: 100%;
+	flex-wrap: wrap;
+	margin-left: 0;
+}
+html[data-text-size='large'] .mode-switch button {
+	min-width: 0;
+	max-width: 100%;
+	overflow-wrap: anywhere;
+}
+
+/* A country name and a native select can both have a large intrinsic width.
+ * Stack them at enlarged sizes rather than extending the page sideways. */
+html[data-text-size='large'] .rows .row {
+	grid-template-columns: minmax(0, 1fr);
+}
+html[data-text-size='large'] .rows .name {
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+html[data-text-size='large'] .rows select {
+	min-width: 0;
+	max-width: 100%;
+	width: 100%;
+}
+html[data-text-size='large'] .rows .progress {
+	grid-row: auto;
+}
+html[data-text-size='large'] .picker-continent {
+	max-width: min(10em, 55vw);
+	white-space: normal;
+	overflow-wrap: anywhere;
+	text-align: center;
+}
+
+/* Asked names have a non-color cue, including in the green scheme. */
+.geoclick-retention.retention-asked .maplibregl-popup-content,
+.geoclick-stretched text.retention-asked {
+	text-decoration: underline;
+}

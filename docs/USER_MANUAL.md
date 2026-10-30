@@ -39,6 +39,7 @@ real progress.
 
 ## Contents
 
+- [Appearance and text size](#appearance-and-text-size)
 1. [What Geoclick is](#1-what-geoclick-is)
 2. [Getting Geoclick](#2-getting-geoclick)
 3. [How the screens fit together](#3-how-the-screens-fit-together)
@@ -63,6 +64,21 @@ real progress.
 22. [Glossary](#22-glossary)
 
 ---
+
+
+## Appearance and text size
+
+Choose **Appearance** (the A− / A+ icon) in the start screen toolbar or a
+map's toolbar, including during a quiz. Use **A−** and **A+** to choose a text
+size from 90% to 200%; **Reset** returns text to 100%. All interface text,
+quiz names and map labels follow the size. Geographic map zoom is separate.
+
+Choose **Classic**, **Ocean**, **Forest** or **High contrast** to change
+interface and label colors. Geographic map colors retain their meaning;
+High contrast does not replace the basemap with a dark map. Settings apply
+immediately and are remembered on this device when storage is available.
+Use the close button or Escape to return to the map. If the map toolbar is
+hidden, show it with the button below the map zoom controls first.
 
 ## 1. What Geoclick is
 

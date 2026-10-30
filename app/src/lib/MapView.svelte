@@ -426,7 +426,7 @@
 		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
-		color: #a33;
+		color: var(--gc-danger, #a33);
 	}
 	/* What the three label strengths mean (FT-22). Bottom-left, clear of the
 	   map bar, the zoom buttons and the version badge. */
@@ -440,23 +440,23 @@
 		gap: 0.35rem;
 		max-width: calc(100% - 1.5rem);
 		padding: 0.4rem 0.5rem;
-		background: rgba(255, 255, 255, 0.92);
-		border: 1px solid rgba(17, 24, 21, 0.1);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.92));
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.1));
 		border-radius: 0.6rem;
 		font-family: system-ui, sans-serif;
 	}
 	.swatch {
 		padding: 1px 6px;
 		border-radius: 5px;
-		background: rgba(31, 61, 42, 0.65);
-		color: #ffffff;
+		background: var(--gc-label-bg, rgba(31, 61, 42, 0.65));
+		color: var(--gc-on-strong, #ffffff);
 		font-size: 0.8125rem;
 		font-weight: 600;
 		white-space: nowrap;
 	}
 	/* The same steps the labels themselves use, in app.css. */
 	.swatch.retention-asked {
-		background: rgba(181, 105, 31, 0.9);
+		background: var(--gc-accent, rgba(181, 105, 31, 0.9));
 	}
 	.swatch.retention-nearly {
 		font-size: 0.75rem;
@@ -467,10 +467,10 @@
 	   undo. */
 	.clear-btn {
 		padding: 1px 8px;
-		border: 1px solid rgba(181, 105, 31, 0.45);
+		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
 		border-radius: 5px;
-		background: #ffffff;
-		color: #b5691f;
+		background: var(--gc-surface, #ffffff);
+		color: var(--gc-accent, #b5691f);
 		font-family: inherit;
 		font-size: 0.75rem;
 		font-weight: 600;
@@ -478,10 +478,10 @@
 		cursor: pointer;
 	}
 	.clear-btn:hover {
-		background: #fbf4ec;
+		background: var(--gc-accent-soft, #fbf4ec);
 	}
 	.clear-btn:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 1px;
 	}
 	.swatch.retention-seen {
@@ -493,7 +493,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		max-width: min(22rem, calc(100% - 1.5rem));
-		color: #1f3d2a;
+		color: var(--gc-text, #1f3d2a);
 		font-size: 0.875rem;
 	}
 	.legend.empty p {
@@ -519,8 +519,8 @@
 		margin: 0;
 		padding: 0.4rem 0.8rem;
 		border-radius: 0.6rem;
-		background: #1f3d2a;
-		color: #ffffff;
+		background: var(--gc-label-bg, #1f3d2a);
+		color: var(--gc-on-strong, #ffffff);
 		font-family: system-ui, sans-serif;
 		font-size: 0.875rem;
 	}
@@ -529,11 +529,11 @@
 		padding: 1rem 1.2rem;
 		border: none;
 		border-radius: 0.8rem;
-		color: #1f3d2a;
+		color: var(--gc-text, #1f3d2a);
 		font-family: system-ui, sans-serif;
 	}
 	.reset-dialog::backdrop {
-		background: rgba(17, 24, 21, 0.45);
+		background: var(--gc-hover, rgba(17, 24, 21, 0.45));
 	}
 	.reset-dialog h2 {
 		margin: 0 0 0.5rem;
@@ -551,14 +551,14 @@
 		padding: 4px 12px;
 		border: none;
 		border-radius: 5px;
-		background: #c0392b;
-		color: #ffffff;
+		background: var(--gc-danger-strong, #c0392b);
+		color: var(--gc-on-strong, #ffffff);
 		font-family: inherit;
 		font-weight: 600;
 		cursor: pointer;
 	}
 	.reset-confirm:focus-visible {
-		outline: 2px solid #c0392b;
+		outline: 2px solid var(--gc-danger-strong, #c0392b);
 		outline-offset: 2px;
 	}
 </style>

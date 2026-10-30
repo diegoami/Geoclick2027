@@ -2701,3 +2701,18 @@ question was answered "as recommended" in the issues.
   reopened the home-order decision (FEATURE_PLAN.md decision 15).
 - **Out of scope, on purpose:** leaderboards, accounts, coins or XP, daily
   streaks, typed answers, and saving an unfinished round across restarts.
+
+
+### Overall text size and appearance schemes (2026-10-30, #284)
+
+The owner approved an Appearance panel on home and the map toolbar, with
+A− / A+ controls, a percentage and text-size Reset. Scale all text from
+90–200%, rather than only quiz slips; use a percentage of the browser's
+default root font so browser preferences continue to compose. Keep geographic
+zoom separate and refresh tray/collision/stretched-name geometry in place.
+Remember the validated size and Classic/Ocean/Forest/High contrast choice on
+this device, with session fallback if storage is blocked. Share semantic UI
+color roles across components; geographic/category palettes and terrain keep
+their meaning. High contrast describes the interface, not a dark basemap.
+The native modal contains focus, closes on Escape and restores focus to its
+opener; quiz keyboard shortcuts must not answer behind the dialog.

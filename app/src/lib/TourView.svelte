@@ -335,6 +335,6 @@
 		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
-		color: #a33;
+		color: var(--gc-danger, #a33);
 	}
 </style>

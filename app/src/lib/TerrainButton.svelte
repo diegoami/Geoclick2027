@@ -57,9 +57,9 @@
 		line-height: 1.2;
 		padding: 0.2rem 0.55rem;
 		border-radius: 999px;
-		border: 1px solid rgba(181, 105, 31, 0.45);
-		background: #ffffff;
-		color: #b5691f;
+		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
+		background: var(--gc-surface, #ffffff);
+		color: var(--gc-accent, #b5691f);
 		cursor: pointer;
 	}
 	/* A finger-sized target around a pill that stays small (FT-32). */
@@ -72,15 +72,15 @@
 		position: relative;
 	}
 	.terrain-btn--on {
-		background: #b5691f;
-		border-color: #b5691f;
-		color: #ffffff;
+		background: var(--gc-accent, #b5691f);
+		border-color: var(--gc-accent, #b5691f);
+		color: var(--gc-on-strong, #ffffff);
 	}
 	.terrain-btn:hover:not(.terrain-btn--on) {
-		background: #fbf4ec;
+		background: var(--gc-accent-soft, #fbf4ec);
 	}
 	.terrain-btn:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 2px;
 	}
 </style>

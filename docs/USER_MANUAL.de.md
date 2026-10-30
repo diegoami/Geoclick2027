@@ -6,6 +6,7 @@ Die gemeinsam mit dem englischen Handbuch verwendeten Bilder zeigen englische Be
 
 ## Inhalt
 
+- [Darstellung und Textgröße](#darstellung-und-textgröße)
 1. [Was ist Geoclick?](#1-was-ist-geoclick)
 2. [Geoclick bekommen](#2-geoclick-bekommen)
 3. [Die Ansichten im Zusammenhang](#3-die-ansichten-im-zusammenhang)
@@ -28,6 +29,21 @@ Die gemeinsam mit dem englischen Handbuch verwendeten Bilder zeigen englische Be
 20. [Der Kartenkatalog](#20-der-kartenkatalog)
 21. [Häufige Fragen](#21-häufige-fragen)
 22. [Begriffe](#22-begriffe)
+
+
+## Darstellung und Textgröße
+
+Öffne **Darstellung** (das A− / A+-Symbol) in der Start- oder Kartenleiste,
+auch während eines Quiz. Mit **A−** und **A+** wählst du 90% bis 200%;
+**Zurücksetzen** stellt die Textgröße auf 100%. Oberflächentexte, Quiznamen
+und Kartenbeschriftungen folgen dieser Größe. Der Kartenzoom ist unabhängig.
+
+Wähle **Klassisch**, **Ozean**, **Wald** oder **Hoher Kontrast** für andere
+Farben der Oberfläche und Beschriftungen. Geografische Kartenfarben behalten
+ihre Bedeutung; Hoher Kontrast erzeugt keine dunkle Basiskarte. Änderungen
+gelten sofort und werden nach Möglichkeit auf diesem Gerät gespeichert.
+Schließe das Fenster mit der Schaltfläche oder Escape. Eine ausgeblendete
+Kartenleiste blendest du zuerst mit der Taste unter dem Kartenzoom ein.
 
 ## 1. Was ist Geoclick?
 

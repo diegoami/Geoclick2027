@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AppearanceButton from './AppearanceButton.svelte';
 	// The start screen's toolbar (FT-82, #91), after the owner's card games:
 	// everything that sat above the map - the title, language, Tutorial,
 	// Exit, the Map / List switch, Favourites and Recent, the download link -
@@ -78,6 +79,7 @@
 			{#if myMapsCount > 0}<span class="gc-count" aria-hidden="true">{myMapsCount}</span>{/if}
 		</a>
 		<LanguageSwitcher />
+		<AppearanceButton />
 		<TutorialButton icon />
 		<a
 			class="gc-tool"

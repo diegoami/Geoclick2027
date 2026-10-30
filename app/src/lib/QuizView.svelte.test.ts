@@ -274,6 +274,34 @@ describe('QuizView (FT-59)', () => {
 		);
 	});
 
+	it('remeasures a live round at 200% and keeps tap and drag answers working (#284)', async () => {
+		const screen = await mount();
+		const names = slipNames();
+		const original = document.documentElement.style.fontSize;
+		const slip = screen.container.querySelector<HTMLElement>('.slip')!;
+		const before = slip.getBoundingClientRect().height;
+		try {
+			await screen.getByRole('button', { name: names[0], exact: true }).click();
+			document.documentElement.style.fontSize = '200%';
+			window.dispatchEvent(new Event('geoclick:appearancechange'));
+			await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+			expect(slipNames()).toEqual(names);
+			expect(slip.getBoundingClientRect().height).toBeGreaterThan(before);
+			const tray = screen.container.querySelector<HTMLElement>('.tray')!;
+			const handle = screen.container.querySelector<HTMLElement>('.tray-handle-row')!;
+			expect(tray.getBoundingClientRect().height).toBeGreaterThanOrEqual(
+				slip.getBoundingClientRect().height + handle.getBoundingClientRect().height
+			);
+			expect(screen.container.querySelector('.slip.selected')?.textContent?.trim()).toBe(names[0]);
+			tapMap(names[0]);
+			await expect.poll(() => slipNames()).not.toContain(names[0]);
+			await drop(names[1], names[1]);
+			expect(placedNames()).toEqual([names[0], names[1]]);
+		} finally {
+			document.documentElement.style.fontSize = original;
+		}
+	});
+
 	it('grades a correct drop good, and a revealed one again with its fact card', async () => {
 		const screen = await mount();
 		const [right, wrong] = slipNames();

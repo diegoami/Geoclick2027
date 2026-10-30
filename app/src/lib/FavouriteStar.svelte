@@ -48,7 +48,7 @@
 		border: 1px solid transparent;
 		border-radius: 999px;
 		background: transparent;
-		color: #7d8a83;
+		color: var(--gc-muted, #7d8a83);
 		cursor: pointer;
 	}
 	.star svg {
@@ -70,15 +70,15 @@
 		transform: translate(-50%, -50%);
 	}
 	.star:hover {
-		color: #b5691f;
-		background: rgba(181, 105, 31, 0.08);
+		color: var(--gc-accent, #b5691f);
+		background: var(--gc-accent-soft, rgba(181, 105, 31, 0.08));
 	}
 	.star:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 2px;
 	}
 	.star--on {
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 	}
 	.star--card {
 		width: 2.25rem;
@@ -89,11 +89,11 @@
 	.star--bar {
 		width: 1.75rem;
 		height: 1.75rem;
-		background: #ffffff;
-		border-color: rgba(17, 24, 21, 0.12);
+		background: var(--gc-surface, #ffffff);
+		border-color: var(--gc-border, rgba(17, 24, 21, 0.12));
 		box-shadow: 0 1px 3px rgba(17, 24, 21, 0.12);
 	}
 	.star--bar:hover {
-		background: #fbf4ec;
+		background: var(--gc-accent-soft, #fbf4ec);
 	}
 </style>

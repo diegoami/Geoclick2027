@@ -252,48 +252,50 @@
 	}
 	.spotlight {
 		border-radius: 0.75rem;
-		box-shadow: 0 0 0 3px #b5691f;
+		box-shadow: 0 0 0 3px var(--gc-accent, #b5691f);
 	}
 	/* The dimming is the spotlight's own giant shadow, so the lit hole needs no
 	   second element and moves with it. */
 	.spotlight--dim {
 		box-shadow:
-			0 0 0 3px #b5691f,
+			0 0 0 3px var(--gc-accent, #b5691f),
 			0 0 0 200vmax rgba(17, 24, 21, 0.45);
 	}
 	.dim {
 		inset: 0;
-		background: rgba(17, 24, 21, 0.45);
+		background: var(--gc-hover, rgba(17, 24, 21, 0.45));
 	}
 	.ring {
 		border-radius: 0.5rem;
-		box-shadow: 0 0 0 3px #b5691f;
+		box-shadow: 0 0 0 3px var(--gc-accent, #b5691f);
 	}
 	.card {
 		position: fixed;
 		z-index: 1001;
 		box-sizing: border-box;
-		max-width: 24rem;
+		max-width: min(24rem, calc(100vw - 16px));
+		max-height: calc(100dvh - 16px);
+		overflow-y: auto;
 		padding: 0.9rem 1rem 0.8rem;
-		background: #ffffff;
+		background: var(--gc-surface, #ffffff);
 		border-radius: 0.75rem;
 		box-shadow: 0 8px 28px rgba(17, 24, 21, 0.28);
 		font-family: system-ui, sans-serif;
-		color: #1e2824;
+		color: var(--gc-text, #1e2824);
 		text-align: left;
 	}
 	.card:focus {
 		outline: none;
 	}
 	.card:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 2px;
 	}
 	.counter {
 		margin: 0 0 0.3rem;
 		font-size: 0.75rem;
 		font-weight: 600;
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 	}
 	.title {
 		margin: 0 0 0.4rem;
@@ -320,17 +322,17 @@
 		cursor: pointer;
 	}
 	.primary {
-		background: #b5691f;
-		border: 1px solid #b5691f;
-		color: #ffffff;
+		background: var(--gc-accent, #b5691f);
+		border: 1px solid var(--gc-accent, #b5691f);
+		color: var(--gc-on-strong, #ffffff);
 	}
 	.secondary {
-		background: #ffffff;
-		border: 1px solid rgba(30, 40, 36, 0.25);
-		color: #4a5650;
+		background: var(--gc-surface, #ffffff);
+		border: 1px solid var(--gc-border, rgba(30, 40, 36, 0.25));
+		color: var(--gc-muted, #4a5650);
 	}
 	button:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 2px;
 	}
 	.paused {
@@ -350,11 +352,11 @@
 		gap: 0.6rem;
 		box-sizing: border-box;
 		padding: 0.55rem 0.8rem;
-		background: #ffffff;
+		background: var(--gc-surface, #ffffff);
 		border-radius: 0.9rem;
 		box-shadow: 0 6px 20px rgba(17, 24, 21, 0.25);
 		font-family: system-ui, sans-serif;
 		font-size: 0.9rem;
-		color: #1e2824;
+		color: var(--gc-text, #1e2824);
 	}
 </style>

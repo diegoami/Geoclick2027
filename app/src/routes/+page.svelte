@@ -207,15 +207,15 @@
 	.suggestion a {
 		display: inline-block;
 		padding: 0.35rem 0.8rem;
-		border: 1px solid rgba(181, 105, 31, 0.35);
+		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.35));
 		border-radius: 999px;
-		background: #fbf4ec;
-		color: #8a4d12;
+		background: var(--gc-accent-soft, #fbf4ec);
+		color: var(--gc-accent, #8a4d12);
 		font-weight: 600;
 		text-decoration: none;
 	}
 	.suggestion a:hover {
-		background: #f6e6d3;
+		background: var(--gc-accent-soft, #f6e6d3);
 	}
 	/* A flat white page read as "meh" (direct user feedback) - a soft,
 	   low-saturation gradient drawn from the same muted-earthy family as
@@ -256,21 +256,21 @@
 		padding: 0.6rem 0.8rem;
 		font: inherit;
 		font-size: 1rem;
-		color: #1c2b22;
-		background: rgba(255, 255, 255, 0.9);
-		border: 1px solid rgba(17, 24, 21, 0.18);
+		color: var(--gc-text, #1c2b22);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.9));
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.18));
 		border-radius: 0.6rem;
 	}
 	.search input:focus-visible {
-		outline: 2px solid #5a9c6f;
+		outline: 2px solid var(--gc-success-strong, #5a9c6f);
 		outline-offset: 1px;
 	}
 	.search .clear {
 		padding: 0.6rem 0.8rem;
 		font: inherit;
-		color: #2f6b45;
+		color: var(--gc-success, #2f6b45);
 		background: transparent;
-		border: 1px solid rgba(17, 24, 21, 0.18);
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.18));
 		border-radius: 0.6rem;
 		cursor: pointer;
 	}

@@ -24,6 +24,20 @@ const STORAGE_KEY = 'geoclick:language:v1';
 // translation is a compile error, not a silent fallback discovered by
 // clicking around.
 export type TranslationKey =
+	| 'appearance.title'
+	| 'appearance.textSize'
+	| 'appearance.smaller'
+	| 'appearance.larger'
+	| 'appearance.reset'
+	| 'appearance.sizeHint'
+	| 'appearance.colors'
+	| 'appearance.classic'
+	| 'appearance.ocean'
+	| 'appearance.forest'
+	| 'appearance.contrast'
+	| 'appearance.colorHint'
+	| 'appearance.saved'
+	| 'appearance.close'
 	| 'nav.maps'
 	| 'nav.switchMap'
 	| 'nav.hideButtons'
@@ -259,6 +273,20 @@ export type TranslationKey =
 type Dictionary = Record<TranslationKey, string>;
 
 const en: Dictionary = {
+	'appearance.title': 'Appearance',
+	'appearance.textSize': 'Text size',
+	'appearance.smaller': 'Smaller text',
+	'appearance.larger': 'Larger text',
+	'appearance.reset': 'Reset',
+	'appearance.sizeHint': 'Scales all text, including quiz names. Map zoom stays separate.',
+	'appearance.colors': 'Color scheme',
+	'appearance.classic': 'Classic',
+	'appearance.ocean': 'Ocean',
+	'appearance.forest': 'Forest',
+	'appearance.contrast': 'High contrast',
+	'appearance.colorHint': 'Changes interface and labels. Geographic map colors keep their meaning.',
+	'appearance.saved': 'Remembered on this device when storage is available.',
+	'appearance.close': 'Close appearance settings',
 	'lang.label': 'Language',
 	'nav.maps': 'Maps',
 	'nav.switchMap': 'Switch map',
@@ -516,6 +544,21 @@ const en: Dictionary = {
 };
 
 const de: Dictionary = {
+	'appearance.title': 'Darstellung',
+	'appearance.textSize': 'Textgröße',
+	'appearance.smaller': 'Kleinerer Text',
+	'appearance.larger': 'Größerer Text',
+	'appearance.reset': 'Zurücksetzen',
+	'appearance.sizeHint': 'Vergrößert alle Texte, auch Quiznamen. Der Kartenzoom bleibt unabhängig.',
+	'appearance.colors': 'Farbschema',
+	'appearance.classic': 'Klassisch',
+	'appearance.ocean': 'Ozean',
+	'appearance.forest': 'Wald',
+	'appearance.contrast': 'Hoher Kontrast',
+	'appearance.colorHint':
+		'Ändert Oberfläche und Beschriftungen. Geografische Kartenfarben behalten ihre Bedeutung.',
+	'appearance.saved': 'Wird auf diesem Gerät gespeichert, sofern Speicher verfügbar ist.',
+	'appearance.close': 'Darstellungseinstellungen schließen',
 	'lang.label': 'Sprache',
 	'nav.maps': 'Karten',
 	'nav.switchMap': 'Karte wechseln',
@@ -777,6 +820,23 @@ const de: Dictionary = {
 };
 
 const it: Dictionary = {
+	'appearance.title': 'Aspetto',
+	'appearance.textSize': 'Dimensione del testo',
+	'appearance.smaller': 'Testo più piccolo',
+	'appearance.larger': 'Testo più grande',
+	'appearance.reset': 'Ripristina',
+	'appearance.sizeHint':
+		'Ridimensiona tutti i testi, anche i nomi nel quiz. Lo zoom della mappa resta indipendente.',
+	'appearance.colors': 'Schema di colori',
+	'appearance.classic': 'Classico',
+	'appearance.ocean': 'Oceano',
+	'appearance.forest': 'Foresta',
+	'appearance.contrast': 'Contrasto elevato',
+	'appearance.colorHint':
+		'Cambia interfaccia ed etichette. I colori geografici mantengono il loro significato.',
+	'appearance.saved':
+		'Memorizzato su questo dispositivo quando lo spazio di archiviazione è disponibile.',
+	'appearance.close': 'Chiudi le impostazioni di aspetto',
 	'lang.label': 'Lingua',
 	'nav.maps': 'Mappe',
 	'nav.switchMap': 'Cambia mappa',

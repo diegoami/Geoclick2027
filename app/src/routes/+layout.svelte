@@ -1,5 +1,8 @@
 <script lang="ts">
 	import '../app.css';
+	import '../appearance.css';
+	import AppearanceSettings from '$lib/AppearanceSettings.svelte';
+	import { appearanceOpen, setAppearanceOpen } from '$lib/appearance.svelte';
 	import { onMount } from 'svelte';
 	import { afterNavigate, goto } from '$app/navigation';
 	import { resolve } from '$lib/appPaths';
@@ -31,6 +34,10 @@
 			if (!Capacitor.isNativePlatform()) return;
 			const { App } = await import('@capacitor/app');
 			const handle = await App.addListener('backButton', () => {
+				if (appearanceOpen()) {
+					setAppearanceOpen(false);
+					return;
+				}
 				const target = parentRoute(location.pathname, resolve('/').replace(/\/$/, ''));
 				// On the start screen, a continent's view goes up to the world first.
 				if (target.kind === 'exit') {
@@ -64,5 +71,6 @@
 </svelte:head>
 
 {@render children()}
+<AppearanceSettings />
 <VersionBadge />
 <TutorialOverlay />

@@ -196,7 +196,9 @@ below). Expect ~15-20s per push.
   it `npm test` fails, and so does the pre-push hook. Real browser rather
   than jsdom on purpose: the app is MapLibre + WebGL + pointer events,
   none of which jsdom implements, so jsdom would cap out at trivial
-  components. `LanguageSwitcher.svelte.test.ts` is the canary. A plain-TS
+  components. `LanguageSwitcher.svelte.test.ts` is the canary. Appearance preferences are
+  validated in `appearance.ts`; `AppearanceSettings.svelte.test.ts` checks
+  live scale, persistence, blocked storage and modal keyboard behavior. A plain-TS
   test that needs a real DOM but isn't a component is named
   `*.browser.test.ts` and runs here too (e.g. `labelMagnify.browser.test.ts`).
   Gotcha when faking touch from a script or test: `setPointerCapture` throws

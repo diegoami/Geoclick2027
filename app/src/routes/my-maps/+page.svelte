@@ -128,7 +128,7 @@
 		margin: 0 0 0.6rem;
 		font-size: 1rem;
 		font-weight: 700;
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 	}
 	h2 svg {
 		width: 1.1rem;
@@ -144,7 +144,7 @@
 	.empty {
 		margin: 2rem 0;
 		text-align: center;
-		color: #4a5650;
+		color: var(--gc-muted, #4a5650);
 	}
 	@media (min-width: 640px) {
 		ul {

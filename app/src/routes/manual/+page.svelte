@@ -51,11 +51,11 @@
 		margin: 1.5rem auto 4rem;
 		padding: 0 1rem;
 		font-family: system-ui, sans-serif;
-		color: #1c2b22;
+		color: var(--gc-text, #1c2b22);
 		line-height: 1.55;
 	}
 	.note {
-		background: #fff;
+		background: var(--gc-surface, #fff);
 		border-radius: 0.5rem;
 		padding: 0.6rem 0.9rem;
 		font-size: 0.9rem;
@@ -78,7 +78,7 @@
 		font-size: 1.1rem;
 	}
 	.manual :global(a) {
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 		text-underline-offset: 2px;
 	}
 	.manual :global(img) {
@@ -97,7 +97,7 @@
 	}
 	.manual :global(th),
 	.manual :global(td) {
-		border: 1px solid #c9d3cc;
+		border: 1px solid var(--gc-border, #c9d3cc);
 		padding: 0.3rem 0.55rem;
 		text-align: left;
 		vertical-align: top;
@@ -105,14 +105,14 @@
 	.manual :global(code) {
 		font-family: ui-monospace, monospace;
 		font-size: 0.9em;
-		background: rgba(255, 255, 255, 0.7);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.7));
 		padding: 0 0.2em;
 		border-radius: 0.2em;
 	}
 	.manual :global(blockquote) {
 		margin: 1rem 0;
 		padding: 0.1rem 1rem;
-		border-left: 4px solid #b5691f;
-		background: rgba(255, 255, 255, 0.6);
+		border-left: 4px solid var(--gc-accent, #b5691f);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.6));
 	}
 </style>

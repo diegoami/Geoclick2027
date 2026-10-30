@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AppearanceButton from './AppearanceButton.svelte';
 	// Shared top nav bar for every map-scoped view - the same buttons everywhere
 	// (Maps/Known/Overview/Quiz/Tour) so you can jump directly between modes,
 	// with the current view shown as the active tab. The bare /map/<id> route is
@@ -240,6 +241,7 @@
 		<LanguageSwitcher bind:open={languageMenuOpen} />
 		<TerrainButton />
 		{#if active === 'quiz'}<SoundButton />{/if}
+		<AppearanceButton />
 		<TutorialButton />
 	</div>
 </div>
@@ -268,6 +270,7 @@
 	}
 	.nav-row {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 0.5rem;
 		width: 100%;
 	}
@@ -283,8 +286,8 @@
 		padding: 0.65rem 0.25rem 0.6rem;
 		/* Opaque: maps now open on the labelled overview (FT-13), and names near
 		   the top edge used to show through a 96%-white tab. */
-		background: #ffffff;
-		border: 1px solid rgba(17, 24, 21, 0.08);
+		background: var(--gc-surface, #ffffff);
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.08));
 		border-radius: 0.625rem;
 		box-shadow: 0 1px 3px rgba(17, 24, 21, 0.12);
 		text-decoration: none;
@@ -300,18 +303,19 @@
 		white-space: nowrap;
 	}
 	.nav-btn--back {
-		color: #4a5650;
+		color: var(--gc-muted, #4a5650);
 	}
 	.nav-btn--action {
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 	}
 	.nav-btn--active {
-		background: #b5691f;
-		border-color: #b5691f;
-		color: #ffffff;
+		background: var(--gc-accent, #b5691f);
+		border-color: var(--gc-accent, #b5691f);
+		color: var(--gc-on-strong, #ffffff);
 	}
 	.prefs-row {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: 0.4rem;
 	}
@@ -344,8 +348,8 @@
 		gap: 0.4rem;
 		font-family: system-ui, sans-serif;
 		font-size: 0.75rem;
-		color: #2e4037;
-		background: rgba(255, 255, 255, 0.85);
+		color: var(--gc-text, #2e4037);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.85));
 		padding: 0.2rem 0.55rem;
 		border-radius: 0.4rem;
 		cursor: pointer;
@@ -365,14 +369,14 @@
 		font-size: 1rem;
 		font-weight: 700;
 		line-height: 1;
-		color: #ffffff;
-		background: #b3261e;
-		border: 1px solid #b3261e;
+		color: var(--gc-on-strong, #ffffff);
+		background: var(--gc-danger-strong, #b3261e);
+		border: 1px solid var(--gc-danger-strong, #b3261e);
 		border-radius: 0.4rem;
 		cursor: pointer;
 	}
 	.map-type-x:focus-visible {
-		outline: 2px solid #b3261e;
+		outline: 2px solid var(--gc-danger-strong, #b3261e);
 		outline-offset: 2px;
 	}
 	.map-type-btn {
@@ -382,34 +386,34 @@
 		padding: 0.3rem 0.6rem;
 		font: inherit;
 		font-size: 0.75rem;
-		color: #2e4037;
+		color: var(--gc-text, #2e4037);
 		white-space: nowrap;
-		background: #ffffff;
-		border: 1px solid rgba(17, 24, 21, 0.16);
+		background: var(--gc-surface, #ffffff);
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.16));
 		border-radius: 0.4rem;
 		cursor: pointer;
 	}
 	.map-type-btn--active {
-		color: #ffffff;
-		background: #b5691f;
-		border-color: #b5691f;
+		color: var(--gc-on-strong, #ffffff);
+		background: var(--gc-accent, #b5691f);
+		border-color: var(--gc-accent, #b5691f);
 	}
 	.map-type-btn:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 2px;
 	}
 	.map-label {
 		font-size: 0.75rem;
-		color: rgba(30, 40, 36, 0.6);
-		background: rgba(255, 255, 255, 0.75);
+		color: var(--gc-muted, rgba(30, 40, 36, 0.6));
+		background: var(--gc-surface, rgba(255, 255, 255, 0.75));
 		padding: 0.2rem 0.55rem;
 		border-radius: 0.4rem;
 		font-family: system-ui, sans-serif;
 	}
 	.subtitle {
 		font-size: 0.75rem;
-		color: rgba(30, 40, 36, 0.7);
-		background: rgba(255, 255, 255, 0.85);
+		color: var(--gc-muted, rgba(30, 40, 36, 0.7));
+		background: var(--gc-surface, rgba(255, 255, 255, 0.85));
 		padding: 0.2rem 0.55rem;
 		border-radius: 0.4rem;
 		font-family: system-ui, sans-serif;

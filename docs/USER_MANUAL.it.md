@@ -6,6 +6,7 @@ Le immagini condivise con il manuale inglese mostrano l’interfaccia in inglese
 
 ## Indice
 
+- [Aspetto e dimensione del testo](#aspetto-e-dimensione-del-testo)
 1. [Che cos’è Geoclick](#1-che-cosè-geoclick)
 2. [Come ottenere il gioco](#2-come-ottenere-il-gioco)
 3. [Come sono organizzate le schermate](#3-come-sono-organizzate-le-schermate)
@@ -28,6 +29,21 @@ Le immagini condivise con il manuale inglese mostrano l’interfaccia in inglese
 20. [Il catalogo](#20-il-catalogo)
 21. [Domande frequenti](#21-domande-frequenti)
 22. [Glossario](#22-glossario)
+
+
+## Aspetto e dimensione del testo
+
+Apri **Aspetto** (l'icona A− / A+) nella barra iniziale o della mappa,
+anche durante un quiz. Usa **A−** e **A+** per scegliere dal 90% al 200%;
+**Ripristina** riporta il testo al 100%. Testi dell'interfaccia, nomi del quiz
+ed etichette della mappa seguono la dimensione. Lo zoom geografico è separato.
+
+Scegli **Classico**, **Oceano**, **Foresta** o **Contrasto elevato** per cambiare
+i colori dell'interfaccia e delle etichette. I colori geografici mantengono
+il loro significato; Contrasto elevato non crea una mappa di base scura.
+Le modifiche sono immediate e vengono memorizzate sul dispositivo quando
+possibile. Chiudi con il pulsante o Escape. Se la barra della mappa è nascosta,
+mostrala prima con il pulsante sotto i controlli dello zoom.
 
 ## 1. Che cos’è Geoclick
 

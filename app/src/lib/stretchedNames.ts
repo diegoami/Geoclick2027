@@ -163,6 +163,7 @@ export class StretchedNames {
 		// Under the popups (they come later in the container), over the canvas.
 		map.getCanvasContainer().after(this.svg);
 		map.on('render', this.draw);
+		window.addEventListener('geoclick:appearancechange', this.draw);
 		setLabelObstacles(map.getContainer(), () =>
 			[...this.names.values()].flatMap((n) => (n.layout ? obstacleRects(n.layout) : []))
 		);
@@ -222,6 +223,7 @@ export class StretchedNames {
 	destroy(): void {
 		for (const id of [...this.names.keys()]) this.delete(id);
 		this.map.off('render', this.draw);
+		window.removeEventListener('geoclick:appearancechange', this.draw);
 		setLabelObstacles(this.map.getContainer());
 		this.svg.remove();
 	}

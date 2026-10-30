@@ -21,8 +21,8 @@
 	font-weight: 600;
 	padding: 1px 6px;
 	border-radius: 5px;
-	background: rgba(31, 61, 42, 0.65);
-	color: #ffffff;
+	background: var(--gc-label-bg, rgba(31, 61, 42, 0.65));
+	color: var(--gc-on-strong, #ffffff);
 	box-shadow: none;
 	/* Labels never take pointer input (FT-18): a drag or pinch that starts on
 	 * a name moves the map, and a click or tap reaches the region under it.
@@ -42,7 +42,7 @@
 	font-weight: 900;
 }
 .geoclick-solved-popup.revealed .maplibregl-popup-content {
-	background: rgba(95, 65, 27, 0.65);
+	background: var(--gc-revealed-bg, rgba(95, 65, 27, 0.65));
 }
 
 /* Hover to magnify (FT-02). A name you point at grows to 20px, goes nearly
@@ -65,10 +65,10 @@
 .geoclick-solved-popup .maplibregl-popup-content:is(.is-hovered, .is-magnified) {
 	font-size: 1.25rem;
 	padding: 2px 9px;
-	background: rgba(31, 61, 42, 0.92);
+	background: var(--gc-label-bg, rgba(31, 61, 42, 0.92));
 }
 .geoclick-solved-popup.revealed .maplibregl-popup-content:is(.is-hovered, .is-magnified) {
-	background: rgba(95, 65, 27, 0.92);
+	background: var(--gc-revealed-bg, rgba(95, 65, 27, 0.92));
 }
 .maplibregl-popup:has(> .maplibregl-popup-content:is(.is-hovered, .is-magnified)) {
 	z-index: 1;
@@ -175,7 +175,7 @@
  * outlined in the app's accent so the map still distinguishes "I put this
  * here" from "I learned this". */
 .geoclick-retention.retention-asked .maplibregl-popup-content {
-	background: rgba(181, 105, 31, 0.9);
+	background: var(--gc-accent, rgba(181, 105, 31, 0.9));
 }
 
 /* Region names drawn along the region (FT-66, stretchedNames.ts): capitals
@@ -194,8 +194,8 @@
 .geoclick-stretched text {
 	font-family: Georgia, 'Times New Roman', serif;
 	font-weight: 600;
-	fill: rgba(31, 61, 42, 0.9);
-	stroke: rgba(255, 255, 255, 0.8);
+	fill: var(--gc-map-ink, rgba(31, 61, 42, 0.9));
+	stroke: var(--gc-halo, rgba(255, 255, 255, 0.8));
 	stroke-width: 3px;
 	stroke-linejoin: round;
 	paint-order: stroke;
@@ -213,7 +213,7 @@
  * under WCAG's 4.5:1; this is about 5.8:1. The fallback below uses it too, so
  * a name asked for is one colour whichever way it is drawn. */
 .geoclick-stretched text.retention-asked {
-	fill: rgb(150, 85, 20);
+	fill: var(--gc-map-asked, rgb(150, 85, 20));
 }
 /* Magnified (FT-02/FT-03): a stretched name is already as big as its region
  * allows, so it comes forward - full strength, a touch larger - rather than
@@ -236,23 +236,23 @@
 	padding: 0;
 	border-radius: 0;
 	background: none;
-	color: rgba(31, 61, 42, 0.9);
+	color: var(--gc-map-ink, rgba(31, 61, 42, 0.9));
 	font-family: Georgia, 'Times New Roman', serif;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
 	text-shadow:
-		0 0 2px rgba(255, 255, 255, 0.9),
-		0 0 3px rgba(255, 255, 255, 0.8);
+		0 0 2px var(--gc-halo, rgba(255, 255, 255, 0.9)),
+		0 0 3px var(--gc-halo, rgba(255, 255, 255, 0.8));
 }
 .geoclick-retention.geoclick-region-name.retention-asked .maplibregl-popup-content {
 	background: none;
-	color: rgb(150, 85, 20);
+	color: var(--gc-map-asked, rgb(150, 85, 20));
 }
 /* A Quiz name given away after too many misses: its brown box becomes brown
  * ink, still apart from a name placed right (the green-grey above). */
 .geoclick-solved-popup.geoclick-region-name.revealed .maplibregl-popup-content {
-	color: rgb(120, 78, 28);
+	color: var(--gc-map-revealed, rgb(120, 78, 28));
 }
 /* Magnified, it grows like any name; with no box to darken, a wider halo
  * keeps it clear of the map under it. */
@@ -261,9 +261,9 @@
 	padding: 0;
 	background: none;
 	text-shadow:
-		0 0 2px #ffffff,
-		0 0 4px #ffffff,
-		0 0 6px rgba(255, 255, 255, 0.8);
+		0 0 2px var(--gc-halo, #ffffff),
+		0 0 4px var(--gc-halo, #ffffff),
+		0 0 6px var(--gc-halo, rgba(255, 255, 255, 0.8));
 }
 
 /* The map's credit line sits above whatever covers the bottom of the map -
@@ -291,7 +291,7 @@
 	gap: 0.5rem;
 	min-height: 52px;
 	padding: 4px clamp(8px, 3vw, 1.5rem);
-	background: rgba(255, 255, 255, 0.72);
+	background: var(--gc-surface, rgba(255, 255, 255, 0.72));
 	/* A floating bar inside the page's margin rather than edge to edge: the
 	 * map screens keep the browser's 8px body margin too. */
 	border: 1px solid rgba(17, 24, 21, 0.12);
@@ -306,7 +306,7 @@
 	font-weight: 700;
 	letter-spacing: 0.02em;
 	line-height: 1;
-	color: #1c2b22;
+	color: var(--gc-text, #1c2b22);
 }
 .gc-tools {
 	display: flex;
@@ -326,15 +326,15 @@
 	border: 0;
 	border-radius: 8px;
 	background: transparent;
-	color: #2c3a33;
+	color: var(--gc-text, #2c3a33);
 	text-decoration: none;
 	cursor: pointer;
 }
 .gc-tool:hover {
-	background: rgba(181, 105, 31, 0.12);
+	background: var(--gc-accent-soft, rgba(181, 105, 31, 0.12));
 }
 .gc-tool:focus-visible {
-	outline: 2px solid #b5691f;
+	outline: 2px solid var(--gc-accent, #b5691f);
 	outline-offset: -2px;
 }
 .gc-tool:disabled {
@@ -343,8 +343,8 @@
 	background: transparent;
 }
 .gc-tool[aria-pressed='true'] {
-	background: #b06a2f;
-	color: #ffffff;
+	background: var(--gc-accent, #b06a2f);
+	color: var(--gc-on-strong, #ffffff);
 }
 .gc-tool svg {
 	width: 22px;
@@ -363,8 +363,8 @@
 	min-width: 16px;
 	padding: 0 4px;
 	border-radius: 999px;
-	background: #b5691f;
-	color: #ffffff;
+	background: var(--gc-accent, #b5691f);
+	color: var(--gc-on-strong, #ffffff);
 	font-size: 0.65rem;
 	font-weight: 700;
 	line-height: 16px;
@@ -373,7 +373,7 @@
 .gc-toggle {
 	display: flex;
 	padding: 2px;
-	border: 1px solid rgba(44, 58, 51, 0.25);
+	border: 1px solid var(--gc-border, rgba(44, 58, 51, 0.25));
 	border-radius: 10px;
 }
 .gc-toggle .gc-tool {

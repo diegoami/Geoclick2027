@@ -94,8 +94,8 @@
 		font-weight: 700;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
-		color: #2c3a33;
-		border-bottom: 1px solid rgba(44, 58, 51, 0.2);
+		color: var(--gc-text, #2c3a33);
+		border-bottom: 1px solid var(--gc-border, rgba(44, 58, 51, 0.2));
 	}
 	.drill {
 		font: inherit;
@@ -108,6 +108,6 @@
 		cursor: pointer;
 	}
 	.drill:hover {
-		color: #b06a2f;
+		color: var(--gc-accent, #b06a2f);
 	}
 </style>
