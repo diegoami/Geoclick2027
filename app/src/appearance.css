@@ -215,3 +215,9 @@ html[data-text-size='large'] .drill {
 html[data-text-size='large'] .sections h3 {
 	overflow-wrap: anywhere;
 }
+
+/* Known region names stay plain in both label renderers. */
+html .map-view .geoclick-region-name .maplibregl-popup-content,
+html .map-view .geoclick-stretched text {
+	text-decoration: none;
+}

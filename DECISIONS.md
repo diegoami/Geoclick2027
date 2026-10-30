@@ -2721,3 +2721,5 @@ collapsed by default. Place names / Name places stay visible outside it.
 The top buttons have reduced vertical padding and retain their original
 horizontal padding; the font range extends to 50–300%, and the quiz instruction line is removed entirely. Tutorials open Settings when their controls
 are needed.
+The owner also asked for plain region names on Known maps: neither popup
+names nor curved SVG names are underlined there, in any color scheme.
