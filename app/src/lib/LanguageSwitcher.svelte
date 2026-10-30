@@ -190,7 +190,7 @@
 		font-size: 0.7rem;
 		font-weight: 600;
 		line-height: 1.2;
-		padding: 0.2rem 0.4rem 0.2rem 0.5rem;
+		padding: 2px 0.4rem 2px 0.5rem;
 		border-radius: 999px;
 		border: 1px solid var(--gc-border, rgba(30, 40, 36, 0.2));
 		background: var(--gc-surface, #ffffff); /* opaque over map labels, like the map bar (FT-14) */

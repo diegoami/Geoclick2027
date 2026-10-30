@@ -17,6 +17,7 @@ For players:
 - **Four color schemes:** Classic, Ocean, Forest and High contrast. Text size and colors are remembered on this device, including between maps and app restarts. Geographic map palettes keep their meaning.
 - **More room for the map:** preferences start in a collapsed Settings panel. Place names / Name places remain outside it. The top buttons have less vertical padding, and the redundant quiz instruction line is gone.
 - **Plain region names on Known:** neither straight labels nor curved names are underlined.
+- **Large text works from the first screen:** tutorial actions, About and the manual wrap on narrow screens, and saved text size/colors apply before the first paint.
 - **Keep playing as appearance changes:** quiz trays and map names reflow without losing the current round or selected name. The controls and manuals are available in English, German and Italian.
 - **Mix-ups survive a trip away:** returning to an unfinished quiz keeps its earlier confusions in the end-of-round report (#276, fixed in #277).
 - **Updated illustrated manuals** show the current map and quiz controls.

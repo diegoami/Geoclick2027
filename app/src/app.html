@@ -4,6 +4,29 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="text-scale" content="scale" />
+
+		<script>
+			// Keep these literals in sync with appearance.ts; appearanceBootstrap.test.ts checks them.
+			(() => {
+				try {
+					const value = JSON.parse(localStorage.getItem('geoclick:appearance:v1') ?? 'null');
+					const scale = [50, 60, 75, 90, 100, 115, 130, 150, 175, 200, 225, 250, 275, 300].includes(
+						value?.scale
+					)
+						? value.scale
+						: 100;
+					const scheme = ['classic', 'ocean', 'forest', 'contrast'].includes(value?.scheme)
+						? value.scheme
+						: 'classic';
+					const root = document.documentElement;
+					root.style.fontSize = `${scale}%`;
+					root.dataset.scheme = scheme;
+					root.dataset.textSize = scale > 100 ? 'large' : 'normal';
+				} catch {
+					/* Blocked storage or malformed JSON: browser defaults remain usable. */
+				}
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

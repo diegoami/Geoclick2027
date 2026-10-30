@@ -55,6 +55,7 @@
 		background: linear-gradient(160deg, #e3f0e6 0%, #dce6f2 45%, #f7ecd9 100%) fixed;
 	}
 	main {
+		overflow-wrap: anywhere;
 		max-width: 32rem;
 		margin: 2rem auto 4rem;
 		padding: 0 1rem;

@@ -150,11 +150,6 @@ html[data-text-size='large'] .nav-overlay {
 	max-width: calc(100% - 72px);
 }
 
-html[data-text-size='large'] .nav-overlay .subtitle {
-	max-width: 100%;
-	box-sizing: border-box;
-	overflow-wrap: anywhere;
-}
 html[data-text-size='large'] .mode-switch {
 	max-width: 100%;
 	flex-wrap: wrap;
@@ -190,7 +185,7 @@ html[data-text-size='large'] .picker-continent {
 	text-align: center;
 }
 
-/* Asked names have a non-color cue, including in the green scheme. */
+/* Asked names are underlined except for the plain Known region labels below. */
 .geoclick-retention.retention-asked .maplibregl-popup-content,
 .geoclick-stretched text.retention-asked {
 	text-decoration: underline;
@@ -199,7 +194,6 @@ html[data-text-size='large'] .picker-continent {
 /* Preferences span several shared components. Use fixed padding here so
  * large type does not add large margins around every control. */
 .nav-overlay .prefs-row button {
-	padding: 2px 5px;
 	min-height: 32px;
 	min-width: 32px;
 }
@@ -220,4 +214,10 @@ html[data-text-size='large'] .sections h3 {
 html .map-view .geoclick-region-name .maplibregl-popup-content,
 html .map-view .geoclick-stretched text {
 	text-decoration: none;
+}
+
+/* Page-bar titles can contain long localized words at the largest size. */
+.gc-bar .gc-wordmark {
+	min-width: 0;
+	overflow-wrap: anywhere;
 }

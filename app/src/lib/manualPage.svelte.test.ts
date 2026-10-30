@@ -1,6 +1,9 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import Manual from '../routes/manual/+page.svelte';
+import About from '../routes/about/+page.svelte';
+import '../app.css';
+import '../appearance.css';
 import { setLanguage } from './i18n.svelte';
 vi.mock('$app/paths', () => ({ asset: (path: string) => path, resolve: (path: string) => path }));
 vi.mock('$app/navigation', () => ({ goto: vi.fn() }));
@@ -9,6 +12,53 @@ afterEach(() => {
 	setLanguage('en');
 });
 describe('the localized offline manual', () => {
+	it.each(['en', 'de', 'it'] as const)(
+		'keeps headings, links and code within the page at 300%%: %s',
+		async (language) => {
+			const original = document.documentElement.style.fontSize;
+			try {
+				document.documentElement.style.fontSize = '300%';
+				setLanguage(language);
+				vi.stubGlobal(
+					'fetch',
+					vi.fn(
+						async () =>
+							new Response(
+								'<h1>Geoclick — User manual</h1><p><a href="#">https://github.com/diegoami/Geoclick2027/releases/latest</a></p><pre>Geoclick-1.2.0-windows-x64-setup.exe --a-long-command-without-spaces</pre><table><tr><td>A comparison cell</td><td>Another comparison cell</td></tr></table>'
+							)
+					)
+				);
+				const screen = await render(Manual);
+				screen.container.style.cssText = 'box-sizing:border-box;width:344px';
+				await expect
+					.element(screen.getByRole('heading', { name: 'Geoclick — User manual', exact: true }))
+					.toBeVisible();
+				expect(screen.container.scrollWidth).toBeLessThanOrEqual(screen.container.clientWidth);
+				await screen.unmount();
+			} finally {
+				document.documentElement.style.fontSize = original;
+			}
+		}
+	);
+	it.each(['en', 'de', 'it'] as const)(
+		'keeps About and its page-bar title inside a narrow page at 300%%: %s',
+		async (language) => {
+			const original = document.documentElement.style.fontSize;
+			try {
+				document.documentElement.style.fontSize = '300%';
+				setLanguage(language);
+				const screen = await render(About);
+				screen.container.style.cssText = 'box-sizing:border-box;width:344px';
+				await expect
+					.element(screen.getByRole('heading', { name: 'Geoclick', exact: true }))
+					.toBeVisible();
+				expect(screen.container.scrollWidth).toBeLessThanOrEqual(screen.container.clientWidth);
+				await screen.unmount();
+			} finally {
+				document.documentElement.style.fontSize = original;
+			}
+		}
+	);
 	it('loads the selected language and follows a language change', async () => {
 		const request = vi.fn(
 			async (url: string) =>
