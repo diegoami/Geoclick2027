@@ -88,14 +88,14 @@
 		gap: 0.2rem;
 		/* Room on the right for the favourite star. */
 		padding: 0.6rem 3rem 0.6rem 1rem;
-		border: 1px solid #ccc;
+		border: 1px solid var(--gc-border, #ccc);
 		border-radius: 0.5rem;
-		background: #ffffff;
+		background: var(--gc-surface, #ffffff);
 		text-decoration: none;
 		color: inherit;
 	}
 	a:hover {
-		background: #fbf4ec;
+		background: var(--gc-accent-soft, #fbf4ec);
 	}
 	.card-star {
 		position: absolute;
@@ -105,11 +105,11 @@
 	.mastery {
 		font-size: 0.8rem;
 		font-weight: 600;
-		color: #b06a2f;
+		color: var(--gc-accent, #b06a2f);
 	}
 	/* A map with nothing left to learn reads as done, not as work to do. */
 	.mastery.all-known {
-		color: #4a7c5c;
+		color: var(--gc-success, #4a7c5c);
 	}
 	.last-result {
 		font-size: 0.8rem;
@@ -117,7 +117,7 @@
 	}
 	.mastered {
 		margin-left: 0.3rem;
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 		font-weight: 600;
 		white-space: nowrap;
 	}

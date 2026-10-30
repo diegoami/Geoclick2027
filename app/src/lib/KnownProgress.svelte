@@ -41,18 +41,18 @@
 		width: 4.5rem;
 		height: 0.4rem;
 		vertical-align: middle;
-		background: rgba(176, 106, 47, 0.2);
+		background: var(--gc-accent-soft, rgba(176, 106, 47, 0.2));
 		border-radius: 999px;
 		overflow: hidden;
 	}
 	.known-bar-fill {
 		display: block;
 		height: 100%;
-		background: #b06a2f;
+		background: var(--gc-accent, #b06a2f);
 		border-radius: 999px;
 	}
 	/* A map with nothing left to learn reads as done, not as work to do. */
 	.all-known .known-bar-fill {
-		background: #4a7c5c;
+		background: var(--gc-success-strong, #4a7c5c);
 	}
 </style>

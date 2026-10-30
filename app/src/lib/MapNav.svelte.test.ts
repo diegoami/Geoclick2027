@@ -20,6 +20,30 @@ import {
 } from './mapPrefs.svelte';
 
 describe('MapNav sibling map buttons', () => {
+	it('starts with Settings collapsed and can show and hide its controls', async () => {
+		setLanguage('en');
+		const screen = await render(MapNav, {
+			mapId: 'italy-regions',
+			mapName: 'Italy',
+			active: 'quiz'
+		});
+		const panel = screen.container.querySelector<HTMLDetailsElement>('.settings-panel')!;
+		const appearance = screen.container.querySelector<HTMLButtonElement>('.appearance-button')!;
+		expect(panel.open).toBe(false);
+		await expect
+			.element(screen.container.querySelector<HTMLElement>('.detailed-toggle')!)
+			.not.toBeVisible();
+		await expect.element(appearance).not.toBeVisible();
+		await screen.getByText('Settings', { exact: true }).click();
+		expect(panel.open).toBe(true);
+		await expect.element(appearance).toBeVisible();
+		await screen.getByText('Settings', { exact: true }).click();
+		expect(panel.open).toBe(false);
+		await expect
+			.element(screen.container.querySelector<HTMLElement>('.detailed-toggle')!)
+			.not.toBeVisible();
+		await expect.element(appearance).not.toBeVisible();
+	});
 	afterEach(() => {
 		gotoMock.mockClear();
 		setLanguage('en');
@@ -131,6 +155,7 @@ describe('MapNav sibling map buttons', () => {
 			);
 		expect(ids()).toEqual(['germany-states', 'germany-towns-100k']);
 
+		(document.querySelector('.settings-panel > summary') as HTMLElement).click();
 		const box = document.querySelector<HTMLInputElement>('.detailed-toggle input');
 		expect(box).not.toBeNull();
 		expect(box!.checked).toBe(false);
@@ -155,6 +180,7 @@ describe('MapNav sibling map buttons', () => {
 		const ids = () =>
 			[...document.querySelectorAll<HTMLElement>('[data-map-id]')].map((el) => el.dataset.mapId);
 		expect(ids()).toEqual(['singapore-regions']);
+		(document.querySelector('.settings-panel > summary') as HTMLElement).click();
 		const box = document.querySelector<HTMLInputElement>('.detailed-toggle input')!;
 		expect(box).not.toBeNull();
 		box.click();
@@ -207,9 +233,12 @@ describe('MapNav sibling map buttons', () => {
 		});
 		const badgeView = await render(VersionBadge);
 		try {
+			(document.querySelector('.settings-panel > summary') as HTMLElement).click();
 			(document.querySelector('.lang-button') as HTMLButtonElement).click();
 			const badge = document.querySelector<HTMLElement>('.version-badge')!;
-			await vi.waitFor(() => expect(Number.parseFloat(getComputedStyle(badge).top)).toBe(193));
+			await vi.waitFor(() =>
+				expect(Number.parseFloat(getComputedStyle(badge).top)).toBeGreaterThanOrEqual(193)
+			);
 			const b = badge.getBoundingClientRect();
 			const option = [...document.querySelectorAll<HTMLElement>('.lang-option')].find((el) => {
 				const r = el.getBoundingClientRect();

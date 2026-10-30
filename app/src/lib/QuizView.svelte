@@ -288,7 +288,7 @@
 		const rowPx = firstSlip?.getBoundingClientRect().height ?? 0;
 		const paddingBottomPx = parseFloat(getComputedStyle(traySlipsEl).paddingBottom) || 0;
 		trayMinPx = handleRowPx + rowPx + paddingBottomPx;
-		trayMaxPx = window.innerHeight * TRAY_MAX_FRACTION;
+		trayMaxPx = Math.max(trayMinPx, window.innerHeight * TRAY_MAX_FRACTION);
 
 		if (trayHeightPx === undefined) {
 			const naturalPx = handleRowPx + traySlipsEl.scrollHeight;
@@ -1144,7 +1144,11 @@
 		// user's chosen trayHeightPx is clamped to the fresh bounds, not
 		// reset - see measureTraySizing).
 		window.addEventListener('resize', measureTraySizing);
-		return () => window.removeEventListener('resize', measureTraySizing);
+		window.addEventListener('geoclick:appearancechange', measureTraySizing);
+		return () => {
+			window.removeEventListener('resize', measureTraySizing);
+			window.removeEventListener('geoclick:appearancechange', measureTraySizing);
+		};
 	});
 
 	onDestroy(() => {
@@ -1166,6 +1170,7 @@
 
 <svelte:window
 	onkeydown={(e) => {
+		if (e.target instanceof Element && e.target.closest('dialog[open]')) return;
 		if (e.key === 'Escape') selectedId = undefined;
 		// Name-it mode is played from the keyboard too: 1-6 pick a name (#264).
 		if (mode === 'name' && /^[1-9]$/.test(e.key) && !e.ctrlKey && !e.metaKey && !e.altKey) {
@@ -1180,50 +1185,31 @@
 		<p class="error">{error}</p>
 	{:else}
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="quiz">
-			{#snippet subtitle()}
+			{#snippet controls()}
 				{#if session}
-					{#if practice}<span class="practice-label">{t('quiz.practiceLabel')} ·</span>{/if}
-					<span data-tutorial="quiz-progress"
-						>{t(
-							mode === 'name'
-								? 'quiz.nameSubtitle'
-								: mapDef?.targets[0]?.type === 'city'
-									? 'quiz.townSubtitle'
-									: 'quiz.subtitle',
-							{
-								placed: session.items.filter((i) => i.status !== 'pending').length,
-								total: session.items.length
-							}
-						)}</span
-					>
-					<!-- Only once the map is known well enough for the hand to
-					     shrink (FT-21); level 0's hand of ten is the default and
-					     there is nothing to explain (FT-60). -->
-					{#if level > 0 && mode === 'place'}
-						<span class="level"
-							>· {tPlural('quiz.namesAtATime', handSize(level), { count: handSize(level) })}</span
-						>
-					{/if}
-					{#if !inTutorialMap()}
-						<span class="mode-switch" role="group" aria-label={t('quiz.modeAria')}>
-							<button
-								type="button"
-								aria-pressed={mode === 'place'}
-								data-testid="mode-place"
-								onclick={() => switchMode('place')}>{t('quiz.modePlace')}</button
-							><button
-								type="button"
-								aria-pressed={mode === 'name'}
-								data-testid="mode-name"
-								onclick={() => switchMode('name')}>{t('quiz.modeName')}</button
+					<div class="quiz-controls" data-testid="quiz-controls">
+						{#if practice}<span class="practice-label">{t('quiz.practiceLabel')} ·</span>{/if}
+						{#if !inTutorialMap()}
+							<span class="mode-switch" role="group" aria-label={t('quiz.modeAria')}>
+								<button
+									type="button"
+									aria-pressed={mode === 'place'}
+									data-testid="mode-place"
+									onclick={() => switchMode('place')}>{t('quiz.modePlace')}</button
+								><button
+									type="button"
+									aria-pressed={mode === 'name'}
+									data-testid="mode-name"
+									onclick={() => switchMode('name')}>{t('quiz.modeName')}</button
+								>
+							</span>
+						{/if}
+						{#if canPractise && !practice && roundFresh}
+							<button type="button" class="practise-btn" data-testid="practise" onclick={practise}
+								>{t('quiz.practise', { count: practiseCount })}</button
 							>
-						</span>
-					{/if}
-					{#if canPractise && !practice && roundFresh}
-						<button type="button" class="practise-btn" data-testid="practise" onclick={practise}
-							>{t('quiz.practise', { count: practiseCount })}</button
-						>
-					{/if}
+						{/if}
+					</div>
 				{/if}
 			{/snippet}
 		</MapNav>
@@ -1271,7 +1257,7 @@
 	{/if}
 
 	<ChartMapShell>
-		<div class="container" bind:this={container}></div>
+		<div class="container" data-tutorial="quiz-progress" bind:this={container}></div>
 	</ChartMapShell>
 
 	<!-- Above the tray, whose height the player can drag (FT-35). Two clauses
@@ -1386,8 +1372,8 @@
 		flex-direction: column;
 		box-sizing: border-box;
 		overflow: hidden;
-		background: rgba(255, 255, 255, 0.92);
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.92));
+		border-top: 1px solid var(--gc-border, rgba(0, 0, 0, 0.1));
 	}
 	/* The grab strip is 4px of paint; the row around it is what a finger
 	   actually hits, so it is padded to about 22px (review F8, FT-32). Not
@@ -1404,12 +1390,12 @@
 		width: 2.5rem;
 		height: 4px;
 		border-radius: 2px;
-		background: rgba(0, 0, 0, 0.22);
+		background: var(--gc-hover, rgba(0, 0, 0, 0.22));
 		cursor: ns-resize;
 		touch-action: none;
 	}
 	.tray-handle-row:hover .tray-handle {
-		background: rgba(0, 0, 0, 0.35);
+		background: var(--gc-hover, rgba(0, 0, 0, 0.35));
 	}
 	.tray-slips {
 		flex: 1;
@@ -1424,23 +1410,22 @@
 		flex-wrap: wrap;
 		align-content: flex-start;
 		gap: 0.5rem;
-		padding: 0 0.75rem 0.75rem;
+		padding: 0 8px 8px;
 		overflow-y: auto;
 	}
-	/* The difficulty note beside the progress line (FT-21). Quieter than the
-	   count itself: it explains the tray, it isn't a score. */
-	.level {
-		margin-left: 0.3rem;
-		color: rgba(30, 40, 36, 0.55);
-	}
 	.slip {
+		min-height: 28px;
+		max-width: 100%;
+		overflow-wrap: anywhere;
+		box-sizing: border-box;
+		color: var(--gc-text, #1c2b22);
 		font-family: system-ui, sans-serif;
 		font-size: 0.9rem;
 		font-weight: 600;
-		background: white;
-		border: 1px solid rgba(0, 0, 0, 0.15);
+		background: var(--gc-surface, white);
+		border: 1px solid var(--gc-border, rgba(0, 0, 0, 0.15));
 		border-radius: 0.5rem;
-		padding: 0.4rem 0.7rem;
+		padding: 2px 5px;
 		cursor: grab;
 		touch-action: none;
 		/* A tablet can read a press on text as a selection gesture and raise
@@ -1453,10 +1438,10 @@
 	}
 	.slip.wrong {
 		animation: shake 0.7s;
-		background: #f6d7d3;
-		border-color: #c0392b;
+		background: var(--gc-danger-soft, #f6d7d3);
+		border-color: var(--gc-danger-strong, #c0392b);
 		border-width: 2px;
-		color: #a3271b;
+		color: var(--gc-danger, #a3271b);
 	}
 	.slip-dragging {
 		position: fixed;
@@ -1476,17 +1461,17 @@
 		width: 12px;
 		height: 12px;
 		box-sizing: border-box;
-		border: 3px solid #b5691f;
+		border: 3px solid var(--gc-accent, #b5691f);
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.85);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.85));
 		transform: translate(-50%, -50%);
 		pointer-events: none;
 	}
 	/* Tap-to-place (#260): the slip waiting for a tap on the map. */
 	.slip.selected {
-		border-color: #b5691f;
+		border-color: var(--gc-accent, #b5691f);
 		box-shadow:
-			0 0 0 2px rgba(181, 105, 31, 0.45),
+			0 0 0 2px var(--gc-accent-soft, rgba(181, 105, 31, 0.45)),
 			0 3px 8px rgba(0, 0, 0, 0.15);
 		transform: translateY(-2px);
 	}
@@ -1498,12 +1483,14 @@
 		margin: 0;
 		padding: 0.3rem 0.7rem;
 		border-radius: 0.5rem;
-		background: rgba(31, 61, 42, 0.88);
-		color: #ffffff;
+		background: var(--gc-label-bg, rgba(31, 61, 42, 0.88));
+		color: var(--gc-on-strong, #ffffff);
 		font-family: system-ui, sans-serif;
 		font-size: 0.85rem;
 		pointer-events: none;
-		white-space: nowrap;
+		max-width: calc(100% - 1rem);
+		box-sizing: border-box;
+		text-align: center;
 	}
 	@keyframes shake {
 		0%,
@@ -1533,19 +1520,19 @@
 		padding: 0.5rem 1rem;
 		border-radius: 0.5rem;
 		border: none;
-		background: #5a9c6f;
-		color: white;
+		background: var(--gc-success-strong, #5a9c6f);
+		color: var(--gc-on-strong, white);
 		text-decoration: none;
 		cursor: pointer;
 	}
 	/* The quiz's second way to play (#265), quiet beside the progress line. */
 	.practise-btn {
-		margin-left: 0.4rem;
-		padding: 0 0.4rem;
-		border: 1px solid rgba(181, 105, 31, 0.45);
+		margin-left: 0;
+		padding: 2px 4px;
+		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
 		border-radius: 5px;
-		background: #ffffff;
-		color: #b5691f;
+		background: var(--gc-surface, #ffffff);
+		color: var(--gc-accent, #b5691f);
 		font: inherit;
 		font-weight: 600;
 		cursor: pointer;
@@ -1557,13 +1544,13 @@
 		place-items: center;
 		width: 1.6rem;
 		height: 1.6rem;
-		border: 2px solid #ffffff;
+		border: 2px solid var(--gc-surface, #ffffff);
 		border-radius: 50%;
-		background: #b5691f;
-		color: #ffffff;
+		background: var(--gc-accent, #b5691f);
+		color: var(--gc-on-strong, #ffffff);
 		font-family: system-ui, sans-serif;
 		font-weight: 700;
-		box-shadow: 0 0 0 0 rgba(181, 105, 31, 0.6);
+		box-shadow: 0 0 0 0 var(--gc-accent-soft, rgba(181, 105, 31, 0.6));
 		animation: ask-pulse 1.6s ease-out infinite;
 		pointer-events: none;
 	}
@@ -1578,16 +1565,25 @@
 		}
 	}
 	/* Which way the quiz asks (#264): two small joined pills. */
+	.quiz-controls {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 4px;
+		max-width: 100%;
+		font-family: system-ui, sans-serif;
+		font-size: 0.75rem;
+	}
 	.mode-switch {
 		display: inline-flex;
-		margin-left: 0.4rem;
+		margin-left: 0;
 		vertical-align: middle;
 	}
 	.mode-switch button {
-		padding: 0 0.45rem;
-		border: 1px solid rgba(181, 105, 31, 0.45);
-		background: #ffffff;
-		color: #b5691f;
+		padding: 2px 4px;
+		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
+		background: var(--gc-surface, #ffffff);
+		color: var(--gc-accent, #b5691f);
 		font: inherit;
 		font-weight: 600;
 		cursor: pointer;
@@ -1600,8 +1596,8 @@
 		border-radius: 0 5px 5px 0;
 	}
 	.mode-switch button[aria-pressed='true'] {
-		background: #b5691f;
-		color: #ffffff;
+		background: var(--gc-accent, #b5691f);
+		color: var(--gc-on-strong, #ffffff);
 	}
 	.slip.choice {
 		cursor: pointer;
@@ -1612,31 +1608,33 @@
 		min-width: 1.1em;
 		margin-right: 0.3rem;
 		border-radius: 3px;
-		background: rgba(0, 0, 0, 0.07);
-		color: rgba(0, 0, 0, 0.5);
+		background: var(--gc-hover, rgba(0, 0, 0, 0.07));
+		color: var(--gc-muted, rgba(0, 0, 0, 0.5));
 		font-size: 0.75rem;
 		text-align: center;
 	}
 	.practice-label {
 		margin-right: 0.3rem;
 		font-weight: 600;
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 	}
 	.map-again {
+		flex-wrap: wrap;
+		max-width: calc(100% - 1rem);
+		justify-content: center;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 2;
 		display: flex;
 		gap: 0.5rem;
-		white-space: nowrap;
 	}
 	.error {
 		position: relative;
 		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
-		color: #a33;
+		color: var(--gc-danger, #a33);
 	}
 	/* A round that cannot be saved is still worth playing: the notice sits
 	   quietly at the top and does not take the map away (FT-57). */
@@ -1652,9 +1650,9 @@
 		font-family: system-ui, sans-serif;
 		font-size: 0.85rem;
 		text-align: center;
-		color: #7a4a12;
-		background: #fdf1dd;
-		border: 1px solid rgba(181, 105, 31, 0.35);
+		color: var(--gc-warning, #7a4a12);
+		background: var(--gc-warning-soft, #fdf1dd);
+		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.35));
 		border-radius: 0.5rem;
 	}
 </style>

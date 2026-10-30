@@ -651,7 +651,7 @@
 		flex: 1;
 		border-radius: 0.75rem;
 		overflow: hidden;
-		border: 1px solid rgba(17, 24, 21, 0.12);
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.12));
 		background: #cfe2ea;
 	}
 	.progress-legend {
@@ -666,8 +666,8 @@
 		max-width: calc(100% - 1rem);
 		padding: 0.25rem 0.5rem;
 		border-radius: 0.5rem;
-		background: rgba(255, 255, 255, 0.9);
-		color: #1f3d2a;
+		background: var(--gc-surface, rgba(255, 255, 255, 0.9));
+		color: var(--gc-text, #1f3d2a);
 		font-family: system-ui, sans-serif;
 		font-size: 0.75rem;
 		font-weight: 600;
@@ -698,7 +698,7 @@
 	.note {
 		margin: 0 0 0.75rem;
 		font-size: 0.9rem;
-		color: #5a5446;
+		color: var(--gc-muted, #5a5446);
 	}
 	/* On a phone the panel goes under the map, and scrolls with the page. */
 	@media (max-width: 48rem) {
@@ -727,7 +727,7 @@
 		inset: auto 1rem 1rem;
 		z-index: 2;
 		margin: 0;
-		color: #8a2a1e;
+		color: var(--gc-danger, #8a2a1e);
 	}
 	.where {
 		position: absolute;
@@ -743,8 +743,8 @@
 		font-size: 0.9rem;
 		padding: 0.35rem 0.75rem;
 		border-radius: 999px;
-		border: 1px solid rgba(17, 24, 21, 0.2);
-		background: rgba(255, 255, 255, 0.95);
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.2));
+		background: var(--gc-surface, rgba(255, 255, 255, 0.95));
 		cursor: pointer;
 	}
 	.continent {
@@ -752,8 +752,8 @@
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		color: #3f3a30;
-		text-shadow: 0 0 3px #fff;
+		color: var(--gc-text, #3f3a30);
+		text-shadow: 0 0 3px var(--gc-halo, #fff);
 	}
 	:global(.picker-continent) {
 		font-family: Georgia, 'Times New Roman', serif;
@@ -761,9 +761,9 @@
 		font-weight: 700;
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
-		color: #3f3a30;
-		background: rgba(255, 255, 255, 0.75);
-		border: 1px solid rgba(17, 24, 21, 0.15);
+		color: var(--gc-text, #3f3a30);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.75));
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.15));
 		border-radius: 999px;
 		padding: 0.25rem 0.7rem;
 		cursor: pointer;

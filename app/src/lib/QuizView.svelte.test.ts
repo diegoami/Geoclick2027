@@ -240,27 +240,23 @@ describe('QuizView (FT-59)', () => {
 	});
 	afterEach(() => forgetRound(MAP_ID));
 
-	it('describes the actual answer targets and follows the selected language (#253)', async () => {
-		const region = await mount();
-		expect(region.container.querySelector('.subtitle')?.textContent).toContain('matching area');
-		region.unmount();
-		forgetRound(MAP_ID);
-		for (const target of fake.mapDef.targets) (target as { type: string }).type = 'city';
-		try {
-			const towns = await mount();
-			expect(towns.container.querySelector('.subtitle')?.textContent).toContain('town marker');
-			setLanguage('de');
-			await expect
-				.poll(() => towns.container.querySelector('.subtitle')?.textContent)
-				.toContain('Stadtmarkierung');
-			setLanguage('it');
-			await expect
-				.poll(() => towns.container.querySelector('.subtitle')?.textContent)
-				.toContain('indicatore della città');
-		} finally {
-			for (const target of fake.mapDef.targets) (target as { type: string }).type = 'region';
-			setLanguage('en');
-		}
+	it('keeps both quiz modes visible outside collapsed Settings, without an instruction line', async () => {
+		const screen = await mount();
+		const panel = screen.container.querySelector<HTMLDetailsElement>('.settings-panel')!;
+		expect(panel.open).toBe(false);
+		await expect
+			.element(screen.getByRole('button', { name: 'Place names', exact: true }))
+			.toBeVisible();
+		await expect
+			.element(screen.getByRole('button', { name: 'Name places', exact: true }))
+			.toBeVisible();
+		const controls = screen.container.querySelector('[data-testid="quiz-controls"]')!;
+		expect(controls.closest('details')).toBeNull();
+		expect(controls.textContent?.replace(/\s+/g, ' ').trim()).toBe('Place namesName places');
+		expect(screen.container.querySelector('.subtitle')).toBeNull();
+		await screen.getByRole('button', { name: 'Name places', exact: true }).click();
+		await expect.poll(() => screen.container.querySelectorAll('.choice').length).toBe(4);
+		expect(panel.open).toBe(false);
 	});
 
 	// The hand is dealt at random, so each test plays the names it was dealt:
@@ -272,6 +268,34 @@ describe('QuizView (FT-59)', () => {
 		expect(slip.dispatchEvent(new Event('dragstart', { bubbles: true, cancelable: true }))).toBe(
 			false
 		);
+	});
+
+	it('remeasures a live round at 200% and keeps tap and drag answers working (#284)', async () => {
+		const screen = await mount();
+		const names = slipNames();
+		const original = document.documentElement.style.fontSize;
+		const slip = screen.container.querySelector<HTMLElement>('.slip')!;
+		const before = slip.getBoundingClientRect().height;
+		try {
+			await screen.getByRole('button', { name: names[0], exact: true }).click();
+			document.documentElement.style.fontSize = '200%';
+			window.dispatchEvent(new Event('geoclick:appearancechange'));
+			await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+			expect(slipNames()).toEqual(names);
+			expect(slip.getBoundingClientRect().height).toBeGreaterThan(before);
+			const tray = screen.container.querySelector<HTMLElement>('.tray')!;
+			const handle = screen.container.querySelector<HTMLElement>('.tray-handle-row')!;
+			expect(tray.getBoundingClientRect().height).toBeGreaterThanOrEqual(
+				slip.getBoundingClientRect().height + handle.getBoundingClientRect().height
+			);
+			expect(screen.container.querySelector('.slip.selected')?.textContent?.trim()).toBe(names[0]);
+			tapMap(names[0]);
+			await expect.poll(() => slipNames()).not.toContain(names[0]);
+			await drop(names[1], names[1]);
+			expect(placedNames()).toEqual([names[0], names[1]]);
+		} finally {
+			document.documentElement.style.fontSize = original;
+		}
 	});
 
 	it('grades a correct drop good, and a revealed one again with its fact card', async () => {
@@ -399,14 +423,16 @@ describe('QuizView (FT-59)', () => {
 			await repository.saveCardState(MAP_ID, { targetId: target.id, ...card });
 		}
 		const screen = await render(QuizView, { mapId: MAP_ID });
+		await screen.getByText('Settings', { exact: true }).click();
 		const practise = screen.getByRole('button', { name: 'Practise the 4 not yet known' });
 		await practise.click();
 		// 12 of 16 known is level 2: the four left are dealt three at a time.
 		await expect.poll(() => slipNames().length).toBe(3);
 		expect(slipNames().some((n) => known.some((t) => t.name === n))).toBe(false);
 		await expect.poll(placedNames).toHaveLength(known.length);
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('Practice');
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 4');
+		expect(screen.container.querySelector('[data-testid="quiz-controls"]')?.textContent).toContain(
+			'Practice'
+		);
 		await expect.element(practise).not.toBeInTheDocument();
 	});
 	it('times a round on a fully known map and keeps a clean best (#267)', async () => {
@@ -435,7 +461,6 @@ describe('QuizView (FT-59)', () => {
 		const asked = fake.state.hovered!;
 		expect(choices().some((c) => c.textContent?.includes(asked))).toBe(true);
 		expect(document.querySelectorAll('.ask-marker')).toHaveLength(1);
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 16 named');
 
 		// The number key of the right name answers it.
 		const index = choices().findIndex((c) => c.textContent?.includes(asked));
@@ -445,7 +470,6 @@ describe('QuizView (FT-59)', () => {
 			targetId: asked.toLowerCase(),
 			...rate(undefined, 'good', todayLocalDate())
 		});
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('1 / 16 named');
 		expect(quizMode()).toBe('name');
 	});
 	it("keeps a round's mix-ups through a trip away and back (#276)", async () => {

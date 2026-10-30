@@ -192,9 +192,9 @@
 		line-height: 1.2;
 		padding: 0.2rem 0.4rem 0.2rem 0.5rem;
 		border-radius: 999px;
-		border: 1px solid rgba(30, 40, 36, 0.2);
-		background: #ffffff; /* opaque over map labels, like the map bar (FT-14) */
-		color: rgba(30, 40, 36, 0.75);
+		border: 1px solid var(--gc-border, rgba(30, 40, 36, 0.2));
+		background: var(--gc-surface, #ffffff); /* opaque over map labels, like the map bar (FT-14) */
+		color: var(--gc-muted, rgba(30, 40, 36, 0.75));
 		cursor: pointer;
 	}
 	/* The pill stays small; what a finger has to hit does not (review F8). */
@@ -208,11 +208,11 @@
 		transform: translate(-50%, -50%);
 	}
 	.lang-button:hover {
-		background: #ffffff;
-		border-color: rgba(30, 40, 36, 0.35);
+		background: var(--gc-surface, #ffffff);
+		border-color: var(--gc-border, rgba(30, 40, 36, 0.35));
 	}
 	.lang-button:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 1px;
 	}
 	.lang-caret {
@@ -228,8 +228,8 @@
 		flex-direction: column;
 		min-width: 9rem;
 		padding: 0.25rem;
-		background: #ffffff;
-		border: 1px solid rgba(17, 24, 21, 0.14);
+		background: var(--gc-surface, #ffffff);
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.14));
 		border-radius: 0.55rem;
 		box-shadow: 0 6px 20px rgba(17, 24, 21, 0.18);
 	}
@@ -246,15 +246,15 @@
 		background: none;
 		border: none;
 		border-radius: 0.4rem;
-		color: #2b332e;
+		color: var(--gc-text, #2b332e);
 		cursor: pointer;
 	}
 	.lang-option:hover,
 	.lang-option.is-cursor {
-		background: rgba(17, 24, 21, 0.06);
+		background: var(--gc-hover, rgba(17, 24, 21, 0.06));
 	}
 	.lang-option:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: -2px;
 	}
 	.lang-option-code {
@@ -262,13 +262,13 @@
 		width: 1.6rem;
 		font-size: 0.68rem;
 		font-weight: 700;
-		color: rgba(30, 40, 36, 0.55);
+		color: var(--gc-muted, rgba(30, 40, 36, 0.55));
 	}
 	.lang-option-name {
 		flex: 1;
 	}
 	.lang-tick {
 		flex: none;
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 	}
 </style>

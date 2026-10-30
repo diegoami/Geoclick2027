@@ -70,11 +70,41 @@
 	// One or two short clauses since FT-45 - a region's biggest city, or a
 	// town's region and rank - never the old paragraph.
 	const context = $derived(factClauses(fact).join(' '));
+	let factBody = $state<HTMLElement>();
+	let scrollable = $state(false);
+	$effect(() => {
+		// Recheck content changes even when its capped height stays the same.
+		void origin;
+		void extra;
+		void context;
+		const body = factBody;
+		if (!body) return;
+		const measure = () => {
+			scrollable = body.scrollHeight > body.clientHeight + 1;
+		};
+		const observer = new ResizeObserver(measure);
+		observer.observe(body);
+		window.addEventListener('geoclick:appearancechange', measure);
+		const frame = requestAnimationFrame(measure);
+		return () => {
+			cancelAnimationFrame(frame);
+			observer.disconnect();
+			window.removeEventListener('geoclick:appearancechange', measure);
+		};
+	});
 </script>
 
 {#if origin || extra || context}
 	<div class="fact-card" data-map-overlay="bottom" data-testid="fact-card" style="bottom: {bottom}">
-		<div class="fact-body">
+		<!-- svelte-ignore a11y_no_noninteractive_tabindex (Overflowing prose needs keyboard scrolling.) -->
+		<div
+			class="fact-body"
+			bind:this={factBody}
+			class:scrollable
+			tabindex={scrollable ? 0 : undefined}
+			role={scrollable ? 'region' : undefined}
+			aria-label={scrollable ? name : undefined}
+		>
 			<!-- Where the name comes from. Always here. -->
 			{#if origin}
 				<p class="fact-where">
@@ -122,24 +152,27 @@
 		gap: 0.5rem;
 		box-sizing: border-box;
 		max-width: 34rem;
+		pointer-events: none;
 		margin: 0 auto;
 		padding: 0.55rem 0.7rem;
-		background: rgba(255, 255, 255, 0.96);
-		border: 1px solid rgba(17, 24, 21, 0.12);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.96));
+		border: 1px solid var(--gc-border, rgba(17, 24, 21, 0.12));
 		border-radius: 0.7rem;
 		box-shadow: 0 2px 10px rgba(17, 24, 21, 0.14);
 		font-family: system-ui, sans-serif;
-		/* The card is something to read, never something in the way: a drag
-		   that starts on the map and passes over it must not be captured.
-		   The close button turns pointer events back on for itself. */
-		pointer-events: none;
+		/* Large text can scroll within the card without covering the whole map. */
+	}
+	.fact-body.scrollable {
+		pointer-events: auto;
 	}
 	.fact-body {
+		max-height: 35dvh;
+		overflow-y: auto;
 		flex: 1;
 		min-width: 0;
 		font-size: 0.8125rem;
 		line-height: 1.35;
-		color: #2b332e;
+		color: var(--gc-text, #2b332e);
 	}
 	.fact-where,
 	.fact-extra,
@@ -150,27 +183,27 @@
 	   something to read rather than something to glance at. */
 	.fact-extra {
 		margin-top: 0.25rem;
-		color: #3d4a42;
+		color: var(--gc-text, #3d4a42);
 	}
 	/* Quieter than the name-fact above it: it is context, not the point. */
 	.fact-city {
 		margin-top: 0.15rem;
-		color: #6b7770;
+		color: var(--gc-muted, #6b7770);
 		font-size: 0.75rem;
 	}
 	.fact-name {
 		font-weight: 700;
-		color: #1f3d2a;
+		color: var(--gc-text, #1f3d2a);
 	}
 	.fact-name::after {
 		content: ' — ';
-		color: #7b877f;
+		color: var(--gc-muted, #7b877f);
 		font-weight: 400;
 	}
 	/* The accent the app uses for anything it is offering rather than
 	   stating. It was the second line's colour when there were two. */
 	.fact-text {
-		color: #6b4a22;
+		color: var(--gc-accent, #6b4a22);
 	}
 	.fact-close {
 		flex: none;
@@ -184,16 +217,16 @@
 		background: none;
 		border: none;
 		border-radius: 999px;
-		color: #6b7770;
+		color: var(--gc-muted, #6b7770);
 		cursor: pointer;
 		pointer-events: auto;
 	}
 	.fact-close:hover {
-		background: rgba(17, 24, 21, 0.07);
-		color: #2b332e;
+		background: var(--gc-hover, rgba(17, 24, 21, 0.07));
+		color: var(--gc-text, #2b332e);
 	}
 	.fact-close:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 1px;
 	}
 </style>

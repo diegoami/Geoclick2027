@@ -60,7 +60,7 @@
 		padding: 0 1rem;
 		font-family: system-ui, sans-serif;
 		text-align: center;
-		color: #1c2b22;
+		color: var(--gc-text, #1c2b22);
 	}
 	h2 {
 		margin: 0 0 0.25rem;
@@ -72,13 +72,13 @@
 		font-size: 1.05rem;
 	}
 	a {
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 		text-underline-offset: 2px;
 	}
 	.version {
 		font-family: ui-monospace, monospace;
 		font-size: 0.85rem;
-		color: #4a5650;
+		color: var(--gc-muted, #4a5650);
 	}
 	.manual {
 		font-size: 1.05rem;
@@ -91,6 +91,6 @@
 	}
 	.credits {
 		font-size: 0.85rem;
-		color: #4a5650;
+		color: var(--gc-muted, #4a5650);
 	}
 </style>

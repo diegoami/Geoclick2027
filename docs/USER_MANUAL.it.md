@@ -6,6 +6,7 @@ Le immagini condivise con il manuale inglese mostrano l’interfaccia in inglese
 
 ## Indice
 
+- [Aspetto e dimensione del testo](#aspetto-e-dimensione-del-testo)
 1. [Che cos’è Geoclick](#1-che-cosè-geoclick)
 2. [Come ottenere il gioco](#2-come-ottenere-il-gioco)
 3. [Come sono organizzate le schermate](#3-come-sono-organizzate-le-schermate)
@@ -28,6 +29,22 @@ Le immagini condivise con il manuale inglese mostrano l’interfaccia in inglese
 20. [Il catalogo](#20-il-catalogo)
 21. [Domande frequenti](#21-domande-frequenti)
 22. [Glossario](#22-glossario)
+
+
+## Aspetto e dimensione del testo
+
+Apri **Aspetto** (l'icona A− / A+) nella barra iniziale o della mappa,
+anche durante un quiz. Sulla mappa apri prima **Impostazioni**.
+Il pannello è inizialmente chiuso e può essere richiuso. Usa **A−** e **A+** per scegliere dal 50% al 300%;
+**Ripristina** riporta il testo al 100%. Testi dell'interfaccia, nomi del quiz
+ed etichette della mappa seguono la dimensione. Lo zoom geografico è separato.
+
+Scegli **Classico**, **Oceano**, **Foresta** o **Contrasto elevato** per cambiare
+i colori dell'interfaccia e delle etichette. I colori geografici mantengono
+il loro significato; Contrasto elevato non crea una mappa di base scura.
+Le modifiche sono immediate e vengono memorizzate sul dispositivo quando
+possibile. Chiudi con il pulsante o Escape. Se la barra della mappa è nascosta,
+mostrala prima con il pulsante sotto i controlli dello zoom.
 
 ## 1. Che cos’è Geoclick
 
@@ -131,11 +148,11 @@ Il vassoio si riempie progressivamente. Trascina la maniglia grigia verso l’al
 
 Alla fine compare **Fatto!** con le risposte corrette al primo tentativo, il risultato della prova precedente («L’ultima volta: 14 su 20.»), gli errori totali, gli eventuali nomi mostrati e la conoscenza raggiunta, con «Scesi di un gradino: 2» quando serve. Solo una risposta giusta al primo rilascio conta nel primo conteggio. Seguono gli elenchi **Imparati ora**, **Da ripassare** e **Confusi** («Molise messo su Abruzzo»); premendo un nome si apre la sua scheda, e gli elenchi lunghi finiscono con «+ altri 4». **Studia questi** apre Conoscenza con i nomi da ripassare segnati come **Scelto**. La X del pannello chiude il risultato; **Gioca ancora** avvia una nuova prova.
 
-Di norma una prova ripercorre l’intera mappa. Quando conosci alcuni nomi ma non tutti, **Esercitati sui 6 non ancora imparati** offre una prova più breve: accanto alla riga dei progressi (solo prima della prima risposta), nel pannello del risultato e accanto a **Gioca ancora**. I nomi che sai partono già collocati e vengono chiesti solo gli altri; la riga dei progressi comincia con «Esercizio ·». Il punteggio funziona come sempre.
+Di norma una prova ripercorre l’intera mappa. Quando conosci alcuni nomi ma non tutti, **Esercitati sui 6 non ancora imparati** offre una prova più breve: accanto alla barra dei comandi del quiz (solo prima della prima risposta), nel pannello del risultato e accanto a **Gioca ancora**. I nomi che sai partono già collocati e vengono chiesti solo gli altri; la barra dei comandi del quiz comincia con «Esercizio ·». Il punteggio funziona come sempre.
 
 Quando conosci tutti i nomi di una mappa, le prove sono cronometrate. Conta solo il tempo passato nel quiz e durante il gioco non si vede alcun orologio. Il pannello mostra per esempio «Tempo: 1:42» e **Nuovo record!** quando una prova senza errori batte il tuo record; dopo una prova con errori dice «Solo un giro senza errori vale come record.»
 
-Due pulsanti uniti nella riga dei progressi, **Posiziona i nomi** e **Dai i nomi**, scelgono come chiede il quiz. In **Dai i nomi** un luogo si illumina di blu e il vassoio offre il suo nome fra quattro; gli altri sono i luoghi più vicini. Dal 60% conosciuto i nomi diventano cinque, dall’85% sei. Scegli con un tocco, un clic o i tasti numerici da 1 a 6: ogni nome mostra il suo numero. La riga dei progressi dice «Quale luogo è evidenziato? — 0 / 20 nominati». Una scelta sbagliata funziona come nel quiz a trascinamento: il luogo scelto lampeggia in rosso, viene mostrato il nome giusto e si apre la scheda. Entrambi i modi contano per gli stessi gradini. Cambiare modo avvia una nuova prova; la scelta viene ricordata. Il tutorial usa sempre **Posiziona i nomi**.
+Due pulsanti uniti sotto la scelta della mappa, **Posiziona i nomi** e **Dai i nomi**, scelgono come chiede il quiz. In **Dai i nomi** un luogo si illumina di blu e il vassoio offre il suo nome fra quattro; gli altri sono i luoghi più vicini. Dal 60% conosciuto i nomi diventano cinque, dall’85% sei. Scegli con un tocco, un clic o i tasti numerici da 1 a 6: ogni nome mostra il suo numero. Una scelta sbagliata funziona come nel quiz a trascinamento: il luogo scelto lampeggia in rosso, viene mostrato il nome giusto e si apre la scheda. Entrambi i modi contano per gli stessi gradini. Cambiare modo avvia una nuova prova; la scelta viene ricordata. Il tutorial usa sempre **Posiziona i nomi**.
 
 Per posizionare i nomi servono mouse, touchpad, dito o penna; un nome del vassoio si può anche prendere con Tab e Invio. **Dai i nomi** si può giocare interamente da tastiera.
 

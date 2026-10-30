@@ -76,8 +76,8 @@
 		z-index: 20;
 		font-family: ui-monospace, monospace;
 		font-size: 0.7rem;
-		color: #8a8578;
-		background: rgba(255, 255, 255, 0.6);
+		color: var(--gc-muted, #8a8578);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.6));
 		padding: 0.1rem 0.4rem;
 		border-radius: 0.3rem;
 		pointer-events: none;

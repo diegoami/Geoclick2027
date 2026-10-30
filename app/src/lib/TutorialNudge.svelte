@@ -37,19 +37,19 @@
 		margin: 0 0 1.5rem;
 		padding: 0.75rem 1rem;
 		text-align: left;
-		background: #fbf4ec;
-		border: 1px solid rgba(181, 105, 31, 0.35);
+		background: var(--gc-accent-soft, #fbf4ec);
+		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.35));
 		border-radius: 0.9rem;
 	}
 	.nudge-icon {
 		flex: none;
-		color: #b5691f;
+		color: var(--gc-accent, #b5691f);
 	}
 	.nudge p {
 		flex: 1 1 12rem;
 		margin: 0;
 		font-size: 0.95rem;
-		color: #1e2824;
+		color: var(--gc-text, #1e2824);
 	}
 	.nudge-actions {
 		display: flex;
@@ -66,17 +66,17 @@
 		white-space: nowrap;
 	}
 	.primary {
-		background: #b5691f;
-		border: 1px solid #b5691f;
-		color: #ffffff;
+		background: var(--gc-accent, #b5691f);
+		border: 1px solid var(--gc-accent, #b5691f);
+		color: var(--gc-on-strong, #ffffff);
 	}
 	.secondary {
-		background: #ffffff;
-		border: 1px solid rgba(30, 40, 36, 0.25);
-		color: #4a5650;
+		background: var(--gc-surface, #ffffff);
+		border: 1px solid var(--gc-border, rgba(30, 40, 36, 0.25));
+		color: var(--gc-muted, #4a5650);
 	}
 	button:focus-visible {
-		outline: 2px solid #b5691f;
+		outline: 2px solid var(--gc-accent, #b5691f);
 		outline-offset: 2px;
 	}
 </style>

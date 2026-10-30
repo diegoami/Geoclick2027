@@ -214,6 +214,12 @@ paragraph to `tasks.yaml`-style specs the way the other two can.
 
 ## 4. Accessibility: region/town names are too small to read, no size control exists
 
+**Update 2026-10-30:** the findings below describe the original September
+request. Map labels now use rem and support hover/tap magnification. The
+owner approved [proposal #284](https://github.com/diegoami/Geoclick2027/issues/284)
+for persistent overall 50–300% text scaling and four interface color schemes;
+implementation and owner testing are tracked there.
+
 **Ask:** worried that region and town names are sometimes too small to
 read comfortably; wants an option to increase name/label size.
 

@@ -152,9 +152,9 @@
 		box-sizing: border-box;
 		width: max-content;
 		max-width: min(30rem, calc(100% - 2rem));
-		max-height: calc(100% - 9rem);
+		max-height: calc(100% - 2rem);
 		overflow-y: auto;
-		background: white;
+		background: var(--gc-surface, white);
 		border-radius: 0.75rem;
 		padding: 1.5rem 2rem;
 		text-align: center;
@@ -172,14 +172,14 @@
 		border: none;
 		border-radius: 50%;
 		background: transparent;
-		color: rgba(0, 0, 0, 0.45);
+		color: var(--gc-muted, rgba(0, 0, 0, 0.45));
 		font-size: 1.3rem;
 		line-height: 1;
 		cursor: pointer;
 	}
 	.score-panel-close:hover {
-		background: rgba(0, 0, 0, 0.06);
-		color: rgba(0, 0, 0, 0.75);
+		background: var(--gc-hover, rgba(0, 0, 0, 0.06));
+		color: var(--gc-muted, rgba(0, 0, 0, 0.75));
 	}
 	h2 {
 		margin: 0 0 0.75rem;
@@ -191,7 +191,7 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
-		color: rgba(30, 40, 36, 0.6);
+		color: var(--gc-muted, rgba(30, 40, 36, 0.6));
 	}
 	.last-time {
 		margin-top: -0.5rem;
@@ -202,11 +202,11 @@
 		font-variant-numeric: tabular-nums;
 	}
 	.new-best {
-		color: #2f6b45;
+		color: var(--gc-success, #2f6b45);
 	}
 	.revealed-note {
 		font-size: 0.85rem;
-		color: #8a6d3b;
+		color: var(--gc-warning, #8a6d3b);
 	}
 	.known-note {
 		font-size: 0.85rem;
@@ -224,19 +224,19 @@
 	   name the round made known. */
 	.name {
 		padding: 2px 8px;
-		border: 1px solid rgba(138, 109, 59, 0.45);
+		border: 1px solid var(--gc-border, rgba(138, 109, 59, 0.45));
 		border-radius: 5px;
-		background: #fbf4ec;
-		color: #7a5a24;
+		background: var(--gc-accent-soft, #fbf4ec);
+		color: var(--gc-warning, #7a5a24);
 		font-family: inherit;
 		font-size: 0.8125rem;
 		font-weight: 600;
 		cursor: pointer;
 	}
 	.name.known {
-		border-color: rgba(90, 156, 111, 0.5);
-		background: #eef6f0;
-		color: #2f6b45;
+		border-color: var(--gc-border, rgba(90, 156, 111, 0.5));
+		background: var(--gc-success-soft, #eef6f0);
+		color: var(--gc-success, #2f6b45);
 	}
 	.pair {
 		font-size: 0.8125rem;
@@ -260,8 +260,8 @@
 		padding: 0.5rem 1rem;
 		border: none;
 		border-radius: 0.5rem;
-		background: #5a9c6f;
-		color: white;
+		background: var(--gc-success-strong, #5a9c6f);
+		color: var(--gc-on-strong, white);
 		font-family: inherit;
 		font-size: 0.9rem;
 		font-weight: 600;

@@ -6,6 +6,7 @@ Die gemeinsam mit dem englischen Handbuch verwendeten Bilder zeigen englische Be
 
 ## Inhalt
 
+- [Darstellung und Textgröße](#darstellung-und-textgröße)
 1. [Was ist Geoclick?](#1-was-ist-geoclick)
 2. [Geoclick bekommen](#2-geoclick-bekommen)
 3. [Die Ansichten im Zusammenhang](#3-die-ansichten-im-zusammenhang)
@@ -28,6 +29,22 @@ Die gemeinsam mit dem englischen Handbuch verwendeten Bilder zeigen englische Be
 20. [Der Kartenkatalog](#20-der-kartenkatalog)
 21. [Häufige Fragen](#21-häufige-fragen)
 22. [Begriffe](#22-begriffe)
+
+
+## Darstellung und Textgröße
+
+Öffne **Darstellung** (das A− / A+-Symbol) in der Start- oder Kartenleiste,
+auch während eines Quiz. Öffne auf der Karte zuerst **Einstellungen**.
+Dieses Feld ist anfangs geschlossen und lässt sich wieder zuklappen. Mit **A−** und **A+** wählst du 50% bis 300%;
+**Zurücksetzen** stellt die Textgröße auf 100%. Oberflächentexte, Quiznamen
+und Kartenbeschriftungen folgen dieser Größe. Der Kartenzoom ist unabhängig.
+
+Wähle **Klassisch**, **Ozean**, **Wald** oder **Hoher Kontrast** für andere
+Farben der Oberfläche und Beschriftungen. Geografische Kartenfarben behalten
+ihre Bedeutung; Hoher Kontrast erzeugt keine dunkle Basiskarte. Änderungen
+gelten sofort und werden nach Möglichkeit auf diesem Gerät gespeichert.
+Schließe das Fenster mit der Schaltfläche oder Escape. Eine ausgeblendete
+Kartenleiste blendest du zuerst mit der Taste unter dem Kartenzoom ein.
 
 ## 1. Was ist Geoclick?
 
@@ -74,7 +91,7 @@ Eine Zeile über Karte oder Liste schlägt vor, was du als Nächstes spielen kan
 | **Ton** | Nur im Quiz: Antworttöne ein- oder ausschalten (anfangs aus) |
 | **Tutorial** | Die Einführung starten, fortsetzen oder wiederholen |
 
-Die Zeile darunter wechselt zwischen den Karten desselben Landes oder Kontinents. Der Stern gilt für die gerade geöffnete Karte. **Detaillierte Karten anzeigen** ergänzt feinere Unterteilungen. Eine bereits geöffnete Detailkarte bleibt mit einem **roten X** erreichbar, wenn das Häkchen wieder ausgeschaltet ist. Das X entfernt diesen zusätzlichen Knopf aus der Zeile, ohne den Lernstand der Karte zu löschen.
+Die Zeile darunter wechselt zwischen den Karten desselben Landes oder Kontinents. Der Stern gilt für die gerade geöffnete Karte. **Einstellungen → Detaillierte Karten anzeigen** ergänzt feinere Unterteilungen. Eine bereits geöffnete Detailkarte bleibt mit einem **roten X** erreichbar, wenn das Häkchen wieder ausgeschaltet ist. Das X entfernt diesen zusätzlichen Knopf aus der Zeile, ohne den Lernstand der Karte zu löschen.
 
 ![Kartentypen und rotes X einer Detailkarte](manual/type-bar-x.jpg)
 
@@ -131,11 +148,11 @@ Die Ablage füllt sich während der Runde nach. Ziehe den grauen Griff nach oben
 
 Am Ende erscheint **Fertig!** mit den beim ersten Versuch richtigen Antworten, dem Wert der vorigen Runde („Letztes Mal: 14 von 20.“), der gesamten Fehlerzahl, gegebenenfalls gezeigten Namen und dem erreichten Lernstand, bei Bedarf mit „Eine Stufe verloren: 2“. Nur ein sofort richtiger erster Abwurf zählt zur ersten Zahl. Darunter stehen die Listen **Neu gewusst**, **Zum Üben** und **Verwechselt** („Molise auf Abruzzo gelegt“); ein Druck auf einen Namen öffnet seine Ortskarte, lange Listen enden mit „+4 weitere“. **Diese lernen** öffnet Gewusst mit den Namen zum Üben als **Gewählt**. Das X schließt die Ergebnisanzeige; **Nochmal spielen** beginnt eine neue Runde.
 
-Eine Runde behandelt normalerweise die gesamte Karte. Kennst du einige Namen, aber nicht alle, bietet **Die 6 noch nicht gewussten üben** eine Übungsrunde an: neben der Fortschrittszeile (nur vor der ersten Antwort einer Runde), in der Ergebnisanzeige und neben **Nochmal spielen**. Darin stehen die gewussten Namen schon auf der Karte, gefragt werden nur die übrigen; die Fortschrittszeile beginnt mit „Übung ·“. Gewertet wird wie sonst.
+Eine Runde behandelt normalerweise die gesamte Karte. Kennst du einige Namen, aber nicht alle, bietet **Die 6 noch nicht gewussten üben** eine Übungsrunde an: neben der Quiz-Steuerung (nur vor der ersten Antwort einer Runde), in der Ergebnisanzeige und neben **Nochmal spielen**. Darin stehen die gewussten Namen schon auf der Karte, gefragt werden nur die übrigen; die Quiz-Steuerung beginnt mit „Übung ·“. Gewertet wird wie sonst.
 
 Weißt du alle Namen einer Karte, wird jede Runde gestoppt. Es zählt nur die Zeit im Quiz, und beim Spielen ist keine Uhr zu sehen. Die Ergebnisanzeige zeigt etwa „Zeit: 1:42“ und **Neue Bestzeit!**, wenn eine fehlerfreie Runde deine Bestzeit schlägt. Nach einer Runde mit Fehlern steht dort „Nur eine Runde ohne Fehler zählt als Bestzeit.“
 
-**Namen platzieren** und **Orte benennen**, zwei verbundene Knöpfe in der Fortschrittszeile, wählen, wie das Quiz fragt. Bei **Orte benennen** leuchtet ein Ort blau auf, und die Ablage bietet seinen Namen unter vier Namen an; die anderen sind seine nächsten Nachbarn. Ab 60 % gewusst sind es fünf, ab 85 % sechs Namen. Wähle durch Tippen, Klicken oder mit den Zifferntasten 1 bis 6; jeder Name zeigt seine Ziffer. Die Fortschrittszeile lautet „Welcher Ort leuchtet? — 0 / 20 benannt“. Eine falsche Wahl wirkt wie im Ziehquiz: Der gewählte Ort blinkt rot, der richtige Name wird gezeigt, die Ortskarte öffnet sich. Beide Arten zählen für dieselben Stufen. Ein Wechsel beginnt eine neue Runde; die Wahl wird gespeichert. Das Tutorial verwendet immer **Namen platzieren**.
+**Namen platzieren** und **Orte benennen**, zwei verbundene Knöpfe unter der Kartenauswahl, wählen, wie das Quiz fragt. Bei **Orte benennen** leuchtet ein Ort blau auf, und die Ablage bietet seinen Namen unter vier Namen an; die anderen sind seine nächsten Nachbarn. Ab 60 % gewusst sind es fünf, ab 85 % sechs Namen. Wähle durch Tippen, Klicken oder mit den Zifferntasten 1 bis 6; jeder Name zeigt seine Ziffer. Eine falsche Wahl wirkt wie im Ziehquiz: Der gewählte Ort blinkt rot, der richtige Name wird gezeigt, die Ortskarte öffnet sich. Beide Arten zählen für dieselben Stufen. Ein Wechsel beginnt eine neue Runde; die Wahl wird gespeichert. Das Tutorial verwendet immer **Namen platzieren**.
 
 Zum Platzieren brauchst du Maus, Touchpad, Finger oder Stift; einen Namen in der Ablage kannst du auch mit Tab und Enter aufnehmen. **Orte benennen** lässt sich ganz mit der Tastatur spielen.
 

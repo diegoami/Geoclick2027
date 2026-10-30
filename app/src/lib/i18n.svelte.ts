@@ -24,6 +24,21 @@ const STORAGE_KEY = 'geoclick:language:v1';
 // translation is a compile error, not a silent fallback discovered by
 // clicking around.
 export type TranslationKey =
+	| 'nav.settings'
+	| 'appearance.title'
+	| 'appearance.textSize'
+	| 'appearance.smaller'
+	| 'appearance.larger'
+	| 'appearance.reset'
+	| 'appearance.sizeHint'
+	| 'appearance.colors'
+	| 'appearance.classic'
+	| 'appearance.ocean'
+	| 'appearance.forest'
+	| 'appearance.contrast'
+	| 'appearance.colorHint'
+	| 'appearance.saved'
+	| 'appearance.close'
 	| 'nav.maps'
 	| 'nav.switchMap'
 	| 'nav.hideButtons'
@@ -179,8 +194,6 @@ export type TranslationKey =
 	| 'mapControl.resetBearing'
 	| 'mapControl.map'
 	| 'mapControl.attribution'
-	| 'quiz.townSubtitle'
-	| 'quiz.subtitle'
 	| 'quiz.closeAriaLabel'
 	| 'quiz.known'
 	| 'quiz.done'
@@ -206,7 +219,6 @@ export type TranslationKey =
 	| 'quiz.bestNeedsClean'
 	| 'quiz.confusions'
 	| 'quiz.confusedWith'
-	| 'quiz.nameSubtitle'
 	| 'quiz.modeAria'
 	| 'quiz.modePlace'
 	| 'quiz.modeName'
@@ -259,6 +271,21 @@ export type TranslationKey =
 type Dictionary = Record<TranslationKey, string>;
 
 const en: Dictionary = {
+	'nav.settings': 'Settings',
+	'appearance.title': 'Appearance',
+	'appearance.textSize': 'Text size',
+	'appearance.smaller': 'Smaller text',
+	'appearance.larger': 'Larger text',
+	'appearance.reset': 'Reset',
+	'appearance.sizeHint': 'Scales all text, including quiz names. Map zoom stays separate.',
+	'appearance.colors': 'Color scheme',
+	'appearance.classic': 'Classic',
+	'appearance.ocean': 'Ocean',
+	'appearance.forest': 'Forest',
+	'appearance.contrast': 'High contrast',
+	'appearance.colorHint': 'Changes interface and labels. Geographic map colors keep their meaning.',
+	'appearance.saved': 'Remembered on this device when storage is available.',
+	'appearance.close': 'Close appearance settings',
 	'lang.label': 'Language',
 	'nav.maps': 'Maps',
 	'nav.switchMap': 'Switch map',
@@ -422,8 +449,6 @@ const en: Dictionary = {
 	'mapControl.resetBearing': 'Drag to rotate map, click to reset north',
 	'mapControl.map': 'Map',
 	'mapControl.attribution': 'Toggle attribution',
-	'quiz.townSubtitle': 'Drag each name onto its town marker — {placed} / {total} placed',
-	'quiz.subtitle': 'Drag each name onto its matching area — {placed} / {total} placed',
 	'quiz.closeAriaLabel': 'Close and view the map',
 	'quiz.known': '{known} / {total} known',
 	'quiz.done': 'Done!',
@@ -449,7 +474,6 @@ const en: Dictionary = {
 	'quiz.bestNeedsClean': 'Only a round with no mistakes sets a best time.',
 	'quiz.confusions': 'Mixed up',
 	'quiz.confusedWith': '{a} placed on {b}',
-	'quiz.nameSubtitle': 'Which place is lit up? — {placed} / {total} named',
 	'quiz.modeAria': 'Which way the quiz asks',
 	'quiz.modePlace': 'Place names',
 	'quiz.modeName': 'Name places',
@@ -516,6 +540,22 @@ const en: Dictionary = {
 };
 
 const de: Dictionary = {
+	'nav.settings': 'Einstellungen',
+	'appearance.title': 'Darstellung',
+	'appearance.textSize': 'Textgröße',
+	'appearance.smaller': 'Kleinerer Text',
+	'appearance.larger': 'Größerer Text',
+	'appearance.reset': 'Zurücksetzen',
+	'appearance.sizeHint': 'Vergrößert alle Texte, auch Quiznamen. Der Kartenzoom bleibt unabhängig.',
+	'appearance.colors': 'Farbschema',
+	'appearance.classic': 'Klassisch',
+	'appearance.ocean': 'Ozean',
+	'appearance.forest': 'Wald',
+	'appearance.contrast': 'Hoher Kontrast',
+	'appearance.colorHint':
+		'Ändert Oberfläche und Beschriftungen. Geografische Kartenfarben behalten ihre Bedeutung.',
+	'appearance.saved': 'Wird auf diesem Gerät gespeichert, sofern Speicher verfügbar ist.',
+	'appearance.close': 'Darstellungseinstellungen schließen',
 	'lang.label': 'Sprache',
 	'nav.maps': 'Karten',
 	'nav.switchMap': 'Karte wechseln',
@@ -681,8 +721,6 @@ const de: Dictionary = {
 	'mapControl.resetBearing': 'Zum Drehen ziehen, zum Ausrichten nach Norden klicken',
 	'mapControl.map': 'Karte',
 	'mapControl.attribution': 'Quellenangaben ein- oder ausblenden',
-	'quiz.townSubtitle': 'Ziehe jeden Namen auf seine Stadtmarkierung — {placed} / {total} platziert',
-	'quiz.subtitle': 'Ziehe jeden Namen auf das passende Gebiet — {placed} / {total} platziert',
 	'quiz.closeAriaLabel': 'Schließen und Karte ansehen',
 	'quiz.known': '{known} / {total} gewusst',
 	'quiz.done': 'Fertig!',
@@ -708,7 +746,6 @@ const de: Dictionary = {
 	'quiz.bestNeedsClean': 'Nur eine Runde ohne Fehler zählt als Bestzeit.',
 	'quiz.confusions': 'Verwechselt',
 	'quiz.confusedWith': '{a} auf {b} gelegt',
-	'quiz.nameSubtitle': 'Welcher Ort leuchtet? — {placed} / {total} benannt',
 	'quiz.modeAria': 'Wie das Quiz fragt',
 	'quiz.modePlace': 'Namen platzieren',
 	'quiz.modeName': 'Orte benennen',
@@ -777,6 +814,24 @@ const de: Dictionary = {
 };
 
 const it: Dictionary = {
+	'nav.settings': 'Impostazioni',
+	'appearance.title': 'Aspetto',
+	'appearance.textSize': 'Dimensione del testo',
+	'appearance.smaller': 'Testo più piccolo',
+	'appearance.larger': 'Testo più grande',
+	'appearance.reset': 'Ripristina',
+	'appearance.sizeHint':
+		'Ridimensiona tutti i testi, anche i nomi nel quiz. Lo zoom della mappa resta indipendente.',
+	'appearance.colors': 'Schema di colori',
+	'appearance.classic': 'Classico',
+	'appearance.ocean': 'Oceano',
+	'appearance.forest': 'Foresta',
+	'appearance.contrast': 'Contrasto elevato',
+	'appearance.colorHint':
+		'Cambia interfaccia ed etichette. I colori geografici mantengono il loro significato.',
+	'appearance.saved':
+		'Memorizzato su questo dispositivo quando lo spazio di archiviazione è disponibile.',
+	'appearance.close': 'Chiudi le impostazioni di aspetto',
 	'lang.label': 'Lingua',
 	'nav.maps': 'Mappe',
 	'nav.switchMap': 'Cambia mappa',
@@ -942,9 +997,6 @@ const it: Dictionary = {
 	'mapControl.resetBearing': 'Trascina per ruotare, fai clic per orientare a nord',
 	'mapControl.map': 'Mappa',
 	'mapControl.attribution': 'Mostra o nascondi le attribuzioni',
-	'quiz.townSubtitle':
-		'Trascina ogni nome sul relativo indicatore della città — {placed} / {total} posizionati',
-	'quiz.subtitle': 'Trascina ogni nome sull’area corrispondente — {placed} / {total} posizionati',
 	'quiz.closeAriaLabel': 'Chiudi e guarda la mappa',
 	'quiz.known': 'Sai {known} / {total}',
 	'quiz.done': 'Fatto!',
@@ -970,7 +1022,6 @@ const it: Dictionary = {
 	'quiz.bestNeedsClean': 'Solo un giro senza errori vale come record.',
 	'quiz.confusions': 'Confusi',
 	'quiz.confusedWith': '{a} messo su {b}',
-	'quiz.nameSubtitle': 'Quale luogo è evidenziato? — {placed} / {total} nominati',
 	'quiz.modeAria': 'Come chiede il quiz',
 	'quiz.modePlace': 'Posiziona i nomi',
 	'quiz.modeName': 'Dai i nomi',

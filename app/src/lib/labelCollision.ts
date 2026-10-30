@@ -494,6 +494,7 @@ export function enableLabelCollision(
 		schedule();
 	};
 
+	window.addEventListener('geoclick:appearancechange', settle);
 	map.on('move', move);
 	map.on('moveend', settle);
 	map.on('resize', schedule);
@@ -526,6 +527,7 @@ export function enableLabelCollision(
 	return () => {
 		cancelAnimationFrame(frame);
 		observer.disconnect();
+		window.removeEventListener('geoclick:appearancechange', settle);
 		container.removeEventListener('transitionend', schedule);
 		map.off('move', move);
 		map.off('moveend', settle);

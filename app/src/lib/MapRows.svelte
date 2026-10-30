@@ -178,15 +178,15 @@
 		align-items: center;
 		gap: 0.25rem 0.75rem;
 		padding: 0.55rem 0.75rem;
-		border: 1px solid #ccc;
+		border: 1px solid var(--gc-border, #ccc);
 		border-radius: 0.5rem;
-		background: rgba(255, 255, 255, 0.7);
+		background: var(--gc-surface, rgba(255, 255, 255, 0.7));
 		scroll-margin: 0.5rem;
 	}
 	.row.highlight {
-		border-color: #b06a2f;
-		box-shadow: 0 0 0 2px rgba(176, 106, 47, 0.35);
-		background: #fff8f0;
+		border-color: var(--gc-accent, #b06a2f);
+		box-shadow: 0 0 0 2px var(--gc-accent-soft, rgba(176, 106, 47, 0.35));
+		background: var(--gc-accent-soft, #fff8f0);
 	}
 	.name {
 		padding: 0;
@@ -195,7 +195,7 @@
 		font: inherit;
 		text-align: left;
 		font-weight: 700;
-		color: #2c3a33;
+		color: var(--gc-text, #2c3a33);
 		cursor: pointer;
 	}
 	.name:hover {
@@ -210,8 +210,8 @@
 		font-size: 0.9rem;
 		max-width: 12rem;
 		padding: 0.3rem 0.4rem;
-		border: 1px solid #bbb;
+		border: 1px solid var(--gc-border, #bbb);
 		border-radius: 0.4rem;
-		background: #fff;
+		background: var(--gc-surface, #fff);
 	}
 </style>
