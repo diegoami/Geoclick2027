@@ -13,6 +13,18 @@ import { setLanguage } from './i18n.svelte';
 const frame = () => new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
 
 describe('Appearance settings', () => {
+	it('does not request redundant geometry work on the initial mount', async () => {
+		const changed = vi.fn();
+		window.addEventListener(APPEARANCE_CHANGED, changed);
+		try {
+			await render(AppearanceSettings);
+			await tick();
+			await frame();
+			expect(changed).not.toHaveBeenCalled();
+		} finally {
+			window.removeEventListener(APPEARANCE_CHANGED, changed);
+		}
+	});
 	beforeEach(() => {
 		localStorage.removeItem(APPEARANCE_KEY);
 		setAppearance(DEFAULT_APPEARANCE);

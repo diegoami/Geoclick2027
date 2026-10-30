@@ -38,7 +38,7 @@
 		font-size: 0.7rem;
 		font-weight: 600;
 		line-height: 1.2;
-		padding: 0.2rem 0.55rem;
+		padding: 2px 0.55rem;
 		border-radius: 999px;
 		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
 		background: var(--gc-surface, #ffffff);

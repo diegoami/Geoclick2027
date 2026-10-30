@@ -302,6 +302,11 @@ a second line rather than scrolling.
 
 ### The other controls
 
+**Settings**, below the map selector, starts collapsed. Open it for **Show
+detailed maps**, the language menu, **Terrain**, **Sound** (in a quiz),
+**Appearance** and **Tutorial**. Click Settings again to hide these controls.
+The quiz-mode buttons remain outside Settings, directly under the map selector.
+
 - **EN ⌄**: the language menu (English, Deutsch, Italiano):
 
 ![The language menu](manual/language-menu.jpg)
@@ -312,13 +317,14 @@ a second line rather than scrolling.
   or off. It starts off. When it is on, a right answer plays two short, quiet,
   rising notes and a wrong one a low note. Your choice is kept.
 - **Tutorial**: starts the tutorial.
-- **On the quiz only**, a line showing your progress: "Drag each name onto its
-  matching area — 5 / 20 placed", with a note such as "3 names at a time" when the
-  quiz holds names back. On the same line, two joined buttons, **Place names**
-  and **Name places**, choose how the quiz asks (see
-  [Name places](#name-places)), and before your first answer of a round a
-  **Practise the 6 not yet known** button may appear (see
+- **Appearance**: choose 50–300% text size and a color scheme (see
+  [Appearance and text size](#appearance-and-text-size)).
+- **On the quiz only**, the visible **Place names / Name places** pair chooses
+  how the quiz asks (see [Name places](#name-places)). Before your first answer,
+  **Practise the N not yet known** may appear beside it (see
   [Every round is the whole map](#every-round-is-the-whole-map)).
+  These gameplay controls are outside Settings. There is no instruction or
+  running placed/named counter line.
 
 **Top right:**
 
@@ -446,9 +452,6 @@ place are in a **tray** along the bottom of the screen, in a fixed, roughly alph
 Here the quiz on Denmark's five regions, at the start:
 
 ![The quiz at the start: five names in the tray](manual/quiz-start.jpg)
-
-The line under the type row counts your progress: "Drag each name onto its
-matching area — 0 / 5 placed".
 
 On a map you have not learned, the tray holds **ten names at a time** and
 refills as you place them. Once you know a map, it holds back more (see

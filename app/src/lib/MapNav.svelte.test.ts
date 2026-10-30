@@ -1,5 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
+import '../app.css';
+import '../appearance.css';
 
 const { gotoMock } = vi.hoisted(() => ({ gotoMock: vi.fn() }));
 vi.mock('$app/navigation', () => ({ goto: gotoMock, afterNavigate: vi.fn() }));
@@ -20,6 +22,37 @@ import {
 } from './mapPrefs.svelte';
 
 describe('MapNav sibling map buttons', () => {
+	it('preserves horizontal padding while reducing vertical padding on all top controls', async () => {
+		const original = document.documentElement.style.fontSize;
+		try {
+			document.documentElement.style.fontSize = '200%';
+			setLanguage('en');
+			const screen = await render(MapNav, {
+				mapId: 'italy-regions',
+				mapName: 'Italy',
+				active: 'quiz'
+			});
+			const rootSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+			for (const [selector, rightRem] of [
+				['.map-type-btn', 0.6],
+				['.detailed-toggle', 0.55],
+				['.terrain-btn', 0.55],
+				['[data-testid=sound-toggle]', 0.55],
+				['.tutorial-btn', 0.55],
+				['.lang-button', 0.4]
+			] as const) {
+				const button = screen.container.querySelector<HTMLElement>(selector)!;
+				expect(button, selector).not.toBeNull();
+				const style = getComputedStyle(button);
+				expect(parseFloat(style.paddingRight), selector).toBeCloseTo(rootSize * rightRem);
+				expect(parseFloat(style.paddingTop), selector).toBeLessThanOrEqual(2);
+			}
+			const language = getComputedStyle(screen.container.querySelector('.lang-button')!);
+			expect(parseFloat(language.paddingLeft)).toBeCloseTo(rootSize * 0.5);
+		} finally {
+			document.documentElement.style.fontSize = original;
+		}
+	});
 	it('starts with Settings collapsed and can show and hide its controls', async () => {
 		setLanguage('en');
 		const screen = await render(MapNav, {

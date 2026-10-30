@@ -54,6 +54,13 @@
 		color: var(--gc-text, #1c2b22);
 		line-height: 1.55;
 	}
+	.manual {
+		overflow-wrap: anywhere;
+	}
+	.manual :global(pre) {
+		max-width: 100%;
+		overflow-x: auto;
+	}
 	.note {
 		background: var(--gc-surface, #fff);
 		border-radius: 0.5rem;
@@ -78,6 +85,7 @@
 		font-size: 1.1rem;
 	}
 	.manual :global(a) {
+		overflow-wrap: anywhere;
 		color: var(--gc-accent, #b5691f);
 		text-underline-offset: 2px;
 	}

@@ -46,6 +46,8 @@
 		color: var(--gc-accent, #b5691f);
 	}
 	.nudge p {
+		min-width: 0;
+		overflow-wrap: anywhere;
 		flex: 1 1 12rem;
 		margin: 0;
 		font-size: 0.95rem;
@@ -53,6 +55,9 @@
 	}
 	.nudge-actions {
 		display: flex;
+		flex-wrap: wrap;
+		min-width: 0;
+		max-width: 100%;
 		gap: 0.5rem;
 		margin-left: auto;
 	}
@@ -63,7 +68,9 @@
 		padding: 0.4rem 0.85rem;
 		border-radius: 999px;
 		cursor: pointer;
-		white-space: nowrap;
+		white-space: normal;
+		max-width: 100%;
+		overflow-wrap: anywhere;
 	}
 	.primary {
 		background: var(--gc-accent, #b5691f);

@@ -123,7 +123,9 @@ replace maps, alter camera state or access private MapLibre locale fields.
   the old quiz instruction line is removed. Its tutorial anchor follows the map.
   `AppearanceButton.svelte` opens the shared native dialog
   `AppearanceSettings.svelte`, mounted once in `+layout.svelte`.
-  `appearance.svelte.ts` holds device preferences; `appearance.ts` validates
+  The synchronous `app.html` bootstrap applies stored appearance before paint;
+  `appearanceBootstrap.test.ts` checks its literal allowlists against the
+  canonical definitions. `appearance.svelte.ts` holds device preferences; `appearance.ts` validates
   the versioned localStorage record. Root percentage font sizing composes
   with browser defaults; `appearance.css` supplies semantic color roles.
   `geoclick:appearancechange` refreshes quiz tray measurements, label

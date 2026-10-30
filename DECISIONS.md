@@ -2723,3 +2723,10 @@ horizontal padding; the font range extends to 50–300%, and the quiz instructio
 are needed.
 The owner also asked for plain region names on Known maps: neither popup
 names nor curved SVG names are underlined there, in any color scheme.
+The milestone review exposed horizontal padding reductions on secondary
+controls. The owner clarified that original horizontal padding is preserved
+throughout, including type chips and preference pills; only vertical padding
+is reduced. The owner also confirmed About and the manual must wrap at 300%.
+Stored appearance is applied by a small synchronous head bootstrap before
+the first paint, with the component managing later changes; its literals are
+checked against the canonical preference definitions.

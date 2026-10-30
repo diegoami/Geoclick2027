@@ -1425,7 +1425,7 @@
 		background: var(--gc-surface, white);
 		border: 1px solid var(--gc-border, rgba(0, 0, 0, 0.15));
 		border-radius: 0.5rem;
-		padding: 2px 5px;
+		padding: 2px 0.7rem;
 		cursor: grab;
 		touch-action: none;
 		/* A tablet can read a press on text as a selection gesture and raise
@@ -1528,7 +1528,7 @@
 	/* The quiz's second way to play (#265), quiet beside the progress line. */
 	.practise-btn {
 		margin-left: 0;
-		padding: 2px 4px;
+		padding: 2px 0.4rem;
 		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
 		border-radius: 5px;
 		background: var(--gc-surface, #ffffff);
@@ -1580,7 +1580,7 @@
 		vertical-align: middle;
 	}
 	.mode-switch button {
-		padding: 2px 4px;
+		padding: 2px 0.45rem;
 		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
 		background: var(--gc-surface, #ffffff);
 		color: var(--gc-accent, #b5691f);

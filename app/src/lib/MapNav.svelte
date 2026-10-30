@@ -35,16 +35,13 @@
 		mapId,
 		mapName,
 		active,
-		controls,
-		subtitle
+		controls
 	}: {
 		mapId: string;
 		mapName: string | undefined;
 		active?: 'overview' | 'explore' | 'quiz' | 'tour';
 		// Primary gameplay actions stay visible above the Settings disclosure.
 		controls?: Snippet;
-		// Secondary view status belongs with preferences inside Settings.
-		subtitle?: Snippet;
 	} = $props();
 
 	// Every map view shows this bar, so opening any of them counts as a visit
@@ -246,7 +243,6 @@
 					{t('nav.detailedMaps')}
 				</label>
 			{/if}
-			{#if subtitle}<div class="subtitle">{@render subtitle()}</div>{/if}
 			<div class="prefs-row">
 				<LanguageSwitcher bind:open={languageMenuOpen} />
 				<TerrainButton />
@@ -389,7 +385,7 @@
 		font-size: 0.75rem;
 		color: var(--gc-text, #2e4037);
 		background: var(--gc-surface, rgba(255, 255, 255, 0.85));
-		padding: 2px 5px;
+		padding: 2px 0.55rem;
 		border-radius: 0.4rem;
 		cursor: pointer;
 	}
@@ -403,7 +399,7 @@
 		min-width: 28px;
 		min-height: 28px;
 		margin-left: 0.15rem;
-		padding: 2px 5px;
+		padding: 2px 0.5rem;
 		font: inherit;
 		font-size: 1rem;
 		font-weight: 700;
@@ -422,7 +418,7 @@
 		flex: none;
 		min-height: 28px;
 		box-sizing: border-box;
-		padding: 2px 5px;
+		padding: 2px 0.6rem;
 		font: inherit;
 		font-size: 0.75rem;
 		color: var(--gc-text, #2e4037);
@@ -445,19 +441,9 @@
 		font-size: 0.75rem;
 		color: var(--gc-muted, rgba(30, 40, 36, 0.6));
 		background: var(--gc-surface, rgba(255, 255, 255, 0.75));
-		padding: 2px 5px;
+		padding: 2px 0.55rem;
 		border-radius: 0.4rem;
 		font-family: system-ui, sans-serif;
-	}
-	.subtitle {
-		font-size: 0.75rem;
-		color: var(--gc-muted, rgba(30, 40, 36, 0.7));
-		background: var(--gc-surface, rgba(255, 255, 255, 0.85));
-		padding: 2px 5px;
-		border-radius: 0.4rem;
-		font-family: system-ui, sans-serif;
-		/* Secondary view status can wrap without widening the toolbar. */
-		max-width: 28rem;
 	}
 	/* 720px, not the app's usual 640: five wide tabs (FT-13) in German or
 	   Italian need ~610px and must end before the zoom control. */

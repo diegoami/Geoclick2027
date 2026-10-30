@@ -1,7 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { t, type TranslationKey } from './i18n.svelte';
-	import { APPEARANCE_CHANGED, COLOR_SCHEMES, TEXT_SCALES, type ColorScheme } from './appearance';
+	import {
+		APPEARANCE_CHANGED,
+		COLOR_SCHEMES,
+		TEXT_SCALES,
+		type ColorScheme,
+		type Appearance
+	} from './appearance';
 	import {
 		appearance,
 		appearanceOpen,
@@ -12,6 +18,7 @@
 
 	let dialog: HTMLDialogElement;
 	let mounted = $state(false);
+	let lastApplied: Appearance | undefined;
 	const schemeLabel = (scheme: ColorScheme) => t(`appearance.${scheme}` as TranslationKey);
 	const index = $derived(TEXT_SCALES.indexOf(appearance().scale));
 	onMount(() => {
@@ -21,10 +28,16 @@
 	$effect(() => {
 		if (!mounted) return;
 		const { scale, scheme } = appearance();
+		const changed =
+			lastApplied !== undefined && (lastApplied.scale !== scale || lastApplied.scheme !== scheme);
+		lastApplied = { scale, scheme };
 		// Percentage keeps the browser's chosen default font size intact.
 		document.documentElement.style.fontSize = `${scale}%`;
 		document.documentElement.dataset.scheme = scheme;
 		document.documentElement.dataset.textSize = scale > 100 ? 'large' : 'normal';
+		// The head bootstrap handles initial paint; maps measure their initial
+		// geometry themselves. Notify only subsequent preference changes.
+		if (!changed) return;
 		const frame = requestAnimationFrame(() => window.dispatchEvent(new Event(APPEARANCE_CHANGED)));
 		return () => cancelAnimationFrame(frame);
 	});
@@ -139,7 +152,7 @@
 		overflow-wrap: anywhere;
 		min-width: 44px;
 		min-height: 44px;
-		padding: 2px 6px;
+		padding: 2px 0.6rem;
 		border: 1px solid var(--gc-border, #c9d3cc);
 		border-radius: 8px;
 		font: inherit;
