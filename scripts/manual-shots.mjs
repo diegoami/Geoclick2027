@@ -270,6 +270,7 @@ try {
 
 	// The map bar: the type row, the tick, the red X, the language menu, Terrain, the eye.
 	await shot('type-bar', { path: '/map/germany-states' }, async (p) => {
+		await p.locator('.settings-panel > summary').click();
 		await p.getByLabel('Show detailed maps').check();
 		await sleep(900);
 	});
@@ -286,10 +287,12 @@ try {
 		null
 	);
 	await shot('language-menu', { path: '/map/italy-regions' }, async (p) => {
+		await p.locator('.settings-panel > summary').click();
 		await p.locator('.lang-button').first().click();
 		await sleep(600);
 	});
 	await shot('terrain-off', { path: '/map/italy-regions' }, async (p) => {
+		await p.locator('.settings-panel > summary').click();
 		await p.getByRole('button', { name: 'Terrain' }).click();
 		await sleep(1500);
 	});
