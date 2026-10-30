@@ -174,6 +174,30 @@ try {
 	// The quiz, on Denmark's five regions: start, dragging, wrong, done.
 	await shot('quiz-start', { path: '/map/denmark-regions/quiz', seed: { progress: false } }, null);
 	await shot('quiz-hand', { path: '/map/italy-regions/quiz' }, null);
+	await shot(
+		'quiz-selected',
+		{ path: '/map/denmark-regions/quiz', seed: { progress: false } },
+		async (p) => {
+			await p.locator('.tray-slips button', { hasText: 'Midtjylland' }).first().click();
+		}
+	);
+	await shot(
+		'quiz-name-places',
+		{ path: '/map/denmark-regions/quiz', seed: { progress: false } },
+		async (p) => {
+			await p.getByTestId('mode-name').click();
+			await sleep(1200);
+		}
+	);
+	await shot('quiz-practice', { path: '/map/italy-regions/quiz' }, async (p) => {
+		await p.getByTestId('practise').click();
+		await sleep(1200);
+	});
+	await shot('reset-progress', { path: '/map/italy-regions' }, async (p) => {
+		await p.getByTestId('reset-progress').click();
+	});
+	await shot('known-empty', { path: '/map/italy-regions', seed: { progress: false } }, null);
+	await shot('about', { path: '/about' }, null);
 
 	// Known: tap a place to read its name and a fact.
 	await shot('known-fact', { path: '/map/italy-regions' }, async (p) => {
@@ -230,6 +254,17 @@ try {
 		for (const name of ['Nordjylland', 'Midtjylland', 'Syddanmark', 'Sjælland', 'Hovedstaden']) {
 			await dragTo(p, name, spots[name]);
 		}
+		await p.getByRole('heading', { name: 'Done!', exact: true }).waitFor();
+		await sleep(1800);
+	});
+
+	await shot('quiz-review', { ...denmark, wait: 10000 }, async (p) => {
+		await dragTo(p, 'Syddanmark', spots.Midtjylland);
+		for (const name of ['Nordjylland', 'Midtjylland', 'Sjælland', 'Hovedstaden']) {
+			await dragTo(p, name, spots[name]);
+		}
+		await p.getByRole('heading', { name: 'Done!', exact: true }).waitFor();
+		await p.getByTestId('confusions').waitFor();
 		await sleep(1800);
 	});
 

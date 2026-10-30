@@ -777,7 +777,9 @@ this one, and is read on demand rather than up front.
 
 Edit docs/USER_MANUAL.md (English), docs/USER_MANUAL.de.md or
 docs/USER_MANUAL.it.md, then run `node app/scripts/build-manual.mjs`.
-The page uses the selected app language. The translations share the existing
+The page uses the selected app language. The English manual includes a first-round
+walkthrough and screenshots of tap-to-place, Name places, practice, score
+review and progress reset. Regenerate screenshots with `npm run manual-shots`. The translations share the existing
 English screenshots and disclose that choice; add no hand-copied HTML to the
 route. Localized content, anchor and language-race tests cover this path.
 

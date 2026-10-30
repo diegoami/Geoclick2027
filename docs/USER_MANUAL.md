@@ -5,15 +5,37 @@ installing or running it. Every screen is shown with a screenshot, and every
 button, label and message is explained: what it looks like, what it does, and
 what the player sees in return. Geoclick is made by Diego Amicabile.
 
-It describes the release candidate, **Geoclick v1.1.0**. The running version
-and build identifier appear in the small version badge and on the About page.
+It describes **Geoclick v1.1.0**, including the current fixes on main. The
+running version and build identifier appear in the small version badge and on
+the About page.
 
 The screenshots come from the web version, on a laptop-sized window and on a
-phone-sized screen, and are made by a script (`npm run manual-shots`) that is
-rerun at every release. The Windows and Android apps show exactly the same
+phone-sized screen, and are made by a script (`npm run manual-shots`) that can be
+rerun to keep this manual current. These web screenshots were refreshed on
+30 October 2026. The Windows and Android apps share these game
 screens (see [Getting Geoclick](#2-getting-geoclick)); the two pictures of the
 app windows in that section are older. The progress shown in the screenshots
 (how much of each map is known, favourites and so on) is made-up example data.
+
+## Your first five minutes
+
+1. Open Geoclick and choose **List**. Search for **Denmark** and choose its
+   **Regions** map: five regions make a manageable first round.
+2. The map opens on **Known**. With no quiz answers yet, it has no earned names.
+   Choose **Overview** to study the five names. Zoom in when a label is small.
+3. Choose **Quiz** and leave **Place names** selected. Click or tap a name in
+   the tray, then its region. You can also drag the name onto the region.
+4. A correct answer stays green. A mistake shows the right location in brown;
+   read it, then continue with the next name. Each name gets one answer per round.
+5. Finish all five names to see **Done!** and your score. Close the panel with
+   **×**, then choose **Play again**, or choose **Known** to see what you earned.
+6. Return for more rounds. Three correct answers across rounds take a new name
+   to **Known** if you make no intervening mistakes. Use **Tour** whenever you
+   want the game to introduce the places one at a time.
+
+Prefer a guided introduction? Press **?** on the start screen and then
+**Start**. The tutorial uses Italy and keeps its practice separate from your
+real progress.
 
 ## Contents
 
@@ -274,7 +296,7 @@ a second line rather than scrolling.
   rising notes and a wrong one a low note. Your choice is kept.
 - **Tutorial**: starts the tutorial.
 - **On the quiz only**, a line showing your progress: "Drag each name onto its
-  region — 5 / 20 placed", with a note such as "3 names at a time" when the
+  matching area — 5 / 20 placed", with a note such as "3 names at a time" when the
   quiz holds names back. On the same line, two joined buttons, **Place names**
   and **Name places**, choose how the quiz asks (see
   [Name places](#name-places)), and before your first answer of a round a
@@ -358,6 +380,8 @@ what you actually know. Nothing here is scored. On a towns map, tap a town's dot
 with an **Overview** button to study the names and a **Quiz** button to start
 playing.
 
+![A new map: Nothing known yet, with Overview and Quiz buttons](manual/known-empty.jpg)
+
 ### Starting a map over
 
 When you have earned anything on the map, the legend also has a **Reset
@@ -366,6 +390,8 @@ Regions?". **Cancel** leaves everything as it was; **Reset** sends every name
 of this map back to unknown. It also clears the names you tapped and a round
 you left half played. Your other maps, your favourites and the map's last
 score stay as they are.
+
+![Reset progress asks for confirmation before erasing the map’s earned levels](manual/reset-progress.jpg)
 
 Do not confuse it with **Clear**, which only takes off the names you chose by
 tapping and changes nothing you have earned.
@@ -405,7 +431,7 @@ Here the quiz on Denmark's five regions, at the start:
 ![The quiz at the start: five names in the tray](manual/quiz-start.jpg)
 
 The line under the type row counts your progress: "Drag each name onto its
-region — 0 / 5 placed".
+matching area — 0 / 5 placed".
 
 On a map you have not learned, the tray holds **ten names at a time** and
 refills as you place them. Once you know a map, it holds back more (see
@@ -442,6 +468,8 @@ You don't have to drag. Tap (or click) a name in the tray to pick it up: it
 lifts and is outlined, and the line "Now tap its place on the map" appears.
 Then tap its place on the map. To let the name go without answering, tap it
 again, tap the tray's empty space, or press Escape.
+
+![Midtjylland selected: the game asks you to tap its place on the map](manual/quiz-selected.jpg)
 
 A tap counts exactly like a drop: small regions are just as forgiving, and on a
 towns map the nearest town counts. Moving the map around while a name is
@@ -537,6 +565,13 @@ When the last name is placed, a panel appears over the map with your score:
   play a new round on that map, choose **Play again** on the map. The map bar's
   **Maps** button returns to the start screen.
 
+![A completed round with a mistake: To work on, Mixed up and Study these](manual/quiz-review.jpg)
+
+For example, if you put **Syddanmark** on **Midtjylland**, the result lists
+Syddanmark under **To work on** and records the pair under **Mixed up**.
+Choose **Study these** to open Known with the missed name already chosen.
+Looking at it helps you study; the next quiz answer is what changes its level.
+
 ### Every round is the whole map
 
 A quiz normally asks for every name on the map, and Geoclick keeps track of how
@@ -547,7 +582,11 @@ yet known** button offers a shorter round. It appears next to the progress line
 (only before your first answer of a round), on the score panel, and next to
 **Play again**. In a practice round the names you know start out already placed
 on the map, and only the others are asked. The progress line then starts with
-"Practice ·". Answers count exactly as in a full round.
+"Practice ·". Answers count exactly as in a full round: practice can raise or lower the
+levels of the names it asks. It is a shorter scored round, rather than an
+unscored rehearsal. Names already known are left at their existing levels.
+
+![Practice on Italy: known regions are already placed and six names remain to learn](manual/quiz-practice.jpg)
 
 ### Best time
 
@@ -573,6 +612,8 @@ buttons choose how it asks: **Place names** (the quiz described so far) and
 the tray offers its name among four names. The other names are its nearest
 neighbours, so you can't guess by distance. As you learn the map, the choice
 grows to five names (from 60 % known) and six (from 85 %).
+
+![Name places: a region lights up and the tray offers numbered answers](manual/quiz-name-places.jpg)
 
 Pick a name with a tap or a click, or with the number keys **1** to **6**: each
 name shows its number. The progress line reads "Which place is lit up? — 0 / 20
@@ -670,7 +711,7 @@ town's dot:
 - A drop counts for the town whose dot is **closest** to where you let go,
   within a small distance. So dropping between two close towns counts for the
   nearer one. A town is easier to hit than its dot: the tap area is larger.
-- The progress line says "Drag each name onto its region" on towns maps too.
+- The progress line says **"Drag each name onto its town marker"** on towns maps.
 
 The United States is the one country whose cities come as four maps: the 50 over
 a million, and three slices at 200 000: East, Center and West.
@@ -681,9 +722,9 @@ Most places have a few sentences of their own, in your language. The first is
 usually about the **name**: where the word comes from, who it is named after, what
 it meant. Hiroshima is "wide island"; Lombardia is named for the Longobards, the
 "long-beards"; Chicago is a word for wild garlic. Where an origin is disputed, the
-sentence says so. Some places, mostly on newer maps and their towns, have no
-sentences yet; for them the card shows only what the map itself can tell (see
-below), or does not open at all.
+sentence says so. The current catalogue includes English, German and Italian fact text for
+every playable target. The exact card content varies by place; a name origin
+may explain that its derivation is uncertain.
 
 A **fact card** opens at the bottom of the screen:
 
@@ -902,6 +943,15 @@ The apps are the same game as the website, packaged to install:
   and settings are kept.
 - The version badge in the corner shows which version is installed.
 
+### About, downloads and this manual
+
+Open **About** with **ⓘ** on the start screen. It shows the version, credits
+and a **User manual** link. In the web version it also offers the Windows and
+Android downloads. The manual opens inside Geoclick and follows your selected
+language; use its contents links to jump to a topic.
+
+![About: game information, version, download and user manual links](manual/about.jpg)
+
 ## 19. Your data and privacy
 
 - **No account.** There's nothing to sign up for or log in to.
@@ -1016,6 +1066,38 @@ code-signed; choose *More info*, then *Run anyway*.
 
 **Who makes Geoclick?** Diego Amicabile. The source code is at
 https://github.com/diegoami/Geoclick2027.
+
+### If something does not look right
+
+| What you see | What to try |
+|---|---|
+| A name is missing from Overview | Zoom in. Labels that would overlap are hidden until there is room. |
+| Most controls have disappeared | Press the eye button at the right edge to show the buttons again. |
+| A selected quiz name will not return to the tray | Tap the name again, tap empty tray space, or press Escape. |
+| A dot is difficult to hit | Zoom in, then tap the name and its town marker separately. The nearest marker within the tap area is used. |
+| The map is blank or fails to load in the browser | Check your connection and reload. The installed Windows and Android apps include their maps for offline play. |
+| The game warns that progress could not be saved | Keep the page open and check that this browser allows site storage. Avoid clearing site data: that removes saved progress. |
+| A new browser or installed app shows no progress | Progress belongs to the browser or app where you earned it. Return to that browser or app; there is no cross-device sync. |
+
+If a problem persists, note the **version and build code** from the badge or
+About, the map name, the mode, and the steps that caused it. Include your
+browser or app, device, and a screenshot when reporting it through the
+[source repository’s Issues page](https://github.com/diegoami/Geoclick2027/issues).
+
+### Controls at a glance
+
+| Action | Control |
+|---|---|
+| Switch map mode | Known, Overview, Quiz or Tour in the map bar |
+| Move / zoom | Drag the map / wheel, pinch, or + and − |
+| Answer in Place names | Drag a tray name to its place, or tap the name and then its place |
+| Cancel a selected name | Tap it again, tap empty tray space, or Escape |
+| Answer in Name places | Tap an answer or press its number, 1–6 |
+| Resize the name tray | Drag its handle; with keyboard focus on the handle, use the arrow keys |
+| Study a missed answer | Study these on the results panel |
+| Hide / restore map controls | Eye button on the right |
+| End the tutorial | Exit tutorial or Escape |
+| Open help | Maps → About → User manual |
 
 ## 22. Glossary
 
