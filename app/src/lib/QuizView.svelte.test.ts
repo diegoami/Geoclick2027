@@ -222,7 +222,6 @@ async function finish() {
 async function mount() {
 	const screen = await render(QuizView, { mapId: MAP_ID });
 	await expect.poll(() => slipNames().length).toBe(10);
-	await screen.getByText('Settings', { exact: true }).click();
 	return screen;
 }
 
@@ -241,30 +240,23 @@ describe('QuizView (FT-59)', () => {
 	});
 	afterEach(() => forgetRound(MAP_ID));
 
-	it('describes the actual answer targets and follows the selected language (#253)', async () => {
-		const region = await mount();
-		expect(region.container.querySelector('.subtitle')?.textContent).toContain('matching area');
-		expect(
-			region.container.querySelector('[data-tutorial="quiz-progress"]')?.textContent
-		).not.toMatch(/\d+\s*\/\s*\d+/);
-		region.unmount();
-		forgetRound(MAP_ID);
-		for (const target of fake.mapDef.targets) (target as { type: string }).type = 'city';
-		try {
-			const towns = await mount();
-			expect(towns.container.querySelector('.subtitle')?.textContent).toContain('town marker');
-			setLanguage('de');
-			await expect
-				.poll(() => towns.container.querySelector('.subtitle')?.textContent)
-				.toContain('Stadtmarkierung');
-			setLanguage('it');
-			await expect
-				.poll(() => towns.container.querySelector('.subtitle')?.textContent)
-				.toContain('indicatore della città');
-		} finally {
-			for (const target of fake.mapDef.targets) (target as { type: string }).type = 'region';
-			setLanguage('en');
-		}
+	it('keeps both quiz modes visible outside collapsed Settings, without an instruction line', async () => {
+		const screen = await mount();
+		const panel = screen.container.querySelector<HTMLDetailsElement>('.settings-panel')!;
+		expect(panel.open).toBe(false);
+		await expect
+			.element(screen.getByRole('button', { name: 'Place names', exact: true }))
+			.toBeVisible();
+		await expect
+			.element(screen.getByRole('button', { name: 'Name places', exact: true }))
+			.toBeVisible();
+		const controls = screen.container.querySelector('[data-testid="quiz-controls"]')!;
+		expect(controls.closest('details')).toBeNull();
+		expect(controls.textContent?.replace(/\s+/g, ' ').trim()).toBe('Place namesName places');
+		expect(screen.container.querySelector('.subtitle')).toBeNull();
+		await screen.getByRole('button', { name: 'Name places', exact: true }).click();
+		await expect.poll(() => screen.container.querySelectorAll('.choice').length).toBe(4);
+		expect(panel.open).toBe(false);
 	});
 
 	// The hand is dealt at random, so each test plays the names it was dealt:
@@ -438,9 +430,8 @@ describe('QuizView (FT-59)', () => {
 		await expect.poll(() => slipNames().length).toBe(3);
 		expect(slipNames().some((n) => known.some((t) => t.name === n))).toBe(false);
 		await expect.poll(placedNames).toHaveLength(known.length);
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('Practice');
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain(
-			'Drag each name onto its matching area'
+		expect(screen.container.querySelector('[data-testid="quiz-controls"]')?.textContent).toContain(
+			'Practice'
 		);
 		await expect.element(practise).not.toBeInTheDocument();
 	});
@@ -470,9 +461,6 @@ describe('QuizView (FT-59)', () => {
 		const asked = fake.state.hovered!;
 		expect(choices().some((c) => c.textContent?.includes(asked))).toBe(true);
 		expect(document.querySelectorAll('.ask-marker')).toHaveLength(1);
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain(
-			'Which place is lit up?'
-		);
 
 		// The number key of the right name answers it.
 		const index = choices().findIndex((c) => c.textContent?.includes(asked));
@@ -482,9 +470,6 @@ describe('QuizView (FT-59)', () => {
 			targetId: asked.toLowerCase(),
 			...rate(undefined, 'good', todayLocalDate())
 		});
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain(
-			'Which place is lit up?'
-		);
 		expect(quizMode()).toBe('name');
 	});
 	it("keeps a round's mix-ups through a trip away and back (#276)", async () => {

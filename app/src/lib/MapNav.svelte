@@ -35,15 +35,15 @@
 		mapId,
 		mapName,
 		active,
+		controls,
 		subtitle
 	}: {
 		mapId: string;
 		mapName: string | undefined;
 		active?: 'overview' | 'explore' | 'quiz' | 'tour';
-		// Optional view-specific line under the map-name tag (e.g. QuizView's
-		// "drag each name..." instruction) - a snippet rather than a
-		// second absolutely-positioned overlay, so it stacks naturally under
-		// the nav row instead of needing a guessed pixel offset to clear it.
+		// Primary gameplay actions stay visible above the Settings disclosure.
+		controls?: Snippet;
+		// Secondary view status belongs with preferences inside Settings.
 		subtitle?: Snippet;
 	} = $props();
 
@@ -232,6 +232,7 @@
 			<FavouriteStar {mapId} size="bar" />
 		{/if}
 	</div>
+	{#if controls}{@render controls()}{/if}
 	<details class="settings-panel" bind:open={settingsOpen}>
 		<summary>{t('nav.settings')}</summary>
 		<div class="settings-content">
@@ -292,9 +293,9 @@
 		align-items: center;
 		justify-content: center;
 		gap: 2px;
-		min-height: 36px;
+		min-height: 28px;
 		box-sizing: border-box;
-		padding: 2px 4px;
+		padding: 1px 0.25rem;
 		/* Opaque: maps now open on the labelled overview (FT-13), and names near
 		   the top edge used to show through a 96%-white tab. */
 		background: var(--gc-surface, #ffffff);
@@ -306,6 +307,8 @@
 	}
 	.nav-icon {
 		display: block;
+		width: 16px;
+		height: 16px;
 	}
 	.nav-label {
 		font-size: 0.75rem;
@@ -453,7 +456,7 @@
 		padding: 2px 5px;
 		border-radius: 0.4rem;
 		font-family: system-ui, sans-serif;
-		/* Wide enough for the progress count plus the difficulty note (FT-21). */
+		/* Secondary view status can wrap without widening the toolbar. */
 		max-width: 28rem;
 	}
 	/* 720px, not the app's usual 640: five wide tabs (FT-13) in German or
@@ -469,7 +472,7 @@
 			flex: none;
 			flex-direction: row;
 			gap: 4px;
-			padding: 2px 4px;
+			padding: 1px 1.1rem;
 		}
 		.nav-label {
 			font-size: 0.875rem;

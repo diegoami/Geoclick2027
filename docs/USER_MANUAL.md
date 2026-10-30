@@ -526,12 +526,12 @@ apart. A pair is forgotten once you know both names.
 A map gets harder as you learn it. Geoclick counts how many of its names you
 know and offers fewer names at a time as that share grows:
 
-| Names of the map you know | The tray offers | Note beside the instruction line in Settings |
-|---|---|---|
-| under a quarter | 10 at a time | *(none)* |
-| a quarter or more | 6 at a time | "6 names at a time" |
-| 60 % or more | 3 at a time | "3 names at a time" |
-| 85 % or more | 1 at a time | "one name at a time" |
+| Names of the map you know | The tray offers |
+|---|---|
+| under a quarter | 10 at a time |
+| a quarter or more | 6 at a time |
+| 60 % or more | 3 at a time |
+| 85 % or more | 1 at a time |
 
 The tray refills as you place names, so there is always something to drag until
 the round is done; the names you haven't placed yet simply wait their turn.
@@ -595,10 +595,10 @@ A quiz normally asks for every name on the map, and Geoclick keeps track of how
 well you know each name as you go.
 
 When you know some of a map's names but not all of them, a **Practise the 6 not
-yet known** button offers a shorter round. It appears next to the instruction line in Settings
+yet known** button offers a shorter round. It appears beside the quiz-mode controls
 (only before your first answer of a round), on the score panel, and next to
 **Play again**. In a practice round the names you know start out already placed
-on the map, and only the others are asked. The instruction line in Settings then starts with
+on the map, and only the others are asked. The visible quiz controls then show
 "Practice ·". Answers count exactly as in a full round: practice can raise or lower the
 levels of the names it asks. It is a shorter scored round, rather than an
 unscored rehearsal. Names already known are left at their existing levels.
@@ -623,7 +623,7 @@ haven't. Reloading the page, or coming back another day, starts a fresh round.
 
 ### Name places
 
-The quiz can also ask the other way round. On the instruction line in Settings, two joined
+The quiz can also ask the other way round. Below the map selector, two joined
 buttons choose how it asks: **Place names** (the quiz described so far) and
 **Name places**. In **Name places**, one place on the map lights up blue, and
 the tray offers its name among four names. The other names are its nearest
@@ -633,8 +633,7 @@ grows to five names (from 60 % known) and six (from 85 %).
 ![Name places: a region lights up and the tray offers numbered answers](manual/quiz-name-places.jpg)
 
 Pick a name with a tap or a click, or with the number keys **1** to **6**: each
-name shows its number. The instruction line in Settings reads "Which place is lit up? — 0 / 20
-named". A wrong pick works as in the drag quiz: the place you picked flashes
+name shows its number. A wrong pick works as in the drag quiz: the place you picked flashes
 red, the right name is shown on the lit-up place, and its fact card opens.
 Answers count towards the same levels as in **Place names**.
 
@@ -728,7 +727,6 @@ town's dot:
 - A drop counts for the town whose dot is **closest** to where you let go,
   within a small distance. So dropping between two close towns counts for the
   nearer one. A town is easier to hit than its dot: the tap area is larger.
-- The instruction line in Settings says **"Drag each name onto its town marker"** on towns maps.
 
 The United States is the one country whose cities come as four maps: the 50 over
 a million, and three slices at 200 000: East, Center and West.

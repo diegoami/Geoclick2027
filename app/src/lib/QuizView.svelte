@@ -1185,46 +1185,31 @@
 		<p class="error">{error}</p>
 	{:else}
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="quiz">
-			{#snippet subtitle()}
+			{#snippet controls()}
 				{#if session}
-					{#if practice}<span class="practice-label">{t('quiz.practiceLabel')} ·</span>{/if}
-					<span data-tutorial="quiz-progress"
-						>{t(
-							mode === 'name'
-								? 'quiz.nameSubtitle'
-								: mapDef?.targets[0]?.type === 'city'
-									? 'quiz.townSubtitle'
-									: 'quiz.subtitle'
-						)}</span
-					>
-					<!-- Only once the map is known well enough for the hand to
-					     shrink (FT-21); level 0's hand of ten is the default and
-					     there is nothing to explain (FT-60). -->
-					{#if level > 0 && mode === 'place'}
-						<span class="level"
-							>· {tPlural('quiz.namesAtATime', handSize(level), { count: handSize(level) })}</span
-						>
-					{/if}
-					{#if !inTutorialMap()}
-						<span class="mode-switch" role="group" aria-label={t('quiz.modeAria')}>
-							<button
-								type="button"
-								aria-pressed={mode === 'place'}
-								data-testid="mode-place"
-								onclick={() => switchMode('place')}>{t('quiz.modePlace')}</button
-							><button
-								type="button"
-								aria-pressed={mode === 'name'}
-								data-testid="mode-name"
-								onclick={() => switchMode('name')}>{t('quiz.modeName')}</button
+					<div class="quiz-controls" data-testid="quiz-controls">
+						{#if practice}<span class="practice-label">{t('quiz.practiceLabel')} ·</span>{/if}
+						{#if !inTutorialMap()}
+							<span class="mode-switch" role="group" aria-label={t('quiz.modeAria')}>
+								<button
+									type="button"
+									aria-pressed={mode === 'place'}
+									data-testid="mode-place"
+									onclick={() => switchMode('place')}>{t('quiz.modePlace')}</button
+								><button
+									type="button"
+									aria-pressed={mode === 'name'}
+									data-testid="mode-name"
+									onclick={() => switchMode('name')}>{t('quiz.modeName')}</button
+								>
+							</span>
+						{/if}
+						{#if canPractise && !practice && roundFresh}
+							<button type="button" class="practise-btn" data-testid="practise" onclick={practise}
+								>{t('quiz.practise', { count: practiseCount })}</button
 							>
-						</span>
-					{/if}
-					{#if canPractise && !practice && roundFresh}
-						<button type="button" class="practise-btn" data-testid="practise" onclick={practise}
-							>{t('quiz.practise', { count: practiseCount })}</button
-						>
-					{/if}
+						{/if}
+					</div>
 				{/if}
 			{/snippet}
 		</MapNav>
@@ -1272,7 +1257,7 @@
 	{/if}
 
 	<ChartMapShell>
-		<div class="container" bind:this={container}></div>
+		<div class="container" data-tutorial="quiz-progress" bind:this={container}></div>
 	</ChartMapShell>
 
 	<!-- Above the tray, whose height the player can drag (FT-35). Two clauses
@@ -1428,12 +1413,6 @@
 		padding: 0 8px 8px;
 		overflow-y: auto;
 	}
-	/* The difficulty note beside the progress line (FT-21). Quieter than the
-	   count itself: it explains the tray, it isn't a score. */
-	.level {
-		margin-left: 0.3rem;
-		color: var(--gc-muted, rgba(30, 40, 36, 0.55));
-	}
 	.slip {
 		min-height: 28px;
 		max-width: 100%;
@@ -1548,7 +1527,7 @@
 	}
 	/* The quiz's second way to play (#265), quiet beside the progress line. */
 	.practise-btn {
-		margin-left: 0.4rem;
+		margin-left: 0;
 		padding: 2px 4px;
 		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
 		border-radius: 5px;
@@ -1586,9 +1565,18 @@
 		}
 	}
 	/* Which way the quiz asks (#264): two small joined pills. */
+	.quiz-controls {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 4px;
+		max-width: 100%;
+		font-family: system-ui, sans-serif;
+		font-size: 0.75rem;
+	}
 	.mode-switch {
 		display: inline-flex;
-		margin-left: 0.4rem;
+		margin-left: 0;
 		vertical-align: middle;
 	}
 	.mode-switch button {
