@@ -5,7 +5,7 @@ installing or running it. Every screen is shown with a screenshot, and every
 button, label and message is explained: what it looks like, what it does, and
 what the player sees in return. Geoclick is made by Diego Amicabile.
 
-It describes **Geoclick v1.1.0**, including the current fixes on main. The
+It describes **Geoclick v1.2.0**, including the current fixes on main. The
 running version and build identifier appear in the small version badge and on
 the About page.
 

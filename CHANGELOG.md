@@ -5,6 +5,33 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v1.2.0 — 2026-10-30 — Text that fits, colors you can choose
+
+**Choose readable text sizes and interface colors, with quieter map controls and a clearer quiz.**
+
+Appearance and toolbar changes: proposal #284, PR #285. Includes the resumed-round fix in #277.
+
+For players:
+
+- **Text size from 50% to 300%:** open Appearance from the start screen, or Settings → Appearance on a map. A− / A+ change all interface text and map names; Reset restores 100%. Geographic zoom stays separate.
+- **Four color schemes:** Classic, Ocean, Forest and High contrast. Text size and colors are remembered on this device, including between maps and app restarts. Geographic map palettes keep their meaning.
+- **More room for the map:** preferences start in a collapsed Settings panel. Place names / Name places remain outside it. The top buttons have less vertical padding, and the redundant quiz instruction line is gone.
+- **Plain region names on Known:** neither straight labels nor curved names are underlined.
+- **Keep playing as appearance changes:** quiz trays and map names reflow without losing the current round or selected name. The controls and manuals are available in English, German and Italian.
+- **Mix-ups survive a trip away:** returning to an unfinished quiz keeps its earlier confusions in the end-of-round report (#276, fixed in #277).
+- **Updated illustrated manuals** show the current map and quiz controls.
+
+Under the hood:
+
+- Device preferences use validated local storage with a session fallback when storage is unavailable. Shared semantic CSS roles supply interface colors; relative font sizing composes with browser preferences.
+- Appearance changes refresh quiz measurements, label collisions and curved-name layout in place. The native Appearance dialog contains focus and blocks quiz shortcuts while it is open.
+- Includes removal of obsolete OpenCode tooling (#282) and the completed player manual (#283).
+
+Verification:
+
+- The owner tested and approved the appearance and quiz toolbar in the local browser before release preparation.
+- Candidate gates, installer checks and the independent milestone verdict are recorded on the v1.2.0 milestone issue. Publication waits for that review and the required shell checks.
+
 ## v1.1.0 — 2026-10-29 — A map you complete, and new ways to play it
 
 **Known fades slowly instead of collapsing, every round says what it changed, and the quiz can be played by tapping, by naming places, or as a short practice round.**
