@@ -222,6 +222,7 @@ async function finish() {
 async function mount() {
 	const screen = await render(QuizView, { mapId: MAP_ID });
 	await expect.poll(() => slipNames().length).toBe(10);
+	await screen.getByText('Settings', { exact: true }).click();
 	return screen;
 }
 
@@ -243,6 +244,9 @@ describe('QuizView (FT-59)', () => {
 	it('describes the actual answer targets and follows the selected language (#253)', async () => {
 		const region = await mount();
 		expect(region.container.querySelector('.subtitle')?.textContent).toContain('matching area');
+		expect(
+			region.container.querySelector('[data-tutorial="quiz-progress"]')?.textContent
+		).not.toMatch(/\d+\s*\/\s*\d+/);
 		region.unmount();
 		forgetRound(MAP_ID);
 		for (const target of fake.mapDef.targets) (target as { type: string }).type = 'city';
@@ -427,6 +431,7 @@ describe('QuizView (FT-59)', () => {
 			await repository.saveCardState(MAP_ID, { targetId: target.id, ...card });
 		}
 		const screen = await render(QuizView, { mapId: MAP_ID });
+		await screen.getByText('Settings', { exact: true }).click();
 		const practise = screen.getByRole('button', { name: 'Practise the 4 not yet known' });
 		await practise.click();
 		// 12 of 16 known is level 2: the four left are dealt three at a time.
@@ -434,7 +439,9 @@ describe('QuizView (FT-59)', () => {
 		expect(slipNames().some((n) => known.some((t) => t.name === n))).toBe(false);
 		await expect.poll(placedNames).toHaveLength(known.length);
 		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('Practice');
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 4');
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain(
+			'Drag each name onto its matching area'
+		);
 		await expect.element(practise).not.toBeInTheDocument();
 	});
 	it('times a round on a fully known map and keeps a clean best (#267)', async () => {
@@ -463,7 +470,9 @@ describe('QuizView (FT-59)', () => {
 		const asked = fake.state.hovered!;
 		expect(choices().some((c) => c.textContent?.includes(asked))).toBe(true);
 		expect(document.querySelectorAll('.ask-marker')).toHaveLength(1);
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('0 / 16 named');
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain(
+			'Which place is lit up?'
+		);
 
 		// The number key of the right name answers it.
 		const index = choices().findIndex((c) => c.textContent?.includes(asked));
@@ -473,7 +482,9 @@ describe('QuizView (FT-59)', () => {
 			targetId: asked.toLowerCase(),
 			...rate(undefined, 'good', todayLocalDate())
 		});
-		expect(screen.container.querySelector('.subtitle')?.textContent).toContain('1 / 16 named');
+		expect(screen.container.querySelector('.subtitle')?.textContent).toContain(
+			'Which place is lit up?'
+		);
 		expect(quizMode()).toBe('name');
 	});
 	it("keeps a round's mix-ups through a trip away and back (#276)", async () => {

@@ -27,7 +27,7 @@
 	.chart-map-shell :global(.container),
 	.chart-map-shell :global(.map) {
 		position: absolute;
-		inset: 0.5rem;
+		inset: 8px;
 		width: auto;
 		height: auto;
 		overflow: hidden;

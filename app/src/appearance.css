@@ -147,7 +147,7 @@ html[data-scheme='contrast'] .geoclick-stretched text.retention-nearly {
 html[data-text-size='large'] .nav-overlay {
 	max-height: 48dvh;
 	overflow-y: auto;
-	max-width: calc(100% - 4.5rem);
+	max-width: calc(100% - 72px);
 }
 
 html[data-text-size='large'] .nav-overlay .subtitle {
@@ -194,4 +194,24 @@ html[data-text-size='large'] .picker-continent {
 .geoclick-retention.retention-asked .maplibregl-popup-content,
 .geoclick-stretched text.retention-asked {
 	text-decoration: underline;
+}
+
+/* Preferences span several shared components. Use fixed padding here so
+ * large type does not add large margins around every control. */
+.nav-overlay .prefs-row button {
+	padding: 2px 5px;
+	min-height: 32px;
+	min-width: 32px;
+}
+html[data-text-size='large'] .drill {
+	max-width: 100%;
+	overflow-wrap: anywhere;
+	text-align: left;
+}
+.nav-overlay .prefs-row button::after {
+	content: none;
+}
+
+html[data-text-size='large'] .sections h3 {
+	overflow-wrap: anywhere;
 }

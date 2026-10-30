@@ -2707,7 +2707,7 @@ question was answered "as recommended" in the issues.
 
 The owner approved an Appearance panel on home and the map toolbar, with
 A− / A+ controls, a percentage and text-size Reset. Scale all text from
-90–200%, rather than only quiz slips; use a percentage of the browser's
+50–300%, rather than only quiz slips; use a percentage of the browser's
 default root font so browser preferences continue to compose. Keep geographic
 zoom separate and refresh tray/collision/stretched-name geometry in place.
 Remember the validated size and Classic/Ocean/Forest/High contrast choice on
@@ -2716,3 +2716,8 @@ color roles across components; geographic/category palettes and terrain keep
 their meaning. High contrast describes the interface, not a dark basemap.
 The native modal contains focus, closes on Escape and restores focus to its
 opener; quiz keyboard shortcuts must not answer behind the dialog.
+Owner refinement: the map toolbar puts everything below the map selector in
+a hideable Settings panel, collapsed by default; buttons use small fixed
+padding, the font range extends to 50–300%, and quiz instructions omit the
+running placed/named counter. Tutorials open Settings when their controls
+are needed.

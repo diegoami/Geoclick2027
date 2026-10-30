@@ -41,7 +41,7 @@
 		mapName: string | undefined;
 		active?: 'overview' | 'explore' | 'quiz' | 'tour';
 		// Optional view-specific line under the map-name tag (e.g. QuizView's
-		// "drag each name..." progress count) - a snippet rather than a
+		// "drag each name..." instruction) - a snippet rather than a
 		// second absolutely-positioned overlay, so it stacks naturally under
 		// the nav row instead of needing a guessed pixel offset to clear it.
 		subtitle?: Snippet;
@@ -57,6 +57,14 @@
 	// The tutorial points at the tabs and the pills, so they show while it
 	// runs even if the player had hidden them.
 	let languageMenuOpen = $state(false);
+	let settingsOpen = $state(false);
+	// Tutorial targets inside Settings must be available while it runs.
+	$effect(() => {
+		if (tutorialState().status !== 'idle') settingsOpen = true;
+	});
+	$effect(() => {
+		if (!settingsOpen) languageMenuOpen = false;
+	});
 	const hidden = $derived(mapNavHidden() && tutorialState().status === 'idle');
 	const currentGroup = $derived(
 		mapGroups.find((group) => group.maps.some((map) => map.id === mapId))
@@ -219,6 +227,14 @@
 				</div>
 				<FavouriteStar {mapId} size="bar" />
 			</div>
+		{:else}
+			<span class="map-label">{mapName ?? t('nav.loading')}</span>
+			<FavouriteStar {mapId} size="bar" />
+		{/if}
+	</div>
+	<details class="settings-panel" bind:open={settingsOpen}>
+		<summary>{t('nav.settings')}</summary>
+		<div class="settings-content">
 			{#if hasDetailed}
 				<label class="detailed-toggle">
 					<input
@@ -229,21 +245,16 @@
 					{t('nav.detailedMaps')}
 				</label>
 			{/if}
-		{:else}
-			<span class="map-label">{mapName ?? t('nav.loading')}</span>
-			<FavouriteStar {mapId} size="bar" />
-		{/if}
-	</div>
-	{#if subtitle}
-		<span class="subtitle">{@render subtitle()}</span>
-	{/if}
-	<div class="prefs-row">
-		<LanguageSwitcher bind:open={languageMenuOpen} />
-		<TerrainButton />
-		{#if active === 'quiz'}<SoundButton />{/if}
-		<AppearanceButton />
-		<TutorialButton />
-	</div>
+			{#if subtitle}<div class="subtitle">{@render subtitle()}</div>{/if}
+			<div class="prefs-row">
+				<LanguageSwitcher bind:open={languageMenuOpen} />
+				<TerrainButton />
+				{#if active === 'quiz'}<SoundButton />{/if}
+				<AppearanceButton />
+				<TutorialButton />
+			</div>
+		</div>
+	</details>
 </div>
 
 <style>
@@ -257,21 +268,21 @@
 	}
 	.nav-overlay {
 		position: absolute;
-		top: 0.75rem;
-		left: 0.75rem;
+		top: 8px;
+		left: 8px;
 		/* Stop short of MapLibre's zoom control (top-right, ~40px wide): the
 		   row used to run under it on phones, hiding half of the last tab. */
-		right: 3.5rem;
+		right: 64px;
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 0.4rem;
+		gap: 4px;
 	}
 	.nav-row {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5rem;
+		gap: 4px;
 		width: 100%;
 	}
 	.nav-btn {
@@ -280,10 +291,10 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 0.25rem;
-		min-height: 2.75rem;
+		gap: 2px;
+		min-height: 36px;
 		box-sizing: border-box;
-		padding: 0.65rem 0.25rem 0.6rem;
+		padding: 2px 4px;
 		/* Opaque: maps now open on the labelled overview (FT-13), and names near
 		   the top edge used to show through a 96%-white tab. */
 		background: var(--gc-surface, #ffffff);
@@ -313,30 +324,55 @@
 		border-color: var(--gc-accent, #b5691f);
 		color: var(--gc-on-strong, #ffffff);
 	}
+	.settings-panel {
+		max-width: 100%;
+		min-width: 0;
+		font-family: system-ui, sans-serif;
+	}
+	summary {
+		overflow-wrap: anywhere;
+		padding: 2px 6px;
+		border: 1px solid var(--gc-border, #c9d3cc);
+		border-radius: 6px;
+		background: var(--gc-surface, white);
+		color: var(--gc-text, #1c2b22);
+		font-size: 0.75rem;
+		cursor: pointer;
+		position: sticky;
+		top: 0;
+		z-index: 1;
+	}
+	.settings-content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 6px;
+		padding-top: 4px;
+	}
 	.prefs-row {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		gap: 0.4rem;
+		gap: 4px;
 	}
 	.map-title {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		gap: 0.4rem;
+		gap: 4px;
 	}
 	.map-type-row {
 		display: flex;
 		align-items: center;
-		gap: 0.4rem;
+		gap: 4px;
 		width: 100%;
-		max-width: min(60rem, calc(100vw - 4.5rem));
+		max-width: min(60rem, calc(100vw - 64px));
 		min-width: 0;
 	}
 	.map-type-scroll {
 		display: flex;
 		flex: 1;
-		gap: 0.4rem;
+		gap: 4px;
 		min-width: 0;
 		/* Wraps rather than scrolls: a row that fits the screen never gets a
 		   scrollbar, and a long one takes a second line. */
@@ -345,12 +381,12 @@
 	.detailed-toggle {
 		display: flex;
 		align-items: center;
-		gap: 0.4rem;
+		gap: 4px;
 		font-family: system-ui, sans-serif;
 		font-size: 0.75rem;
 		color: var(--gc-text, #2e4037);
 		background: var(--gc-surface, rgba(255, 255, 255, 0.85));
-		padding: 0.2rem 0.55rem;
+		padding: 2px 5px;
 		border-radius: 0.4rem;
 		cursor: pointer;
 	}
@@ -361,10 +397,10 @@
 	}
 	/* Big and red on purpose: putting a detailed map away must be easy to find. */
 	.map-type-x {
-		min-width: 2rem;
-		min-height: 2rem;
+		min-width: 28px;
+		min-height: 28px;
 		margin-left: 0.15rem;
-		padding: 0 0.5rem;
+		padding: 2px 5px;
 		font: inherit;
 		font-size: 1rem;
 		font-weight: 700;
@@ -381,9 +417,9 @@
 	}
 	.map-type-btn {
 		flex: none;
-		min-height: 2rem;
+		min-height: 28px;
 		box-sizing: border-box;
-		padding: 0.3rem 0.6rem;
+		padding: 2px 5px;
 		font: inherit;
 		font-size: 0.75rem;
 		color: var(--gc-text, #2e4037);
@@ -406,7 +442,7 @@
 		font-size: 0.75rem;
 		color: var(--gc-muted, rgba(30, 40, 36, 0.6));
 		background: var(--gc-surface, rgba(255, 255, 255, 0.75));
-		padding: 0.2rem 0.55rem;
+		padding: 2px 5px;
 		border-radius: 0.4rem;
 		font-family: system-ui, sans-serif;
 	}
@@ -414,7 +450,7 @@
 		font-size: 0.75rem;
 		color: var(--gc-muted, rgba(30, 40, 36, 0.7));
 		background: var(--gc-surface, rgba(255, 255, 255, 0.85));
-		padding: 0.2rem 0.55rem;
+		padding: 2px 5px;
 		border-radius: 0.4rem;
 		font-family: system-ui, sans-serif;
 		/* Wide enough for the progress count plus the difficulty note (FT-21). */
@@ -432,8 +468,8 @@
 		.nav-btn {
 			flex: none;
 			flex-direction: row;
-			gap: 0.5rem;
-			padding: 0.6rem 1.1rem;
+			gap: 4px;
+			padding: 2px 4px;
 		}
 		.nav-label {
 			font-size: 0.875rem;

@@ -1194,11 +1194,7 @@
 								? 'quiz.nameSubtitle'
 								: mapDef?.targets[0]?.type === 'city'
 									? 'quiz.townSubtitle'
-									: 'quiz.subtitle',
-							{
-								placed: session.items.filter((i) => i.status !== 'pending').length,
-								total: session.items.length
-							}
+									: 'quiz.subtitle'
 						)}</span
 					>
 					<!-- Only once the map is known well enough for the hand to
@@ -1429,7 +1425,7 @@
 		flex-wrap: wrap;
 		align-content: flex-start;
 		gap: 0.5rem;
-		padding: 0 0.75rem 0.75rem;
+		padding: 0 8px 8px;
 		overflow-y: auto;
 	}
 	/* The difficulty note beside the progress line (FT-21). Quieter than the
@@ -1439,6 +1435,7 @@
 		color: var(--gc-muted, rgba(30, 40, 36, 0.55));
 	}
 	.slip {
+		min-height: 28px;
 		max-width: 100%;
 		overflow-wrap: anywhere;
 		box-sizing: border-box;
@@ -1449,7 +1446,7 @@
 		background: var(--gc-surface, white);
 		border: 1px solid var(--gc-border, rgba(0, 0, 0, 0.15));
 		border-radius: 0.5rem;
-		padding: 0.4rem 0.7rem;
+		padding: 2px 5px;
 		cursor: grab;
 		touch-action: none;
 		/* A tablet can read a press on text as a selection gesture and raise
@@ -1552,7 +1549,7 @@
 	/* The quiz's second way to play (#265), quiet beside the progress line. */
 	.practise-btn {
 		margin-left: 0.4rem;
-		padding: 0 0.4rem;
+		padding: 2px 4px;
 		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
 		border-radius: 5px;
 		background: var(--gc-surface, #ffffff);
@@ -1595,7 +1592,7 @@
 		vertical-align: middle;
 	}
 	.mode-switch button {
-		padding: 0 0.45rem;
+		padding: 2px 4px;
 		border: 1px solid var(--gc-accent, rgba(181, 105, 31, 0.45));
 		background: var(--gc-surface, #ffffff);
 		color: var(--gc-accent, #b5691f);

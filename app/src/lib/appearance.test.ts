@@ -2,6 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { parseAppearance } from './appearance';
 
 describe('appearance stored preferences', () => {
+	it.each([50, 300])('accepts the supported size %s', (scale) => {
+		expect(parseAppearance(JSON.stringify({ scale, scheme: 'classic' })).scale).toBe(scale);
+	});
 	it.each([null, '', '{', 'null', '[]', '42', '"ocean"'])('defaults safely for %s', (raw) => {
 		expect(parseAppearance(raw)).toEqual({ scale: 100, scheme: 'classic' });
 	});

@@ -56,7 +56,7 @@ describe('Appearance settings', () => {
 	});
 
 	it('loads a saved maximum size, contains shortcuts, and returns focus on Escape', async () => {
-		localStorage.setItem(APPEARANCE_KEY, '{"scale":200,"scheme":"contrast"}');
+		localStorage.setItem(APPEARANCE_KEY, '{"scale":300,"scheme":"contrast"}');
 		const settings = await render(AppearanceSettings);
 		const button = await render(AppearanceButton);
 		const trigger = button.getByRole('button', { name: 'Appearance' });
@@ -70,7 +70,7 @@ describe('Appearance settings', () => {
 			await userEvent.keyboard('{Escape}');
 			await expect.poll(() => settings.container.querySelector('dialog')?.open).toBe(false);
 			await expect.poll(() => document.activeElement === trigger.element()).toBe(true);
-			expect(appearance().scale).toBe(200);
+			expect(appearance().scale).toBe(300);
 		} finally {
 			window.removeEventListener('keydown', shortcut);
 		}
@@ -84,10 +84,11 @@ describe('Appearance settings', () => {
 			throw new Error('full');
 		});
 		const settings = await render(AppearanceSettings);
+		setAppearance({ scale: 60, scheme: 'classic' });
 		setAppearanceOpen(true);
 		await settings.getByRole('button', { name: 'Smaller text' }).click();
 		await expect.element(settings.getByRole('button', { name: 'Smaller text' })).toBeDisabled();
-		expect(appearance().scale).toBe(90);
+		expect(appearance().scale).toBe(50);
 		await settings.getByRole('radio', { name: 'Forest', exact: true }).click();
 		expect(appearance().scheme).toBe('forest');
 	});

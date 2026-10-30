@@ -1,5 +1,7 @@
 // Device preferences, independent of progress and map zoom (#284).
-export const TEXT_SCALES = [90, 100, 115, 130, 150, 175, 200] as const;
+export const TEXT_SCALES = [
+	50, 60, 75, 90, 100, 115, 130, 150, 175, 200, 225, 250, 275, 300
+] as const;
 export const COLOR_SCHEMES = ['classic', 'ocean', 'forest', 'contrast'] as const;
 export type TextScale = (typeof TEXT_SCALES)[number];
 export type ColorScheme = (typeof COLOR_SCHEMES)[number];

@@ -112,6 +112,7 @@
 		max-width: calc(100vw - 16px);
 		max-height: calc(100dvh - 16px);
 		overflow-y: auto;
+		overflow-wrap: anywhere;
 		padding: 12px;
 		border: 2px solid var(--gc-border, #c9d3cc);
 		border-radius: 12px;
@@ -138,7 +139,7 @@
 		overflow-wrap: anywhere;
 		min-width: 44px;
 		min-height: 44px;
-		padding: 0.25rem 0.6rem;
+		padding: 2px 6px;
 		border: 1px solid var(--gc-border, #c9d3cc);
 		border-radius: 8px;
 		font: inherit;

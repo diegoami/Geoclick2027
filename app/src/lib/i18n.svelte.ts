@@ -24,6 +24,7 @@ const STORAGE_KEY = 'geoclick:language:v1';
 // translation is a compile error, not a silent fallback discovered by
 // clicking around.
 export type TranslationKey =
+	| 'nav.settings'
 	| 'appearance.title'
 	| 'appearance.textSize'
 	| 'appearance.smaller'
@@ -273,6 +274,7 @@ export type TranslationKey =
 type Dictionary = Record<TranslationKey, string>;
 
 const en: Dictionary = {
+	'nav.settings': 'Settings',
 	'appearance.title': 'Appearance',
 	'appearance.textSize': 'Text size',
 	'appearance.smaller': 'Smaller text',
@@ -450,8 +452,8 @@ const en: Dictionary = {
 	'mapControl.resetBearing': 'Drag to rotate map, click to reset north',
 	'mapControl.map': 'Map',
 	'mapControl.attribution': 'Toggle attribution',
-	'quiz.townSubtitle': 'Drag each name onto its town marker — {placed} / {total} placed',
-	'quiz.subtitle': 'Drag each name onto its matching area — {placed} / {total} placed',
+	'quiz.townSubtitle': 'Drag each name onto its town marker',
+	'quiz.subtitle': 'Drag each name onto its matching area',
 	'quiz.closeAriaLabel': 'Close and view the map',
 	'quiz.known': '{known} / {total} known',
 	'quiz.done': 'Done!',
@@ -477,7 +479,7 @@ const en: Dictionary = {
 	'quiz.bestNeedsClean': 'Only a round with no mistakes sets a best time.',
 	'quiz.confusions': 'Mixed up',
 	'quiz.confusedWith': '{a} placed on {b}',
-	'quiz.nameSubtitle': 'Which place is lit up? — {placed} / {total} named',
+	'quiz.nameSubtitle': 'Which place is lit up?',
 	'quiz.modeAria': 'Which way the quiz asks',
 	'quiz.modePlace': 'Place names',
 	'quiz.modeName': 'Name places',
@@ -544,6 +546,7 @@ const en: Dictionary = {
 };
 
 const de: Dictionary = {
+	'nav.settings': 'Einstellungen',
 	'appearance.title': 'Darstellung',
 	'appearance.textSize': 'Textgröße',
 	'appearance.smaller': 'Kleinerer Text',
@@ -724,8 +727,8 @@ const de: Dictionary = {
 	'mapControl.resetBearing': 'Zum Drehen ziehen, zum Ausrichten nach Norden klicken',
 	'mapControl.map': 'Karte',
 	'mapControl.attribution': 'Quellenangaben ein- oder ausblenden',
-	'quiz.townSubtitle': 'Ziehe jeden Namen auf seine Stadtmarkierung — {placed} / {total} platziert',
-	'quiz.subtitle': 'Ziehe jeden Namen auf das passende Gebiet — {placed} / {total} platziert',
+	'quiz.townSubtitle': 'Ziehe jeden Namen auf seine Stadtmarkierung',
+	'quiz.subtitle': 'Ziehe jeden Namen auf das passende Gebiet',
 	'quiz.closeAriaLabel': 'Schließen und Karte ansehen',
 	'quiz.known': '{known} / {total} gewusst',
 	'quiz.done': 'Fertig!',
@@ -751,7 +754,7 @@ const de: Dictionary = {
 	'quiz.bestNeedsClean': 'Nur eine Runde ohne Fehler zählt als Bestzeit.',
 	'quiz.confusions': 'Verwechselt',
 	'quiz.confusedWith': '{a} auf {b} gelegt',
-	'quiz.nameSubtitle': 'Welcher Ort leuchtet? — {placed} / {total} benannt',
+	'quiz.nameSubtitle': 'Welcher Ort leuchtet?',
 	'quiz.modeAria': 'Wie das Quiz fragt',
 	'quiz.modePlace': 'Namen platzieren',
 	'quiz.modeName': 'Orte benennen',
@@ -820,6 +823,7 @@ const de: Dictionary = {
 };
 
 const it: Dictionary = {
+	'nav.settings': 'Impostazioni',
 	'appearance.title': 'Aspetto',
 	'appearance.textSize': 'Dimensione del testo',
 	'appearance.smaller': 'Testo più piccolo',
@@ -1002,9 +1006,8 @@ const it: Dictionary = {
 	'mapControl.resetBearing': 'Trascina per ruotare, fai clic per orientare a nord',
 	'mapControl.map': 'Mappa',
 	'mapControl.attribution': 'Mostra o nascondi le attribuzioni',
-	'quiz.townSubtitle':
-		'Trascina ogni nome sul relativo indicatore della città — {placed} / {total} posizionati',
-	'quiz.subtitle': 'Trascina ogni nome sull’area corrispondente — {placed} / {total} posizionati',
+	'quiz.townSubtitle': 'Trascina ogni nome sul relativo indicatore della città',
+	'quiz.subtitle': 'Trascina ogni nome sull’area corrispondente',
 	'quiz.closeAriaLabel': 'Chiudi e guarda la mappa',
 	'quiz.known': 'Sai {known} / {total}',
 	'quiz.done': 'Fatto!',
@@ -1030,7 +1033,7 @@ const it: Dictionary = {
 	'quiz.bestNeedsClean': 'Solo un giro senza errori vale come record.',
 	'quiz.confusions': 'Confusi',
 	'quiz.confusedWith': '{a} messo su {b}',
-	'quiz.nameSubtitle': 'Quale luogo è evidenziato? — {placed} / {total} nominati',
+	'quiz.nameSubtitle': 'Quale luogo è evidenziato?',
 	'quiz.modeAria': 'Come chiede il quiz',
 	'quiz.modePlace': 'Posiziona i nomi',
 	'quiz.modeName': 'Dai i nomi',

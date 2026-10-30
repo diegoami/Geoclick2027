@@ -117,7 +117,9 @@ replace maps, alter camera state or access private MapLibre locale fields.
   `--map-bottom-overlay` and `--window-bottom-overlay` on the page root,
   which `app.css` (the map's bottom controls) and `VersionBadge.svelte`
   read. `createMap` also folds the compact credit on a narrow screen.
-- **Appearance** (#284). `AppearanceButton.svelte` opens the shared native dialog
+- **Appearance** (#284). The map toolbar keeps its instructions and preferences in a native
+  `Settings` disclosure, collapsed on each map mount (opened for tutorials).
+  `AppearanceButton.svelte` opens the shared native dialog
   `AppearanceSettings.svelte`, mounted once in `+layout.svelte`.
   `appearance.svelte.ts` holds device preferences; `appearance.ts` validates
   the versioned localStorage record. Root percentage font sizing composes

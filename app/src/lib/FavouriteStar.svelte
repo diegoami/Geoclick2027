@@ -87,8 +87,8 @@
 	/* In the map bar it sits on the map, so it gets the same opaque white chip
 	   as the tabs (FT-14). */
 	.star--bar {
-		width: 1.75rem;
-		height: 1.75rem;
+		width: 28px;
+		height: 28px;
 		background: var(--gc-surface, #ffffff);
 		border-color: var(--gc-border, rgba(17, 24, 21, 0.12));
 		box-shadow: 0 1px 3px rgba(17, 24, 21, 0.12);
