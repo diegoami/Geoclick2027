@@ -5,11 +5,12 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## v1.2.0 — 2026-10-30 — Text that fits, colors you can choose
+## v1.2.0 — 2026-10-31 — Text that fits, colors you can choose
 
 **Choose readable text sizes and interface colors, with quieter map controls and a clearer quiz.**
 
 Appearance and toolbar changes: proposal #284, PR #285. Includes the resumed-round fix in #277.
+Tag `v1.2.0` on `1904731`; [release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.2.0).
 
 For players:
 
@@ -28,10 +29,14 @@ Under the hood:
 - Appearance changes refresh quiz measurements, label collisions and curved-name layout in place. The native Appearance dialog contains focus and blocks quiz shortcuts while it is open.
 - Includes removal of obsolete OpenCode tooling (#282) and the completed player manual (#283).
 
-Verification:
+What shipped, and what was tried:
 
-- The owner tested and approved the appearance and quiz toolbar in the local browser before release preparation.
-- Candidate gates, installer checks and the independent milestone verdict are recorded on the v1.2.0 milestone issue. Publication waits for that review and the required shell checks.
+- **Review:** [Milestone #287](https://github.com/diegoami/Geoclick2027/issues/287). Round one (DeepSeek V4.1 Flash) blocked 9355929 on #289; #288/#290/#291 were also addressed in owner-approved #292. Round two (GLM-5.3-Flash) agreed with exactly `1904731d521af673a35600108f42b9911b523097`. #293 was rebutted against the actual quiz DOM: the Known-only plain-name rule does not suppress the quiz's dotted underline.
+- **Built from the reviewed tag:** Windows MSI and setup, the signed Android APK (current key, `CN=Diego, OU=Amicabile`), and the HTML5 ZIP. All 221 maps and complete authored fact coverage verified. Every published asset's SHA256 matches its packaged local artifact.
+- **Windows tested:** the final setup installed successfully into the explicit per-user Geoclick directory; the installed app reports `v1.2.0 · 1904731`. North America — Countries visibly draws, Name places works, and Ocean / 115% text previews work without page errors. MSI was built but not separately installed.
+- **HTML5 tested:** final ZIP extracted to a fresh nested folder, served over HTTP with real byte-range support. Italy's quiz, reload, Name places, and all three translated manuals and their images pass without page or asset errors.
+- **Android not device-tested:** the APK is release-signed and its signature verified. The owner explicitly deferred the device test (“Build it; I’ll test the APK later”). No Android runtime check is claimed.
+- **Local verification:** four gates pass on the reviewed SHA; remediation adds pre-paint bootstrap and narrow-page/first-visit tests, plus 45 production browser layout checks in EN/DE/IT.
 
 ## v1.1.0 — 2026-10-29 — A map you complete, and new ways to play it
 
