@@ -1,6 +1,6 @@
 # Geoclick — Roadmap
 
-- **Follow-up in progress (2026-10-31):** desktop browser-style Ctrl zoom (#295); permanent continent colors with progress in counts/gold outlines (#296, owner-approved). Changes are in an isolated worktree, not part of the published v1.2.0 tag.
+- **v1.2.1 release preparation (2026-10-31):** desktop browser-style Ctrl zoom (#295) and permanent continent colors with progress in counts/gold outlines (#296) merged in [PR #297](https://github.com/diegoami/Geoclick2027/pull/297). Version/changelog preparation is underway; candidate merge, milestone review and release-installer checks remain pending. The published downloads are still v1.2.0. Visible main-window widget-zoom controls (#298) are filed but not implemented and remain outside this patch.
 
 - **Released 2026-10-31: v1.2.0** (tag `1904731`, [milestone #287](https://github.com/diegoami/Geoclick2027/issues/287): AGREE in round two; [release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.2.0)). Overall 50–300% text size, four color schemes, pre-paint preference restoration, collapsed map Settings, visible quiz modes, shorter vertical button padding with horizontal padding preserved, plain Known region names, first-visit and large-page wrapping, corrected illustrated manuals, and resumed mix-ups (#277). Windows setup and final HTML5 ZIP tried; signed APK built with the device test deferred by the owner. All uploaded artifact hashes verified.
 

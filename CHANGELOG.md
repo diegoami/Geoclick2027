@@ -5,6 +5,19 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v1.2.1 — 2026-10-31 — Desktop zoom and steady world colors
+
+**Resize the whole Windows interface with native zoom shortcuts, while world countries keep their continent colors as you learn.**
+
+- **Desktop page zoom:** Ctrl + / Ctrl − and Ctrl+wheel are enabled in the Windows app. They resize the whole interface, including buttons and icons. Appearance text size and the map's geographic zoom remain separate.
+- **Steady world colors:** countries retain their continent color before and after practice, including when no names are Known. Progress stays visible in counts and gold completion outlines; the green progress-fill legend is removed.
+- **Updated English, German and Italian manuals and home-screen illustrations** explain the separate zoom settings and the world map's colors.
+- Fixes #295 and implements the owner-approved color choice in #296, merged in [PR #297](https://github.com/diegoami/Geoclick2027/pull/297).
+
+Release preparation; no v1.2.1 tag or downloads have been published yet. Milestone review and release-installer checks are pending. PR #297 records isolated native keyboard-zoom checks and world-color regression checks; these are not tests of final v1.2.1 installers. A physical Ctrl+wheel check remains pending.
+
+Deliberately deferred: visible main-window − / + widget-zoom controls (#298), which is filed but not implemented. This release enables native zoom shortcuts without adding those controls.
+
 ## v1.2.0 — 2026-10-31 — Text that fits, colors you can choose
 
 **Choose readable text sizes and interface colors, with quieter map controls and a clearer quiz.**
