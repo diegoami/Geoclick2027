@@ -138,9 +138,13 @@ Node 24 and Java 25. Automated commands target only `demo-geoclick-spike`.
   Authentication and enabled Google in `geoclick2027`, a fresh browser attempt
   reached `accounts.google.com/v3/signin/identifier`. The initial
   `auth/configuration-not-found` setup error is resolved. The probe stopped
-  before account selection/credential submission. Owner completion of real
-  sign-in and cloud progress storage are still pending; this is not an
-  end-to-end real-login PASS. The local public config is ignored by Git.
+  before account selection/credential submission. The owner subsequently reported completing the real sign-in check.
+  That completion is owner-reported rather than independently observed.
+  The local public config is ignored by Git.
+- **LIVE STORAGE SETUP PENDING:** the owner-approved unauthenticated read of
+  a synthetic Firestore path returned HTTP 403: Cloud Firestore API has not
+  been used in this project or is disabled. Owner database creation is pending.
+  No cloud sample write/read or private progress access has been performed.
 - **NOT RUN:** Windows native sign-in, Android native sign-in/device checks,
   cross-device durable-offline merging and any deployed-site test. No deploy.
 
