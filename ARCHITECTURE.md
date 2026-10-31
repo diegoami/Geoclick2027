@@ -337,7 +337,9 @@ progress) is a clean later addition precisely because it's local-first
 now — same shape as Anki's own architecture. First concrete trigger for
 that addition: recording quiz scores per user across devices, which needs
 sign-in first (Google + other OAuth providers) — planned in ROADMAP.md's
-Iteration 8+, not started.
+Iteration 8+. Production sync remains unimplemented. The isolated Firebase
+Auth/Firestore experiment in `spikes/firebase/` (proposal #301) exercises
+synthetic data only; its README records emulator, live and native check results.
 
 ## Repo layout
 
