@@ -1,6 +1,6 @@
 # Geoclick — Roadmap
 
-- **Firebase feasibility spike (2026-10-31, [#301](https://github.com/diegoami/Geoclick2027/issues/301)):** isolated Auth/Firestore emulator checks and Chromium Google-popup simulation pass; cross-client sample sharing and access rules work, but snapshot sync demonstrably loses a newer reset after an offline write. Real project login awaits Firebase Authentication console setup; native login is untested. See [the reproducible spike and results](spikes/firebase/README.md). Production remains local-first; v1.2.1 scope is unchanged.
+- **Firebase feasibility spike (2026-10-31, [#301](https://github.com/diegoami/Geoclick2027/issues/301)):** isolated Auth/Firestore emulator checks and Chromium Google-popup simulation pass; cross-client sample sharing and access rules work, but snapshot sync demonstrably loses a newer reset after an offline write. Real Google provider handoff works; owner account sign-in and cloud storage checks are pending, and native login is untested. See [the reproducible spike and results](spikes/firebase/README.md). Production remains local-first; v1.2.1 scope is unchanged.
 
 - **Follow-up in progress (2026-10-31):** desktop browser-style Ctrl zoom (#295); permanent continent colors with progress in counts/gold outlines (#296, owner-approved). Changes are in an isolated worktree, not part of the published v1.2.0 tag.
 

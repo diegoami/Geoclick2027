@@ -134,17 +134,17 @@ Node 24 and Java 25. Automated commands target only `demo-geoclick-spike`.
 - **PASS:** standalone Vite production build; approximately 554 kB JS / 167 kB
   gzip. This dependency is not added to Geoclick's production bundle.
 - **PASS:** Geoclick's check/test/lint/build gates in this isolated worktree.
-- **LIVE SETUP BLOCKED:** the owner supplied public configuration for Firebase
-  project `geoclick2027`. The first browser attempt returned
-  `auth/configuration-not-found` before reaching Google. Owner console setup
-  (initialize Authentication, enable Google/support email, authorize localhost)
-  is pending. No real Google sign-in or cloud progress write is claimed.
-  The local configuration is ignored by Git; no service-account key is used.
+- **PASS, real Google provider handoff:** after the owner initialized Firebase
+  Authentication and enabled Google in `geoclick2027`, a fresh browser attempt
+  reached `accounts.google.com/v3/signin/identifier`. The initial
+  `auth/configuration-not-found` setup error is resolved. The probe stopped
+  before account selection/credential submission. Owner completion of real
+  sign-in and cloud progress storage are still pending; this is not an
+  end-to-end real-login PASS. The local public config is ignored by Git.
 - **NOT RUN:** Windows native sign-in, Android native sign-in/device checks,
   cross-device durable-offline merging and any deployed-site test. No deploy.
 
-**Recommendation:** GO for a real-browser Google-login/Firestore proof once
-console setup is ready. Do not adopt snapshot synchronization for production:
+**Recommendation:** GO for the owner-completed real-browser Google-login/Firestore proof; the provider handoff is now working. Do not adopt snapshot synchronization for production:
 the reset-loss check proves that successful delivery alone is insufficient.
 Treat native login and progress conflict/reset semantics as explicit follow-up
 work before promising app-to-app sync. The spike has not selected a production
