@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
+import { createServer } from 'node:net';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
 
@@ -8,7 +9,14 @@ const base = 'http://127.0.0.1:5194';
 const cwd = fileURLToPath(new URL('.', import.meta.url));
 const vite = fileURLToPath(new URL('../../node_modules/vite/bin/vite.js', import.meta.url));
 // Force emulator mode even when an owner has added a cloud .env.local.
-const server = spawn(process.execPath, [vite, '--host', '127.0.0.1', '--port', '5194', '--strictPort'], {
+// Refuse an occupied port before starting, so an unrelated server cannot
+// satisfy the HTTP readiness probe while our Vite process is still starting.
+const portCheck = createServer();
+const listening = once(portCheck, 'listening');
+portCheck.listen(5194, '127.0.0.1');
+await listening;
+await new Promise((resolve, reject) => portCheck.close(error => error ? reject(error) : resolve()));
+const server = spawn(process.execPath, [vite, '--host', '127.0.0.1', '--port', '5194', '--strictPort', '--logLevel', 'error'], {
   cwd, env: { ...process.env, VITE_FIREBASE_MODE: 'emulator' }, stdio: ['ignore', 'pipe', 'pipe']
 });
 let serverOutput = '';
@@ -16,10 +24,25 @@ server.stdout.on('data', (chunk) => { serverOutput += chunk; });
 server.stderr.on('data', (chunk) => { serverOutput += chunk; });
 let browser;
 try {
-  for (let i = 0; ; i++) {
-    if (server.exitCode !== null) throw new Error(`Private test server failed: ${serverOutput}`);
-    if (i > 150) throw new Error(`Private test server timed out: ${serverOutput}`);
-    if (serverOutput.includes('Local:')) break;
+  const deadline = Date.now() + 30_000;
+  let lastProbe = 'no HTTP response';
+  for (;;) {
+    if (server.exitCode !== null || server.signalCode !== null) {
+      throw new Error(`Private test server failed: ${serverOutput}`);
+    }
+    if (Date.now() >= deadline) {
+      throw new Error(`Private test server timed out (${lastProbe}): ${serverOutput}`);
+    }
+    let ready = false;
+    try {
+      const response = await fetch(base, { signal: AbortSignal.timeout(1000) });
+      lastProbe = `HTTP ${response.status}`;
+      ready = response.ok && (await response.text()).includes('<title>Geoclick Firebase spike</title>');
+      if (response.ok && !ready) lastProbe += ', unexpected page';
+    } catch (error) {
+      lastProbe = error.message;
+    }
+    if (ready) break;
     await new Promise(resolve => setTimeout(resolve, 200));
   }
   browser = await chromium.launch();

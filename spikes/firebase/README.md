@@ -131,6 +131,9 @@ Node 24 and Java 25. Automated commands target only `demo-geoclick-spike`.
   `npm test` runs both SDK and browser checks under one emulator session. It
   starts a private browser-test server on port 5194 and forces emulator mode,
   even if `.env.local` has a real project's configuration.
+  Startup readiness uses HTTP and the expected page content, not Vite terminal
+  text. The full suite passes with Vite startup banners suppressed; an occupied
+  test port fails immediately without using or stopping its existing listener.
 - **PASS:** standalone Vite production build; approximately 554 kB JS / 167 kB
   gzip. This dependency is not added to Geoclick's production bundle.
 - **PASS:** Geoclick's check/test/lint/build gates in this isolated worktree.
