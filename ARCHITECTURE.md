@@ -13,7 +13,9 @@ ways.
 
 - **Browser** — runs directly.
 - **Desktop** — wrapped in **Tauri** (Rust shell around the system webview —
-  small binaries, fast startup, real local SQLite for free).
+  small binaries, fast startup, real local SQLite for free). The main window
+  enables native browser-style page zoom shortcuts (`zoomHotkeysEnabled`),
+  independently of text size and geographic map zoom.
 - **Mobile** — wrapped in **Capacitor** (same web core in a native webview,
   plugin access to device SQLite/filesystem).
 
@@ -421,8 +423,9 @@ finger's drag aims, tap or drag), `difficulty.ts` (the hand), `nameIt.ts`
 (Name places' choices), `confusions.ts` (mix-ups), `roundReport.ts` (what a
 round changed, best times) and `feedback.ts` (sound and haptics).
 `ScorePanel.svelte` shows the end of a round. The start screen's suggestion
-comes from `suggestion.ts`, and `homeProgress.ts`'s `worldProgress` colours
-the world map.
+comes from `suggestion.ts`, and `homeProgress.ts`'s `worldProgress` supplies
+world totals and gold completion outlines. `WorldPicker.svelte` keeps every
+country's continent fill independent of progress (#296).
 
 **The tutorial** (FT-11, script in `docs/TUTORIAL.md`) runs over these
 same screens rather than copies of them. A Tutorial button sits on the

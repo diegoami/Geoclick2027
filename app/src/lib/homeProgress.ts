@@ -88,10 +88,9 @@ export function groupProgress(
 }
 
 /**
- * How much of each country is known, for colouring the start screen's world
- * map (#262), and the names known over the whole catalogue. Only a group with
- * a map played is listed: the rest keep their plain colour. Detailed maps do
- * not count, so a country can be completed from its main maps.
+ * Country completion and world totals (#262, #296). Country fill colors
+ * remain independent of learning progress. Only played groups are listed;
+ * detailed maps do not count toward completing a country's main maps.
  */
 export function worldProgress(
 	groups: readonly { id: string; mapIds: readonly string[] }[],

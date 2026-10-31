@@ -2695,10 +2695,12 @@ question was answered "as recommended" in the issues.
   licence or credit, which the issue's CC0-files plan would have needed.
   Sounds are off by default; Android haptics are on and follow the system's
   reduce-motion setting.
-- **The start screen speaks completion (#262, #263):** countries shaded by
-  what is known (detailed maps excluded, so a country can be completed), and
-  one suggestion line rather than a new home section, which would have
-  reopened the home-order decision (FEATURE_PLAN.md decision 15).
+- **The start screen speaks completion (#262, #263; amended 2026-10-31, #296):**
+  the owner chose permanent continent fill colors, with learning progress
+  shown separately through counts and gold completion outlines. Practice,
+  including zero-known records, never fades or replaces a country's color.
+  Detailed maps are excluded from completion. The single suggestion line
+  remains, rather than reopening the home-order decision.
 - **Out of scope, on purpose:** leaderboards, accounts, coins or XP, daily
   streaks, typed answers, and saving an unfinished round across restarts.
 
@@ -2730,3 +2732,11 @@ is reduced. The owner also confirmed About and the manual must wrap at 300%.
 Stored appearance is applied by a small synchronous head bootstrap before
 the first paint, with the component managing later changes; its literals are
 checked against the canonical preference definitions.
+
+### Desktop page zoom matches the browser (2026-10-31, #295)
+
+The owner expects Ctrl +/− and Ctrl + mouse wheel to scale the desktop's
+whole interface, including widgets, as in the web browser. Enable Tauri's
+native `zoomHotkeysEnabled` window setting; on Windows this controls
+WebView2's IsZoomControlEnabled for both keyboard and wheel. This is distinct
+from the persistent Appearance text preference and geographic map zoom.

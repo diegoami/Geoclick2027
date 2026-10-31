@@ -33,6 +33,12 @@ Le immagini condivise con il manuale inglese mostrano l’interfaccia in inglese
 
 ## Aspetto e dimensione del testo
 
+Nell'app Windows, **Ctrl +** / **Ctrl −** e **Ctrl + rotellina del mouse**
+ingrandiscono o riducono l'intera interfaccia, inclusi pulsanti e icone, come
+nel browser. La dimensione del testo in Aspetto e lo zoom geografico della
+mappa restano indipendenti.
+
+
 Apri **Aspetto** (l'icona A− / A+) nella barra iniziale o della mappa,
 anche durante un quiz. Sulla mappa apri prima **Impostazioni**.
 Il pannello è inizialmente chiuso e può essere richiuso. Usa **A−** e **A+** per scegliere dal 50% al 300%;
@@ -74,7 +80,7 @@ Puoi scegliere una vista geografica oppure un elenco. Nella vista geografica sce
 
 Premi il tipo di mappa che vuoi aprire. La percentuale o il conteggio accanto a una mappa indica quanti luoghi conosci; non rappresenta un voto dell’ultima partita. La scelta fra mappa ed elenco e le preferenze vengono ricordate. L’offerta del tutorial appare una volta, ma il comando Tutorial rimane disponibile.
 
-Sulla mappa del mondo, un paese su cui hai giocato è colorato da un verde pallido a un verde pieno, secondo quanto lo conosci. Contano le sue mappe delle regioni e delle città, non quelle dettagliate. Un paese che conosci del tutto riceve un **bordo dorato**; i paesi mai giocati mantengono il colore del loro continente. Una piccola legenda mostra la scala dei colori e il totale su tutte le mappe, per esempio «Sai 1 240 / 9 800 nomi».
+Sulla mappa del mondo ogni paese mantiene il colore del proprio continente, qualunque sia il progresso. Esercitarsi non fa sbiadire il colore. Un paese conosciuto del tutto riceve un **bordo dorato**; contano regioni e città, non le mappe dettagliate. I contatori accanto alle mappe e il totale dei nomi conosciuti mostrano il progresso separatamente dai colori delle aree.
 
 Una riga sopra la mappa o l’elenco suggerisce che cosa giocare: per esempio «Continua Italy — Regioni — sai 14 / 20», «Rigioca Italy — Regioni — l’ultima volta 3 sono scesi di un gradino» oppure «Prossima: Italy — Città — conosci tutta Italy — Regioni». Premendola si apre il quiz di quella mappa. La riga manca quando non c’è nulla da suggerire e durante il tutorial.
 
