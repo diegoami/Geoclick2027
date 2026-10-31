@@ -406,7 +406,7 @@ what you actually know. Nothing here is scored. On a towns map, tap a town's dot
 
 **A map you have never played** shows a small card, **"Nothing known yet"**,
 with an **Overview** button to study the names and a **Quiz** button to start
-playing.
+playing. Close the card with **×** to free the map; it stays closed for this visit.
 
 ![A new map: Nothing known yet, with Overview and Quiz buttons](manual/known-empty.jpg)
 

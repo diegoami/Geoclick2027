@@ -1,5 +1,7 @@
 # Geoclick — Roadmap
 
+- **v1.2.1 owner-testing fix (#307):** make the empty Known-map notice dismissible with a localized, keyboard/touch-accessible × button. The agreed b7615b4 candidate remains untagged while this ordinary fix PR is tested, approved and reviewed on its resulting SHA.
+
 - **v1.2.1 release preparation (2026-10-31):** desktop browser-style Ctrl zoom (#295) and permanent continent colors with progress in counts/gold outlines (#296) merged in [PR #297](https://github.com/diegoami/Geoclick2027/pull/297). Version/changelog preparation is underway; candidate merge, milestone review and release-installer checks remain pending. The published downloads are still v1.2.0. Visible main-window widget-zoom controls (#298) are filed but not implemented and remain outside this patch.
 
 - **Firebase feasibility spike (2026-10-31, [#301](https://github.com/diegoami/Geoclick2027/issues/301)):** isolated Auth/Firestore emulator checks and Chromium Google-popup simulation pass; cross-client sample sharing and access rules work, but snapshot sync demonstrably loses a newer reset after an offline write. The owner tested real Google sign-in, sample cloud save/read and same-account sharing in another browser profile; an independent anonymous cloud read remains denied after rule publication. Browser feasibility is established; native login and production merge design remain follow-ups. See [the reproducible spike and results](spikes/firebase/README.md). Production remains local-first; v1.2.1 scope is unchanged.

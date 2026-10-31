@@ -115,6 +115,7 @@ export type TranslationKey =
 	| 'known.resetFailed'
 	| 'known.emptyTitle'
 	| 'known.emptyBody'
+	| 'known.dismissEmpty'
 	| 'nav.loading'
 	| 'nav.detailedMaps'
 	| 'nav.hideDetailedMap'
@@ -365,6 +366,7 @@ const en: Dictionary = {
 	'known.resetDone': 'Your progress on {map} is reset.',
 	'known.resetFailed': 'The reset did not finish. Try again.',
 	'known.emptyTitle': 'Nothing known yet',
+	'known.dismissEmpty': 'Close this notice',
 	'known.emptyBody':
 		'Every name you place right in the quiz is written here. Study them in the Overview, or start the quiz.',
 	'nav.loading': 'Loading…',
@@ -635,6 +637,7 @@ const de: Dictionary = {
 	'known.resetDone': 'Dein Fortschritt auf {map} ist zurückgesetzt.',
 	'known.resetFailed': 'Das Zurücksetzen hat nicht geklappt. Versuch es noch einmal.',
 	'known.emptyTitle': 'Noch nichts gewusst',
+	'known.dismissEmpty': 'Hinweis schließen',
 	'known.emptyBody':
 		'Jeder Name, den du im Quiz richtig platzierst, steht dann hier. Lerne sie in der Übersicht oder starte das Quiz.',
 	'nav.loading': 'Lädt…',
@@ -911,6 +914,7 @@ const it: Dictionary = {
 	'known.resetDone': 'I tuoi progressi su {map} sono stati azzerati.',
 	'known.resetFailed': "L'azzeramento non è riuscito. Riprova.",
 	'known.emptyTitle': 'Ancora niente di imparato',
+	'known.dismissEmpty': 'Chiudi questo avviso',
 	'known.emptyBody':
 		'Ogni nome che posizioni giusto nel quiz viene scritto qui. Studiali nella Panoramica o inizia il quiz.',
 	'nav.loading': 'Caricamento…',

@@ -113,7 +113,7 @@ Klicke oder tippe auf einen Ort, um seinen Namen hinzuzufügen; noch einmal nimm
 
 Wenn Informationen verfügbar sind, öffnet die Auswahl auch eine Ortskarte mit Wissenswertem. Auf einer Städtekarte tippst du auf den Punkt. Das erneute Ausblenden des Namens schließt die Ortskarte. In dieser Ansicht gibt es keine Bewertung.
 
-Auf einer nie gespielten Karte erscheint eine kleine Karte **Noch nichts gewusst** mit den Knöpfen **Übersicht** und **Quiz**.
+Auf einer nie gespielten Karte erscheint eine kleine Karte **Noch nichts gewusst** mit den Knöpfen **Übersicht** und **Quiz**. Mit **×** schließt du den Hinweis für diesen Besuch, damit die Karte frei bleibt.
 
 Sobald du auf der Karte etwas erreicht hast, steht in der Legende auch **Fortschritt zurücksetzen**. Ein Dialog fragt nach: „Deinen Fortschritt auf Italy — Regionen zurücksetzen?“. **Abbrechen** ändert nichts; **Ja, zurücksetzen** macht alle Namen dieser Karte wieder unbekannt und löscht auch die gewählten Namen und eine halb gespielte Runde. Deine anderen Karten, deine Favoriten und dein letztes Ergebnis bleiben. Das ist etwas anderes als **Zurücksetzen** in der Legende, das nur die gewählten Namen entfernt.
 

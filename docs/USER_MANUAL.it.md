@@ -113,7 +113,7 @@ Tocca o clicca un luogo per aggiungere il suo nome; ripeti per nasconderlo. Puoi
 
 Scegliere un luogo apre anche la sua scheda, quando ci sono informazioni disponibili. Nelle mappe delle città tocchi il punto. Nascondere di nuovo il nome chiude la scheda. Questa schermata non assegna punteggi.
 
-Su una mappa mai giocata compare un piccolo riquadro **Ancora niente di imparato**, con i pulsanti **Panoramica** e **Quiz**.
+Su una mappa mai giocata compare un piccolo riquadro **Ancora niente di imparato**, con i pulsanti **Panoramica** e **Quiz**. Chiudi l’avviso con **×** per liberare la mappa: resta chiuso per questa visita.
 
 Quando hai guadagnato qualcosa sulla mappa, la legenda contiene anche **Azzera i progressi**. Una finestra chiede conferma: «Azzerare i tuoi progressi su Italy — Regioni?». **Annulla** lascia tutto com’è; **Sì, azzera** riporta ogni nome di questa mappa a sconosciuto e cancella anche i nomi scelti e una prova lasciata a metà. Le altre mappe, i preferiti e l’ultimo punteggio restano. Il pulsante **Azzera** della legenda, invece, toglie soltanto i nomi scelti.
 
