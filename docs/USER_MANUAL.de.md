@@ -33,6 +33,12 @@ Die gemeinsam mit dem englischen Handbuch verwendeten Bilder zeigen englische Be
 
 ## Darstellung und Textgröße
 
+In der Windows-App vergrößern und verkleinern **Strg +** / **Strg −** und
+**Strg + Mausrad** die ganze Oberfläche einschließlich Schaltflächen und
+Symbolen, wie im Browser. Die Textgröße unter Darstellung und der geografische
+Kartenzoom sind davon unabhängig.
+
+
 Öffne **Darstellung** (das A− / A+-Symbol) in der Start- oder Kartenleiste,
 auch während eines Quiz. Öffne auf der Karte zuerst **Einstellungen**.
 Dieses Feld ist anfangs geschlossen und lässt sich wieder zuklappen. Mit **A−** und **A+** wählst du 50% bis 300%;
@@ -74,7 +80,7 @@ Du kannst zwischen Weltkarte und Liste wählen. Auf der Weltkarte öffnest du zu
 
 Drücke auf den gewünschten Kartentyp, um ihn zu öffnen. Die Prozentzahl oder Anzahl bei einer Karte zeigt, wie viele ihrer Orte du kennst. Sie ist keine Bewertung der letzten Runde. Die Darstellung und deine Einstellungen werden gespeichert. Das Angebot für das Tutorial erscheint einmal; der Tutorial-Knopf bleibt auch danach erreichbar.
 
-Auf der Weltkarte ist ein Land, das du gespielt hast, von blassem bis kräftigem Grün gefärbt, je nachdem, wie viel du davon weißt. Es zählen seine Regionen- und Städtekarten, keine Detailkarten. Ein Land, das du ganz kennst, bekommt einen **goldenen Rand**; nie gespielte Länder behalten die Farbe ihres Kontinents. Eine kleine Legende zeigt die Farbstufen und deine Summe über alle Karten, etwa „1 240 / 9 800 Namen gewusst“.
+Auf der Weltkarte behält jedes Land die Farbe seines Kontinents, unabhängig vom Lernstand. Üben lässt die Farbe nicht verblassen. Ein vollständig gewusstes Land bekommt einen **goldenen Rand**; Regionen- und Städtekarten zählen, Detailkarten nicht. Zähler bei den Karten und die Gesamtzahl der gewussten Namen zeigen den Fortschritt getrennt von den Flächenfarben.
 
 Eine Zeile über Karte oder Liste schlägt vor, was du als Nächstes spielen kannst, zum Beispiel „Weiter mit Italy — Regionen — 14 / 20 gewusst“, „Italy — Regionen nochmal spielen — letztes Mal 3 eine Stufe verloren“ oder „Als Nächstes: Italy — Städte — Italy — Regionen kannst du ganz“. Ein Druck darauf öffnet das Quiz dieser Karte. Gibt es nichts vorzuschlagen, oder läuft das Tutorial, fehlt die Zeile.
 

@@ -7,7 +7,7 @@
 // and the test fires it by hand, which is the one ordering the bug was in.
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
-import { setLanguage } from './i18n.svelte';
+import { setLanguage, t } from './i18n.svelte';
 import WorldPicker from './WorldPicker.svelte';
 import { pickerGoUp, setPickerShown, setPickerView } from './mapPrefs.svelte';
 
@@ -17,7 +17,14 @@ const fake = vi.hoisted(() => {
 		mapClick: undefined as ((event: unknown) => void) | undefined,
 		countryFeatures: [] as { properties: Record<string, string> }[],
 		mapOptions: undefined as
-			{ doubleClickZoom?: boolean; locale?: Record<string, string> } | undefined,
+			| {
+					doubleClickZoom?: boolean;
+					locale?: Record<string, string>;
+					style?: { layers: { id: string; paint?: Record<string, unknown> }[] };
+			  }
+			| undefined,
+		featureStates: {} as Record<string, Record<string, unknown>>,
+		paintProperties: {} as Record<string, unknown>,
 		countryLabels: {} as Record<string, HTMLElement>,
 		countryLabelPosition: undefined as [number, number] | undefined
 	};
@@ -31,6 +38,13 @@ const fake = vi.hoisted(() => {
 			}
 		],
 		countries: [
+			{
+				id: 'united-states',
+				name: 'United States',
+				continent: 'north-america',
+				centroid: [-100, 39] as [number, number],
+				bbox: [-125, 25, -66, 49] as [number, number, number, number]
+			},
 			{
 				id: 'italy',
 				name: 'Italy',
@@ -81,9 +95,13 @@ const fake = vi.hoisted(() => {
 				if (element) container.append(element);
 				return map;
 			},
-			setFeatureState: () => {},
+			setFeatureState: (target: { id: string }, change: Record<string, unknown>) => {
+				state.featureStates[target.id] = { ...state.featureStates[target.id], ...change };
+			},
 			queryRenderedFeatures: () => state.countryFeatures,
-			setPaintProperty: () => {},
+			setPaintProperty: (layer: string, property: string, value: unknown) => {
+				state.paintProperties[`${layer}:${property}`] = value;
+			},
 			fitBounds: () => map,
 			getCanvas: () => ({ style: {} }),
 			resize: () => map,
@@ -140,6 +158,7 @@ vi.mock('maplibre-gl', () => ({
 			container: HTMLElement;
 			doubleClickZoom?: boolean;
 			locale?: Record<string, string>;
+			style?: { layers: { id: string; paint?: Record<string, unknown> }[] };
 		}) {
 			fake.state.mapOptions = options;
 			Object.assign(this, fake.createMap(options.container));
@@ -166,18 +185,75 @@ vi.mock('./labelCollision', () => ({
 vi.mock('./worldPicker', () => ({
 	WORLD_VIEW: [-180, -60, 180, 75] as [number, number, number, number],
 	fetchPicker: async () => ({ picker: fake.picker, tilesUrl: 'test' }),
-	hasMaps: (id: string) => id === 'italy' || id === 'russia' || id === 'france',
+	hasMaps: (id: string) =>
+		id === 'italy' || id === 'russia' || id === 'france' || id === 'united-states',
 	validView: (p: typeof fake.picker, v: string) =>
 		v === 'world' || p.continents.some((c) => c.id === v) ? v : 'world'
 }));
 
 describe('WorldPicker (FT-83, FT-86, #87)', () => {
+	it('keeps USA/continent fills constant while progress counts and completion change (#296)', async () => {
+		const groups = [
+			{
+				country: 'USA',
+				pickerId: 'united-states',
+				maps: [
+					{ id: 'usa-states', label: 'States' },
+					{ id: 'usa-cities', label: 'Cities' }
+				]
+			}
+		];
+		const targetCount = (id: string) => (id === 'usa-states' ? 48 : 50);
+		const screen = await render(WorldPicker, { groups, masteries: {}, targetCount });
+		await expect.poll(() => fake.state.load !== undefined).toBe(true);
+		fake.state.load!();
+		const initial = fake.state.mapOptions!.style!.layers.find(
+			(layer) => layer.id === 'countries-fill'
+		)!.paint!['fill-color'];
+		// This is the user contract: feature-state must never drive a fill.
+		// It also includes unavailable countries: continent alone chooses color.
+		expect(JSON.stringify(initial)).not.toContain('feature-state');
+		expect(initial).toEqual(
+			expect.arrayContaining(['north-america', '#8b86d4', 'europe', '#5b9fc8'])
+		);
+		const cases = [
+			{ known: 0, complete: false },
+			{ known: 24, complete: false },
+			{ known: 48, complete: true },
+			{ known: 0, complete: false }
+		];
+		for (const step of cases) {
+			const masteries = {
+				'usa-states': { known: step.known, total: 48, level: 0 as const },
+				...(step.complete ? { 'usa-cities': { known: 50, total: 50, level: 3 as const } } : {})
+			};
+			await screen.rerender({ groups, masteries, targetCount });
+			await expect
+				.poll(() => fake.state.featureStates['united-states']?.complete)
+				.toBe(step.complete);
+			const current = fake.state.paintProperties['countries-fill:fill-color'] ?? initial;
+			expect(current).toEqual(initial);
+			const expected = t('picker.namesKnown', {
+				known: String(step.complete ? 98 : step.known),
+				total: '98'
+			});
+			await expect
+				.poll(() => screen.container.querySelector('[data-testid="world-progress"]')?.textContent)
+				.toContain(expected);
+		}
+		const complete = fake.state.mapOptions!.style!.layers.find(
+			(layer) => layer.id === 'countries-complete'
+		)!;
+		expect(JSON.stringify(complete.paint)).toContain('complete');
+	});
 	beforeEach(() => {
 		setLanguage('en');
 		fake.state.load = undefined;
 		fake.state.mapClick = undefined;
 		fake.state.countryFeatures = [];
 		fake.state.mapOptions = undefined;
+		fake.state.featureStates = {};
+		fake.state.paintProperties = {};
 		fake.state.countryLabels = {};
 		fake.state.countryLabelPosition = undefined;
 		localStorage.removeItem('geoclick:map-type-selections:v1');

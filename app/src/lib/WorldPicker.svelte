@@ -75,7 +75,7 @@
 
 	const view = $derived(picker ? validView(picker, pickerView()) : 'world');
 
-	// One colour per continent for the countries with maps; the rest pale.
+	// Country fills always keep their continent color; progress is separate (#296).
 	const CONTINENT_COLOURS: Record<string, string> = {
 		europe: '#5b9fc8',
 		africa: '#e58a73',
@@ -84,22 +84,18 @@
 		'south-america': '#b87dc4',
 		oceania: '#97a3b2'
 	};
-	const NO_MAPS = '#e9e2d0';
+	const UNKNOWN_CONTINENT = '#e9e2d0';
 	const CONTINENT_COLOUR = [
 		'match',
 		['get', 'continent'],
 		...Object.entries(CONTINENT_COLOURS).flat(),
-		NO_MAPS
+		UNKNOWN_CONTINENT
 	] as unknown as maplibregl.ExpressionSpecification;
 
 	const continentName = (id: string) => t(`continent.${id}` as TranslationKey);
 
-	// The world map shows what is known (#262): a country with a map played is
-	// shaded from pale to full green by the share of its names known, and a
-	// completed one gets a gold outline. Countries never played keep their
-	// continent's colour, so the map looks as it always has until a first round.
-	const PROGRESS_PALE = '#e6efe0';
-	const PROGRESS_FULL = '#2f8f55';
+	// Counts and gold outlines show learning progress; no learning state is
+	// allowed to replace a country's continent fill (owner, #296).
 	const progress = $derived(
 		worldProgress(
 			groups.map((g) => ({ id: pickerIdOf(g), mapIds: g.maps.map((m) => m.id) })),
@@ -116,8 +112,6 @@
 			map.setFeatureState(
 				{ source: 'picker', sourceLayer: 'countries', id: country.id },
 				{
-					played: !!p,
-					share: p ? p.known / p.total : 0,
 					complete: !!p && p.known === p.total
 				}
 			);
@@ -377,22 +371,7 @@
 								source: 'picker',
 								'source-layer': 'countries',
 								paint: {
-									'fill-color': [
-										'case',
-										['boolean', ['feature-state', 'played'], false],
-										[
-											'interpolate',
-											['linear'],
-											['number', ['feature-state', 'share'], 0],
-											0,
-											PROGRESS_PALE,
-											1,
-											PROGRESS_FULL
-										],
-										['boolean', ['feature-state', 'hasMaps'], false],
-										CONTINENT_COLOUR,
-										NO_MAPS
-									],
+									'fill-color': CONTINENT_COLOUR,
 									'fill-opacity': 0.85
 								}
 							},
@@ -425,13 +404,6 @@
 				stopCollision = enableLabelCollision(map, container);
 				map.on('load', () => {
 					if (!map || !picker) return;
-					for (const country of picker.countries) {
-						if (!hasMaps(country.id)) continue;
-						map.setFeatureState(
-							{ source: 'picker', sourceLayer: 'countries', id: country.id },
-							{ hasMaps: true }
-						);
-					}
 					paint(start);
 					drawLabels(start);
 					keepContinentsInside();
@@ -603,9 +575,8 @@
 			<div class="map" bind:this={container}></div>
 		</ChartMapShell>
 		{#if progress.byGroup.size > 0}
-			<!-- What the green means, and how much of the world is known (#262). -->
+			<!-- Progress stays in counts and completion outlines, separate from fills. -->
 			<div class="progress-legend" data-testid="world-progress">
-				<span class="ramp" aria-hidden="true"></span>
 				{t('picker.namesKnown', {
 					known: progress.known.toLocaleString(getLanguage()),
 					total: progress.total.toLocaleString(getLanguage())
@@ -671,12 +642,6 @@
 		font-family: system-ui, sans-serif;
 		font-size: 0.75rem;
 		font-weight: 600;
-	}
-	.ramp {
-		width: 2.5rem;
-		height: 0.6rem;
-		border-radius: 3px;
-		background: linear-gradient(to right, #e6efe0, #2f8f55);
 	}
 	.complete-key {
 		display: inline-flex;

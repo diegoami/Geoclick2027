@@ -68,6 +68,12 @@ real progress.
 
 ## Appearance and text size
 
+In the Windows desktop app, **Ctrl +** / **Ctrl −** and **Ctrl + mouse wheel**
+zoom the whole interface, including buttons and icons, as in a browser.
+Appearance's text-size controls are a separate preference; geographic map zoom
+is separate from both.
+
+
 Choose **Appearance** (the A− / A+ icon) in the start screen toolbar or a
 map's **Settings** panel, including during a quiz. Settings starts collapsed;
 click **Settings** again to hide it. Use **A−** and **A+** to choose a text
@@ -200,13 +206,12 @@ parts. The finer ones are listed below a line, after the standard ones (see
 
 Once you have played, the world map shows how far you have got:
 
-- A country you have played is painted from pale to full green, by how much of
-  it you know. Its regions and towns maps count; detailed maps don't.
-- A country you know completely gets a **gold outline**.
-- A country you have never played keeps its continent's colour.
-
-A small legend on the map shows the green ramp and your total across all
-maps, for example "1 240 / 9 800 names known".
+- Every country keeps its continent's colour, whether it is unplayed, partly
+  known or fully known. Practice never fades or replaces its fill colour.
+- A country you know completely gets a **gold outline**. Its regions and towns
+  maps count; detailed maps don't.
+- Progress is shown by the counts beside maps/countries and the total legend,
+  for example "1 240 / 9 800 names known", separately from the fill colours.
 
 ### What to play next
 
