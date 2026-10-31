@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Isolated synthetic data only. All other paths are denied.
+    match /firebaseSpikeUsers/{uid}/cards/{targetId} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.keys().hasAll(['level', 'deviceId'])
+        && request.resource.data.keys().hasOnly(['level', 'deviceId'])
+        && request.resource.data.level is int
+        && request.resource.data.level >= 0 && request.resource.data.level <= 3
+        && request.resource.data.deviceId is string
+        && request.resource.data.deviceId.size() <= 100;
+    }
+  }
+}

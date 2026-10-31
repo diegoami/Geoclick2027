@@ -1,0 +1,13 @@
+{
+  "name": "geoclick-firebase-spike",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ../../node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5193 --strictPort",
+    "build": "node ../../node_modules/vite/bin/vite.js build --outDir ../../rendered/firebase-spike",
+    "emulators": "firebase emulators:start --project demo-geoclick-spike --only auth,firestore",
+    "test": "firebase emulators:exec --project demo-geoclick-spike --only auth,firestore \"node --test --test-reporter=dot spike.test.mjs && node browser.test.mjs\""
+  },
+  "dependencies": { "firebase": "13.1.0" },
+  "devDependencies": { "firebase-tools": "15.34.2" }
+}
