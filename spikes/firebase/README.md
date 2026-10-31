@@ -134,22 +134,33 @@ Node 24 and Java 25. Automated commands target only `demo-geoclick-spike`.
 - **PASS:** standalone Vite production build; approximately 554 kB JS / 167 kB
   gzip. This dependency is not added to Geoclick's production bundle.
 - **PASS:** Geoclick's check/test/lint/build gates in this isolated worktree.
-- **PASS, real Google provider handoff:** after the owner initialized Firebase
-  Authentication and enabled Google in `geoclick2027`, a fresh browser attempt
-  reached `accounts.google.com/v3/signin/identifier`. The initial
-  `auth/configuration-not-found` setup error is resolved. The probe stopped
-  before account selection/credential submission. The owner subsequently reported completing the real sign-in check.
-  That completion is owner-reported rather than independently observed.
-  The local public config is ignored by Git.
-- **LIVE STORAGE SETUP PENDING:** the owner-approved unauthenticated read of
-  a synthetic Firestore path returned HTTP 403: Cloud Firestore API has not
-  been used in this project or is disabled. Owner database creation is pending.
-  No cloud sample write/read or private progress access has been performed.
+- **PASS, independent real-provider handoff:** a fresh browser attempt reached
+  `accounts.google.com/v3/signin/identifier` after the owner enabled Firebase
+  Authentication/Google in `geoclick2027`. The initial setup error is resolved.
+- **PASS, owner-reported live browser sharing:** the owner completed Google
+  sign-in, created Firestore in Production/locked mode, applied the supplied
+  user-isolated rules, and reported the sample save/read and same-account
+  second-browser-profile check working. Those authenticated cloud checks are
+  owner-tested, not independently observed by the implementing agent. They
+  use synthetic level-2 data, not existing Geoclick progress.
+- **PASS, independent anonymous cloud denial:** after rule publication, the
+  approved unauthenticated read of a synthetic Firestore path still returns
+  HTTP 403 `Missing or insufficient permissions.` The earlier disabled-API
+  response is resolved. Different-user isolation and malformed writes are
+  tested locally against the same rules, not claimed as live multi-account
+  checks. The public client configuration stays ignored by Git.
 - **NOT RUN:** Windows native sign-in, Android native sign-in/device checks,
   cross-device durable-offline merging and any deployed-site test. No deploy.
 
-**Recommendation:** GO for the owner-completed real-browser Google-login/Firestore proof; the provider handoff is now working. Do not adopt snapshot synchronization for production:
-the reset-loss check proves that successful delivery alone is insufficient.
-Treat native login and progress conflict/reset semantics as explicit follow-up
-work before promising app-to-app sync. The spike has not selected a production
-backend or unpaused the historical Supabase implementation.
+**Recommendation:** GO for a production-sync design using Firebase: browser
+Google login and shared cloud sample storage are feasible with the owner's
+console setup. Do not adopt snapshot synchronization for production: the
+reset-loss check proves that successful delivery alone is insufficient.
+
+Before integrating real learning progress, agree the event/revision/reset
+merge policy, durable local queue and account-switch/cache boundaries. Prove
+Windows system-browser authentication and the Android native bridge on their
+actual shells; browser success does not establish either native login path.
+The spike has not selected a production backend, migrated real progress or
+unpaused the historical Supabase implementation. The investigation is complete;
+production implementation is a separate owner decision.

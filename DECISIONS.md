@@ -1589,7 +1589,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 
 ## SSO/cross-device sync deferred (2026-09-13)
 
-**2026-10-31 update:** the owner authorized a Firebase feasibility spike (#301), prioritizing easy Google-login setup. This evaluates an alternative; the Supabase branch below remains paused, and production backend adoption has not been agreed. The isolated experiment and measured results live in `spikes/firebase/README.md`.
+**2026-10-31 update:** the owner authorized a Firebase feasibility spike (#301), prioritizing easy Google-login setup. This evaluates an alternative; the Supabase branch below remains paused, and production backend adoption has not been agreed. The isolated experiment and measured results live in `spikes/firebase/README.md`. The owner subsequently verified real Google login and same-account sample sharing across browser profiles; anonymous cloud reads remain denied. This establishes browser feasibility. Native login and a merge policy that preserves offline practice and resets are required follow-ups before production adoption.
 
 - **The Supabase SSO/cross-device-sync work is deliberately paused, not
   abandoned.** The user asked to resume it ("let us pickit up") after it
