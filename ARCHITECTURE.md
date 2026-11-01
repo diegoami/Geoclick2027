@@ -342,8 +342,12 @@ The isolated Auth/Firestore experiment in `spikes/firebase/` (proposal #301)
 exercises synthetic data only. Its `native/` subproject is a separate Tauri
 system-browser OAuth/PKCE proof with no game stores or Firestore writes;
 real Windows Google sign-in and browser/native UID agreement have passed in
-the development shell. Protected credential persistence, Android and production
-integration remain separate checks. Both READMEs distinguish automated tests from live evidence.
+the development shell. The optional Windows credential proof now stores its
+Google renewable grant natively through `vault.rs`, with project/client/account
+binding and cancellation generations in `session.rs`; its SDK session remains
+in memory. Real save/restore/forget across process restarts has passed. Android
+and production integration remain separate checks. Guest play remains available
+without an account. Both READMEs distinguish automated tests from live evidence.
 
 ## Repo layout
 
