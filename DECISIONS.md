@@ -2697,10 +2697,12 @@ question was answered "as recommended" in the issues.
   licence or credit, which the issue's CC0-files plan would have needed.
   Sounds are off by default; Android haptics are on and follow the system's
   reduce-motion setting.
-- **The start screen speaks completion (#262, #263; amended 2026-10-31, #296):**
+- **The start screen speaks completion (#262, #263; amended 2026-11-01, #296/#309):**
   the owner chose permanent continent fill colors, with learning progress
   shown separately through counts and gold completion outlines. Practice,
-  including zero-known records, never fades or replaces a country's color.
+  including zero-known records, never fades or replaces an available country's color.
+  The owner clarified on 2026-11-01 that countries without their own playable
+  maps stay neutral and uncolored; catalogue availability is separate from progress.
   Detailed maps are excluded from completion. The single suggestion line
   remains, rather than reopening the home-order decision.
 - **Out of scope, on purpose:** leaderboards, accounts, coins or XP, daily
@@ -2725,8 +2727,10 @@ collapsed by default. Place names / Name places stay visible outside it.
 The top buttons have reduced vertical padding and retain their original
 horizontal padding; the font range extends to 50–300%, and the quiz instruction line is removed entirely. Tutorials open Settings when their controls
 are needed.
-The owner also asked for plain region names on Known maps: neither popup
-names nor curved SVG names are underlined there, in any color scheme.
+All names on Known maps stay plain, in both popup and curved-SVG renderers.
+The owner clarified on 2026-11-01 that this includes town labels, in every
+color scheme (#310). Town pills and retention strengths remain; the quiz's
+revealed-answer dotted guidance is a separate rule.
 The milestone review exposed horizontal padding reductions on secondary
 controls. The owner clarified that original horizontal padding is preserved
 throughout, including type chips and preference pills; only vertical padding

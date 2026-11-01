@@ -75,7 +75,7 @@
 
 	const view = $derived(picker ? validView(picker, pickerView()) : 'world');
 
-	// Country fills always keep their continent color; progress is separate (#296).
+	// Countries with maps keep continent color; unavailable countries stay neutral.
 	const CONTINENT_COLOURS: Record<string, string> = {
 		europe: '#5b9fc8',
 		africa: '#e58a73',
@@ -92,10 +92,17 @@
 		UNKNOWN_CONTINENT
 	] as unknown as maplibregl.ExpressionSpecification;
 
+	const COUNTRY_COLOUR = [
+		'case',
+		['boolean', ['feature-state', 'hasMaps'], false],
+		CONTINENT_COLOUR,
+		'#e4ded0'
+	] as unknown as maplibregl.ExpressionSpecification;
+
 	const continentName = (id: string) => t(`continent.${id}` as TranslationKey);
 
 	// Counts and gold outlines show learning progress; no learning state is
-	// allowed to replace a country's continent fill (owner, #296).
+	// allowed to replace an available country's continent fill (owner, #296).
 	const progress = $derived(
 		worldProgress(
 			groups.map((g) => ({ id: pickerIdOf(g), mapIds: g.maps.map((m) => m.id) })),
@@ -109,10 +116,12 @@
 		if (!loaded || !map || !picker) return;
 		for (const country of picker.countries) {
 			const p = byGroup.get(country.id);
+			const available = hasMaps(country.id);
 			map.setFeatureState(
 				{ source: 'picker', sourceLayer: 'countries', id: country.id },
 				{
-					complete: !!p && p.known === p.total
+					hasMaps: available,
+					complete: available && !!p && p.known === p.total
 				}
 			);
 		}
@@ -371,7 +380,7 @@
 								source: 'picker',
 								'source-layer': 'countries',
 								paint: {
-									'fill-color': CONTINENT_COLOUR,
+									'fill-color': COUNTRY_COLOUR,
 									'fill-opacity': 0.85
 								}
 							},

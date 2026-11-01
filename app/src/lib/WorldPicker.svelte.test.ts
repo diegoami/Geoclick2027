@@ -210,12 +210,17 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		const initial = fake.state.mapOptions!.style!.layers.find(
 			(layer) => layer.id === 'countries-fill'
 		)!.paint!['fill-color'];
-		// This is the user contract: feature-state must never drive a fill.
-		// It also includes unavailable countries: continent alone chooses color.
-		expect(JSON.stringify(initial)).not.toContain('feature-state');
-		expect(initial).toEqual(
-			expect.arrayContaining(['north-america', '#8b86d4', 'europe', '#5b9fc8'])
-		);
+		// Availability may choose neutral land; learning progress never chooses color.
+		expect(initial).toEqual([
+			'case',
+			['boolean', ['feature-state', 'hasMaps'], false],
+			expect.arrayContaining(['north-america', '#8b86d4', 'europe', '#5b9fc8']),
+			'#e4ded0'
+		]);
+		await expect.poll(() => fake.state.featureStates['united-states']?.hasMaps).toBe(true);
+		expect(fake.state.featureStates.italy?.hasMaps).toBe(true);
+		expect(fake.state.featureStates.belarus?.hasMaps).toBe(false);
+		expect(fake.state.featureStates.belarus?.complete).toBe(false);
 		const cases = [
 			{ known: 0, complete: false },
 			{ known: 24, complete: false },
@@ -231,6 +236,8 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 			await expect
 				.poll(() => fake.state.featureStates['united-states']?.complete)
 				.toBe(step.complete);
+			expect(fake.state.featureStates['united-states']?.hasMaps).toBe(true);
+			expect(fake.state.featureStates.belarus?.hasMaps).toBe(false);
 			const current = fake.state.paintProperties['countries-fill:fill-color'] ?? initial;
 			expect(current).toEqual(initial);
 			const expected = t('picker.namesKnown', {

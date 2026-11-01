@@ -185,7 +185,7 @@ html[data-text-size='large'] .picker-continent {
 	text-align: center;
 }
 
-/* Asked names are underlined except for the plain Known region labels below. */
+/* Asked names are underlined except for all plain Known labels below. */
 .geoclick-retention.retention-asked .maplibregl-popup-content,
 .geoclick-stretched text.retention-asked {
 	text-decoration: underline;
@@ -210,8 +210,8 @@ html[data-text-size='large'] .sections h3 {
 	overflow-wrap: anywhere;
 }
 
-/* Known region names stay plain in both label renderers. */
-html .map-view .geoclick-region-name .maplibregl-popup-content,
+/* All Known names stay plain, including town pills and curved region labels. */
+html .map-view .geoclick-retention .maplibregl-popup-content,
 html .map-view .geoclick-stretched text {
 	text-decoration: none;
 }
