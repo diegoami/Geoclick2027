@@ -349,6 +349,13 @@ in memory. Real save/restore/forget across process restarts has passed. Android
 and production integration remain separate checks. Guest play remains available
 without an account. The separate `spikes/firebase/android/` Capacitor project uses compatible isolated dependencies and a guarded emulator-only APK. Its release-signed API 35 check passed native Google identity, browser/Windows UID agreement, remembered fresh-token restore and sign-out/forget. Production progress integration remains pending. The READMEs distinguish automated tests from live evidence.
 
+The account-sync foundation is `progressEvents.ts` (validated immutable
+operations, causal/reset-safe projection) and `indexedDbProgressJournal.ts`
+(account-bound atomic browser journal/pending uploads). See
+[the journal contract](docs/PROGRESS_JOURNAL.md). The game repository factory
+still selects its existing guest stores; auth/UI/cloud/native adapters remain
+integration work. Guest/offline play never requires an account.
+
 ## Repo layout
 
 ```
