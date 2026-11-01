@@ -341,8 +341,9 @@ and approved integration design #313. Production sync remains unimplemented.
 The isolated Auth/Firestore experiment in `spikes/firebase/` (proposal #301)
 exercises synthetic data only. Its `native/` subproject is a separate Tauri
 system-browser OAuth/PKCE proof with no game stores or Firestore writes;
-real-provider/native success and protected credential persistence remain
-separate checks. Both READMEs distinguish automated tests from live evidence.
+real Windows Google sign-in and browser/native UID agreement have passed in
+the development shell. Protected credential persistence, Android and production
+integration remain separate checks. Both READMEs distinguish automated tests from live evidence.
 
 ## Repo layout
 

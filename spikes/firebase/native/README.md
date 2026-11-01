@@ -85,9 +85,29 @@ do not publish this experimental executable as a Geoclick release.
   attempts, a second account and sign-out. Cancel must prevent an in-flight
   result from leaving the proof signed in. No automated Google/MFA interaction.
 - Record emulator/local tests separately from actual provider/native success.
-  Until real sign-in and same-UID comparison have been performed, Windows
-  feasibility remains pending. Android and protected native persistence are
-  also still pending, even if this initial credential exchange succeeds.
+  Android, protected native persistence and installed-game integration remain
+  separate proof items after the initial Windows credential exchange.
+
+## Real-provider evidence (2026-11-01)
+
+The owner completed Google sign-in in the system browser from this native Tauri
+development shell, using a Desktop-app OAuth client in the same Firebase test
+project as the browser spike. Firebase accepted the returned credential and
+reported provider `google.com`. The owner then signed into the browser spike;
+its UID was compared exactly with the native UID captured from the proof UI:
+**MATCH**. No UID, email, tokens or client JSON are published in this record.
+
+After closing and reopening the native proof, the UI was ready and signed out,
+with the provider cleared, as required by this experiment's in-memory policy.
+The separate Windows executable builds; the live Google check above was on the
+development shell, not a release installer. Real-provider cancellation/second
+account/sign-out checks, protected native persistence, Android and game progress
+sync remain pending. Automated UI tests cover cancellation/sign-out separately.
+
+The first real Windows startup reproduced a Vite `EBUSY` watcher error against
+the Rust executable. The native Vite server now excludes `src-tauri`; the parent
+browser demo excludes the `native` subtree. Tauri watches its Rust sources
+separately, and both live local servers started successfully after the fix.
 
 Primary references: [Google desktop OAuth](https://developers.google.com/identity/protocols/oauth2/native-app),
 [Firebase Google credentials](https://firebase.google.com/docs/auth/web/google-signin).
