@@ -2,8 +2,9 @@
 
 This is the production event/storage foundation for optional account sync. It
 has no auth, network or Svelte dependency. The existing guest repositories and
-tutorial sandbox are unchanged; account UI, quiz operation capture, cloud
-transport/rules and native SQLite journal adapters are separate integration work.
+tutorial sandbox are unchanged; account UI, cloud transport/rules and native SQLite journal adapters are
+separate integration work. Quiz capture and its account adapter are implemented
+without switching the default guest repository factory.
 
 ## Boundaries
 
@@ -75,10 +76,10 @@ with a proved causal/reset retention policy. The initial browser implementation
 reads the owner's history to derive the frontier on writes; incremental caches
 can optimize this without changing the authoritative journal contract.
 
-This module does not yet switch the game's repository factory. Quiz integration
-must capture grade operations and stable logical action keys instead of trying
-to reverse-engineer grades from saved snapshots. First sign-in must show the
-approved import choice. Native adapters must provide the same atomic append and
+This module does not yet switch the game's repository factory. QuizView captures
+grade operations and stable sitting/target identities through an optional account
+writer, instead of reverse-engineering grades from saved snapshots. First sign-in
+must show the approved import choice. Native adapters must provide the same atomic append and
 owner boundaries. Firestore delivery, error/status UI and the full cross-device
 acceptance matrix remain under #311/#313. Login stays optional; normal local
 play and existing guest progress require no account or backend availability.
@@ -123,3 +124,36 @@ operations; preparing again leaves already-imported targets with the account.
 No cleanup or fake rollback removes a baseline that committed before failure.
 The browser tests cover interruption/retry, concurrent confirmations, account
 switches during reads/writes, reset races and preservation of guest data.
+
+
+## Quiz capture and account repository
+
+`accountProgressRepository.ts` implements the repository's read/reset contract
+against a bound journal. Replacement card/summary/record snapshots are rejected:
+account writes must go through the per-map `quizOperations` capability. Commands
+are copied before queuing and serialized, so a rapid final answer is committed
+before its completed-round event. A failed command is reported to its caller;
+subsequent commands may still attempt durable writes. No in-memory queue is
+presented as durable storage and no failed append is acknowledged.
+
+QuizView emits actual grades/dates, stable round/target answer keys, optional
+chosen-target mix-ups and one completed-round operation with score, slipped
+count and eligible elapsed time. Guest repositories continue receiving their
+existing snapshots. Account-operation failures display the existing localized
+storage warning. The authoritative projection uses the existing scheduler and
+best-time/confusion rules; the view's immediate feedback remains optimistic.
+
+A sitting has a random memory-only identity retained on trips to the Overview.
+Its repository namespace must match before resuming; guest/account changes or a
+different project/UID start a fresh sitting. Late timed-round cleanup can only
+update that same sitting. This does not persist unfinished rounds across reload.
+The tutorial delegates capabilities/namespaces per map to its captured sandbox,
+so tutorial answers never become account events. If an opened account cannot
+read, `loadPlayableCardStates` keeps that account destination and the warning;
+it never substitutes a guest destination. Guest read failure still uses memory.
+
+The default factory is not bound to an account yet. Optional sign-in controls,
+auth lifecycle/remounts, cloud transport/rules and native SQLite adapters remain
+required before exposing production sync. Tests cover the real component-to-
+IndexedDB path and reopen, queue order, idempotent retries, account isolation,
+reset score retention, rejected snapshots/unknown targets and tutorial routing.

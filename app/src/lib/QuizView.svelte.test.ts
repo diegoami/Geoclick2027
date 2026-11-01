@@ -10,9 +10,11 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import { rate } from '@geoclick/srs';
 import QuizView from './QuizView.svelte';
+import { createAccountProgressRepository } from './accountProgressRepository';
+import { IndexedDbProgressJournal } from './indexedDbProgressJournal';
 import { setLanguage } from './i18n.svelte';
 import { createInMemoryProgressRepository, todayLocalDate } from './progressRepository';
-import type { ProgressRepository } from './progressRepository';
+import type { ProgressRepository, QuizProgressWriter } from './progressRepository';
 import { forgetRound } from './quizRound';
 import { quizMode, setQuizMode } from './mapPrefs.svelte';
 
@@ -240,6 +242,132 @@ describe('QuizView (FT-59)', () => {
 	});
 	afterEach(() => forgetRound(MAP_ID));
 
+	it('captures actual answer operations and one completion across a resumed sitting', async () => {
+		const answer = vi.fn<QuizProgressWriter['answer']>(async () => undefined),
+			round = vi.fn<QuizProgressWriter['round']>(async () => undefined);
+		fake.state.repository!.quizOperations = () => ({ answer, round });
+		fake.state.repository!.progressScope = () => 'account:A';
+		const saveRecords = vi.spyOn(fake.state.repository!, 'saveMapRecords');
+		const first = await mount();
+		const [right, wrong] = slipNames();
+		await drop(right, right);
+		await drop(wrong, right);
+		expect(answer).toHaveBeenNthCalledWith(1, {
+			roundId: expect.any(String),
+			targetId: right.toLowerCase(),
+			grade: 'good',
+			date: todayLocalDate()
+		});
+		expect(answer).toHaveBeenNthCalledWith(2, {
+			roundId: expect.any(String),
+			targetId: wrong.toLowerCase(),
+			grade: 'again',
+			date: todayLocalDate(),
+			chosenId: right.toLowerCase()
+		});
+		const id = answer.mock.calls[0][0].roundId;
+		first.unmount();
+		await mount();
+		await finish();
+		await expect.poll(() => round.mock.calls.length).toBe(1);
+		expect(answer).toHaveBeenCalledTimes(16);
+		expect(answer.mock.calls.every(([operation]) => operation.roundId === id)).toBe(true);
+		expect(round).toHaveBeenCalledWith({
+			roundId: id,
+			summary: { total: 16, perfect: 15, totalErrors: 1, completedAt: expect.any(String) },
+			slipped: 0
+		});
+		expect(saveCardState).not.toHaveBeenCalled();
+		expect(saveRecords).not.toHaveBeenCalled();
+		expect(saveSummary).not.toHaveBeenCalled();
+	});
+	it('starts a fresh sitting when the repository namespace changes while away', async () => {
+		fake.state.repository!.progressScope = () => 'account:A';
+		const first = await mount();
+		const right = slipNames()[0];
+		await drop(right, right);
+		first.unmount();
+		const other = createInMemoryProgressRepository();
+		other.progressScope = () => 'account:B';
+		fake.state.repository = other;
+		await mount();
+		expect(placedNames()).toEqual([]);
+		await finish();
+		expect(await other.getCardStates(MAP_ID)).toHaveLength(16);
+	});
+	it('shows the storage warning when an account operation cannot be committed', async () => {
+		fake.state.repository!.quizOperations = () => ({
+			answer: async () => {
+				throw new Error('durable append denied');
+			},
+			round: async () => undefined
+		});
+		const error = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+		try {
+			const screen = await mount();
+			const right = slipNames()[0];
+			await drop(right, right);
+			await expect
+				.poll(() => screen.container.querySelector('.storage-warning')?.textContent?.length ?? 0)
+				.toBeGreaterThan(0);
+			expect(saveCardState).not.toHaveBeenCalled();
+		} finally {
+			error.mockRestore();
+		}
+	});
+	it('durably journals a real quiz into IndexedDB and restores the same results after reopen', async () => {
+		const databaseName = 'quiz-journal-test-' + crypto.randomUUID();
+		const owner = { projectId: 'test-project', uid: 'quiz-account' };
+		let journal = new IndexedDbProgressJournal(owner, { databaseName });
+		const repository = createAccountProgressRepository(
+			journal,
+			async () => new Set(fake.mapDef.targets.map((t) => t.id))
+		);
+		fake.state.repository = repository;
+		const screen = await mount();
+		let mounted = true;
+		try {
+			const [right, wrong] = slipNames();
+			await drop(right, right);
+			await drop(wrong, right);
+			await finish();
+			await expect
+				.poll(async () => (await repository.getLastSessionSummary(MAP_ID))?.total)
+				.toBe(16);
+			expect(screen.container.querySelector('.storage-warning')).toBeNull();
+			const events = await journal.pending();
+			expect(events.map((event) => event.operation.kind)).toEqual([
+				...Array(16).fill('answer'),
+				'round'
+			]);
+			const cards = await repository.getCardStates(MAP_ID);
+			expect(cards.find((card) => card.targetId === wrong.toLowerCase())?.cleanStreak).toBe(0);
+			expect(cards.find((card) => card.targetId === right.toLowerCase())?.cleanStreak).toBe(1);
+			const records = await repository.getMapRecords(MAP_ID);
+			expect(records.confusions).toEqual([
+				{ targetId: wrong.toLowerCase(), chosenId: right.toLowerCase(), count: 1 }
+			]);
+			screen.unmount();
+			mounted = false;
+			await journal.close();
+			journal = new IndexedDbProgressJournal(owner, { databaseName });
+			const reopened = createAccountProgressRepository(
+				journal,
+				async () => new Set(fake.mapDef.targets.map((t) => t.id))
+			);
+			expect(await reopened.getCardStates(MAP_ID)).toEqual(cards);
+			expect(await reopened.getMapRecords(MAP_ID)).toEqual(records);
+			expect((await reopened.getLastSessionSummary(MAP_ID))?.totalErrors).toBe(1);
+		} finally {
+			if (mounted) screen.unmount();
+			await journal.close();
+			await new Promise<void>((resolve, reject) => {
+				const request = indexedDB.deleteDatabase(databaseName);
+				request.onsuccess = () => resolve();
+				request.onerror = () => reject(request.error);
+			});
+		}
+	});
 	it('keeps both quiz modes visible outside collapsed Settings, without an instruction line', async () => {
 		const screen = await mount();
 		const panel = screen.container.querySelector<HTMLDetailsElement>('.settings-panel')!;

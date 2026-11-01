@@ -19,6 +19,10 @@ import type { QuizSession } from '@geoclick/quiz-engine';
 /** What it takes to carry on exactly where the player left off: the round
  * itself and the names the tray was offering (FT-21's hand). */
 export interface RoundInProgress {
+	/** Stable for this sitting, including trips away and back; never persisted. */
+	roundId?: string;
+	/** Prevents a guest/account or different-account sitting from being resumed. */
+	progressScope?: string;
 	session: QuizSession;
 	hand: string[];
 	/** Every target's earned level when the round started, so the score panel
@@ -54,4 +58,14 @@ export function roundInProgress(mapId: string): RoundInProgress | undefined {
  * by a tutorial starting on its map (FT-60). */
 export function forgetRound(mapId: string): void {
 	rounds.delete(mapId);
+}
+
+/** Not a secret: getRandomValues also works for guest play on an HTTP origin. */
+export function createRoundId(): string {
+	return (
+		'round-' +
+		Array.from(crypto.getRandomValues(new Uint8Array(16)), (byte) =>
+			byte.toString(16).padStart(2, '0')
+		).join('')
+	);
 }

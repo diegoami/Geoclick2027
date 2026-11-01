@@ -1,10 +1,20 @@
-// Iteration 5 (local persistence): everything is keyed to the device/
-// browser, never a user - no accounts, no login, see ARCHITECTURE.md's
+// Guest persistence: everything below is keyed to the device/
+// browser. Account event storage is in accountProgressRepository.ts; see ARCHITECTURE.md's
 // Storage section. This interface is deliberately backend-agnostic so a
 // later SQLite/Tauri implementation (Iteration 7) can replace the
 // localStorage one below without touching call sites.
 
 import type { CardState as SchedulerState } from '@geoclick/srs';
+import type { ProgressOperation } from './progressEvents';
+
+export interface QuizProgressWriter {
+	answer(
+		operation: Omit<Extract<ProgressOperation, { kind: 'answer' }>, 'kind' | 'mapId'>
+	): Promise<void>;
+	round(
+		operation: Omit<Extract<ProgressOperation, { kind: 'round' }>, 'kind' | 'mapId'>
+	): Promise<void>;
+}
 
 // A packages/srs scheduler state plus the target it belongs to - the
 // scheduler itself doesn't know about targets, only the repository layer
@@ -42,6 +52,10 @@ export interface MapRecords {
 }
 
 export interface ProgressRepository {
+	/** Account repositories capture operations rather than replacing snapshots. */
+	quizOperations?(mapId: string): QuizProgressWriter | undefined;
+	/** The namespace an unfinished sitting belongs to; undefined is the existing guest. */
+	progressScope?(mapId: string): string | undefined;
 	getCardStates(mapId: string): Promise<CardState[]>;
 	saveCardState(mapId: string, state: CardState): Promise<void>;
 	getLastSessionSummary(mapId: string): Promise<SessionSummary | undefined>;
@@ -220,7 +234,9 @@ export async function createProgressRepository(): Promise<ProgressRepository> {
 
 /**
  * A repository and the card states it holds for one map, falling back to
- * memory if either opening the repository or reading it fails (FT-57). The
+ * memory if opening/reading a guest repository fails (FT-57). An opened
+ * account keeps its original destination and reports failures; it is never
+ * replaced by a guest repository. The
  * read is part of opening: the native repositories create their database
  * connection lazily, on the first read, so a real open failure surfaces here
  * rather than when the repository is created. The round is playable either
@@ -231,13 +247,18 @@ export async function loadPlayableCardStates(
 	mapId: string,
 	create: () => Promise<ProgressRepository> = createProgressRepository
 ): Promise<{ repository: ProgressRepository; cardStates: CardState[]; failed: boolean }> {
+	let opened: ProgressRepository | undefined;
 	try {
 		const repository = await create();
+		opened = repository;
 		const cardStates = await repository.getCardStates(mapId);
 		return { repository, cardStates, failed: false };
 	} catch (e) {
 		console.error('Could not read saved progress; this round will not be remembered.', e);
-		return { repository: createInMemoryProgressRepository(), cardStates: [], failed: true };
+		// Never substitute a guest destination for an account that failed to read.
+		// The warning stays visible; its bound writer can only save there or fail.
+		const repository = opened?.progressScope?.(mapId) ? opened : createInMemoryProgressRepository();
+		return { repository, cardStates: [], failed: true };
 	}
 }
 
@@ -404,6 +425,8 @@ export function createSandboxedProgressRepository(
 ): ProgressRepository {
 	const pick = (mapId: string) => (mapId === sandboxedMapId ? memory : real);
 	return {
+		quizOperations: (mapId) => pick(mapId).quizOperations?.(mapId),
+		progressScope: (mapId) => pick(mapId).progressScope?.(mapId),
 		getCardStates: (mapId) => pick(mapId).getCardStates(mapId),
 		saveCardState: (mapId, state) => pick(mapId).saveCardState(mapId, state),
 		getLastSessionSummary: (mapId) => pick(mapId).getLastSessionSummary(mapId),

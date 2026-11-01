@@ -1,7 +1,12 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { IndexedDbProgressJournal } from './indexedDbProgressJournal';
-import { GuestProgressImporter, type GuestImportJournal } from './guestProgressImport';
-import { projectProgress, type ProgressOperation, type ProgressOwner } from './progressEvents';
+import { GuestProgressImporter } from './guestProgressImport';
+import {
+	projectProgress,
+	type ProgressOperation,
+	type ProgressJournal,
+	type ProgressOwner
+} from './progressEvents';
 import { createInMemoryProgressRepository, type ProgressRepository } from './progressRepository';
 import { rate } from '@geoclick/srs';
 const owner = { projectId: 'test-project', uid: 'account-A' },
@@ -38,7 +43,7 @@ async function guest() {
 }
 function importer(
 	source: ProgressRepository,
-	journal: GuestImportJournal,
+	journal: ProgressJournal,
 	current: () => ProgressOwner | undefined = () => owner
 ) {
 	return new GuestProgressImporter(source, journal, current);
