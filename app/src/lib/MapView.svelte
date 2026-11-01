@@ -64,6 +64,8 @@
 	let anyShown = $state(false);
 	/** Whether the saved progress has been read, so an empty map really is one. */
 	let loaded = $state(false);
+	/** An introduction, dismissible for this Known-view visit. */
+	let emptyNoticeDismissed = $state(false);
 	/** Whether any name has an earned level, i.e. whether there is anything to reset. */
 	const anyEarned = $derived(Object.values(streaks).some((level) => level > 0));
 	const mapTitle = $derived(mapDisplayName(mapId) ?? mapDef?.name ?? mapId);
@@ -378,10 +380,18 @@
 				</button>
 			{/if}
 		</div>
-	{:else if loaded && !anyEarned}
+	{:else if loaded && !anyEarned && !emptyNoticeDismissed}
 		<!-- A map never played says what this screen is for (#269). -->
 		<div class="legend empty" bind:this={legendEl} data-testid="known-empty">
-			<strong>{t('known.emptyTitle')}</strong>
+			<div class="empty-heading">
+				<strong>{t('known.emptyTitle')}</strong>
+				<button
+					type="button"
+					class="empty-close"
+					aria-label={t('known.dismissEmpty')}
+					onclick={() => (emptyNoticeDismissed = true)}><span aria-hidden="true">×</span></button
+				>
+			</div>
 			<p>{t('known.emptyBody')}</p>
 			<div class="empty-actions">
 				<a class="clear-btn" href={resolve('/map/[mapId]/overview', { mapId })}
@@ -495,6 +505,35 @@
 		max-width: min(22rem, calc(100% - 1.5rem));
 		color: var(--gc-text, #1f3d2a);
 		font-size: 0.875rem;
+	}
+	.empty-heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		width: 100%;
+	}
+	.empty-close {
+		flex: 0 0 auto;
+		width: 2rem;
+		height: 2rem;
+		padding: 0;
+		border: none;
+		border-radius: 0.3rem;
+		background: transparent;
+		color: var(--gc-muted, #6b7770);
+		font: inherit;
+		font-size: 1.25rem;
+		line-height: 1;
+		cursor: pointer;
+	}
+	.empty-close:hover {
+		background: var(--gc-hover, rgba(17, 24, 21, 0.07));
+		color: var(--gc-text, #2b332e);
+	}
+	.empty-close:focus-visible {
+		outline: 2px solid var(--gc-accent, #b5691f);
+		outline-offset: 1px;
 	}
 	.legend.empty p {
 		margin: 0;

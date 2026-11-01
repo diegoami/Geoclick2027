@@ -80,7 +80,7 @@ Puoi scegliere una vista geografica oppure un elenco. Nella vista geografica sce
 
 Premi il tipo di mappa che vuoi aprire. La percentuale o il conteggio accanto a una mappa indica quanti luoghi conosci; non rappresenta un voto dell’ultima partita. La scelta fra mappa ed elenco e le preferenze vengono ricordate. L’offerta del tutorial appare una volta, ma il comando Tutorial rimane disponibile.
 
-Sulla mappa del mondo ogni paese mantiene il colore del proprio continente, qualunque sia il progresso. Esercitarsi non fa sbiadire il colore. Un paese conosciuto del tutto riceve un **bordo dorato**; contano regioni e città, non le mappe dettagliate. I contatori accanto alle mappe e il totale dei nomi conosciuti mostrano il progresso separatamente dai colori delle aree.
+Sulla mappa del mondo i paesi con mappe proprie mantengono il colore del continente, qualunque sia il progresso. I paesi senza mappe proprie restano neutri, senza colore. Esercitarsi non fa sbiadire il colore. Un paese conosciuto del tutto riceve un **bordo dorato**; contano regioni e città, non le mappe dettagliate. I contatori accanto alle mappe e il totale dei nomi conosciuti mostrano il progresso separatamente dai colori delle aree.
 
 Una riga sopra la mappa o l’elenco suggerisce che cosa giocare: per esempio «Continua Italy — Regioni — sai 14 / 20», «Rigioca Italy — Regioni — l’ultima volta 3 sono scesi di un gradino» oppure «Prossima: Italy — Città — conosci tutta Italy — Regioni». Premendola si apre il quiz di quella mappa. La riga manca quando non c’è nulla da suggerire e durante il tutorial.
 
@@ -111,9 +111,9 @@ Qui costruisci la tua mappa. I nomi compaiono con evidenza diversa secondo il lo
 
 Tocca o clicca un luogo per aggiungere il suo nome; ripeti per nasconderlo. Puoi scegliere più nomi insieme. Lo stile **Scelto** distingue queste scelte dai risultati del quiz. **Azzera** elimina le scelte temporanee e ripristina la visualizzazione dei nomi guadagnati: non cancella i gradini guadagnati. Le scelte durano per la sessione.
 
-Scegliere un luogo apre anche la sua scheda, quando ci sono informazioni disponibili. Nelle mappe delle città tocchi il punto. Nascondere di nuovo il nome chiude la scheda. Questa schermata non assegna punteggi.
+Scegliere un luogo apre anche la sua scheda, quando ci sono informazioni disponibili. Nelle mappe delle città tocchi il punto. Nascondere di nuovo il nome chiude la scheda. Questa schermata non assegna punteggi. In Conoscenza anche i nomi delle città sono senza sottolineatura.
 
-Su una mappa mai giocata compare un piccolo riquadro **Ancora niente di imparato**, con i pulsanti **Panoramica** e **Quiz**.
+Su una mappa mai giocata compare un piccolo riquadro **Ancora niente di imparato**, con i pulsanti **Panoramica** e **Quiz**. Chiudi l’avviso con **×** per liberare la mappa: resta chiuso per questa visita.
 
 Quando hai guadagnato qualcosa sulla mappa, la legenda contiene anche **Azzera i progressi**. Una finestra chiede conferma: «Azzerare i tuoi progressi su Italy — Regioni?». **Annulla** lascia tutto com’è; **Sì, azzera** riporta ogni nome di questa mappa a sconosciuto e cancella anche i nomi scelti e una prova lasciata a metà. Le altre mappe, i preferiti e l’ultimo punteggio restano. Il pulsante **Azzera** della legenda, invece, toglie soltanto i nomi scelti.
 

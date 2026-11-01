@@ -12,8 +12,11 @@ one entry per tagged version on `main`.
 For players:
 
 - **Desktop page zoom:** Ctrl + / Ctrl − and Ctrl+wheel are enabled in the Windows app. They resize the whole interface, including buttons and icons. Appearance text size and the map's geographic zoom remain separate.
-- **Steady world colors:** countries retain their continent color before and after practice, including when no names are Known. Progress stays visible in counts and gold completion outlines; the green progress-fill legend is removed.
+- **Steady world colors:** countries with their own maps retain their continent color before and after practice, including when no names are Known. Countries without maps remain uncolored. Progress stays visible in counts and gold completion outlines; the green progress-fill legend is removed.
+- **Plain names on Known:** town names as well as region names have no underlines; the quiz keeps its separate answer guidance.
+- **Close the empty Known hint:** the “Nothing known yet” card now has an accessible × button, so you can dismiss it and uncover the map for the current visit.
 - **Updated English, German and Italian manuals and home-screen illustrations** explain the separate zoom settings and the world map's colors.
+
 Under the hood:
 
 - Fixes #295 and implements the owner-approved color choice in #296, merged in [PR #297](https://github.com/diegoami/Geoclick2027/pull/297).

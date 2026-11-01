@@ -4,17 +4,18 @@
 // and a town's name keeps its box.
 import { afterEach, describe, expect, it } from 'vitest';
 import '../app.css';
+import '../appearance.css';
 import { MAGNIFIED_CLASS } from './labelMagnify';
 
 const NONE = 'rgba(0, 0, 0, 0)';
 const ASKED_INK = 'rgb(150, 85, 20)';
 
 /** One MapLibre popup with the given classes, as MapView and QuizView add them. */
-function label(classes: string, name = 'San Juan') {
+function label(classes: string, name = 'San Juan', host = document.body) {
 	const popup = document.createElement('div');
 	popup.className = `maplibregl-popup ${classes}`;
 	popup.innerHTML = `<div class="maplibregl-popup-content">${name}</div>`;
-	document.body.append(popup);
+	host.append(popup);
 	return getComputedStyle(popup.firstElementChild!);
 }
 
@@ -110,6 +111,50 @@ describe('region labels in the Quiz, Overview and Tour (FT-74)', () => {
 			const style = label(classes, 'Essen');
 			expect(style.backgroundColor).not.toBe(NONE);
 			expect(style.fontFamily).not.toContain('Georgia');
+		}
+	});
+});
+
+describe('plain Known names in every color scheme', () => {
+	afterEach(() => document.body.replaceChildren());
+	it('keeps asked towns and region names plain while preserving quiz guidance', () => {
+		const root = document.documentElement;
+		const previous = root.dataset.scheme;
+		try {
+			for (const scheme of ['classic', 'ocean', 'forest', 'contrast']) {
+				root.dataset.scheme = scheme;
+				const known = document.createElement('div');
+				known.className = 'map-view';
+				document.body.append(known);
+				const town = label(
+					'geoclick-solved-popup geoclick-retention retention-asked',
+					'Essen',
+					known
+				);
+				const region = label(
+					'geoclick-solved-popup geoclick-retention geoclick-region-name retention-asked',
+					'Toscana',
+					known
+				);
+				expect(town.textDecorationLine).toBe('none');
+				expect(town.backgroundColor).not.toBe(NONE);
+				expect(region.textDecorationLine).toBe('none');
+				const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+				svg.classList.add('geoclick-stretched');
+				const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				text.classList.add('retention-asked');
+				text.textContent = 'Toscana';
+				svg.append(text);
+				known.append(svg);
+				expect(getComputedStyle(text).textDecorationLine).toBe('none');
+				const quiz = label('geoclick-solved-popup revealed', 'Essen');
+				expect(quiz.textDecorationLine).toBe('underline');
+				expect(quiz.textDecorationStyle).toBe('dotted');
+				document.body.replaceChildren();
+			}
+		} finally {
+			if (previous === undefined) delete root.dataset.scheme;
+			else root.dataset.scheme = previous;
 		}
 	});
 });

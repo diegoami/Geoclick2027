@@ -426,8 +426,10 @@ finger's drag aims, tap or drag), `difficulty.ts` (the hand), `nameIt.ts`
 round changed, best times) and `feedback.ts` (sound and haptics).
 `ScorePanel.svelte` shows the end of a round. The start screen's suggestion
 comes from `suggestion.ts`, and `homeProgress.ts`'s `worldProgress` supplies
-world totals and gold completion outlines. `WorldPicker.svelte` keeps every
-country's continent fill independent of progress (#296).
+world totals and gold completion outlines. `WorldPicker.svelte` keeps countries with their own maps in continent colors
+independent of progress; unavailable countries use neutral land fill (#296, #309).
+`appearance.css` keeps all `MapView` retention labels plain, including town pills
+and curved region names; quiz-answer guidance retains its separate styling (#310).
 
 **The tutorial** (FT-11, script in `docs/TUTORIAL.md`) runs over these
 same screens rather than copies of them. A Tutorial button sits on the

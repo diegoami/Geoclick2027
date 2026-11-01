@@ -80,7 +80,7 @@ Du kannst zwischen Weltkarte und Liste wählen. Auf der Weltkarte öffnest du zu
 
 Drücke auf den gewünschten Kartentyp, um ihn zu öffnen. Die Prozentzahl oder Anzahl bei einer Karte zeigt, wie viele ihrer Orte du kennst. Sie ist keine Bewertung der letzten Runde. Die Darstellung und deine Einstellungen werden gespeichert. Das Angebot für das Tutorial erscheint einmal; der Tutorial-Knopf bleibt auch danach erreichbar.
 
-Auf der Weltkarte behält jedes Land die Farbe seines Kontinents, unabhängig vom Lernstand. Üben lässt die Farbe nicht verblassen. Ein vollständig gewusstes Land bekommt einen **goldenen Rand**; Regionen- und Städtekarten zählen, Detailkarten nicht. Zähler bei den Karten und die Gesamtzahl der gewussten Namen zeigen den Fortschritt getrennt von den Flächenfarben.
+Auf der Weltkarte behalten Länder mit eigenen spielbaren Karten die Farbe ihres Kontinents, unabhängig vom Lernstand. Länder ohne eigene Karten bleiben neutral und ungefärbt. Üben lässt die Farbe nicht verblassen. Ein vollständig gewusstes Land bekommt einen **goldenen Rand**; Regionen- und Städtekarten zählen, Detailkarten nicht. Zähler bei den Karten und die Gesamtzahl der gewussten Namen zeigen den Fortschritt getrennt von den Flächenfarben.
 
 Eine Zeile über Karte oder Liste schlägt vor, was du als Nächstes spielen kannst, zum Beispiel „Weiter mit Italy — Regionen — 14 / 20 gewusst“, „Italy — Regionen nochmal spielen — letztes Mal 3 eine Stufe verloren“ oder „Als Nächstes: Italy — Städte — Italy — Regionen kannst du ganz“. Ein Druck darauf öffnet das Quiz dieser Karte. Gibt es nichts vorzuschlagen, oder läuft das Tutorial, fehlt die Zeile.
 
@@ -111,9 +111,9 @@ Hier entsteht deine persönliche Karte. Die Stärke eines Namens folgt seiner St
 
 Klicke oder tippe auf einen Ort, um seinen Namen hinzuzufügen; noch einmal nimmt ihn wieder weg. Du kannst mehrere Namen gleichzeitig wählen. **Gewählt** unterscheidet solche Namen von denen, die du im Quiz verdient hast. **Zurücksetzen** entfernt die vorübergehenden Auswahlen und zeigt wieder den erworbenen Lernstand. Es löscht keine erreichten Stufen. Die Auswahlen gelten für die laufende Sitzung.
 
-Wenn Informationen verfügbar sind, öffnet die Auswahl auch eine Ortskarte mit Wissenswertem. Auf einer Städtekarte tippst du auf den Punkt. Das erneute Ausblenden des Namens schließt die Ortskarte. In dieser Ansicht gibt es keine Bewertung.
+Wenn Informationen verfügbar sind, öffnet die Auswahl auch eine Ortskarte mit Wissenswertem. Auf einer Städtekarte tippst du auf den Punkt. Das erneute Ausblenden des Namens schließt die Ortskarte. In dieser Ansicht gibt es keine Bewertung. Alle Namen auf Gewusst, auch Städtenamen, erscheinen ohne Unterstreichung.
 
-Auf einer nie gespielten Karte erscheint eine kleine Karte **Noch nichts gewusst** mit den Knöpfen **Übersicht** und **Quiz**.
+Auf einer nie gespielten Karte erscheint eine kleine Karte **Noch nichts gewusst** mit den Knöpfen **Übersicht** und **Quiz**. Mit **×** schließt du den Hinweis für diesen Besuch, damit die Karte frei bleibt.
 
 Sobald du auf der Karte etwas erreicht hast, steht in der Legende auch **Fortschritt zurücksetzen**. Ein Dialog fragt nach: „Deinen Fortschritt auf Italy — Regionen zurücksetzen?“. **Abbrechen** ändert nichts; **Ja, zurücksetzen** macht alle Namen dieser Karte wieder unbekannt und löscht auch die gewählten Namen und eine halb gespielte Runde. Deine anderen Karten, deine Favoriten und dein letztes Ergebnis bleiben. Das ist etwas anderes als **Zurücksetzen** in der Legende, das nur die gewählten Namen entfernt.
 

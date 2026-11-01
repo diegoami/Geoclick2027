@@ -206,8 +206,9 @@ parts. The finer ones are listed below a line, after the standard ones (see
 
 Once you have played, the world map shows how far you have got:
 
-- Every country keeps its continent's colour, whether it is unplayed, partly
-  known or fully known. Practice never fades or replaces its fill colour.
+- Countries with their own playable maps keep their continent's colour, whether
+  unplayed, partly known or fully known. Practice never changes that colour.
+- Countries without maps of their own remain uncolored, with a neutral land fill.
 - A country you know completely gets a **gold outline**. Its regions and towns
   maps count; detailed maps don't.
 - Progress is shown by the counts beside maps/countries and the total legend,
@@ -402,11 +403,12 @@ something about it (if there is anything to show; taking a name off closes the c
 ![Tapping Sicilia puts its name on the map and opens its fact card](manual/known-fact.jpg)
 
 Because a mistake takes a name down a step, this map is an honest picture of
-what you actually know. Nothing here is scored. On a towns map, tap a town's dot.
+what you actually know. Nothing here is scored. On a towns map, tap a town's dot. All names on Known,
+including towns, are plain text without underlines.
 
 **A map you have never played** shows a small card, **"Nothing known yet"**,
 with an **Overview** button to study the names and a **Quiz** button to start
-playing.
+playing. Close the card with **×** to free the map; it stays closed for this visit.
 
 ![A new map: Nothing known yet, with Overview and Quiz buttons](manual/known-empty.jpg)
 
