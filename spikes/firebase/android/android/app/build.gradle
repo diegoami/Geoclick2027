@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+// Dedicated proof only. Reuse the real release certificate for Android OAuth.
+// The properties/key stay outside this checkout and never enter command arguments.
+def proofSigningPath = System.getenv('GEOCLICK_ANDROID_SIGNING_PROPERTIES')
+def proofSigningFile = proofSigningPath ? new File(proofSigningPath) : null
+def proofSigning = new Properties()
+if (proofSigningFile?.exists()) proofSigningFile.withInputStream { proofSigning.load(it) }
+def proofStore = proofSigning.getProperty('storeFile') ? new File(proofSigning.getProperty('storeFile')) : null
+if (proofStore != null && !proofStore.isAbsolute()) proofStore = new File(proofSigningFile.parentFile, proofSigning.getProperty('storeFile'))
+
+
+android {
+    namespace = "com.geoclick.mobile"
+    compileSdk = rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.geoclick.mobile"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "0.1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    signingConfigs {
+        proofRelease {
+            if (proofStore != null) {
+                storeFile proofStore
+                storePassword proofSigning.getProperty('storePassword')
+                keyAlias proofSigning.getProperty('keyAlias')
+                keyPassword proofSigning.getProperty('keyPassword')
+            }
+        }
+    }
+    buildTypes {
+        release {
+            if (proofStore != null) signingConfig signingConfigs.proofRelease
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    implementation project(':capacitor-cordova-android-plugins')
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}
