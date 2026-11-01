@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  server: { watch: { ignored: ['**/native/**'] } }
+  server: { watch: { ignored: ['**/native/**', '**/android/**'] } }
 });

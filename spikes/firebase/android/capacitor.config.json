@@ -1,0 +1,18 @@
+{
+  "appId": "com.geoclick.mobile",
+  "appName": "Geoclick Firebase Proof",
+  "webDir": "dist",
+  "android": {
+    "webContentsDebuggingEnabled": true,
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "FirebaseAuthentication": {
+      "skipNativeAuth": true,
+      "providers": [
+        "google.com"
+      ]
+    }
+  },
+  "loggingBehavior": "none"
+}

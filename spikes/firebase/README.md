@@ -174,3 +174,12 @@ The separate [native experiment](native/README.md) tests a real Tauri shell's
 Google authorization-code/PKCE callback and Firebase credential exchange. It
 uses its own app identifier and no game progress. See its setup and evidence
 limits; adding the harness does not establish real-provider/native success.
+
+
+## Android native proof (#313)
+
+The separate [Android experiment](android/README.md) uses a compatible Capacitor
+bridge and its own SDK dependency set. It builds a release-signed, emulator-only
+auth APK with guest/session-only defaults and opt-in remembered sign-in. Its
+README separates mocked tests, compiled APK results and pending real native
+Google identity checks. It never opens the game's learning stores.
