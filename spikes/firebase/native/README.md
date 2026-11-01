@@ -6,12 +6,16 @@ the system browser, with a random loopback port and authorization-code/S256 PKCE
 The resulting Google ID token is exchanged through Firebase's JavaScript SDK;
 only a successful Firebase result establishes an authenticated UID.
 
-This is not production login, Android integration, durable account storage or
-progress synchronization. It deliberately uses in-memory Firebase persistence.
-Closing/reopening starts signed out; secure native persistence remains a later
-proof item. The downloaded Desktop client may contain Google's installed-app
-client secret; keep the configuration outside Git, never use a service-account
-key and never treat a distributed desktop app as a confidential OAuth client.
+Production game login, Android and progress synchronization remain outside this
+harness. The Firebase SDK session stays in memory. An unchecked **Keep me signed
+in on this Windows account** uses memory only. Opting in requests a renewable
+Google grant, held natively and saved to Windows Credential Manager only after
+Firebase confirms the UID. A later launch obtains and verifies a fresh identity;
+it does not trust cached identity data as an authenticated session.
+
+The downloaded Desktop client may contain Google's installed-app client secret;
+keep that configuration outside Git, never use a service-account key and never
+treat a distributed desktop app as a confidential OAuth client.
 
 ## Install and check
 
@@ -46,8 +50,10 @@ cd spikes/firebase/native
 npm run native:dev
 ```
 
-The proof window identifies the configured test project. Click **Open Google in
-system browser**, then complete the account/consent flow yourself. Return to the
+The proof window identifies the configured test project and rejects a Desktop
+client from another project. Leave **Keep me signed in** unchecked to repeat the
+original memory-only experiment. To test persistence, check it before clicking
+**Open Google in system browser**, then complete account/consent yourself. Return to the
 proof window. It must report Firebase accepted the credential and show a UID
 with provider `google.com`. Compare that UID with the same real Google account
 in the parent browser spike. A Google callback alone is not proof of a matching
@@ -67,7 +73,10 @@ do not publish this experimental executable as a Geoclick release.
 
 ## Checks and limits
 
-- The browser UI test mocks native IPC and Firebase HTTP responses; it checks denial, cancellation before/during exchange, UID/provider display, sign-out and reload without real cloud calls. It does not prove native or Google sign-in.
+- The browser UI test mocks native IPC and Firebase HTTP. It covers opt-in vs
+  memory-only sign-in, restore/reload, late cancellation, wrong UID/project,
+  network/revocation errors, failed vault writes/deletes and sign-out. No live
+  cloud calls; this is separate from real provider testing.
 - Rust tests cover the RFC PKCE vector, separate random secrets, callback host,
   method/path/state/duplicate rejection, provider denial, nonce/audience/expiry
   binding, a forged request followed by a valid one, one-use listener closure,
@@ -79,14 +88,15 @@ do not publish this experimental executable as a Geoclick release.
   Google endpoints are constants, not taken from downloaded JSON.
 - Token exchange follows no redirects, has a timeout and returns fixed errors
   rather than credential-bearing responses. Only the Google ID token crosses
-  the local Tauri IPC; Google access/refresh tokens are discarded. No token is
-  written to logs or shown in the UI.
+  the local Tauri IPC. Google access tokens are discarded; the optional Google
+  refresh grant stays native and is stored only in the Windows vault. Firebase
+  still has its own in-memory SDK credentials. No token is logged or shown.
 - Test cancellation while the browser is open, denial, close/restart, repeated
   attempts, a second account and sign-out. Cancel must prevent an in-flight
   result from leaving the proof signed in. No automated Google/MFA interaction.
 - Record emulator/local tests separately from actual provider/native success.
-  Android, protected native persistence and installed-game integration remain
-  separate proof items after the initial Windows credential exchange.
+  Android and installed-game integration remain separate proof items after
+  the Windows credential and protected-persistence experiments.
 
 ## Real-provider evidence (2026-11-01)
 
@@ -112,3 +122,36 @@ separately, and both live local servers started successfully after the fix.
 Primary references: [Google desktop OAuth](https://developers.google.com/identity/protocols/oauth2/native-app),
 [Firebase Google credentials](https://firebase.google.com/docs/auth/web/google-signin).
 The approved policy/design lives in #313; release ordering/acceptance in #311.
+
+
+## Protected Windows session storage
+
+`src-tauri/src/vault.rs` uses Windows generic credentials through `CredWriteW`,
+`CredReadW` and `CredDeleteW`, with a current-user/local-machine persistence
+scope. Its target is `Geoclick/FirebaseProof/v1/<project>/<client-id-sha256>`;
+it never enumerates or touches other apps' credentials. At-rest protection is
+provided by Windows for this Windows account; this is not protection against
+malicious code already running as that same account. Unsupported/unavailable
+storage has no plaintext fallback.
+
+`session.rs` stages the native grant in memory, waits for Firebase confirmation,
+and binds the saved record to the project, Desktop client, verified Firebase
+UID and Google subject. Google refresh grants never enter the WebView or
+browser local/session storage. The SDK's Firebase credentials remain in memory.
+Saved schema/configuration and returned identities are checked on restore;
+expired/revoked grants require sign-in again, while network failures retain the
+saved record for retry. A failed native delete is shown explicitly.
+
+Generations invalidate cancelled/forgotten attempts and prevent late callbacks
+from saving a session or clearing a newer account. Only one proof instance runs
+at a time. Sign out removes this proof's saved grant and the in-memory Firebase
+session, without revoking the account's other browser/device grants.
+
+Automated tests include real Windows vault roundtrip/overwrite/deletion using
+unique disposable entries, oversize rejection, saved-record validation,
+confirmation/commit/cancel races, interrupted staging and failure reporting.
+They do not use the actual account's saved credential.
+
+Live persistence checks are still pending: opt in, sign in, close/reopen without
+a Google popup, verify the same UID, then sign out and confirm another launch is
+signed out. Test denied/offline restore separately from invalid/revoked grants.
