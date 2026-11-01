@@ -78,8 +78,17 @@ restart, remembered fresh-token restore, UID mismatch and sign-out. They do not
 contact the cloud or prove Android native login. The mocked bridge is restricted
 to Vite test serve mode and cannot be packaged by the build command.
 
-Real native Google sign-in is **pending**. On the owned emulator, first check
-that the app opens in guest mode without an account. The owner then signs in
+The real signed APK was installed on the owned API 36 emulator. With Wi-Fi and
+mobile data disabled, a fresh app process reached guest mode, showed Signed out,
+left Keep unchecked and enabled the sign-in control. Continue without signing
+in also worked offline without a Google prompt. These are native guest-startup
+checks, not a real Google-login result.
+
+ADB on Windows returned CRCRLF line endings for the AVD name. A regression test
+now covers that parsing and rejects ambiguous installed-package output, while
+retaining the strict emulator/name/version guards.
+
+Real native Google sign-in is **pending**. The owner then signs in
 through the native Google prompt; compare the Firebase UID with the previously
 proved browser/Windows identity. Check default session-only restart, opt-in
 remembered restart, and sign-out followed by restart. Keep real-device, emulator,
