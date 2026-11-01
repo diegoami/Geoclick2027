@@ -12,7 +12,8 @@ causal graph and projects one map through the existing scheduler/mix-up helpers.
 `indexedDbProgressJournal.ts` implements browser durability and a pending-upload
 queue. A journal copies/freezes its project/UID at construction. Switching
 accounts creates another journal; an old asynchronous call cannot become a
-write to the new account. Guest data is never read, imported or deleted here.
+write to the new account. The journal itself never reads or deletes guest data. The explicit import adapter
+below receives a read-only guest repository.
 
 Every immutable event has an ID, project/UID, device ID, device sequence,
 Lamport time, causal parent frontier, caller operation key and typed operation.
@@ -41,8 +42,8 @@ Legacy import is an explicit baseline, not fake practice. Account history wins
 preexisting/concurrent target conflicts. A reset is not an empty account.
 Causally later practice may build on an accepted baseline. Map summary/records
 follow the same conservative overlap policy; a later Known reset still retains
-an already accepted imported score. Import normalization/preview and preservation
-of the original guest copy belong to the integration adapter.
+an already accepted imported score. The explicit import adapter normalizes legacy earned levels and previews
+conflicts while preserving the original guest copy.
 
 Malformed/unsupported records are quarantined, conflicting IDs/operation keys
 or actor sequences cannot silently overwrite one another, and missing ancestors
@@ -87,3 +88,38 @@ practice, exact existing fading/score contracts and import conflicts;
 `indexedDbProgressJournal.browser.test.ts` uses real Chromium IndexedDB for
 reopen, retries, concurrent writers, aborted transactions, owner isolation,
 quarantine and acknowledgement behavior.
+
+
+## Explicit guest import adapter
+
+`guestProgressImport.ts` prepares a preview from selected supported maps and a
+read-only guest repository. Preparing or declining writes nothing. The UI must
+first obtain the synchronized account history; this adapter cannot establish
+cloud freshness or authorize transport. Quarantined/incomplete local account
+history blocks import rather than treating unknown history as empty.
+
+Only `confirm` of that importer's original preview can append the reviewed data.
+The preview and private operation payloads are copied; later guest/catalog edits
+cannot alter them. A callback checks the current project/UID before and after
+awaited reads and between writes. Sign-out/account change stops the batch. An
+already in-flight append may finish only in the original bound journal; it
+cannot turn into a write to the newly active account.
+
+Existing account targets/map records and reset barriers win. Confirmation checks
+again for activity since preview; a reset racing the append still wins in the
+reducer. Returned counts describe the final local projection, not a promise that
+no offline remote activity can arrive later. The future UI must explain that
+account progress wins conflicts and display skipped/unsupported items.
+
+Legacy levels above three normalize to Known; missing old levels read as zero.
+Other malformed values, duplicate/unknown target IDs and records referencing
+unknown targets are skipped as unsupported. The original guest copy is never
+rewritten or removed, including after success or an interrupted batch.
+
+Each baseline has a deterministic SHA-256 operation key derived from its
+validated contents. Each append is independently durable; the whole import is
+not one transaction. If interrupted, retrying the same preview reuses committed
+operations; preparing again leaves already-imported targets with the account.
+No cleanup or fake rollback removes a baseline that committed before failure.
+The browser tests cover interruption/retry, concurrent confirmations, account
+switches during reads/writes, reset races and preservation of guest data.
