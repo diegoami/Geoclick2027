@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Geoclick Firebase Proof",
+  "version": "0.1.0",
+  "identifier": "com.geoclick.firebaseproof",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://127.0.0.1:5196",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [{ "title": "Geoclick Firebase Proof", "width": 1000, "height": 740 }],
+    "security": { "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src ipc: http://ipc.localhost https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; img-src 'self' data:" }
+  },
+  "bundle": { "active": false, "icon": ["../../../../desktop/src-tauri/icons/icon.ico"] }
+}

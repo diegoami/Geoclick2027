@@ -1,0 +1,12 @@
+{
+  "name": "geoclick-firebase-native-proof",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ../../../node_modules/vite/bin/vite.js --config vite.config.mjs --host 127.0.0.1 --port 5196 --strictPort",
+    "build": "node ../../../node_modules/vite/bin/vite.js build --config vite.config.mjs",
+    "native:dev": "tauri dev",
+    "native:build": "tauri build --no-bundle",
+    "test:ui": "node browser.test.mjs"
+  }
+}
