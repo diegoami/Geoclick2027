@@ -11,7 +11,7 @@
     "configure": "node scripts/configure.mjs",
     "build:android": "node scripts/build-android.mjs",
     "test:ui": "node browser.test.mjs",
-    "test": "node --test --test-reporter=dot scripts/configure.test.mjs scripts/device-safety.test.mjs && node browser.test.mjs",
+    "test": "node --test --test-reporter=dot scripts/configure.test.mjs scripts/device-safety.test.mjs scripts/native-errors.test.mjs && node browser.test.mjs",
     "install:emulator": "node scripts/install-emulator.mjs"
   },
   "dependencies": {

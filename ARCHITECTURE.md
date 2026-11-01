@@ -347,7 +347,7 @@ Google renewable grant natively through `vault.rs`, with project/client/account
 binding and cancellation generations in `session.rs`; its SDK session remains
 in memory. Real save/restore/forget across process restarts has passed. Android
 and production integration remain separate checks. Guest play remains available
-without an account. The separate `spikes/firebase/android/` Capacitor project proves the native Android bridge using compatible isolated dependencies and a guarded emulator-only APK; real native identity checks are pending. The READMEs distinguish automated tests from live evidence.
+without an account. The separate `spikes/firebase/android/` Capacitor project uses compatible isolated dependencies and a guarded emulator-only APK. Its release-signed API 35 check passed native Google identity, browser/Windows UID agreement, remembered fresh-token restore and sign-out/forget. Production progress integration remains pending. The READMEs distinguish automated tests from live evidence.
 
 ## Repo layout
 

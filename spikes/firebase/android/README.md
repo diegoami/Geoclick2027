@@ -10,7 +10,7 @@ Guest mode is available without signing in; remembered sign-in is opt-in.
 - This APK uses `com.geoclick.mobile` to prove the actual Android OAuth package
   and release certificate. Its name is Geoclick Firebase Proof and version code
   is **1**, below normal Geoclick releases. Use only the owned, isolated
-  `Geoclick_Firebase_API36` emulator. The install helper rejects physical devices,
+  `Geoclick_Firebase_API35` or `Geoclick_Firebase_API36` emulator. The install helper rejects physical devices,
   other emulators and any existing game with a different version code. It never
   uninstalls an app or requests a downgrade. Never install this APK over a game.
 - The bridge is `@capacitor-firebase/authentication` 8.6.0 with Capacitor 8.5.2.
@@ -53,8 +53,12 @@ Reuse the dedicated test project's public web config in the ignored
 `44:5A:7D:E7:3D:75:A3:52:B8:F8:7B:A1:58:31:70:53:BF:75:71:FB`.
 Download `google-services.json` outside Git. The helper validates project,
 package and Google web client, then copies it to the ignored native location.
-Some configuration downloads omit Android OAuth-client metadata; the actual
-native Google check establishes whether the console registration is usable.
+Also check Google Auth Platform -> Clients for an Android OAuth client with
+that same package/SHA-1. In this test, the Firebase fingerprint was listed but
+no Android OAuth client existed. The downloaded configuration had only a web
+client; creating the Android OAuth client resolved native sign-in without an
+APK rebuild. Firebase app registration and the OAuth registration are distinct
+checks; adding a fingerprint alone was not sufficient here.
 
 ```powershell
 $env:GEOCLICK_FIREBASE_ANDROID_CONFIG_FILE = 'C:/outside/repo/google-services.json'
@@ -88,12 +92,38 @@ ADB on Windows returned CRCRLF line endings for the AVD name. A regression test
 now covers that parsing and rejects ambiguous installed-package output, while
 retaining the strict emulator/name/version guards.
 
-Real native Google sign-in is **pending**. The owner then signs in
-through the native Google prompt; compare the Firebase UID with the previously
-proved browser/Windows identity. Check default session-only restart, opt-in
-remembered restart, and sign-out followed by restart. Keep real-device, emulator,
-mocked and compiled-APK results distinct. No phone/device success is claimed.
+## Real native evidence (2026-11-01)
+
+The owner completed native Google sign-in on the owned API 35 Google Play
+emulator using the release-signed APK. Firebase verified the credential and
+reported `google.com`. The UID was compared privately with the already verified
+browser/Windows identity: exact match. No UID, email, tokens or configuration
+contents are published here.
+
+- With Keep unchecked, force-stop/relaunch returned to Guest mode and Signed
+  out, with no remembered identity.
+- The owner then checked Keep and signed in. Force-stop/relaunch restored the
+  account and verified a fresh Firebase token without another Google prompt;
+  the UID still exactly matched browser/Windows.
+- The owner selected Sign out and forget. The app confirmed removal, and a
+  further fresh process stayed in Guest mode/Signed out with Keep unchecked.
+- The emulator was stopped after the completed test. No phone, OS reboot or
+  production-game progress-sync result is claimed. Failure cases are covered
+  by mocked tests separately from the live provider checks.
 
 Guest play in the eventual game remains optional-account/local-first. This
 experiment contains no game progress and does not complete Firebase integration.
 Primary setup: https://github.com/capawesome-team/capacitor-firebase/blob/main/packages/authentication/docs/setup-google.md
+
+
+The visible API 36 emulator reproduced clipped/black frames and gfxstream GLES
+errors on this Windows host. Software rendering did not resolve API 36. The
+owned API 35 Google Play image with `-gpu swiftshader` rendered correctly and
+completed the live auth lifecycle above. The guard accepts
+only these two explicitly named proof AVDs, never arbitrary emulators/phones.
+
+Native bridge exceptions may have no message/code. The proof maps known error
+text to fixed, credential-free categories and retains a generic safe category
+when no detail exists. The generic failure in this run was resolved by the
+missing Android OAuth client registration; repeated blind login retries did
+not establish that configuration.
