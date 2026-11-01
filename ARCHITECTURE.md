@@ -351,7 +351,9 @@ without an account. The separate `spikes/firebase/android/` Capacitor project us
 
 The account-sync foundation is `progressEvents.ts` (validated immutable
 operations, causal/reset-safe projection) and `indexedDbProgressJournal.ts`
-(account-bound atomic browser journal/pending uploads). See
+(account-bound atomic browser journal/pending uploads), plus
+`guestProgressImport.ts` (explicit preview/confirmation, account-wins conflicts,
+original guest preservation and retry-safe baselines). See
 [the journal contract](docs/PROGRESS_JOURNAL.md). The game repository factory
 still selects its existing guest stores; auth/UI/cloud/native adapters remain
 integration work. Guest/offline play never requires an account.
