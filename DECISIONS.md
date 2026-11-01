@@ -1587,9 +1587,11 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   3:00 at the floor and keeps it, 46 gives the floor up. 0.75x also joined
   the speed menu, so the pace is still the player's to override.
 
-## SSO/cross-device sync deferred (2026-09-13)
+## SSO/cross-device sync — Firebase first (2026-09-13; updated 2026-11-01)
 
-**2026-10-31 update:** the owner authorized a Firebase feasibility spike (#301), prioritizing easy Google-login setup. This evaluates an alternative; the Supabase branch below remains paused, and production backend adoption has not been agreed. The isolated experiment and measured results live in `spikes/firebase/README.md`. The owner subsequently verified real Google login and same-account sample sharing across browser profiles; anonymous cloud reads remain denied. This establishes browser feasibility. Native login and a merge policy that preserves offline practice and resets are required follow-ups before production adoption.
+**2026-11-01 update:** the owner selected Firebase Google login and shared progress as v1.3's first feature (#311), after shipping v1.2.1. Browser feasibility (#301/#302) is established, including owner-tested same-account sample sharing and anonymous-read denial. The owner approved focused design #313: locally durable immutable operations and deterministic replay; resets defeat practice from a device that had not observed the reset; account progress wins first-import conflicts while guest data is preserved; UID namespaces prevent cross-account uploads. Google only, Spark/no billing, and native-auth proof before full integration. The isolated Windows harness in `spikes/firebase/native/` exercises system-browser PKCE and Firebase credential exchange without game data; automated tests do not prove real Google login, UID compatibility or protected native persistence. Production auth/sync is not yet integrated. The Supabase branch stays paused; its historical pause rationale below does not block the newly approved Firebase work.
+
+**Historical Supabase pause (2026-09-13):**
 
 - **The Supabase SSO/cross-device-sync work is deliberately paused, not
   abandoned.** The user asked to resume it ("let us pickit up") after it

@@ -167,3 +167,10 @@ actual shells; browser success does not establish either native login path.
 The spike has not selected a production backend, migrated real progress or
 unpaused the historical Supabase implementation. The investigation is complete;
 production implementation is a separate owner decision.
+
+## Windows system-browser proof (#313)
+
+The separate [native experiment](native/README.md) tests a real Tauri shell's
+Google authorization-code/PKCE callback and Firebase credential exchange. It
+uses its own app identifier and no game progress. See its setup and evidence
+limits; adding the harness does not establish real-provider/native success.

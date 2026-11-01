@@ -336,10 +336,13 @@ device, not a login. A sync backend (accounts, shared maps, cross-device
 progress) is a clean later addition precisely because it's local-first
 now — same shape as Anki's own architecture. First concrete trigger for
 that addition: recording quiz scores per user across devices, which needs
-sign-in first (Google + other OAuth providers) — planned in ROADMAP.md's
-Iteration 8+. Production sync remains unimplemented. The isolated Firebase
-Auth/Firestore experiment in `spikes/firebase/` (proposal #301) exercises
-synthetic data only; its README records emulator, live and native check results.
+sign-in first. The owner selected Google/Firebase first in release plan #311
+and approved integration design #313. Production sync remains unimplemented.
+The isolated Auth/Firestore experiment in `spikes/firebase/` (proposal #301)
+exercises synthetic data only. Its `native/` subproject is a separate Tauri
+system-browser OAuth/PKCE proof with no game stores or Firestore writes;
+real-provider/native success and protected credential persistence remain
+separate checks. Both READMEs distinguish automated tests from live evidence.
 
 ## Repo layout
 
