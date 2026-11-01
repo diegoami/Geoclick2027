@@ -353,7 +353,11 @@ The account-sync foundation is `progressEvents.ts` (validated immutable
 operations, causal/reset-safe projection) and `indexedDbProgressJournal.ts`
 (account-bound atomic browser journal/pending uploads), plus
 `guestProgressImport.ts` (explicit preview/confirmation, account-wins conflicts,
-original guest preservation and retry-safe baselines). See
+original guest preservation and retry-safe baselines), and
+`accountProgressRepository.ts` (account projection/reset adapter and serialized
+quiz operations). QuizView captures answer/completion operations when that
+capability is present, while guest stores keep snapshot writes. Sitting IDs and
+repository scopes prevent resuming another account's half-finished round. See
 [the journal contract](docs/PROGRESS_JOURNAL.md). The game repository factory
 still selects its existing guest stores; auth/UI/cloud/native adapters remain
 integration work. Guest/offline play never requires an account.

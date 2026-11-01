@@ -63,6 +63,12 @@ export interface ProgressGraph {
 	quarantined: ProgressIssue[];
 	deferred: string[];
 }
+/** Minimal account-bound journal contract shared by quiz and explicit import. */
+export interface ProgressJournal {
+	readonly owner: Readonly<ProgressOwner>;
+	snapshot(): Promise<ProgressGraph>;
+	append(operation: ProgressOperation, key: string): Promise<ProgressEvent>;
+}
 export interface ProgressProjection {
 	cards: CardState[];
 	lastSession?: SessionSummary;

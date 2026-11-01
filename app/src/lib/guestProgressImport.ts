@@ -5,17 +5,12 @@ import {
 	projectProgress,
 	type ProgressEvent,
 	type ProgressGraph,
+	type ProgressJournal,
 	type ProgressOperation,
 	type ProgressOwner
 } from './progressEvents';
 import type { ProgressRepository } from './progressRepository';
 
-/** The journal stays bound to its original account, including across awaited calls. */
-export interface GuestImportJournal {
-	readonly owner: Readonly<ProgressOwner>;
-	snapshot(): Promise<ProgressGraph>;
-	append(operation: ProgressOperation, key: string): Promise<ProgressEvent>;
-}
 type GuestReader = Pick<
 	ProgressRepository,
 	'getCardStates' | 'getLastSessionSummary' | 'getMapRecords'
@@ -91,7 +86,7 @@ export class GuestProgressImporter {
 	private readonly plans = new WeakMap<GuestImportPreview, Plan>();
 	constructor(
 		private readonly guest: GuestReader,
-		private readonly journal: GuestImportJournal,
+		private readonly journal: ProgressJournal,
 		private readonly currentOwner: () => ProgressOwner | undefined
 	) {
 		this.owner = Object.freeze({ ...journal.owner });

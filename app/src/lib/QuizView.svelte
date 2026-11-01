@@ -21,7 +21,7 @@
 	import { tutorialSlipIds } from './tutorialMachine';
 	import { TUTORIAL_MAP_ID } from './tutorialSandbox.svelte';
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
-	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
+	import { createRoundId, forgetRound, rememberRound, roundInProgress } from './quizRound';
 	import FactCard from './FactCard.svelte';
 	import ScorePanel from './ScorePanel.svelte';
 	import { isNewBest, isTimedRound, roundChange, type RoundChange } from './roundReport';
@@ -398,6 +398,7 @@
 	// stays true. Reset whenever a new session starts so the next
 	// completion saves/computes again.
 	let summarySaved = false;
+	let roundId = '';
 
 	// How much of the map is known once the round is over (FT-26). The score
 	// panel's copy stays written text while the map card's became a bar
@@ -427,6 +428,7 @@
 	let lastAnswered: string | undefined;
 	function saveRecords(next: MapRecords) {
 		records = next;
+		if (progressRepository.quizOperations?.(mapId)) return;
 		progressRepository
 			.saveMapRecords(mapId, next)
 			.catch((e) => console.error('Failed to save map records:', e));
@@ -484,13 +486,16 @@
 			// Finished: there is nothing left to come back to.
 			forgetRound(mapId);
 			const summary = { ...score, completedAt: new Date().toISOString() };
-			progressRepository
-				.saveLastSessionSummary(mapId, summary)
-				.catch((e) => console.error('Failed to save quiz progress:', e));
+			const writer = progressRepository.quizOperations?.(mapId);
+			if (!writer)
+				progressRepository
+					.saveLastSessionSummary(mapId, summary)
+					.catch((e) => console.error('Failed to save quiz progress:', e));
+			const completedMs = timed ? elapsed() : undefined;
 			panelLastTime = lastTime;
 			lastTime = summary;
 			if (timed) {
-				const ms = elapsed();
+				const ms = completedMs!;
 				const newBest = isNewBest(ms, score.totalErrors, records.bestTimeMs);
 				if (newBest) saveRecords({ ...records, bestTimeMs: ms });
 				timeResult = {
@@ -525,6 +530,17 @@
 				});
 				refreshLevel(mapDef);
 			}
+			writer
+				?.round({
+					roundId,
+					summary,
+					slipped: change?.slipped.length ?? 0,
+					...(completedMs !== undefined ? { timedMs: completedMs } : {})
+				})
+				.catch((e) => {
+					storageWarning = true;
+					console.error('Failed to save quiz progress:', e);
+				});
 		}
 	});
 
@@ -811,7 +827,12 @@
 	 * went to instead, if any: it flashes red and is remembered as a mix-up.
 	 */
 	function resolveAnswer(targetId: string, isCorrect: boolean, wrongName: string | undefined) {
-		if (!session || !mapDef) return;
+		if (
+			!session ||
+			!mapDef ||
+			session.items.find((item) => item.target.id === targetId)?.status !== 'pending'
+		)
+			return;
 		// The tutorial's drop steps (FT-11) wait for a scored drop; does nothing
 		// when no tutorial is running.
 		tutorialDrop(isCorrect);
@@ -829,6 +850,8 @@
 		// Keep the round in case the player steps out to the Overview and back
 		// (quizRound.ts); the completion effect throws it away at the end.
 		rememberRound(mapId, {
+			roundId,
+			progressScope: progressRepository.progressScope?.(mapId),
 			session,
 			hand,
 			levelsAtStart: Object.fromEntries(levelsAtStart),
@@ -858,9 +881,22 @@
 			const previous = cardStatesByTargetId.get(targetId);
 			const next = rate(previous, grade, today);
 			cardStatesByTargetId.set(targetId, next);
-			progressRepository
-				.saveCardState(mapId, { targetId, ...next })
-				.catch((e) => console.error('Failed to save quiz progress:', e));
+			const writer = progressRepository.quizOperations?.(mapId);
+			const chosen =
+				!isCorrect && wrongName ? mapDef.targets.find((t) => t.name === wrongName) : undefined;
+			const saved = writer
+				? writer.answer({
+						roundId,
+						targetId,
+						grade,
+						date: today,
+						...(chosen && chosen.id !== targetId ? { chosenId: chosen.id } : {})
+					})
+				: progressRepository.saveCardState(mapId, { targetId, ...next });
+			saved.catch((e) => {
+				storageWarning = true;
+				console.error('Failed to save quiz progress:', e);
+			});
 		} else {
 			flashWrongRegion(targetId, wrongName);
 		}
@@ -986,6 +1022,7 @@
 		scorePanelDismissed = false;
 		summarySaved = false;
 		forgetRound(mapId);
+		roundId = createRoundId();
 		levelsAtStart = currentLevels(mapDef);
 		practice = practiceRound && canPractise;
 		if (inTutorialMap()) mode = 'place';
@@ -1010,7 +1047,13 @@
 	function resumeRound(): boolean {
 		if (!mapDef || !map) return false;
 		const round = roundInProgress(mapId);
-		if (!round || isSessionComplete(round.session)) return false;
+		if (
+			!round ||
+			isSessionComplete(round.session) ||
+			round.progressScope !== progressRepository.progressScope?.(mapId)
+		)
+			return false;
+		roundId = round.roundId ?? createRoundId();
 		knownAfterRound = undefined;
 		change = undefined;
 		scorePanelDismissed = false;
@@ -1154,7 +1197,13 @@
 	onDestroy(() => {
 		// A timed round left half-played keeps the time played so far (#267).
 		const round = timed ? roundInProgress(mapId) : undefined;
-		if (round && session && !isSessionComplete(session))
+		if (
+			round &&
+			round.roundId === roundId &&
+			round.progressScope === progressRepository.progressScope?.(mapId) &&
+			session &&
+			!isSessionComplete(session)
+		)
 			rememberRound(mapId, { ...round, elapsedMs: elapsed() });
 		// Clear pending flash resets before removing the map: a removed map is
 		// still a truthy reference, so their `if (map)` guard would pass and
