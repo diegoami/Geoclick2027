@@ -1,10 +1,10 @@
 # Geoclick — Roadmap
 
-- **v1.2.1 — waiting for the third milestone review:** the owner approved and merged #308 (dismissible empty Known notice, neutral countries without maps, plain Known town names). The candidate is `b613daa52b2073fa588bba1c69484cc768d96fe6`. [Milestone #304](https://github.com/diegoami/Geoclick2027/issues/304) is the authoritative record of review boundaries, validation and remaining pre-tag checks. No v1.2.1 tag or publication exists; main remains limited to milestone fixes.
+- **Released 2026-11-01: v1.2.1** (tag `b613daa`, [milestone #304](https://github.com/diegoami/Geoclick2027/issues/304): exact-SHA AGREE in round three; [release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.2.1)). Native Windows page zoom, steady continent colors only for countries with maps, plain Known town names and a dismissible empty Known notice. Windows setup installed and USA States drew; native keyboard zoom passed. Signed APK installed on an API 36 emulator and Germany States drew after offline restart. Final HTML5 ZIP checked from a nested HTTP folder, including quiz/reload and EN/DE/IT manual images. MSI built, not separately installed; no physical-phone test. The owner's physical Ctrl+wheel check was on the earlier b7615b4 candidate. Uploaded artifact checksums verified.
 
-- **v1.3.0 — Firebase first:** [release plan #311](https://github.com/diegoami/Geoclick2027/issues/311) records the owner's next-release priority: Google login and shared learning progress in the game, before the approved Name places balance/fillers (#300). Region-first click matching (#303) remains proposed; widget-zoom controls (#298) remain filed, not silently committed to scope. Begin v1.3 after v1.2.1 ships; production sync implementation has not started.
+- **v1.3.0 — Firebase first:** [release plan #311](https://github.com/diegoami/Geoclick2027/issues/311) records the owner's next-release priority: Google login and shared learning progress in the game, before the approved Name places balance/fillers (#300). Region-first click matching (#303) remains proposed; widget-zoom controls (#298) remain filed. The production integration design is next; Firebase login/sync is not yet in the game.
 
-- **Firebase feasibility complete:** the isolated [spike](spikes/firebase/README.md) and #301/#302 established browser Google login/sample sharing, and reproduced stale offline writes undoing a newer reset. The game's normal builds still use local storage/SQLite with no login. Native sign-in, durable queues, account separation and a reset-safe merge policy are production work under #311, not features of v1.2.1.
+- **Firebase feasibility complete:** the isolated [spike](spikes/firebase/README.md) and #301/#302 established browser Google login/sample sharing and reproduced stale offline writes undoing a newer reset. Normal builds remain local-first. Native sign-in, durable queues, account separation and reset-safe merging belong to #311.
 
 - **Released 2026-10-31: v1.2.0** (tag `1904731`, [milestone #287](https://github.com/diegoami/Geoclick2027/issues/287): AGREE in round two; [release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.2.0)). Overall 50–300% text size, four color schemes, pre-paint preference restoration, collapsed map Settings, visible quiz modes, shorter vertical button padding with horizontal padding preserved, plain Known region names, first-visit and large-page wrapping, corrected illustrated manuals, and resumed mix-ups (#277). Windows setup and final HTML5 ZIP tried; signed APK built with the device test deferred by the owner. All uploaded artifact hashes verified.
 
@@ -17,25 +17,9 @@ Check items off as they land; update "Status" as iterations complete.
 
 ## Status
 
-### Resume the current release
+### Next release
 
-Read `AGENTS.md`, then milestone #304 before taking release actions. The owner plans to start the pending review in the next session; the developer must not start/spawn its reviewer. Earlier AGREE verdicts on 557402a and b7615b4 do not cover the current owner-fix candidate. This is the third review round: if it does not end in AGREE, the decision goes to the owner.
-
-1. Fetch refs/tags and list worktrees. The existing implementation/validation checkout is `../Geoclick2027-work/candidate-v1.2.1-557402a47a5c` relative to the main checkout. Its directory name is historical: verify its detached HEAD against the current candidate recorded above and on #304, and keep tracked source clean. A reviewer must create its own fresh detached worktree instead of reusing this one.
-2. The exact candidate has passed the four gates, standalone Firebase checks and publisher extraction; evidence/details live on #304. When the review arrives, read it on GitHub. Reproduce findings before fixing/rebutting them; do not make cosmetic edits to an agreed SHA just before tagging.
-3. **Existing packages are stale for this candidate.** The validation worktree's `dist-release/v1.2.1/html5-report.json` still names b7615b4, not the current owner-fix candidate. The installed Windows test app also predates #308. The shared version label 1.2.1 is not proof of build identity: check the in-app SHA, archive provenance and checksums. Do not publish these old artifacts.
-4. After AGREE on the current exact SHA, follow [RELEASES.md](docs/RELEASES.md): rebuild candidate installers/HTML5 with `node scripts/package-release.mjs --allow-untagged`, try the Windows setup and signed APK by opening a map in each shell, and smoke-test the browser ZIP from a nested HTTP folder with byte-range support and translated manuals. The earlier owner Ctrl+wheel result and historical native/emulator checks are scoped to their SHAs on #304; keep those limits honest when validating the final build.
-5. Only after the required checks, annotate the release tag on exactly the agreed SHA, package from the tag, verify signatures/provenance/checksums and use the publisher's dry run / authorized `--confirm` path. Never trigger or report a Netlify deploy. Update the release record and lift the main freeze only when the milestone is tagged/published; do not start Firebase integration early.
-
-Local resources in the validation checkout, checked when these notes were prepared:
-
-- Root and standalone spike dependencies were installed there; source is detached and clean. Its ignored Android signing configuration and Firebase client `.env.local` are present. No secret values belong in Git or the handoff text.
-- A compatible JDK is cached at `C:/Users/diego/.jdks/jbr-21.0.11`; the default Android Studio Java is newer than Gradle supports. Use the documented [Gradle JDK setup](ONBOARDING.md#running-the-android-build-iteration-8-in-progress), setting JAVA_HOME for the package command as needed.
-- The `Medium_Phone` AVD is available; previous tests used an isolated read-only, headless `emulator-5580` (Android 17 / API 37), then stopped it. No physical-phone check is claimed.
-- Ignored `rendered/owner-ui-308/` preserves the actual notice/town browser probes and screenshots. Other package/smoke helpers and screenshots remain in `rendered/`. These are evidence/tools, not a replacement for rebuilding the final candidate.
-- No task preview is assumed running. Follow the preview/test-port and Windows install-lock guidance in [ONBOARDING gotchas](ONBOARDING.md#gotchas-that-have-already-cost-real-time). The separate Firebase demo's scripts/README own its port and configuration instructions.
-
-The next-release scope is maintained in #311 rather than copied into another status snapshot. After v1.2.1, settle its recommended native-auth/merge/reset/account-switch design before the Large Firebase implementation batch. The old Supabase branch stays paused.
+Follow [plan #311](https://github.com/diegoami/Geoclick2027/issues/311), starting with a focused Firebase integration design proposal before the Large implementation batch. Settle native sign-in/handoff, guest/account namespaces, durable offline events, resets, migrations and first-login import. Then deliver and verify browser, Windows and Android sharing before gameplay work. The Supabase branch remains paused. Milestone #304 records v1.2.1's review and installer evidence; historical candidate packages are not release artifacts.
 
 ### Earlier iteration record
 

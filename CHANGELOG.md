@@ -24,6 +24,8 @@ Under the hood:
 
 Release tracking: [milestone #304](https://github.com/diegoami/Geoclick2027/issues/304) records the exact candidate, independent review and pre-tag installer/device checks. PR #297 records the earlier isolated native keyboard-zoom and world-color checks; those are separate from final release-installer verification.
 
+Published 2026-11-01 from reviewed tag `v1.2.1` / `b613daa52b2073fa588bba1c69484cc768d96fe6`: Windows setup and MSI, signed Android APK and portable HTML5 ZIP. Windows setup installed and USA States drew; native keyboard page zoom passed. Android API 36 emulator drew Germany States after offline restart. The final ZIP passed nested-folder map/quiz/reload and EN/DE/IT manual/image checks. Uploaded hashes verified. MSI was not separately installed; no physical-phone test. Physical Ctrl+wheel was owner-tested on earlier candidate b7615b4. See [the release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.2.1) and milestone #304 for exact evidence.
+
 Not covered:
 
 Deliberately deferred: visible main-window − / + widget-zoom controls (#298), the approved Name places balance/filler design for the next iteration (#300), and the region-first click-matching proposal (#303). Name-button-first clicking is already supported alongside dragging. This patch adds native zoom shortcuts; these follow-up features are not implemented here.
