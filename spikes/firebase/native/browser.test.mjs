@@ -78,6 +78,20 @@ try {
   await page.reload();await status('Restored verified');assert.equal(await page.locator('#uid').innerText(),uid);assert.equal(await page.locator('#provider').innerText(),'google.com');assert.equal(await page.locator('#remember').isChecked(),true);
   assert.equal(await page.evaluate(()=>Object.keys(localStorage).some(key=>key.includes('firebase:authUser'))),false);
   assert.equal((await page.locator('body').innerText()).includes('synthetic-firebase-refresh'),false);
+  const indexedDbContainsCredential=await page.evaluate(async()=>{
+    for(const {name} of await indexedDB.databases()) {
+      const db=await new Promise((resolve,reject)=>{const request=indexedDB.open(name);request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error)});
+      try {
+        for(const store of db.objectStoreNames) {
+          const values=await new Promise((resolve,reject)=>{const request=db.transaction(store,'readonly').objectStore(store).getAll();request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error)});
+          if(JSON.stringify(values).includes('synthetic-firebase-refresh'))return true;
+        }
+      } finally {db.close()}
+    }
+    return false;
+  });
+  assert.equal(indexedDbContainsCredential,false,'Firebase credentials must not persist in WebView IndexedDB');
+
   restoreFailure='network';await page.reload();await status('retained; retry');assert.equal(savedUid,uid);assert.equal(await page.locator('#uid').innerText(),'Signed out');assert.equal(await page.locator('#retry').isEnabled(),true);
   restoreFailure=null;await page.locator('#retry').click();await status('Restored verified');
   responseUid='different-firebase-user';await page.reload();await status('saved account changed');assert.equal(savedUid,null);assert.equal(await page.locator('#uid').innerText(),'Signed out');responseUid=uid;

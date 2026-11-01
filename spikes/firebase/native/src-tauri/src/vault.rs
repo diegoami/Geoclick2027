@@ -125,6 +125,14 @@ impl SecretStore for WindowsVault {
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[cfg(windows)]
+    struct Cleanup<'a>(&'a WindowsVault);
+    #[cfg(windows)]
+    impl Drop for Cleanup<'_> {
+        fn drop(&mut self) {
+            let _ = self.0.delete();
+        }
+    }
     #[test]
     fn targets_separate_clients_and_projects() {
         assert_ne!(
@@ -144,12 +152,6 @@ mod tests {
     fn real_windows_vault_roundtrip_and_deletion_use_disposable_entry_only() {
         let unique = crate::oauth::random_secret();
         let vault = WindowsVault::new("disposable-test", &unique);
-        struct Cleanup<'a>(&'a WindowsVault);
-        impl Drop for Cleanup<'_> {
-            fn drop(&mut self) {
-                let _ = self.0.delete();
-            }
-        }
         let _cleanup = Cleanup(&vault);
         assert!(vault.read().unwrap().is_none());
         vault.write("synthetic-secret-one").unwrap();
@@ -170,6 +172,7 @@ mod tests {
     #[test]
     fn oversize_blob_does_not_replace_existing_entry() {
         let vault = WindowsVault::new("disposable-test", &crate::oauth::random_secret());
+        let _cleanup = Cleanup(&vault);
         vault.write("synthetic-existing").unwrap();
         let result = vault.write(&"x".repeat(3000));
         let retained = vault.read().unwrap();

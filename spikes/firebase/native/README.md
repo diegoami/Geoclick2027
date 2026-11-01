@@ -152,6 +152,26 @@ unique disposable entries, oversize rejection, saved-record validation,
 confirmation/commit/cancel races, interrupted staging and failure reporting.
 They do not use the actual account's saved credential.
 
-Live persistence checks are still pending: opt in, sign in, close/reopen without
-a Google popup, verify the same UID, then sign out and confirm another launch is
-signed out. Test denied/offline restore separately from invalid/revoked grants.
+### Live protected-session evidence (2026-11-01)
+
+- The owner first signed in with Keep unchecked. The proof correctly reported
+  session-only mode; nothing was saved by that sign-in.
+- The owner then explicitly selected Keep before the real Google flow. Firebase
+  verified the account and the proof confirmed Windows vault storage.
+- Closing and reopening the native development shell refreshed the native Google
+  grant, obtained a new verified Firebase session without a Google popup, and
+  restored exactly the same UID. No token or UID is published here.
+- The owner clicked Sign out and forget this device. The proof confirmed removal;
+  a further fresh process was ready and signed out, without restoring a session.
+
+The compiled standalone executable also started ready and signed out with no
+saved grant. Launching it twice left exactly one proof process; the second
+launch exited successfully. Both proof windows/preview servers were closed
+after testing.
+
+The real Google lifecycle above used the development shell. These results do
+not claim a Windows reboot or release-installer test. Offline/revoked-grant, write/delete failures and late
+cancellation are exercised by automated tests; those failures were not induced
+against the real account. Android and production progress integration remain
+pending. Sign-in in the eventual game remains optional: guest/offline play and
+existing local learning progress require no account.
