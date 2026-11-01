@@ -1,10 +1,10 @@
 # Geoclick — Roadmap
 
-- **v1.2.1 owner-testing fixes (#307, #309, #310):** dismiss the empty Known notice with a localized × button; leave countries without maps uncolored; keep town names plain on Known as well as region names. The agreed b7615b4 candidate remains untagged while this ordinary fix PR is tested, approved and reviewed on its resulting SHA.
+- **Released 2026-11-01: v1.2.1** (tag `b613daa`, [milestone #304](https://github.com/diegoami/Geoclick2027/issues/304): exact-SHA AGREE in round three; [release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.2.1)). Native Windows page zoom, steady continent colors only for countries with maps, plain Known town names and a dismissible empty Known notice. Windows setup installed and USA States drew; native keyboard zoom passed. Signed APK installed on an API 36 emulator and Germany States drew after offline restart. Final HTML5 ZIP checked from a nested HTTP folder, including quiz/reload and EN/DE/IT manual images. MSI built, not separately installed; no physical-phone test. The owner's physical Ctrl+wheel check was on the earlier b7615b4 candidate. Uploaded artifact checksums verified.
 
-- **v1.2.1 release preparation (2026-10-31):** desktop browser-style Ctrl zoom (#295) and permanent continent colors with progress in counts/gold outlines (#296) merged in [PR #297](https://github.com/diegoami/Geoclick2027/pull/297). Version/changelog preparation is underway; candidate merge, milestone review and release-installer checks remain pending. The published downloads are still v1.2.0. Visible main-window widget-zoom controls (#298) are filed but not implemented and remain outside this patch.
+- **v1.3.0 — Firebase first:** [release plan #311](https://github.com/diegoami/Geoclick2027/issues/311) records the owner's next-release priority: Google login and shared learning progress in the game, before the approved Name places balance/fillers (#300). Region-first click matching (#303) remains proposed; widget-zoom controls (#298) remain filed. The production integration design is next; Firebase login/sync is not yet in the game.
 
-- **Firebase feasibility spike (2026-10-31, [#301](https://github.com/diegoami/Geoclick2027/issues/301)):** isolated Auth/Firestore emulator checks and Chromium Google-popup simulation pass; cross-client sample sharing and access rules work, but snapshot sync demonstrably loses a newer reset after an offline write. The owner tested real Google sign-in, sample cloud save/read and same-account sharing in another browser profile; an independent anonymous cloud read remains denied after rule publication. Browser feasibility is established; native login and production merge design remain follow-ups. See [the reproducible spike and results](spikes/firebase/README.md). Production remains local-first; v1.2.1 scope is unchanged.
+- **Firebase feasibility complete:** the isolated [spike](spikes/firebase/README.md) and #301/#302 established browser Google login/sample sharing and reproduced stale offline writes undoing a newer reset. Normal builds remain local-first. Native sign-in, durable queues, account separation and reset-safe merging belong to #311.
 
 - **Released 2026-10-31: v1.2.0** (tag `1904731`, [milestone #287](https://github.com/diegoami/Geoclick2027/issues/287): AGREE in round two; [release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.2.0)). Overall 50–300% text size, four color schemes, pre-paint preference restoration, collapsed map Settings, visible quiz modes, shorter vertical button padding with horizontal padding preserved, plain Known region names, first-visit and large-page wrapping, corrected illustrated manuals, and resumed mix-ups (#277). Windows setup and final HTML5 ZIP tried; signed APK built with the device test deferred by the owner. All uploaded artifact hashes verified.
 
@@ -16,6 +16,12 @@ a working, demo-able state so work can resume cleanly from any point.
 Check items off as they land; update "Status" as iterations complete.
 
 ## Status
+
+### Next release
+
+Follow [plan #311](https://github.com/diegoami/Geoclick2027/issues/311), starting with a focused Firebase integration design proposal before the Large implementation batch. Settle native sign-in/handoff, guest/account namespaces, durable offline events, resets, migrations and first-login import. Then deliver and verify browser, Windows and Android sharing before gameplay work. The Supabase branch remains paused. Milestone #304 records v1.2.1's review and installer evidence; historical candidate packages are not release artifacts.
+
+### Earlier iteration record
 
 - **Done**: architecture proposal (`ARCHITECTURE.md`); Iteration 0 (repo &
   tooling scaffolding); Iteration 1 (demo map data pipeline); Iteration 2

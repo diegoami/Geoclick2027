@@ -609,6 +609,12 @@ this one, and is read on demand rather than up front.
 
 ## Gotchas that have already cost real time
 
+- **Stop this worktree's Vite servers before `npm ci` on Windows.** Vite holds
+  the native Rolldown binding open; npm's cleanup then fails with EPERM while
+  unlinking `@rolldown/binding-win32-x64-msvc/*.node`. The standalone Firebase
+  demo borrows the root Vite too, so it can hold the same file open. Stop only
+  the processes you started for that checkout, then retry the install. Do not
+  copy/link dependencies from another worktree or weaken the checks.
 - **Do not build generated content with a bash heredoc.** Shell interpolation
   can eat backticks, `${...}` and escapes such as `\d`, leaving broken content
   that may not be noticed until much later. Write a small `.mjs` script in the
@@ -618,7 +624,11 @@ this one, and is read on demand rather than up front.
   tries the next available port if it is busy. An EACCES listener error is a
   startup failure, even when all Node assertions passed: confirm that the
   client tests ran as well. This avoids depending on a reboot to release the
-  reserved range (reproduced on both IPv4 and IPv6, 2026-10-26).
+  reserved range (reproduced on both IPv4 and IPv6, 2026-10-26). Use 5174
+  or 5195 for an ad hoc preview instead of the browser API's 5191, and stop
+  previews before release gates. A browser shutdown timeout is still a failed
+  gate even when the JSON report lists zero failed tests; retain the failure
+  evidence and obtain a clean zero-exit run before pushing.
 - **MapLibre's `canvas.toDataURL()` is blank** because its canvas is not created
   with `preserveDrawingBuffer`. To verify that a map rendered, take a page
   screenshot and count distinct pixels instead of reading the canvas.
