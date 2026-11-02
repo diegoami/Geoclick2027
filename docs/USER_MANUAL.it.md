@@ -122,6 +122,8 @@ Una riga sopra la mappa o l’elenco suggerisce che cosa giocare: per esempio «
 
 La riga sotto la barra cambia fra le mappe dello stesso paese o continente. La stella riguarda la mappa aperta. **Mostra le mappe dettagliate** aggiunge le suddivisioni più fitte. Una mappa dettagliata già aperta resta nella riga con una **X rossa** quando la casella non è selezionata: la X la nasconde dalla riga e non cancella i progressi.
 
+Nella schermata iniziale, la **X** rossa accanto alla mappa dettagliata selezionata e già aperta la rimette dopo il separatore del menu. La riga torna alla prima mappa di base; i progressi restano intatti. I continenti seguono le stesse regole: **Paesi** e **Capitali** sono di base, le mappe regionali delle città sono dettagliate.
+
 ![Tipi di mappa e accesso alle mappe dettagliate](manual/type-bar-x.jpg)
 
 A destra, **+** e **−** cambiano lo zoom; la bussola riporta l’orientamento verso nord. La rotella del mouse o un gesto con due dita ingrandiscono la mappa; trascinandola la sposti. Il pulsante sotto i comandi di navigazione nasconde o ripristina le barre, per lasciare più spazio alla mappa. Il menu della lingua cambia l’interfaccia. Il pulsante informativo della mappa apre i crediti e le licenze delle fonti.

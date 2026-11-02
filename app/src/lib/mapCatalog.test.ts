@@ -32,7 +32,7 @@ describe('the catalog order', () => {
 		}
 	});
 
-	it('flags exactly the small divisions and the towns slices', () => {
+	it('flags exactly the small divisions, towns slices and continental city subsets', () => {
 		const advanced = mapGroups.flatMap((group) =>
 			group.maps.filter((map) => map.advanced).map((map) => map.id)
 		);
@@ -48,6 +48,11 @@ describe('the catalog order', () => {
 				'south-america-cities-brazil-southern-cone',
 				'oceania-cities-australia-new-zealand',
 				'oceania-cities-pacific-islands',
+				'europe-cities-central',
+				'europe-cities-east',
+				'europe-cities-north',
+				'europe-cities-south',
+				'europe-cities-west',
 				'france-departments',
 				'france-departments-north',
 				'france-departments-south',

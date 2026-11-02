@@ -2646,6 +2646,9 @@ map bar because it was opened carries a large red X that forgets it
 No X on the open map, and none while the "Show detailed maps" tick shows every
 detailed map (unticking is how those go).
 
+**Amended (2026-11-02, owner):** restore the missing remove action beside the home screen's selected, remembered detailed map after the combobox redesign. The red X forgets the shortcut and clears its saved row choice, returning to a basic map; it never clears earned progress. The map bar keeps its existing open-map/Show-all exceptions above. Continents follow the same rule as countries: Countries and Capitals stay basic; Europe's five regional city sets are detailed, as future regional city sets will be. Additional non-European city maps are scoped in proposal #325 before building.
+
+
 
 
 ### Preserve existing town-map IDs when expanding their selection (2026-10-26)

@@ -159,6 +159,10 @@ replace maps, alter camera state or access private MapLibre locale fields.
   home page shows the picker or the list by `homeView()` (FT-78). The list
   is the same `MapSections`. The prerendered HTML is the list, and a
   running tutorial forces it.
+  The selected remembered detail has a red X next to the combobox. Removing it
+  clears only its seen flag and saved row choice, never progress. Continental
+  city subsets carry the same `advanced` flag as country details; basic
+  Countries/Capitals remain visible by default.
 
 - **A derived fact per target** (v0.8.0, FT-34). `data/scripts/build-facts.ts`
   writes `data/maps/<id>/facts.json` beside each `map.json` — structured

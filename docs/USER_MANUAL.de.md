@@ -123,6 +123,8 @@ Eine Zeile über Karte oder Liste schlägt vor, was du als Nächstes spielen kan
 
 Die Zeile darunter wechselt zwischen den Karten desselben Landes oder Kontinents. Der Stern gilt für die gerade geöffnete Karte. **Einstellungen → Detaillierte Karten anzeigen** ergänzt feinere Unterteilungen. Eine bereits geöffnete Detailkarte bleibt mit einem **roten X** erreichbar, wenn das Häkchen wieder ausgeschaltet ist. Das X entfernt diesen zusätzlichen Knopf aus der Zeile, ohne den Lernstand der Karte zu löschen.
 
+Auf der Startseite setzt das rote **X** neben der ausgewählten, bereits geöffneten Detailkarte sie wieder hinter die Trennlinie der Auswahlliste. Die Zeile wechselt zur ersten einfachen Karte; der Lernstand bleibt erhalten. Kontinente haben dieselben Vorgaben: **Länder** und **Hauptstädte** sind einfach, regionale Städtekarten sind detailliert.
+
 ![Kartentypen und rotes X einer Detailkarte](manual/type-bar-x.jpg)
 
 Rechts ändern **+** und **−** den Zoom. Der Kompass richtet die Karte wieder nach Norden aus. Zoomen geht auch mit Mausrad oder zwei Fingern; Ziehen verschiebt die Karte. Ein weiterer Knopf unter den Navigationsknöpfen blendet die Leisten aus oder wieder ein. Das Sprachmenü wechselt die Sprache. Über den Informationsknopf der Karte bleiben Quellenangaben und Lizenzen zugänglich.

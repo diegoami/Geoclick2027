@@ -132,7 +132,7 @@ describe('MapNav sibling map buttons', () => {
 		]);
 	});
 
-	it('offers the continent maps as map-type buttons', async () => {
+	it('offers basic continent maps by default as map-type buttons', async () => {
 		await render(MapNav, {
 			mapId: 'europe-countries',
 			mapName: 'Europe — Countries',
@@ -145,12 +145,7 @@ describe('MapNav sibling map buttons', () => {
 		const buttons = [...group!.querySelectorAll<HTMLButtonElement>('.map-type-btn')];
 		expect(buttons.map((button) => button.dataset.mapId)).toEqual([
 			'europe-countries',
-			'europe-capitals',
-			'europe-cities-central',
-			'europe-cities-east',
-			'europe-cities-north',
-			'europe-cities-south',
-			'europe-cities-west'
+			'europe-capitals'
 		]);
 		expect(
 			buttons.find((button) => button.getAttribute('aria-pressed') === 'true')?.textContent
@@ -350,4 +345,34 @@ describe('MapNav sibling map buttons', () => {
 		});
 		expect(document.querySelector('.map-type-x')).toBeNull();
 	});
+});
+
+it('treats Europe city splits as detailed: basic defaults, explicit reveal, remembered shortcut and X', async () => {
+	setLanguage('en');
+	setDetailedMapsShown(false);
+	for (const part of ['central', 'east', 'north', 'south', 'west'])
+		forgetDetailed('europe-cities-' + part);
+	const screen = await render(MapNav, {
+		mapId: 'europe-countries',
+		mapName: 'Europe',
+		active: 'overview'
+	});
+	const ids = () =>
+		[...screen.container.querySelectorAll<HTMLElement>('[data-map-id]')].map(
+			(el) => el.dataset.mapId
+		);
+	expect(ids()).toEqual(['europe-countries', 'europe-capitals']);
+	(screen.container.querySelector('.settings-panel > summary') as HTMLElement).click();
+	const checkbox = screen.container.querySelector<HTMLInputElement>('.detailed-toggle input')!;
+	checkbox.click();
+	await vi.waitFor(() => expect(ids()).toHaveLength(7));
+	recordVisit('europe-cities-west');
+	checkbox.click();
+	await vi.waitFor(() =>
+		expect(ids()).toEqual(['europe-countries', 'europe-capitals', 'europe-cities-west'])
+	);
+	(
+		screen.container.querySelector('[data-forget-id="europe-cities-west"]') as HTMLButtonElement
+	).click();
+	await vi.waitFor(() => expect(ids()).toEqual(['europe-countries', 'europe-capitals']));
 });

@@ -131,6 +131,16 @@ export function isSeenDetailed(mapId: string): boolean {
 export function forgetDetailed(mapId: string): void {
 	seenDetailed = seenDetailed.filter((id) => id !== mapId);
 	writeIds(SEEN_DETAILED_KEY, seenDetailed);
+	// A removed shortcut must not be silently reselected on the home screen.
+	if (typeof localStorage === 'undefined') return;
+	try {
+		const saved = parseMapTypeSelections(localStorage.getItem(MAP_TYPE_SELECTIONS_KEY));
+		const remaining = Object.entries(saved).filter(([, selected]) => selected !== mapId);
+		if (remaining.length !== Object.keys(saved).length)
+			localStorage.setItem(MAP_TYPE_SELECTIONS_KEY, JSON.stringify(Object.fromEntries(remaining)));
+	} catch {
+		/* The session's seen list still updates if storage is blocked. */
+	}
 }
 
 /** Called when a map view opens (MapNav). Unknown ids are ignored. */
