@@ -1,9 +1,10 @@
 # Account progress journal (#313)
 
-This is the production event/storage foundation for optional account sync. It
-has no auth, network or Svelte dependency. The existing guest repositories and
-tutorial sandbox are unchanged; account UI, cloud transport/rules and native SQLite journal adapters are
-separate integration work. Quiz capture and its account adapter are implemented
+This is the production event/storage foundation for optional account sync. Its reducer and local storage
+have no auth, network or Svelte dependency. The existing guest repositories and
+tutorial sandbox are unchanged; account UI and native SQLite journal adapters are
+separate integration work. Cloud transport/rules are implemented below but are
+not activated by the game. Quiz capture and its account adapter are implemented
 without switching the default guest repository factory.
 
 ## Boundaries
@@ -80,7 +81,7 @@ This module does not yet switch the game's repository factory. QuizView captures
 grade operations and stable sitting/target identities through an optional account
 writer, instead of reverse-engineering grades from saved snapshots. First sign-in
 must show the approved import choice. Native adapters must provide the same atomic append and
-owner boundaries. Firestore delivery, error/status UI and the full cross-device
+owner boundaries. Game auth/sync lifecycle, error/status UI and the full cross-device
 acceptance matrix remain under #311/#313. Login stays optional; normal local
 play and existing guest progress require no account or backend availability.
 
@@ -153,7 +154,81 @@ read, `loadPlayableCardStates` keeps that account destination and the warning;
 it never substitutes a guest destination. Guest read failure still uses memory.
 
 The default factory is not bound to an account yet. Optional sign-in controls,
-auth lifecycle/remounts, cloud transport/rules and native SQLite adapters remain
+auth lifecycle/remounts and native SQLite adapters remain
 required before exposing production sync. Tests cover the real component-to-
 IndexedDB path and reopen, queue order, idempotent retries, account isolation,
 reset score retention, rejected snapshots/unknown targets and tutorial routing.
+
+
+## Immutable cloud delivery
+
+`progressSync.ts` runs explicit, serialized sync cycles against a journal and a
+transport bound to one project/UID. It downloads server pages before publishing
+pending events, commits incoming data locally, then checks the complete causal
+graph. Unsupported/conflicting/incomplete history fails visibly instead of being
+treated as an empty account for import. A successful cycle supplies the future
+account UI with a server-history check; this is not a snapshot transaction with
+other devices. Concurrent remote activity may arrive on the next cycle, and the
+reducer's account-wins/reset-wins policies still apply.
+
+`firestoreProgressTransport.ts` uses **Firestore Lite** with Firebase Auth from the
+same app. It has no persistent cloud cache, listener or SDK-owned offline write
+queue. Local writes never await sync. Each upload uses the original event ID;
+server rules allow create or an exactly equal retry, never replacement/deletion.
+Only a successful server write followed by an exact local acknowledgement clears
+pending status. A crash or storage failure between those steps leaves the event
+pending and safely retryable. Network/quota/permission errors leave local data
+intact. The controller reports `error`; it never calls that state synced.
+
+Reads use `/users/{uid}/progressEventsV1/{id}`, ordered by document ID, at most 100
+records per query and 10,000 per cycle. Uploads stop after 100 pending events;
+`pending` means another cycle is needed. Every cycle rescans from the beginning:
+random event IDs are not a chronological change cursor. A concurrent insert
+behind a page cursor is recovered by a subsequent cycle. There is no pruning,
+compaction or incremental cursor yet; representative read/write usage and larger
+histories must be measured before rollout. A history beyond the current bound
+fails with `history-limit`, rather than declaring a partial account ready.
+
+Wire version 1 retains all envelope fields, with two canonical representations
+that let Firestore rules validate every bounded element within their evaluation
+budget: parents are a comma-separated string of at most 128 token IDs (empty
+string for no parents); each imported confusion is a tab-separated target ID,
+chosen ID and decimal count, with at most 20 entries separated by newlines
+in one bounded string (empty string for an empty list). Valid target IDs
+cannot contain tabs/control characters. Encoding/decoding is confined to the
+transport; the local journal/reducer retain their typed arrays/maps. Document ID
+substitution and malformed wire entries are rejected/quarantined locally.
+
+`firebase/firestore.rules` denies unauthenticated users, Firebase anonymous users,
+other UIDs, foreign project envelopes, unbounded queries and unrelated paths.
+Google identity is required. Closed operation shapes, nested bounds and maximum
+frontiers are enforced on creation. Full calendar, causal and catalog semantics
+are still checked by the client parser/graph: authorization does not replace
+replay validation. These rules are **not published** by the test or the app.
+The existing synthetic spike paths are deliberately absent from production rules;
+its synthetic data must never be imported as game progress.
+
+The caller must stop the controller on sign-out/account change, discard it and
+create a new bound lifetime after sign-in (including the same UID). Auth user
+identity is also checked around every SDK call. `stop()` is irreversible and
+prevents subsequent pages, uploads or acknowledgements. An already issued SDK
+request cannot be cancelled: it may finish against the original fixed path, but
+cannot become a write/acknowledgement for a different account. The future UI must
+capture the same repository scope and remount views across identity changes.
+
+Tests: `progressSync.browser.test.ts` uses real IndexedDB with an injectable
+network for offline/reopen, exact retry, reset convergence, pagination, bounded
+batches, malformed histories and account-switch/cancellation races.
+`npm run test:firebase` needs Java 21 and runs only a fixed demo project on
+loopback emulators. It tests real Auth/Firestore SDK calls and rules, followed by
+`firestoreProgressTransport.browser.test.ts`: two synthetic Google clients,
+real Chromium IndexedDB, offline append/reopen, stale reset, later practice and
+guest-copy preservation through the actual transport. This is **local emulator
+evidence**, not real Google, production cloud, installed Windows or Android
+sharing. The four ordinary gates do not start emulators; their browser suite
+skips that one explicitly opt-in integration test.
+
+The game still starts as a guest. Account controls, localized status/import UI,
+auth lifetimes and sync scheduling/backoff must be connected before player use;
+native SQLite/auth integration and the full #311 acceptance matrix follow.
+No account, cloud availability or network is required for existing local play.

@@ -359,8 +359,12 @@ quiz operations). QuizView captures answer/completion operations when that
 capability is present, while guest stores keep snapshot writes. Sitting IDs and
 repository scopes prevent resuming another account's half-finished round. See
 [the journal contract](docs/PROGRESS_JOURNAL.md). The game repository factory
-still selects its existing guest stores; auth/UI/cloud/native adapters remain
-integration work. Guest/offline play never requires an account.
+still selects its existing guest stores. `progressSync.ts` and
+`firestoreProgressTransport.ts` provide bounded immutable delivery; production
+rules live in `firebase/firestore.rules`. Firestore Lite has no persistent cache
+or offline queue; the local journal owns durability. Local Auth/Firestore emulator
+tests include the full real-IndexedDB path. Game auth/UI/lifecycle and native
+adapters remain integration work. Guest/offline play never requires an account.
 
 ## Repo layout
 
