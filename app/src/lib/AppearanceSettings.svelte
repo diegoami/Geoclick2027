@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import AccountPanel from './AccountPanel.svelte';
 	import { t, type TranslationKey } from './i18n.svelte';
 	import {
 		APPEARANCE_CHANGED,
@@ -117,7 +116,6 @@
 		<p>{t('appearance.colorHint')}</p>
 	</fieldset>
 	<p class="saved">{t('appearance.saved')}</p>
-	<AccountPanel />
 </dialog>
 
 <style>

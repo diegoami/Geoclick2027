@@ -197,8 +197,25 @@ export class BrowserAccountSession {
 			this.deps.progressChanged();
 			if (result.pending) this.schedule(30000); // No idle history polling on the free tier.
 			return true;
-		} catch {
+		} catch (error) {
 			if (this.active(lifetime.generation)) {
+				const code =
+					typeof error === 'object' && error !== null && 'code' in error ? error.code : undefined;
+				if (
+					typeof code === 'string' &&
+					[
+						'permission-denied',
+						'unauthenticated',
+						'unavailable',
+						'resource-exhausted',
+						'failed-precondition',
+						'deadline-exceeded',
+						'history-limit',
+						'incomplete-history',
+						'unsupported-remote-history'
+					].includes(code)
+				)
+					console.warn('Account synchronization failed:', code);
 				this.update({ sync: 'error', error: 'sync' });
 				this.schedule(Math.min(300000, 30000 * 2 ** Math.min(this.failures++, 4)));
 			}

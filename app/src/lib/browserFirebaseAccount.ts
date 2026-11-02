@@ -11,7 +11,7 @@ import {
 	signInWithPopup,
 	signOut
 } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore/lite';
+import { getFirestore, setLogLevel } from 'firebase/firestore/lite';
 import { IndexedDbProgressJournal } from './indexedDbProgressJournal';
 import { createFirestoreProgressTransport } from './firestoreProgressTransport';
 import type { BrowserAccountAuth, BrowserAccountIdentity } from './browserAccountSession';
@@ -43,6 +43,9 @@ export function parseBrowserFirebaseConfig(input: unknown): BrowserFirebaseConfi
 	}
 }
 export function createBrowserFirebaseAccount(config: BrowserFirebaseConfig) {
+	// SDK warning URLs contain account paths and the public API key. The game
+	// reports classified failure codes instead of forwarding those diagnostics.
+	setLogLevel('silent');
 	const app = initializeApp(config, 'geoclick-game-account-v1');
 	// A previous explicit Remember choice may restore. New sign-ins always set
 	// their selected persistence before the popup; unchecked uses memory only.

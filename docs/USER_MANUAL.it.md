@@ -54,7 +54,7 @@ mostrala prima con il pulsante sotto i controlli dello zoom.
 
 ### Account facoltativo nel browser
 
-Dove disponibile, apri **Impostazioni → Aspetto → Account** e scegli **Accedi
+Dove disponibile, apri **Account** nella barra e scegli **Accedi
 con Google** per condividere i progressi tra browser. Puoi sempre giocare senza
 accesso; i progressi ospite restano sul dispositivo. **Mantieni l’accesso su
 questo dispositivo** è inizialmente disattivato. Selezionalo solo se vuoi

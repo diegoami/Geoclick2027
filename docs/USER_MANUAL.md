@@ -89,7 +89,7 @@ hidden, show it with the button below the map zoom controls first.
 
 ### Optional browser account
 
-Where an account is available, open **Settings → Appearance → Account** and
+Where an account is available, open **Account** in the toolbar and
 choose **Sign in with Google** to share earned progress between browsers.
 You can always play without signing in; guest progress stays on this device.
 **Keep me signed in on this device** is off by default. Select it only when you

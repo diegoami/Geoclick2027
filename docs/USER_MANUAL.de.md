@@ -54,7 +54,7 @@ Kartenleiste blendest du zuerst mit der Taste unter dem Kartenzoom ein.
 
 ### Optionales Konto im Browser
 
-Wenn ein Konto verfügbar ist, öffne **Einstellungen → Darstellung → Konto** und
+Wenn ein Konto verfügbar ist, öffne **Konto** in der Leiste und
 wähle **Mit Google anmelden**, um Lernfortschritt zwischen Browsern zu teilen.
 Du kannst jederzeit ohne Anmeldung spielen; Gastfortschritt bleibt auf diesem
 Gerät. **Auf diesem Gerät angemeldet bleiben** ist zunächst ausgeschaltet.

@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { onMount, untrack } from 'svelte';
-	import { appearanceOpen } from './appearance.svelte';
+	import { untrack } from 'svelte';
+	import { accountOpen } from './accountDialogState.svelte';
 	import AccountControls from './AccountControls.svelte';
 	import {
 		accountAvailable,
 		accountState,
-		initializeBrowserAccount,
 		signInToAccount,
 		signOutOfAccount,
 		syncAccount,
@@ -13,11 +12,8 @@
 		confirmGuestImport,
 		dismissGuestImport
 	} from './account.svelte';
-	onMount(() => {
-		void initializeBrowserAccount();
-	});
 	$effect(() => {
-		if (appearanceOpen() && accountAvailable())
+		if (accountOpen() && accountAvailable())
 			untrack(() => {
 				void syncAccount();
 			});

@@ -24,6 +24,7 @@ const STORAGE_KEY = 'geoclick:language:v1';
 // translation is a compile error, not a silent fallback discovered by
 // clicking around.
 export type TranslationKey =
+	| 'account.close'
 	| 'account.title'
 	| 'account.guest'
 	| 'account.signin'
@@ -296,6 +297,7 @@ export type TranslationKey =
 type Dictionary = Record<TranslationKey, string>;
 
 const en: Dictionary = {
+	'account.close': 'Close account panel',
 	'account.title': 'Account',
 	'account.guest': 'You can play without an account. Your progress stays on this device.',
 	'account.signin': 'Sign in with Google',
@@ -595,6 +597,7 @@ const en: Dictionary = {
 };
 
 const de: Dictionary = {
+	'account.close': 'Kontofenster schließen',
 	'account.title': 'Konto',
 	'account.guest': 'Du kannst ohne Konto spielen. Dein Fortschritt bleibt auf diesem Gerät.',
 	'account.signin': 'Mit Google anmelden',
@@ -901,6 +904,7 @@ const de: Dictionary = {
 };
 
 const it: Dictionary = {
+	'account.close': 'Chiudi pannello account',
 	'account.title': 'Account',
 	'account.guest': 'Puoi giocare senza account. I tuoi progressi restano su questo dispositivo.',
 	'account.signin': 'Accedi con Google',
