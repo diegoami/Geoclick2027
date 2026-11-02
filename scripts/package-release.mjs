@@ -127,6 +127,17 @@ step(
 	}
 );
 
+// cap sync rewrites these generated bridge lists when optional Android account
+// configuration is present. The entry precondition guaranteed clean source;
+// restore only these generated files after Gradle consumed them, so the HTML5
+// provenance check still verifies the exact clean tagged source.
+const restored = run('git', [
+	'restore',
+	'--',
+	'mobile/android/app/capacitor.build.gradle',
+	'mobile/android/capacitor.settings.gradle'
+]);
+if (restored.status !== 0) fail('could not restore generated Capacitor bridge lists.');
 // --- collect ---
 if (existsSync(path.join(apkDir, 'app-release-unsigned.apk')))
 	fail('Gradle produced an unsigned APK - check keystore.properties / the GEOCLICK_* variables.');
