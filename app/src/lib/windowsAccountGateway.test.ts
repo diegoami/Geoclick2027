@@ -309,3 +309,57 @@ it('waits for a pending native forget before starting another provider request',
 	expect(f.native.login).toHaveBeenCalledTimes(2);
 	expect(f.gateway.auth.current()?.uid).toBe(B.uid);
 });
+
+describe('Android SDK-backed restore through the shared native coordinator', () => {
+	it('keeps the cached local account and saved SDK session when restore is temporarily offline, then retries without remounting', async () => {
+		const f = fixture(true);
+		vi.mocked(f.native.restore).mockResolvedValue({ status: 'sdk', expectedUid: A.uid });
+		f.firebase.restoreIdentity = vi
+			.fn()
+			.mockRejectedValueOnce(
+				Object.assign(new Error('offline'), { code: 'auth/network-request-failed' })
+			)
+			.mockImplementationOnce(async () => {
+				f.setUser(A);
+				return A;
+			});
+		const seen: (string | undefined)[] = [];
+		f.gateway.auth.observe((user) => seen.push(user?.uid));
+		const transport = f.gateway.transport(A);
+		await expect(transport.pull(undefined, 100)).rejects.toMatchObject({
+			code: 'auth/network-request-failed'
+		});
+		expect(f.gateway.auth.current()?.uid).toBe(A.uid);
+		expect(f.firebase.clear).not.toHaveBeenCalled();
+		expect(f.requests).toEqual([]);
+		await transport.pull(undefined, 100);
+		expect(seen).toEqual([A.uid]);
+		expect(f.native.confirm).toHaveBeenCalledWith('request-2', 'request-2', A.uid, A.label);
+		expect(f.requests).toEqual([{ projectId: A.projectId, uid: A.uid }]);
+	});
+	it('forgets a native cached account when the SDK has no saved user', async () => {
+		const f = fixture(true);
+		vi.mocked(f.native.restore).mockResolvedValue({ status: 'sdk', expectedUid: A.uid });
+		f.firebase.restoreIdentity = vi.fn(async () => undefined);
+		await expect(f.gateway.transport(A).pull(undefined, 100)).rejects.toMatchObject({
+			code: 'no-saved-user'
+		});
+		expect(f.native.forget).toHaveBeenCalledWith('request-1');
+		expect(f.gateway.auth.current()).toBeUndefined();
+		expect(f.requests).toEqual([]);
+	});
+	it('rejects a different restored SDK UID before any cloud operation', async () => {
+		const f = fixture(true);
+		vi.mocked(f.native.restore).mockResolvedValue({ status: 'sdk', expectedUid: A.uid });
+		f.firebase.restoreIdentity = vi.fn(async () => {
+			f.setUser(B);
+			return B;
+		});
+		await expect(f.gateway.transport(A).pull(undefined, 100)).rejects.toMatchObject({
+			code: 'identity-changed'
+		});
+		expect(f.gateway.auth.current()).toBeUndefined();
+		expect(f.firebase.clear).toHaveBeenCalled();
+		expect(f.requests).toEqual([]);
+	});
+});

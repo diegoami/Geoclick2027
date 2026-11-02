@@ -55,8 +55,14 @@ export function initializeBrowserAccount(): Promise<void> {
 				if (!runtime) return;
 				gateway = runtime;
 				guest = (await import('./sqliteProgressRepository')).createSqliteProgressRepository();
-			} else if (await isNativeShell()) return;
-			else {
+			} else if (await isNativeShell()) {
+				const runtime = await (
+					await import('./androidFirebaseAccount')
+				).createAndroidFirebaseAccount(config);
+				if (!runtime) return;
+				gateway = runtime;
+				guest = (await import('./capacitorProgressRepository')).createCapacitorProgressRepository();
+			} else {
 				gateway = createBrowserFirebaseAccount(config);
 				guest = createLocalStorageProgressRepository();
 			}

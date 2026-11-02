@@ -59,3 +59,6 @@ build-html5/
 # Local production-rule emulator logs
 /firebase-debug.log
 /firestore-debug.log
+
+# External public Android Firebase config copied only for native builds.
+/mobile/android/app/google-services.json

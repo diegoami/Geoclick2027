@@ -363,7 +363,7 @@ defaults to its existing guest stores. `progressSync.ts` and
 `firestoreProgressTransport.ts` provide bounded immutable delivery; production
 rules live in `firebase/firestore.rules`. Firestore Lite has no persistent cache
 or offline queue; the local journal owns durability. Local Auth/Firestore emulator
-tests include the full real-IndexedDB path. The browser-only `account.svelte.ts` bridge activates `browserAccountSession.ts`
+tests include the full real-IndexedDB path. The platform-selecting `account.svelte.ts` bridge activates `browserAccountSession.ts`
 after an explicit configuration is present. `AccountButton.svelte` exposes a labeled entry in home/map/page toolbars;
 `AccountDialog.svelte` hosts localized `AccountPanel.svelte` controls separately
 from Appearance; `browserFirebaseAccount.ts` uses Google popups and
@@ -375,7 +375,7 @@ adds the owner journal table without copying or clearing guest progress. Windows
 auth/lifecycle now uses `windows_account` Rust commands and
 `windowsAccountGateway.ts`/`windowsFirebaseAccount.ts`, with system-browser PKCE,
 protected remember/forget, guarded offline local identity and native SQLite.
-Installed/live Windows verification and Android integration remain separate.
+Android uses `androidFirebaseAccount.ts` and the native `GeoclickAccountPlugin` with the same lifecycle guards, native Google picker, opt-in SDK persistence and SQLite journals. Native no-backup identity/actor metadata and WebView backup exclusions separate restored progress from credentials; see `docs/ANDROID_ACCOUNT.md`. The full installed/live release matrix remains separate.
 `dev:windows-account` launches an isolated app identifier/data/vault scope. Guest/offline play never requires an account.
 
 ## Repo layout
