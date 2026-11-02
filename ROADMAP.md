@@ -19,6 +19,8 @@ Check items off as they land; update "Status" as iterations complete.
 
 ### Next release
 
+Owner follow-up #315: the version/build badge now follows the map Hide/Show buttons control, while Home/About and tutorial-forced visible controls retain it. Local verification and owner merge approval are tracked in its PR. No version bump or deploy.
+
 Follow [plan #311](https://github.com/diegoami/Geoclick2027/issues/311), following owner-approved [design #313](https://github.com/diegoami/Geoclick2027/issues/313). Prove native sign-in before the Large integration batch. Settle native sign-in/handoff, guest/account namespaces, durable offline events, resets, migrations and first-login import. Then deliver and verify browser, Windows and Android sharing before gameplay work. The Supabase branch remains paused. Milestone #304 records v1.2.1's review and installer evidence; historical candidate packages are not release artifacts.
 
 ### Earlier iteration record

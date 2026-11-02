@@ -2549,7 +2549,7 @@ answers:
   Tune the point-map context treatment while preserving the region palette on
   polygon maps; compare both Terrain states before settling the colors.
 - **Move the build/version badge to the top** so it no longer covers map
-  facts. **Tour controls use icons** for actions and stay clear of the fact
+  facts. **Amended 2026-11-02 (owner, #315):** the map Hide/Show buttons state also hides/restores that badge; the restore control stays available. Home/About retain the badge, and tutorial-forced visible controls keep it visible. **Tour controls use icons** for actions and stay clear of the fact
   card; progress and speed remain discoverable.
 - **The chart SVG fills screen margins outside the map viewport**, not the
   sea inside the MapLibre canvas. It stays local and non-interactive.

@@ -109,6 +109,8 @@ Una riga sopra la mappa o l’elenco suggerisce che cosa giocare: per esempio «
 
 ## 5. I comandi delle mappe
 
+**Nascondi i pulsanti** nasconde anche il badge della versione e della build. **Mostra i pulsanti** ripristina entrambi; il comando per mostrarli resta disponibile. Fuori dalle mappe il badge della versione rimane visibile.
+
 | Comando | Effetto |
 |---|---|
 | **Mappe** | Torna alla schermata iniziale |

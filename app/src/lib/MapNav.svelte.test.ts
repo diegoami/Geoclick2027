@@ -14,11 +14,14 @@ vi.mock('$app/paths', () => ({
 import MapNav from './MapNav.svelte';
 import VersionBadge from './VersionBadge.svelte';
 import { setLanguage } from './i18n.svelte';
+import { dispatch as tutorialDispatch } from './tutorial.svelte';
+import { flushSync } from 'svelte';
 import {
 	forgetDetailed,
 	isSeenDetailed,
 	recordVisit,
-	setDetailedMapsShown
+	setDetailedMapsShown,
+	setMapNavHidden
 } from './mapPrefs.svelte';
 
 describe('MapNav sibling map buttons', () => {
@@ -350,4 +353,22 @@ describe('MapNav sibling map buttons', () => {
 		});
 		expect(document.querySelector('.map-type-x')).toBeNull();
 	});
+});
+
+it('keeps the badge with tutorial-forced visible controls even when the map preference is hidden', async () => {
+	const seenBefore = localStorage.getItem('geoclick:tutorial-seen:v1');
+	const badge = await render(VersionBadge, { onMap: true });
+	tutorialDispatch({ type: 'start' });
+	await new Promise((resolve) => requestAnimationFrame(resolve));
+	setMapNavHidden(true);
+	flushSync();
+	try {
+		expect(document.querySelector<HTMLElement>('.version-badge')!.hidden).toBe(false);
+	} finally {
+		tutorialDispatch({ type: 'skip' });
+		if (seenBefore === null) localStorage.removeItem('geoclick:tutorial-seen:v1');
+		else localStorage.setItem('geoclick:tutorial-seen:v1', seenBefore);
+		setMapNavHidden(false);
+		badge.unmount();
+	}
 });

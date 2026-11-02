@@ -12,6 +12,7 @@
 	import { pickerGoUp } from '$lib/mapPrefs.svelte';
 	import favicon from '$lib/assets/favicon.svg';
 	import VersionBadge from '$lib/VersionBadge.svelte';
+	import { page } from '$app/state';
 	import TutorialOverlay from '$lib/TutorialOverlay.svelte';
 	import { tutorialRouteChanged } from '$lib/tutorial.svelte';
 	import { getLanguage } from '$lib/i18n.svelte';
@@ -82,5 +83,5 @@
 {/key}
 <AppearanceSettings />
 <AccountDialog />
-<VersionBadge />
+<VersionBadge onMap={!!page.params.mapId} />
 <TutorialOverlay />

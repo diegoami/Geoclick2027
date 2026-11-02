@@ -114,11 +114,10 @@ replace maps, alter camera state or access private MapLibre locale fields.
   (`geoclickMap.ts`) adds, under MapLibre's zoom control,
   `HideButtonsControl` (`hideButtonsControl.svelte.ts`), which toggles
   `mapNavHidden()` in `mapPrefs.svelte.ts` (session-only) and `MapNav`
-  hides while it is on. The Quiz's tray and the Tour's controls call
+  hides while it is on. On map routes, `VersionBadge.svelte` follows the same state/tutorial visibility rule and remeasures top chrome when restored; other routes keep the badge visible (#315). The Quiz's tray and the Tour's controls call
   `publishBottomOverlay` (`mapBottomOverlay.ts`) from an `$effect`; it sets
   `--map-bottom-overlay` and `--window-bottom-overlay` on the page root,
-  which `app.css` (the map's bottom controls) and `VersionBadge.svelte`
-  read. `createMap` also folds the compact credit on a narrow screen.
+  which `app.css` reads for the map's bottom controls. The version badge measures the top chrome. `createMap` also folds the compact credit on a narrow screen.
 - **Appearance** (#284). The map toolbar keeps secondary view status and preferences in a native
   `Settings` disclosure, collapsed on each map mount (opened for tutorials).
   Primary quiz-mode controls render above Settings through a separate snippet;
