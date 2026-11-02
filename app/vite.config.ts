@@ -46,7 +46,14 @@ export default defineConfig({
 	// keeps that discovery out of the run.
 	optimizeDeps: {
 		exclude: ['maplibre-gl'],
-		include: ['@tauri-apps/api/core', '@capacitor/core', 'pmtiles']
+		include: [
+			'@tauri-apps/api/core',
+			'@capacitor/core',
+			'pmtiles',
+			'firebase/app',
+			'firebase/auth',
+			'firebase/firestore/lite'
+		]
 	},
 	plugins: [
 		sveltekit({

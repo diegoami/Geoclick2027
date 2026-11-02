@@ -148,6 +148,7 @@ npm run lint     # prettier + eslint on the app and on data/scripts
 npm run format   # prettier --write on both
 npm run gates    # all four quality gates in order, stops at the first failure
 npm run gates -- --quiet   # same, but only PASS/FAIL lines (and the tail of a failure)
+npm run test:firebase      # optional account sync/rules suite; Java 21, local emulators only
 ```
 
 ### Portable browser export

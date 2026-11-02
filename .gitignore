@@ -55,3 +55,7 @@ rendered/
 .svelte-kit-html5/
 build-html5/
 .html5-routes/
+
+# Local production-rule emulator logs
+/firebase-debug.log
+/firestore-debug.log

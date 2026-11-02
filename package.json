@@ -25,12 +25,14 @@
 		"manual-shots": "node scripts/manual-shots.mjs",
 		"translate-facts": "tsx data/scripts/translate-facts.ts",
 		"gates": "node scripts/task.mjs gates",
-		"setup-hooks": "git config core.hooksPath .githooks"
+		"setup-hooks": "git config core.hooksPath .githooks",
+		"test:firebase": "firebase emulators:exec --config firebase/firebase.json --project demo-geoclick-sync --only auth,firestore \"node firebase/run-tests.mjs\""
 	},
 	"devDependencies": {
 		"@mapbox/vector-tile": "^3.0.0",
 		"@types/node": "^24",
 		"eslint": "^10.4.1",
+		"firebase-tools": "15.34.2",
 		"mapshaper": "^0.6.115",
 		"pbf": "^5.1.2",
 		"playwright": "^1.63.0",
