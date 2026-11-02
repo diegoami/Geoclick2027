@@ -90,6 +90,18 @@ impl Coordinator {
         state.active = Some((epoch, cancel));
         Ok(epoch)
     }
+    // A fresh frontend/native request supersedes any abandoned WebView attempt.
+    // Previously confirmed remembered credentials remain intact until explicit forget.
+    pub fn supersede(&self) -> Result<(), String> {
+        let mut state = self.0.lock().map_err(|_| "Could not start sign-in.")?;
+        state.epoch += 1;
+        if let Some((_, cancel)) = state.active.take() {
+            let _ = cancel.send(true);
+        }
+        state.candidate = None;
+        state.last_saved_commit = false;
+        Ok(())
+    }
     pub fn failed(&self, epoch: u64) {
         if let Ok(mut state) = self.0.lock() {
             if state.epoch == epoch {

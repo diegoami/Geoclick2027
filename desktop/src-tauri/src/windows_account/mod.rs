@@ -149,6 +149,7 @@ pub fn windows_account_begin(
         .request
         .lock()
         .map_err(|_| "Could not start sign-in.")?;
+    state.coordinator.supersede()?;
     *request = Some(request_id);
     Ok(())
 }
@@ -337,5 +338,82 @@ mod tests {
         assert!(valid_request("opaque-request_1"));
         assert!(!valid_request("https://outside.test"));
         assert!(!valid_request(&"x".repeat(129)));
+    }
+}
+
+#[cfg(test)]
+mod supersede_tests {
+    use super::*;
+    use std::cell::RefCell;
+    #[derive(Default)]
+    struct Store(RefCell<Option<String>>);
+    impl SecretStore for Store {
+        fn read(&self) -> Result<Option<String>, String> {
+            Ok(self.0.borrow().clone())
+        }
+        fn write(&self, value: &str) -> Result<(), String> {
+            *self.0.borrow_mut() = Some(value.into());
+            Ok(())
+        }
+        fn delete(&self) -> Result<(), String> {
+            *self.0.borrow_mut() = None;
+            Ok(())
+        }
+    }
+    #[test]
+    fn a_new_frontend_can_replace_an_abandoned_active_request() {
+        let coordinator = Coordinator::default();
+        let (tx, old) = watch::channel(false);
+        let epoch = coordinator.start(tx).unwrap();
+        coordinator.supersede().unwrap();
+        assert!(*old.borrow());
+        assert!(coordinator
+            .finish(
+                epoch,
+                oauth::GoogleExchange {
+                    id_token: "synthetic".into(),
+                    subject: "synthetic".into(),
+                    refresh_token: None
+                },
+                false,
+                None
+            )
+            .is_err());
+        let (tx, _) = watch::channel(false);
+        assert!(coordinator.start(tx).is_ok());
+    }
+    #[test]
+    fn replacing_a_frontend_does_not_forget_a_previously_confirmed_record() {
+        let coordinator = Coordinator::default();
+        let store = Store::default();
+        let (tx, _) = watch::channel(false);
+        let epoch = coordinator.start(tx).unwrap();
+        let credential = coordinator
+            .finish(
+                epoch,
+                oauth::GoogleExchange {
+                    id_token: "synthetic".into(),
+                    subject: "synthetic-sub".into(),
+                    refresh_token: Some("synthetic-refresh".into()),
+                },
+                true,
+                None,
+            )
+            .unwrap();
+        coordinator
+            .finalize(
+                &credential.attempt_id,
+                "synthetic-uid",
+                &Scope {
+                    project: "synthetic-project".into(),
+                    client: "synthetic-client".into(),
+                },
+                &store,
+            )
+            .unwrap();
+        let retained = store.read().unwrap();
+        coordinator.supersede().unwrap();
+        coordinator.cancel(&store).unwrap();
+        assert_eq!(store.read().unwrap(), retained);
     }
 }

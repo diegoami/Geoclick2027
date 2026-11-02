@@ -48,7 +48,7 @@ verification. Revocation or mismatch never turns previous account data into a
 new UID's progress. Sign-out blocks transport, forgets the native scoped record
 and clears SDK memory. Actor metadata is separate and is not removed on sign-out.
 Native commands have request-aware cancellation and finalization, including old
-async dispatch arriving after cancel; SDK work/cleanup is serialized across intents.
+async dispatch arriving after cancel or an abandoned WebView reload; SDK work/cleanup is serialized across intents.
 
 ## Verification
 
