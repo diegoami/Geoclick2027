@@ -61,7 +61,13 @@ export const MIGRATIONS: readonly string[] = [
 	`CREATE TABLE map_records (
 		map_id TEXT PRIMARY KEY,
 		data TEXT NOT NULL
-	);`
+	);`,
+	// v1.3 account journal: immutable event history + metadata/acks in one owner row.
+	`CREATE TABLE account_progress_journal_v1 (
+  owner_key TEXT PRIMARY KEY NOT NULL,
+  revision INTEGER NOT NULL CHECK (revision >= 1),
+  payload TEXT NOT NULL
+ );`
 ];
 
 export async function getUserVersion(db: MigratableDb): Promise<number> {

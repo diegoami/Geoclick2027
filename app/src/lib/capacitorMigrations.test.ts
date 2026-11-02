@@ -57,7 +57,12 @@ const PRE_GC040_ON_OPEN_SQL = `
 	);
 `;
 
-const TABLES = ['card_states', 'last_session_summaries'] as const;
+const TABLES = [
+	'card_states',
+	'last_session_summaries',
+	'map_records',
+	'account_progress_journal_v1'
+] as const;
 const schemaOf = (db: DatabaseSync) =>
 	Object.fromEntries(TABLES.map((t) => [t, db.prepare(`PRAGMA table_info(${t})`).all()]));
 

@@ -51,6 +51,19 @@ fn migrations() -> Vec<Migration> {
       );
     ",
     kind: MigrationKind::Up,
+  },
+  Migration {
+    version: 4,
+    description: "add_account_progress_journal",
+    // One compare-and-swap row commits events, actor metadata and acknowledgements.
+    sql: "
+      CREATE TABLE account_progress_journal_v1 (
+        owner_key TEXT PRIMARY KEY NOT NULL,
+        revision INTEGER NOT NULL CHECK (revision >= 1),
+        payload TEXT NOT NULL
+      );
+    ",
+    kind: MigrationKind::Up,
   }]
 }
 
