@@ -15,6 +15,7 @@ for (const run of [
 			path.join(root, 'node_modules/vitest/vitest.mjs'),
 			'--run',
 			'src/lib/firestoreProgressTransport.browser.test.ts',
+			'src/lib/windowsFirebaseAccount.browser.test.ts',
 			'--reporter=dot'
 		],
 		cwd: path.join(root, 'app')

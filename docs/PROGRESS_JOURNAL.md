@@ -374,3 +374,46 @@ same-UID sharing. Remembered offline startup must reopen the correct local
 account while cloud transport remains guarded by fresh authenticated ownership;
 the auth-only spikes alone do not establish that complete progress lifecycle.
 Guest play remains optional/account-free throughout.
+
+
+## Windows account runtime
+
+`windowsFirebaseAccount.ts` connects the game controller to the native
+`windows_account` Rust module, memory-only Firebase Auth and native SQLite journal.
+`windowsAccountGateway.ts` keeps protected local identity separate from permission
+to use cloud transport. A cached native UID/label can reopen the same account's
+local journal offline; every cloud call waits for Firebase to verify that UID in
+the configured project. A mismatched/restored/revoked UID is never published or
+uploaded under the previous owner. Same-UID refresh does not remount a quiz.
+
+Rust reuses the proved loopback PKCE/state/nonce/issuer/audience/expiry validation,
+with a separate production app/project/client credential scope. Renewable Google
+grants stay native and are saved only after Firebase confirmation and explicit
+Remember. Firebase credentials stay in WebView memory. Actor metadata uses an
+app/project-scoped protected native entry, separate from sign-in/forget; an
+unavailable actor store uses a fresh process actor, never a copied database actor
+or plaintext credential fallback. Non-Windows native shells remain guest-only
+until their separate adapter is connected.
+
+Each async OAuth operation is preceded by a synchronous request registration.
+Cancellation/finalization are bound to that request; a delayed old command cannot
+open Google again or cancel a newer operation. SDK exchanges and cleanup serialize,
+so a cancelled exchange cannot clear another account that signed in later. Cloud
+transport blocks immediately during sign-out; native forget finishes before a
+new login is offered. A failed forget remains retryable and is not called forgotten.
+Cancel is explicit in the shared account UI; the Remember choice resets after
+completed sign-out and unavailable protected storage disables that option.
+
+Downloaded Desktop OAuth JSON stays outside the repository. The build script
+writes only its path into generated Rust include source and never prints its
+contents. Installed-app OAuth client metadata is embedded at build time; it is
+not a confidential web-client/service-account secret. No configuration means
+account controls stay unavailable while guest play remains. The public Firebase
+project and native Desktop client's project must match before native controls open.
+
+Use `npm run dev:windows-account -- --client-file <external JSON> --firebase-env-file
+<external .env.local>` for the isolated interactive test app. It uses its own app
+identifier and therefore separate SQLite, WebView profile, credential/actor scope
+from the production game. See `docs/WINDOWS_ACCOUNT.md`. Unit/emulator tests do not
+automate Google account selection; real native Google/device checks are labelled
+separately in plan #311.
