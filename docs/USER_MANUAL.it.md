@@ -52,6 +52,29 @@ Le modifiche sono immediate e vengono memorizzate sul dispositivo quando
 possibile. Chiudi con il pulsante o Escape. Se la barra della mappa è nascosta,
 mostrala prima con il pulsante sotto i controlli dello zoom.
 
+### Account facoltativo nel browser
+
+Dove disponibile, apri **Impostazioni → Aspetto → Account** e scegli **Accedi
+con Google** per condividere i progressi tra browser. Puoi sempre giocare senza
+accesso; i progressi ospite restano sul dispositivo. **Mantieni l’accesso su
+questo dispositivo** è inizialmente disattivato. Selezionalo solo se vuoi
+ritrovare l’account alla riapertura del browser.
+
+L’accesso apre progressi dell’account separati. **Esamina i progressi del
+dispositivo** mostra aggiunte, conflitti e dati non supportati. Solo **Importa
+i progressi disponibili** conferma l’importazione. Nei conflitti prevalgono i
+progressi dell’account, anche dopo un azzeramento; la copia ospite originale
+resta intatta. **Mantieni i progressi dell’account** chiude l’anteprima senza importare.
+
+Le risposte sono prima salvate localmente. **Sincronizza ora** controlla le
+modifiche di un altro browser o riprova dopo la riconnessione. Lascia aperta la
+pagina fino alla sincronizzazione se vuoi vedere i progressi nell’altro browser.
+Se chiudi offline, i dati dell’account salvati restano in attesa e vengono
+trasmessi dopo un nuovo accesso allo stesso account. **Esci dall’account** torna
+ai progressi ospite e dimentica l’accesso salvato; non elimina nessuna delle due
+copie dei progressi. Questa prima funzione riguarda il browser; desktop e
+Android seguiranno separatamente.
+
 ## 1. Che cos’è Geoclick
 
 Impari dove si trovano paesi, capitali, regioni e città, trascinando i loro nomi sulla mappa. Il catalogo comprende **221 mappe in 81 paesi e nei sei continenti**. Ogni mappa offre Conoscenza, Panoramica, Quiz e Tour. L’applicazione ricorda i risultati sul dispositivo, senza account: ogni risposta giusta al primo tentativo fa salire un nome di un gradino, ogni errore lo fa scendere di uno. Pulsanti e curiosità sono disponibili in inglese, tedesco e italiano.

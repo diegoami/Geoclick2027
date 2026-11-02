@@ -2,9 +2,9 @@
 
 This is the production event/storage foundation for optional account sync. Its reducer and local storage
 have no auth, network or Svelte dependency. The existing guest repositories and
-tutorial sandbox are unchanged; account UI and native SQLite journal adapters are
-separate integration work. Cloud transport/rules are implemented below but are
-not activated by the game. Quiz capture and its account adapter are implemented
+tutorial sandbox are unchanged; native SQLite journal adapters are separate integration work. Browser account
+UI and lifetimes are implemented; real-provider/cloud verification remains. Cloud transport/rules are implemented below but are
+activated only by the explicitly configured browser account control. Quiz capture and its account adapter are implemented
 without switching the default guest repository factory.
 
 ## Boundaries
@@ -77,7 +77,8 @@ with a proved causal/reset retention policy. The initial browser implementation
 reads the owner's history to derive the frontier on writes; incremental caches
 can optimize this without changing the authoritative journal contract.
 
-This module does not yet switch the game's repository factory. QuizView captures
+Quiz capture does not itself switch the game's repository factory; the optional
+browser account bridge does so after sign-in. QuizView captures
 grade operations and stable sitting/target identities through an optional account
 writer, instead of reverse-engineering grades from saved snapshots. First sign-in
 must show the approved import choice. Native adapters must provide the same atomic append and
@@ -153,9 +154,9 @@ so tutorial answers never become account events. If an opened account cannot
 read, `loadPlayableCardStates` keeps that account destination and the warning;
 it never substitutes a guest destination. Guest read failure still uses memory.
 
-The default factory is not bound to an account yet. Optional sign-in controls,
-auth lifecycle/remounts and native SQLite adapters remain
-required before exposing production sync. Tests cover the real component-to-
+The factory defaults to guest stores. Configured browser sign-in can now bind
+an account and remount views through the optional account bridge. Native SQLite
+adapters and full release verification remain required. Tests cover the real component-to-
 IndexedDB path and reopen, queue order, idempotent retries, account isolation,
 reset score retention, rejected snapshots/unknown targets and tutorial routing.
 
@@ -226,9 +227,54 @@ real Chromium IndexedDB, offline append/reopen, stale reset, later practice and
 guest-copy preservation through the actual transport. This is **local emulator
 evidence**, not real Google, production cloud, installed Windows or Android
 sharing. The four ordinary gates do not start emulators; their browser suite
-skips that one explicitly opt-in integration test.
+skips those explicitly opt-in integration tests.
 
-The game still starts as a guest. Account controls, localized status/import UI,
-auth lifetimes and sync scheduling/backoff must be connected before player use;
-native SQLite/auth integration and the full #311 acceptance matrix follow.
+The game starts as a guest. Configured browser controls now connect localized
+status/import UI, auth lifetimes and sync scheduling/backoff; native SQLite/auth
+integration and the full #311 acceptance matrix follow.
 No account, cloud availability or network is required for existing local play.
+
+
+## Optional browser account lifetime
+
+`browserAccountSession.ts` binds a separate repository only after an owner-matched
+local journal opens successfully. Cloud failure does not remove locally saved
+account progress or block play. Storage failure retains guest play with an
+explicit warning. Sign-out detaches the view immediately, stops sync and forgets
+SDK login; if forgetting fails, the UI retains a retryable sign-out warning.
+Late popup completions after explicit sign-out cannot reactivate the account.
+Old captured quiz callbacks can finish only in their original journal, which is
+not closed underneath them. Existing guest data is never automatically imported.
+
+`account.svelte.ts` is browser-only, gated by a valid `VITE_FIREBASE_CONFIG` JSON
+and shell detection. Ordinary tests skip runtime initialization even if a local
+public config is present. SDK imports initialize no default project. Browser
+Auth uses the named game app and can restore a previously explicit remembered
+choice. Every new login sets the selected persistence: memory when unchecked,
+IndexedDB when checked. Google account selection is always explicit. Native
+shells never launch this popup; their proved native adapters must be integrated
+separately. No tokens are logged or copied into game storage.
+
+The layout keys its child view by account ownership revision, not sync status;
+quizzes are not remounted by ordinary background synchronization. Home and Known
+refresh their earned progress when a completed sync/import is published. Quiz
+feedback stays local during a sitting; replayed journal history remains the
+authority for future reads. Import preview and confirmation each require a
+successful server-history cycle. Incoming concurrent changes still follow the
+account-wins/reset-wins reducer, and guest originals survive partial retries.
+
+Automatic cycles run after local commits (debounced with a 30-second cooldown),
+on foreground/online events and when opening account settings. There is no idle
+full-history polling. Failures
+back off up to five minutes; **Sync now** forces an immediate retry. Hidden/offline
+pages do not issue scheduled requests. Pending events remain authoritative in
+IndexedDB; a tab must remain open to upload. With session-only sign-in, reopening
+offline starts as guest until the same account signs in again. Remembered login
+can reopen its local account journal offline. The initial full-history read limit
+and quota/scale follow-up above still apply; no deployment is performed here.
+
+See [BROWSER_ACCOUNT](BROWSER_ACCOUNT.md) for console/config and manual checks.
+`browserAccountSession.browser.test.ts` covers real IndexedDB/factory lifecycle
+and hostile timing; `AccountControls.svelte.test.ts` checks EN/DE/IT, explicit
+confirmation, keyboard behavior and 300% wrapping. The emulator-only suite also
+uses the real Auth observer through this session, game factory, import and logout.

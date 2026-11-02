@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import { accountRevision } from '$lib/account.svelte';
 	import '../appearance.css';
 	import AppearanceSettings from '$lib/AppearanceSettings.svelte';
 	import { appearanceOpen, setAppearanceOpen } from '$lib/appearance.svelte';
@@ -70,7 +71,9 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children()}
+{#key accountRevision()}
+	{@render children()}
+{/key}
 <AppearanceSettings />
 <VersionBadge />
 <TutorialOverlay />

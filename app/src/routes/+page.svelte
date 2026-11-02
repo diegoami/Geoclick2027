@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { accountProgressRevision } from '$lib/account.svelte';
 	import mapIndex from '../../../data/maps/index.json';
 	import { createProgressRepository, type ProgressRepository } from '$lib/progressRepository';
 	import { loadHomeProgress, type Mastery } from '$lib/homeProgress';
@@ -83,6 +84,7 @@
 	// real progress again afterwards.
 	$effect(() => {
 		void isTutorialSandboxActive();
+		void accountProgressRevision();
 		let stale = false;
 		(async () => {
 			let repository: ProgressRepository;

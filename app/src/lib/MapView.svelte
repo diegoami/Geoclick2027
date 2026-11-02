@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy, untrack } from 'svelte';
+	import { accountProgressRevision } from './account.svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
@@ -195,6 +196,13 @@
 		loaded = true;
 		redrawNames(def);
 	}
+
+	$effect(() => {
+		accountProgressRevision();
+		untrack(() => {
+			if (mapDef) void loadStreaks(mapDef).catch(() => undefined);
+		});
+	});
 
 	/**
 	 * Forgets what this map has earned (#256), and everything that could bring

@@ -24,6 +24,30 @@ const STORAGE_KEY = 'geoclick:language:v1';
 // translation is a compile error, not a silent fallback discovered by
 // clicking around.
 export type TranslationKey =
+	| 'account.title'
+	| 'account.guest'
+	| 'account.signin'
+	| 'account.remember'
+	| 'account.identity'
+	| 'account.signout'
+	| 'account.sync.idle'
+	| 'account.sync.pending'
+	| 'account.sync.syncing'
+	| 'account.sync.synced'
+	| 'account.sync.error'
+	| 'account.retry'
+	| 'account.importHint'
+	| 'account.review'
+	| 'account.preview'
+	| 'account.counts'
+	| 'account.confirm'
+	| 'account.dismiss'
+	| 'account.imported'
+	| 'account.error.signin'
+	| 'account.error.signout'
+	| 'account.error.storage'
+	| 'account.error.sync'
+	| 'account.error.import'
 	| 'nav.settings'
 	| 'appearance.title'
 	| 'appearance.textSize'
@@ -272,6 +296,35 @@ export type TranslationKey =
 type Dictionary = Record<TranslationKey, string>;
 
 const en: Dictionary = {
+	'account.title': 'Account',
+	'account.guest': 'You can play without an account. Your progress stays on this device.',
+	'account.signin': 'Sign in with Google',
+	'account.remember': 'Keep me signed in on this device',
+	'account.identity': 'Signed in: {name}',
+	'account.signout': 'Sign out',
+	'account.sync.idle': 'Account progress is saved on this device.',
+	'account.sync.pending': 'Saved on this device. Waiting to sync.',
+	'account.sync.syncing': 'Synchronizing progress…',
+	'account.sync.synced': 'Progress synchronized.',
+	'account.sync.error': 'Progress stays on this device. Synchronization needs a retry.',
+	'account.retry': 'Sync now',
+	'account.importHint':
+		'Your original progress on this device is kept. Add it to your account only if you choose. Existing account progress wins conflicts, including resets.',
+	'account.review': 'Review this device’s progress',
+	'account.preview': 'Import preview',
+	'account.counts': 'Add: {add}. Keep account: {keep}. Unsupported: {unsupported}.',
+	'account.confirm': 'Import the available progress',
+	'account.dismiss': 'Keep account progress',
+	'account.imported': 'Imported {count} progress records. The original device copy is kept.',
+	'account.error.signin': 'Sign-in did not finish. You can keep playing without an account.',
+	'account.error.signout':
+		'Sign-out did not finish. You are using guest progress; retry sign-out to forget the saved login.',
+	'account.error.storage':
+		'Account storage could not be opened. You are using guest progress. Retry or sign out.',
+	'account.error.sync':
+		'Synchronization did not finish. Saved account progress remains on this device. Try again when online.',
+	'account.error.import':
+		'Import did not finish. Check your connection and retry. Your original device progress is kept.',
 	'nav.settings': 'Settings',
 	'appearance.title': 'Appearance',
 	'appearance.textSize': 'Text size',
@@ -542,6 +595,37 @@ const en: Dictionary = {
 };
 
 const de: Dictionary = {
+	'account.title': 'Konto',
+	'account.guest': 'Du kannst ohne Konto spielen. Dein Fortschritt bleibt auf diesem Gerät.',
+	'account.signin': 'Mit Google anmelden',
+	'account.remember': 'Auf diesem Gerät angemeldet bleiben',
+	'account.identity': 'Angemeldet: {name}',
+	'account.signout': 'Abmelden',
+	'account.sync.idle': 'Der Kontofortschritt ist auf diesem Gerät gespeichert.',
+	'account.sync.pending': 'Auf diesem Gerät gespeichert. Synchronisierung steht aus.',
+	'account.sync.syncing': 'Fortschritt wird synchronisiert…',
+	'account.sync.synced': 'Fortschritt synchronisiert.',
+	'account.sync.error':
+		'Der Fortschritt bleibt auf diesem Gerät. Synchronisierung erneut versuchen.',
+	'account.retry': 'Jetzt synchronisieren',
+	'account.importHint':
+		'Dein ursprünglicher Gerätefortschritt bleibt erhalten. Übernimm ihn nur auf Wunsch ins Konto. Bei Konflikten gilt der Kontofortschritt, auch nach einem Zurücksetzen.',
+	'account.review': 'Fortschritt dieses Geräts prüfen',
+	'account.preview': 'Importvorschau',
+	'account.counts': 'Hinzufügen: {add}. Konto behalten: {keep}. Nicht unterstützt: {unsupported}.',
+	'account.confirm': 'Verfügbaren Fortschritt importieren',
+	'account.dismiss': 'Kontofortschritt behalten',
+	'account.imported':
+		'{count} Fortschrittsdatensätze importiert. Die ursprüngliche Gerätekopie bleibt erhalten.',
+	'account.error.signin': 'Anmeldung nicht abgeschlossen. Du kannst ohne Konto weiterspielen.',
+	'account.error.signout':
+		'Abmeldung nicht abgeschlossen. Du nutzt den Gastfortschritt; melde dich erneut ab, um die gespeicherte Anmeldung zu entfernen.',
+	'account.error.storage':
+		'Kontospeicher konnte nicht geöffnet werden. Du nutzt den Gastfortschritt. Erneut versuchen oder abmelden.',
+	'account.error.sync':
+		'Synchronisierung nicht abgeschlossen. Gespeicherter Kontofortschritt bleibt auf diesem Gerät. Versuche es erneut, wenn du online bist.',
+	'account.error.import':
+		'Import nicht abgeschlossen. Prüfe die Verbindung und versuche es erneut. Dein ursprünglicher Gerätefortschritt bleibt erhalten.',
 	'nav.settings': 'Einstellungen',
 	'appearance.title': 'Darstellung',
 	'appearance.textSize': 'Textgröße',
@@ -817,6 +901,37 @@ const de: Dictionary = {
 };
 
 const it: Dictionary = {
+	'account.title': 'Account',
+	'account.guest': 'Puoi giocare senza account. I tuoi progressi restano su questo dispositivo.',
+	'account.signin': 'Accedi con Google',
+	'account.remember': 'Mantieni l’accesso su questo dispositivo',
+	'account.identity': 'Accesso effettuato: {name}',
+	'account.signout': 'Esci dall’account',
+	'account.sync.idle': 'I progressi dell’account sono salvati su questo dispositivo.',
+	'account.sync.pending': 'Salvato su questo dispositivo. Sincronizzazione in attesa.',
+	'account.sync.syncing': 'Sincronizzazione dei progressi…',
+	'account.sync.synced': 'Progressi sincronizzati.',
+	'account.sync.error': 'I progressi restano su questo dispositivo. Riprova la sincronizzazione.',
+	'account.retry': 'Sincronizza ora',
+	'account.importHint':
+		'I progressi originali di questo dispositivo restano intatti. Aggiungili all’account solo se lo desideri. In caso di conflitto prevalgono i progressi dell’account, anche dopo un azzeramento.',
+	'account.review': 'Esamina i progressi del dispositivo',
+	'account.preview': 'Anteprima importazione',
+	'account.counts':
+		'Da aggiungere: {add}. Mantieni account: {keep}. Non supportati: {unsupported}.',
+	'account.confirm': 'Importa i progressi disponibili',
+	'account.dismiss': 'Mantieni i progressi dell’account',
+	'account.imported':
+		'Importati {count} record dei progressi. La copia originale sul dispositivo resta intatta.',
+	'account.error.signin': 'Accesso non completato. Puoi continuare a giocare senza account.',
+	'account.error.signout':
+		'Uscita non completata. Stai usando i progressi ospite; riprova a uscire per dimenticare l’accesso salvato.',
+	'account.error.storage':
+		'Impossibile aprire l’archivio dell’account. Stai usando i progressi ospite. Riprova o esci.',
+	'account.error.sync':
+		'Sincronizzazione non completata. I progressi salvati dell’account restano su questo dispositivo. Riprova quando sei online.',
+	'account.error.import':
+		'Importazione non completata. Controlla la connessione e riprova. I progressi originali del dispositivo restano intatti.',
 	'nav.settings': 'Impostazioni',
 	'appearance.title': 'Aspetto',
 	'appearance.textSize': 'Dimensione del testo',

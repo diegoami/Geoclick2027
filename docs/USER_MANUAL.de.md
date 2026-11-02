@@ -52,6 +52,30 @@ gelten sofort und werden nach Möglichkeit auf diesem Gerät gespeichert.
 Schließe das Fenster mit der Schaltfläche oder Escape. Eine ausgeblendete
 Kartenleiste blendest du zuerst mit der Taste unter dem Kartenzoom ein.
 
+### Optionales Konto im Browser
+
+Wenn ein Konto verfügbar ist, öffne **Einstellungen → Darstellung → Konto** und
+wähle **Mit Google anmelden**, um Lernfortschritt zwischen Browsern zu teilen.
+Du kannst jederzeit ohne Anmeldung spielen; Gastfortschritt bleibt auf diesem
+Gerät. **Auf diesem Gerät angemeldet bleiben** ist zunächst ausgeschaltet.
+Aktiviere es nur, wenn der Browser dein Konto nach dem Neustart wieder öffnen soll.
+
+Die Anmeldung öffnet einen getrennten Kontofortschritt. **Fortschritt dieses
+Geräts prüfen** zeigt mögliche Ergänzungen, Konflikte und nicht unterstützte
+Einträge. Erst **Verfügbaren Fortschritt importieren** bestätigt den Import.
+Bei Konflikten gilt der Kontofortschritt, auch nach einem Zurücksetzen; die
+ursprüngliche Gastkopie bleibt erhalten. **Kontofortschritt behalten** schließt
+die Vorschau ohne Import.
+
+Antworten werden zuerst lokal gespeichert. **Jetzt synchronisieren** prüft
+Änderungen eines anderen Browsers oder versucht die Übertragung nach erneuter
+Verbindung. Lass die Seite bis zur Synchronisierung offen, wenn ein anderer
+Browser den Fortschritt sehen soll. Offline gespeicherte Kontodaten bleiben
+auch nach dem Schließen erhalten und werden nach erneuter Anmeldung desselben
+Kontos übertragen. **Abmelden** öffnet den Gastfortschritt und entfernt die
+gespeicherte Anmeldung; beide Fortschrittskopien bleiben erhalten. Diese erste
+Kontofunktion gilt für den Browser; Desktop und Android folgen getrennt.
+
 ## 1. Was ist Geoclick?
 
 Du lernst, wo Länder, Hauptstädte, Regionen und Städte liegen, indem du ihre Namen auf der Karte platzierst. Der Katalog umfasst **221 Karten in 81 Ländern und auf den sechs Kontinenten**. Jede Karte bietet Gewusst, Übersicht, Quiz und Tour. Das Spiel merkt sich deinen Lernstand auf dem Gerät: Jede richtige Antwort beim ersten Versuch hebt einen Namen eine Stufe, jeder Fehler senkt ihn eine Stufe. Ein Konto brauchst du nicht. Oberfläche und geschriebene Ortsinformationen gibt es auf Englisch, Deutsch und Italienisch.

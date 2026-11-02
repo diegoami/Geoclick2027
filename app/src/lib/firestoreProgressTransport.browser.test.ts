@@ -107,3 +107,104 @@ it.skipIf(import.meta.env.VITE_GEOCLICK_SYNC_EMULATORS !== '1')(
 		}
 	}
 );
+
+// Real Auth observer -> session -> game repository, with production popup interaction
+// replaced only by a synthetic credential at the emulator boundary.
+it.skipIf(import.meta.env.VITE_GEOCLICK_SYNC_EMULATORS !== '1')(
+	'connects browser account lifetimes, explicit guest import and sign-out through the actual SDK',
+	async () => {
+		const [
+			{ BrowserAccountSession },
+			{ createBrowserAccountAuth },
+			{
+				createLocalStorageProgressRepository,
+				createProgressRepository,
+				setAccountProgressRepository
+			}
+		] = await Promise.all([
+			import('./browserAccountSession'),
+			import('./browserFirebaseAccount'),
+			import('./progressRepository')
+		]);
+		const projectId = 'demo-geoclick-sync',
+			run = crypto.randomUUID(),
+			databaseName = 'account-lifetime-' + run;
+		const app = initializeApp(
+			{ projectId, apiKey: 'fake-emulator-key' },
+			'account-lifetime-' + run
+		);
+		const auth = initializeAuth(app, { persistence: inMemoryPersistence });
+		connectAuthEmulator(auth, 'http://127.0.0.1:19110', { disableWarnings: true });
+		const db = getFirestore(app);
+		connectFirestoreEmulator(db, '127.0.0.1', 18110);
+		const journals: IndexedDbProgressJournal[] = [],
+			guest = createLocalStorageProgressRepository(),
+			mapId = 'browser-account-emulator-' + run;
+		const card = {
+			targetId: 'one',
+			cleanStreak: 2,
+			easeFactor: 2.5,
+			interval: 1,
+			repetitions: 2,
+			dueDate: '2026-11-03',
+			lastReviewedAt: '2026-11-02'
+		};
+		const session = new BrowserAccountSession({
+			auth: createBrowserAccountAuth(auth, projectId),
+			guest,
+			maps: [{ mapId, targetIds: new Set(['one']) }],
+			automatic: false,
+			async open(identity) {
+				const journal = new IndexedDbProgressJournal(identity, { databaseName });
+				journals.push(journal);
+				return { journal, transport: createFirestoreProgressTransport(db, auth) };
+			},
+			bind: setAccountProgressRepository,
+			changed: () => {},
+			progressChanged: () => {}
+		});
+		try {
+			await guest.saveCardState(mapId, card);
+			session.start();
+			expect((await createProgressRepository()).progressScope).toBeUndefined();
+			await signInWithCredential(
+				auth,
+				GoogleAuthProvider.credential(
+					JSON.stringify({
+						sub: 'session-' + run,
+						email: run + '@example.test',
+						email_verified: true
+					})
+				)
+			);
+			await expect.poll(() => session.state.usingAccount).toBe(true);
+			expect(await (await createProgressRepository()).getCardStates(mapId)).toEqual([]);
+			await session.prepareImport();
+			expect(session.state.preview?.rows).toHaveLength(1);
+			expect(await (await createProgressRepository()).getCardStates(mapId)).toEqual([]);
+			await session.confirmImport();
+			expect(session.state.imported).toBe(1);
+			expect(session.state.sync).toBe('synced');
+			expect((await (await createProgressRepository()).getCardStates(mapId))[0].cleanStreak).toBe(
+				2
+			);
+			const page = await createFirestoreProgressTransport(db, auth).pull(undefined, 100);
+			expect(page.records).toHaveLength(1);
+			await session.signOut();
+			expect((await createProgressRepository()).progressScope).toBeUndefined();
+			expect(await guest.getCardStates(mapId)).toEqual([card]);
+		} finally {
+			session.dispose();
+			setAccountProgressRepository(undefined);
+			await guest.clearMap(mapId);
+			for (const journal of journals) await journal.close().catch(() => {});
+			await terminate(db);
+			await deleteApp(app);
+			await new Promise<void>((resolve, reject) => {
+				const r = indexedDB.deleteDatabase(databaseName);
+				r.onsuccess = () => resolve();
+				r.onerror = () => reject(r.error);
+			});
+		}
+	}
+);
