@@ -60,3 +60,12 @@ claim that the production website can cold-load all game assets without a networ
 The browser fixtures are outside game routes/build output. All browser processes
 are closed, and cleanup verifies the resolved temporary root before recursively
 removing only the directories this suite created. Owner profiles are never used.
+
+## Synthetic history budget
+
+Run `node --import tsx firebase/measure-history.ts` from the root. This uses public
+synthetic events and the production encoder, without credentials or cloud calls.
+It reports JSON sizes and estimates full-scan query/read counts; it does not measure
+Firestore storage or billing. The 10,000-event boundary and quota-recovery regression
+is in `app/src/lib/progressSync.browser.test.ts`. See the journal document's
+immutable cloud delivery section and open completion issue #332.
