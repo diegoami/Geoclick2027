@@ -116,7 +116,7 @@ Geoclick is a game for learning geography: where a country's regions, states
 or provinces are, where its main towns and cities are, and where the countries
 and capitals of a continent are.
 
-- **221 maps across 81 countries and the six continents.** Most countries have
+- **231 maps across 81 countries and the six continents.** Most countries have
   two maps: its regions (called states, provinces, prefectures or districts,
   depending on the country) and its larger towns. Some also have finer, more
   detailed maps. See [The maps](#20-the-maps).
@@ -1025,7 +1025,7 @@ language; use its contents links to jump to a topic.
 
 ## 20. The maps
 
-221 maps across 81 countries and the six continents.
+231 maps across 81 countries and the six continents.
 
 - **Continents.** Each continent has a **Countries** map and a **Capitals** map.
   Europe's cities also come in five parts (north, south, east, west and centre).

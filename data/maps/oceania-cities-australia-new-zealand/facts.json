@@ -5,7 +5,24 @@
 		"populationRank": 22,
 		"region": "Northern Territory",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its harbour was named after Charles Darwin by his former Beagle shipmates in 1839.",
+				"The town's official name changed from Palmerston to Darwin in 1911.",
+				"Much of the city was rebuilt after Cyclone Tracy in 1974."
+			],
+			"it": [
+				"Il suo porto fu intitolato a Charles Darwin dai suoi ex compagni del Beagle nel 1839.",
+				"Il nome ufficiale della città cambiò da Palmerston a Darwin nel 1911.",
+				"Gran parte della città fu ricostruita dopo il ciclone Tracy del 1974."
+			],
+			"de": [
+				"Ihr Hafen wurde 1839 von früheren Beagle-Schiffskameraden nach Charles Darwin benannt.",
+				"Der offizielle Stadtname änderte sich 1911 von Palmerston zu Darwin.",
+				"Große Teile der Stadt wurden nach Zyklon Tracy 1974 wiederaufgebaut."
+			]
+		}
 	},
 	"cairns": {
 		"kind": "city",
@@ -63,7 +80,24 @@
 		"populationRank": 28,
 		"region": "Queensland",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The town was named after the explorer John Mackay.",
+				"The Pioneer River was renamed after HMS Pioneer in 1862.",
+				"Sugar processing became the settlement's early industrial mainstay."
+			],
+			"it": [
+				"La città prende il nome dall'esploratore John Mackay.",
+				"Il fiume Pioneer fu ribattezzato in onore della HMS Pioneer nel 1862.",
+				"La lavorazione dello zucchero divenne presto il pilastro industriale dell'insediamento."
+			],
+			"de": [
+				"Die Stadt wurde nach dem Entdecker John Mackay benannt.",
+				"Der Pioneer River wurde 1862 nach der HMS Pioneer umbenannt.",
+				"Die Zuckerverarbeitung wurde früh zur industriellen Grundlage der Siedlung."
+			]
+		}
 	},
 	"rockhampton": {
 		"kind": "city",
@@ -71,7 +105,24 @@
 		"populationRank": 33,
 		"region": "Queensland",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its name recalls the rocky bar that limited navigation up the Fitzroy River.",
+				"The Canoona gold rush brought a sudden influx of settlers in 1858.",
+				"The cattle trade helped give it its enduring beef-city identity."
+			],
+			"it": [
+				"Il suo nome richiama la barra rocciosa che limitava la navigazione sul fiume Fitzroy.",
+				"La corsa all'oro di Canoona portò un improvviso afflusso di coloni nel 1858.",
+				"Il commercio del bestiame contribuì alla sua duratura identità di città della carne bovina."
+			],
+			"de": [
+				"Ihr Name erinnert an die Felsbarre, die die Schifffahrt auf dem Fitzroy River begrenzte.",
+				"Der Goldrausch von Canoona brachte 1858 einen plötzlichen Zustrom von Siedlern.",
+				"Der Rinderhandel prägte ihren bis heute bekannten Ruf als Rindfleischstadt."
+			]
+		}
 	},
 	"sunshine-coast": {
 		"kind": "city",
@@ -79,7 +130,24 @@
 		"populationRank": 31,
 		"region": "Queensland",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Sunshine Coast replaced the earlier regional name Near North Coast.",
+				"The promotional name was launched in 1958 and officially adopted in 1967.",
+				"Kabi Kabi and Jinibara place names preserve the region's much older naming heritage."
+			],
+			"it": [
+				"Sunshine Coast sostituì il precedente nome regionale Near North Coast.",
+				"Il nome promozionale fu lanciato nel 1958 e adottato ufficialmente nel 1967.",
+				"I toponimi kabi kabi e jinibara conservano il patrimonio di nomi molto più antico della regione."
+			],
+			"de": [
+				"Sunshine Coast ersetzte den früheren Regionalnamen Near North Coast.",
+				"Der Werbename wurde 1958 vorgestellt und 1967 offiziell übernommen.",
+				"Ortsnamen der Kabi Kabi und Jinibara bewahren die viel ältere Namensgeschichte der Region."
+			]
+		}
 	},
 	"brisbane": {
 		"kind": "city",
@@ -112,7 +180,24 @@
 		"populationRank": 23,
 		"region": "Queensland",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Proposed Aboriginal meanings of its name include a place of reeds or native melons.",
+				"Its Carnival of Flowers began in 1949.",
+				"The Cobb+Co museum preserves historic horse-drawn carts, carriages and wagons."
+			],
+			"it": [
+				"Tra i significati proposti per il nome aborigeno figurano un luogo di canne o di meloni selvatici.",
+				"Il suo Carnevale dei Fiori iniziò nel 1949.",
+				"Il museo Cobb+Co conserva storici carri e carrozze a cavalli."
+			],
+			"de": [
+				"Als Bedeutungen des indigenen Namens werden ein Ort mit Schilf oder einheimischen Melonen vorgeschlagen.",
+				"Ihr Blumenkarneval begann 1949.",
+				"Das Museum Cobb+Co bewahrt historische Pferdekarren, Kutschen und Wagen."
+			]
+		}
 	},
 	"gold-coast": {
 		"kind": "city",
@@ -170,7 +255,24 @@
 		"populationRank": 29,
 		"region": "Western Australia",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The Noongar name Mandjoogoordap is interpreted as meeting place of the heart.",
+				"The artificial Dawesville Cut opened in 1994 to improve water exchange in the estuary.",
+				"Its Crab Fest celebrates the area's blue-manna crabs."
+			],
+			"it": [
+				"Il nome noongar Mandjoogoordap viene interpretato come luogo d'incontro del cuore.",
+				"Il canale artificiale Dawesville Cut aprì nel 1994 per migliorare il ricambio d'acqua nell'estuario.",
+				"Il Crab Fest celebra i granchi blue-manna della zona."
+			],
+			"de": [
+				"Der Noongar-Name Mandjoogoordap wird als Treffpunkt des Herzens gedeutet.",
+				"Der künstliche Dawesville Cut wurde 1994 zur Verbesserung des Wasseraustauschs im Ästuar eröffnet.",
+				"Ihr Crab Fest feiert die Blaukrabben der Umgebung."
+			]
+		}
 	},
 	"newcastle": {
 		"kind": "city",
@@ -253,7 +355,24 @@
 		"populationRank": 21,
 		"region": "New South Wales",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its Aboriginal name has been interpreted as black cockatoo or camping place.",
+				"The original Nowra bridge opened in 1881, using ironwork prefabricated in Delaware.",
+				"Nearby Bundanon was donated to the Australian people by Arthur and Yvonne Boyd in 1993."
+			],
+			"it": [
+				"Il nome aborigeno è stato interpretato come cacatua nero o luogo d'accampamento.",
+				"Il ponte originale di Nowra aprì nel 1881, con strutture in ferro prefabbricate nel Delaware.",
+				"La vicina Bundanon fu donata al popolo australiano da Arthur e Yvonne Boyd nel 1993."
+			],
+			"de": [
+				"Der indigene Name wird als schwarzer Kakadu oder Lagerplatz gedeutet.",
+				"Die ursprüngliche Nowra-Brücke wurde 1881 mit in Delaware vorgefertigten Eisenteilen eröffnet.",
+				"Das nahe Bundanon wurde 1993 von Arthur und Yvonne Boyd dem australischen Volk geschenkt."
+			]
+		}
 	},
 	"adelaide": {
 		"kind": "city",
@@ -337,7 +456,24 @@
 		"populationRank": 26,
 		"region": "Victoria",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name is usually linked, through a shepherd's nickname, to the boxer Bendigo Thompson.",
+				"The discovery of gold in 1851 transformed the settlement.",
+				"The Golden Dragon Museum tells the story of Chinese communities on the goldfields."
+			],
+			"it": [
+				"Il nome viene solitamente collegato, attraverso il soprannome di un pastore, al pugile Bendigo Thompson.",
+				"La scoperta dell'oro nel 1851 trasformò l'insediamento.",
+				"Il Golden Dragon Museum racconta la storia delle comunità cinesi nei campi auriferi."
+			],
+			"de": [
+				"Ihr Name wird meist über den Spitznamen eines Schäfers mit dem Boxer Bendigo Thompson verbunden.",
+				"Der Goldfund von 1851 veränderte die Siedlung grundlegend.",
+				"Das Golden Dragon Museum erzählt von den chinesischen Gemeinschaften auf den Goldfeldern."
+			]
+		}
 	},
 	"auckland": {
 		"kind": "city",
@@ -369,7 +505,24 @@
 		"populationRank": 24,
 		"region": "Victoria",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its Wadawurrung name is interpreted as resting place or bent elbow.",
+				"The Eureka Stockade uprising took place here in 1854.",
+				"Sovereign Hill recreates life on the nineteenth-century goldfields."
+			],
+			"it": [
+				"Il nome wadawurrung viene interpretato come luogo di riposo o gomito piegato.",
+				"La rivolta di Eureka Stockade ebbe luogo qui nel 1854.",
+				"Sovereign Hill ricrea la vita nei campi auriferi dell'Ottocento."
+			],
+			"de": [
+				"Ihr Wadawurrung-Name wird als Ruheplatz oder gebeugter Ellbogen gedeutet.",
+				"Hier fand 1854 der Eureka-Stockade-Aufstand statt.",
+				"Sovereign Hill stellt das Leben auf den Goldfeldern des neunzehnten Jahrhunderts nach."
+			]
+		}
 	},
 	"tauranga": {
 		"kind": "city",
@@ -627,7 +780,24 @@
 		"populationRank": 30,
 		"region": "Tasmania",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"It was named after Launceston in Cornwall, England.",
+				"European settlement began here in 1806.",
+				"The original Alexandra suspension bridge over Cataract Gorge opened in 1904."
+			],
+			"it": [
+				"Prende il nome da Launceston, in Cornovaglia, Inghilterra.",
+				"L'insediamento europeo iniziò qui nel 1806.",
+				"Il ponte sospeso Alexandra originale sul Cataract Gorge aprì nel 1904."
+			],
+			"de": [
+				"Nach Launceston in Cornwall, England, benannt.",
+				"Die europäische Besiedlung begann hier 1806.",
+				"Die ursprüngliche Alexandra-Hängebrücke über die Cataract Gorge wurde 1904 eröffnet."
+			]
+		}
 	},
 	"hobart": {
 		"kind": "city",
@@ -635,7 +805,24 @@
 		"populationRank": 27,
 		"region": "Tasmania",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named after Lord Hobart, Britain's secretary for war and the colonies.",
+				"The settlement at Sullivans Cove was established in 1804.",
+				"Salamanca Market began in 1972 beside the historic sandstone warehouses."
+			],
+			"it": [
+				"Prende il nome da lord Hobart, segretario britannico per la guerra e le colonie.",
+				"L'insediamento di Sullivans Cove fu fondato nel 1804.",
+				"Il mercato di Salamanca iniziò nel 1972 accanto agli storici magazzini in arenaria."
+			],
+			"de": [
+				"Nach Lord Hobart benannt, dem britischen Staatssekretär für Krieg und Kolonien.",
+				"Die Siedlung an der Sullivans Cove wurde 1804 gegründet.",
+				"Der Salamanca Market begann 1972 neben den historischen Lagerhäusern aus Sandstein."
+			]
+		}
 	},
 	"christchurch": {
 		"kind": "city",

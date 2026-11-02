@@ -1,35 +1,27 @@
 {
-	"ngerulmud": {
-		"kind": "city",
-		"population": 7026,
-		"populationRank": 14,
-		"capitalOf": "country",
-		"coastal": true,
-		"position": "north-west",
-		"hooks": {
-			"en": [
-				"The capital since 2006, and one of the least populous capitals in the world.",
-				"It is on Babeldaob, the largest island of Palau.",
-				"Its capitol building was modelled on the Capitol in Washington."
-			],
-			"it": [
-				"La capitale dal 2006, e una delle capitali meno popolose del mondo.",
-				"Si trova su Babeldaob, l’isola più grande di Palau.",
-				"Il suo palazzo del governo fu modellato sul Campidoglio di Washington."
-			],
-			"de": [
-				"Die Hauptstadt seit 2006 und eine der einwohnerärmsten Hauptstädte der Welt.",
-				"Sie liegt auf Babeldaob, der größten Insel Palaus.",
-				"Ihr Kapitolgebäude wurde dem Kapitol in Washington nachempfunden."
-			]
-		}
-	},
 	"koror": {
 		"kind": "city",
 		"population": 11200,
 		"populationRank": 12,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Oreor, the island's Palauan name, is also used for Koror.",
+				"It was Palau's capital until government moved to Ngerulmud in 2006.",
+				"Its Belau National Museum was established in 1955."
+			],
+			"it": [
+				"Oreor, il nome palauano dell'isola, viene usato anche per Koror.",
+				"Fu capitale di Palau fino al trasferimento del governo a Ngerulmud nel 2006.",
+				"Il suo Belau National Museum fu fondato nel 1955."
+			],
+			"de": [
+				"Oreor, der palauische Name der Insel, wird auch für Koror verwendet.",
+				"Sie war Palaus Hauptstadt, bis die Regierung 2006 nach Ngerulmud umzog.",
+				"Ihr Belau National Museum wurde 1955 gegründet."
+			]
+		}
 	},
 	"majuro": {
 		"kind": "city",
@@ -59,7 +51,7 @@
 	"palikir": {
 		"kind": "city",
 		"population": 4645,
-		"populationRank": 17,
+		"populationRank": 16,
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "north",
@@ -109,9 +101,26 @@
 	"yaren": {
 		"kind": "city",
 		"population": 803,
-		"populationRank": 18,
+		"populationRank": 17,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its earlier names Makwa and Moqua recall the underground lake Moqua Well.",
+				"Nauru has no official capital, but its government offices are in this district.",
+				"Nauru International Airport is located in the district."
+			],
+			"it": [
+				"I suoi precedenti nomi Makwa e Moqua richiamano il lago sotterraneo Moqua Well.",
+				"Nauru non ha una capitale ufficiale, ma gli uffici governativi si trovano in questo distretto.",
+				"L'aeroporto internazionale di Nauru si trova nel distretto."
+			],
+			"de": [
+				"Ihre früheren Namen Makwa und Moqua erinnern an den unterirdischen See Moqua Well.",
+				"Nauru hat keine offizielle Hauptstadt, seine Regierungsgebäude liegen jedoch in diesem Distrikt.",
+				"Der internationale Flughafen von Nauru liegt im Distrikt."
+			]
+		}
 	},
 	"lae": {
 		"kind": "city",
@@ -119,20 +128,54 @@
 		"populationRank": 3,
 		"region": "Morobe",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Lae is nicknamed the Garden City.",
+				"Its airstrip was built in 1927 to serve the Wau goldfields.",
+				"It was Amelia Earhart's last known departure point before her disappearance in 1937."
+			],
+			"it": [
+				"Lae è soprannominata la città giardino.",
+				"La sua pista d'atterraggio fu costruita nel 1927 a servizio dei giacimenti auriferi di Wau.",
+				"Fu l'ultimo punto di partenza noto di Amelia Earhart prima della sua scomparsa nel 1937."
+			],
+			"de": [
+				"Lae trägt den Beinamen Gartenstadt.",
+				"Ihre Landebahn wurde 1927 zur Versorgung der Goldfelder von Wau gebaut.",
+				"Sie war Amelia Earharts letzter bekannter Abflugort vor ihrem Verschwinden 1937."
+			]
+		}
 	},
 	"gizo": {
 		"kind": "city",
 		"population": 6154,
-		"populationRank": 15,
+		"populationRank": 14,
 		"region": "Choiseul",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Gizo town and Ghizo island are spelled differently but pronounced alike.",
+				"A British colonial government station was established here in 1900.",
+				"Its airport occupies the neighbouring island of Nusatupe."
+			],
+			"it": [
+				"La città di Gizo e l'isola di Ghizo si scrivono diversamente ma si pronunciano allo stesso modo.",
+				"Nel 1900 vi fu istituita una stazione del governo coloniale britannico.",
+				"Il suo aeroporto occupa la vicina isola di Nusatupe."
+			],
+			"de": [
+				"Die Stadt Gizo und die Insel Ghizo werden unterschiedlich geschrieben, aber gleich ausgesprochen.",
+				"Hier wurde 1900 eine britische Kolonialverwaltungsstation eingerichtet.",
+				"Ihr Flughafen liegt auf der benachbarten Insel Nusatupe."
+			]
+		}
 	},
 	"funafuti": {
 		"kind": "city",
 		"population": 4749,
-		"populationRank": 16,
+		"populationRank": 15,
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "east",
@@ -212,7 +255,24 @@
 		"populationRank": 5,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The modern town inherited the name of the older Apia village, which still exists within it.",
+				"Robert Louis Stevenson's nearby Vailima home became a museum.",
+				"An 1889 cyclone wrecked German and American warships in its harbour."
+			],
+			"it": [
+				"La città moderna ereditò il nome del vecchio villaggio di Apia, che esiste ancora al suo interno.",
+				"La vicina casa Vailima di Robert Louis Stevenson divenne un museo.",
+				"Un ciclone del 1889 fece naufragare nel suo porto navi da guerra tedesche e americane."
+			],
+			"de": [
+				"Die moderne Stadt übernahm den Namen des älteren Dorfes Apia, das noch immer innerhalb der Stadt besteht.",
+				"Robert Louis Stevensons nahe gelegenes Haus Vailima wurde zu einem Museum.",
+				"Ein Zyklon ließ 1889 deutsche und amerikanische Kriegsschiffe in ihrem Hafen stranden."
+			]
+		}
 	},
 	"luganville": {
 		"kind": "city",
@@ -220,7 +280,24 @@
 		"populationRank": 11,
 		"region": "Sanma",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its local nickname Kanal comes from the former French name Canal du Segond.",
+				"It grew into a major American base during the Second World War.",
+				"The President Coolidge sank nearby in 1942 and became a well-known shipwreck."
+			],
+			"it": [
+				"Il soprannome locale Kanal deriva dal precedente nome francese Canal du Segond.",
+				"Divenne un'importante base americana durante la seconda guerra mondiale.",
+				"Il President Coolidge affondò nelle vicinanze nel 1942, diventando un celebre relitto."
+			],
+			"de": [
+				"Ihr lokaler Beiname Kanal stammt vom früheren französischen Namen Canal du Segond.",
+				"Sie entwickelte sich im Zweiten Weltkrieg zu einem bedeutenden amerikanischen Stützpunkt.",
+				"Die President Coolidge sank 1942 in der Nähe und wurde zu einem bekannten Wrack."
+			]
+		}
 	},
 	"lautoka": {
 		"kind": "city",
@@ -228,7 +305,24 @@
 		"populationRank": 6,
 		"region": "Western",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"An oral tradition links its name, spear hit, to a duel between chiefs.",
+				"Its sugar mill opened in 1903 and helped make it the Sugar City.",
+				"William Bligh charted this coast in 1789 after the mutiny on the Bounty."
+			],
+			"it": [
+				"Una tradizione orale collega il suo nome, colpo di lancia, a un duello tra capi.",
+				"Il suo zuccherificio aprì nel 1903 e contribuì a farne la città dello zucchero.",
+				"William Bligh cartografò questa costa nel 1789 dopo l'ammutinamento del Bounty."
+			],
+			"de": [
+				"Eine mündliche Überlieferung verbindet ihren Namen, Speertreffer, mit einem Duell zwischen Häuptlingen.",
+				"Ihre Zuckerfabrik wurde 1903 eröffnet und machte sie zur Zuckerstadt.",
+				"William Bligh kartierte diese Küste 1789 nach der Meuterei auf der Bounty."
+			]
+		}
 	},
 	"port-vila": {
 		"kind": "city",
@@ -287,7 +381,24 @@
 		"population": 7391,
 		"populationRank": 13,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Spanish navigator Mourelle named its harbour Port of Refuge in 1781.",
+				"A German coaling station was established following Tonga's 1876 treaty with Germany.",
+				"Flat-topped Mount Talau overlooks the town."
+			],
+			"it": [
+				"Il navigatore spagnolo Mourelle chiamò il suo porto Porto del Rifugio nel 1781.",
+				"Una stazione carbonifera tedesca fu istituita dopo il trattato del 1876 tra Tonga e Germania.",
+				"Il monte Talau, dalla cima piatta, domina la città."
+			],
+			"de": [
+				"Der spanische Seefahrer Mourelle nannte ihren Hafen 1781 Zufluchtshafen.",
+				"Nach Tongas Vertrag mit Deutschland von 1876 wurde eine deutsche Kohlenstation eingerichtet.",
+				"Der Tafelberg Talau überragt die Stadt."
+			]
+		}
 	},
 	"nuku-alofa": {
 		"kind": "city",
@@ -295,6 +406,23 @@
 		"populationRank": 8,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its Tongan name is usually translated as abode of love.",
+				"Its wooden Royal Palace was built in 1867.",
+				"The royal burial grounds at Malaekula were established in 1893."
+			],
+			"it": [
+				"Il suo nome tongano viene solitamente tradotto come dimora dell'amore.",
+				"Il suo Palazzo Reale in legno fu costruito nel 1867.",
+				"Le tombe reali di Malaekula furono istituite nel 1893."
+			],
+			"de": [
+				"Ihr tongaischer Name wird meist als Wohnort der Liebe übersetzt.",
+				"Ihr hölzerner Königspalast wurde 1867 erbaut.",
+				"Die königliche Begräbnisstätte Malaekula wurde 1893 angelegt."
+			]
+		}
 	}
 }

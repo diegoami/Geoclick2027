@@ -426,7 +426,24 @@
 		"populationRank": 30,
 		"region": "Itapúa",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its name refers to the Christian doctrine of the Incarnation.",
+				"The Jesuit Roque González de Santa Cruz founded the mission in 1615.",
+				"The San Roque González bridge opened in 1990, linking it with Posadas in Argentina."
+			],
+			"it": [
+				"Il suo nome richiama la dottrina cristiana dell'Incarnazione.",
+				"Il gesuita Roque González de Santa Cruz fondò la missione nel 1615.",
+				"Il ponte San Roque González aprì nel 1990, collegandola a Posadas in Argentina."
+			],
+			"de": [
+				"Ihr Name verweist auf die christliche Lehre von der Menschwerdung Christi.",
+				"Der Jesuit Roque González de Santa Cruz gründete die Mission 1615.",
+				"Die Brücke San Roque González wurde 1990 eröffnet und verbindet sie mit Posadas in Argentinien."
+			]
+		}
 	},
 	"resistencia": {
 		"kind": "city",
@@ -507,7 +524,24 @@
 		"population": 200000,
 		"populationRank": 35,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The city honours Bernabé Rivera, while its department honours Fructuoso Rivera.",
+				"Earlier settlement names included Pereira and Ceballos.",
+				"Its International Square marks the open frontier with Brazil's Santana do Livramento."
+			],
+			"it": [
+				"La città onora Bernabé Rivera, mentre il dipartimento onora Fructuoso Rivera.",
+				"Tra i nomi precedenti dell'insediamento figurano Pereira e Ceballos.",
+				"La sua Piazza Internazionale segna la frontiera aperta con Santana do Livramento, in Brasile."
+			],
+			"de": [
+				"Die Stadt ehrt Bernabé Rivera, während ihr Departamento Fructuoso Rivera ehrt.",
+				"Frühere Namen der Siedlung waren Pereira und Ceballos.",
+				"Ihr Internationaler Platz markiert die offene Grenze zum brasilianischen Santana do Livramento."
+			]
+		}
 	},
 	"cordoba": {
 		"kind": "city",
@@ -811,7 +845,24 @@
 		"populationRank": 41,
 		"region": "Maldonado",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its Spanish name means eastern point.",
+				"The fingers of La Mano rise from Brava Beach; the sculpture was unveiled in 1982.",
+				"Nearby Casapueblo was created by the artist Carlos Páez Vilaró."
+			],
+			"it": [
+				"Il suo nome spagnolo significa punta orientale.",
+				"Le dita della Mano emergono dalla spiaggia Brava; la scultura fu inaugurata nel 1982.",
+				"La vicina Casapueblo fu creata dall'artista Carlos Páez Vilaró."
+			],
+			"de": [
+				"Ihr spanischer Name bedeutet östliche Spitze.",
+				"Die Finger von La Mano ragen aus dem Brava-Strand; die Skulptur wurde 1982 enthüllt.",
+				"Das nahe Casapueblo wurde vom Künstler Carlos Páez Vilaró geschaffen."
+			]
+		}
 	},
 	"talca": {
 		"kind": "city",

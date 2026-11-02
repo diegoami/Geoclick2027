@@ -27,7 +27,7 @@
 				37.2164257,
 				19.615791
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "khartoum",
@@ -50,7 +50,7 @@
 				32.5322334,
 				15.5900241
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "asmara",
@@ -69,7 +69,7 @@
 				38.9333235,
 				15.3333393
 			],
-			"colorIndex": 0
+			"colorIndex": 2
 		},
 		{
 			"id": "n-djamena",
@@ -88,7 +88,7 @@
 				15.0472025,
 				12.1150424
 			],
-			"colorIndex": 1
+			"colorIndex": 4
 		},
 		{
 			"id": "djibouti",
@@ -111,7 +111,7 @@
 				43.1480017,
 				11.5950145
 			],
-			"colorIndex": 2
+			"colorIndex": 4
 		},
 		{
 			"id": "dire-dawa",
@@ -133,7 +133,7 @@
 				41.8600183,
 				9.5899947
 			],
-			"colorIndex": 0
+			"colorIndex": 2
 		},
 		{
 			"id": "addis-ababa",
@@ -156,7 +156,7 @@
 				38.6980586,
 				9.0352562
 			],
-			"colorIndex": 3
+			"colorIndex": 5
 		},
 		{
 			"id": "adama",
@@ -175,7 +175,7 @@
 				39.2699955,
 				8.5499807
 			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "juba",
@@ -197,7 +197,7 @@
 				31.5800256,
 				4.8299752
 			],
-			"colorIndex": 2
+			"colorIndex": 3
 		},
 		{
 			"id": "bangui",
@@ -216,7 +216,7 @@
 				18.5582881,
 				4.3666443
 			],
-			"colorIndex": 2
+			"colorIndex": 5
 		},
 		{
 			"id": "douala",
@@ -299,7 +299,7 @@
 				45.3647318,
 				2.0686272
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "mbale",
@@ -318,7 +318,7 @@
 				34.1699967,
 				1.0904102
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "libreville",
@@ -375,7 +375,7 @@
 				32.5813777,
 				0.3186048
 			],
-			"colorIndex": 1
+			"colorIndex": 2
 		},
 		{
 			"id": "nairobi",
@@ -394,7 +394,7 @@
 				36.814711,
 				-1.2814009
 			],
-			"colorIndex": 0
+			"colorIndex": 5
 		},
 		{
 			"id": "kigali",
@@ -413,7 +413,7 @@
 				30.0585859,
 				-1.9516442
 			],
-			"colorIndex": 0
+			"colorIndex": 4
 		},
 		{
 			"id": "moshi",
@@ -432,7 +432,7 @@
 				37.3399841,
 				-3.3396037
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "bujumbura",
@@ -451,7 +451,26 @@
 				29.3600061,
 				-3.3760872
 			],
-			"colorIndex": 3
+			"colorIndex": 0
+		},
+		{
+			"id": "gitega",
+			"name": "Gitega",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Burundi",
+			"centroid": [
+				29.8435941,
+				-3.4260067
+			],
+			"bbox": [
+				29.8435941,
+				-3.4260067,
+				29.8435941,
+				-3.4260067
+			],
+			"colorIndex": 5
 		},
 		{
 			"id": "mombasa",
@@ -470,7 +489,7 @@
 				39.6879723,
 				-4.0380802
 			],
-			"colorIndex": 1
+			"colorIndex": 2
 		},
 		{
 			"id": "brazzaville",
@@ -489,7 +508,7 @@
 				15.2827436,
 				-4.2572399
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "kinshasa",
@@ -508,7 +527,7 @@
 				15.313026,
 				-4.3277782
 			],
-			"colorIndex": 3
+			"colorIndex": 5
 		},
 		{
 			"id": "victoria",
@@ -527,7 +546,7 @@
 				55.4499898,
 				-4.6166317
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "pointe-noire",
@@ -546,7 +565,26 @@
 				11.8800394,
 				-4.7700073
 			],
-			"colorIndex": 1
+			"colorIndex": 3
+		},
+		{
+			"id": "dodoma",
+			"name": "Dodoma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tanzania",
+			"centroid": [
+				35.7500036,
+				-6.1833061
+			],
+			"bbox": [
+				35.7500036,
+				-6.1833061,
+				35.7500036,
+				-6.1833061
+			],
+			"colorIndex": 3
 		},
 		{
 			"id": "dar-es-salaam",
@@ -568,7 +606,7 @@
 				39.266396,
 				-6.7980667
 			],
-			"colorIndex": 2
+			"colorIndex": 4
 		},
 		{
 			"id": "luanda",
@@ -587,7 +625,7 @@
 				13.2324812,
 				-8.8363403
 			],
-			"colorIndex": 2
+			"colorIndex": 4
 		},
 		{
 			"id": "lubumbashi",
@@ -606,7 +644,7 @@
 				27.4780716,
 				-11.6780789
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "moroni",
@@ -644,7 +682,7 @@
 				15.7580635,
 				-12.7480395
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "kitwe",
@@ -663,7 +701,7 @@
 				28.220024,
 				-12.8100333
 			],
-			"colorIndex": 0
+			"colorIndex": 2
 		},
 		{
 			"id": "lilongwe",
@@ -682,7 +720,7 @@
 				33.783302,
 				-13.9832951
 			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "lusaka",
@@ -701,7 +739,7 @@
 				28.2813817,
 				-15.4146984
 			],
-			"colorIndex": 3
+			"colorIndex": 5
 		},
 		{
 			"id": "blantyre",
@@ -720,7 +758,7 @@
 				34.9899467,
 				-15.7900065
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "harare",
@@ -739,7 +777,7 @@
 				31.0427636,
 				-17.8158438
 			],
-			"colorIndex": 2
+			"colorIndex": 4
 		},
 		{
 			"id": "antananarivo",
@@ -758,7 +796,7 @@
 				47.514678,
 				-18.9146915
 			],
-			"colorIndex": 4
+			"colorIndex": 5
 		},
 		{
 			"id": "beira",
@@ -777,7 +815,7 @@
 				34.8700057,
 				-19.8200447
 			],
-			"colorIndex": 0
+			"colorIndex": 2
 		},
 		{
 			"id": "antsirabe",
@@ -796,7 +834,7 @@
 				47.0332942,
 				-19.8500171
 			],
-			"colorIndex": 2
+			"colorIndex": 4
 		},
 		{
 			"id": "port-louis",
@@ -815,7 +853,7 @@
 				57.4999939,
 				-20.1666386
 			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "bulawayo",
@@ -834,7 +872,7 @@
 				28.580002,
 				-20.1699975
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "windhoek",
@@ -853,7 +891,7 @@
 				17.0835461,
 				-22.5700061
 			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "gaborone",
@@ -872,7 +910,7 @@
 				25.9119478,
 				-24.6463135
 			],
-			"colorIndex": 2
+			"colorIndex": 4
 		},
 		{
 			"id": "pretoria",
@@ -891,7 +929,7 @@
 				28.2274832,
 				-25.7049747
 			],
-			"colorIndex": 3
+			"colorIndex": 5
 		},
 		{
 			"id": "maputo",
@@ -910,7 +948,7 @@
 				32.5872171,
 				-25.9533316
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "johannesburg",
@@ -929,7 +967,7 @@
 				28.0280639,
 				-26.1680989
 			],
-			"colorIndex": 0
+			"colorIndex": 2
 		},
 		{
 			"id": "mbabane",
@@ -948,7 +986,7 @@
 				31.1333345,
 				-26.3166508
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "bloemfontein",
@@ -967,7 +1005,7 @@
 				26.2299129,
 				-29.1199939
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "maseru",
@@ -986,7 +1024,7 @@
 				27.4832731,
 				-29.3166744
 			],
-			"colorIndex": 3
+			"colorIndex": 5
 		},
 		{
 			"id": "durban",
@@ -1005,7 +1043,7 @@
 				31.01094366326237,
 				-29.86066234118211
 			],
-			"colorIndex": 0
+			"colorIndex": 2
 		},
 		{
 			"id": "cape-town",
@@ -1028,7 +1066,7 @@
 				18.4330423,
 				-33.9180651
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		}
 	],
 	"tourOrder": [
@@ -1054,11 +1092,13 @@
 		"kigali",
 		"moshi",
 		"bujumbura",
+		"gitega",
 		"mombasa",
 		"brazzaville",
 		"kinshasa",
 		"victoria",
 		"pointe-noire",
+		"dodoma",
 		"dar-es-salaam",
 		"luanda",
 		"lubumbashi",

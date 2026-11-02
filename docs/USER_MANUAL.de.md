@@ -78,7 +78,7 @@ Kontofunktion gilt für den Browser; Desktop und Android folgen getrennt.
 
 ## 1. Was ist Geoclick?
 
-Du lernst, wo Länder, Hauptstädte, Regionen und Städte liegen, indem du ihre Namen auf der Karte platzierst. Der Katalog umfasst **221 Karten in 81 Ländern und auf den sechs Kontinenten**. Jede Karte bietet Gewusst, Übersicht, Quiz und Tour. Das Spiel merkt sich deinen Lernstand auf dem Gerät: Jede richtige Antwort beim ersten Versuch hebt einen Namen eine Stufe, jeder Fehler senkt ihn eine Stufe. Ein Konto brauchst du nicht. Oberfläche und geschriebene Ortsinformationen gibt es auf Englisch, Deutsch und Italienisch.
+Du lernst, wo Länder, Hauptstädte, Regionen und Städte liegen, indem du ihre Namen auf der Karte platzierst. Der Katalog umfasst **231 Karten in 81 Ländern und auf den sechs Kontinenten**. Jede Karte bietet Gewusst, Übersicht, Quiz und Tour. Das Spiel merkt sich deinen Lernstand auf dem Gerät: Jede richtige Antwort beim ersten Versuch hebt einen Namen eine Stufe, jeder Fehler senkt ihn eine Stufe. Ein Konto brauchst du nicht. Oberfläche und geschriebene Ortsinformationen gibt es auf Englisch, Deutsch und Italienisch.
 
 Du kannst im Browser oder mit der Windows- beziehungsweise Android-App spielen. Ein Tutorial führt durch die wichtigsten Handgriffe und kann später wiederholt werden, ohne den wirklichen Lernstand zu verändern.
 

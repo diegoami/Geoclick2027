@@ -2646,7 +2646,7 @@ map bar because it was opened carries a large red X that forgets it
 No X on the open map, and none while the "Show detailed maps" tick shows every
 detailed map (unticking is how those go).
 
-**Amended (2026-11-02, owner):** restore the missing remove action beside the home screen's selected, remembered detailed map after the combobox redesign. The red X forgets the shortcut and clears its saved row choice, returning to a basic map; it never clears earned progress. The map bar keeps its existing open-map/Show-all exceptions above. Continents follow the same rule as countries: Countries and Capitals stay basic; Europe's five regional city sets are detailed, as future regional city sets will be. Additional non-European city maps are scoped in proposal #325 before building.
+**Amended (2026-11-02, owner):** restore the missing remove action beside the home screen's selected, remembered detailed map after the combobox redesign. The red X forgets the shortcut and clears its saved row choice, returning to a basic map; it never clears earned progress. The map bar keeps its existing open-map/Show-all exceptions above. Continents follow the same rule as countries: Countries and Capitals stay basic; Europe's five regional city sets are detailed, as future regional city sets will be. The owner approved #325's ten regional city sets and then requested building them alongside phone acceptance, including this removal/defaults fix.
 
 
 
@@ -2753,3 +2753,10 @@ whole interface, including widgets, as in the web browser. Enable Tauri's
 native `zoomHotkeysEnabled` window setting; on Windows this controls
 WebView2's IsZoomControlEnabled for both keyboard and wheel. This is distinct
 from the persistent Appearance text preference and geographic map zoom.
+
+
+### Explicit Pacific point-map framing (2026-11-02, #325)
+
+The new Pacific city set keeps canonical target coordinates and IDs, with an explicit `wrapLongitude` flag selecting the narrow circular longitude window. Existing map framing stays unchanged. The shared longitude helpers split GIS queries/clips into canonical halves, keep derived directions and physical labels in that window, and project quiz points onto the visible world copy. This avoids spreading Samoa/Tonga and the western Pacific across most of the world, or dropping countries to hide the problem.
+
+Curated memberships and reviewed source supplements are authored inputs. Builds reuse committed place snapshots by default; `--refresh-sources` explicitly regenerates them from Natural Earth and the existing reviewed Bolivia adapter. Yaren is a sourced Nauru government-district target, not an invented official capital. Palau is represented by Koror at this scale; the nearby Ngerulmud/Melekeok source row is omitted as a crowded second target.

@@ -203,14 +203,48 @@
 		"populationRank": 24,
 		"region": "Nord",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Earlier names included Cap-Français and, under Henri Christophe, Cap-Henri.",
+				"It served as the capital of French Saint-Domingue until 1770.",
+				"The nearby Sans-Souci Palace and Citadelle preserve the history of Henri Christophe's kingdom."
+			],
+			"it": [
+				"Tra i nomi precedenti figurano Cap-Français e, sotto Henri Christophe, Cap-Henri.",
+				"Fu capitale della colonia francese di Saint-Domingue fino al 1770.",
+				"Il vicino palazzo di Sans-Souci e la Citadelle conservano la storia del regno di Henri Christophe."
+			],
+			"de": [
+				"Frühere Namen waren Cap-Français und unter Henri Christophe Cap-Henri.",
+				"Sie war bis 1770 Hauptstadt des französischen Saint-Domingue.",
+				"Der nahe Palast Sans-Souci und die Zitadelle bewahren die Geschichte von Henri Christophes Königreich."
+			]
+		}
 	},
 	"santiago": {
 		"kind": "city",
 		"population": 1550753,
 		"populationRank": 8,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its full name Santiago de los Caballeros means Saint James of the Knights.",
+				"Founded in 1495, it was among the earliest European settlements in the Americas.",
+				"Its Restoration Heroes monument commemorates the recovery of Dominican independence in the nineteenth century."
+			],
+			"it": [
+				"Il nome completo Santiago de los Caballeros significa San Giacomo dei Cavalieri.",
+				"Fondata nel 1495, fu tra i primi insediamenti europei nelle Americhe.",
+				"Il monumento agli Eroi della Restaurazione ricorda la riconquista dell'indipendenza dominicana nell'Ottocento."
+			],
+			"de": [
+				"Der vollständige Name Santiago de los Caballeros bedeutet Sankt Jakob der Ritter.",
+				"Die 1495 gegründete Stadt gehörte zu den frühen europäischen Siedlungen in Amerika.",
+				"Ihr Denkmal für die Helden der Restauration erinnert an die Wiedererlangung der dominikanischen Unabhängigkeit im neunzehnten Jahrhundert."
+			]
+		}
 	},
 	"ciudad-de-mexico": {
 		"kind": "city",
@@ -319,14 +353,48 @@
 		"population": 217899,
 		"populationRank": 27,
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Saint Peter's name was added to the older name Macorix in 1858.",
+				"The sugar industry drew workers from the English-speaking Caribbean.",
+				"Its Guloyas performers preserve the Cocolo dance-drama tradition."
+			],
+			"it": [
+				"Il nome di san Pietro fu aggiunto al precedente nome Macorix nel 1858.",
+				"L'industria dello zucchero attirò lavoratori dai Caraibi anglofoni.",
+				"I suoi artisti Guloyas conservano la tradizione del teatro danzato cocolo."
+			],
+			"de": [
+				"Der Name des heiligen Petrus wurde 1858 dem älteren Namen Macorix vorangestellt.",
+				"Die Zuckerindustrie zog Arbeitskräfte aus der englischsprachigen Karibik an.",
+				"Ihre Guloyas-Darsteller bewahren die Cocolo-Tanztheatertradition."
+			]
+		}
 	},
 	"la-romana": {
 		"kind": "city",
 		"population": 208437,
 		"populationRank": 28,
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The place-name La Romana is already recorded in a maritime document from 1659.",
+				"A major sugar mill transformed its economy in the early twentieth century.",
+				"Nearby Altos de Chavón is a modern village recreating sixteenth-century Mediterranean architecture."
+			],
+			"it": [
+				"Il toponimo La Romana compare già in un documento marittimo del 1659.",
+				"Un grande zuccherificio trasformò la sua economia all'inizio del Novecento.",
+				"La vicina Altos de Chavón è un villaggio moderno che ricrea l'architettura mediterranea del Cinquecento."
+			],
+			"de": [
+				"Der Ortsname La Romana ist bereits in einem Seefahrtsdokument von 1659 belegt.",
+				"Eine große Zuckerfabrik veränderte ihre Wirtschaft im frühen zwanzigsten Jahrhundert.",
+				"Das nahe Altos de Chavón ist ein modernes Dorf, das mediterrane Architektur des sechzehnten Jahrhunderts nachbildet."
+			]
+		}
 	},
 	"les-cayes": {
 		"kind": "city",
@@ -334,7 +402,24 @@
 		"populationRank": 32,
 		"region": "Sud",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its earlier French name Aux Cayes referred to the offshore cays.",
+				"Simón Bolívar arrived here in December 1815 while seeking Haitian help for independence campaigns.",
+				"Vetiver roots from the area supply fragrant oil used in perfumes."
+			],
+			"it": [
+				"Il suo precedente nome francese Aux Cayes richiamava gli isolotti al largo.",
+				"Simón Bolívar vi arrivò nel dicembre 1815 cercando l'aiuto haitiano per le campagne d'indipendenza.",
+				"Le radici di vetiver della zona forniscono un olio aromatico usato nei profumi."
+			],
+			"de": [
+				"Ihr früherer französischer Name Aux Cayes bezog sich auf die vorgelagerten Inselchen.",
+				"Simón Bolívar kam im Dezember 1815 hierher, um haitianische Hilfe für seine Unabhängigkeitskämpfe zu suchen.",
+				"Vetiverwurzeln aus der Umgebung liefern Duftöl für Parfüms."
+			]
+		}
 	},
 	"kingston": {
 		"kind": "city",
@@ -467,7 +552,24 @@
 		"populationRank": 17,
 		"region": "Cortés",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The Spanish settlement was founded as San Pedro de Puerto Caballos in 1536.",
+				"The railway to Puerto Cortés helped its banana trade expand.",
+				"Its Museum of Anthropology and History tells the story of the Sula Valley."
+			],
+			"it": [
+				"L'insediamento spagnolo fu fondato come San Pedro de Puerto Caballos nel 1536.",
+				"La ferrovia per Puerto Cortés favorì l'espansione del commercio delle banane.",
+				"Il Museo di Antropologia e Storia racconta il passato della valle di Sula."
+			],
+			"de": [
+				"Die spanische Siedlung wurde 1536 als San Pedro de Puerto Caballos gegründet.",
+				"Die Eisenbahn nach Puerto Cortés förderte den Bananenhandel.",
+				"Ihr Museum für Anthropologie und Geschichte erzählt von der Vergangenheit des Sula-Tals."
+			]
+		}
 	},
 	"roseau": {
 		"kind": "city",
@@ -501,7 +603,24 @@
 		"populationRank": 18,
 		"region": "Quezaltenango",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its Nahuatl name means the walled place of the quetzal bird.",
+				"Its K'iche' name Xelajú is often shortened to Xela.",
+				"It served as the capital of the short-lived state of Los Altos."
+			],
+			"it": [
+				"Il suo nome nahuatl significa il luogo fortificato dell'uccello quetzal.",
+				"Il suo nome k'iche' Xelajú viene spesso abbreviato in Xela.",
+				"Fu capitale dell'effimero Stato di Los Altos."
+			],
+			"de": [
+				"Ihr Nahuatl-Name bedeutet ummauerter Ort des Quetzalvogels.",
+				"Ihr K'iche'-Name Xelajú wird oft zu Xela verkürzt.",
+				"Sie war Hauptstadt des kurzlebigen Staates Los Altos."
+			]
+		}
 	},
 	"guatemala-city": {
 		"kind": "city",
@@ -585,7 +704,24 @@
 		"population": 234478,
 		"populationRank": 25,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its Spanish name honours Saint Anne.",
+				"Its cathedral is distinguished by Gothic Revival architecture.",
+				"Its National Theatre opened in 1910 with a performance of Rigoletto."
+			],
+			"it": [
+				"Il suo nome spagnolo onora sant'Anna.",
+				"La sua cattedrale si distingue per l'architettura neogotica.",
+				"Il Teatro Nazionale aprì nel 1910 con una rappresentazione di Rigoletto."
+			],
+			"de": [
+				"Ihr spanischer Name ehrt die heilige Anna.",
+				"Ihre Kathedrale zeichnet sich durch neugotische Architektur aus.",
+				"Ihr Nationaltheater wurde 1910 mit einer Aufführung von Rigoletto eröffnet."
+			]
+		}
 	},
 	"san-salvador": {
 		"kind": "city",
@@ -617,7 +753,24 @@
 		"population": 201563,
 		"populationRank": 30,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its founding name San Miguel de la Frontera meant Saint Michael of the Frontier.",
+				"Luis de Moscoso Alvarado founded the settlement in 1530.",
+				"The city's carnival grew from celebrations honouring Our Lady of Peace."
+			],
+			"it": [
+				"Il suo nome originario San Miguel de la Frontera significava San Michele della Frontiera.",
+				"Luis de Moscoso Alvarado fondò l'insediamento nel 1530.",
+				"Il carnevale cittadino si sviluppò dalle celebrazioni in onore di Nostra Signora della Pace."
+			],
+			"de": [
+				"Ihr Gründungsname San Miguel de la Frontera bedeutete Sankt Michael der Grenze.",
+				"Luis de Moscoso Alvarado gründete die Siedlung 1530.",
+				"Der Karneval der Stadt entwickelte sich aus den Feiern zu Ehren Unserer Lieben Frau vom Frieden."
+			]
+		}
 	},
 	"kingstown": {
 		"kind": "city",
@@ -776,7 +929,24 @@
 		"population": 204000,
 		"populationRank": 29,
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Colón is the Spanish surname of Christopher Columbus, whom the city honours.",
+				"English-speaking residents also called it Aspinwall, after a railway promoter.",
+				"It was founded in 1850 as the Atlantic terminus of the Panama Railroad."
+			],
+			"it": [
+				"Colón è il cognome spagnolo di Cristoforo Colombo, al quale la città è dedicata.",
+				"Gli abitanti anglofoni la chiamavano anche Aspinwall, dal nome di un promotore della ferrovia.",
+				"Fu fondata nel 1850 come capolinea atlantico della ferrovia di Panama."
+			],
+			"de": [
+				"Colón ist der spanische Nachname von Christoph Kolumbus, den die Stadt ehrt.",
+				"Englischsprachige Bewohner nannten sie nach einem Eisenbahnförderer auch Aspinwall.",
+				"Sie wurde 1850 als atlantischer Endpunkt der Panama-Eisenbahn gegründet."
+			]
+		}
 	},
 	"panama-city": {
 		"kind": "city",

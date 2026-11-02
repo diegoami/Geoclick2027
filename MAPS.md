@@ -1984,3 +1984,78 @@ so the two polygons share a boundary without overlaps. Both prepared country
 collections pass GDAL/GEOS validity and nonempty checks. These are learning-map
 reconstructions, not a full audit of small boundary adjustments or cadastral
 products. The importer pins the older inputs and checks the expected counts.
+
+### Regional city maps outside Europe (2026-11-02, #325)
+
+The owner approved two detailed city sets per non-European continent, then
+requested implementation alongside Firebase phone acceptance. All ten are
+`advanced: true`; Countries/Capitals stay basic. Europe's five regional city
+sets now follow that same default. The home red X forgets a visited detail's
+shortcut/row choice without deleting progress, as the owner requested in #326.
+
+| Map ID | Targets | Explicit region |
+|---|---:|---|
+| africa-cities-north-west | 39 | North & West |
+| africa-cities-central-east-south | 54 | Central, East & South |
+| asia-cities-west-central | 42 | West & Central |
+| asia-cities-south-east-southeast | 48 | South, East & Southeast |
+| north-america-cities-canada-usa | 43 | Canada & USA |
+| north-america-cities-mexico-central-caribbean | 39 | Mexico, Central America & Caribbean |
+| south-america-cities-andes-north | 38 | Andes & North |
+| south-america-cities-brazil-southern-cone | 41 | Brazil & Southern Cone |
+| oceania-cities-australia-new-zealand | 35 | Australia & New Zealand |
+| oceania-cities-pacific-islands | 17 | Pacific islands |
+
+There are 396 new map targets and 55 newly authored city fact sets. Shared
+country facts supply the other targets; every target has three or more
+sentences in EN/IT/DE. Sources for the new sentences are recorded under each
+country file's `_sources` entries. The catalogue is now 231 maps.
+
+**Sources and curation:** `data/curation/continent-city-maps.json` is the authored
+membership/selection contract, not a bounding-box-only division. The companion
+supplements file records precisely matched source exclusions, the existing
+African capital distinctions, and Yaren's Wikidata coordinates/Nauru 2021 census
+population (803, for the government district). Nauru has no official capital;
+the input and hooks do not claim otherwise. The Andes & North set reuses the
+reviewed `data/places/bolivia.geojson` rather than the inconsistent raw Natural
+Earth Santa Ana/Santa Cruz rows. No existing map or target IDs were renamed.
+
+Country caps and explicit capital retains keep smaller countries present.
+Spacing suppresses close suburb clusters; separate meaningful cities still need
+zoom at continent scale. The ambiguous secondary Niger row named Niamey is
+excluded by exact country/name/coordinates, without inventing a replacement.
+The nearby Ngerulmud/Melekeok source row is omitted from the Pacific set, leaving
+Koror as Palau's city target. All twelve Pacific countries outside Australia and
+New Zealand remain represented, with Samoa and Tonga on the visible eastern
+world copy. Distant territories do not enter the explicit country lists. The
+Canada/USA set also clips at 130°W/60°N to omit Alaska and Hawaii; the Australia/
+New Zealand bounds omit distant offshore outliers. Population selection uses
+provider values, often older urban estimates, not comparable current censuses.
+
+**Rebuild in an isolated Linux GIS worktree**, with its own `npm ci` dependencies
+and the existing Natural Earth downloads, `ogr2ogr`, `tippecanoe` and `pmtiles`:
+
+```sh
+export PMTILES_BIN=/path/to/pmtiles
+node --import tsx data/scripts/build-continent-city-maps.ts --preview
+node --import tsx data/scripts/build-continent-city-maps.ts
+node --import tsx data/scripts/build-map-index.ts
+node --import tsx data/scripts/audit-authored-facts.ts --strict
+```
+
+The default reuses committed `data/places/<map-id>.geojson` snapshots. Use
+`--map=<id>` for one set; add `--refresh-sources` deliberately to regenerate the
+snapshots from the authored curation and source adapters. Snapshots, map JSON,
+tour, target tiles, terrain and derived facts are script output; edit the
+curation/scripts or country facts and rebuild. `--retain-json` preserves source
+names containing commas (Washington, D.C.) without splitting them into cities.
+
+The Pacific input explicitly marks `wrapLongitude`. Canonical coordinates and
+IDs are retained; `longitude.ts` selects a compact frame, the builder splits
+queries/clips at ±180°, and the runtime projects quiz points onto that same
+visible copy. Normal map bounds are unchanged. Browser checks verify every
+actual target marker and all twelve Pacific country memberships; the Pacific
+initial desktop frame is about 57° wide, rather than almost the whole world.
+
+Build tools used: Node 24.21.0, GDAL 3.12.2, tippecanoe 2.53.0 and go-pmtiles 1.31.2. Frozen-source previews reproduce all ten final target-ID lists without a live source refresh.
+

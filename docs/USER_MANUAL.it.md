@@ -77,7 +77,7 @@ Android seguiranno separatamente.
 
 ## 1. Che cos’è Geoclick
 
-Impari dove si trovano paesi, capitali, regioni e città, trascinando i loro nomi sulla mappa. Il catalogo comprende **221 mappe in 81 paesi e nei sei continenti**. Ogni mappa offre Conoscenza, Panoramica, Quiz e Tour. L’applicazione ricorda i risultati sul dispositivo, senza account: ogni risposta giusta al primo tentativo fa salire un nome di un gradino, ogni errore lo fa scendere di uno. Pulsanti e curiosità sono disponibili in inglese, tedesco e italiano.
+Impari dove si trovano paesi, capitali, regioni e città, trascinando i loro nomi sulla mappa. Il catalogo comprende **231 mappe in 81 paesi e nei sei continenti**. Ogni mappa offre Conoscenza, Panoramica, Quiz e Tour. L’applicazione ricorda i risultati sul dispositivo, senza account: ogni risposta giusta al primo tentativo fa salire un nome di un gradino, ogni errore lo fa scendere di uno. Pulsanti e curiosità sono disponibili in inglese, tedesco e italiano.
 
 Puoi usare il browser oppure le applicazioni per Windows e Android. Il tutorial iniziale presenta i comandi; puoi ripeterlo in seguito senza modificare i tuoi progressi reali.
 

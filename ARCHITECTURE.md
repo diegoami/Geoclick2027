@@ -394,6 +394,12 @@ Installed/live Windows verification and Android integration remain separate.
 /mobile                        Capacitor wrapper
 ```
 
+### Regional city curation and dateline windows
+
+`data/curation/continent-city-maps.json` records #325's explicit memberships, thresholds, caps, retained names, bounds and exclusions. `build-continent-city-maps.ts` builds the ten source snapshots/maps/facts and supports selection previews plus explicit source refresh; the supplements file records source-row exclusions, capital flags and Yaren provenance. Authored sentences remain in `data/facts/<country>.json` and are projected with the existing resolver.
+
+`packages/quiz-engine/src/longitude.ts` is the shared pure longitude/window contract. Only point maps explicitly marked `wrapLongitude` opt into circular camera fitting; GIS queries split at the dateline, fact/label bounds use the same frame, and quiz screen-space matching uses the nearest visible world copy.
+
 ### How built map data reaches all three shells
 
 There is exactly one copy of the map data in the repo, and three shells

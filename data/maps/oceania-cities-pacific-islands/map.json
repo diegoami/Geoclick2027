@@ -8,25 +8,6 @@
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{
-			"id": "ngerulmud",
-			"name": "Ngerulmud",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"country": "Palau",
-			"centroid": [
-				134.6265485,
-				7.4873962
-			],
-			"bbox": [
-				134.6265485,
-				7.4873962,
-				134.6265485,
-				7.4873962
-			],
-			"colorIndex": 1
-		},
-		{
 			"id": "koror",
 			"name": "Koror",
 			"type": "city",
@@ -43,7 +24,7 @@
 				134.4695009,
 				7.3452264
 			],
-			"colorIndex": 3
+			"colorIndex": 4
 		},
 		{
 			"id": "majuro",
@@ -62,7 +43,7 @@
 				171.3800002,
 				7.1030043
 			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
 			"id": "palikir",
@@ -81,7 +62,7 @@
 				158.1499743,
 				6.9166437
 			],
-			"colorIndex": 1
+			"colorIndex": 5
 		},
 		{
 			"id": "tarawa",
@@ -100,7 +81,7 @@
 				173.0175708,
 				1.3381875
 			],
-			"colorIndex": 3
+			"colorIndex": 2
 		},
 		{
 			"id": "yaren",
@@ -138,7 +119,7 @@
 				146.9900354,
 				-6.7329883
 			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
 			"id": "gizo",
@@ -157,7 +138,7 @@
 				156.8350158,
 				-8.0996232
 			],
-			"colorIndex": 5
+			"colorIndex": 3
 		},
 		{
 			"id": "funafuti",
@@ -176,7 +157,7 @@
 				179.2166471,
 				-8.516652
 			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
 			"id": "honiara",
@@ -195,7 +176,7 @@
 				159.9497657,
 				-9.4379943
 			],
-			"colorIndex": 4
+			"colorIndex": 2
 		},
 		{
 			"id": "port-moresby",
@@ -233,7 +214,7 @@
 				-171.76859897688345,
 				-13.835714958212938
 			],
-			"colorIndex": 0
+			"colorIndex": 5
 		},
 		{
 			"id": "luganville",
@@ -252,7 +233,7 @@
 				167.1766068,
 				-15.5125557
 			],
-			"colorIndex": 5
+			"colorIndex": 3
 		},
 		{
 			"id": "lautoka",
@@ -271,7 +252,7 @@
 				177.4666247,
 				-17.6160966
 			],
-			"colorIndex": 0
+			"colorIndex": 5
 		},
 		{
 			"id": "port-vila",
@@ -309,7 +290,7 @@
 				178.4417073,
 				-18.1330159
 			],
-			"colorIndex": 1
+			"colorIndex": 0
 		},
 		{
 			"id": "neiafu",
@@ -328,7 +309,7 @@
 				-173.9832927,
 				-18.6495735
 			],
-			"colorIndex": 5
+			"colorIndex": 3
 		},
 		{
 			"id": "nuku-alofa",
@@ -351,11 +332,10 @@
 				-175.2205645,
 				-21.1385124
 			],
-			"colorIndex": 4
+			"colorIndex": 2
 		}
 	],
 	"tourOrder": [
-		"ngerulmud",
 		"koror",
 		"majuro",
 		"palikir",

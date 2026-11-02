@@ -127,7 +127,24 @@
 		"population": 453050,
 		"populationRank": 34,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Medieval Sfax grew on the site of ancient Taparura.",
+				"Its walled medina was founded by the Aghlabids in the ninth century.",
+				"Its kasbah became a museum of traditional architecture."
+			],
+			"it": [
+				"La Sfax medievale sorse sul sito dell'antica Taparura.",
+				"La sua medina fortificata fu fondata dagli Aghlabidi nel IX secolo.",
+				"La sua kasbah divenne un museo dell'architettura tradizionale."
+			],
+			"de": [
+				"Das mittelalterliche Sfax entstand am Standort des antiken Taparura.",
+				"Seine ummauerte Medina wurde im neunten Jahrhundert von den Aghlabiden gegründet.",
+				"Seine Kasbah wurde zu einem Museum traditioneller Architektur."
+			]
+		}
 	},
 	"fez": {
 		"kind": "city",
@@ -237,7 +254,24 @@
 		"populationRank": 19,
 		"region": "Benghazi",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its older name Berenice honoured Queen Berenice II.",
+				"The earlier Greek settlement was called Euesperides, recalling the mythical Hesperides.",
+				"The settlement moved to a new site during the Ptolemaic period."
+			],
+			"it": [
+				"Il suo antico nome Berenice onorava la regina Berenice II.",
+				"Il precedente insediamento greco si chiamava Euesperide, richiamando le mitiche Esperidi.",
+				"L'insediamento fu trasferito in un nuovo sito durante l'epoca tolemaica."
+			],
+			"de": [
+				"Ihr älterer Name Berenike ehrte Königin Berenike II.",
+				"Die frühere griechische Siedlung hieß Euesperides und erinnerte an die mythischen Hesperiden.",
+				"Die Siedlung wurde während der ptolemäischen Zeit an einen neuen Standort verlegt."
+			]
+		}
 	},
 	"marrakesh": {
 		"kind": "city",
@@ -393,7 +427,7 @@
 	"praia": {
 		"kind": "city",
 		"population": 113364,
-		"populationRank": 37,
+		"populationRank": 38,
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "south-west",
@@ -468,7 +502,7 @@
 	"banjul": {
 		"kind": "city",
 		"population": 43094,
-		"populationRank": 38,
+		"populationRank": 39,
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "south-west",
@@ -673,7 +707,24 @@
 		"populationRank": 32,
 		"region": "Vallée du Bandama",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its earlier name Gbékékro meant the village of Chief Gbéké.",
+				"The Abidjan–Niger railway reached the town in 1912.",
+				"It grew as a trading crossroads between forest and savanna communities."
+			],
+			"it": [
+				"Il suo precedente nome Gbékékro significava il villaggio del capo Gbéké.",
+				"La ferrovia Abidjan–Niger raggiunse la città nel 1912.",
+				"Crebbe come crocevia commerciale tra le comunità della foresta e della savana."
+			],
+			"de": [
+				"Ihr früherer Name Gbékékro bedeutete das Dorf des Häuptlings Gbéké.",
+				"Die Abidjan–Niger-Bahn erreichte die Stadt 1912.",
+				"Sie wuchs als Handelskreuzung zwischen Wald- und Savannengemeinschaften."
+			]
+		}
 	},
 	"ibadan": {
 		"kind": "city",
@@ -703,7 +754,7 @@
 	"yamoussoukro": {
 		"kind": "city",
 		"population": 206499,
-		"populationRank": 36,
+		"populationRank": 37,
 		"region": "Lacs",
 		"capitalOf": "country",
 		"coastal": false,
@@ -751,6 +802,32 @@
 			]
 		}
 	},
+	"porto-novo": {
+		"kind": "city",
+		"population": 300000,
+		"populationRank": 36,
+		"region": "Ouémé",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"New port\", a name the Portuguese gave it; it is the official capital, though the government sits mostly in Cotonou.",
+				"Its Great Mosque, of the 1920s, copies the style of Brazilian churches, brought by freed slaves who came back from Brazil.",
+				"It was the seat of a kingdom, Hogbonou, before the French came."
+			],
+			"it": [
+				"\"Porto nuovo\", un nome dato dai portoghesi; è la capitale ufficiale, anche se il governo siede per lo più a Cotonou.",
+				"La sua Grande moschea, degli anni Venti, imita lo stile delle chiese brasiliane, portato dagli schiavi liberati tornati dal Brasile.",
+				"Prima dei francesi era la sede di un regno, Hogbonou."
+			],
+			"de": [
+				"„Neuer Hafen“, ein Name, den die Portugiesen ihr gaben; sie ist die offizielle Hauptstadt, doch die Regierung sitzt meist in Cotonou.",
+				"Ihre Große Moschee aus den 1920er-Jahren ahmt den Stil brasilianischer Kirchen nach, mitgebracht von befreiten Sklaven, die aus Brasilien zurückkehrten.",
+				"Sie war der Sitz eines Königreichs, Hogbonou, bevor die Franzosen kamen."
+			]
+		}
+	},
 	"lagos": {
 		"kind": "city",
 		"population": 9466000,
@@ -780,9 +857,25 @@
 		"population": 762000,
 		"populationRank": 27,
 		"region": "Ouémé",
-		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its Fon name is usually translated as by the river of death.",
+				"It grew from a fishing village into a nineteenth-century trading town.",
+				"The Missèbo market is known for trading colourful printed fabrics."
+			],
+			"it": [
+				"Il suo nome fon viene solitamente tradotto come presso il fiume della morte.",
+				"Da villaggio di pescatori divenne una città commerciale nell'Ottocento.",
+				"Il mercato di Missèbo è noto per il commercio di tessuti stampati colorati."
+			],
+			"de": [
+				"Sein Fon-Name wird meist als am Fluss des Todes übersetzt.",
+				"Aus einem Fischerdorf wurde im neunzehnten Jahrhundert eine Handelsstadt.",
+				"Der Markt von Missèbo ist für den Handel mit bunt bedruckten Stoffen bekannt."
+			]
+		}
 	},
 	"monrovia": {
 		"kind": "city",
@@ -867,8 +960,24 @@
 		"population": 3802000,
 		"populationRank": 4,
 		"region": "Lagunes",
-		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"An oral tradition links its name to a misunderstood phrase about cutting leaves.",
+				"The Vridi Canal opened in 1951, allowing ocean-going ships into its harbour.",
+				"Yamoussoukro replaced it as the official political capital in 1983."
+			],
+			"it": [
+				"Una tradizione orale collega il suo nome a una frase fraintesa sul taglio delle foglie.",
+				"Il canale di Vridi aprì nel 1951, consentendo alle navi oceaniche di raggiungere il porto.",
+				"Yamoussoukro la sostituì come capitale politica ufficiale nel 1983."
+			],
+			"de": [
+				"Eine mündliche Überlieferung führt ihren Namen auf einen missverstandenen Satz über das Schneiden von Blättern zurück.",
+				"Der Vridi-Kanal wurde 1951 eröffnet und ermöglichte Hochseeschiffen die Einfahrt in den Hafen.",
+				"Yamoussoukro löste sie 1983 als offizielle politische Hauptstadt ab."
+			]
+		}
 	}
 }

@@ -234,7 +234,10 @@
 		"minSpacing": 30,
 		"sourceOverrides": {
 			"Bolivia": "data/places/bolivia.geojson"
-		}
+		},
+		"retain": [
+			"La Paz"
+		]
 	},
 	{
 		"id": "south-america-cities-brazil-southern-cone",
