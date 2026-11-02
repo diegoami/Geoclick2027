@@ -7,7 +7,14 @@ assert.equal(process.env.FIREBASE_AUTH_EMULATOR_HOST, '127.0.0.1:19110');
 const root = fileURLToPath(new URL('..', import.meta.url));
 for (const run of [
 	{
-		args: ['--import', 'tsx', '--test', '--test-reporter=dot', 'firebase/progress-sync.test.ts'],
+		args: [
+			'--import',
+			'tsx',
+			'--test',
+			'--test-reporter=dot',
+			'firebase/progress-sync.test.ts',
+			'firebase/sequenced-progress.test.ts'
+		],
 		cwd: root
 	},
 	{
