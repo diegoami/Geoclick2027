@@ -1,3 +1,4 @@
+import { splitLongitudeBox, longitudeInBox } from '../../packages/quiz-engine/src/longitude.js';
 // Small helpers shared between build-map.ts (polygon targets) and
 // build-points-map.ts (point targets) - kept here rather than duplicated,
 // since both scripts need them identically. See MAPS.md's "Point-target
@@ -144,17 +145,66 @@ export function overallBboxOf(
 // aren't tagged to an admin boundary the way states/provinces are, and a
 // lake is still worth rendering even if it pokes slightly outside the
 // map's bounds.
+
+/** OGR receives canonical rectangles; point-map viewports may cross 180 degrees. */
+export function exportSpatialWindow(
+	source: string,
+	bbox: [number, number, number, number],
+	mode: '-spat' | '-clipsrc',
+	options: string[],
+	out: string
+): void {
+	const boxes = splitLongitudeBox(bbox);
+	if (boxes.length === 1) {
+		execFileSync('ogr2ogr', [
+			'-f',
+			'GeoJSON',
+			mode,
+			...boxes[0].map(String),
+			...options,
+			out,
+			source
+		]);
+		return;
+	}
+	const features: unknown[] = [];
+	for (const [i, box] of boxes.entries()) {
+		const part = out + '.part-' + i + '.geojson';
+		try {
+			execFileSync('ogr2ogr', [
+				'-f',
+				'GeoJSON',
+				mode,
+				...box.map(String),
+				...options,
+				part,
+				source
+			]);
+			features.push(
+				...(JSON.parse(readFileSync(part, 'utf8')) as { features: unknown[] }).features
+			);
+		} finally {
+			rmSync(part, { force: true });
+		}
+	}
+	const seen = new Set<string>();
+	writeFileSync(
+		out,
+		JSON.stringify({
+			type: 'FeatureCollection',
+			features: features.filter((feature) => {
+				if (mode === '-clipsrc') return true;
+				const key = JSON.stringify(feature);
+				if (seen.has(key)) return false;
+				seen.add(key);
+				return true;
+			})
+		})
+	);
+}
+
 export function selectNearbyLakes(bbox: [number, number, number, number], outPath: string): void {
-	execFileSync('ogr2ogr', [
-		'-f',
-		'GeoJSON',
-		'-spat',
-		...bbox.map(String),
-		'-select',
-		'name',
-		outPath,
-		LAKES_SHP
-	]);
+	exportSpatialWindow(LAKES_SHP, bbox, '-spat', ['-select', 'name'], outPath);
 }
 
 // Land context for a point map: without any shape at all behind the
@@ -189,19 +239,19 @@ export function selectAdmin0Context(
 	outPath: string,
 	exceptAdmins: string[] = []
 ): void {
-	execFileSync('ogr2ogr', [
-		'-f',
-		'GeoJSON',
+	exportSpatialWindow(
+		ADMIN0_SHP,
+		bbox,
 		'-clipsrc',
-		...bbox.map(String),
-		...(exceptAdmins.length > 0 ? ['-where', `NOT (${sqlIn('ADMIN', exceptAdmins)})`] : []),
-		'-select',
-		'ADMIN',
-		'-nlt',
-		'MULTIPOLYGON',
-		outPath,
-		ADMIN0_SHP
-	]);
+		[
+			...(exceptAdmins.length > 0 ? ['-where', `NOT (${sqlIn('ADMIN', exceptAdmins)})`] : []),
+			'-select',
+			'ADMIN',
+			'-nlt',
+			'MULTIPOLYGON'
+		],
+		outPath
+	);
 }
 
 // --- The Terrain layer (FT-33, docs/PLAN_V0.8.md) -------------------------
@@ -240,15 +290,7 @@ function clipToBbox(
 	select: string[],
 	outPath: string
 ): void {
-	execFileSync('ogr2ogr', [
-		'-f',
-		'GeoJSON',
-		'-clipsrc',
-		...bbox.map(String),
-		...select,
-		outPath,
-		source
-	]);
+	exportSpatialWindow(source, bbox, '-clipsrc', select, outPath);
 }
 
 /** The files tippecanoe needs for one map's Terrain layer. */
@@ -390,12 +432,13 @@ export function padBbox(
 	fraction = 0.25
 ): [number, number, number, number] {
 	const [minLon, minLat, maxLon, maxLat] = bbox;
+	const wrapped = minLon < -180 || maxLon > 180;
 	const lonMargin = Math.max((maxLon - minLon) * fraction, 0.5);
 	const latMargin = Math.max((maxLat - minLat) * fraction, 0.5);
 	return [
-		Math.max(-180, minLon - lonMargin),
+		wrapped ? minLon - lonMargin : Math.max(-180, minLon - lonMargin),
 		Math.max(-90, minLat - latMargin),
-		Math.min(180, maxLon + lonMargin),
+		wrapped ? maxLon + lonMargin : Math.min(180, maxLon + lonMargin),
 		Math.min(90, maxLat + latMargin)
 	];
 }
@@ -480,7 +523,7 @@ export function labelPointsFrom(
 			const at = interiorPoint(feature.geometry);
 			const [lon, lat] = at;
 			const onThisMap =
-				lon >= labelBbox[0] && lon <= labelBbox[2] && lat >= labelBbox[1] && lat <= labelBbox[3];
+				longitudeInBox(lon, labelBbox) && lat >= labelBbox[1] && lat <= labelBbox[3];
 
 			// A feature whose own middle is elsewhere still belongs here if it
 			// covers this map: the Sahara's middle is in Algeria, and a map of
@@ -519,7 +562,7 @@ const MAP_SPANNING_COVERAGE = 0.35;
  */
 function clipGeometryTo(geometry: AnyGeometry, box: [number, number, number, number]): AnyGeometry {
 	const inside = ([lon, lat]: [number, number]) =>
-		lon >= box[0] && lon <= box[2] && lat >= box[1] && lat <= box[3];
+		longitudeInBox(lon, box) && lat >= box[1] && lat <= box[3];
 	const rings: [number, number][][] = [];
 	const collect = (coords: unknown): void => {
 		if (!Array.isArray(coords) || coords.length === 0) return;
@@ -581,7 +624,7 @@ export function selectPeaks<T extends PeakFeature>(
 		if (typeof name !== 'string' || name === '') return false;
 		if (!PEAK_CLASSES.includes(String(kind))) return false;
 		const [lon, lat] = f.geometry.coordinates;
-		return lon >= bbox[0] && lon <= bbox[2] && lat >= bbox[1] && lat <= bbox[3];
+		return longitudeInBox(lon, bbox) && lat >= bbox[1] && lat <= bbox[3];
 	});
 	const isDepression = (f: T) => f.properties.kind === 'depression';
 	const height = (f: T) =>
@@ -651,29 +694,26 @@ export function selectPhysical(
 	// show - see labelPointsFrom.
 	const wholeTerrain = `${paths.labels}.terrain.tmp`;
 	const wholeMarine = `${paths.labels}.marine.tmp`;
-	execFileSync('ogr2ogr', [
-		'-f',
-		'GeoJSON',
+	exportSpatialWindow(
+		TERRAIN_SHP,
+		bbox,
 		'-spat',
-		...bbox.map(String),
-		'-sql',
-		`SELECT name AS name, name_de AS name_de, name_it AS name_it, ` +
-			`featurecla AS kind, scalerank AS rank ` +
-			`FROM ne_10m_geography_regions_polys WHERE featurecla NOT IN (${quoted(TERRAIN_SKIP)})`,
-		wholeTerrain,
-		TERRAIN_SHP
-	]);
-	execFileSync('ogr2ogr', [
-		'-f',
-		'GeoJSON',
+		[
+			'-sql',
+			`SELECT name AS name, name_de AS name_de, name_it AS name_it, featurecla AS kind, scalerank AS rank FROM ne_10m_geography_regions_polys WHERE featurecla NOT IN (${quoted(TERRAIN_SKIP)})`
+		],
+		wholeTerrain
+	);
+	exportSpatialWindow(
+		MARINE_SHP,
+		bbox,
 		'-spat',
-		...bbox.map(String),
-		'-sql',
-		`SELECT name AS name, name_de AS name_de, name_it AS name_it, ` +
-			`featurecla AS kind, scalerank AS rank FROM ne_10m_geography_marine_polys`,
-		wholeMarine,
-		MARINE_SHP
-	]);
+		[
+			'-sql',
+			`SELECT name AS name, name_de AS name_de, name_it AS name_it, featurecla AS kind, scalerank AS rank FROM ne_10m_geography_marine_polys`
+		],
+		wholeMarine
+	);
 	writeLabelPoints([wholeTerrain, wholeMarine], paths.labels, labelBbox);
 	rmSync(wholeTerrain);
 	rmSync(wholeMarine);

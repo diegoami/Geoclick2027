@@ -1,0 +1,717 @@
+{
+	"id": "oceania-cities-australia-new-zealand",
+	"name": "Oceania — Cities — Australia & New Zealand",
+	"country": "Oceania",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/oceania-cities-australia-new-zealand.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "darwin",
+			"name": "Darwin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				130.8500386,
+				-12.425354
+			],
+			"bbox": [
+				130.8500386,
+				-12.425354,
+				130.8500386,
+				-12.425354
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cairns",
+			"name": "Cairns",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				145.7633309,
+				-16.8878399
+			],
+			"bbox": [
+				145.7633309,
+				-16.8878399,
+				145.7633309,
+				-16.8878399
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "townsville",
+			"name": "Townsville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				146.7699971,
+				-19.2499503
+			],
+			"bbox": [
+				146.7699971,
+				-19.2499503,
+				146.7699971,
+				-19.2499503
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "mackay",
+			"name": "Mackay",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				149.1500069,
+				-21.1438916
+			],
+			"bbox": [
+				149.1500069,
+				-21.1438916,
+				149.1500069,
+				-21.1438916
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "rockhampton",
+			"name": "Rockhampton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				150.5200008,
+				-23.3639111
+			],
+			"bbox": [
+				150.5200008,
+				-23.3639111,
+				150.5200008,
+				-23.3639111
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sunshine-coast",
+			"name": "Sunshine Coast",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"names": {
+				"en": "Sunshine Coast Region",
+				"it": "regione di Sunshine Coast",
+				"de": "Sunshine Coast Region"
+			},
+			"centroid": [
+				153.0500272,
+				-26.6799878
+			],
+			"bbox": [
+				153.0500272,
+				-26.6799878,
+				153.0500272,
+				-26.6799878
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "brisbane",
+			"name": "Brisbane",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				153.0331469,
+				-27.453085
+			],
+			"bbox": [
+				153.0331469,
+				-27.453085,
+				153.0331469,
+				-27.453085
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "toowoomba",
+			"name": "Toowoomba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				151.9555204,
+				-27.5645333
+			],
+			"bbox": [
+				151.9555204,
+				-27.5645333,
+				151.9555204,
+				-27.5645333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "gold-coast",
+			"name": "Gold Coast",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				153.4482458,
+				-28.0815043
+			],
+			"bbox": [
+				153.4482458,
+				-28.0815043,
+				153.4482458,
+				-28.0815043
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "perth",
+			"name": "Perth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				115.8380529,
+				-31.9530688
+			],
+			"bbox": [
+				115.8380529,
+				-31.9530688,
+				115.8380529,
+				-31.9530688
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "mandurah",
+			"name": "Mandurah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				115.7470567,
+				-32.5234826
+			],
+			"bbox": [
+				115.7470567,
+				-32.5234826,
+				115.7470567,
+				-32.5234826
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "newcastle",
+			"name": "Newcastle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				151.77024927411264,
+				-32.929507722655686
+			],
+			"bbox": [
+				151.77024927411264,
+				-32.929507722655686,
+				151.77024927411264,
+				-32.929507722655686
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "sydney",
+			"name": "Sydney",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				151.2125477744749,
+				-33.87137339218338
+			],
+			"bbox": [
+				151.2125477744749,
+				-33.87137339218338,
+				151.2125477744749,
+				-33.87137339218338
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "wollongong",
+			"name": "Wollongong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				150.890004,
+				-34.4153812
+			],
+			"bbox": [
+				150.890004,
+				-34.4153812,
+				150.890004,
+				-34.4153812
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "nowra",
+			"name": "Nowra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				150.6000476,
+				-34.8828463
+			],
+			"bbox": [
+				150.6000476,
+				-34.8828463,
+				150.6000476,
+				-34.8828463
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "adelaide",
+			"name": "Adelaide",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				138.598059,
+				-34.9330419
+			],
+			"bbox": [
+				138.598059,
+				-34.9330419,
+				138.598059,
+				-34.9330419
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "canberra",
+			"name": "Canberra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				149.1290262,
+				-35.2830285
+			],
+			"bbox": [
+				149.1290262,
+				-35.2830285,
+				149.1290262,
+				-35.2830285
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "albury",
+			"name": "Albury",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				146.9200138,
+				-36.0600354
+			],
+			"bbox": [
+				146.9200138,
+				-36.0600354,
+				146.9200138,
+				-36.0600354
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bendigo",
+			"name": "Bendigo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				144.2800199,
+				-36.7599927
+			],
+			"bbox": [
+				144.2800199,
+				-36.7599927,
+				144.2800199,
+				-36.7599927
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "auckland",
+			"name": "Auckland",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				174.763027,
+				-36.8480549
+			],
+			"bbox": [
+				174.763027,
+				-36.8480549,
+				174.763027,
+				-36.8480549
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "ballarat",
+			"name": "Ballarat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				143.8400468,
+				-37.5595821
+			],
+			"bbox": [
+				143.8400468,
+				-37.5595821,
+				143.8400468,
+				-37.5595821
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tauranga",
+			"name": "Tauranga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				176.1536294,
+				-37.6964164
+			],
+			"bbox": [
+				176.1536294,
+				-37.6964164,
+				176.1536294,
+				-37.6964164
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "hamilton",
+			"name": "Hamilton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				175.2895781,
+				-37.7782694
+			],
+			"bbox": [
+				175.2895781,
+				-37.7782694,
+				175.2895781,
+				-37.7782694
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "melbourne",
+			"name": "Melbourne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				144.9730704,
+				-37.8180855
+			],
+			"bbox": [
+				144.9730704,
+				-37.8180855,
+				144.9730704,
+				-37.8180855
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "cranbourne",
+			"name": "Cranbourne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				145.2833695,
+				-38.0996008
+			],
+			"bbox": [
+				145.2833695,
+				-38.0996008,
+				145.2833695,
+				-38.0996008
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "rotorua",
+			"name": "Rotorua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				176.2482631,
+				-38.1317379
+			],
+			"bbox": [
+				176.2482631,
+				-38.1317379,
+				176.2482631,
+				-38.1317379
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "geelong",
+			"name": "Geelong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				144.3956335,
+				-38.167495
+			],
+			"bbox": [
+				144.3956335,
+				-38.167495,
+				144.3956335,
+				-38.167495
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "hastings",
+			"name": "Hastings",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				176.8367996,
+				-39.6382031
+			],
+			"bbox": [
+				176.8367996,
+				-39.6382031,
+				176.8367996,
+				-39.6382031
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "palmerston-north",
+			"name": "Palmerston North",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				175.6072108,
+				-40.352691
+			],
+			"bbox": [
+				175.6072108,
+				-40.352691,
+				175.6072108,
+				-40.352691
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "wellington",
+			"name": "Wellington",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				174.77720094690068,
+				-41.2920679923151
+			],
+			"bbox": [
+				174.77720094690068,
+				-41.2920679923151,
+				174.77720094690068,
+				-41.2920679923151
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "nelson",
+			"name": "Nelson",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				173.247448,
+				-41.2925917
+			],
+			"bbox": [
+				173.247448,
+				-41.2925917,
+				173.247448,
+				-41.2925917
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "launceston",
+			"name": "Launceston",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				147.1301818,
+				-41.4498356
+			],
+			"bbox": [
+				147.1301818,
+				-41.4498356,
+				147.1301818,
+				-41.4498356
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "hobart",
+			"name": "Hobart",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				147.2950297,
+				-42.8500085
+			],
+			"bbox": [
+				147.2950297,
+				-42.8500085,
+				147.2950297,
+				-42.8500085
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "christchurch",
+			"name": "Christchurch",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				172.6300232,
+				-43.5350216
+			],
+			"bbox": [
+				172.6300232,
+				-43.5350216,
+				172.6300232,
+				-43.5350216
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dunedin",
+			"name": "Dunedin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				170.4910157,
+				-45.8854231
+			],
+			"bbox": [
+				170.4910157,
+				-45.8854231,
+				170.4910157,
+				-45.8854231
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"darwin",
+		"cairns",
+		"townsville",
+		"mackay",
+		"rockhampton",
+		"sunshine-coast",
+		"brisbane",
+		"toowoomba",
+		"gold-coast",
+		"perth",
+		"mandurah",
+		"newcastle",
+		"sydney",
+		"wollongong",
+		"nowra",
+		"adelaide",
+		"canberra",
+		"albury",
+		"bendigo",
+		"auckland",
+		"ballarat",
+		"tauranga",
+		"hamilton",
+		"melbourne",
+		"cranbourne",
+		"rotorua",
+		"geelong",
+		"hastings",
+		"palmerston-north",
+		"wellington",
+		"nelson",
+		"launceston",
+		"hobart",
+		"christchurch",
+		"dunedin"
+	]
+}

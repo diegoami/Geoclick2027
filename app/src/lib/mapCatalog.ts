@@ -51,7 +51,13 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Africa',
 		maps: [
 			{ id: 'africa-countries', labelKey: 'mapType.countries' },
-			{ id: 'africa-capitals', labelKey: 'mapType.capitals' }
+			{ id: 'africa-capitals', labelKey: 'mapType.capitals' },
+			{ id: 'africa-cities-north-west', labelKey: 'mapType.citiesNorthWest', advanced: true },
+			{
+				id: 'africa-cities-central-east-south',
+				labelKey: 'mapType.citiesCentralEastSouth',
+				advanced: true
+			}
 		]
 	},
 	{
@@ -79,7 +85,13 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Asia',
 		maps: [
 			{ id: 'asia-countries', labelKey: 'mapType.countries' },
-			{ id: 'asia-capitals', labelKey: 'mapType.capitals' }
+			{ id: 'asia-capitals', labelKey: 'mapType.capitals' },
+			{ id: 'asia-cities-west-central', labelKey: 'mapType.citiesWestCentral', advanced: true },
+			{
+				id: 'asia-cities-south-east-southeast',
+				labelKey: 'mapType.citiesSouthEastSoutheast',
+				advanced: true
+			}
 		]
 	},
 	{
@@ -613,7 +625,17 @@ export const mapGroups: CountryGroup[] = [
 		country: 'North America',
 		maps: [
 			{ id: 'north-america-countries', labelKey: 'mapType.countries' },
-			{ id: 'north-america-capitals', labelKey: 'mapType.capitals' }
+			{ id: 'north-america-capitals', labelKey: 'mapType.capitals' },
+			{
+				id: 'north-america-cities-canada-usa',
+				labelKey: 'mapType.citiesCanadaUsa',
+				advanced: true
+			},
+			{
+				id: 'north-america-cities-mexico-central-caribbean',
+				labelKey: 'mapType.citiesMexicoCentralCaribbean',
+				advanced: true
+			}
 		]
 	},
 	{
@@ -627,7 +649,17 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Oceania',
 		maps: [
 			{ id: 'oceania-countries', labelKey: 'mapType.countries' },
-			{ id: 'oceania-capitals', labelKey: 'mapType.capitals' }
+			{ id: 'oceania-capitals', labelKey: 'mapType.capitals' },
+			{
+				id: 'oceania-cities-australia-new-zealand',
+				labelKey: 'mapType.citiesAustraliaNewZealand',
+				advanced: true
+			},
+			{
+				id: 'oceania-cities-pacific-islands',
+				labelKey: 'mapType.citiesPacificIslands',
+				advanced: true
+			}
 		]
 	},
 	{
@@ -756,7 +788,17 @@ export const mapGroups: CountryGroup[] = [
 		country: 'South America',
 		maps: [
 			{ id: 'south-america-countries', labelKey: 'mapType.countries' },
-			{ id: 'south-america-capitals', labelKey: 'mapType.capitals' }
+			{ id: 'south-america-capitals', labelKey: 'mapType.capitals' },
+			{
+				id: 'south-america-cities-andes-north',
+				labelKey: 'mapType.citiesAndesNorth',
+				advanced: true
+			},
+			{
+				id: 'south-america-cities-brazil-southern-cone',
+				labelKey: 'mapType.citiesBrazilSouthernCone',
+				advanced: true
+			}
 		]
 	},
 	{

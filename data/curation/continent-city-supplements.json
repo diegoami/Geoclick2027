@@ -1,0 +1,91 @@
+{
+	"excludeSourceRows": [
+		{
+			"country": "Niger",
+			"name": "Niamey",
+			"coordinates": [7.0964038, 13.4916429],
+			"reason": "Natural Earth also has the flagged national capital at 2.1147102,13.5186518. Exclude this ambiguous secondary row instead of teaching two Niameys or guessing a replacement name."
+		}
+	],
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"NAME": "Yaren",
+				"NAME_EN": "Yaren",
+				"NAME_DE": "Yaren",
+				"NAME_IT": "Yaren",
+				"ADM0NAME": "Nauru",
+				"ADM0_A3": "NRU",
+				"ADM1NAME": "Yaren",
+				"ADM0CAP": 0,
+				"FEATURECLA": "Government district",
+				"POP_MAX": 803,
+				"populationDate": "2021",
+				"coordinateSource": "https://www.wikidata.org/wiki/Q31026",
+				"populationSource": "https://stats.gov.nr/download/49/2021/358/person-tables-1-36.pdf",
+				"statusSource": "https://thecommonwealth.org/our-member-countries/naeoro"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [166.920867, -0.5477]
+			}
+		}
+	],
+	"capitalOverrides": [
+		{
+			"country": "Benin",
+			"name": "Cotonou",
+			"capital": false,
+			"source": "MAPS.md: existing Africa capitals command; https://en.wikipedia.org/wiki/Cotonou"
+		},
+		{
+			"country": "Benin",
+			"name": "Porto-Novo",
+			"capital": true,
+			"source": "MAPS.md: existing Africa capitals command"
+		},
+		{
+			"country": "Ivory Coast",
+			"name": "Abidjan",
+			"capital": false,
+			"source": "https://en.wikipedia.org/wiki/Abidjan"
+		},
+		{
+			"country": "Ivory Coast",
+			"name": "Yamoussoukro",
+			"capital": true,
+			"source": "https://en.wikipedia.org/wiki/Abidjan"
+		},
+		{
+			"country": "Burundi",
+			"name": "Bujumbura",
+			"capital": false,
+			"source": "https://en.wikipedia.org/wiki/Bujumbura"
+		},
+		{
+			"country": "Burundi",
+			"name": "Gitega",
+			"capital": true,
+			"source": "https://en.wikipedia.org/wiki/Bujumbura"
+		},
+		{
+			"country": "Tanzania",
+			"name": "Dar es Salaam",
+			"capital": false,
+			"source": "MAPS.md: existing Africa capitals command"
+		},
+		{
+			"country": "Tanzania",
+			"name": "Dodoma",
+			"capital": true,
+			"source": "MAPS.md: existing Africa capitals command"
+		},
+		{
+			"country": "Palau",
+			"name": "Melekeok",
+			"capital": false,
+			"source": "https://www.palaugov.pw/; national capital is Ngerulmud, not this locality"
+		}
+	]
+}

@@ -1,0 +1,781 @@
+{
+	"id": "south-america-cities-andes-north",
+	"name": "South America — Cities — Andes & North",
+	"country": "South America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"placesSource": "data/places/south-america-cities-andes-north.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "barranquilla",
+			"name": "Barranquilla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Colombia",
+			"centroid": [
+				-74.8019127,
+				10.9619345
+			],
+			"bbox": [
+				-74.8019127,
+				10.9619345,
+				-74.8019127,
+				10.9619345
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "maracaibo",
+			"name": "Maracaibo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Venezuela",
+			"centroid": [
+				-71.6619235,
+				10.7319227
+			],
+			"bbox": [
+				-71.6619235,
+				10.7319227,
+				-71.6619235,
+				10.7319227
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "caracas",
+			"name": "Caracas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Venezuela",
+			"centroid": [
+				-66.9189831,
+				10.5029444
+			],
+			"bbox": [
+				-66.9189831,
+				10.5029444,
+				-66.9189831,
+				10.5029444
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cartagena",
+			"name": "Cartagena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Colombia",
+			"names": {
+				"it": "Cartagena de Indias"
+			},
+			"centroid": [
+				-75.5163394,
+				10.4016844
+			],
+			"bbox": [
+				-75.5163394,
+				10.4016844,
+				-75.5163394,
+				10.4016844
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "maracay",
+			"name": "Maracay",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Venezuela",
+			"centroid": [
+				-67.597753,
+				10.2488256
+			],
+			"bbox": [
+				-67.597753,
+				10.2488256,
+				-67.597753,
+				10.2488256
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "valencia",
+			"name": "Valencia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Venezuela",
+			"centroid": [
+				-67.9819673,
+				10.2319274
+			],
+			"bbox": [
+				-67.9819673,
+				10.2319274,
+				-67.9819673,
+				10.2319274
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "barcelona",
+			"name": "Barcelona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Venezuela",
+			"centroid": [
+				-64.7200137,
+				10.1303752
+			],
+			"bbox": [
+				-64.7200137,
+				10.1303752,
+				-64.7200137,
+				10.1303752
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "barquisimeto",
+			"name": "Barquisimeto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Venezuela",
+			"centroid": [
+				-69.3019125,
+				10.0519384
+			],
+			"bbox": [
+				-69.3019125,
+				10.0519384,
+				-69.3019125,
+				10.0519384
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ciudad-guayana",
+			"name": "Ciudad Guayana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Venezuela",
+			"centroid": [
+				-62.6199868,
+				8.3700175
+			],
+			"bbox": [
+				-62.6199868,
+				8.3700175,
+				-62.6199868,
+				8.3700175
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "cucuta",
+			"name": "Cúcuta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Colombia",
+			"centroid": [
+				-72.5199768,
+				7.9200191
+			],
+			"bbox": [
+				-72.5199768,
+				7.9200191,
+				-72.5199768,
+				7.9200191
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bucaramanga",
+			"name": "Bucaramanga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Colombia",
+			"centroid": [
+				-73.1278289,
+				7.1320391
+			],
+			"bbox": [
+				-73.1278289,
+				7.1320391,
+				-73.1278289,
+				7.1320391
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "georgetown",
+			"name": "Georgetown",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Guyana",
+			"centroid": [
+				-58.1670286,
+				6.8019737
+			],
+			"bbox": [
+				-58.1670286,
+				6.8019737,
+				-58.1670286,
+				6.8019737
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "medellin",
+			"name": "Medellín",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Colombia",
+			"names": {
+				"en": "Medellin"
+			},
+			"centroid": [
+				-75.5769559,
+				6.2769491
+			],
+			"bbox": [
+				-75.5769559,
+				6.2769491,
+				-75.5769559,
+				6.2769491
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "paramaribo",
+			"name": "Paramaribo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Suriname",
+			"centroid": [
+				-55.1670309,
+				5.8350301
+			],
+			"bbox": [
+				-55.1670309,
+				5.8350301,
+				-55.1670309,
+				5.8350301
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bogota",
+			"name": "Bogotá",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Colombia",
+			"names": {
+				"it": "Bogotà"
+			},
+			"centroid": [
+				-74.0852898,
+				4.5983694
+			],
+			"bbox": [
+				-74.0852898,
+				4.5983694,
+				-74.0852898,
+				4.5983694
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cali",
+			"name": "Cali",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Colombia",
+			"centroid": [
+				-76.5019123,
+				3.401905
+			],
+			"bbox": [
+				-76.5019123,
+				3.401905,
+				-76.5019123,
+				3.401905
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "quito",
+			"name": "Quito",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ecuador",
+			"centroid": [
+				-78.501997,
+				-0.2130423
+			],
+			"bbox": [
+				-78.501997,
+				-0.2130423,
+				-78.501997,
+				-0.2130423
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "manta",
+			"name": "Manta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ecuador",
+			"centroid": [
+				-80.7299667,
+				-0.9800061
+			],
+			"bbox": [
+				-80.7299667,
+				-0.9800061,
+				-80.7299667,
+				-0.9800061
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "portoviejo",
+			"name": "Portoviejo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ecuador",
+			"centroid": [
+				-80.4599832,
+				-1.0600012
+			],
+			"bbox": [
+				-80.4599832,
+				-1.0600012,
+				-80.4599832,
+				-1.0600012
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ambato",
+			"name": "Ambato",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ecuador",
+			"centroid": [
+				-78.6199921,
+				-1.2696008
+			],
+			"bbox": [
+				-78.6199921,
+				-1.2696008,
+				-78.6199921,
+				-1.2696008
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "guayaquil",
+			"name": "Guayaquil",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ecuador",
+			"centroid": [
+				-79.9219878,
+				-2.2180879
+			],
+			"bbox": [
+				-79.9219878,
+				-2.2180879,
+				-79.9219878,
+				-2.2180879
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cuenca",
+			"name": "Cuenca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ecuador",
+			"centroid": [
+				-78.9999948,
+				-2.8999922
+			],
+			"bbox": [
+				-78.9999948,
+				-2.8999922,
+				-78.9999948,
+				-2.8999922
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "machala",
+			"name": "Machala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ecuador",
+			"centroid": [
+				-79.9599878,
+				-3.260022
+			],
+			"bbox": [
+				-79.9599878,
+				-3.260022,
+				-79.9599878,
+				-3.260022
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "iquitos",
+			"name": "Iquitos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Peru",
+			"centroid": [
+				-73.2500098,
+				-3.7500179
+			],
+			"bbox": [
+				-73.2500098,
+				-3.7500179,
+				-73.2500098,
+				-3.7500179
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "piura",
+			"name": "Piura",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Peru",
+			"centroid": [
+				-80.6299728,
+				-5.2100321
+			],
+			"bbox": [
+				-80.6299728,
+				-5.2100321,
+				-80.6299728,
+				-5.2100321
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "chiclayo",
+			"name": "Chiclayo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Peru",
+			"centroid": [
+				-79.8365845,
+				-6.7629089
+			],
+			"bbox": [
+				-79.8365845,
+				-6.7629089,
+				-79.8365845,
+				-6.7629089
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "trujillo",
+			"name": "Trujillo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Peru",
+			"centroid": [
+				-79.0199677,
+				-8.1200354
+			],
+			"bbox": [
+				-79.0199677,
+				-8.1200354,
+				-79.0199677,
+				-8.1200354
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "lima",
+			"name": "Lima",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Peru",
+			"centroid": [
+				-77.052008,
+				-12.0460668
+			],
+			"bbox": [
+				-77.052008,
+				-12.0460668,
+				-77.052008,
+				-12.0460668
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "huancayo",
+			"name": "Huancayo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Peru",
+			"centroid": [
+				-75.20002,
+				-12.0800004
+			],
+			"bbox": [
+				-75.20002,
+				-12.0800004,
+				-75.20002,
+				-12.0800004
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "arequipa",
+			"name": "Arequipa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Peru",
+			"centroid": [
+				-71.5319573,
+				-16.418048
+			],
+			"bbox": [
+				-71.5319573,
+				-16.418048,
+				-71.5319573,
+				-16.418048
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "la-paz",
+			"name": "La Paz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-68.133333333,
+				-16.495833333
+			],
+			"bbox": [
+				-68.133333333,
+				-16.495833333,
+				-68.133333333,
+				-16.495833333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "el-alto",
+			"name": "El Alto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-68.163333333,
+				-16.504722222
+			],
+			"bbox": [
+				-68.163333333,
+				-16.504722222,
+				-68.163333333,
+				-16.504722222
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "cochabamba",
+			"name": "Cochabamba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-66.1570139,
+				-17.3935419
+			],
+			"bbox": [
+				-66.1570139,
+				-17.3935419,
+				-66.1570139,
+				-17.3935419
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "santa-cruz-de-la-sierra",
+			"name": "Santa Cruz de la Sierra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-63.1975,
+				-17.789166666
+			],
+			"bbox": [
+				-63.1975,
+				-17.789166666,
+				-63.1975,
+				-17.789166666
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "oruro",
+			"name": "Oruro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-67.116666666,
+				-17.966666666
+			],
+			"bbox": [
+				-67.116666666,
+				-17.966666666,
+				-67.116666666,
+				-17.966666666
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sucre",
+			"name": "Sucre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-65.26,
+				-19.0475
+			],
+			"bbox": [
+				-65.26,
+				-19.0475,
+				-65.26,
+				-19.0475
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "potosi",
+			"name": "Potosí",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-65.753333333,
+				-19.589166666
+			],
+			"bbox": [
+				-65.753333333,
+				-19.589166666,
+				-65.753333333,
+				-19.589166666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tarija",
+			"name": "Tarija",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-64.734166666,
+				-21.533888888
+			],
+			"bbox": [
+				-64.734166666,
+				-21.533888888,
+				-64.734166666,
+				-21.533888888
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"barranquilla",
+		"maracaibo",
+		"caracas",
+		"cartagena",
+		"maracay",
+		"valencia",
+		"barcelona",
+		"barquisimeto",
+		"ciudad-guayana",
+		"cucuta",
+		"bucaramanga",
+		"georgetown",
+		"medellin",
+		"paramaribo",
+		"bogota",
+		"cali",
+		"quito",
+		"manta",
+		"portoviejo",
+		"ambato",
+		"guayaquil",
+		"cuenca",
+		"machala",
+		"iquitos",
+		"piura",
+		"chiclayo",
+		"trujillo",
+		"lima",
+		"huancayo",
+		"arequipa",
+		"la-paz",
+		"el-alto",
+		"cochabamba",
+		"santa-cruz-de-la-sierra",
+		"oruro",
+		"sucre",
+		"potosi",
+		"tarija"
+	]
+}

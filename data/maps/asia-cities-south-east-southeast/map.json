@@ -1,0 +1,1047 @@
+{
+	"id": "asia-cities-south-east-southeast",
+	"name": "Asia — Cities — South, East & Southeast",
+	"country": "Asia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/asia-cities-south-east-southeast.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "ulaanbaatar",
+			"name": "Ulaanbaatar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mongolia",
+			"names": {
+				"it": "Ulan Bator"
+			},
+			"centroid": [
+				106.9146699,
+				47.9186193
+			],
+			"bbox": [
+				106.9146699,
+				47.9186193,
+				106.9146699,
+				47.9186193
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "beijing",
+			"name": "Beijing",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "China",
+			"names": {
+				"it": "Pechino",
+				"de": "Peking"
+			},
+			"centroid": [
+				116.39420089260611,
+				39.901720309862675
+			],
+			"bbox": [
+				116.39420089260611,
+				39.901720309862675,
+				116.39420089260611,
+				39.901720309862675
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pyongyang",
+			"name": "Pyongyang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "North Korea",
+			"names": {
+				"de": "Pjöngjang"
+			},
+			"centroid": [
+				125.7527449,
+				39.0213846
+			],
+			"bbox": [
+				125.7527449,
+				39.0213846,
+				125.7527449,
+				39.0213846
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "seoul",
+			"name": "Seoul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Korea",
+			"names": {
+				"it": "Seul"
+			},
+			"centroid": [
+				126.9977851,
+				37.568295
+			],
+			"bbox": [
+				126.9977851,
+				37.568295,
+				126.9977851,
+				37.568295
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "incheon",
+			"name": "Incheon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Korea",
+			"centroid": [
+				126.6402876,
+				37.4780937
+			],
+			"bbox": [
+				126.6402876,
+				37.4780937,
+				126.6402876,
+				37.4780937
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "daegu",
+			"name": "Daegu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Korea",
+			"names": {
+				"it": "Taegu"
+			},
+			"centroid": [
+				128.6050255,
+				35.8687346
+			],
+			"bbox": [
+				128.6050255,
+				35.8687346,
+				128.6050255,
+				35.8687346
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tokyo",
+			"name": "Tokyo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Japan",
+			"names": {
+				"de": "Tokio"
+			},
+			"centroid": [
+				139.7494616,
+				35.6869628
+			],
+			"bbox": [
+				139.7494616,
+				35.6869628,
+				139.7494616,
+				35.6869628
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "yokohama",
+			"name": "Yokohama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Japan",
+			"centroid": [
+				139.602021,
+				35.4306562
+			],
+			"bbox": [
+				139.602021,
+				35.4306562,
+				139.602021,
+				35.4306562
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "nagoya",
+			"name": "Nagoya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Japan",
+			"centroid": [
+				136.9130456,
+				35.1569434
+			],
+			"bbox": [
+				136.9130456,
+				35.1569434,
+				136.9130456,
+				35.1569434
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "busan",
+			"name": "Busan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Korea",
+			"names": {
+				"it": "Pusan"
+			},
+			"centroid": [
+				129.0081017,
+				35.0969988
+			],
+			"bbox": [
+				129.0081017,
+				35.0969988,
+				129.0081017,
+				35.0969988
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "osaka",
+			"name": "Ōsaka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Japan",
+			"names": {
+				"en": "Osaka",
+				"it": "Osaka"
+			},
+			"centroid": [
+				135.50375419006232,
+				34.691095244477914
+			],
+			"bbox": [
+				135.50375419006232,
+				34.691095244477914,
+				135.50375419006232,
+				34.691095244477914
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "islamabad",
+			"name": "Islamabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Pakistan",
+			"centroid": [
+				73.08063017764825,
+				33.689368483707085
+			],
+			"bbox": [
+				73.08063017764825,
+				33.689368483707085,
+				73.08063017764825,
+				33.689368483707085
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lahore",
+			"name": "Lahore",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Pakistan",
+			"centroid": [
+				74.3480789,
+				31.5619174
+			],
+			"bbox": [
+				74.3480789,
+				31.5619174,
+				74.3480789,
+				31.5619174
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "faisalabad",
+			"name": "Faisalabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Pakistan",
+			"centroid": [
+				73.1080513,
+				31.4119266
+			],
+			"bbox": [
+				73.1080513,
+				31.4119266,
+				73.1080513,
+				31.4119266
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "shanghai",
+			"name": "Shanghai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "China",
+			"centroid": [
+				121.4345588,
+				31.2183983
+			],
+			"bbox": [
+				121.4345588,
+				31.2183983,
+				121.4345588,
+				31.2183983
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "delhi",
+			"name": "Delhi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "India",
+			"centroid": [
+				77.2280582,
+				28.6719388
+			],
+			"bbox": [
+				77.2280582,
+				28.6719388,
+				77.2280582,
+				28.6719388
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "new-delhi",
+			"name": "New Delhi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "India",
+			"names": {
+				"it": "Nuova Delhi",
+				"de": "Neu-Delhi"
+			},
+			"centroid": [
+				77.19998,
+				28.600023
+			],
+			"bbox": [
+				77.19998,
+				28.600023,
+				77.19998,
+				28.600023
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kathmandu",
+			"name": "Kathmandu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Nepal",
+			"names": {
+				"it": "Katmandu"
+			},
+			"centroid": [
+				85.3146964,
+				27.7186378
+			],
+			"bbox": [
+				85.3146964,
+				27.7186378,
+				85.3146964,
+				27.7186378
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "thimphu",
+			"name": "Thimphu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bhutan",
+			"centroid": [
+				89.639014,
+				27.4729859
+			],
+			"bbox": [
+				89.639014,
+				27.4729859,
+				89.639014,
+				27.4729859
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "taipei",
+			"name": "Taipei",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Taiwan",
+			"names": {
+				"de": "Taipeh"
+			},
+			"centroid": [
+				121.5683333,
+				25.0358333
+			],
+			"bbox": [
+				121.5683333,
+				25.0358333,
+				121.5683333,
+				25.0358333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "karachi",
+			"name": "Karachi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Pakistan",
+			"names": {
+				"de": "Karatschi"
+			},
+			"centroid": [
+				66.9880631,
+				24.8719381
+			],
+			"bbox": [
+				66.9880631,
+				24.8719381,
+				66.9880631,
+				24.8719381
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "taichung",
+			"name": "Taichung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Taiwan",
+			"centroid": [
+				120.681667,
+				24.1520775
+			],
+			"bbox": [
+				120.681667,
+				24.1520775,
+				120.681667,
+				24.1520775
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "dhaka",
+			"name": "Dhaka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bangladesh",
+			"names": {
+				"it": "Dacca"
+			},
+			"centroid": [
+				90.4066336,
+				23.7250056
+			],
+			"bbox": [
+				90.4066336,
+				23.7250056,
+				90.4066336,
+				23.7250056
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "guangzhou",
+			"name": "Guangzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "China",
+			"names": {
+				"it": "Canton"
+			},
+			"centroid": [
+				113.26178516712943,
+				23.12472343296695
+			],
+			"bbox": [
+				113.26178516712943,
+				23.12472343296695,
+				113.26178516712943,
+				23.12472343296695
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kaohsiung",
+			"name": "Kaohsiung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Taiwan",
+			"centroid": [
+				120.2666019,
+				22.6333071
+			],
+			"bbox": [
+				120.2666019,
+				22.6333071,
+				120.2666019,
+				22.6333071
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kolkata",
+			"name": "Kolkata",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "India",
+			"names": {
+				"it": "Calcutta",
+				"de": "Kalkutta"
+			},
+			"centroid": [
+				88.36912550443886,
+				22.569578883795778
+			],
+			"bbox": [
+				88.36912550443886,
+				22.569578883795778,
+				88.36912550443886,
+				22.569578883795778
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "shenzhen",
+			"name": "Shenzhen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "China",
+			"centroid": [
+				114.06115351896277,
+				22.54809707412332
+			],
+			"bbox": [
+				114.06115351896277,
+				22.54809707412332,
+				114.06115351896277,
+				22.54809707412332
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "chattogram",
+			"name": "Chattogram",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bangladesh",
+			"names": {
+				"it": "Chittagong",
+				"de": "Chittagong"
+			},
+			"centroid": [
+				91.7980215,
+				22.3319381
+			],
+			"bbox": [
+				91.7980215,
+				22.3319381,
+				91.7980215,
+				22.3319381
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ha-noi",
+			"name": "Hà Nội",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Vietnam",
+			"names": {
+				"en": "Hanoi",
+				"it": "Hanoi",
+				"de": "Hanoi"
+			},
+			"centroid": [
+				105.8480683,
+				21.0352731
+			],
+			"bbox": [
+				105.8480683,
+				21.0352731,
+				105.8480683,
+				21.0352731
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "naypyidaw",
+			"name": "Naypyidaw",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Myanmar",
+			"centroid": [
+				96.1166727,
+				19.7685029
+			],
+			"bbox": [
+				96.1166727,
+				19.7685029,
+				96.1166727,
+				19.7685029
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "mumbai",
+			"name": "Mumbai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "India",
+			"centroid": [
+				72.8758393972653,
+				19.06840847529168
+			],
+			"bbox": [
+				72.8758393972653,
+				19.06840847529168,
+				72.8758393972653,
+				19.06840847529168
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vientiane",
+			"name": "Vientiane",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Laos",
+			"centroid": [
+				102.59998,
+				17.9666927
+			],
+			"bbox": [
+				102.59998,
+				17.9666927,
+				102.59998,
+				17.9666927
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "yangon",
+			"name": "Yangon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Myanmar",
+			"names": {
+				"de": "Rangun"
+			},
+			"centroid": [
+				96.1647318,
+				16.7853
+			],
+			"bbox": [
+				96.1647318,
+				16.7853,
+				96.1647318,
+				16.7853
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "manila",
+			"name": "Manila",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Philippines",
+			"centroid": [
+				120.9802713,
+				14.6061048
+			],
+			"bbox": [
+				120.9802713,
+				14.6061048,
+				120.9802713,
+				14.6061048
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bangkok",
+			"name": "Bangkok",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Thailand",
+			"centroid": [
+				100.5146988,
+				13.7519451
+			],
+			"bbox": [
+				100.5146988,
+				13.7519451,
+				100.5146988,
+				13.7519451
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "chennai",
+			"name": "Chennai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "India",
+			"centroid": [
+				80.2780529,
+				13.0919337
+			],
+			"bbox": [
+				80.2780529,
+				13.0919337,
+				80.2780529,
+				13.0919337
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "phnom-penh",
+			"name": "Phnom Penh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cambodia",
+			"centroid": [
+				104.9146886,
+				11.551976
+			],
+			"bbox": [
+				104.9146886,
+				11.551976,
+				104.9146886,
+				11.551976
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ho-chi-minh",
+			"name": "Hồ Chí Minh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Vietnam",
+			"names": {
+				"en": "Ho Chi Minh City",
+				"it": "Ho Chi Minh",
+				"de": "Ho-Chi-Minh-Stadt"
+			},
+			"centroid": [
+				106.70298470218748,
+				10.762124565177512
+			],
+			"bbox": [
+				106.70298470218748,
+				10.762124565177512,
+				106.70298470218748,
+				10.762124565177512
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "colombo",
+			"name": "Colombo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sri Lanka",
+			"centroid": [
+				79.8577506,
+				6.9319658
+			],
+			"bbox": [
+				79.8577506,
+				6.9319658,
+				79.8577506,
+				6.9319658
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "george-town",
+			"name": "George Town",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Malaysia",
+			"centroid": [
+				100.3293679,
+				5.4136132
+			],
+			"bbox": [
+				100.3293679,
+				5.4136132,
+				100.3293679,
+				5.4136132
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bandar-seri-begawan",
+			"name": "Bandar Seri Begawan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brunei",
+			"centroid": [
+				114.9332841,
+				4.8833311
+			],
+			"bbox": [
+				114.9332841,
+				4.8833311,
+				114.9332841,
+				4.8833311
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "male",
+			"name": "Malé",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Maldives",
+			"names": {
+				"it": "Male"
+			},
+			"centroid": [
+				73.5089005260037,
+				4.17203699470936
+			],
+			"bbox": [
+				73.5089005260037,
+				4.17203699470936,
+				73.5089005260037,
+				4.17203699470936
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kuala-lumpur",
+			"name": "Kuala Lumpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Malaysia",
+			"centroid": [
+				101.68869929106194,
+				3.13979694393525
+			],
+			"bbox": [
+				101.68869929106194,
+				3.13979694393525,
+				101.68869929106194,
+				3.13979694393525
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "singapore",
+			"name": "Singapore",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Singapore",
+			"names": {
+				"de": "Singapur"
+			},
+			"centroid": [
+				103.8538748,
+				1.2949793
+			],
+			"bbox": [
+				103.8538748,
+				1.2949793,
+				103.8538748,
+				1.2949793
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "jakarta",
+			"name": "Jakarta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Indonesia",
+			"names": {
+				"it": "Giacarta"
+			},
+			"centroid": [
+				106.8274918,
+				-6.1724718
+			],
+			"bbox": [
+				106.8274918,
+				-6.1724718,
+				106.8274918,
+				-6.1724718
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bandung",
+			"name": "Bandung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Indonesia",
+			"centroid": [
+				107.5680667,
+				-6.9480834
+			],
+			"bbox": [
+				107.5680667,
+				-6.9480834,
+				107.5680667,
+				-6.9480834
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "surabaya",
+			"name": "Surabaya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Indonesia",
+			"centroid": [
+				112.7488874,
+				-7.24729
+			],
+			"bbox": [
+				112.7488874,
+				-7.24729,
+				112.7488874,
+				-7.24729
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "dili",
+			"name": "Dili",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "East Timor",
+			"centroid": [
+				125.5794559,
+				-8.5593884
+			],
+			"bbox": [
+				125.5794559,
+				-8.5593884,
+				125.5794559,
+				-8.5593884
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"ulaanbaatar",
+		"beijing",
+		"pyongyang",
+		"seoul",
+		"incheon",
+		"daegu",
+		"tokyo",
+		"yokohama",
+		"nagoya",
+		"busan",
+		"osaka",
+		"islamabad",
+		"lahore",
+		"faisalabad",
+		"shanghai",
+		"delhi",
+		"new-delhi",
+		"kathmandu",
+		"thimphu",
+		"taipei",
+		"karachi",
+		"taichung",
+		"dhaka",
+		"guangzhou",
+		"kaohsiung",
+		"kolkata",
+		"shenzhen",
+		"chattogram",
+		"ha-noi",
+		"naypyidaw",
+		"mumbai",
+		"vientiane",
+		"yangon",
+		"manila",
+		"bangkok",
+		"chennai",
+		"phnom-penh",
+		"ho-chi-minh",
+		"colombo",
+		"george-town",
+		"bandar-seri-begawan",
+		"male",
+		"kuala-lumpur",
+		"singapore",
+		"jakarta",
+		"bandung",
+		"surabaya",
+		"dili"
+	]
+}

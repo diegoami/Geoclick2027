@@ -38,6 +38,16 @@ describe('the catalog order', () => {
 		);
 		expect(advanced.sort()).toEqual(
 			[
+				'africa-cities-north-west',
+				'africa-cities-central-east-south',
+				'asia-cities-west-central',
+				'asia-cities-south-east-southeast',
+				'north-america-cities-canada-usa',
+				'north-america-cities-mexico-central-caribbean',
+				'south-america-cities-andes-north',
+				'south-america-cities-brazil-southern-cone',
+				'oceania-cities-australia-new-zealand',
+				'oceania-cities-pacific-islands',
 				'france-departments',
 				'france-departments-north',
 				'france-departments-south',

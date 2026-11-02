@@ -31,6 +31,7 @@
 	import ChartMapShell from './ChartMapShell.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
 	import {
+		longitudeNear,
 		createQuizSession,
 		attemptMatch,
 		isSessionComplete,
@@ -189,7 +190,10 @@
 		el.textContent = '?';
 		el.setAttribute('aria-hidden', 'true');
 		askMarker = new maplibregl.Marker({ element: el }).setLngLat(target.centroid).addTo(map);
-		const at = map.project(target.centroid);
+		const at = map.project([
+			longitudeNear(target.centroid[0], map.getCenter?.().lng ?? target.centroid[0]),
+			target.centroid[1]
+		]);
 		const rect = container.getBoundingClientRect();
 		const trayTop = rect.height - (trayHeightPx ?? trayMinPx);
 		if (at.x < 0 || at.x > rect.width || at.y < 80 || at.y > trayTop)
@@ -633,7 +637,10 @@
 		for (const candidateName of candidateNames) {
 			const target = mapDef.targets.find((t) => t.name === candidateName);
 			if (!target) continue;
-			const screenPoint = map.project(target.centroid);
+			const screenPoint = map.project([
+				longitudeNear(target.centroid[0], map.getCenter?.().lng ?? target.centroid[0]),
+				target.centroid[1]
+			]);
 			const dx = screenPoint.x - x;
 			const dy = screenPoint.y - y;
 			const distSq = dx * dx + dy * dy;

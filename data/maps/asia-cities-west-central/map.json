@@ -1,0 +1,936 @@
+{
+	"id": "asia-cities-west-central",
+	"name": "Asia — Cities — West & Central",
+	"country": "Asia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/asia-cities-west-central.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "astana",
+			"name": "Astana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kazakhstan",
+			"centroid": [
+				71.4277742,
+				51.1811253
+			],
+			"bbox": [
+				71.4277742,
+				51.1811253,
+				71.4277742,
+				51.1811253
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "almaty",
+			"name": "Almaty",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kazakhstan",
+			"centroid": [
+				76.9130903,
+				43.3269357
+			],
+			"bbox": [
+				76.9130903,
+				43.3269357,
+				76.9130903,
+				43.3269357
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bishkek",
+			"name": "Bishkek",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kyrgyzstan",
+			"names": {
+				"de": "Bischkek"
+			},
+			"centroid": [
+				74.5832584,
+				42.8750253
+			],
+			"bbox": [
+				74.5832584,
+				42.8750253,
+				74.5832584,
+				42.8750253
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tbilisi",
+			"name": "Tbilisi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Georgia",
+			"names": {
+				"de": "Tiflis"
+			},
+			"centroid": [
+				44.7888496,
+				41.7269558
+			],
+			"bbox": [
+				44.7888496,
+				41.7269558,
+				44.7888496,
+				41.7269558
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tashkent",
+			"name": "Tashkent",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Uzbekistan",
+			"names": {
+				"de": "Taschkent"
+			},
+			"centroid": [
+				69.26882294266261,
+				41.30382822156198
+			],
+			"bbox": [
+				69.26882294266261,
+				41.30382822156198,
+				69.26882294266261,
+				41.30382822156198
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "istanbul",
+			"name": "İstanbul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Turkey",
+			"names": {
+				"en": "Istanbul",
+				"it": "Istanbul",
+				"de": "Istanbul"
+			},
+			"centroid": [
+				28.97427681675554,
+				41.01760173507249
+			],
+			"bbox": [
+				28.97427681675554,
+				41.01760173507249,
+				28.97427681675554,
+				41.01760173507249
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "baku",
+			"name": "Baku",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Azerbaijan",
+			"centroid": [
+				49.8602713,
+				40.3972179
+			],
+			"bbox": [
+				49.8602713,
+				40.3972179,
+				49.8602713,
+				40.3972179
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bursa",
+			"name": "Bursa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Turkey",
+			"centroid": [
+				29.0680521,
+				40.2019327
+			],
+			"bbox": [
+				29.0680521,
+				40.2019327,
+				29.0680521,
+				40.2019327
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "yerevan",
+			"name": "Yerevan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Armenia",
+			"names": {
+				"it": "Erevan",
+				"de": "Jerewan"
+			},
+			"centroid": [
+				44.5116055,
+				40.1830966
+			],
+			"bbox": [
+				44.5116055,
+				40.1830966,
+				44.5116055,
+				40.1830966
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "ankara",
+			"name": "Ankara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Turkey",
+			"centroid": [
+				32.8624458,
+				39.9291844
+			],
+			"bbox": [
+				32.8624458,
+				39.9291844,
+				32.8624458,
+				39.9291844
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "dushanbe",
+			"name": "Dushanbe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tajikistan",
+			"names": {
+				"de": "Duschanbe"
+			},
+			"centroid": [
+				68.7738794,
+				38.5600352
+			],
+			"bbox": [
+				68.7738794,
+				38.5600352,
+				68.7738794,
+				38.5600352
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "izmir",
+			"name": "İzmir",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Turkey",
+			"names": {
+				"it": "Smirne",
+				"de": "Izmir"
+			},
+			"centroid": [
+				27.1498482,
+				38.4380955
+			],
+			"bbox": [
+				27.1498482,
+				38.4380955,
+				27.1498482,
+				38.4380955
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ashgabat",
+			"name": "Ashgabat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Turkmenistan",
+			"names": {
+				"de": "Aşgabat"
+			},
+			"centroid": [
+				58.3832991,
+				37.9499949
+			],
+			"bbox": [
+				58.3832991,
+				37.9499949,
+				58.3832991,
+				37.9499949
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "duhok",
+			"name": "Duhok",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iraq",
+			"names": {
+				"it": "Dahuk",
+				"de": "Dohuk"
+			},
+			"centroid": [
+				43.0000026,
+				36.8667001
+			],
+			"bbox": [
+				43.0000026,
+				36.8667001,
+				43.0000026,
+				36.8667001
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "mosul",
+			"name": "Mosul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iraq",
+			"names": {
+				"de": "Mossul"
+			},
+			"centroid": [
+				43.1430586,
+				36.3469483
+			],
+			"bbox": [
+				43.1430586,
+				36.3469483,
+				43.1430586,
+				36.3469483
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "mashhad",
+			"name": "Mashhad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iran",
+			"names": {
+				"de": "Maschhad"
+			},
+			"centroid": [
+				59.5680508,
+				36.2719658
+			],
+			"bbox": [
+				59.5680508,
+				36.2719658,
+				59.5680508,
+				36.2719658
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "aleppo",
+			"name": "Aleppo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Syria",
+			"centroid": [
+				37.1680744,
+				36.2319166
+			],
+			"bbox": [
+				37.1680744,
+				36.2319166,
+				37.1680744,
+				36.2319166
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "karaj",
+			"name": "Karaj",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iran",
+			"names": {
+				"de": "Karadsch"
+			},
+			"centroid": [
+				50.968059,
+				35.8023046
+			],
+			"bbox": [
+				50.968059,
+				35.8023046,
+				50.968059,
+				35.8023046
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tehran",
+			"name": "Tehran",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iran",
+			"names": {
+				"it": "Teheran",
+				"de": "Teheran"
+			},
+			"centroid": [
+				51.4223982,
+				35.6738886
+			],
+			"bbox": [
+				51.4223982,
+				35.6738886,
+				51.4223982,
+				35.6738886
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "nicosia",
+			"name": "Nicosia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cyprus",
+			"names": {
+				"de": "Nikosia"
+			},
+			"centroid": [
+				33.3666349,
+				35.1666765
+			],
+			"bbox": [
+				33.3666349,
+				35.1666765,
+				33.3666349,
+				35.1666765
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "homs",
+			"name": "Homs",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Syria",
+			"centroid": [
+				36.7180761,
+				34.7319048
+			],
+			"bbox": [
+				36.7180761,
+				34.7319048,
+				36.7180761,
+				34.7319048
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kabul",
+			"name": "Kabul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Afghanistan",
+			"centroid": [
+				69.1813142,
+				34.5186361
+			],
+			"bbox": [
+				69.1813142,
+				34.5186361,
+				69.1813142,
+				34.5186361
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "beirut",
+			"name": "Beirut",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Lebanon",
+			"centroid": [
+				35.5077624,
+				33.873921
+			],
+			"bbox": [
+				35.5077624,
+				33.873921,
+				35.5077624,
+				33.873921
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "damascus",
+			"name": "Damascus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Syria",
+			"names": {
+				"it": "Damasco",
+				"de": "Damaskus"
+			},
+			"centroid": [
+				36.29805,
+				33.5019799
+			],
+			"bbox": [
+				36.29805,
+				33.5019799,
+				36.29805,
+				33.5019799
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "baghdad",
+			"name": "Baghdad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iraq",
+			"names": {
+				"de": "Bagdad"
+			},
+			"centroid": [
+				44.3919229,
+				33.3405944
+			],
+			"bbox": [
+				44.3919229,
+				33.3405944,
+				44.3919229,
+				33.3405944
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "haifa",
+			"name": "Haifa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Israel",
+			"centroid": [
+				34.9780789,
+				32.8223573
+			],
+			"bbox": [
+				34.9780789,
+				32.8223573,
+				34.9780789,
+				32.8223573
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "isfahan",
+			"name": "Isfahan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iran",
+			"names": {
+				"it": "Esfahan"
+			},
+			"centroid": [
+				51.6980919,
+				32.7019512
+			],
+			"bbox": [
+				51.6980919,
+				32.7019512,
+				51.6980919,
+				32.7019512
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tel-aviv",
+			"name": "Tel Aviv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Israel",
+			"names": {
+				"de": "Tel Aviv-Jaffa"
+			},
+			"centroid": [
+				34.7680659,
+				32.0819373
+			],
+			"bbox": [
+				34.7680659,
+				32.0819373,
+				34.7680659,
+				32.0819373
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "amman",
+			"name": "Amman",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Jordan",
+			"centroid": [
+				35.9313541,
+				31.9519711
+			],
+			"bbox": [
+				35.9313541,
+				31.9519711,
+				35.9313541,
+				31.9519711
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "jerusalem",
+			"name": "Jerusalem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Israel",
+			"names": {
+				"it": "Gerusalemme"
+			},
+			"centroid": [
+				35.2066259,
+				31.7784078
+			],
+			"bbox": [
+				35.2066259,
+				31.7784078,
+				35.2066259,
+				31.7784078
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kuwait-city",
+			"name": "Kuwait City",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kuwait",
+			"names": {
+				"it": "Al Kuwait",
+				"de": "Kuwait"
+			},
+			"centroid": [
+				47.9763553,
+				29.3716635
+			],
+			"bbox": [
+				47.9763553,
+				29.3716635,
+				47.9763553,
+				29.3716635
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dammam",
+			"name": "Dammam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Saudi Arabia",
+			"centroid": [
+				50.0977245,
+				26.4301376
+			],
+			"bbox": [
+				50.0977245,
+				26.4301376,
+				50.0977245,
+				26.4301376
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "manama",
+			"name": "Manama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bahrain",
+			"centroid": [
+				50.5830517,
+				26.2361363
+			],
+			"bbox": [
+				50.5830517,
+				26.2361363,
+				50.5830517,
+				26.2361363
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "doha",
+			"name": "Doha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Qatar",
+			"centroid": [
+				51.5329679,
+				25.286556
+			],
+			"bbox": [
+				51.5329679,
+				25.286556,
+				51.5329679,
+				25.286556
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "dubai",
+			"name": "Dubai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Arab Emirates",
+			"centroid": [
+				55.28694561354246,
+				25.21491189371225
+			],
+			"bbox": [
+				55.28694561354246,
+				25.21491189371225,
+				55.28694561354246,
+				25.21491189371225
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "riyadh",
+			"name": "Riyadh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Saudi Arabia",
+			"names": {
+				"it": "Riad",
+				"de": "Riad"
+			},
+			"centroid": [
+				46.720487024887696,
+				24.634497474837755
+			],
+			"bbox": [
+				46.720487024887696,
+				24.634497474837755,
+				46.720487024887696,
+				24.634497474837755
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "abu-dhabi",
+			"name": "Abu Dhabi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Arab Emirates",
+			"centroid": [
+				54.3665934,
+				24.4666836
+			],
+			"bbox": [
+				54.3665934,
+				24.4666836,
+				54.3665934,
+				24.4666836
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "muscat",
+			"name": "Muscat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Oman",
+			"names": {
+				"it": "Mascate",
+				"de": "Maskat"
+			},
+			"centroid": [
+				58.37831058458708,
+				23.58517901476684
+			],
+			"bbox": [
+				58.37831058458708,
+				23.58517901476684,
+				58.37831058458708,
+				23.58517901476684
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "jeddah",
+			"name": "Jeddah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Saudi Arabia",
+			"names": {
+				"it": "Gedda",
+				"de": "Dschidda"
+			},
+			"centroid": [
+				39.2172517,
+				21.5188353
+			],
+			"bbox": [
+				39.2172517,
+				21.5188353,
+				39.2172517,
+				21.5188353
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mecca",
+			"name": "Mecca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Saudi Arabia",
+			"names": {
+				"it": "La Mecca",
+				"de": "Mekka"
+			},
+			"centroid": [
+				39.8180936,
+				21.4319672
+			],
+			"bbox": [
+				39.8180936,
+				21.4319672,
+				39.8180936,
+				21.4319672
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sanaa",
+			"name": "Sanaa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Yemen",
+			"centroid": [
+				44.2046475,
+				15.3566792
+			],
+			"bbox": [
+				44.2046475,
+				15.3566792,
+				44.2046475,
+				15.3566792
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "aden",
+			"name": "Aden",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Yemen",
+			"centroid": [
+				45.0094901,
+				12.7797225
+			],
+			"bbox": [
+				45.0094901,
+				12.7797225,
+				45.0094901,
+				12.7797225
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"astana",
+		"almaty",
+		"bishkek",
+		"tbilisi",
+		"tashkent",
+		"istanbul",
+		"baku",
+		"bursa",
+		"yerevan",
+		"ankara",
+		"dushanbe",
+		"izmir",
+		"ashgabat",
+		"duhok",
+		"mosul",
+		"mashhad",
+		"aleppo",
+		"karaj",
+		"tehran",
+		"nicosia",
+		"homs",
+		"kabul",
+		"beirut",
+		"damascus",
+		"baghdad",
+		"haifa",
+		"isfahan",
+		"tel-aviv",
+		"amman",
+		"jerusalem",
+		"kuwait-city",
+		"dammam",
+		"manama",
+		"doha",
+		"dubai",
+		"riyadh",
+		"abu-dhabi",
+		"muscat",
+		"jeddah",
+		"mecca",
+		"sanaa",
+		"aden"
+	]
+}

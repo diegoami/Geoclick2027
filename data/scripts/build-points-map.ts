@@ -1,3 +1,4 @@
+import { wrappedPointBounds } from '../../packages/quiz-engine/src/longitude.js';
 import { combineAttributions, placeSourceAttribution } from './placeSourceAttribution.js';
 import { correctPlaces, placeCorrectionAttribution } from './placeCorrections.js';
 import { appendNeutralBoundaryContext } from './neutralBoundaryContext.js';
@@ -359,7 +360,9 @@ async function main() {
 	selectedFeatures = retainNamedPlaces(
 		selectedFeatures,
 		byPopulationDesc.filter((feature) => feature.properties.POP_MAX > minPopulation),
-		parseList(args.retain ?? ''),
+		(args['retain-json']
+			? JSON.parse(args['retain-json'])
+			: parseList(args.retain ?? '')) as string[],
 		(feature) => feature.properties.NAME
 	);
 
@@ -432,10 +435,16 @@ async function main() {
 	});
 	targets.sort((a, b) => b.centroid[1] - a.centroid[1]); // north to south, same convention as build-map.ts
 
+	if (process.argv.includes('--preview')) {
+		console.log('SELECTION_JSON=' + JSON.stringify(targets));
+		rmSync(filteredPath);
+		return;
+	}
 	const mapDefinition = {
 		id: path.basename(outDir),
 		name: mapName,
 		country,
+		...(process.argv.includes('--wrap-longitude') ? { wrapLongitude: true } : {}),
 		attribution,
 		// Where the towns came from, when not Natural Earth: build-facts.ts
 		// reads the same file to match each town to its row.
@@ -474,9 +483,9 @@ async function main() {
 	writeFileSync(targetsPath, JSON.stringify(targetsGeojson));
 
 	console.log('[3/5] Selecting nearby lakes, country/region context and terrain...');
-	const extent = overallBboxOf(
-		regionsExtent && regionsMap ? [...targets, ...regionsMap.targets] : targets
-	);
+	const extent = process.argv.includes('--wrap-longitude')
+		? wrappedPointBounds(targets.map((target) => target.centroid))
+		: overallBboxOf(regionsExtent && regionsMap ? [...targets, ...regionsMap.targets] : targets);
 	selectNearbyLakes(extent, lakesPath);
 	// Sea, rivers and named terrain (FT-33) - off by default in the app,
 	// behind the map bar's Terrain button.
