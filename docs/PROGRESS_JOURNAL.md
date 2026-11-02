@@ -288,3 +288,15 @@ on Escape, its close button or Android Back. The owner requested this placement
 after the first live sign-in/sync check because the Appearance location hid it.
 `AccountDialog.svelte.test.ts` protects direct discoverability with Settings
 collapsed, modal focus/Escape behavior and the labeled 44px target at large text.
+
+
+`firebase/browser-profiles.test.mjs` adds three acceptance scenarios with two
+independent Chromium profile directories/processes, the real production browser
+factory and repository boundary, and loopback Auth/Firestore emulators. It checks
+guest/account import conflicts and originals, SRS fading, scores/best times/mix-ups,
+remembered offline-backend process restart, stale-reset convergence, session-only
+restart and account-switch queue/preview isolation. The fixture calls the actual
+session sign-in intent; only provider credentials are synthetic. It does not load
+real env/config or automate Google authentication. Non-loopback application
+requests fail the suite. App assets remain locally served during backend outage;
+full production-site asset caching is not established by these tests.

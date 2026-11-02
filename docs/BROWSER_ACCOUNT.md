@@ -2,7 +2,8 @@
 
 Browser controls are implemented; Windows/Android remain on guest repositories
 until their native adapters land. Guest play always works without account setup.
-No version bump, release, web deployment or rule publication is part of this PR.
+Local verification does not bump versions, publish releases, deploy the web app
+or publish rules.
 
 ## Local setup and console prerequisite
 
@@ -31,7 +32,9 @@ initialization even when a real local config is present.
 
 With Java 21 on PATH, `npm run test:firebase` runs the server rules/SDK suite,
 real Chromium journal-to-cloud transport and account Auth-observer/import/logout
-checks. These use fixed local demo emulators and synthetic provider identities.
+checks. It also runs independent persistent Chromium processes for import,
+SRS/score/record sharing, offline-backend restart, reset-wins and account isolation.
+These use fixed local demo emulators and synthetic provider identities.
 They are separate from live Google/cloud evidence. The ordinary four gates remain
 required and do not start emulators.
 
@@ -81,3 +84,12 @@ sharing. The normal account control is a labeled toolbar button with its own
 modal, outside Appearance and outside the map Settings disclosure. Runtime
 Firestore URL diagnostics are silenced; app diagnostics expose only whitelisted
 error codes, without account paths, tokens or public config values.
+
+
+The independent-profile emulator scenarios now pass against the real browser
+factory/controller and durable journal. Remembered and session-only behavior is
+checked across complete Chromium process restarts, not only a page reload.
+Backend requests are blocked for the outage checks while local fixture assets
+remain available. See [the emulator runner](../firebase/README.md#independent-persistent-profiles)
+for the exact coverage and boundaries. Live Google learning/import/sharing and the
+full release acceptance matrix are recorded separately in release plan #311.
