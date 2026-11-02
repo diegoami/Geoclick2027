@@ -228,11 +228,11 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'europe-countries', labelKey: 'mapType.countries' },
 			{ id: 'europe-capitals', labelKey: 'mapType.capitals' },
-			{ id: 'europe-cities-central', labelKey: 'mapType.citiesCentral' },
-			{ id: 'europe-cities-east', labelKey: 'mapType.citiesEast' },
-			{ id: 'europe-cities-north', labelKey: 'mapType.citiesNorth' },
-			{ id: 'europe-cities-south', labelKey: 'mapType.citiesSouth' },
-			{ id: 'europe-cities-west', labelKey: 'mapType.citiesWest' }
+			{ id: 'europe-cities-central', labelKey: 'mapType.citiesCentral', advanced: true },
+			{ id: 'europe-cities-east', labelKey: 'mapType.citiesEast', advanced: true },
+			{ id: 'europe-cities-north', labelKey: 'mapType.citiesNorth', advanced: true },
+			{ id: 'europe-cities-south', labelKey: 'mapType.citiesSouth', advanced: true },
+			{ id: 'europe-cities-west', labelKey: 'mapType.citiesWest', advanced: true }
 		]
 	},
 	{

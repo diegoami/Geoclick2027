@@ -327,6 +327,8 @@ a second line rather than scrolling.
   button. The X sends it back behind the tick again. It does not show on the map
   you are in, or while the tick is on.
 
+On the start screen, a red **X** beside the selected, previously opened detailed map puts it back behind the dropdown's separator. The row returns to its first basic map; earned progress is kept. Continents use the same defaults: **Countries** and **Capitals** are basic, while regional city maps are detailed.
+
 ![Germany's type row after opening a detailed map: its button has a red X](manual/type-bar-x.jpg)
 
 ### The other controls
