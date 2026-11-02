@@ -18,7 +18,8 @@ for (const run of [
 			'--reporter=dot'
 		],
 		cwd: path.join(root, 'app')
-	}
+	},
+	{ args: ['--test', '--test-reporter=dot', 'firebase/browser-profiles.test.mjs'], cwd: root }
 ]) {
 	const result = spawnSync(process.execPath, run.args, {
 		cwd: run.cwd,
