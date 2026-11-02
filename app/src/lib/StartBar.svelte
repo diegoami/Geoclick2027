@@ -1,4 +1,6 @@
 <script lang="ts">
+	import AccountButton from './AccountButton.svelte';
+	import { accountAvailable } from './account.svelte';
 	import AppearanceButton from './AppearanceButton.svelte';
 	// The start screen's toolbar (FT-82, #91), after the owner's card games:
 	// everything that sat above the map - the title, language, Tutorial,
@@ -79,6 +81,7 @@
 			{#if myMapsCount > 0}<span class="gc-count" aria-hidden="true">{myMapsCount}</span>{/if}
 		</a>
 		<LanguageSwitcher />
+		{#if accountAvailable()}<AccountButton />{/if}
 		<AppearanceButton />
 		<TutorialButton icon />
 		<a

@@ -87,6 +87,29 @@ immediately and are remembered on this device when storage is available.
 Use the close button or Escape to return to the map. If the map toolbar is
 hidden, show it with the button below the map zoom controls first.
 
+### Optional browser account
+
+Where an account is available, open **Account** in the toolbar and
+choose **Sign in with Google** to share earned progress between browsers.
+You can always play without signing in; guest progress stays on this device.
+**Keep me signed in on this device** is off by default. Select it only when you
+want this browser to restore your account after reopening.
+
+Signing in opens separate account progress. **Review this device’s progress**
+shows what can be added, what the account keeps and what is unsupported. Only
+**Import the available progress** confirms an import. Existing account history,
+including resets, wins conflicts; your original guest copy stays intact.
+Choose **Keep account progress** to dismiss the preview without importing.
+
+Account answers save locally first. Use **Sync now** to check for changes on
+another browser or retry after reconnecting. Leave the page open until progress
+is synchronized before closing when you want another browser to see it. If you
+close offline, saved account work remains queued locally and resumes after
+signing into the same account again. **Sign out** returns to guest progress and
+forgets remembered sign-in; it does not erase either progress store. This first
+account control is for the browser; desktop and Android account integration
+follow separately.
+
 ## 1. What Geoclick is
 
 Geoclick is a game for learning geography: where a country's regions, states

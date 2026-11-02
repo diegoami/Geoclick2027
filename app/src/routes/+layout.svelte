@@ -1,7 +1,10 @@
 <script lang="ts">
 	import '../app.css';
+	import { accountRevision } from '$lib/account.svelte';
 	import '../appearance.css';
 	import AppearanceSettings from '$lib/AppearanceSettings.svelte';
+	import AccountDialog from '$lib/AccountDialog.svelte';
+	import { accountOpen, setAccountOpen } from '$lib/accountDialogState.svelte';
 	import { appearanceOpen, setAppearanceOpen } from '$lib/appearance.svelte';
 	import { onMount } from 'svelte';
 	import { afterNavigate, goto } from '$app/navigation';
@@ -34,6 +37,10 @@
 			if (!Capacitor.isNativePlatform()) return;
 			const { App } = await import('@capacitor/app');
 			const handle = await App.addListener('backButton', () => {
+				if (accountOpen()) {
+					setAccountOpen(false);
+					return;
+				}
 				if (appearanceOpen()) {
 					setAppearanceOpen(false);
 					return;
@@ -70,7 +77,10 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children()}
+{#key accountRevision()}
+	{@render children()}
+{/key}
 <AppearanceSettings />
+<AccountDialog />
 <VersionBadge />
 <TutorialOverlay />

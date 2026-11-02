@@ -1,4 +1,6 @@
 <script lang="ts">
+	import AccountButton from './AccountButton.svelte';
+	import { accountAvailable } from './account.svelte';
 	import AppearanceButton from './AppearanceButton.svelte';
 	// Shared top nav bar for every map-scoped view - the same buttons everywhere
 	// (Maps/Known/Overview/Quiz/Tour) so you can jump directly between modes,
@@ -180,6 +182,7 @@
 			>
 			<span class="nav-label">{t('nav.tour')}</span>
 		</a>
+		{#if accountAvailable()}<AccountButton />{/if}
 	</div>
 	<!-- Keep the favourite star beside the map-type row/title, not in the tab
 	     row, which is already full at phone width (FT-13, FT-16). -->

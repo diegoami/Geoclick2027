@@ -223,8 +223,15 @@ export function setProgressSandbox(
 // platform, localStorage otherwise - the one place that decides, so call
 // sites (QuizView, the home page) stay backend-agnostic as designed.
 // During the tutorial that real store comes wrapped in the sandbox.
+let accountRepository: ProgressRepository | undefined;
+/** Ownership changes remount game views; existing references keep their old destination. */
+export function setAccountProgressRepository(next: ProgressRepository | undefined): boolean {
+	if (next === accountRepository) return false;
+	accountRepository = next;
+	return true;
+}
 export async function createProgressRepository(): Promise<ProgressRepository> {
-	const real = await createRealProgressRepository();
+	const real = accountRepository ?? (await createRealProgressRepository());
 	// The sandbox is read once, here: a repository handed out during the
 	// tutorial keeps writing to that tutorial's memory even after it ends, so a
 	// view still open at the end can never write sandbox results into real

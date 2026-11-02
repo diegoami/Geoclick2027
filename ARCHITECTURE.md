@@ -359,12 +359,17 @@ quiz operations). QuizView captures answer/completion operations when that
 capability is present, while guest stores keep snapshot writes. Sitting IDs and
 repository scopes prevent resuming another account's half-finished round. See
 [the journal contract](docs/PROGRESS_JOURNAL.md). The game repository factory
-still selects its existing guest stores. `progressSync.ts` and
+defaults to its existing guest stores. `progressSync.ts` and
 `firestoreProgressTransport.ts` provide bounded immutable delivery; production
 rules live in `firebase/firestore.rules`. Firestore Lite has no persistent cache
 or offline queue; the local journal owns durability. Local Auth/Firestore emulator
-tests include the full real-IndexedDB path. Game auth/UI/lifecycle and native
-adapters remain integration work. Guest/offline play never requires an account.
+tests include the full real-IndexedDB path. The browser-only `account.svelte.ts` bridge activates `browserAccountSession.ts`
+after an explicit configuration is present. `AccountButton.svelte` exposes a labeled entry in home/map/page toolbars;
+`AccountDialog.svelte` hosts localized `AccountPanel.svelte` controls separately
+from Appearance; `browserFirebaseAccount.ts` uses Google popups and
+explicit memory/remembered persistence. Account ownership changes key the layout
+so views remount with captured destinations. Native adapters remain integration
+work. Guest/offline play never requires an account.
 
 ## Repo layout
 
