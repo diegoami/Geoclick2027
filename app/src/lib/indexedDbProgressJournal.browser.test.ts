@@ -230,3 +230,14 @@ describe('durable account-bound IndexedDB journal', () => {
 		expect((await a.snapshot()).events[0].parents).toEqual([]);
 	});
 });
+
+it('refuses a new attempt when its installation history cannot be replayed', async () => {
+	const a = journal(name()),
+		first = await a.append(answer, 'first');
+	await a.ingest([{ ...first, id: 'conflicting-event', operationKey: 'conflicting-operation' }]);
+	expect((await a.snapshot()).quarantined.length).toBeGreaterThan(0);
+	await expect(a.append({ ...answer, roundId: 'new-round' }, 'new-attempt')).rejects.toMatchObject({
+		code: 'actor-history-unavailable'
+	});
+	expect(await a.pending()).toEqual([]);
+});

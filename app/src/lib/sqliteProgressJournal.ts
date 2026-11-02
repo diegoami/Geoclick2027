@@ -259,6 +259,12 @@ export class SqliteProgressJournal {
 			}
 			if (graph.heads.length > MAX_PROGRESS_PARENTS) failure('too-many-concurrent-branches');
 			data.deviceId = this.deviceId ?? data.deviceId ?? this.idFactory();
+			const recordedSequence = all.reduce(
+				(max, event) => (event.deviceId === data.deviceId ? Math.max(max, event.sequence) : max),
+				0
+			);
+			if (recordedSequence !== (graph.clock.get(data.deviceId) ?? 0))
+				failure('actor-history-unavailable');
 			const parsed = parseProgressEvent(
 				{
 					version: 1,

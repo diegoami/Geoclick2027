@@ -4,7 +4,7 @@ import { randomUUID } from 'node:crypto';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { rmSync } from 'node:fs';
-import { MIGRATIONS, migrate } from './capacitorMigrations';
+import { migrate } from './capacitorMigrations';
 import {
 	createSqliteJournalStore,
 	SqliteProgressJournal,
@@ -411,5 +411,20 @@ describe('native SQLite account journal', () => {
 		await expect(new SqliteProgressJournal(owner, unavailable).snapshot()).rejects.toThrow(
 			'unavailable'
 		);
+	});
+});
+
+it('refuses a new attempt when the current device history is conflicted instead of saving an unreplayable event', async () => {
+	const db = connection();
+	await initialize(db);
+	const a = journal(db, owner.uid, 'host-installation');
+	const first = await a.append(answer, 'first');
+	await a.ingest([{ ...first, id: 'conflicting-event', operationKey: 'conflicting-operation' }]);
+	expect((await a.snapshot()).quarantined.length).toBeGreaterThan(0);
+	await expect(a.append({ ...answer, roundId: 'new-round' }, 'new-attempt')).rejects.toMatchObject({
+		code: 'actor-history-unavailable'
+	});
+	expect(db.prepare('SELECT revision FROM account_progress_journal_v1').get()).toEqual({
+		revision: 2
 	});
 });

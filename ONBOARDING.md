@@ -151,6 +151,16 @@ npm run gates -- --quiet   # same, but only PASS/FAIL lines (and the tail of a f
 npm run test:firebase      # optional account sync/rules suite; Java 21, local emulators only
 ```
 
+Native account journal checks use the same built-in Node SQLite as migration
+tests (no user database or live credentials). Run:
+
+```powershell
+npm run test:unit --workspace=app -- --run src/lib/sqliteProgressJournal.test.ts src/lib/nativeProgressJournalAdapters.test.ts src/lib/capacitorMigrations.test.ts src/lib/indexedDbProgressJournal.browser.test.ts --reporter=dot
+```
+
+This covers the journal/SQL engine and bridge contracts. Installed native auth,
+host actor storage and device sharing remain separate acceptance checks.
+
 ### Portable browser export
 
 Run `node scripts/package-html5.mjs --draft` for a development ZIP in
