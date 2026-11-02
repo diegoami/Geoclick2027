@@ -2058,4 +2058,3 @@ actual target marker and all twelve Pacific country memberships; the Pacific
 initial desktop frame is about 57° wide, rather than almost the whole world.
 
 Build tools used: Node 24.21.0, GDAL 3.12.2, tippecanoe 2.53.0 and go-pmtiles 1.31.2. Frozen-source previews reproduce all ten final target-ID lists without a live source refresh.
-

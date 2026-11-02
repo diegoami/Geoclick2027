@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import { filterGroups } from './mapSearch';
 import { mapGroups, mapTypeLabel, pickerDefaultMapIdOf } from './mapCatalog';
@@ -151,7 +153,18 @@ describe('country map order', () => {
 			['Oceania', 'oceania'],
 			['South America', 'south-america']
 		] as const) {
-			expect(idsFor(continent)).toEqual([`${prefix}-countries`, `${prefix}-capitals`]);
+			expect(idsFor(continent)).toEqual([
+				`${prefix}-countries`,
+				`${prefix}-capitals`,
+				...JSON.parse(
+					readFileSync(
+						path.resolve(__dirname, '../../../data/curation/continent-city-maps.json'),
+						'utf8'
+					)
+				)
+					.filter((row: { country: string }) => row.country === continent)
+					.map((row: { id: string }) => row.id)
+			]);
 		}
 		const europe = idsFor('Europe');
 		expect(europe[0]).toBe('europe-countries');
