@@ -103,3 +103,30 @@ describe('optional account controls', () => {
 		expect(actions.onSignIn).toHaveBeenCalledWith(false);
 	});
 });
+
+it('offers explicit cancellation while native sign-in is outstanding', async () => {
+	const actions = props({ usingAccount: false, busy: true, sync: 'idle' }),
+		screen = await render(AccountControls, actions);
+	await screen.getByRole('button', { name: 'Cancel sign-in' }).click();
+	expect(actions.onSignOut).toHaveBeenCalledOnce();
+});
+it('disables an unavailable native remember choice without blocking guest play', async () => {
+	const actions = props({
+			usingAccount: false,
+			busy: false,
+			sync: 'idle',
+			rememberAvailable: false
+		}),
+		screen = await render(AccountControls, actions);
+	await expect.element(screen.getByRole('checkbox')).toBeDisabled();
+	await expect.element(screen.getByRole('button', { name: 'Sign in with Google' })).toBeEnabled();
+});
+
+it('resets the remember choice after a completed sign-out', async () => {
+	const actions = props(),
+		screen = await render(AccountControls, actions);
+	await screen.getByRole('checkbox').click();
+	await screen.rerender({ model: { identity, usingAccount: true, busy: false, sync: 'synced' } });
+	await screen.rerender({ model: { usingAccount: false, busy: false, sync: 'idle' } });
+	await expect.element(screen.getByRole('checkbox')).not.toBeChecked();
+});

@@ -24,6 +24,8 @@ const STORAGE_KEY = 'geoclick:language:v1';
 // translation is a compile error, not a silent fallback discovered by
 // clicking around.
 export type TranslationKey =
+	| 'account.cancel'
+	| 'account.rememberUnavailable'
 	| 'account.close'
 	| 'account.title'
 	| 'account.guest'
@@ -297,6 +299,9 @@ export type TranslationKey =
 type Dictionary = Record<TranslationKey, string>;
 
 const en: Dictionary = {
+	'account.cancel': 'Cancel sign-in',
+	'account.rememberUnavailable':
+		'Remembering sign-in is unavailable on this device. You can still play without an account.',
 	'account.close': 'Close account panel',
 	'account.title': 'Account',
 	'account.guest': 'You can play without an account. Your progress stays on this device.',
@@ -597,6 +602,9 @@ const en: Dictionary = {
 };
 
 const de: Dictionary = {
+	'account.cancel': 'Anmeldung abbrechen',
+	'account.rememberUnavailable':
+		'Die Anmeldung kann auf diesem Gerät nicht gespeichert werden. Du kannst weiterhin ohne Konto spielen.',
 	'account.close': 'Kontofenster schließen',
 	'account.title': 'Konto',
 	'account.guest': 'Du kannst ohne Konto spielen. Dein Fortschritt bleibt auf diesem Gerät.',
@@ -904,6 +912,9 @@ const de: Dictionary = {
 };
 
 const it: Dictionary = {
+	'account.cancel': 'Annulla accesso',
+	'account.rememberUnavailable':
+		'Non è possibile memorizzare l’accesso su questo dispositivo. Puoi continuare a giocare senza account.',
 	'account.close': 'Chiudi pannello account',
 	'account.title': 'Account',
 	'account.guest': 'Puoi giocare senza account. I tuoi progressi restano su questo dispositivo.',

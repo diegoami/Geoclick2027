@@ -1,4 +1,10 @@
-import type { BrowserAccountState } from './browserAccountSession';
+import type {
+	BrowserAccountState,
+	BrowserAccountAuth,
+	BrowserAccountIdentity
+} from './browserAccountSession';
+import type { SyncProgressJournal, ProgressTransport } from './progressSync';
+import type { ProgressRepository } from './progressRepository';
 import {
 	setAccountProgressRepository,
 	createLocalStorageProgressRepository
@@ -20,8 +26,7 @@ export function initializeBrowserAccount(): Promise<void> {
 		if (
 			typeof window === 'undefined' ||
 			import.meta.env.MODE === 'test' ||
-			!import.meta.env.VITE_FIREBASE_CONFIG ||
-			(await isNativeShell())
+			!import.meta.env.VITE_FIREBASE_CONFIG
 		)
 			return;
 		try {
@@ -34,18 +39,38 @@ export function initializeBrowserAccount(): Promise<void> {
 			]);
 			const config = parseBrowserFirebaseConfig(import.meta.env.VITE_FIREBASE_CONFIG);
 			if (!config) return;
-			const gateway = createBrowserFirebaseAccount(config);
+			let gateway: {
+				auth: BrowserAccountAuth;
+				rememberAvailable?: boolean;
+				open(
+					identity: BrowserAccountIdentity
+				): Promise<{ journal: SyncProgressJournal; transport: ProgressTransport }>;
+			};
+			let guest: ProgressRepository;
+			const { isTauri } = await import('@tauri-apps/api/core');
+			if (isTauri()) {
+				const runtime = await (
+					await import('./windowsFirebaseAccount')
+				).createWindowsFirebaseAccount(config);
+				if (!runtime) return;
+				gateway = runtime;
+				guest = (await import('./sqliteProgressRepository')).createSqliteProgressRepository();
+			} else if (await isNativeShell()) return;
+			else {
+				gateway = createBrowserFirebaseAccount(config);
+				guest = createLocalStorageProgressRepository();
+			}
 			controller = new BrowserAccountSession({
 				auth: gateway.auth,
 				open: gateway.open,
-				guest: createLocalStorageProgressRepository(),
+				guest,
 				canSync: () => document.visibilityState === 'visible' && navigator.onLine,
 				maps: browserImportMaps,
 				bind(repository) {
 					if (setAccountProgressRepository(repository)) revision++;
 				},
 				changed(state) {
-					value = state;
+					value = { ...state, rememberAvailable: gateway.rememberAvailable ?? true };
 				},
 				progressChanged() {
 					progress++;

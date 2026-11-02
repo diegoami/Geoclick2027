@@ -159,3 +159,6 @@ export function createSqliteProgressRepository(): ProgressRepository {
 		}
 	};
 }
+
+/** Reuse the existing migrated guest database; callers must not close its shared connection. */
+export const getTauriProgressDatabase = () => getDb();

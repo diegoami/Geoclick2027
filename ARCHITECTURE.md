@@ -368,8 +368,15 @@ after an explicit configuration is present. `AccountButton.svelte` exposes a lab
 `AccountDialog.svelte` hosts localized `AccountPanel.svelte` controls separately
 from Appearance; `browserFirebaseAccount.ts` uses Google popups and
 explicit memory/remembered persistence. Account ownership changes key the layout
-so views remount with captured destinations. Native adapters remain integration
-work. Guest/offline play never requires an account.
+so views remount with captured destinations. `sqliteProgressJournal.ts` now provides native one-row CAS durability;
+`tauriProgressJournal.ts` and `capacitorProgressJournal.ts` reuse their existing
+migrated guest database connections and require a host writer actor. Migration 4
+adds the owner journal table without copying or clearing guest progress. Windows native
+auth/lifecycle now uses `windows_account` Rust commands and
+`windowsAccountGateway.ts`/`windowsFirebaseAccount.ts`, with system-browser PKCE,
+protected remember/forget, guarded offline local identity and native SQLite.
+Installed/live Windows verification and Android integration remain separate.
+`dev:windows-account` launches an isolated app identifier/data/vault scope. Guest/offline play never requires an account.
 
 ## Repo layout
 

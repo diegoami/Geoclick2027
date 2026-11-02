@@ -57,7 +57,12 @@ const PRE_GC040_ON_OPEN_SQL = `
 	);
 `;
 
-const TABLES = ['card_states', 'last_session_summaries'] as const;
+const TABLES = [
+	'card_states',
+	'last_session_summaries',
+	'map_records',
+	'account_progress_journal_v1'
+] as const;
 const schemaOf = (db: DatabaseSync) =>
 	Object.fromEntries(TABLES.map((t) => [t, db.prepare(`PRAGMA table_info(${t})`).all()]));
 
@@ -201,4 +206,50 @@ describe('Capacitor SQLite migrations (GC-040)', () => {
 		expect(await migrate(adapter(db), MIGRATIONS)).toEqual({ from: next, to: next });
 		expect(await getUserVersion(adapter(db))).toBe(next);
 	});
+});
+
+it('upgrades an existing v3 guest database without importing, clearing or rewriting its progress', async () => {
+	const db = new DatabaseSync(':memory:');
+	try {
+		for (const sql of MIGRATIONS.slice(0, 3)) db.exec(sql);
+		db.exec('PRAGMA user_version=3');
+		db.prepare('INSERT INTO card_states VALUES (?, ?, ?, ?, ?, ?, ?, ?)').run(
+			'map',
+			'one',
+			2.35,
+			6,
+			2,
+			'2026-11-03',
+			'2026-11-02',
+			2
+		);
+		db.prepare('INSERT INTO last_session_summaries VALUES (?, ?, ?, ?, ?)').run(
+			'map',
+			2,
+			1,
+			1,
+			'2026-11-02T12:00:00.000Z'
+		);
+		db.prepare('INSERT INTO map_records VALUES (?, ?)').run(
+			'map',
+			JSON.stringify({ bestTimeMs: 4000 })
+		);
+		const readGuest = () => ({
+			cards: db
+				.prepare(
+					'SELECT map_id,target_id,ease_factor,interval,repetitions,due_date,last_reviewed_at,clean_streak FROM card_states'
+				)
+				.all(),
+			scores: db.prepare('SELECT * FROM last_session_summaries').all(),
+			records: db.prepare('SELECT * FROM map_records').all()
+		});
+		const before = readGuest();
+		expect(await migrate(adapter(db))).toEqual({ from: 3, to: MIGRATIONS.length });
+		expect(readGuest()).toEqual(before);
+		expect(db.prepare('SELECT COUNT(*) AS n FROM account_progress_journal_v1').get()).toEqual({
+			n: 0
+		});
+	} finally {
+		db.close();
+	}
 });

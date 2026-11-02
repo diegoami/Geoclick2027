@@ -20,6 +20,12 @@
 		onDismiss: () => unknown;
 	} = $props();
 	let remember = $state(false);
+	let previousUid: string | undefined;
+	$effect(() => {
+		const uid = model.identity?.uid;
+		if (model.rememberAvailable === false || (previousUid && !uid)) remember = false;
+		previousUid = uid;
+	});
 	const preview = $derived(model.preview);
 	const counts = $derived({
 		add: preview?.rows.filter((row) => row.disposition === 'add').length ?? 0,
@@ -37,13 +43,18 @@
 	{:else}
 		<p>{t('account.guest')}</p>
 		<label
-			><input type="checkbox" bind:checked={remember} disabled={model.busy} />{t(
-				'account.remember'
-			)}</label
+			><input
+				type="checkbox"
+				bind:checked={remember}
+				disabled={model.busy || model.rememberAvailable === false}
+			/>{t('account.remember')}</label
 		>
+		{#if model.rememberAvailable === false}<p>{t('account.rememberUnavailable')}</p>{/if}
 		<button type="button" disabled={model.busy} onclick={() => onSignIn(remember)}
 			>{t('account.signin')}</button
 		>
+		{#if model.busy}<button type="button" onclick={() => onSignOut()}>{t('account.cancel')}</button
+			>{/if}
 	{/if}
 	{#if model.usingAccount}
 		<p role="status">{t(`account.sync.${model.sync}` as TranslationKey)}</p>

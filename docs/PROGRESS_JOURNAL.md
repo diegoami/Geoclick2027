@@ -2,8 +2,10 @@
 
 This is the production event/storage foundation for optional account sync. Its reducer and local storage
 have no auth, network or Svelte dependency. The existing guest repositories and
-tutorial sandbox are unchanged; native SQLite journal adapters are separate integration work. Browser account
-UI and lifetimes are implemented; real-provider/cloud verification remains. Cloud transport/rules are implemented below but are
+tutorial sandbox are unchanged; native SQLite journal adapters are implemented. Native authentication/lifecycle
+wiring and installed-device checks remain separate integration work. Browser
+account UI and lifetimes are implemented; the initial live import/sharing and
+guest-copy round has passed. Cloud transport/rules are implemented below but are
 activated only by the explicitly configured browser account control. Quiz capture and its account adapter are implemented
 without switching the default guest repository factory.
 
@@ -155,8 +157,7 @@ read, `loadPlayableCardStates` keeps that account destination and the warning;
 it never substitutes a guest destination. Guest read failure still uses memory.
 
 The factory defaults to guest stores. Configured browser sign-in can now bind
-an account and remount views through the optional account bridge. Native SQLite
-adapters and full release verification remain required. Tests cover the real component-to-
+an account and remount views through the optional account bridge. Native auth/host wiring and full release verification remain required. Tests cover the real component-to-
 IndexedDB path and reopen, queue order, idempotent retries, account isolation,
 reset score retention, rejected snapshots/unknown targets and tutorial routing.
 
@@ -300,3 +301,119 @@ session sign-in intent; only provider credentials are synthetic. It does not loa
 real env/config or automate Google authentication. Non-loopback application
 requests fail the suite. App assets remain locally served during backend outage;
 full production-site asset caching is not established by these tests.
+
+
+## Native SQLite journal
+
+`sqliteProgressJournal.ts` implements the same journal/sync contract using one
+versioned, owner-scoped row in `account_progress_journal_v1`. Migration 4 adds
+only that table in both the Tauri and Capacitor migration lists; existing guest
+cards, summaries and map records are untouched. Neither migration nor opening
+an account automatically imports guest data. The established explicit importer
+works with the native journal and original native guest repository.
+
+The row stores typed immutable event history, per-ID variants, the writer actor,
+local/acknowledged markers and bounded own-account quarantine. Replay/projection
+and pending-upload eligibility derive from this committed history. There is no
+separate state/outbox write. Each mutation reads a revision/payload, computes the
+change, then performs one bound SQL INSERT or conditional UPDATE. Revision AND
+payload must still match; a concurrent winner causes re-read/recompute (up to
+32 attempts), never overwrite. This works through Tauri's pool without issuing
+BEGIN/COMMIT on separate connections. A batch acknowledgement also commits as
+one row, or not at all. A failed/lost success response is safely retried by the
+original operation key and immutable envelope.
+
+Owner/project and inputs are copied before asynchronous work. Both native
+factories capture owner before opening the existing migrated guest database,
+reuse that app-owned pool/connection and require an explicit opaque host writer
+actor ID. Closing a journal handle never closes the shared database or erases
+other account/guest data. An already issued commit may finish only in the
+original namespace. Unsupported/corrupt/foreign local payloads fail visibly
+without being replaced by an empty journal; foreign remote data is not retained.
+Android query error envelopes and non-0/1 affected-row results are failures,
+not evidence of an empty account or an ordinary CAS retry.
+
+The host actor must be installation-scoped native metadata, not an ID copied
+blindly from a restored database, a Google UID or a shared OAuth client ID.
+Native integration must keep it outside copied/restoreable journal data (for
+example protected Windows metadata or Android no-backup storage) and rotate it
+when restoring data onto another installation. Historical actors/events stay
+immutable; the next event under a new actor starts its sequence at one and
+observes the retained frontier. The factories require this argument so later
+integration cannot silently reuse a database's actor on another device.
+
+Both browser and native append paths now check the current actor's recorded
+sequence against its replayable graph clock. Reproduced conflicting-actor
+history previously allowed another event to commit even though it could not be
+replayed. Such writes now reject with `actor-history-unavailable`; their input
+is not falsely reported as saved and existing data is retained for diagnosis.
+Other actors' unsupported/conflicting data still follows the common graph/
+quarantine rules, and unknown parents remain deferred.
+
+Initial native limits: one owner payload is at most 16 Mi UTF-16 code units;
+exceeding it fails without overwriting the previous commit. Each mutation
+currently reads/serializes the full owner row and replay still reads history.
+There is no pruning or unproved compaction. The cloud's bounded-read/quota and
+large-history acceptance work above remains required before #311 completion.
+This limit is not a throughput or power-loss claim beyond the SQL engine's
+normal committed-statement semantics.
+
+Tests use real Node SQLite, including file close/reopen and competing connections,
+response loss before acknowledgement, exact atomic ack, migration from populated
+v3 guest tables, account/SQL binding isolation, unsupported local data, deferred/
+conflicting remote events, changed host actor, handle-close races and reset-wins
+sync. Adapter tests exercise the actual guest repositories and import code against
+SQLite while mocking only Tauri/Capacitor bridge entry points. They verify migrated
+connection reuse and Android result envelopes; they do not claim an installed
+Windows or Android IPC/device result.
+
+The browser bridge still skips native shells. Before enabling native account
+controls, integrate the proved system-browser/native Google adapters, secure
+remember/forget and host actor storage, then verify installed app restart and
+same-UID sharing. Remembered offline startup must reopen the correct local
+account while cloud transport remains guarded by fresh authenticated ownership;
+the auth-only spikes alone do not establish that complete progress lifecycle.
+Guest play remains optional/account-free throughout.
+
+
+## Windows account runtime
+
+`windowsFirebaseAccount.ts` connects the game controller to the native
+`windows_account` Rust module, memory-only Firebase Auth and native SQLite journal.
+`windowsAccountGateway.ts` keeps protected local identity separate from permission
+to use cloud transport. A cached native UID/label can reopen the same account's
+local journal offline; every cloud call waits for Firebase to verify that UID in
+the configured project. A mismatched/restored/revoked UID is never published or
+uploaded under the previous owner. Same-UID refresh does not remount a quiz.
+
+Rust reuses the proved loopback PKCE/state/nonce/issuer/audience/expiry validation,
+with a separate production app/project/client credential scope. Renewable Google
+grants stay native and are saved only after Firebase confirmation and explicit
+Remember. Firebase credentials stay in WebView memory. Actor metadata uses an
+app/project-scoped protected native entry, separate from sign-in/forget; an
+unavailable actor store uses a fresh process actor, never a copied database actor
+or plaintext credential fallback. Non-Windows native shells remain guest-only
+until their separate adapter is connected.
+
+Each async OAuth operation is preceded by a synchronous request registration.
+Cancellation/finalization are bound to that request; a delayed old command cannot
+open Google again or cancel a newer operation. SDK exchanges and cleanup serialize,
+so a cancelled exchange cannot clear another account that signed in later. Cloud
+transport blocks immediately during sign-out; native forget finishes before a
+new login is offered. A failed forget remains retryable and is not called forgotten.
+Cancel is explicit in the shared account UI; the Remember choice resets after
+completed sign-out and unavailable protected storage disables that option.
+
+Downloaded Desktop OAuth JSON stays outside the repository. The build script
+writes only its path into generated Rust include source and never prints its
+contents. Installed-app OAuth client metadata is embedded at build time; it is
+not a confidential web-client/service-account secret. No configuration means
+account controls stay unavailable while guest play remains. The public Firebase
+project and native Desktop client's project must match before native controls open.
+
+Use `npm run dev:windows-account -- --client-file <external JSON> --firebase-env-file
+<external .env.local>` for the isolated interactive test app. It uses its own app
+identifier and therefore separate SQLite, WebView profile, credential/actor scope
+from the production game. See `docs/WINDOWS_ACCOUNT.md`. Unit/emulator tests do not
+automate Google account selection; real native Google/device checks are labelled
+separately in plan #311.

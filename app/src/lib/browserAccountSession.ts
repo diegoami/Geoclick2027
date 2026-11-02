@@ -17,6 +17,7 @@ export interface BrowserAccountAuth {
 	signOut(): Promise<void>;
 }
 export interface BrowserAccountState {
+	rememberAvailable?: boolean;
 	identity?: BrowserAccountIdentity;
 	usingAccount: boolean;
 	busy: boolean;

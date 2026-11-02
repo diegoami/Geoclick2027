@@ -26,7 +26,8 @@
 		"translate-facts": "tsx data/scripts/translate-facts.ts",
 		"gates": "node scripts/task.mjs gates",
 		"setup-hooks": "git config core.hooksPath .githooks",
-		"test:firebase": "firebase emulators:exec --config firebase/firebase.json --project demo-geoclick-sync --only auth,firestore \"node firebase/run-tests.mjs\""
+		"test:firebase": "firebase emulators:exec --config firebase/firebase.json --project demo-geoclick-sync --only auth,firestore \"node firebase/run-tests.mjs\"",
+		"dev:windows-account": "node scripts/windows-account-dev.mjs"
 	},
 	"devDependencies": {
 		"@mapbox/vector-tile": "^3.0.0",

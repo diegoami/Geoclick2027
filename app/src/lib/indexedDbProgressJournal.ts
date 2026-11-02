@@ -171,6 +171,13 @@ export class IndexedDbProgressJournal {
 				installation = { key: 'installation', deviceId: this.idFactory() };
 				await request(metadata.add(installation));
 			}
+			const recordedSequence = all.reduce(
+				(max, event) =>
+					event.deviceId === installation.deviceId ? Math.max(max, event.sequence) : max,
+				0
+			);
+			if (recordedSequence !== (graph.clock.get(installation.deviceId) ?? 0))
+				throw new ProgressJournalError('actor-history-unavailable');
 			const candidate: ProgressEvent = {
 				version: 1,
 				id: this.idFactory(),

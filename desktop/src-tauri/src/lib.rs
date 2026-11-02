@@ -1,3 +1,5 @@
+mod windows_account;
+use tauri::Manager;
 use tauri_plugin_sql::{Migration, MigrationKind};
 
 // Progress persistence schema - mirrors app/src/lib/progressRepository.ts's
@@ -51,18 +53,45 @@ fn migrations() -> Vec<Migration> {
       );
     ",
     kind: MigrationKind::Up,
+  },
+  Migration {
+    version: 4,
+    description: "add_account_progress_journal",
+    // One compare-and-swap row commits events, actor metadata and acknowledgements.
+    sql: "
+      CREATE TABLE account_progress_journal_v1 (
+        owner_key TEXT PRIMARY KEY NOT NULL,
+        revision INTEGER NOT NULL CHECK (revision >= 1),
+        payload TEXT NOT NULL
+      );
+    ",
+    kind: MigrationKind::Up,
   }]
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
   tauri::Builder::default()
+    .plugin(tauri_plugin_single_instance::init(|app, _, _| {
+      if let Some(window) = app.get_webview_window("main") {let _ = window.show();let _ = window.set_focus();}
+    }))
+    .plugin(tauri_plugin_opener::init())
+    .invoke_handler(tauri::generate_handler![
+      windows_account::windows_account_configuration,
+      windows_account::windows_account_begin,
+      windows_account::windows_account_login,
+      windows_account::windows_account_restore,
+      windows_account::windows_account_confirm,
+      windows_account::windows_account_cancel,
+      windows_account::windows_account_forget
+    ])
     .plugin(
       tauri_plugin_sql::Builder::default()
         .add_migrations("sqlite:geoclick.db", migrations())
         .build(),
     )
     .setup(|app| {
+      app.manage(windows_account::WindowsAccount::new(app.config().identifier.clone()));
       if cfg!(debug_assertions) {
         app.handle().plugin(
           tauri_plugin_log::Builder::default()

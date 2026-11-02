@@ -188,3 +188,6 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 		}
 	};
 }
+
+/** Reuse the existing migrated guest database; callers must not close its shared connection. */
+export const getCapacitorProgressDatabase = () => getDb();
