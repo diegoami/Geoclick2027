@@ -361,7 +361,7 @@ repository scopes prevent resuming another account's half-finished round. See
 [the journal contract](docs/PROGRESS_JOURNAL.md). The game repository factory
 defaults to its existing guest stores. `progressSync.ts` and
 `firestoreProgressTransport.ts` provide bounded immutable delivery; production
-rules live in `firebase/firestore.rules`. Firestore Lite has no persistent cache
+rules live in `firebase/firestore.rules`. The optional `sequencedProgressTransport.ts` foundation implements owner-approved #334: per-account V2 head/event transactions, explicit legacy freeze and fenced delta pages. Production factories do not select it; durable checkpoints/controller and native acceptance follow separately. Protocol/rules proof is in `firebase/sequenced-progress.test.ts`. Firestore Lite has no persistent cache
 or offline queue; the local journal owns durability. Local Auth/Firestore emulator
 tests include the full real-IndexedDB path. The browser-only `account.svelte.ts` bridge activates `browserAccountSession.ts`
 after an explicit configuration is present. `AccountButton.svelte` exposes a labeled entry in home/map/page toolbars;

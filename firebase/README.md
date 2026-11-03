@@ -60,3 +60,12 @@ claim that the production website can cold-load all game assets without a networ
 The browser fixtures are outside game routes/build output. All browser processes
 are closed, and cleanup verifies the resolved temporary root before recursively
 removing only the directories this suite created. Owner profiles are never used.
+
+## V2 protocol foundation
+
+The runner also executes `sequenced-progress.test.ts`: per-account sequence
+transactions, immutable wrappers, bounded fences, access denial and legacy-cutover
+races. Production factories still use V1. Do not publish this intermediate rules
+file for real-account opt-in until the checkpoint/controller and migration
+acceptance in #334 are complete; rules publication remains an owner action. See
+the journal contract section **Sequenced delivery protocol (V2 foundation)**.
