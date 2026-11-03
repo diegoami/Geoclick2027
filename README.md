@@ -11,9 +11,9 @@ Created by Diego Amicabile.
 
 **itch.io:** <https://diegoami.itch.io/geoclick>.
 
-**Play it:** <https://geoclick.netlify.app/> — the live web
-app, built from `main`. No install or account needed; progress is kept
-in your browser.
+**Play it:** [GitHub Pages](https://diegoami.github.io/Geoclick2027/) ·
+[Netlify](https://geoclick.netlify.app/). No install or account needed; progress
+is kept in your browser.
 
 **Windows or Android app:** installers are on the public
 [releases page](https://github.com/diegoami/Geoclick2027/releases/latest)
@@ -124,3 +124,31 @@ Android Studio to see it.
 - [ONBOARDING.md](ONBOARDING.md) — day-to-day workflow, repo layout, gotchas
 - [DECISIONS.md](DECISIONS.md) — the *why* behind product/design choices
 - [MAPS.md](MAPS.md) — how demo maps are built
+
+## GitHub Pages
+
+[Play Geoclick on GitHub Pages](https://diegoami.github.io/Geoclick2027/).
+The Actions workflow builds the existing portable HTML5 export from `main` and
+publishes only its static files. Hash navigation keeps map, tour and quiz URLs
+working under `/Geoclick2027/`, including on reload. PMTiles are served from the
+same site using HTTP byte ranges. The normal Netlify build is unchanged.
+
+In Settings → Pages, select **GitHub Actions** before the first deployment.
+The workflow runs on pushes to `main` and can also be started manually. It does
+not create a version tag or publish installers.
+
+This deployment needs no account backend. Progress is stored in this browser
+and is separate from Netlify or an installed app; it is not automatically
+transferred between them. Firebase account configuration is not included in
+the Pages workflow. External font glyph services can still be used, so this
+is not an offline-hosting promise.
+
+To build the same site locally from a clean commit:
+
+```sh
+npm ci
+node scripts/package-html5.mjs --allow-untagged
+```
+
+Extract the generated `dist-release/v<version>/Geoclick-<version>-html5.zip`
+and serve it over HTTP with byte-range support, as for the portable release.
