@@ -5,6 +5,24 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+**Preview optional Google sign-in and shared learning progress across browser, Windows and Android.**
+
+For players:
+
+- **Play without signing in:** guest play and existing device progress remain available offline, with no account required.
+- **An easy-to-find Account button:** sign in with Google, request synchronization, or sign out from its own panel.
+- **Share learning progress:** signed-in practice is kept locally and synchronized to the same account on your other devices; offline changes wait for a retry.
+- **Choose what to import:** review this device's guest progress before adding it to the account. Existing account progress wins conflicts, and the original guest copy is kept.
+- **Remember only by choice:** the sign-in checkbox starts unchecked. Windows uses protected native storage; Android keeps an explicitly remembered session inside its app sandbox. Signing out forgets the sign-in without deleting learning progress.
+- **Alpha testing:** the Android game integration is still under owner testing. Real Android Google sign-in, phone cold restarts, remembered restore and sign-out/forget are not yet verified in this integrated build; the earlier isolated Android proof passed those flows. This preview is not the completed v1.3.0 release.
+
+Under the hood:
+
+- Immutable, owner-scoped Firebase events, reset-safe replay, durable browser/native SQLite journals and native installation actors follow approved design #313 and plan #311.
+- Local gates and Firebase emulator scenarios pass. Builds, installer checks and exact published artifact evidence are recorded on the alpha's GitHub release and plan #311.
+
 ## v1.2.1 — 2026-10-31 — Desktop zoom and steady world colors
 
 **Resize the whole Windows interface with native zoom shortcuts, while world countries keep their continent colors as you learn.**

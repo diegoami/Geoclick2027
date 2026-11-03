@@ -6,7 +6,9 @@ apply plugin: 'com.android.application'
 // vars. With neither, assembleRelease still builds - an unsigned APK - and
 // debug builds are unaffected.
 def keystoreProps = new Properties()
-def keystorePropsFile = rootProject.file('keystore.properties')
+def externalSigning = System.getenv('GEOCLICK_ANDROID_SIGNING_PROPERTIES')
+def keystorePropsFile = externalSigning ? new File(externalSigning) : rootProject.file('keystore.properties')
+if (externalSigning && (!keystorePropsFile.isAbsolute() || !keystorePropsFile.isFile())) throw new GradleException('External Android signing properties must be an existing absolute file.')
 if (keystorePropsFile.exists()) keystorePropsFile.withInputStream { keystoreProps.load(it) }
 def signingValue = { String key, String env -> keystoreProps.getProperty(key) ?: System.getenv(env) }
 def releaseStoreFile = signingValue('storeFile', 'GEOCLICK_KEYSTORE_FILE')
@@ -31,7 +33,7 @@ android {
         release {
             if (releaseStoreFile) {
                 // Relative paths resolve from mobile/android/.
-                storeFile rootProject.file(releaseStoreFile)
+                storeFile (externalSigning && !new File(releaseStoreFile).isAbsolute() ? new File(keystorePropsFile.parentFile, releaseStoreFile) : rootProject.file(releaseStoreFile))
                 storePassword signingValue('storePassword', 'GEOCLICK_KEYSTORE_PASSWORD')
                 keyAlias signingValue('keyAlias', 'GEOCLICK_KEY_ALIAS')
                 keyPassword signingValue('keyPassword', 'GEOCLICK_KEY_PASSWORD')

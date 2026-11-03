@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import { userEvent } from 'vitest/browser';
 import { tick } from 'svelte';
@@ -20,6 +20,9 @@ import StartBar from './StartBar.svelte';
 import MapNav from './MapNav.svelte';
 import { accountOpen, setAccountOpen } from './accountDialogState.svelte';
 import { setLanguage } from './i18n.svelte';
+beforeEach(() => {
+	setLanguage('en');
+});
 afterEach(() => {
 	setAccountOpen(false);
 	setLanguage('en');

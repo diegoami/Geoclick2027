@@ -16,16 +16,18 @@ export interface WindowsCredential {
 }
 export type WindowsRestore =
 	| { status: 'credential'; credential: WindowsCredential }
+	| { status: 'sdk'; expectedUid: string }
 	| { status: 'none' | 'unavailable' | 'revoked' | 'rejected' };
 export interface WindowsAccountBridge {
 	login(requestId: string, remember: boolean): Promise<WindowsCredential>;
 	restore(requestId: string): Promise<WindowsRestore>;
 	confirm(requestId: string, attemptId: string, uid: string, label: string): Promise<boolean>;
 	cancel(requestId: string): Promise<void>;
-	forget(): Promise<void>;
+	forget(requestId?: string): Promise<void>;
 }
 export interface WindowsFirebasePort {
-	consumeGoogle(idToken: string): Promise<BrowserAccountIdentity>;
+	consumeGoogle(idToken: string, remember: boolean): Promise<BrowserAccountIdentity>;
+	restoreIdentity?(): Promise<BrowserAccountIdentity | undefined>;
 	matches(owner: ProgressOwner): boolean;
 	clear(): Promise<void>;
 	transport(owner: ProgressOwner): ProgressTransport;
@@ -103,6 +105,7 @@ export function createWindowsAccountGateway(
 		try {
 			const restoreUid = savedUid;
 			let credential: WindowsCredential;
+			let sdkRestore = false;
 			if (restore) {
 				const result = await native.restore(requestId);
 				if (!active(generation)) throw new WindowsAccountError('cancelled');
@@ -111,8 +114,13 @@ export function createWindowsAccountGateway(
 					throw new WindowsAccountError('unauthenticated');
 				}
 				if (result.status === 'unavailable') throw new WindowsAccountError('unavailable');
-				if (result.status !== 'credential') throw new WindowsAccountError('credential-rejected');
-				credential = result.credential;
+				if (result.status === 'sdk') {
+					sdkRestore = true;
+					credential = { id_token: '', attempt_id: requestId, expected_uid: result.expectedUid };
+				} else {
+					if (result.status !== 'credential') throw new WindowsAccountError('credential-rejected');
+					credential = result.credential;
+				}
 				if (!restoreUid || credential.expected_uid !== restoreUid)
 					throw new WindowsAccountError('identity-changed');
 			} else credential = await native.login(requestId, remember);
@@ -120,7 +128,13 @@ export function createWindowsAccountGateway(
 			const verified = await sdk(async () => {
 				if (!active(generation)) throw new WindowsAccountError('cancelled');
 				try {
-					const user = await firebase.consumeGoogle(credential.id_token);
+					const user = sdkRestore
+						? await firebase.restoreIdentity?.()
+						: await firebase.consumeGoogle(credential.id_token, remember);
+					if (!user) {
+						await native.forget(requestId);
+						throw new WindowsAccountError('no-saved-user');
+					}
 					if (!active(generation)) throw new WindowsAccountError('cancelled');
 					if (user.projectId !== configuration.projectId)
 						throw new WindowsAccountError('project-mismatch');
@@ -142,7 +156,12 @@ export function createWindowsAccountGateway(
 					if (remembered !== remember) throw new WindowsAccountError('storage');
 					return user;
 				} catch (error) {
-					await firebase.clear();
+					const code =
+						typeof error === 'object' && error !== null && 'code' in error ? error.code : undefined;
+					const temporary =
+						typeof code === 'string' &&
+						['unavailable', 'auth/network-request-failed', 'deadline-exceeded'].includes(code);
+					if (!sdkRestore || !temporary || !active(generation)) await firebase.clear();
 					throw error;
 				}
 			});
@@ -155,7 +174,7 @@ export function createWindowsAccountGateway(
 			if (
 				active(generation) &&
 				error instanceof WindowsAccountError &&
-				error.code === 'identity-changed'
+				['identity-changed', 'no-saved-user'].includes(error.code)
 			)
 				await loseIdentity(generation);
 			throw error;

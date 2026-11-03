@@ -16,11 +16,15 @@ for (const run of [
 			'--run',
 			'src/lib/firestoreProgressTransport.browser.test.ts',
 			'src/lib/windowsFirebaseAccount.browser.test.ts',
+			'src/lib/androidFirebaseAccount.browser.test.ts',
 			'--reporter=dot'
 		],
 		cwd: path.join(root, 'app')
 	},
-	{ args: ['--test', '--test-reporter=dot', 'firebase/browser-profiles.test.mjs'], cwd: root }
+	{
+		args: ['--test', '--test-reporter=dot', 'firebase/browser-profiles.test.mjs'],
+		cwd: root
+	}
 ]) {
 	const result = spawnSync(process.execPath, run.args, {
 		cwd: run.cwd,

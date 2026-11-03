@@ -3,6 +3,8 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/geoclick_backup_rules"
+        android:dataExtractionRules="@xml/geoclick_data_extraction_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
