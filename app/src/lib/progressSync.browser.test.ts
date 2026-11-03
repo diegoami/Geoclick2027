@@ -159,6 +159,88 @@ describe('account journal synchronization', () => {
 		expect(await sync.sync()).toMatchObject({ uploaded: 1, pending: 0 });
 		expect(c.counts().puts).toBe(1);
 	});
+	it('keeps the exact unacknowledged suffix after quota exhaustion midway through upload', async () => {
+		const a = journal(),
+			c = cloud();
+		const first = await a.append(answer, 'quota-first');
+		const second = await a.append(answer, 'quota-second');
+		const third = await a.append(answer, 'quota-third');
+		const put = c.transport.put;
+		c.transport.put = async (event) => {
+			if (event.id === second.id)
+				throw Object.assign(new Error('quota'), { code: 'resource-exhausted' });
+			await put(event);
+		};
+		const sync = new ProgressSync(a, c.transport);
+		await expect(sync.sync()).rejects.toMatchObject({ code: 'resource-exhausted' });
+		expect(sync.state).toBe('error');
+		expect([...c.events.keys()]).toEqual([first.id]);
+		expect((await a.pending()).map((event) => event.id)).toEqual([second.id, third.id]);
+		const databaseName = [...databases][0];
+		await a.close();
+		const reopened = journal(databaseName);
+		c.transport.put = put;
+		expect(await new ProgressSync(reopened, c.transport).sync()).toEqual({
+			downloaded: 1,
+			uploaded: 2,
+			pending: 0
+		});
+		expect(c.events.size).toBe(3);
+		expect((await reopened.snapshot()).events.map((event) => event.id)).toEqual([
+			first.id,
+			second.id,
+			third.id
+		]);
+		expect((await cards(reopened))[0].cleanStreak).toBe(3);
+	});
+	it('checks the 10000-event boundary and preserves local progress when cloud history grows beyond it', async () => {
+		const a = journal(),
+			c = cloud();
+		// A real causal chain, not repeated copies of one ID. Lexical IDs make pagination deterministic.
+		for (let i = 1; i <= 10000; i++) {
+			const id = `history-${String(i).padStart(5, '0')}`;
+			c.events.set(id, {
+				version: 1,
+				id,
+				...owner,
+				deviceId: 'history-device',
+				sequence: i,
+				logicalTime: i,
+				parents: i === 1 ? [] : [`history-${String(i - 1).padStart(5, '0')}`],
+				operationKey: `history/${i}`,
+				operation: { ...answer, roundId: `history-${i}` }
+			});
+		}
+		const sync = new ProgressSync(a, c.transport);
+		expect(await sync.sync()).toEqual({ downloaded: 10000, uploaded: 0, pending: 0 });
+		expect(sync.state).toBe('synced');
+		expect(c.counts()).toEqual({ pulls: 101, puts: 0 });
+		const graph = await a.snapshot();
+		expect(graph.events).toHaveLength(10000);
+		expect(graph.deferred).toEqual([]);
+		expect(graph.quarantined).toEqual([]);
+		const extra = await a.append({ ...answer, targetId: 'local' }, 'cross-boundary');
+		expect(await sync.sync()).toEqual({ downloaded: 10000, uploaded: 1, pending: 0 });
+		expect(c.events.size).toBe(10001);
+		const pending = await a.append(
+			{ ...answer, targetId: 'local', grade: 'again' },
+			'after-boundary'
+		);
+		await expect(sync.sync()).rejects.toMatchObject({ code: 'history-limit' });
+		expect(sync.state).toBe('error');
+		expect(c.counts()).toEqual({ pulls: 303, puts: 1 });
+		expect(await a.pending()).toEqual([pending]);
+		const before = projectProgress(await a.snapshot(), answer.mapId, new Set(['one', 'local']));
+		const databaseName = [...databases][0];
+		await a.close();
+		const reopened = journal(databaseName);
+		expect(await reopened.pending()).toEqual([pending]);
+		expect((await reopened.snapshot()).events).toHaveLength(10002);
+		expect(
+			projectProgress(await reopened.snapshot(), answer.mapId, new Set(['one', 'local']))
+		).toEqual(before);
+		expect((await reopened.snapshot()).events.some((event) => event.id === extra.id)).toBe(true);
+	});
 	it('drops a late pull after an account switch instead of ingesting or uploading it', async () => {
 		const a = journal(),
 			c = cloud();

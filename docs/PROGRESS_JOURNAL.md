@@ -191,6 +191,39 @@ compaction or incremental cursor yet; representative read/write usage and larger
 histories must be measured before rollout. A history beyond the current bound
 fails with `history-limit`, rather than declaring a partial account ready.
 
+The 2026-11-03 boundary regression uses 10,000 distinct causal events and the
+real Chromium IndexedDB journal with a simulated transport. Exactly 10,000
+remote events synchronize through 101 pages (the last is empty). A subsequent
+local upload can take cloud history to 10,001; the next cycle then fails with
+`history-limit`. A later local mistake remains pending with its projection
+unchanged after close/reopen. This is a final-release limitation tracked in
+[#332](https://github.com/diegoami/Geoclick2027/issues/332), not a completed scale
+gate. Quota failure partway through upload separately proves that only successful,
+exactly acknowledged events leave the queue; the remaining suffix resumes after
+reopening without double grading.
+
+Run `node --import tsx firebase/measure-history.ts` for a credential-free synthetic
+wire/query budget using the production encoder and UUID-sized answer envelopes:
+
+| Events | Queries/full scan | Minimum document reads/full scan | Encoded JSON bytes |
+| --- | --- | --- | --- |
+| 100 | 2 | 101 | 48,448 |
+| 1,000 | 11 | 1,001 | 486,750 |
+| 10,000 | 101 | 10,001 | 4,887,752 |
+
+The query budget includes the empty terminal query; it excludes dependent-rule
+reads and concurrent changes. JSON size is not Firestore storage or measured
+network transfer. These are synthetic measurements and query-shape estimates,
+not emulator billing or production-usage observations. No cloud requests are
+made. Firebase's documented [free quota](https://firebase.google.com/docs/firestore/quotas)
+is 50,000 document reads/day per project, and [empty queries cost at least one
+read](https://firebase.google.com/docs/firestore/pricing#minimum-charge-for-queries).
+Five 10,000-event scans exceed that read allowance even without other usage.
+Automatic retrying of a deterministic history limit also needs bounding under
+#332. Incremental delivery or compaction needs its own agreed design preserving
+causality/reset barriers, crash recovery, account ownership and legacy migration;
+raising the cap alone does not settle read cost.
+
 Wire version 1 retains all envelope fields, with two canonical representations
 that let Firestore rules validate every bounded element within their evaluation
 budget: parents are a comma-separated string of at most 128 token IDs (empty
