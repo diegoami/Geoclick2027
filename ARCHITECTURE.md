@@ -519,6 +519,16 @@ just an unstarted task, see that file).
 
 ## Hosting / deployment
 
+**GitHub Pages mirror.** `.github/workflows/pages.yml` builds the existing
+portable HTML5 export from `main`, validates authored content with
+`package-html5.mjs --allow-untagged`, and publishes the extracted static site.
+Hash routes and physical-folder-relative assets work beneath `/Geoclick2027/`
+without a host-specific SPA fallback. PMTiles remain same-origin byte-range
+requests. The build and deploy jobs are separate so a deployment can be retried
+without rebuilding. Browser-local progress is scoped to the Pages origin;
+no Firebase account configuration is supplied. This mirror leaves the normal
+Netlify pathname-routed build intact.
+
 The browser leg needs a public host. Because the app is **local-first with
 no backend** (see Storage, above), the browser build ships as a fully
 static site — `@sveltejs/adapter-static` instead of `adapter-auto`. Not
@@ -607,7 +617,9 @@ Other candidates considered, not pursued further once Netlify worked:
   from `user.github.io/repo-name/` rather than the domain root) but never
   connected — would've required making the repo public first (GitHub
   Free doesn't serve Pages from private repos), and Netlify made that
-  trade-off unnecessary.
+  trade-off unnecessary. The repository is now public and the portable HTML5
+  mirror described above replaces that old subpath-build approach; the trial
+  branch remains historical reference.
 - **Replit** (Static Deployment) — no confirmed account, not tried. Worth
   reconsidering later if the optional sync backend from Iteration 8+
   materializes (Replit could host a Node API + Postgres alongside the

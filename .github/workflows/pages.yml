@@ -1,0 +1,63 @@
+name: Deploy Geoclick to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # The portable export already provides hash routing, folder-relative
+      # assets, bundled map metadata and strict authored-content validation.
+      # A Pages deployment follows main; it does not create a release tag.
+      - run: node scripts/package-html5.mjs --allow-untagged
+      - name: Stage the portable site
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from zipfile import ZipFile
+
+          version = json.loads(Path('package.json').read_text())['version']
+          archive = Path('dist-release') / f'v{version}' / f'Geoclick-{version}-html5.zip'
+          site = Path('rendered/github-pages')
+          with ZipFile(archive) as package:
+              package.extractall(site)
+          (site / '.nojekyll').touch()
+          assert (site / 'index.html').is_file()
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: rendered/github-pages
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

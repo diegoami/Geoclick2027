@@ -8,10 +8,13 @@ import { prepareHtml5Routes } from './prepare-html5.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const sha = (data) => createHash('sha256').update(data).digest('hex');
 const json = (file) => JSON.parse(readFileSync(file, 'utf8'));
-export function portableHtml(text) {
+export function portableHtml(text, documentPath = 'index.html') {
 	return text
 		.replace(/(["'])\/_app\//g, '$1./_app/')
-		.replace(/(src=["'])\/(manual\/(?:img|images)\/)/g, '$1$2');
+		.replace(/(src=["'])\/(manual\/(?:img|images)\/)/g, (_, attribute, directory) => {
+			const relative = path.posix.relative(path.posix.dirname(documentPath), directory);
+			return attribute + relative + '/';
+		});
 }
 export function planHtml5Files(root, build, stage, provenance) {
 	root = path.resolve(root);
@@ -59,7 +62,7 @@ export function planHtml5Files(root, build, stage, provenance) {
 					!['index.html', 'manual/en.html', 'manual/de.html', 'manual/it.html'].includes(name))
 			)
 				continue;
-			if (name.endsWith('.html')) generated(name, portableHtml(readFileSync(source, 'utf8')));
+			if (name.endsWith('.html')) generated(name, portableHtml(readFileSync(source, 'utf8'), name));
 			else add(name, source);
 		}
 	}
