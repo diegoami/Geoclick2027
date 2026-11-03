@@ -82,7 +82,7 @@ test('portable plan preserves all three metadata objects without changing origin
 	);
 	assert.equal(
 		readFileSync(p.entries.find((e) => e.path === 'manual/en.html').source, 'utf8'),
-		'<img src="manual/images/a.jpg"><a href="#topic">Topic</a>'
+		'<img src="images/a.jpg"><a href="#topic">Topic</a>'
 	);
 });
 test('unsafe map IDs and mismatched bundle identities cannot be exported', () => {
@@ -135,4 +135,17 @@ test('manual screenshot URLs stay inside the physical game folder', () => {
 		portableHtml('<img src="/manual/img/windows-app.jpg">'),
 		'<img src="manual/img/windows-app.jpg">'
 	);
+});
+
+test('manual screenshots resolve from each exported manual document', () => {
+	const f = fixture();
+	const planned = planHtml5Files(f.root, f.build, f.stage, { version: '1.0.0' });
+	const manual = planned.entries.find((entry) => entry.path === 'manual/en.html');
+	const html = readFileSync(manual.source, 'utf8');
+	const src = /src="([^"]+)"/.exec(html)[1];
+	for (const language of ['en', 'de', 'it']) {
+		const url = new URL(src, `https://example.test/Geoclick2027/manual/${language}.html`);
+		assert.equal(url.pathname, '/Geoclick2027/manual/images/a.jpg');
+		assert.ok(planned.entries.some((entry) => '/Geoclick2027/' + entry.path === url.pathname));
+	}
 });
