@@ -1,0 +1,829 @@
+{
+	"id": "north-america-cities-mexico-central-caribbean",
+	"name": "North America — Cities — Mexico, Central America & Caribbean",
+	"country": "North America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/north-america-cities-mexico-central-caribbean.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "monterrey",
+			"name": "Monterrey",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mexico",
+			"centroid": [
+				-100.3319306,
+				25.671941
+			],
+			"bbox": [
+				-100.3319306,
+				25.671941,
+				-100.3319306,
+				25.671941
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "nassau",
+			"name": "Nassau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "The Bahamas",
+			"centroid": [
+				-77.3500438,
+				25.0833901
+			],
+			"bbox": [
+				-77.3500438,
+				25.0833901,
+				-77.3500438,
+				25.0833901
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "havana",
+			"name": "Havana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cuba",
+			"names": {
+				"it": "L'Avana",
+				"de": "Havanna"
+			},
+			"centroid": [
+				-82.366128,
+				23.1339047
+			],
+			"bbox": [
+				-82.366128,
+				23.1339047,
+				-82.366128,
+				23.1339047
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "camaguey",
+			"name": "Camagüey",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cuba",
+			"centroid": [
+				-77.9169342,
+				21.3808254
+			],
+			"bbox": [
+				-77.9169342,
+				21.3808254,
+				-77.9169342,
+				21.3808254
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "merida",
+			"name": "Mérida",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mexico",
+			"centroid": [
+				-89.6185794,
+				20.9685847
+			],
+			"bbox": [
+				-89.6185794,
+				20.9685847,
+				-89.6185794,
+				20.9685847
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "holguin",
+			"name": "Holguín",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cuba",
+			"centroid": [
+				-76.2630559,
+				20.887238
+			],
+			"bbox": [
+				-76.2630559,
+				20.887238,
+				-76.2630559,
+				20.887238
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "guadalajara",
+			"name": "Guadalajara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mexico",
+			"centroid": [
+				-103.3319801,
+				20.671962
+			],
+			"bbox": [
+				-103.3319801,
+				20.671962,
+				-103.3319801,
+				20.671962
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "santiago-de-cuba",
+			"name": "Santiago de Cuba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cuba",
+			"names": {
+				"it": "Santiago di Cuba"
+			},
+			"centroid": [
+				-75.8213257,
+				20.0250167
+			],
+			"bbox": [
+				-75.8213257,
+				20.0250167,
+				-75.8213257,
+				20.0250167
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cap-haitien",
+			"name": "Cap-Haïtien",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Haiti",
+			"centroid": [
+				-72.212516,
+				19.7592224
+			],
+			"bbox": [
+				-72.212516,
+				19.7592224,
+				-72.212516,
+				19.7592224
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "santiago",
+			"name": "Santiago",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Dominican Republic",
+			"names": {
+				"en": "Santiago de los Caballeros",
+				"it": "Santiago de los Caballeros",
+				"de": "Santiago de los Caballeros"
+			},
+			"centroid": [
+				-70.6700122,
+				19.50001
+			],
+			"bbox": [
+				-70.6700122,
+				19.50001,
+				-70.6700122,
+				19.50001
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ciudad-de-mexico",
+			"name": "Ciudad de México",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mexico",
+			"names": {
+				"en": "Mexico City",
+				"it": "Città del Messico",
+				"de": "Mexiko-Stadt"
+			},
+			"centroid": [
+				-99.1329341,
+				19.4443883
+			],
+			"bbox": [
+				-99.1329341,
+				19.4443883,
+				-99.1329341,
+				19.4443883
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "puebla",
+			"name": "Puebla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mexico",
+			"names": {
+				"en": "Puebla City",
+				"it": "Puebla de Zaragoza"
+			},
+			"centroid": [
+				-98.20373725542488,
+				19.032593839016364
+			],
+			"bbox": [
+				-98.20373725542488,
+				19.032593839016364,
+				-98.20373725542488,
+				19.032593839016364
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "port-au-prince",
+			"name": "Port-au-Prince",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Haiti",
+			"centroid": [
+				-72.3379804,
+				18.5429705
+			],
+			"bbox": [
+				-72.3379804,
+				18.5429705,
+				-72.3379804,
+				18.5429705
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "santo-domingo",
+			"name": "Santo Domingo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Dominican Republic",
+			"centroid": [
+				-69.92974231579055,
+				18.470745058048376
+			],
+			"bbox": [
+				-69.92974231579055,
+				18.470745058048376,
+				-69.92974231579055,
+				18.470745058048376
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "san-pedro-de-macoris",
+			"name": "San Pedro de Macorís",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Dominican Republic",
+			"centroid": [
+				-69.2999667,
+				18.4503583
+			],
+			"bbox": [
+				-69.2999667,
+				18.4503583,
+				-69.2999667,
+				18.4503583
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "la-romana",
+			"name": "La Romana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Dominican Republic",
+			"centroid": [
+				-68.966602,
+				18.4170012
+			],
+			"bbox": [
+				-68.966602,
+				18.4170012,
+				-68.966602,
+				18.4170012
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "les-cayes",
+			"name": "Les Cayes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Haiti",
+			"centroid": [
+				-73.7499793,
+				18.2003736
+			],
+			"bbox": [
+				-73.7499793,
+				18.2003736,
+				-73.7499793,
+				18.2003736
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kingston",
+			"name": "Kingston",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Jamaica",
+			"centroid": [
+				-76.7674337,
+				17.9770766
+			],
+			"bbox": [
+				-76.7674337,
+				17.9770766,
+				-76.7674337,
+				17.9770766
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "basseterre",
+			"name": "Basseterre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Saint Kitts and Nevis",
+			"centroid": [
+				-62.7170093,
+				17.3020305
+			],
+			"bbox": [
+				-62.7170093,
+				17.3020305,
+				-62.7170093,
+				17.3020305
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "belmopan",
+			"name": "Belmopan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belize",
+			"centroid": [
+				-88.767073,
+				17.2520335
+			],
+			"bbox": [
+				-88.767073,
+				17.2520335,
+				-88.767073,
+				17.2520335
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "saint-john-s",
+			"name": "Saint John's",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Antigua and Barbuda",
+			"centroid": [
+				-61.8500338,
+				17.1180365
+			],
+			"bbox": [
+				-61.8500338,
+				17.1180365,
+				-61.8500338,
+				17.1180365
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "oaxaca",
+			"name": "Oaxaca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mexico",
+			"names": {
+				"en": "Oaxaca de Juárez",
+				"it": "Oaxaca de Juárez",
+				"de": "Oaxaca de Juárez"
+			},
+			"centroid": [
+				-96.6699498,
+				17.0826898
+			],
+			"bbox": [
+				-96.6699498,
+				17.0826898,
+				-96.6699498,
+				17.0826898
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "san-pedro-sula",
+			"name": "San Pedro Sula",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Honduras",
+			"centroid": [
+				-88.0299862,
+				15.5000216
+			],
+			"bbox": [
+				-88.0299862,
+				15.5000216,
+				-88.0299862,
+				15.5000216
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "roseau",
+			"name": "Roseau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Dominica",
+			"centroid": [
+				-61.387013,
+				15.3010156
+			],
+			"bbox": [
+				-61.387013,
+				15.3010156,
+				-61.387013,
+				15.3010156
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "quetzaltenango",
+			"name": "Quetzaltenango",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Guatemala",
+			"centroid": [
+				-91.5200057,
+				14.8299591
+			],
+			"bbox": [
+				-91.5200057,
+				14.8299591,
+				-91.5200057,
+				14.8299591
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "guatemala-city",
+			"name": "Guatemala City",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Guatemala",
+			"names": {
+				"it": "Città del Guatemala",
+				"de": "Guatemala-Stadt"
+			},
+			"centroid": [
+				-90.5289114,
+				14.6230805
+			],
+			"bbox": [
+				-90.5289114,
+				14.6230805,
+				-90.5289114,
+				14.6230805
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tegucigalpa",
+			"name": "Tegucigalpa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Honduras",
+			"centroid": [
+				-87.2194752,
+				14.1039908
+			],
+			"bbox": [
+				-87.2194752,
+				14.1039908,
+				-87.2194752,
+				14.1039908
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "castries",
+			"name": "Castries",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Saint Lucia",
+			"centroid": [
+				-60.99287543435381,
+				14.007874585883364
+			],
+			"bbox": [
+				-60.99287543435381,
+				14.007874585883364,
+				-60.99287543435381,
+				14.007874585883364
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "santa-ana",
+			"name": "Santa Ana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "El Salvador",
+			"centroid": [
+				-89.5597636,
+				13.9946096
+			],
+			"bbox": [
+				-89.5597636,
+				13.9946096,
+				-89.5597636,
+				13.9946096
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "san-salvador",
+			"name": "San Salvador",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "El Salvador",
+			"centroid": [
+				-89.2155758045276,
+				13.703280259193864
+			],
+			"bbox": [
+				-89.2155758045276,
+				13.703280259193864,
+				-89.2155758045276,
+				13.703280259193864
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "san-miguel",
+			"name": "San Miguel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "El Salvador",
+			"centroid": [
+				-88.183336,
+				13.4833488
+			],
+			"bbox": [
+				-88.183336,
+				13.4833488,
+				-88.183336,
+				13.4833488
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kingstown",
+			"name": "Kingstown",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Saint Vincent and the Grenadines",
+			"centroid": [
+				-61.220236420747256,
+				13.155756013621149
+			],
+			"bbox": [
+				-61.220236420747256,
+				13.155756013621149,
+				-61.220236420747256,
+				13.155756013621149
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bridgetown",
+			"name": "Bridgetown",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Barbados",
+			"centroid": [
+				-59.6165267,
+				13.1020026
+			],
+			"bbox": [
+				-59.6165267,
+				13.1020026,
+				-59.6165267,
+				13.1020026
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "managua",
+			"name": "Managua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Nicaragua",
+			"centroid": [
+				-86.2704375,
+				12.1549624
+			],
+			"bbox": [
+				-86.2704375,
+				12.1549624,
+				-86.2704375,
+				12.1549624
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "saint-george-s",
+			"name": "Saint George's",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Grenada",
+			"centroid": [
+				-61.7416432,
+				12.0526334
+			],
+			"bbox": [
+				-61.7416432,
+				12.0526334,
+				-61.7416432,
+				12.0526334
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "port-of-spain",
+			"name": "Port-of-Spain",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Trinidad and Tobago",
+			"centroid": [
+				-61.5170309,
+				10.6519971
+			],
+			"bbox": [
+				-61.5170309,
+				10.6519971,
+				-61.5170309,
+				10.6519971
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "san-jose",
+			"name": "San José",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Costa Rica",
+			"centroid": [
+				-84.07881396964633,
+				9.930370727948475
+			],
+			"bbox": [
+				-84.07881396964633,
+				9.930370727948475,
+				-84.07881396964633,
+				9.930370727948475
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "colon",
+			"name": "Colón",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Panama",
+			"names": {
+				"en": "Bucaramanga"
+			},
+			"centroid": [
+				-79.8749801,
+				9.3650214
+			],
+			"bbox": [
+				-79.8749801,
+				9.3650214,
+				-79.8749801,
+				9.3650214
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "panama-city",
+			"name": "Panama City",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Panama",
+			"names": {
+				"it": "Panama",
+				"de": "Panama-Stadt"
+			},
+			"centroid": [
+				-79.534983,
+				8.969963
+			],
+			"bbox": [
+				-79.534983,
+				8.969963,
+				-79.534983,
+				8.969963
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"monterrey",
+		"nassau",
+		"havana",
+		"camaguey",
+		"merida",
+		"holguin",
+		"guadalajara",
+		"santiago-de-cuba",
+		"cap-haitien",
+		"santiago",
+		"ciudad-de-mexico",
+		"puebla",
+		"port-au-prince",
+		"santo-domingo",
+		"san-pedro-de-macoris",
+		"la-romana",
+		"les-cayes",
+		"kingston",
+		"basseterre",
+		"belmopan",
+		"saint-john-s",
+		"oaxaca",
+		"san-pedro-sula",
+		"roseau",
+		"quetzaltenango",
+		"guatemala-city",
+		"tegucigalpa",
+		"castries",
+		"santa-ana",
+		"san-salvador",
+		"san-miguel",
+		"kingstown",
+		"bridgetown",
+		"managua",
+		"saint-george-s",
+		"port-of-spain",
+		"san-jose",
+		"colon",
+		"panama-city"
+	]
+}

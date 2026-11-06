@@ -1,0 +1,838 @@
+{
+	"id": "africa-cities-north-west",
+	"name": "Africa — Cities — North & West",
+	"country": "Africa",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/africa-cities-north-west.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "tunis",
+			"name": "Tunis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tunisia",
+			"names": {
+				"it": "Tunisi"
+			},
+			"centroid": [
+				10.1796781,
+				36.8027781
+			],
+			"bbox": [
+				10.1796781,
+				36.8027781,
+				10.1796781,
+				36.8027781
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "algiers",
+			"name": "Algiers",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Algeria",
+			"names": {
+				"it": "Algeri",
+				"de": "Algier"
+			},
+			"centroid": [
+				3.0486067,
+				36.7650107
+			],
+			"bbox": [
+				3.0486067,
+				36.7650107,
+				3.0486067,
+				36.7650107
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "blida",
+			"name": "Blida",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Algeria",
+			"centroid": [
+				2.8299975,
+				36.4203467
+			],
+			"bbox": [
+				2.8299975,
+				36.4203467,
+				2.8299975,
+				36.4203467
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "constantine",
+			"name": "Constantine",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Algeria",
+			"names": {
+				"it": "Costantina"
+			},
+			"centroid": [
+				6.5999483,
+				36.3599886
+			],
+			"bbox": [
+				6.5999483,
+				36.3599886,
+				6.5999483,
+				36.3599886
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "oran",
+			"name": "Oran",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Algeria",
+			"names": {
+				"it": "Orano"
+			},
+			"centroid": [
+				-0.6219186,
+				35.7119483
+			],
+			"bbox": [
+				-0.6219186,
+				35.7119483,
+				-0.6219186,
+				35.7119483
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "sfax",
+			"name": "Sfax",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tunisia",
+			"centroid": [
+				10.7200069,
+				34.7500352
+			],
+			"bbox": [
+				10.7200069,
+				34.7500352,
+				10.7200069,
+				34.7500352
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "fez",
+			"name": "Fez",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Morocco",
+			"names": {
+				"it": "Fès",
+				"de": "Fès"
+			},
+			"centroid": [
+				-5.0023231,
+				34.0565455
+			],
+			"bbox": [
+				-5.0023231,
+				34.0565455,
+				-5.0023231,
+				34.0565455
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "rabat",
+			"name": "Rabat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Morocco",
+			"centroid": [
+				-6.8364082,
+				34.0253073
+			],
+			"bbox": [
+				-6.8364082,
+				34.0253073,
+				-6.8364082,
+				34.0253073
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "casablanca",
+			"name": "Casablanca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Morocco",
+			"centroid": [
+				-7.6183133,
+				33.6019221
+			],
+			"bbox": [
+				-7.6183133,
+				33.6019221,
+				-7.6183133,
+				33.6019221
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tripoli",
+			"name": "Tripoli",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Libya",
+			"names": {
+				"de": "Tripolis"
+			},
+			"centroid": [
+				13.1800118,
+				32.8925
+			],
+			"bbox": [
+				13.1800118,
+				32.8925,
+				13.1800118,
+				32.8925
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "banghazi",
+			"name": "Banghazi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Libya",
+			"names": {
+				"en": "Benghazi",
+				"it": "Bengasi",
+				"de": "Bengasi"
+			},
+			"centroid": [
+				20.0647773,
+				32.1186793
+			],
+			"bbox": [
+				20.0647773,
+				32.1186793,
+				20.0647773,
+				32.1186793
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "marrakesh",
+			"name": "Marrakesh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Morocco",
+			"names": {
+				"it": "Marrakech",
+				"de": "Marrakesch"
+			},
+			"centroid": [
+				-8.0019333,
+				31.631939
+			],
+			"bbox": [
+				-8.0019333,
+				31.631939,
+				-8.0019333,
+				31.631939
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bur-said",
+			"name": "Bur Said",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Egypt",
+			"names": {
+				"en": "Port Said",
+				"it": "Porto Said",
+				"de": "Port Said"
+			},
+			"centroid": [
+				32.2900081,
+				31.2599898
+			],
+			"bbox": [
+				32.2900081,
+				31.2599898,
+				32.2900081,
+				31.2599898
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "alexandria",
+			"name": "Alexandria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Egypt",
+			"names": {
+				"it": "Alessandria d'Egitto"
+			},
+			"centroid": [
+				29.94805,
+				31.2019652
+			],
+			"bbox": [
+				29.94805,
+				31.2019652,
+				29.94805,
+				31.2019652
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ismailia",
+			"name": "Ismaïlia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Egypt",
+			"names": {
+				"en": "Ismailia",
+				"it": "Ismailia",
+				"de": "Ismailia"
+			},
+			"centroid": [
+				32.2599841,
+				30.5903408
+			],
+			"bbox": [
+				32.2599841,
+				30.5903408,
+				32.2599841,
+				30.5903408
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "cairo",
+			"name": "Cairo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Egypt",
+			"names": {
+				"it": "Il Cairo",
+				"de": "Kairo"
+			},
+			"centroid": [
+				31.2480224,
+				30.0519062
+			],
+			"bbox": [
+				31.2480224,
+				30.0519062,
+				31.2480224,
+				30.0519062
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "nouakchott",
+			"name": "Nouakchott",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mauritania",
+			"centroid": [
+				-15.9753404,
+				18.086427
+			],
+			"bbox": [
+				-15.9753404,
+				18.086427,
+				-15.9753404,
+				18.086427
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "praia",
+			"name": "Praia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cape Verde",
+			"centroid": [
+				-23.5166889,
+				14.916698
+			],
+			"bbox": [
+				-23.5166889,
+				14.916698,
+				-23.5166889,
+				14.916698
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "dakar",
+			"name": "Dakar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Senegal",
+			"centroid": [
+				-17.475076,
+				14.7177776
+			],
+			"bbox": [
+				-17.475076,
+				14.7177776,
+				-17.475076,
+				14.7177776
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "niamey",
+			"name": "Niamey",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Niger",
+			"centroid": [
+				2.1147102,
+				13.5186518
+			],
+			"bbox": [
+				2.1147102,
+				13.5186518,
+				2.1147102,
+				13.5186518
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "banjul",
+			"name": "Banjul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "The Gambia",
+			"centroid": [
+				-16.5917015,
+				13.4538765
+			],
+			"bbox": [
+				-16.5917015,
+				13.4538765,
+				-16.5917015,
+				13.4538765
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bamako",
+			"name": "Bamako",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mali",
+			"centroid": [
+				-8.001985,
+				12.6519605
+			],
+			"bbox": [
+				-8.001985,
+				12.6519605,
+				-8.001985,
+				12.6519605
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ouagadougou",
+			"name": "Ouagadougou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Burkina Faso",
+			"centroid": [
+				-1.5266696,
+				12.3722618
+			],
+			"bbox": [
+				-1.5266696,
+				12.3722618,
+				-1.5266696,
+				12.3722618
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kano",
+			"name": "Kano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Nigeria",
+			"centroid": [
+				8.5180919,
+				12.0019227
+			],
+			"bbox": [
+				8.5180919,
+				12.0019227,
+				8.5180919,
+				12.0019227
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bissau",
+			"name": "Bissau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Guinea Bissau",
+			"centroid": [
+				-15.5983608,
+				11.8650238
+			],
+			"bbox": [
+				-15.5983608,
+				11.8650238,
+				-15.5983608,
+				11.8650238
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "conakry",
+			"name": "Conakry",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Guinea",
+			"centroid": [
+				-13.6821809,
+				9.5334687
+			],
+			"bbox": [
+				-13.6821809,
+				9.5334687,
+				-13.6821809,
+				9.5334687
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "abuja",
+			"name": "Abuja",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Nigeria",
+			"centroid": [
+				7.489505042885861,
+				9.054620406360845
+			],
+			"bbox": [
+				7.489505042885861,
+				9.054620406360845,
+				7.489505042885861,
+				9.054620406360845
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "freetown",
+			"name": "Freetown",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sierra Leone",
+			"centroid": [
+				-13.2361616,
+				8.4719573
+			],
+			"bbox": [
+				-13.2361616,
+				8.4719573,
+				-13.2361616,
+				8.4719573
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bouake",
+			"name": "Bouaké",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ivory Coast",
+			"centroid": [
+				-5.0300137,
+				7.6899815
+			],
+			"bbox": [
+				-5.0300137,
+				7.6899815,
+				-5.0300137,
+				7.6899815
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ibadan",
+			"name": "Ibadan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Nigeria",
+			"centroid": [
+				3.9280362,
+				7.3819721
+			],
+			"bbox": [
+				3.9280362,
+				7.3819721,
+				3.9280362,
+				7.3819721
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "yamoussoukro",
+			"name": "Yamoussoukro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ivory Coast",
+			"centroid": [
+				-5.2755026,
+				6.818381
+			],
+			"bbox": [
+				-5.2755026,
+				6.818381,
+				-5.2755026,
+				6.818381
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kumasi",
+			"name": "Kumasi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ghana",
+			"centroid": [
+				-1.6319603,
+				6.6919367
+			],
+			"bbox": [
+				-1.6319603,
+				6.6919367,
+				-1.6319603,
+				6.6919367
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "porto-novo",
+			"name": "Porto-Novo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Benin",
+			"centroid": [
+				2.6166255,
+				6.483311
+			],
+			"bbox": [
+				2.6166255,
+				6.483311,
+				2.6166255,
+				6.483311
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "lagos",
+			"name": "Lagos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Nigeria",
+			"centroid": [
+				3.3895852,
+				6.4452075
+			],
+			"bbox": [
+				3.3895852,
+				6.4452075,
+				3.3895852,
+				6.4452075
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cotonou",
+			"name": "Cotonou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Benin",
+			"centroid": [
+				2.404354790887952,
+				6.362980392242672
+			],
+			"bbox": [
+				2.404354790887952,
+				6.362980392242672,
+				2.404354790887952,
+				6.362980392242672
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "monrovia",
+			"name": "Monrovia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Liberia",
+			"centroid": [
+				-10.7996604,
+				6.3145816
+			],
+			"bbox": [
+				-10.7996604,
+				6.3145816,
+				-10.7996604,
+				6.3145816
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lome",
+			"name": "Lomé",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Togo",
+			"centroid": [
+				1.2208113,
+				6.1338829
+			],
+			"bbox": [
+				1.2208113,
+				6.1338829,
+				1.2208113,
+				6.1338829
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "accra",
+			"name": "Accra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ghana",
+			"centroid": [
+				-0.2186616,
+				5.5519805
+			],
+			"bbox": [
+				-0.2186616,
+				5.5519805,
+				-0.2186616,
+				5.5519805
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "abidjan",
+			"name": "Abidjan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ivory Coast",
+			"centroid": [
+				-4.020206835187587,
+				5.323126072244571
+			],
+			"bbox": [
+				-4.020206835187587,
+				5.323126072244571,
+				-4.020206835187587,
+				5.323126072244571
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"tunis",
+		"algiers",
+		"blida",
+		"constantine",
+		"oran",
+		"sfax",
+		"fez",
+		"rabat",
+		"casablanca",
+		"tripoli",
+		"banghazi",
+		"marrakesh",
+		"bur-said",
+		"alexandria",
+		"ismailia",
+		"cairo",
+		"nouakchott",
+		"praia",
+		"dakar",
+		"niamey",
+		"banjul",
+		"bamako",
+		"ouagadougou",
+		"kano",
+		"bissau",
+		"conakry",
+		"abuja",
+		"freetown",
+		"bouake",
+		"ibadan",
+		"yamoussoukro",
+		"kumasi",
+		"porto-novo",
+		"lagos",
+		"cotonou",
+		"monrovia",
+		"lome",
+		"accra",
+		"abidjan"
+	]
+}

@@ -1,0 +1,853 @@
+{
+	"id": "south-america-cities-brazil-southern-cone",
+	"name": "South America — Cities — Brazil & Southern Cone",
+	"country": "South America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/south-america-cities-brazil-southern-cone.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "belem",
+			"name": "Belém",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-48.4819689,
+				-1.4480574
+			],
+			"bbox": [
+				-48.4819689,
+				-1.4480574,
+				-48.4819689,
+				-1.4480574
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "fortaleza",
+			"name": "Fortaleza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-38.5819272,
+				-3.748072
+			],
+			"bbox": [
+				-38.5819272,
+				-3.748072,
+				-38.5819272,
+				-3.748072
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "recife",
+			"name": "Recife",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-34.908765500024515,
+				-8.06053182704913
+			],
+			"bbox": [
+				-34.908765500024515,
+				-8.06053182704913,
+				-34.908765500024515,
+				-8.06053182704913
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "salvador",
+			"name": "Salvador",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"names": {
+				"de": "Salvador da Bahía"
+			},
+			"centroid": [
+				-38.4819333,
+				-12.968026
+			],
+			"bbox": [
+				-38.4819333,
+				-12.968026,
+				-38.4819333,
+				-12.968026
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "brasilia",
+			"name": "Brasília",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"names": {
+				"it": "Brasilia"
+			},
+			"centroid": [
+				-47.9179981,
+				-15.7813944
+			],
+			"bbox": [
+				-47.9179981,
+				-15.7813944,
+				-47.9179981,
+				-15.7813944
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "goiania",
+			"name": "Goiânia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-49.3019705,
+				-16.7180814
+			],
+			"bbox": [
+				-49.3019705,
+				-16.7180814,
+				-49.3019705,
+				-16.7180814
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "arica",
+			"name": "Arica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-70.2899838,
+				-18.500022
+			],
+			"bbox": [
+				-70.2899838,
+				-18.500022,
+				-70.2899838,
+				-18.500022
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "belo-horizonte",
+			"name": "Belo Horizonte",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-43.9169504,
+				-19.9130802
+			],
+			"bbox": [
+				-43.9169504,
+				-19.9130802,
+				-43.9169504,
+				-19.9130802
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "iquique",
+			"name": "Iquique",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-70.1299677,
+				-20.2499927
+			],
+			"bbox": [
+				-70.1299677,
+				-20.2499927,
+				-70.1299677,
+				-20.2499927
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "rio-de-janeiro",
+			"name": "Rio de Janeiro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-43.212117466834385,
+				-22.907308056882364
+			],
+			"bbox": [
+				-43.212117466834385,
+				-22.907308056882364,
+				-43.212117466834385,
+				-22.907308056882364
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "campinas",
+			"name": "Campinas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-47.05588541861934,
+				-22.90789786605005
+			],
+			"bbox": [
+				-47.05588541861934,
+				-22.90789786605005,
+				-47.05588541861934,
+				-22.90789786605005
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sao-paulo",
+			"name": "São Paulo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"names": {
+				"it": "San Paolo"
+			},
+			"centroid": [
+				-46.6269658,
+				-23.5567337
+			],
+			"bbox": [
+				-46.6269658,
+				-23.5567337,
+				-46.6269658,
+				-23.5567337
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "antofagasta",
+			"name": "Antofagasta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-70.4000029,
+				-23.6499918
+			],
+			"bbox": [
+				-70.4000029,
+				-23.6499918,
+				-70.4000029,
+				-23.6499918
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "salta",
+			"name": "Salta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-65.4166378,
+				-24.7833594
+			],
+			"bbox": [
+				-65.4166378,
+				-24.7833594,
+				-65.4166378,
+				-24.7833594
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "asuncion",
+			"name": "Asunción",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Paraguay",
+			"centroid": [
+				-57.62583375528301,
+				-25.29067083610963
+			],
+			"bbox": [
+				-57.62583375528301,
+				-25.29067083610963,
+				-57.62583375528301,
+				-25.29067083610963
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "curitiba",
+			"name": "Curitiba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-49.3219435,
+				-25.4180671
+			],
+			"bbox": [
+				-49.3219435,
+				-25.4180671,
+				-49.3219435,
+				-25.4180671
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tucuman",
+			"name": "Tucumán",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"names": {
+				"en": "San Miguel de Tucumán",
+				"it": "San Miguel de Tucumán",
+				"de": "San Miguel de Tucumán"
+			},
+			"centroid": [
+				-65.21857,
+				-26.8140543
+			],
+			"bbox": [
+				-65.21857,
+				-26.8140543,
+				-65.21857,
+				-26.8140543
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "encarnacion",
+			"name": "Encarnación",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Paraguay",
+			"centroid": [
+				-55.8739188,
+				-27.3471848
+			],
+			"bbox": [
+				-55.8739188,
+				-27.3471848,
+				-55.8739188,
+				-27.3471848
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "resistencia",
+			"name": "Resistencia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-58.9900275,
+				-27.4599918
+			],
+			"bbox": [
+				-58.9900275,
+				-27.4599918,
+				-58.9900275,
+				-27.4599918
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "coquimbo",
+			"name": "Coquimbo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"names": {
+				"en": "Atlético Morelia"
+			},
+			"centroid": [
+				-71.3436145,
+				-29.9529146
+			],
+			"bbox": [
+				-71.3436145,
+				-29.9529146,
+				-71.3436145,
+				-29.9529146
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "porto-alegre",
+			"name": "Porto Alegre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-51.2019579,
+				-30.0480688
+			],
+			"bbox": [
+				-51.2019579,
+				-30.0480688,
+				-51.2019579,
+				-30.0480688
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "rivera",
+			"name": "Rivera",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Uruguay",
+			"centroid": [
+				-55.5600043,
+				-30.8995752
+			],
+			"bbox": [
+				-55.5600043,
+				-30.8995752,
+				-55.5600043,
+				-30.8995752
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cordoba",
+			"name": "Córdoba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-64.1842404,
+				-31.3980122
+			],
+			"bbox": [
+				-64.1842404,
+				-31.3980122,
+				-64.1842404,
+				-31.3980122
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "san-juan",
+			"name": "San Juan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-68.5199884,
+				-31.5500264
+			],
+			"bbox": [
+				-68.5199884,
+				-31.5500264,
+				-68.5199884,
+				-31.5500264
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "santa-fe",
+			"name": "Santa Fe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-60.6900013,
+				-31.6238721
+			],
+			"bbox": [
+				-60.6900013,
+				-31.6238721,
+				-60.6900013,
+				-31.6238721
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "mendoza",
+			"name": "Mendoza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-68.818557,
+				-32.8813842
+			],
+			"bbox": [
+				-68.818557,
+				-32.8813842,
+				-68.818557,
+				-32.8813842
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "rosario",
+			"name": "Rosario",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-60.6682535,
+				-32.9491837
+			],
+			"bbox": [
+				-60.6682535,
+				-32.9491837,
+				-60.6682535,
+				-32.9491837
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "valparaiso",
+			"name": "Valparaíso",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-71.61702619154609,
+				-33.04773936269631
+			],
+			"bbox": [
+				-71.61702619154609,
+				-33.04773936269631,
+				-71.61702619154609,
+				-33.04773936269631
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "san-luis",
+			"name": "San Luis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-66.3500175,
+				-33.2999971
+			],
+			"bbox": [
+				-66.3500175,
+				-33.2999971,
+				-66.3500175,
+				-33.2999971
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "santiago",
+			"name": "Santiago",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"names": {
+				"it": "Santiago del Cile",
+				"de": "Santiago de Chile"
+			},
+			"centroid": [
+				-70.65050407285783,
+				-33.44020506918074
+			],
+			"bbox": [
+				-70.65050407285783,
+				-33.44020506918074,
+				-70.65050407285783,
+				-33.44020506918074
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "rancagua",
+			"name": "Rancagua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-70.7399821,
+				-34.1700215
+			],
+			"bbox": [
+				-70.7399821,
+				-34.1700215,
+				-70.7399821,
+				-34.1700215
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "buenos-aires",
+			"name": "Buenos Aires",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-58.43251268766426,
+				-34.61071459139255
+			],
+			"bbox": [
+				-58.43251268766426,
+				-34.61071459139255,
+				-58.43251268766426,
+				-34.61071459139255
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "montevideo",
+			"name": "Montevideo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Uruguay",
+			"centroid": [
+				-56.18682337831074,
+				-34.90537638970807
+			],
+			"bbox": [
+				-56.18682337831074,
+				-34.90537638970807,
+				-56.18682337831074,
+				-34.90537638970807
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "la-plata",
+			"name": "La Plata",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-57.95443598989702,
+				-34.9233210985585
+			],
+			"bbox": [
+				-57.95443598989702,
+				-34.9233210985585,
+				-57.95443598989702,
+				-34.9233210985585
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "punta-del-este",
+			"name": "Punta del Este",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Uruguay",
+			"centroid": [
+				-54.9499899,
+				-34.9699727
+			],
+			"bbox": [
+				-54.9499899,
+				-34.9699727,
+				-54.9499899,
+				-34.9699727
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "talca",
+			"name": "Talca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-71.6656369430057,
+				-35.43021009325654
+			],
+			"bbox": [
+				-71.6656369430057,
+				-35.43021009325654,
+				-71.6656369430057,
+				-35.43021009325654
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "concepcion",
+			"name": "Concepción",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-73.050022,
+				-36.8300142
+			],
+			"bbox": [
+				-73.050022,
+				-36.8300142,
+				-73.050022,
+				-36.8300142
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "mar-del-plata",
+			"name": "Mar del Plata",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-57.5799844,
+				-38.0000203
+			],
+			"bbox": [
+				-57.5799844,
+				-38.0000203,
+				-57.5799844,
+				-38.0000203
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "temuco",
+			"name": "Temuco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-72.579999,
+				-38.7300016
+			],
+			"bbox": [
+				-72.579999,
+				-38.7300016,
+				-72.579999,
+				-38.7300016
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "valdivia",
+			"name": "Valdivia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-73.23311053054022,
+				-39.82165065113458
+			],
+			"bbox": [
+				-73.23311053054022,
+				-39.82165065113458,
+				-73.23311053054022,
+				-39.82165065113458
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "puerto-montt",
+			"name": "Puerto Montt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-72.9299777,
+				-41.4699894
+			],
+			"bbox": [
+				-72.9299777,
+				-41.4699894,
+				-72.9299777,
+				-41.4699894
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"belem",
+		"fortaleza",
+		"recife",
+		"salvador",
+		"brasilia",
+		"goiania",
+		"arica",
+		"belo-horizonte",
+		"iquique",
+		"rio-de-janeiro",
+		"campinas",
+		"sao-paulo",
+		"antofagasta",
+		"salta",
+		"asuncion",
+		"curitiba",
+		"tucuman",
+		"encarnacion",
+		"resistencia",
+		"coquimbo",
+		"porto-alegre",
+		"rivera",
+		"cordoba",
+		"san-juan",
+		"santa-fe",
+		"mendoza",
+		"rosario",
+		"valparaiso",
+		"san-luis",
+		"santiago",
+		"rancagua",
+		"buenos-aires",
+		"montevideo",
+		"la-plata",
+		"punta-del-este",
+		"talca",
+		"concepcion",
+		"mar-del-plata",
+		"temuco",
+		"valdivia",
+		"puerto-montt"
+	]
+}

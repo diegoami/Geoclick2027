@@ -159,6 +159,10 @@ replace maps, alter camera state or access private MapLibre locale fields.
   home page shows the picker or the list by `homeView()` (FT-78). The list
   is the same `MapSections`. The prerendered HTML is the list, and a
   running tutorial forces it.
+  The selected remembered detail has a red X next to the combobox. Removing it
+  clears only its seen flag and saved row choice, never progress. Continental
+  city subsets carry the same `advanced` flag as country details; basic
+  Countries/Capitals remain visible by default.
 
 - **A derived fact per target** (v0.8.0, FT-34). `data/scripts/build-facts.ts`
   writes `data/maps/<id>/facts.json` beside each `map.json` — structured
@@ -389,6 +393,12 @@ Installed/live Windows verification and Android integration remain separate.
 /desktop                       Tauri wrapper
 /mobile                        Capacitor wrapper
 ```
+
+### Regional city curation and dateline windows
+
+`data/curation/continent-city-maps.json` records #325's explicit memberships, thresholds, caps, retained names, bounds and exclusions. `build-continent-city-maps.ts` builds the ten source snapshots/maps/facts and supports selection previews plus explicit source refresh; the supplements file records source-row exclusions, capital flags and Yaren provenance. Authored sentences remain in `data/facts/<country>.json` and are projected with the existing resolver.
+
+`packages/quiz-engine/src/longitude.ts` is the shared pure longitude/window contract. Only point maps explicitly marked `wrapLongitude` opt into circular camera fitting; GIS queries split at the dateline, fact/label bounds use the same frame, and quiz screen-space matching uses the nearest visible world copy.
 
 ### How built map data reaches all three shells
 
@@ -630,7 +640,7 @@ Other candidates considered, not pursued further once Netlify worked:
   off, not instead of it.
 
 **Status**: deployed and verified — all three demo maps (as of Iteration 3.5;
-221 maps across 81 countries are in the working tree (Natural Earth labels Czech Republic and Czechia are joined), click-to-highlight,
+231 maps across 81 countries are in the working tree (Natural Earth labels Czech Republic and Czechia are joined), click-to-highlight,
 The v1.0 country pipeline is configured in `data/scripts/v1CountrySpecs.ts`.
 Its two source importers pin licensed boundary snapshots; current-source
 recipes and Angola's legal grouping reconstruction live beside the builders.

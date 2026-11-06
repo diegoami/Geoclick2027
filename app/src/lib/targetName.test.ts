@@ -17,6 +17,16 @@ const CONTINENTS = ['europe', 'africa', 'asia', 'north-america', 'south-america'
 const EUROPE_PARTS = ['west', 'central', 'east', 'north', 'south'];
 // The maps of several countries: the only ones whose places change name.
 const NAMED_MAPS = new Set([
+	'africa-cities-north-west',
+	'africa-cities-central-east-south',
+	'asia-cities-west-central',
+	'asia-cities-south-east-southeast',
+	'north-america-cities-canada-usa',
+	'north-america-cities-mexico-central-caribbean',
+	'south-america-cities-andes-north',
+	'south-america-cities-brazil-southern-cone',
+	'oceania-cities-australia-new-zealand',
+	'oceania-cities-pacific-islands',
 	...CONTINENTS.flatMap((c) => [`${c}-countries`, `${c}-capitals`]),
 	...EUROPE_PARTS.map((p) => `europe-cities-${p}`),
 	// Their label drops the "powiat " their name keeps for the tiles (#182).

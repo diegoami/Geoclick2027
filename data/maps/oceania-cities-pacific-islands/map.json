@@ -1,0 +1,357 @@
+{
+	"id": "oceania-cities-pacific-islands",
+	"name": "Oceania — Cities — Pacific islands",
+	"country": "Oceania",
+	"wrapLongitude": true,
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com; Yaren coordinates: Wikidata (CC0), https://www.wikidata.org/wiki/Q31026; Yaren district population: Nauru 2021 census, https://stats.gov.nr/",
+	"placesSource": "data/places/oceania-cities-pacific-islands.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "koror",
+			"name": "Koror",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Palau",
+			"centroid": [
+				134.4695009,
+				7.3452264
+			],
+			"bbox": [
+				134.4695009,
+				7.3452264,
+				134.4695009,
+				7.3452264
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "majuro",
+			"name": "Majuro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Marshall Islands",
+			"centroid": [
+				171.3800002,
+				7.1030043
+			],
+			"bbox": [
+				171.3800002,
+				7.1030043,
+				171.3800002,
+				7.1030043
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "palikir",
+			"name": "Palikir",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Federated States of Micronesia",
+			"centroid": [
+				158.1499743,
+				6.9166437
+			],
+			"bbox": [
+				158.1499743,
+				6.9166437,
+				158.1499743,
+				6.9166437
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tarawa",
+			"name": "Tarawa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kiribati",
+			"centroid": [
+				173.0175708,
+				1.3381875
+			],
+			"bbox": [
+				173.0175708,
+				1.3381875,
+				173.0175708,
+				1.3381875
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "yaren",
+			"name": "Yaren",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Nauru",
+			"centroid": [
+				166.920867,
+				-0.5477
+			],
+			"bbox": [
+				166.920867,
+				-0.5477,
+				166.920867,
+				-0.5477
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "lae",
+			"name": "Lae",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Papua New Guinea",
+			"centroid": [
+				146.9900354,
+				-6.7329883
+			],
+			"bbox": [
+				146.9900354,
+				-6.7329883,
+				146.9900354,
+				-6.7329883
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "gizo",
+			"name": "Gizo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Solomon Islands",
+			"centroid": [
+				156.8350158,
+				-8.0996232
+			],
+			"bbox": [
+				156.8350158,
+				-8.0996232,
+				156.8350158,
+				-8.0996232
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "funafuti",
+			"name": "Funafuti",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tuvalu",
+			"centroid": [
+				179.2166471,
+				-8.516652
+			],
+			"bbox": [
+				179.2166471,
+				-8.516652,
+				179.2166471,
+				-8.516652
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "honiara",
+			"name": "Honiara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Solomon Islands",
+			"centroid": [
+				159.9497657,
+				-9.4379943
+			],
+			"bbox": [
+				159.9497657,
+				-9.4379943,
+				159.9497657,
+				-9.4379943
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "port-moresby",
+			"name": "Port Moresby",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Papua New Guinea",
+			"centroid": [
+				147.1925036,
+				-9.4647078
+			],
+			"bbox": [
+				147.1925036,
+				-9.4647078,
+				147.1925036,
+				-9.4647078
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "apia",
+			"name": "Apia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Samoa",
+			"centroid": [
+				-171.76859897688345,
+				-13.835714958212938
+			],
+			"bbox": [
+				-171.76859897688345,
+				-13.835714958212938,
+				-171.76859897688345,
+				-13.835714958212938
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "luganville",
+			"name": "Luganville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Vanuatu",
+			"centroid": [
+				167.1766068,
+				-15.5125557
+			],
+			"bbox": [
+				167.1766068,
+				-15.5125557,
+				167.1766068,
+				-15.5125557
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lautoka",
+			"name": "Lautoka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Fiji",
+			"centroid": [
+				177.4666247,
+				-17.6160966
+			],
+			"bbox": [
+				177.4666247,
+				-17.6160966,
+				177.4666247,
+				-17.6160966
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "port-vila",
+			"name": "Port Vila",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Vanuatu",
+			"centroid": [
+				168.3166406,
+				-17.7333504
+			],
+			"bbox": [
+				168.3166406,
+				-17.7333504,
+				168.3166406,
+				-17.7333504
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "suva",
+			"name": "Suva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Fiji",
+			"centroid": [
+				178.4417073,
+				-18.1330159
+			],
+			"bbox": [
+				178.4417073,
+				-18.1330159,
+				178.4417073,
+				-18.1330159
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "neiafu",
+			"name": "Neiafu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tonga",
+			"centroid": [
+				-173.9832927,
+				-18.6495735
+			],
+			"bbox": [
+				-173.9832927,
+				-18.6495735,
+				-173.9832927,
+				-18.6495735
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "nuku-alofa",
+			"name": "Nuku'alofa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tonga",
+			"names": {
+				"it": "Nukuʻalofa",
+				"de": "Nukuʻalofa"
+			},
+			"centroid": [
+				-175.2205645,
+				-21.1385124
+			],
+			"bbox": [
+				-175.2205645,
+				-21.1385124,
+				-175.2205645,
+				-21.1385124
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"koror",
+		"majuro",
+		"palikir",
+		"tarawa",
+		"yaren",
+		"lae",
+		"gizo",
+		"funafuti",
+		"honiara",
+		"port-moresby",
+		"apia",
+		"luganville",
+		"lautoka",
+		"port-vila",
+		"suva",
+		"neiafu",
+		"nuku-alofa"
+	]
+}

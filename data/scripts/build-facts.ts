@@ -1,3 +1,8 @@
+import {
+	splitLongitudeBox,
+	wrappedPointBounds,
+	longitudeNear
+} from '../../packages/quiz-engine/src/longitude.js';
 import { correctPlaces } from './placeCorrections.js';
 import { canonicalRegionAtPoint } from './boundaryRegions.js';
 import { applyBoundaryRenames } from './boundaryRenames.js';
@@ -107,6 +112,29 @@ function readGeojson(file: string): Feature[] {
 }
 
 function exportGeojson(source: string, args: string[], out: string): Feature[] {
+	const at = args.indexOf('-spat');
+	if (at >= 0) {
+		const original = args.slice(at + 1, at + 5).map(Number) as Bbox,
+			boxes = splitLongitudeBox(original);
+		if (boxes.length > 1 || boxes[0].some((n, i) => n !== original[i])) {
+			const seen = new Set<string>();
+			return boxes
+				.flatMap((box) =>
+					exportGeojson(
+						source,
+						[...args.slice(0, at + 1), ...box.map(String), ...args.slice(at + 5)],
+						out
+					)
+				)
+				.filter((feature) => {
+					const key = JSON.stringify(feature);
+					if (seen.has(key)) return false;
+					seen.add(key);
+					return true;
+				});
+		}
+	}
+
 	execFileSync('ogr2ogr', ['-f', 'GeoJSON', ...args, out, source]);
 	const features = readGeojson(out);
 	rmSync(out);
@@ -337,7 +365,12 @@ function factsForRegionMap(
 			}
 		}
 
-		fact.position = compassPosition(target.centroid, extent);
+		fact.position = compassPosition(
+			extent[0] < -180 || extent[2] > 180
+				? [longitudeNear(target.centroid[0], (extent[0] + extent[2]) / 2), target.centroid[1]]
+				: target.centroid,
+			extent
+		);
 		facts[target.id] = fact;
 	}
 	return facts;
@@ -400,7 +433,12 @@ function factsForCityMap(
 		fact.coastal = nearCoast(target.centroid, coast);
 		const terrain = terrainAt(target.centroid, sources);
 		if (terrain.length > 0) fact.terrain = terrain.slice(0, 2);
-		fact.position = compassPosition(target.centroid, extent);
+		fact.position = compassPosition(
+			extent[0] < -180 || extent[2] > 180
+				? [longitudeNear(target.centroid[0], (extent[0] + extent[2]) / 2), target.centroid[1]]
+				: target.centroid,
+			extent
+		);
 		facts[target.id] = fact;
 	}
 	return facts;
@@ -410,6 +448,7 @@ async function buildOne(mapId: string): Promise<number> {
 	const absOutDir = path.join(MAPS_DIR, mapId);
 	const map = JSON.parse(readFileSync(path.join(absOutDir, 'map.json'), 'utf8')) as {
 		country?: string;
+		wrapLongitude?: boolean;
 		placesSource?: string;
 		regionsMap?: string;
 		largestCityFacts?: boolean;
@@ -419,7 +458,9 @@ async function buildOne(mapId: string): Promise<number> {
 		targets: (MapTarget & { country?: string })[];
 	};
 	const usable = map.targets.filter((t) => !t.crossesAntimeridian && !crossesAntimeridian(t.bbox));
-	const extent = overallBboxOf(usable.length > 0 ? usable : map.targets);
+	const extent = map.wrapLongitude
+		? wrappedPointBounds(map.targets.map((target) => target.centroid))
+		: overallBboxOf(usable.length > 0 ? usable : map.targets);
 	// A towns map built from a Wikidata snapshot (#39) is matched against
 	// that snapshot: its towns are not in Natural Earth's places at all.
 	const sources = sourcesFor(

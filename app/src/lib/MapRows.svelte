@@ -10,7 +10,12 @@
 	import { groupProgress, type Mastery } from './homeProgress';
 	import KnownProgress from './KnownProgress.svelte';
 	import { pickerIdOf } from './mapCatalog';
-	import { isSeenDetailed, mapTypeSelectionOf, rememberMapTypeSelection } from './mapPrefs.svelte';
+	import {
+		forgetDetailed,
+		isSeenDetailed,
+		mapTypeSelectionOf,
+		rememberMapTypeSelection
+	} from './mapPrefs.svelte';
 	import { isTutorialSandboxActive } from './tutorialSandbox.svelte';
 	import { t } from './i18n.svelte';
 
@@ -66,6 +71,18 @@
 		openMap(mapId);
 	}
 
+	function hideDetailed(group: Row, mapId: string) {
+		forgetDetailed(mapId);
+		const key = pickerIdOf(group),
+			next = { ...selections };
+		const basic = group.maps.find((map) => !map.advanced);
+		if (basic) {
+			next[key] = basic.id;
+			rememberMapTypeSelection(key, basic.id);
+		} else delete next[key];
+		selections = next;
+	}
+
 	function openMap(mapId: string) {
 		if (mapId) goto(resolve('/map/[mapId]', { mapId }));
 	}
@@ -110,6 +127,7 @@
 <ul class="rows">
 	{#each groups as group (group.country)}
 		{@const selectId = `maps-${group.maps[0].id}`}
+		{@const selected = group.maps.find((map) => map.id === selectedMap(group))}
 		{@const progress = groupProgress(
 			group.maps.map((m) => m.id),
 			masteries,
@@ -136,34 +154,49 @@
 					/>
 				</span>
 			{/if}
-			<select
-				id={selectId}
-				value={selectedMap(group)}
-				aria-label={t('home.mapTypeFor', { name: nameOf(group) })}
-				onpointerdown={(e) => openSingleMapOnPointer(group, e)}
-				onkeydown={(e) => openSingleMapOnKey(group, e)}
-				onchange={(e) => {
-					chooseMapType(group, e.currentTarget.value);
-				}}
-			>
-				<!-- Standard maps first, and the detailed ones the player has opened; the
+			<div class="map-choice">
+				<select
+					id={selectId}
+					value={selectedMap(group)}
+					aria-label={t('home.mapTypeFor', { name: nameOf(group) })}
+					onpointerdown={(e) => openSingleMapOnPointer(group, e)}
+					onkeydown={(e) => openSingleMapOnKey(group, e)}
+					onchange={(e) => {
+						chooseMapType(group, e.currentTarget.value);
+					}}
+				>
+					<!-- Standard maps first, and the detailed ones the player has opened; the
 				     rest of the detailed maps after a line (v0.17). -->
-				{#each group.maps.filter((m) => !isDetailed(m)) as map (map.id)}
-					<option value={map.id}>{map.label}</option>
-				{/each}
-				{#if group.maps.some(isDetailed) && group.maps.some((m) => !isDetailed(m))}
-					<option disabled value="">──────</option>
+					{#each group.maps.filter((m) => !isDetailed(m)) as map (map.id)}
+						<option value={map.id}>{map.label}</option>
+					{/each}
+					{#if group.maps.some(isDetailed) && group.maps.some((m) => !isDetailed(m))}
+						<option disabled value="">──────</option>
+					{/if}
+					{#each group.maps.filter(isDetailed) as map (map.id)}
+						<option value={map.id}>{map.label}</option>
+					{/each}
+				</select>
+				{#if selected?.advanced && isSeenDetailed(selected.id) && !isTutorialSandboxActive()}
+					<button
+						type="button"
+						class="detail-x"
+						data-forget-id={selected.id}
+						aria-label={t('nav.hideDetailedMap', { name: selected.label })}
+						title={t('nav.hideDetailedMap', { name: selected.label })}
+						onclick={() => hideDetailed(group, selected.id)}>×</button
+					>
 				{/if}
-				{#each group.maps.filter(isDetailed) as map (map.id)}
-					<option value={map.id}>{map.label}</option>
-				{/each}
-			</select>
+			</div>
 		</li>
 	{/each}
 </ul>
 
 <style>
 	.rows {
+		container-type: inline-size;
+		width: 100%;
+		box-sizing: border-box;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -205,7 +238,43 @@
 		grid-column: 1 / -1;
 		grid-row: 2;
 	}
+	.map-choice {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		min-width: 0;
+		max-width: 100%;
+	}
+	.detail-x {
+		flex: none;
+		min-width: 44px;
+		min-height: 44px;
+		border: 1px solid currentColor;
+		border-radius: 0.4rem;
+		background: var(--gc-surface, #fff);
+		color: #b00020;
+		font: inherit;
+		font-size: 1.2rem;
+		line-height: 1;
+		cursor: pointer;
+	}
+	@container (max-width:24rem) {
+		.row {
+			grid-template-columns: minmax(0, 1fr);
+		}
+		.map-choice {
+			grid-column: 1;
+			grid-row: 3;
+		}
+		.map-choice select {
+			flex: 1;
+			min-width: 0;
+			width: 100%;
+			max-width: none;
+		}
+	}
 	select {
+		min-width: 0;
 		font: inherit;
 		font-size: 0.9rem;
 		max-width: 12rem;

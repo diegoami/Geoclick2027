@@ -77,7 +77,7 @@ Android seguiranno separatamente.
 
 ## 1. Che cos’è Geoclick
 
-Impari dove si trovano paesi, capitali, regioni e città, trascinando i loro nomi sulla mappa. Il catalogo comprende **221 mappe in 81 paesi e nei sei continenti**. Ogni mappa offre Conoscenza, Panoramica, Quiz e Tour. L’applicazione ricorda i risultati sul dispositivo, senza account: ogni risposta giusta al primo tentativo fa salire un nome di un gradino, ogni errore lo fa scendere di uno. Pulsanti e curiosità sono disponibili in inglese, tedesco e italiano.
+Impari dove si trovano paesi, capitali, regioni e città, trascinando i loro nomi sulla mappa. Il catalogo comprende **231 mappe in 81 paesi e nei sei continenti**. Ogni mappa offre Conoscenza, Panoramica, Quiz e Tour. L’applicazione ricorda i risultati sul dispositivo, senza account: ogni risposta giusta al primo tentativo fa salire un nome di un gradino, ogni errore lo fa scendere di uno. Pulsanti e curiosità sono disponibili in inglese, tedesco e italiano.
 
 Puoi usare il browser oppure le applicazioni per Windows e Android. Il tutorial iniziale presenta i comandi; puoi ripeterlo in seguito senza modificare i tuoi progressi reali.
 
@@ -121,6 +121,8 @@ Una riga sopra la mappa o l’elenco suggerisce che cosa giocare: per esempio «
 | **Tutorial** | Avvia, riprende o ricomincia la spiegazione guidata |
 
 La riga sotto la barra cambia fra le mappe dello stesso paese o continente. La stella riguarda la mappa aperta. **Mostra le mappe dettagliate** aggiunge le suddivisioni più fitte. Una mappa dettagliata già aperta resta nella riga con una **X rossa** quando la casella non è selezionata: la X la nasconde dalla riga e non cancella i progressi.
+
+Nella schermata iniziale, la **X** rossa accanto alla mappa dettagliata selezionata e già aperta la rimette dopo il separatore del menu. La riga torna alla prima mappa di base; i progressi restano intatti. I continenti seguono le stesse regole: **Paesi** e **Capitali** sono di base, le mappe regionali delle città sono dettagliate.
 
 ![Tipi di mappa e accesso alle mappe dettagliate](manual/type-bar-x.jpg)
 

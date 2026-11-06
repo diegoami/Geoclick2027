@@ -1,0 +1,1128 @@
+{
+	"id": "africa-cities-central-east-south",
+	"name": "Africa — Cities — Central, East & South",
+	"country": "Africa",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/africa-cities-central-east-south.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "port-sudan",
+			"name": "Port Sudan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sudan",
+			"names": {
+				"it": "Porto Sudan",
+				"de": "Bur Sudan"
+			},
+			"centroid": [
+				37.2164257,
+				19.615791
+			],
+			"bbox": [
+				37.2164257,
+				19.615791,
+				37.2164257,
+				19.615791
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "khartoum",
+			"name": "Khartoum",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sudan",
+			"names": {
+				"it": "Khartum",
+				"de": "Khartum"
+			},
+			"centroid": [
+				32.5322334,
+				15.5900241
+			],
+			"bbox": [
+				32.5322334,
+				15.5900241,
+				32.5322334,
+				15.5900241
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "asmara",
+			"name": "Asmara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Eritrea",
+			"centroid": [
+				38.9333235,
+				15.3333393
+			],
+			"bbox": [
+				38.9333235,
+				15.3333393,
+				38.9333235,
+				15.3333393
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "n-djamena",
+			"name": "N'Djamena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chad",
+			"centroid": [
+				15.0472025,
+				12.1150424
+			],
+			"bbox": [
+				15.0472025,
+				12.1150424,
+				15.0472025,
+				12.1150424
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "djibouti",
+			"name": "Djibouti",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Djibouti",
+			"names": {
+				"it": "Gibuti",
+				"de": "Dschibuti"
+			},
+			"centroid": [
+				43.1480017,
+				11.5950145
+			],
+			"bbox": [
+				43.1480017,
+				11.5950145,
+				43.1480017,
+				11.5950145
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dire-dawa",
+			"name": "Dire Dawa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ethiopia",
+			"names": {
+				"it": "Dire Daua"
+			},
+			"centroid": [
+				41.8600183,
+				9.5899947
+			],
+			"bbox": [
+				41.8600183,
+				9.5899947,
+				41.8600183,
+				9.5899947
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "addis-ababa",
+			"name": "Addis Ababa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ethiopia",
+			"names": {
+				"it": "Addis Abeba",
+				"de": "Addis Abeba"
+			},
+			"centroid": [
+				38.6980586,
+				9.0352562
+			],
+			"bbox": [
+				38.6980586,
+				9.0352562,
+				38.6980586,
+				9.0352562
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "adama",
+			"name": "Adama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ethiopia",
+			"centroid": [
+				39.2699955,
+				8.5499807
+			],
+			"bbox": [
+				39.2699955,
+				8.5499807,
+				39.2699955,
+				8.5499807
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "juba",
+			"name": "Juba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Sudan",
+			"names": {
+				"it": "Giuba"
+			},
+			"centroid": [
+				31.5800256,
+				4.8299752
+			],
+			"bbox": [
+				31.5800256,
+				4.8299752,
+				31.5800256,
+				4.8299752
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bangui",
+			"name": "Bangui",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Central African Republic",
+			"centroid": [
+				18.5582881,
+				4.3666443
+			],
+			"bbox": [
+				18.5582881,
+				4.3666443,
+				18.5582881,
+				4.3666443
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "douala",
+			"name": "Douala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cameroon",
+			"names": {
+				"de": "Duala"
+			},
+			"centroid": [
+				9.7080451,
+				4.0623556
+			],
+			"bbox": [
+				9.7080451,
+				4.0623556,
+				9.7080451,
+				4.0623556
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "yaounde",
+			"name": "Yaoundé",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cameroon",
+			"centroid": [
+				11.5147049,
+				3.8686465
+			],
+			"bbox": [
+				11.5147049,
+				3.8686465,
+				11.5147049,
+				3.8686465
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "malabo",
+			"name": "Malabo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Equatorial Guinea",
+			"centroid": [
+				8.7832775,
+				3.7500153
+			],
+			"bbox": [
+				8.7832775,
+				3.7500153,
+				8.7832775,
+				3.7500153
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mogadishu",
+			"name": "Mogadishu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Somalia",
+			"names": {
+				"it": "Mogadiscio",
+				"de": "Mogadischu"
+			},
+			"centroid": [
+				45.3647318,
+				2.0686272
+			],
+			"bbox": [
+				45.3647318,
+				2.0686272,
+				45.3647318,
+				2.0686272
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mbale",
+			"name": "Mbale",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Uganda",
+			"centroid": [
+				34.1699967,
+				1.0904102
+			],
+			"bbox": [
+				34.1699967,
+				1.0904102,
+				34.1699967,
+				1.0904102
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "libreville",
+			"name": "Libreville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Gabon",
+			"centroid": [
+				9.457965,
+				0.3853886
+			],
+			"bbox": [
+				9.457965,
+				0.3853886,
+				9.457965,
+				0.3853886
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sao-tome",
+			"name": "São Tomé",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sao Tome and Principe",
+			"centroid": [
+				6.729649806269851,
+				0.337466406982624
+			],
+			"bbox": [
+				6.729649806269851,
+				0.337466406982624,
+				6.729649806269851,
+				0.337466406982624
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kampala",
+			"name": "Kampala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Uganda",
+			"centroid": [
+				32.5813777,
+				0.3186048
+			],
+			"bbox": [
+				32.5813777,
+				0.3186048,
+				32.5813777,
+				0.3186048
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nairobi",
+			"name": "Nairobi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kenya",
+			"centroid": [
+				36.814711,
+				-1.2814009
+			],
+			"bbox": [
+				36.814711,
+				-1.2814009,
+				36.814711,
+				-1.2814009
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kigali",
+			"name": "Kigali",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Rwanda",
+			"centroid": [
+				30.0585859,
+				-1.9516442
+			],
+			"bbox": [
+				30.0585859,
+				-1.9516442,
+				30.0585859,
+				-1.9516442
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "moshi",
+			"name": "Moshi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tanzania",
+			"centroid": [
+				37.3399841,
+				-3.3396037
+			],
+			"bbox": [
+				37.3399841,
+				-3.3396037,
+				37.3399841,
+				-3.3396037
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bujumbura",
+			"name": "Bujumbura",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Burundi",
+			"centroid": [
+				29.3600061,
+				-3.3760872
+			],
+			"bbox": [
+				29.3600061,
+				-3.3760872,
+				29.3600061,
+				-3.3760872
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "gitega",
+			"name": "Gitega",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Burundi",
+			"centroid": [
+				29.8435941,
+				-3.4260067
+			],
+			"bbox": [
+				29.8435941,
+				-3.4260067,
+				29.8435941,
+				-3.4260067
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "mombasa",
+			"name": "Mombasa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kenya",
+			"centroid": [
+				39.6879723,
+				-4.0380802
+			],
+			"bbox": [
+				39.6879723,
+				-4.0380802,
+				39.6879723,
+				-4.0380802
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "brazzaville",
+			"name": "Brazzaville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Congo (Brazzaville)",
+			"centroid": [
+				15.2827436,
+				-4.2572399
+			],
+			"bbox": [
+				15.2827436,
+				-4.2572399,
+				15.2827436,
+				-4.2572399
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "kinshasa",
+			"name": "Kinshasa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Congo (Kinshasa)",
+			"centroid": [
+				15.313026,
+				-4.3277782
+			],
+			"bbox": [
+				15.313026,
+				-4.3277782,
+				15.313026,
+				-4.3277782
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "victoria",
+			"name": "Victoria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Seychelles",
+			"centroid": [
+				55.4499898,
+				-4.6166317
+			],
+			"bbox": [
+				55.4499898,
+				-4.6166317,
+				55.4499898,
+				-4.6166317
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "pointe-noire",
+			"name": "Pointe-Noire",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Congo (Brazzaville)",
+			"centroid": [
+				11.8800394,
+				-4.7700073
+			],
+			"bbox": [
+				11.8800394,
+				-4.7700073,
+				11.8800394,
+				-4.7700073
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "dodoma",
+			"name": "Dodoma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tanzania",
+			"centroid": [
+				35.7500036,
+				-6.1833061
+			],
+			"bbox": [
+				35.7500036,
+				-6.1833061,
+				35.7500036,
+				-6.1833061
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "dar-es-salaam",
+			"name": "Dar es Salaam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tanzania",
+			"names": {
+				"de": "Daressalam"
+			},
+			"centroid": [
+				39.266396,
+				-6.7980667
+			],
+			"bbox": [
+				39.266396,
+				-6.7980667,
+				39.266396,
+				-6.7980667
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "luanda",
+			"name": "Luanda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Angola",
+			"centroid": [
+				13.2324812,
+				-8.8363403
+			],
+			"bbox": [
+				13.2324812,
+				-8.8363403,
+				13.2324812,
+				-8.8363403
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lubumbashi",
+			"name": "Lubumbashi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Congo (Kinshasa)",
+			"centroid": [
+				27.4780716,
+				-11.6780789
+			],
+			"bbox": [
+				27.4780716,
+				-11.6780789,
+				27.4780716,
+				-11.6780789
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "moroni",
+			"name": "Moroni",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Comoros",
+			"centroid": [
+				43.2402441,
+				-11.7041577
+			],
+			"bbox": [
+				43.2402441,
+				-11.7041577,
+				43.2402441,
+				-11.7041577
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "huambo",
+			"name": "Huambo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Angola",
+			"centroid": [
+				15.7580635,
+				-12.7480395
+			],
+			"bbox": [
+				15.7580635,
+				-12.7480395,
+				15.7580635,
+				-12.7480395
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kitwe",
+			"name": "Kitwe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Zambia",
+			"centroid": [
+				28.220024,
+				-12.8100333
+			],
+			"bbox": [
+				28.220024,
+				-12.8100333,
+				28.220024,
+				-12.8100333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lilongwe",
+			"name": "Lilongwe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Malawi",
+			"centroid": [
+				33.783302,
+				-13.9832951
+			],
+			"bbox": [
+				33.783302,
+				-13.9832951,
+				33.783302,
+				-13.9832951
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lusaka",
+			"name": "Lusaka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Zambia",
+			"centroid": [
+				28.2813817,
+				-15.4146984
+			],
+			"bbox": [
+				28.2813817,
+				-15.4146984,
+				28.2813817,
+				-15.4146984
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "blantyre",
+			"name": "Blantyre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Malawi",
+			"centroid": [
+				34.9899467,
+				-15.7900065
+			],
+			"bbox": [
+				34.9899467,
+				-15.7900065,
+				34.9899467,
+				-15.7900065
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "harare",
+			"name": "Harare",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Zimbabwe",
+			"centroid": [
+				31.0427636,
+				-17.8158438
+			],
+			"bbox": [
+				31.0427636,
+				-17.8158438,
+				31.0427636,
+				-17.8158438
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "antananarivo",
+			"name": "Antananarivo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Madagascar",
+			"centroid": [
+				47.514678,
+				-18.9146915
+			],
+			"bbox": [
+				47.514678,
+				-18.9146915,
+				47.514678,
+				-18.9146915
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "beira",
+			"name": "Beira",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mozambique",
+			"centroid": [
+				34.8700057,
+				-19.8200447
+			],
+			"bbox": [
+				34.8700057,
+				-19.8200447,
+				34.8700057,
+				-19.8200447
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "antsirabe",
+			"name": "Antsirabe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Madagascar",
+			"centroid": [
+				47.0332942,
+				-19.8500171
+			],
+			"bbox": [
+				47.0332942,
+				-19.8500171,
+				47.0332942,
+				-19.8500171
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "port-louis",
+			"name": "Port Louis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mauritius",
+			"centroid": [
+				57.4999939,
+				-20.1666386
+			],
+			"bbox": [
+				57.4999939,
+				-20.1666386,
+				57.4999939,
+				-20.1666386
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bulawayo",
+			"name": "Bulawayo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Zimbabwe",
+			"centroid": [
+				28.580002,
+				-20.1699975
+			],
+			"bbox": [
+				28.580002,
+				-20.1699975,
+				28.580002,
+				-20.1699975
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "windhoek",
+			"name": "Windhoek",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Namibia",
+			"centroid": [
+				17.0835461,
+				-22.5700061
+			],
+			"bbox": [
+				17.0835461,
+				-22.5700061,
+				17.0835461,
+				-22.5700061
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "gaborone",
+			"name": "Gaborone",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Botswana",
+			"centroid": [
+				25.9119478,
+				-24.6463135
+			],
+			"bbox": [
+				25.9119478,
+				-24.6463135,
+				25.9119478,
+				-24.6463135
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "pretoria",
+			"name": "Pretoria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Africa",
+			"centroid": [
+				28.2274832,
+				-25.7049747
+			],
+			"bbox": [
+				28.2274832,
+				-25.7049747,
+				28.2274832,
+				-25.7049747
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "maputo",
+			"name": "Maputo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mozambique",
+			"centroid": [
+				32.5872171,
+				-25.9533316
+			],
+			"bbox": [
+				32.5872171,
+				-25.9533316,
+				32.5872171,
+				-25.9533316
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "johannesburg",
+			"name": "Johannesburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Africa",
+			"centroid": [
+				28.0280639,
+				-26.1680989
+			],
+			"bbox": [
+				28.0280639,
+				-26.1680989,
+				28.0280639,
+				-26.1680989
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "mbabane",
+			"name": "Mbabane",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "eSwatini",
+			"centroid": [
+				31.1333345,
+				-26.3166508
+			],
+			"bbox": [
+				31.1333345,
+				-26.3166508,
+				31.1333345,
+				-26.3166508
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bloemfontein",
+			"name": "Bloemfontein",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Africa",
+			"centroid": [
+				26.2299129,
+				-29.1199939
+			],
+			"bbox": [
+				26.2299129,
+				-29.1199939,
+				26.2299129,
+				-29.1199939
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "maseru",
+			"name": "Maseru",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Lesotho",
+			"centroid": [
+				27.4832731,
+				-29.3166744
+			],
+			"bbox": [
+				27.4832731,
+				-29.3166744,
+				27.4832731,
+				-29.3166744
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "durban",
+			"name": "Durban",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Africa",
+			"centroid": [
+				31.01094366326237,
+				-29.86066234118211
+			],
+			"bbox": [
+				31.01094366326237,
+				-29.86066234118211,
+				31.01094366326237,
+				-29.86066234118211
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cape-town",
+			"name": "Cape Town",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Africa",
+			"names": {
+				"it": "Città del Capo",
+				"de": "Kapstadt"
+			},
+			"centroid": [
+				18.4330423,
+				-33.9180651
+			],
+			"bbox": [
+				18.4330423,
+				-33.9180651,
+				18.4330423,
+				-33.9180651
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"port-sudan",
+		"khartoum",
+		"asmara",
+		"n-djamena",
+		"djibouti",
+		"dire-dawa",
+		"addis-ababa",
+		"adama",
+		"juba",
+		"bangui",
+		"douala",
+		"yaounde",
+		"malabo",
+		"mogadishu",
+		"mbale",
+		"libreville",
+		"sao-tome",
+		"kampala",
+		"nairobi",
+		"kigali",
+		"moshi",
+		"bujumbura",
+		"gitega",
+		"mombasa",
+		"brazzaville",
+		"kinshasa",
+		"victoria",
+		"pointe-noire",
+		"dodoma",
+		"dar-es-salaam",
+		"luanda",
+		"lubumbashi",
+		"moroni",
+		"huambo",
+		"kitwe",
+		"lilongwe",
+		"lusaka",
+		"blantyre",
+		"harare",
+		"antananarivo",
+		"beira",
+		"antsirabe",
+		"port-louis",
+		"bulawayo",
+		"windhoek",
+		"gaborone",
+		"pretoria",
+		"maputo",
+		"johannesburg",
+		"mbabane",
+		"bloemfontein",
+		"maseru",
+		"durban",
+		"cape-town"
+	]
+}

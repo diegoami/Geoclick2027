@@ -16,7 +16,12 @@ vi.mock('$app/paths', () => ({
 import MapRows from './MapRows.svelte';
 import { endTutorialSandbox, startTutorialSandbox } from './tutorialSandbox.svelte';
 import { setLanguage } from './i18n.svelte';
-import { recordVisit } from './mapPrefs.svelte';
+import {
+	recordVisit,
+	forgetDetailed,
+	isSeenDetailed,
+	rememberMapTypeSelection
+} from './mapPrefs.svelte';
 
 const group = (country: string, pickerId?: string) => ({
 	country,
@@ -345,5 +350,96 @@ describe('MapRows: a detailed map the player has opened (v0.17)', () => {
 			'──────',
 			'Towns — East'
 		]);
+	});
+});
+
+describe('restored detailed-map removal beside the home combobox', () => {
+	afterEach(() => {
+		forgetDetailed('germany-districts-east');
+		forgetDetailed('europe-cities-west');
+		localStorage.removeItem(MAP_TYPE_SELECTIONS_KEY);
+		gotoMock.mockClear();
+	});
+	it('puts a selected country detail behind the separator, clears its saved selection and does not navigate', async () => {
+		const maps = [
+			{ id: 'germany-states', label: 'States' },
+			{ id: 'germany-districts-east', label: 'Districts — East', advanced: true }
+		];
+		recordVisit('germany-districts-east');
+		rememberMapTypeSelection('germany', 'germany-districts-east');
+		const screen = await render(MapRows, {
+			groups: [{ country: 'Germany', maps }],
+			masteries: {},
+			targetCount: () => 0
+		});
+		const select = screen.getByRole('combobox').element() as HTMLSelectElement;
+		await expect.poll(() => select.value).toBe('germany-districts-east');
+		screen.container.style.width = '240px';
+		const remove = screen.getByRole('button', { name: 'Hide Districts — East', exact: true });
+		const bounds = remove.element().getBoundingClientRect();
+		expect(bounds.width).toBeGreaterThanOrEqual(44);
+		expect(bounds.height).toBeGreaterThanOrEqual(44);
+		const row = screen.container.querySelector<HTMLElement>('.row')!;
+		expect(row.scrollWidth).toBeLessThanOrEqual(row.clientWidth + 1);
+		await remove.click();
+		expect(isSeenDetailed('germany-districts-east')).toBe(false);
+		expect(select.value).toBe('germany-states');
+		expect([...select.options].map((option) => option.text)).toEqual([
+			'States',
+			'──────',
+			'Districts — East'
+		]);
+		expect(JSON.parse(localStorage.getItem(MAP_TYPE_SELECTIONS_KEY)!)).toEqual({
+			germany: 'germany-states'
+		});
+		expect(gotoMock).not.toHaveBeenCalled();
+	});
+	it('applies the same remove action to a continent and keeps its data/other row choices', async () => {
+		recordVisit('europe-cities-west');
+		rememberMapTypeSelection('europe', 'europe-cities-west');
+		rememberMapTypeSelection('germany', 'germany-states');
+		const progressKey = 'geoclick:progress:v1:europe-cities-west:cards';
+		const previousProgress = localStorage.getItem(progressKey);
+		const preservedProgress = JSON.stringify([
+			{
+				targetId: 'preserved',
+				cleanStreak: 1,
+				easeFactor: 2.5,
+				interval: 1,
+				repetitions: 1,
+				dueDate: '2026-11-03',
+				lastReviewedAt: '2026-11-02'
+			}
+		]);
+		localStorage.setItem(progressKey, preservedProgress);
+		try {
+			const screen = await render(MapRows, {
+				groups: [
+					{
+						country: 'Europe',
+						maps: [
+							{ id: 'europe-countries', label: 'Countries' },
+							{ id: 'europe-capitals', label: 'Capitals' },
+							{ id: 'europe-cities-west', label: 'Cities — West', advanced: true }
+						]
+					}
+				],
+				masteries: {},
+				targetCount: () => 0
+			});
+			await expect
+				.poll(() => (screen.getByRole('combobox').element() as HTMLSelectElement).value)
+				.toBe('europe-cities-west');
+			await screen.getByRole('button', { name: 'Hide Cities — West', exact: true }).click();
+			expect(isSeenDetailed('europe-cities-west')).toBe(false);
+			expect(localStorage.getItem(progressKey)).toBe(preservedProgress);
+			expect(JSON.parse(localStorage.getItem(MAP_TYPE_SELECTIONS_KEY)!)).toEqual({
+				europe: 'europe-countries',
+				germany: 'germany-states'
+			});
+		} finally {
+			if (previousProgress === null) localStorage.removeItem(progressKey);
+			else localStorage.setItem(progressKey, previousProgress);
+		}
 	});
 });

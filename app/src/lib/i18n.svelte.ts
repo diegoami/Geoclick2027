@@ -190,6 +190,16 @@ export type TranslationKey =
 	| 'mapType.citiesEast'
 	| 'mapType.citiesCenter'
 	| 'mapType.citiesWest'
+	| 'mapType.citiesNorthWest'
+	| 'mapType.citiesCentralEastSouth'
+	| 'mapType.citiesWestCentral'
+	| 'mapType.citiesSouthEastSoutheast'
+	| 'mapType.citiesCanadaUsa'
+	| 'mapType.citiesMexicoCentralCaribbean'
+	| 'mapType.citiesAndesNorth'
+	| 'mapType.citiesBrazilSouthernCone'
+	| 'mapType.citiesAustraliaNewZealand'
+	| 'mapType.citiesPacificIslands'
 	| 'mapType.citiesNorth'
 	| 'mapType.citiesSouth'
 	| 'mapType.citiesCentral'
@@ -478,6 +488,16 @@ const en: Dictionary = {
 	'mapType.citiesEast': 'Cities — East',
 	'mapType.citiesCenter': 'Cities — Center',
 	'mapType.citiesWest': 'Cities — West',
+	'mapType.citiesNorthWest': 'Cities — North & West',
+	'mapType.citiesCentralEastSouth': 'Cities — Central, East & South',
+	'mapType.citiesWestCentral': 'Cities — West & Central',
+	'mapType.citiesSouthEastSoutheast': 'Cities — South, East & Southeast',
+	'mapType.citiesCanadaUsa': 'Cities — Canada & USA',
+	'mapType.citiesMexicoCentralCaribbean': 'Cities — Mexico, Central America & Caribbean',
+	'mapType.citiesAndesNorth': 'Cities — Andes & North',
+	'mapType.citiesBrazilSouthernCone': 'Cities — Brazil & Southern Cone',
+	'mapType.citiesAustraliaNewZealand': 'Cities — Australia & New Zealand',
+	'mapType.citiesPacificIslands': 'Cities — Pacific islands',
 	'mapType.citiesNorth': 'Cities — North',
 	'mapType.citiesSouth': 'Cities — South',
 	'mapType.citiesCentral': 'Cities — Central',
@@ -784,6 +804,16 @@ const de: Dictionary = {
 	'mapType.citiesEast': 'Städte — Osten',
 	'mapType.citiesCenter': 'Städte — Mitte',
 	'mapType.citiesWest': 'Städte — Westen',
+	'mapType.citiesNorthWest': 'Städte — Nord- und Westafrika',
+	'mapType.citiesCentralEastSouth': 'Städte — Zentral-, Ost- und Südafrika',
+	'mapType.citiesWestCentral': 'Städte — West- und Zentralasien',
+	'mapType.citiesSouthEastSoutheast': 'Städte — Süd-, Ost- und Südostasien',
+	'mapType.citiesCanadaUsa': 'Städte — Kanada und USA',
+	'mapType.citiesMexicoCentralCaribbean': 'Städte — Mexiko, Mittelamerika und Karibik',
+	'mapType.citiesAndesNorth': 'Städte — Anden und Norden',
+	'mapType.citiesBrazilSouthernCone': 'Städte — Brasilien und Südkegel',
+	'mapType.citiesAustraliaNewZealand': 'Städte — Australien und Neuseeland',
+	'mapType.citiesPacificIslands': 'Städte — Pazifikinseln',
 	'mapType.citiesNorth': 'Städte — Norden',
 	'mapType.citiesSouth': 'Städte — Süden',
 	'mapType.citiesCentral': 'Städte — Mitte',
@@ -1096,6 +1126,16 @@ const it: Dictionary = {
 	'mapType.citiesEast': 'Città — Est',
 	'mapType.citiesCenter': 'Città — Centro',
 	'mapType.citiesWest': 'Città — Ovest',
+	'mapType.citiesNorthWest': 'Città — Nord e Ovest',
+	'mapType.citiesCentralEastSouth': 'Città — Centro, Est e Sud',
+	'mapType.citiesWestCentral': 'Città — Ovest e Centro',
+	'mapType.citiesSouthEastSoutheast': 'Città — Sud, Est e Sud-est',
+	'mapType.citiesCanadaUsa': 'Città — Canada e USA',
+	'mapType.citiesMexicoCentralCaribbean': 'Città — Messico, America centrale e Caraibi',
+	'mapType.citiesAndesNorth': 'Città — Ande e Nord',
+	'mapType.citiesBrazilSouthernCone': 'Città — Brasile e Cono Sud',
+	'mapType.citiesAustraliaNewZealand': 'Città — Australia e Nuova Zelanda',
+	'mapType.citiesPacificIslands': 'Città — Isole del Pacifico',
 	'mapType.citiesNorth': 'Città — Nord',
 	'mapType.citiesSouth': 'Città — Sud',
 	'mapType.citiesCentral': 'Città — Centro',

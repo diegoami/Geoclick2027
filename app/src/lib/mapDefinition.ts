@@ -1,3 +1,4 @@
+import { wrappedPointBounds } from '@geoclick/quiz-engine';
 // Mirrors the map.json shape produced by data/scripts/build-map.ts.
 
 // 'county' added for Sweden's län - carried as metadata only, like every
@@ -53,6 +54,8 @@ export interface Spine {
 }
 
 export interface MapDefinition {
+	/** Explicit point-map framing across the Pacific dateline; coordinates remain canonical. */
+	wrapLongitude?: boolean;
 	id: string;
 	name: string;
 	country: string;
@@ -76,6 +79,8 @@ export interface MapDefinition {
  * was built from centroids in the first place.
  */
 export function overallExtent(map: MapDefinition): [number, number, number, number] {
+	if (map.wrapLongitude && map.targets.every((target) => target.type === 'city'))
+		return overallBounds(map);
 	let [minLon, minLat, maxLon, maxLat] = overallBounds(map);
 	for (const target of map.targets) {
 		const [west, south, east, north] = target.bbox;
@@ -102,6 +107,8 @@ export function overallExtent(map: MapDefinition): [number, number, number, numb
  * whole map" camera, without needing pixel-exact coverage of every target's
  * full extent (e.g. Alaska's Aleutian tip). */
 export function overallBounds(map: MapDefinition): [number, number, number, number] {
+	if (map.wrapLongitude && map.targets.every((target) => target.type === 'city'))
+		return wrappedPointBounds(map.targets.map((target) => target.centroid));
 	let minLon = Infinity,
 		minLat = Infinity,
 		maxLon = -Infinity,
