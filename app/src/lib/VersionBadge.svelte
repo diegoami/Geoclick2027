@@ -1,6 +1,13 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import { mapNavHidden } from './mapPrefs.svelte';
+	import { tutorialState } from './tutorial.svelte';
+	let { onMap = false }: { onMap?: boolean } = $props();
+	const hidden = $derived(onMap && mapNavHidden() && tutorialState().status === 'idle');
+	$effect(() => {
+		if (!hidden) scheduleMeasure();
+	});
 
 	let topOffset = $state(8);
 	let observer: ResizeObserver | undefined;
@@ -51,7 +58,7 @@
 </script>
 
 <!--
-  Shown on every route via +layout.svelte, per the product owner's request
+  Shown via +layout.svelte; on map routes it follows Hide/Show buttons (#315), per the product owner's request
   (2026-09-13) that the release version/build be prominent in the app, not
   buried in a settings screen nobody opens. __APP_VERSION__/__BUILD_SHA__
   are injected at build time by vite.config.ts from the root package.json
@@ -60,6 +67,7 @@
 -->
 <div
 	class="version-badge"
+	{hidden}
 	style="top: calc(env(safe-area-inset-top, 0px) + {topOffset}px)"
 	title="Geoclick v{__APP_VERSION__}, build {__BUILD_SHA__}"
 >

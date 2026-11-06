@@ -110,6 +110,8 @@ Eine Zeile über Karte oder Liste schlägt vor, was du als Nächstes spielen kan
 
 ## 5. Bedienelemente auf der Karte
 
+**Schaltflächen ausblenden** blendet auch den Versions- und Build-Hinweis aus. **Schaltflächen einblenden** stellt beides wieder her; dieser Knopf bleibt erreichbar. Außerhalb einer Karte bleibt der Versionshinweis sichtbar.
+
 | Schaltfläche | Wirkung |
 |---|---|
 | **Karten** | Zurück zur Startseite |

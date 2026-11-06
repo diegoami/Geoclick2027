@@ -296,6 +296,8 @@ the standard ones, in the menu and in the type row.
 
 ## 5. Map screens: what they have in common
 
+**Hide the buttons** also hides the version/build badge. **Show the buttons** restores both; the restore control stays available. Outside a map, the version badge stays visible.
+
 Every map screen (Known, Overview, Quiz and Tour) has the same frame around
 the map. Here it is on Known, for Italy — Regions:
 

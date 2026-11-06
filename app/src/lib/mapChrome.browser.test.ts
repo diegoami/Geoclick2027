@@ -119,6 +119,37 @@ describe('the bottom overlay', () => {
 });
 
 describe('the version badge', () => {
+	beforeEach(() => setMapNavHidden(false));
+	afterEach(() => setMapNavHidden(false));
+	it('follows the real Hide/Show control on maps and stays available outside a map', async () => {
+		const view = await render(VersionBadge, { onMap: true });
+		const control = new HideButtonsControl(),
+			host = control.onAdd(),
+			button = host.querySelector('button')!;
+		document.body.append(host);
+		try {
+			const badge = document.querySelector<HTMLElement>('.version-badge')!;
+			expect(getComputedStyle(badge).display).not.toBe('none');
+			button.click();
+			flushSync();
+			expect(badge.hidden).toBe(true);
+			expect(getComputedStyle(badge).display).toBe('none');
+			expect(button.getAttribute('aria-label')).toBe('Show the buttons');
+			button.click();
+			flushSync();
+			expect(badge.hidden).toBe(false);
+			expect(getComputedStyle(badge).display).not.toBe('none');
+			button.click();
+			flushSync();
+			await view.rerender({ onMap: false });
+			expect(document.querySelector<HTMLElement>('.version-badge')!.hidden).toBe(false);
+		} finally {
+			control.onRemove();
+			host.remove();
+			view.unmount();
+		}
+	});
+
 	it('stays below top chrome, tracks its height, and leaves safe-area spacing', async () => {
 		const toolbar = document.createElement('header');
 		toolbar.className = 'gc-bar';
