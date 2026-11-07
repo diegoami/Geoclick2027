@@ -14,10 +14,19 @@
 		failed = false;
 		void (async () => {
 			try {
-				const res = await fetch(asset(`/manual/${language}.html`), { signal: controller.signal });
+				const manualUrl = asset(`/manual/${language}.html`);
+				const res = await fetch(manualUrl, { signal: controller.signal });
 				if (!res.ok) throw new Error(String(res.status));
 				const text = await res.text();
-				if (!controller.signal.aborted) html = text;
+				// Portable fragments use paths relative to their own manual file.
+				// Resolve them before embedding the fragment in the app's entry page.
+				const manualDocument = new DOMParser().parseFromString(text, 'text/html');
+				const baseUrl = res.url || new URL(manualUrl, document.baseURI).href;
+				for (const image of manualDocument.querySelectorAll('img[src]')) {
+					const source = image.getAttribute('src');
+					if (source) image.setAttribute('src', new URL(source, baseUrl).href);
+				}
+				if (!controller.signal.aborted) html = manualDocument.body.innerHTML;
 			} catch {
 				if (!controller.signal.aborted) failed = true;
 			}

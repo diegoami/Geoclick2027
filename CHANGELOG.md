@@ -15,7 +15,7 @@ For players:
 - **Choose what to import:** review this device's guest progress before adding it to an account. Existing account progress wins conflicts and the guest original is preserved. Remembered sign-in is optional.
 - **Quieter Known view:** remove the “Nothing known yet” introduction completely.
 - **Version at the very top right:** version/build sits above zoom controls and map navigation, including at enlarged text sizes and when portable-build map styles load after the layout.
-- **Another browser entry point:** [play on GitHub Pages](https://diegoami.github.io/Geoclick2027/) alongside the existing Netlify site. Release descriptions link to both.
+- **Another browser entry point:** [play on GitHub Pages](https://diegoami.github.io/Geoclick2027/) alongside the existing Netlify site. Release descriptions link to both. Translated manual images resolve correctly both in standalone files and inside the portable app.
 
 Experimental account limits and release scope:
 
