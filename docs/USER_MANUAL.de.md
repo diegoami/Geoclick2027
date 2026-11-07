@@ -1,6 +1,6 @@
 # Geoclick — Handbuch
 
-Geoclick ist ein Geografiespiel von Diego Amicabile. Dieses Handbuch beschreibt **Geoclick v1.2.1**, den Kandidaten für die Veröffentlichung der Version 1.1.0. Die tatsächlich laufende Version und ihre Build-Kennung stehen im kleinen Versionsfeld und auf der Informationsseite.
+Geoclick ist ein Geografiespiel von Diego Amicabile. Dieses Handbuch beschreibt **Geoclick v1.3.0**. Die tatsächlich laufende Version und ihre Build-Kennung stehen im kleinen Versionsfeld und auf der Informationsseite.
 
 Die gemeinsam mit dem englischen Handbuch verwendeten Bilder zeigen englische Beschriftungen und beispielhafte Lernstände. Die Schaltflächennamen in diesem Text entsprechen der deutschen Oberfläche. Die Abbildungen der Windows- und Android-App stammen aus früheren Versionen; die beschriebenen Funktionen entsprechen dem aktuellen Spiel.
 
@@ -52,10 +52,14 @@ gelten sofort und werden nach Möglichkeit auf diesem Gerät gespeichert.
 Schließe das Fenster mit der Schaltfläche oder Escape. Eine ausgeblendete
 Kartenleiste blendest du zuerst mit der Taste unter dem Kartenzoom ein.
 
-### Optionales Konto im Browser
+### Experimentelle Konten im Browser und unter Windows
 
-Wenn ein Konto verfügbar ist, öffne **Konto** in der Leiste und
-wähle **Mit Google anmelden**, um Lernfortschritt zwischen Browsern zu teilen.
+Google-Anmeldung, Cloud-Speicherung und Synchronisierung sind **experimentell**
+und können fehlschlagen. Wenn eingerichtet, öffne **Anmeldung & Sync (experimentell)**
+unten auf der Startseite unter der Karte/Liste und wähle **Mit Google anmelden**.
+Kontofunktionen sind nur auf der Startseite zugänglich. Die Leisten zeigen nur
+bei aktivem Konto einen Synchronisierungsstatus ohne Bedienelemente. Die Version
+steht ganz oben rechts über den Zoomtasten.
 Du kannst jederzeit ohne Anmeldung spielen; Gastfortschritt bleibt auf diesem
 Gerät. **Auf diesem Gerät angemeldet bleiben** ist zunächst ausgeschaltet.
 Aktiviere es nur, wenn der Browser dein Konto nach dem Neustart wieder öffnen soll.
@@ -73,8 +77,9 @@ Verbindung. Lass die Seite bis zur Synchronisierung offen, wenn ein anderer
 Browser den Fortschritt sehen soll. Offline gespeicherte Kontodaten bleiben
 auch nach dem Schließen erhalten und werden nach erneuter Anmeldung desselben
 Kontos übertragen. **Abmelden** öffnet den Gastfortschritt und entfernt die
-gespeicherte Anmeldung; beide Fortschrittskopien bleiben erhalten. Diese erste
-Kontofunktion gilt für den Browser; Desktop und Android folgen getrennt.
+gespeicherte Anmeldung; beide Fortschrittskopien bleiben erhalten. Konfigurierte Browser- und Windows-Versionen unterstützen experimentelle Konten;
+Android bleibt in dieser Version ohne Konto. Oberhalb von 10.000 Verlaufsereignissen
+stoppt die Cloud-Synchronisierung; ausstehender Fortschritt bleibt lokal erhalten.
 
 ## 1. Was ist Geoclick?
 
@@ -137,7 +142,7 @@ Klicke oder tippe auf einen Ort, um seinen Namen hinzuzufügen; noch einmal nimm
 
 Wenn Informationen verfügbar sind, öffnet die Auswahl auch eine Ortskarte mit Wissenswertem. Auf einer Städtekarte tippst du auf den Punkt. Das erneute Ausblenden des Namens schließt die Ortskarte. In dieser Ansicht gibt es keine Bewertung. Alle Namen auf Gewusst, auch Städtenamen, erscheinen ohne Unterstreichung.
 
-Auf einer nie gespielten Karte erscheint eine kleine Karte **Noch nichts gewusst** mit den Knöpfen **Übersicht** und **Quiz**. Mit **×** schließt du den Hinweis für diesen Besuch, damit die Karte frei bleibt.
+Eine nie gespielte Karte bleibt ohne Hinweisfenster frei. Wähle **Übersicht** zum Lernen oder **Quiz** zum Spielen.
 
 Sobald du auf der Karte etwas erreicht hast, steht in der Legende auch **Fortschritt zurücksetzen**. Ein Dialog fragt nach: „Deinen Fortschritt auf Italy — Regionen zurücksetzen?“. **Abbrechen** ändert nichts; **Ja, zurücksetzen** macht alle Namen dieser Karte wieder unbekannt und löscht auch die gewählten Namen und eine halb gespielte Runde. Deine anderen Karten, deine Favoriten und dein letztes Ergebnis bleiben. Das ist etwas anderes als **Zurücksetzen** in der Legende, das nur die gewählten Namen entfernt.
 
