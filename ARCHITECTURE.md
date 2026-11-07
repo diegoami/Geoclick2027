@@ -364,8 +364,9 @@ defaults to its existing guest stores. `progressSync.ts` and
 rules live in `firebase/firestore.rules`. Firestore Lite has no persistent cache
 or offline queue; the local journal owns durability. Local Auth/Firestore emulator
 tests include the full real-IndexedDB path. The browser-only `account.svelte.ts` bridge activates `browserAccountSession.ts`
-after an explicit configuration is present. `AccountButton.svelte` exposes a labeled entry in home/map/page toolbars;
-`AccountDialog.svelte` hosts localized `AccountPanel.svelte` controls separately
+after an explicit configuration is present. `AccountButton.svelte` exposes a quiet experimental entry in the main-screen footer;
+`AccountSyncStatus.svelte` shows read-only status in toolbars only for signed-in progress.
+`AccountDialog.svelte` is mounted only on the main route, outside the account-remount key, and hosts localized experimental `AccountPanel.svelte` controls separately
 from Appearance; `browserFirebaseAccount.ts` uses Google popups and
 explicit memory/remembered persistence. Account ownership changes key the layout
 so views remount with captured destinations. `sqliteProgressJournal.ts` now provides native one-row CAS durability;

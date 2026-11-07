@@ -119,7 +119,7 @@ describe('the bottom overlay', () => {
 });
 
 describe('the version badge', () => {
-	it('stays below top chrome, tracks its height, and leaves safe-area spacing', async () => {
+	it('stays at the top right when toolbar height changes', async () => {
 		const toolbar = document.createElement('header');
 		toolbar.className = 'gc-bar';
 		toolbar.style.cssText = 'position: fixed; top: 20px; height: 50px';
@@ -127,14 +127,34 @@ describe('the version badge', () => {
 		const { unmount } = await render(VersionBadge);
 		const badge = document.querySelector<HTMLElement>('.version-badge')!;
 
-		await expect.poll(() => Number.parseFloat(getComputedStyle(badge).top)).toBe(78);
-		expect(badge.style.top).toContain('env(safe-area-inset-top');
+		await expect.poll(() => Number.parseFloat(getComputedStyle(badge).top)).toBe(2);
+		expect(Number.parseFloat(getComputedStyle(badge).right)).toBeGreaterThan(0);
 		expect(getComputedStyle(badge).pointerEvents).toBe('none');
 
 		toolbar.style.height = '80px';
-		await expect.poll(() => Number.parseFloat(getComputedStyle(badge).top)).toBe(108);
+		await expect.poll(() => Number.parseFloat(getComputedStyle(badge).top)).toBe(2);
 
 		unmount();
 		toolbar.remove();
+	});
+	it('keeps zoom controls below the version at normal and enlarged text', async () => {
+		const controls = document.createElement('div');
+		controls.className = 'maplibregl-ctrl-top-right';
+		controls.style.cssText = 'position:fixed;right:0;width:44px;height:88px';
+		document.body.append(controls);
+		const screen = await render(VersionBadge);
+		try {
+			for (const size of ['100%', '300%']) {
+				document.documentElement.style.fontSize = size;
+				const badge = screen.container.querySelector<HTMLElement>('.version-badge')!;
+				expect(badge.getBoundingClientRect().bottom).toBeLessThanOrEqual(
+					controls.getBoundingClientRect().top
+				);
+			}
+		} finally {
+			document.documentElement.style.removeProperty('font-size');
+			controls.remove();
+			screen.unmount();
+		}
 	});
 });

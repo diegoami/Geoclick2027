@@ -91,7 +91,7 @@ const notes =
 	(stage ? banner[stage] : '') +
 	`${playerPart}\n\n---\n\n` +
 	`Built from commit \`${tagged}\` (tag \`${tag}\`).\n\n` +
-	`**Play in the browser:** https://geoclick.netlify.app/\n\n**itch.io:** https://diegoami.itch.io/geoclick\n\n` +
+	`**Play in the browser:** [GitHub Pages](https://diegoami.github.io/Geoclick2027/) · [Netlify](https://geoclick.netlify.app/)\n\n**itch.io:** https://diegoami.itch.io/geoclick\n\n` +
 	`Windows: run the \`-setup.exe\` (SmartScreen warns about an unknown publisher: *More info → Run anyway*). ` +
 	`Android: open the \`.apk\` on your phone and allow installing unknown apps. ` +
 	`HTML5: upload the \`-html5.zip\` browser package to itch.io (recommended frame: 1280 × 800), or extract and serve over HTTP with byte-range support. ` +

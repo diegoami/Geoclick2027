@@ -286,6 +286,7 @@
  * icons with their names in aria-label and title. The buttons are 44px, not
  * the games' 38, because Geoclick is played on a tablet. */
 .gc-bar {
+	margin-top: calc(env(safe-area-inset-top, 0px) + 1.6rem);
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;

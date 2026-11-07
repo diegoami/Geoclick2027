@@ -1,9 +1,10 @@
 <script lang="ts">
 	import '../app.css';
-	import { accountRevision } from '$lib/account.svelte';
+	import { page } from '$app/state';
+	import AccountDialog from '$lib/AccountDialog.svelte';
+	import { initializeBrowserAccount, accountRevision } from '$lib/account.svelte';
 	import '../appearance.css';
 	import AppearanceSettings from '$lib/AppearanceSettings.svelte';
-	import AccountDialog from '$lib/AccountDialog.svelte';
 	import { accountOpen, setAccountOpen } from '$lib/accountDialogState.svelte';
 	import { appearanceOpen, setAppearanceOpen } from '$lib/appearance.svelte';
 	import { onMount } from 'svelte';
@@ -30,6 +31,7 @@
 	// and desktop keep their normal back behaviour. replaceState keeps these
 	// "up" moves from piling up history entries.
 	onMount(() => {
+		void initializeBrowserAccount();
 		let removeListener: (() => void) | undefined;
 		let destroyed = false;
 		(async () => {
@@ -81,6 +83,6 @@
 	{@render children()}
 {/key}
 <AppearanceSettings />
-<AccountDialog />
+{#if page.route.id === '/'}<AccountDialog />{/if}
 <VersionBadge />
 <TutorialOverlay />

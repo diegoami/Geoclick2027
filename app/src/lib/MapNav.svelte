@@ -1,6 +1,5 @@
 <script lang="ts">
-	import AccountButton from './AccountButton.svelte';
-	import { accountAvailable } from './account.svelte';
+	import AccountSyncStatus from './AccountSyncStatus.svelte';
 	import AppearanceButton from './AppearanceButton.svelte';
 	// Shared top nav bar for every map-scoped view - the same buttons everywhere
 	// (Maps/Known/Overview/Quiz/Tour) so you can jump directly between modes,
@@ -182,7 +181,7 @@
 			>
 			<span class="nav-label">{t('nav.tour')}</span>
 		</a>
-		{#if accountAvailable()}<AccountButton />{/if}
+		<AccountSyncStatus />
 	</div>
 	<!-- Keep the favourite star beside the map-type row/title, not in the tab
 	     row, which is already full at phone width (FT-13, FT-16). -->
@@ -268,7 +267,7 @@
 	}
 	.nav-overlay {
 		position: absolute;
-		top: 8px;
+		top: calc(env(safe-area-inset-top, 0px) + 1.6rem + 8px);
 		left: 8px;
 		/* Stop short of MapLibre's zoom control (top-right, ~40px wide): the
 		   row used to run under it on phones, hiding half of the last tab. */
