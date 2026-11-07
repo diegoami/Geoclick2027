@@ -7,7 +7,7 @@ one entry per tagged version on `main`.
 
 ## v1.3.0 — 2026-11-07 — Experimental accounts and quieter maps
 
-**Keep playing locally, with experimental browser/Windows account sharing and a clearer map screen.**
+**Quieter maps, a top-right version badge, and experimental account groundwork.**
 
 For players:
 
@@ -24,7 +24,7 @@ Experimental account limits and release scope:
 - The current cloud transport scans full history and stops synchronization beyond its 10,000-event limit; pending local progress is retained. History/read-cost/quota work (#332, PRs #333/#335) remains open. Firebase is experimental, not declared complete under plan #311.
 - The detailed city-map batch and related home controls in PR #330, the hide-version follow-up in PR #331, and planned gameplay changes remain outside this release.
 
-Release verification: candidate gates, independent milestone review and final installer/device/HTML5 evidence are recorded in the milestone issue before tagging. No final artifact/runtime checks are claimed by this preparation entry.
+Published from reviewed tag `v1.3.0` / `956ae35b1102fad1bf789759563c88e8c249e116`: [release](https://github.com/diegoami/Geoclick2027/releases/tag/v1.3.0), [milestone #339](https://github.com/diegoami/Geoclick2027/issues/339). MiniMax-M3 agreed with the exact SHA, with no MUST-FIX findings; the tag-push gates passed again. Windows setup installed in the normal per-user directory and USA States visibly drew. The signed APK installed on API 36 and Germany States visibly drew. The final HTML5 ZIP passed nested-folder byte-range serving, map/quiz/reload, 100%/300% version spacing and every EN/DE/IT manual image, with no page or asset errors. All seven uploaded SHA-256 digests match the local artifacts. MSI was not separately installed; no physical-phone or live cloud acceptance is claimed. Published downloads are guest-only, without Firebase configuration. Review finding #342 is a non-blocking developer-documentation correction landing after the immutable release tag.
 
 ## v1.2.1 — 2026-10-31 — Desktop zoom and steady world colors
 
