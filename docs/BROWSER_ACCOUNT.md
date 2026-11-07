@@ -18,8 +18,10 @@ or publish rules.
    no desktop OAuth client JSON, private key or native token belongs there.
    No config means no account controls. Native shells ignore this browser flow.
 4. From the implementing worktree, run `npm run dev` and open
-   `http://localhost:5187`. Click the labeled **Account** button in the home or map toolbar. Google account
-   selection/consent is performed by the owner, not automated.
+   `http://localhost:5187`. Open **Login & sync (experimental)** in the footer
+   below the main-screen map/list. Account controls are absent from all toolbars;
+   active accounts show read-only sync status there. Google account selection/consent
+   is performed by the owner, not automated.
 
 The standalone spike config's `VITE_FIREBASE_MODE` is unnecessary here. Public
 config is bundled for browser use; it provides no authorization. Owner-scoped
@@ -80,8 +82,10 @@ an incremental read/compaction design must be proved before expanding it.
 The owner passed the first real Google sign-in and initial sync after replacing
 outdated deployed rules with the merged game rules. This verifies live identity
 and the initial account read, not yet cross-profile learning/import or native
-sharing. The normal account control is a labeled toolbar button with its own
-modal, outside Appearance and outside the map Settings disclosure. Runtime
+sharing. The normal account control is **Login & sync (experimental)** in the
+main-screen footer, opening its own modal independently of Appearance or map
+Settings. It is absent from toolbars, which show read-only sync status only for
+an active account. Runtime
 Firestore URL diagnostics are silenced; app diagnostics expose only whitelisted
 error codes, without account paths, tokens or public config values.
 

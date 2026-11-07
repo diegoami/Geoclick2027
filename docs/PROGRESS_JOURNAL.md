@@ -281,12 +281,15 @@ confirmation, keyboard behavior and 300% wrapping. The emulator-only suite also
 uses the real Auth observer through this session, game factory, import and logout.
 
 
-Account controls have a dedicated, labeled toolbar button on home, map and
-auxiliary pages. They open `AccountDialog.svelte`, independently of Appearance
-or the map Settings disclosure. The native dialog contains keyboard focus,
-stops quiz/navigation key propagation, returns focus to its opener and closes
-on Escape, its close button or Android Back. The owner requested this placement
-after the first live sign-in/sync check because the Appearance location hid it.
+Account controls are reachable only through **Login & sync (experimental)**
+in the main-screen footer. It opens `AccountDialog.svelte` independently of
+Appearance or map Settings. Toolbars show read-only sync status only for an
+active account, with no account entry for guests. The dialog mounts only on the
+home route, outside the account-remount key; it contains keyboard focus, stops
+quiz/navigation key propagation, returns focus to its opener and closes on
+Escape, its close button or Android Back. The separate dialog replaced the
+Appearance entry after the first live sign-in/sync check; the owner later made
+its entry quiet and home-only because account features remain experimental.
 `AccountDialog.svelte.test.ts` protects direct discoverability with Settings
 collapsed, modal focus/Escape behavior and the labeled 44px target at large text.
 
