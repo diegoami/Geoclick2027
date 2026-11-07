@@ -1,6 +1,6 @@
 # Geoclick — Manuale
 
-Geoclick è un gioco di geografia di Diego Amicabile. Questo manuale descrive **Geoclick v1.2.1**, nella versione candidata alla pubblicazione 1.1.0. La versione effettiva e l’identificativo della build compaiono nell’angolo dello schermo e nella pagina Informazioni.
+Geoclick è un gioco di geografia di Diego Amicabile. Questo manuale descrive **Geoclick v1.3.0**. La versione effettiva e l’identificativo della build compaiono nell’angolo dello schermo e nella pagina Informazioni.
 
 Le immagini condivise con il manuale inglese mostrano l’interfaccia in inglese e progressi di esempio. I nomi dei pulsanti nel testo seguono invece l’interfaccia italiana. Le immagini delle finestre Windows e Android provengono da versioni precedenti; le funzioni descritte sono quelle attuali.
 
@@ -52,10 +52,14 @@ Le modifiche sono immediate e vengono memorizzate sul dispositivo quando
 possibile. Chiudi con il pulsante o Escape. Se la barra della mappa è nascosta,
 mostrala prima con il pulsante sotto i controlli dello zoom.
 
-### Account facoltativo nel browser
+### Account sperimentali nel browser e su Windows
 
-Dove disponibile, apri **Account** nella barra e scegli **Accedi
-con Google** per condividere i progressi tra browser. Puoi sempre giocare senza
+Accesso Google, salvataggio nel cloud e sincronizzazione sono **sperimentali**
+e possono non riuscire. Dove configurato, apri **Accesso e sync (sperimentale)**
+in fondo alla schermata principale, sotto la mappa/lista, poi **Accedi con Google**.
+I controlli dell’account sono disponibili solo nella schermata principale.
+Le barre mostrano solo lo stato della sincronizzazione con un account attivo.
+La versione si trova in alto a destra, sopra i pulsanti dello zoom. Puoi sempre giocare senza
 accesso; i progressi ospite restano sul dispositivo. **Mantieni l’accesso su
 questo dispositivo** è inizialmente disattivato. Selezionalo solo se vuoi
 ritrovare l’account alla riapertura del browser.
@@ -72,8 +76,9 @@ pagina fino alla sincronizzazione se vuoi vedere i progressi nell’altro browse
 Se chiudi offline, i dati dell’account salvati restano in attesa e vengono
 trasmessi dopo un nuovo accesso allo stesso account. **Esci dall’account** torna
 ai progressi ospite e dimentica l’accesso salvato; non elimina nessuna delle due
-copie dei progressi. Questa prima funzione riguarda il browser; desktop e
-Android seguiranno separatamente.
+copie dei progressi. Le versioni browser e Windows configurate supportano account sperimentali;
+Android resta senza account in questa versione. Oltre 10.000 eventi nella cronologia,
+la sincronizzazione cloud si arresta; i progressi in attesa restano sul dispositivo.
 
 ## 1. Che cos’è Geoclick
 
@@ -136,7 +141,7 @@ Tocca o clicca un luogo per aggiungere il suo nome; ripeti per nasconderlo. Puoi
 
 Scegliere un luogo apre anche la sua scheda, quando ci sono informazioni disponibili. Nelle mappe delle città tocchi il punto. Nascondere di nuovo il nome chiude la scheda. Questa schermata non assegna punteggi. In Conoscenza anche i nomi delle città sono senza sottolineatura.
 
-Su una mappa mai giocata compare un piccolo riquadro **Ancora niente di imparato**, con i pulsanti **Panoramica** e **Quiz**. Chiudi l’avviso con **×** per liberare la mappa: resta chiuso per questa visita.
+Una mappa mai giocata resta libera, senza avvisi sui progressi vuoti. Scegli **Panoramica** per studiare o **Quiz** per giocare.
 
 Quando hai guadagnato qualcosa sulla mappa, la legenda contiene anche **Azzera i progressi**. Una finestra chiede conferma: «Azzerare i tuoi progressi su Italy — Regioni?». **Annulla** lascia tutto com’è; **Sì, azzera** riporta ogni nome di questa mappa a sconosciuto e cancella anche i nomi scelti e una prova lasciata a metà. Le altre mappe, i preferiti e l’ultimo punteggio restano. Il pulsante **Azzera** della legenda, invece, toglie soltanto i nomi scelti.
 

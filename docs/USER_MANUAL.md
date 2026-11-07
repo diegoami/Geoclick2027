@@ -5,7 +5,7 @@ installing or running it. Every screen is shown with a screenshot, and every
 button, label and message is explained: what it looks like, what it does, and
 what the player sees in return. Geoclick is made by Diego Amicabile.
 
-It describes **Geoclick v1.2.1**, including the current fixes on main. The
+It describes **Geoclick v1.3.0**, including the current fixes on main. The
 running version and build identifier appear in the small version badge and on
 the About page.
 
@@ -87,10 +87,14 @@ immediately and are remembered on this device when storage is available.
 Use the close button or Escape to return to the map. If the map toolbar is
 hidden, show it with the button below the map zoom controls first.
 
-### Optional browser account
+### Experimental browser and Windows accounts
 
-Where an account is available, open **Account** in the toolbar and
-choose **Sign in with Google** to share earned progress between browsers.
+Google login, cloud saving and synchronization are **experimental** and may fail.
+Where configured, open **Login & sync (experimental)** in the footer below the
+main-screen map/list, then choose **Sign in with Google**. Account controls
+are available only on the main screen. Signed-in toolbars show read-only sync
+status; guest toolbars show no account control. The version/build is at the very
+top right, above the zoom buttons.
 You can always play without signing in; guest progress stays on this device.
 **Keep me signed in on this device** is off by default. Select it only when you
 want this browser to restore your account after reopening.
@@ -106,9 +110,9 @@ another browser or retry after reconnecting. Leave the page open until progress
 is synchronized before closing when you want another browser to see it. If you
 close offline, saved account work remains queued locally and resumes after
 signing into the same account again. **Sign out** returns to guest progress and
-forgets remembered sign-in; it does not erase either progress store. This first
-account control is for the browser; desktop and Android account integration
-follow separately.
+forgets remembered sign-in; it does not erase either progress store. Configured browser and Windows builds support experimental accounts; Android
+remains guest-only in this release. Cloud synchronization stops beyond the
+current 10,000-event history limit; pending progress stays on this device.
 
 ## 1. What Geoclick is
 
@@ -429,11 +433,10 @@ Because a mistake takes a name down a step, this map is an honest picture of
 what you actually know. Nothing here is scored. On a towns map, tap a town's dot. All names on Known,
 including towns, are plain text without underlines.
 
-**A map you have never played** shows a small card, **"Nothing known yet"**,
-with an **Overview** button to study the names and a **Quiz** button to start
-playing. Close the card with **×** to free the map; it stays closed for this visit.
+**A map you have never played** starts clear, without an empty-progress popup.
+Choose **Overview** to study the names or **Quiz** to start playing.
 
-![A new map: Nothing known yet, with Overview and Quiz buttons](manual/known-empty.jpg)
+![A new map with no earned names and no introduction popup](manual/known-empty.jpg)
 
 ### Starting a map over
 
