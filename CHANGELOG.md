@@ -5,6 +5,27 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v1.3.0 — 2026-11-07 — Experimental accounts and quieter maps
+
+**Keep playing locally, with experimental browser/Windows account sharing and a clearer map screen.**
+
+For players:
+
+- **Experimental login, cloud saving and synchronization:** configured browser and Windows builds can use an optional Google account. Open **Login & sync (experimental)** in the main-screen footer. Account controls are absent from toolbars; signed-in toolbars show compact, read-only sync status. English, German and Italian notices explain that account features are still being tested and may fail. Guest/offline play requires no account.
+- **Choose what to import:** review this device's guest progress before adding it to an account. Existing account progress wins conflicts and the guest original is preserved. Remembered sign-in is optional.
+- **Quieter Known view:** remove the “Nothing known yet” introduction completely.
+- **Version at the very top right:** version/build sits above zoom controls and map navigation, including at enlarged text sizes.
+- **Another browser entry point:** [play on GitHub Pages](https://diegoami.github.io/Geoclick2027/) alongside the existing Netlify site. Release descriptions link to both.
+
+Experimental account limits and release scope:
+
+- Account controls require public Firebase configuration and the separately published game-progress rules. Builds without that configuration remain guest-only; this release does not claim a live sign-in test for those builds.
+- Browser and Windows account foundations are included. The Android game integration in PR #329 is not merged into this candidate; Android remains guest-only. Earlier Android proof/alpha checks do not establish production acceptance for this candidate.
+- The current cloud transport scans full history and stops synchronization beyond its 10,000-event limit; pending local progress is retained. History/read-cost/quota work (#332, PRs #333/#335) remains open. Firebase is experimental, not declared complete under plan #311.
+- The detailed city-map batch and related home controls in PR #330, the hide-version follow-up in PR #331, and planned gameplay changes remain outside this release.
+
+Release verification: candidate gates, independent milestone review and final installer/device/HTML5 evidence are recorded in the milestone issue before tagging. No final artifact/runtime checks are claimed by this preparation entry.
+
 ## v1.2.1 — 2026-10-31 — Desktop zoom and steady world colors
 
 **Resize the whole Windows interface with native zoom shortcuts, while world countries keep their continent colors as you learn.**
