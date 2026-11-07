@@ -142,7 +142,7 @@ describe('the version badge', () => {
 		controls.className = 'maplibregl-ctrl-top-right';
 		controls.style.cssText = 'position:fixed;right:0;width:44px;height:88px';
 		const host = document.createElement('div');
-		host.className = 'maplibregl-ctrl-container';
+		host.className = 'maplibregl-control-container';
 		host.append(controls);
 		document.body.append(host);
 		// Lazy map CSS may load after the layout badge in portable production builds.
