@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import AccountButton from '$lib/AccountButton.svelte';
+	import { accountAvailable } from '$lib/account.svelte';
 	import { accountProgressRevision } from '$lib/account.svelte';
 	import mapIndex from '../../../data/maps/index.json';
 	import { createProgressRepository, type ProgressRepository } from '$lib/progressRepository';
@@ -198,7 +200,16 @@
 	{/if}
 </main>
 
+{#if accountAvailable()}
+	<footer class="account-entry"><AccountButton /></footer>
+{/if}
+
 <style>
+	.account-entry {
+		text-align: center;
+		padding: 0 1rem 1rem;
+		font-family: system-ui, sans-serif;
+	}
 	/* What to play next (#263): one quiet line, not a section. */
 	.suggestion {
 		margin: 0 0 0.75rem;

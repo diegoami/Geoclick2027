@@ -28,7 +28,6 @@
 	import { StretchedNames } from './stretchedNames';
 	import { publishBottomOverlay } from './mapBottomOverlay';
 	import { forgetRound } from './quizRound';
-	import { resolve } from '$lib/appPaths';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -63,10 +62,6 @@
 	let streaks = $state<Record<string, number>>({});
 	/** Whether anything is drawn, i.e. whether the legend has work to do. */
 	let anyShown = $state(false);
-	/** Whether the saved progress has been read, so an empty map really is one. */
-	let loaded = $state(false);
-	/** An introduction, dismissible for this Known-view visit. */
-	let emptyNoticeDismissed = $state(false);
 	/** Whether any name has an earned level, i.e. whether there is anything to reset. */
 	const anyEarned = $derived(Object.values(streaks).some((level) => level > 0));
 	const mapTitle = $derived(mapDisplayName(mapId) ?? mapDef?.name ?? mapId);
@@ -193,7 +188,6 @@
 		const repository = await createProgressRepository();
 		const states = await repository.getCardStates(mapId);
 		streaks = Object.fromEntries(states.map((c) => [c.targetId, c.cleanStreak]));
-		loaded = true;
 		redrawNames(def);
 	}
 
@@ -388,26 +382,6 @@
 				</button>
 			{/if}
 		</div>
-	{:else if loaded && !anyEarned && !emptyNoticeDismissed}
-		<!-- A map never played says what this screen is for (#269). -->
-		<div class="legend empty" bind:this={legendEl} data-testid="known-empty">
-			<div class="empty-heading">
-				<strong>{t('known.emptyTitle')}</strong>
-				<button
-					type="button"
-					class="empty-close"
-					aria-label={t('known.dismissEmpty')}
-					onclick={() => (emptyNoticeDismissed = true)}><span aria-hidden="true">×</span></button
-				>
-			</div>
-			<p>{t('known.emptyBody')}</p>
-			<div class="empty-actions">
-				<a class="clear-btn" href={resolve('/map/[mapId]/overview', { mapId })}
-					>{t('nav.overview')}</a
-				>
-				<a class="clear-btn" href={resolve('/map/[mapId]/quiz', { mapId })}>{t('nav.quiz')}</a>
-			</div>
-		</div>
 	{/if}
 	{#if resetOutcome}
 		<p class="reset-outcome" role="status" data-testid="reset-outcome">
@@ -506,55 +480,9 @@
 		font-size: 0.7rem;
 		opacity: 0.45;
 	}
-	/* A map never played (#269): the legend's corner, saying what goes there. */
-	.legend.empty {
-		flex-direction: column;
-		align-items: flex-start;
-		max-width: min(22rem, calc(100% - 1.5rem));
-		color: var(--gc-text, #1f3d2a);
-		font-size: 0.875rem;
-	}
-	.empty-heading {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 0.5rem;
-		width: 100%;
-	}
-	.empty-close {
-		flex: 0 0 auto;
-		width: 2rem;
-		height: 2rem;
-		padding: 0;
-		border: none;
-		border-radius: 0.3rem;
-		background: transparent;
-		color: var(--gc-muted, #6b7770);
-		font: inherit;
-		font-size: 1.25rem;
-		line-height: 1;
-		cursor: pointer;
-	}
-	.empty-close:hover {
-		background: var(--gc-hover, rgba(17, 24, 21, 0.07));
-		color: var(--gc-text, #2b332e);
-	}
-	.empty-close:focus-visible {
-		outline: 2px solid var(--gc-accent, #b5691f);
-		outline-offset: 1px;
-	}
-	.legend.empty p {
-		margin: 0;
-	}
-	.empty-actions,
 	.reset-actions {
 		display: flex;
 		gap: 0.5rem;
-	}
-	.empty-actions a {
-		padding: 2px 10px;
-		font-size: 0.8125rem;
-		text-decoration: none;
 	}
 	/* What a reset did, under the map bar for a few seconds. */
 	.reset-outcome {

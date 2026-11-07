@@ -15,6 +15,7 @@
 		if (accountOpen() && !dialog.open) dialog.showModal();
 		else if (!accountOpen() && dialog.open) dialog.close();
 	});
+	onMount(() => () => setAccountOpen(false));
 </script>
 
 <dialog
@@ -26,13 +27,18 @@
 	onkeydown={(event) => event.stopPropagation()}
 >
 	<header>
-		<h2 id="account-title">{t('account.title')}</h2>
+		<h2 id="account-title">{t('account.experimentalTitle')}</h2>
 		<button type="button" onclick={() => dialog.close()} aria-label={t('account.close')}>×</button>
 	</header>
+	<p class="experimental-notice">{t('account.experimentalNotice')}</p>
 	<AccountPanel />
 </dialog>
 
 <style>
+	.experimental-notice {
+		font-weight: 600;
+		line-height: 1.5;
+	}
 	dialog {
 		box-sizing: border-box;
 		width: min(32rem, calc(100vw - 16px));
