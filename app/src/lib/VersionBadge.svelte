@@ -28,7 +28,7 @@
 		user-select: none;
 	}
 	/* Reserve a row above the map navigation and zoom controls at any text size. */
-	:global(.maplibregl-ctrl-top-right) {
+	:global(.maplibregl-ctrl-container .maplibregl-ctrl-top-right) {
 		top: calc(env(safe-area-inset-top, 0px) + 1.6rem);
 	}
 </style>
