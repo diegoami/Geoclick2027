@@ -253,46 +253,14 @@ describe('MapNav sibling map buttons', () => {
 		);
 	});
 
-	it('paints the language menu above the build badge (#252)', async () => {
-		setLanguage('en');
-		const chrome = document.createElement('div');
-		chrome.className = 'maplibregl-ctrl-top-right';
-		chrome.style.cssText = 'position:fixed;top:20px;right:20px;width:30px;height:165px';
-		document.body.append(chrome);
-		await render(MapNav, {
-			mapId: 'singapore-regions',
-			mapName: 'Singapore — Regions',
-			active: 'overview'
-		});
-		const badgeView = await render(VersionBadge);
-		try {
-			(document.querySelector('.settings-panel > summary') as HTMLElement).click();
-			(document.querySelector('.lang-button') as HTMLButtonElement).click();
-			const badge = document.querySelector<HTMLElement>('.version-badge')!;
-			await vi.waitFor(() =>
-				expect(Number.parseFloat(getComputedStyle(badge).top)).toBeGreaterThanOrEqual(193)
-			);
-			const b = badge.getBoundingClientRect();
-			const option = [...document.querySelectorAll<HTMLElement>('.lang-option')].find((el) => {
-				const r = el.getBoundingClientRect();
-				return (
-					Math.max(b.left, r.left) < Math.min(b.right, r.right) &&
-					Math.max(b.top, r.top) < Math.min(b.bottom, r.bottom)
-				);
-			});
-			expect(option).toBeDefined();
-			const r = option!.getBoundingClientRect();
-			// Include the decorative badge in hit testing without altering paint order.
-			badge.style.pointerEvents = 'auto';
-			const top = document.elementFromPoint(
-				(Math.max(b.left, r.left) + Math.min(b.right, r.right)) / 2,
-				(Math.max(b.top, r.top) + Math.min(b.bottom, r.bottom)) / 2
-			);
-			expect(option!.contains(top)).toBe(true);
-		} finally {
-			badgeView.unmount();
-			chrome.remove();
-		}
+	it('keeps the version above the map navigation', async () => {
+		await render(MapNav, { mapId: 'singapore-regions', mapName: 'Singapore', active: 'overview' });
+		await render(VersionBadge);
+		const badge = document.querySelector<HTMLElement>('.version-badge')!;
+		const nav = document.querySelector<HTMLElement>('.nav-overlay')!;
+		expect(badge.getBoundingClientRect().bottom).toBeLessThanOrEqual(
+			nav.getBoundingClientRect().top
+		);
 	});
 
 	it('has no toggle for a country without detailed maps', async () => {

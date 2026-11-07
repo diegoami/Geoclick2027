@@ -28,6 +28,13 @@ export type TranslationKey =
 	| 'account.rememberUnavailable'
 	| 'account.close'
 	| 'account.title'
+	| 'account.status.idle'
+	| 'account.status.pending'
+	| 'account.status.syncing'
+	| 'account.status.synced'
+	| 'account.status.error'
+	| 'account.experimentalTitle'
+	| 'account.experimentalNotice'
 	| 'account.guest'
 	| 'account.signin'
 	| 'account.remember'
@@ -299,11 +306,19 @@ export type TranslationKey =
 type Dictionary = Record<TranslationKey, string>;
 
 const en: Dictionary = {
+	'account.status.idle': 'Saved locally',
+	'account.status.pending': 'Sync pending',
+	'account.status.syncing': 'Syncing…',
+	'account.status.synced': 'Synced',
+	'account.status.error': 'Sync failed',
 	'account.cancel': 'Cancel sign-in',
 	'account.rememberUnavailable':
 		'Remembering sign-in is unavailable on this device. You can still play without an account.',
 	'account.close': 'Close account panel',
 	'account.title': 'Account',
+	'account.experimentalTitle': 'Login & sync (experimental)',
+	'account.experimentalNotice':
+		'Experimental: Google login, cloud saving and synchronization are still being tested and may fail. You can play without an account; guest progress stays on this device.',
 	'account.guest': 'You can play without an account. Your progress stays on this device.',
 	'account.signin': 'Sign in with Google',
 	'account.remember': 'Keep me signed in on this device',
@@ -311,7 +326,7 @@ const en: Dictionary = {
 	'account.signout': 'Sign out',
 	'account.sync.idle': 'Account progress is saved on this device.',
 	'account.sync.pending': 'Saved on this device. Waiting to sync.',
-	'account.sync.syncing': 'Synchronizing progress…',
+	'account.sync.syncing': 'Syncing…',
 	'account.sync.synced': 'Progress synchronized.',
 	'account.sync.error': 'Progress stays on this device. Synchronization needs a retry.',
 	'account.retry': 'Sync now',
@@ -602,11 +617,19 @@ const en: Dictionary = {
 };
 
 const de: Dictionary = {
+	'account.status.idle': 'Lokal gespeichert',
+	'account.status.pending': 'Sync ausstehend',
+	'account.status.syncing': 'Synchronisiert…',
+	'account.status.synced': 'Synchronisiert',
+	'account.status.error': 'Sync fehlgeschlagen',
 	'account.cancel': 'Anmeldung abbrechen',
 	'account.rememberUnavailable':
 		'Die Anmeldung kann auf diesem Gerät nicht gespeichert werden. Du kannst weiterhin ohne Konto spielen.',
 	'account.close': 'Kontofenster schließen',
 	'account.title': 'Konto',
+	'account.experimentalTitle': 'Anmeldung & Sync (experimentell)',
+	'account.experimentalNotice':
+		'Experimentell: Google-Anmeldung, Cloud-Speicherung und Synchronisierung werden noch getestet und können fehlschlagen. Du kannst ohne Konto spielen; dein Gastfortschritt bleibt auf diesem Gerät.',
 	'account.guest': 'Du kannst ohne Konto spielen. Dein Fortschritt bleibt auf diesem Gerät.',
 	'account.signin': 'Mit Google anmelden',
 	'account.remember': 'Auf diesem Gerät angemeldet bleiben',
@@ -912,11 +935,19 @@ const de: Dictionary = {
 };
 
 const it: Dictionary = {
+	'account.status.idle': 'Salvato sul dispositivo',
+	'account.status.pending': 'Sync in attesa',
+	'account.status.syncing': 'Sincronizzazione…',
+	'account.status.synced': 'Sincronizzato',
+	'account.status.error': 'Sync non riuscita',
 	'account.cancel': 'Annulla accesso',
 	'account.rememberUnavailable':
 		'Non è possibile memorizzare l’accesso su questo dispositivo. Puoi continuare a giocare senza account.',
 	'account.close': 'Chiudi pannello account',
 	'account.title': 'Account',
+	'account.experimentalTitle': 'Accesso e sync (sperimentale)',
+	'account.experimentalNotice':
+		'Sperimentale: accesso Google, salvataggio nel cloud e sincronizzazione sono ancora in fase di test e possono non riuscire. Puoi giocare senza account; i progressi ospite restano su questo dispositivo.',
 	'account.guest': 'Puoi giocare senza account. I tuoi progressi restano su questo dispositivo.',
 	'account.signin': 'Accedi con Google',
 	'account.remember': 'Mantieni l’accesso su questo dispositivo',
