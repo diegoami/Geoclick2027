@@ -236,6 +236,68 @@ integration and the full #311 acceptance matrix follow.
 No account, cloud availability or network is required for existing local play.
 
 
+## Sequenced delivery protocol (V2 foundation)
+
+Owner-approved [proposal #334](https://github.com/diegoami/Geoclick2027/issues/334)
+addresses the repeated full-history reads and 10,000-event ceiling tracked in
+#332. `sequencedProgressTransport.ts` is the transport/rules foundation only.
+**Production account factories still use V1.** Durable IndexedDB/native SQLite
+checkpoints, bounded bootstrap/controller scheduling and localized upgrade states
+must pass before production opt-in or owner rules publication. This foundation
+does not mark #332 or Firebase acceptance complete.
+
+The owner-only `/users/{uid}/progressSyncV2/head` has exactly `version: 2`,
+`sequence` and `lastEventId`. Explicit `open()` initializes it at zero/null;
+constructing a transport makes no requests or cutover. Once the head exists,
+rules deny new V1 events for that UID. Existing V1 history is readable and exact
+unchanged retries remain allowed; deletion or mutation stays forbidden. Old alpha
+clients require upgrading for new account uploads after cutover. Guest play and
+existing local queues remain untouched.
+
+V2 documents at `/users/{uid}/progressEventsV2/{originalEventId}` wrap the original
+encoded envelope in `{sequence, event}`. An online transaction reads an existing
+ID and the head, then atomically creates one immutable event and increments the
+head by exactly one. An exact existing event returns its original sequence;
+a conflicting payload fails. Rules validate closed schemas, the complete original
+envelope, prior nonexistence and head/event agreement through `getAfter` checks.
+They deny standalone head advances, gaps, two events sharing a new sequence,
+head reset/deletion and event mutation/deletion. Delivery sequence is independent
+of causal clocks/parents controlling learning and reset replay.
+
+A stale optimistic sequence can receive `permission-denied` before SDK conflict
+retry. Recovery requires an authorized fresh head proving another writer advanced
+it, and stops after five outer transaction calls. SDK retries inside each call
+are additionally bounded by the SDK. Unchanged permission denials, quota and
+network errors are not blindly retried here. Concurrent initializers recover only
+by reading a valid existing head. Failed or late receipts never authorize a
+journal acknowledgement.
+
+Readers capture a head sequence as a fence and request only
+`after < sequence <= fence`, ordered by sequence, at most 100 documents per page.
+Every returned page must contain the expected contiguous delivery positions;
+missing tails, duplicate/gapped wrappers and unsupported heads fail. No-new-data
+reads need no event query. Returned original envelopes still require journal
+validation/quarantine and deduplication. `pullLegacy` uses bounded document-ID
+pages after explicit freeze. Persisting/resuming either cursor belongs to the
+next journal slice; no in-memory cursor is claimed as crash-safe. Identity guards
+reject late operations and same-UID re-login from an old auth lifetime.
+
+`firebase/sequenced-progress.test.ts` exercises actual emulator SDK transactions
+and rules: concurrent initialization, equal/distinct IDs, immutable retries,
+closed schemas/access boundaries, maximum frontier/confusion payloads, a
+209-event three-page fence plus an earlier-sorting later ID, and V1 writes racing
+freeze. The race reads the frozen collection before waiting for the old request,
+then verifies no late member can appear. Unit tests force recovery budgets,
+unchanged permission/quota failures and late identity races. All identities are
+synthetic; no real Google sign-in is claimed.
+
+An uncontended new upload logically reads two SDK transaction documents and
+writes two; exact V2 retry reads one and writes none. Rules add dependent reads,
+and contention adds attempts. Integrity/retry tests do not measure production
+billing. Aggregate access costs and representative local replay measurements
+remain required before #334 is complete. There are no paid functions, billing
+activation, compaction, pruning or causal-history deletion in this foundation.
+
 ## Optional browser account lifetime
 
 `browserAccountSession.ts` binds a separate repository only after an owner-matched

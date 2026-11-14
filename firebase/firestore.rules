@@ -68,11 +68,42 @@ service cloud.firestore {
     && v.parents.matches('([A-Za-z0-9_-]{1,128}(,[A-Za-z0-9_-]{1,128}){0,127})?')
     && operation(v.operation);
   }
+  function headPath(uid) { return /databases/$(database)/documents/users/$(uid)/progressSyncV2/head; }
+  function deliveryPath(uid, id) { return /databases/$(database)/documents/users/$(uid)/progressEventsV2/$(id); }
+  function headFields(v) {
+   return v.keys().hasAll(['version','sequence','lastEventId'])
+    && v.keys().hasOnly(['version','sequence','lastEventId']) && v.version == 2
+    && integer(v.sequence, 0, 9007199254740991)
+    && (v.sequence == 0 ? v.lastEventId == null : token(v.lastEventId));
+  }
+  match /users/{uid}/progressSyncV2/head {
+   allow get: if owner(uid);
+   allow create: if owner(uid) && headFields(request.resource.data)
+    && request.resource.data.sequence == 0 && request.resource.data.lastEventId == null;
+   allow update: if owner(uid) && headFields(request.resource.data)
+    && request.resource.data.sequence == resource.data.sequence + 1
+    && !exists(deliveryPath(uid, request.resource.data.lastEventId))
+    && getAfter(deliveryPath(uid, request.resource.data.lastEventId)).data.sequence == request.resource.data.sequence;
+  }
+  match /users/{uid}/progressEventsV2/{id} {
+   allow get: if owner(uid);
+   allow list: if owner(uid) && request.query.limit != null && request.query.limit <= 100;
+   allow create: if owner(uid)
+    && request.resource.data.keys().hasAll(['sequence','event'])
+    && request.resource.data.keys().hasOnly(['sequence','event'])
+    && integer(request.resource.data.sequence, 1, 9007199254740991)
+    && envelope(request.resource.data.event, uid, id)
+    && exists(headPath(uid))
+    && getAfter(headPath(uid)).data.sequence == get(headPath(uid)).data.sequence + 1
+    && getAfter(headPath(uid)).data.sequence == request.resource.data.sequence
+    && getAfter(headPath(uid)).data.lastEventId == id;
+   allow update: if owner(uid) && request.resource.data == resource.data;
+  }
   match /users/{uid}/progressEventsV1/{id} {
    allow get: if owner(uid);
    allow list: if owner(uid)
     && request.query.limit != null && request.query.limit <= 100;
-   allow create: if owner(uid) && envelope(request.resource.data, uid, id);
+   allow create: if owner(uid) && !exists(headPath(uid)) && envelope(request.resource.data, uid, id);
    allow update: if owner(uid)
     && request.resource.data == resource.data;
    // Deletion would destroy causal/reset history. Everything else is denied.

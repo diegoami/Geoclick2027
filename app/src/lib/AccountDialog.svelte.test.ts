@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import { userEvent } from 'vitest/browser';
 import { tick } from 'svelte';
@@ -28,6 +28,7 @@ import { accountState } from './account.svelte';
 import AccountSyncStatus from './AccountSyncStatus.svelte';
 import { accountOpen, setAccountOpen } from './accountDialogState.svelte';
 import { setLanguage } from './i18n.svelte';
+beforeEach(() => setLanguage('en'));
 afterEach(() => {
 	vi.mocked(accountState).mockReturnValue({ usingAccount: false, busy: false, sync: 'idle' });
 	setAccountOpen(false);
